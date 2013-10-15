@@ -29,7 +29,13 @@ decided based on the availability of those who show up for either session of
 the first meeting. Note that we'll be presenting basically the same thing on
 both Tuesday and Friday, so attend whichever one session works for you. 
 
+Sign Up
+-------
+
+Please fill out the `signup form`_ if you plan to join the bootcamp, so that we can 
+choose a meeting time which works for everyone.
 
 .. _mailing list: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp
 .. _email edunham: mailto:dunhame@onid.oregonstate.edu
 .. _ReStructured Text: http://sphinx-doc.org/rest.html
+.. _signup form: https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform
