@@ -29,11 +29,11 @@ The DevOps Bootcamp program will be dynamically shaping itself based on the feed
 from  interested students.
 
 
-.. Contents:
-
+Contents:
+---------
 .. toctree::
    :maxdepth: 2
-
+   policies
 
 
 .. Indices and tables
