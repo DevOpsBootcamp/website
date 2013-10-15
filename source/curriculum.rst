@@ -99,7 +99,7 @@ Lesson 7: Working with Remote Systems
 Lesson 8: Security & Authentication
 -----------------------------------
 
-Lesson 9: Netowrking overview
+Lesson 9: Networking overview
 -----------------------------
 
 Lesson 10: Services
