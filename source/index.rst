@@ -39,6 +39,7 @@ Contents:
    get_involved
    policies
    curriculum
+   faq
 
 Indices and tables
 ==================
