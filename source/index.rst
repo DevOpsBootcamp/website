@@ -37,7 +37,7 @@ Contents:
    :maxdepth: 2
 
    policies
-
+   curriculum
 
 Indices and tables
 ==================
