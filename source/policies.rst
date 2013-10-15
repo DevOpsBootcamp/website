@@ -2,7 +2,7 @@ Policies
 ********
 
 "The Deal"
-=========
+==========
 
 You get: 
 

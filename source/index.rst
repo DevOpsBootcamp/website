@@ -5,6 +5,7 @@
 
 Welcome to OSU DevOps Bootcamp's documentation!
 ===============================================
+
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for more than 160
 open source projects. Along with delivering over 460 terabytes of open source
 data a month, the OSL trains students to be expert systems administrators
@@ -31,15 +32,17 @@ from  interested students.
 
 Contents:
 ---------
+
 .. toctree::
    :maxdepth: 2
+
    policies
 
 
-.. Indices and tables
-   ==================
+Indices and tables
+==================
 
-.. * :ref:`genindex`
- * :ref:`modindex`
- * :ref:`search`
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
