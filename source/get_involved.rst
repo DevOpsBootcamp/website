@@ -29,6 +29,13 @@ decided based on the availability of those who show up for either session of
 the first meeting. Note that we'll be presenting basically the same thing on
 both Tuesday and Friday, so attend whichever one session works for you. 
 
+Sign Up
+-------
+
+.. raw :: html
+   <div>
+      <iframe src="https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+   </div>
 
 .. _mailing list: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp
 .. _email edunham: mailto:dunhame@onid.oregonstate.edu
