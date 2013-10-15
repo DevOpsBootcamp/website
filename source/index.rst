@@ -21,7 +21,7 @@ the program, no initial familiarity with software development or Linux will be
 assumed. 
 
 This program is based on the 
-`PSU Braindump <http://cat.pdx.edu/thecat/thecat-presents-braindump-orientation.html>`_, 
+`PSU Braindump <http://braindump.cat.pdx.edu>`_, 
 where for 21 years they have been turning PSU students into sysadmins who have rapidly 
 been flowing into the growing number of startups in Portland.  
 
