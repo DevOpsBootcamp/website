@@ -22,15 +22,14 @@ assumed.
 
 This program is based on the 
 `PSU Braindump <http://cat.pdx.edu/thecat/thecat-presents-braindump-orientation.html>`_, 
-where for over a decade they have been turning PSU students into sysadmins that have rapidly 
+where for 21 years they have been turning PSU students into sysadmins who have rapidly 
 been flowing into the growing number of startups in Portland.  
-This program will be dynamically shaping itself based on the feedback we get
-from those involved. Below we have an outline for the first four meetings to
-give you an idea of where we are going to be starting. 
+
+The DevOps Bootcamp program will be dynamically shaping itself based on the feedback we get
+from  interested students.
 
 
-
-Contents:
+.. Contents:
 
 .. toctree::
    :maxdepth: 2
