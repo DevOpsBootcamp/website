@@ -32,11 +32,10 @@ both Tuesday and Friday, so attend whichever one session works for you.
 Sign Up
 -------
 
-.. raw :: html
-   <div>
-      <iframe src="https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-   </div>
+Please fill out the `signup form`_ if you plan to join the bootcamp, so that we can 
+choose a meeting time which works for everyone.
 
 .. _mailing list: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp
 .. _email edunham: mailto:dunhame@onid.oregonstate.edu
 .. _ReStructured Text: http://sphinx-doc.org/rest.html
+.. _signup form: https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform
