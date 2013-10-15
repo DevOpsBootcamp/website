@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to OSU DevOps Bootcamp's documentation!
-===============================================
+DevOps Bootcamp
+===============
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for more than 160
 open source projects. Along with delivering over 460 terabytes of open source
