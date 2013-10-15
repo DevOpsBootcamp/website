@@ -16,7 +16,7 @@ Lesson 1: The Very Basics
 - How to get Linux
     - OSU/ENGR Shell Access
     - Installation options
-    - Vargrant & Virtualbox
+    - Vagrant & Virtualbox
 - What's the terminal?
     - Some useful commands
     - What to try when scary, confusing things happen
@@ -99,7 +99,7 @@ Lesson 7: Working with Remote Systems
 Lesson 8: Security & Authentication
 -----------------------------------
 
-Lesson 9: Netowrking overview
+Lesson 9: Networking overview
 -----------------------------
 
 Lesson 10: Services
