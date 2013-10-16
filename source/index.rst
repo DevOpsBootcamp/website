@@ -5,6 +5,9 @@
 
 DevOps Bootcamp
 ===============
+DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program 
+aimed at boosting our impact and outreach while shrinking the skills gap for 
+OSU students interested in DevOps.
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
 more than 160 open source projects. Along with delivering over 460 terabytes of
