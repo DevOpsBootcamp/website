@@ -1,7 +1,7 @@
 FAQ
 ===
 
-Email questions to dunhame@onid.orst.edu if they aren't answered here!
+Email questions to devopsbootcamp@osuosl.org if they aren't answered here!
 
 Is this a for-credit class?
 ---------------------------
@@ -47,6 +47,6 @@ availability.
 I have a question?
 ------------------
 
-Ask it. On IRC if you have that set up, or email dunhame@onid.orst.edu or the
-mailing list. 
+Ask it. On IRC if you have that set up, or email devopsbootcamp@osuosl.org or
+the mailing list. 
 
