@@ -26,7 +26,7 @@ I don't know about computers! Can I still join?
 YES! If you already knew all this stuff, you'd be teaching rather than
 studying it. If you think you don't know enough, try anyways -- in the worst
 case you'll discover that your self-assessment was correct, and in the best
-case, you'll become a successful open source contibutor. 
+case, you'll become a successful open source contributor. 
 
 When will meetings be? 
 ----------------------

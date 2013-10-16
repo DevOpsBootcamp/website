@@ -16,7 +16,7 @@ Lesson 1: The Very Basics
 - How to get Linux
     - OSU/ENGR Shell Access
     - Installation options
-    - Vargrant & Virtualbox
+    - Vagrant & Virtualbox
 - What's the terminal?
     - Some useful commands
     - What to try when scary, confusing things happen
@@ -57,7 +57,7 @@ Lesson 3: Doing Things With Files
 - Features of an editor
     - Modes
     - Commands
-    - Configuration/customizatoin
+    - Configuration/customization
     - Regular expressions (questions to ask)
 - Version control: Git!
     - Why you need it
