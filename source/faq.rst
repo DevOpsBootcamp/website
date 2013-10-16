@@ -35,13 +35,6 @@ Weekday evenings, probably Thursday or Friday. It depends on when the people
 taking the course are available. Use the `signup form`_ to indicate your
 availability. 
 
-When will meetings be? 
-----------------------
-
-Weekday evenings, probably Thursday or Friday. It depends on when the people
-taking the course are available. Use the `signup form`_ to indicate your
-availability. 
-
 .. _signup form: https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform
 
 I have a question?
