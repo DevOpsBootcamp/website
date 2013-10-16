@@ -15,10 +15,10 @@ IRC network for the program in a later lesson)
 Website & Curriculum
 --------------------
 
-If you'd like to help edit this site, `email edunham`_ or ping edunham on
-Freenode with your github username to get access to the web site repo. You'll
-also want to learn the `ReStructured Text`_ markup language to edit the site,
-if you don't already know it. 
+If you'd like to help edit this site, `email devopsbootcamp`_ or ping edunham
+on Freenode with your github username to get access to the web site repo.
+You'll also want to learn the `ReStructured Text`_ markup language to edit the
+site, if you don't already know it. 
 
 Meetings
 --------
@@ -36,6 +36,6 @@ Please fill out the `signup form`_ if you plan to join the bootcamp, so that we 
 choose a meeting time which works for everyone.
 
 .. _mailing list: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp
-.. _email edunham: mailto:dunhame@onid.oregonstate.edu
+.. _email devopsbootcamp: mailto:devopsbootcamp@osuosl.org
 .. _ReStructured Text: http://sphinx-doc.org/rest.html
 .. _signup form: https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform
