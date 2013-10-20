@@ -86,6 +86,15 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
+# -- Hieroglyph Congfig -------------------------------------------------------
+
+# When autoslides is True, Hieroglyph will generate slides from the document
+# sections. If autoslides is set to False, only generate slides from the slide
+# directive.
+# This can be overridden on a per-document basis using the slideconf directive.
+
+autoslides = False
+ 
 
 # -- Options for HTML output ---------------------------------------------------
 
