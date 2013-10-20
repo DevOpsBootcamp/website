@@ -93,7 +93,7 @@ pygments_style = 'sphinx'
 # directive.
 # This can be overridden on a per-document basis using the slideconf directive.
 
-autoslides = False
+autoslides = True 
  
 
 # -- Options for HTML output ---------------------------------------------------
