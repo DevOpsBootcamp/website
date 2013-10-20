@@ -8,6 +8,8 @@ devopsbootcamp.osuosl.org
 What's DevOps? 
 ==============
 
+.. figure:: /_static/devops.jpg
+
 Software Development + Operations Engineering
 
 What's BootCamp? 

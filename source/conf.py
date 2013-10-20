@@ -94,7 +94,8 @@ pygments_style = 'sphinx'
 # This can be overridden on a per-document basis using the slideconf directive.
 
 autoslides = True 
- 
+
+slide_theme = 'single-level'
 
 # -- Options for HTML output ---------------------------------------------------
 
