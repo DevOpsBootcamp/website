@@ -13,8 +13,6 @@ A note about notation:
     * \`literal stuff in backticks\`
 * foo, bar, baz, username, etc.
 
-
-
 How to get (to) Linux
 =====================
 
@@ -68,7 +66,7 @@ Special Characters:
 * escape with \ to use them literally
 * # means a comment
 * ; allows multiple commands per line
-* !, ?, \*, &&
+* !, ?, \*, &&, &
 * Regular expressions (we'll learn more later)
 
 Type less!
@@ -154,4 +152,7 @@ Terminology:
 * flapping
 * tail
 * hat
+* common emotes
+    * o/ \o high fives
+    
 
