@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['hieroglyph', 'sphinx.ext.todo', 'sphinx.ext.ifconfig']
+extensions = ['sphinx.ext.todo', 'sphinx.ext.ifconfig']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -92,10 +92,10 @@ pygments_style = 'sphinx'
 # sections. If autoslides is set to False, only generate slides from the slide
 # directive.
 # This can be overridden on a per-document basis using the slideconf directive.
-
-autoslides = True 
-
-slide_theme = 'single-level'
+if not os.environ.get('READTHEDOCS', None):
+    extensions += ['hieroglyph',]
+    autoslides = True 
+    slide_theme = 'single-level'
 
 # -- Options for HTML output ---------------------------------------------------
 
