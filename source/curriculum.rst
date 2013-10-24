@@ -5,87 +5,46 @@ The curriculum will be constantly evolving as we develop this course. The
 first unit will be an overview of what students will need to know in order to
 understand the deeper technical concepts which will be covered later. 
 
-Note that the curriculum past week 4 is currently under development. Lesson
-titles are included to provide an overview of what we'll cover, but specific
-content is likely to get moved around between lessons depending on what we
-learn about the pace of the class during the first few weeks. 
+.. note:: Note that the curriculum past week 4 is currently under development. Lesson
+    titles are included to provide an overview of what we'll cover, but specific
+    content is likely to get moved around between lessons depending on what we
+    learn about the pace of the class during the first few weeks. 
 
-Lesson 1: The Very Basics
+    Slide content will be linked here as soon as it's drafted, but only finalized
+    1-2 weeks before the lessons when it's presented. 
+
+:doc:`01_the_very_basics`
 -------------------------
 
 - How to get Linux
-    - OSU/ENGR Shell Access
-    - Installation options
-    - Vagrant & Virtualbox
 - What's the terminal?
-    - Some useful commands
-    - What to try when scary, confusing things happen
-    - Man pages
 - Internet Relay Chat
-    - What channels should you be in?
-    - Etiquette, and how to get good answers
-    - Basic jargon you'll encounter
 
-Lesson 2: Single System Fundamentals
+:doc:`02_single_system_fundamentals`
 ------------------------------------
 
 Or, how to be a power user.
 
 - What are files? 
-    - Permissions/users
 - What are user accounts?
-    - user management
-    - root vs. normal
-    - groups
 - What are packages? 
-    - repositories
-    - other options (tarballs, build from source)
-    - how installation works
-    - what're scripts
-- Backups
-    - What should you back up?
-    - The easier solutions for an individual user
 
-Lesson 3: Doing Things With Files
----------------------------------
+:doc:`03_fun_with_files`
+------------------------
 
 - What's a text editor?
-    - Not an IDE
-    - You will need them on remote systems
-    - Vim, Emacs, etc.
-        - How to choose
 - Features of an editor
-    - Modes
-    - Commands
-    - Configuration/customization
-    - Regular expressions (questions to ask)
 - Version control: Git!
-    - Why you need it
-    - Basic concepts
-        - how to start a repo
-        - how to add and commit changes
-        - how to apply others' changes to your work
-        - branching/merging
-    - "help, I broke everything!"
 
-Lesson 4: How to Think About Troubleshooting
---------------------------------------------
+:doc:`04_troubleshooting`
+-------------------------
 
 We want you to learn these concepts early in the course, because you will
 constantly need them as we continue. 
 
 - Debugging problems
-    - Isolate moving parts
-    - Test hypotheses
 - Don't make it worse
-    - Plan ahead
-    - Know what will be overwritten/changed by your actions
 - Good bug reports
-    - How to reproduce
-    - Anticipate what they'll do when they get the report
-    - Which logs and details will they need?
-    - Why is this a problem?
-- Zendo
 
 Lesson 5: Filesystems
 ---------------------
