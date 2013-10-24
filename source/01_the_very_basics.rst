@@ -2,8 +2,12 @@
 Lesson 1: The Very Basics
 =========================
 
+.. note:: Lance and Emily introduce themselves
+
 A note about notation:
 ======================
+
+.. note:: who presents this slide
 
 * Variables
     * $varname
@@ -16,6 +20,8 @@ A note about notation:
 How to get (to) Linux
 =====================
 
+.. note:: who presents this slide
+
 * How many have it already installed?
 * Otherwise, PuTTy: 
     * http://www.chiark.greenend.org.uk/~sgtatham/putty/
@@ -24,8 +30,17 @@ How to get (to) Linux
     * flip{1-3} are Engineering servers; less reliable
 * Install VM or dual-boot
 
+Vagrant & VirtualBox
+====================
+
+.. note:: Lance, please fill in as many slides as you need for this tutorial.
+          Their homework for this week is to have tried to install Linux, but
+          they may not all have succeeded. 
+
 The Terminal
 ============
+
+.. note:: who presents this slide
 
 * Used to mean the keyboard+monitor
     * Now that's a crash cart
@@ -35,6 +50,8 @@ The Terminal
 
 Basic Shell Commands:
 =====================
+
+.. note:: who presents this slide
 
 * ls
 * cd
@@ -46,6 +63,8 @@ Basic Shell Commands:
 Invoking a script: 
 ==================
 
+.. note:: who presents this slide
+
 * ls -l
     * permissions later
 * chmod +x $filename
@@ -56,12 +75,16 @@ Invoking a script:
 File Paths:
 ===========
 
+.. note:: who presents this slide
+
 * . means current directory
 * .. means parent directory
 * Tilde (~) means your homedir
 
 Special Characters:
 ===================
+
+.. note:: who presents this slide
 
 * escape with \ to use them literally
 * # means a comment
@@ -72,6 +95,8 @@ Special Characters:
 Type less!
 ==========
 
+.. note:: who presents this slide
+
 * Reverse-i-search
     * ctrl+r then type command
 * aliases
@@ -80,6 +105,8 @@ Type less!
 
 Help, get me out of here!
 =========================
+
+.. note:: who presents this slide
 
 * ctrl+c kills/quits
 * ctrl+d sends EOF (end-of-file)
@@ -91,6 +118,8 @@ Help, get me out of here!
 More about Man Pages:
 =====================
 
+.. note:: who presents this slide
+
 * the manual (rtfm)
 * $ man <program>
 * $ man man
@@ -98,6 +127,8 @@ More about Man Pages:
 
 IRC
 ===
+
+.. note:: who presents this slide
 
 * Internet Relay Chat
 * very old
@@ -107,22 +138,30 @@ IRC
 A Client: 
 =========
 
+.. note:: who presents this slide
+
 * use irssi
 * see lug guide
 
 Networks:
 =========
 
+.. note:: who presents this slide
+
 * /connect irc.freenode.net
 
 Channels: 
 =========
+
+.. note:: who presents this slide
 
 * /join #osu-lug
 * /join #devopsbootcamp
 
 Commands:
 =========
+
+.. note:: who presents this slide
 
 * take action with \`/me does thing\`
 * everything else starting with / is a command
@@ -133,6 +172,8 @@ Commands:
 Useful tricks:
 ==============
 
+.. note:: who presents this slide
+
 * Tab-complete works on nicknames. use it.
 * Highlight when people say your name
 * Symbols are *not* part of names; they mark status in channel
@@ -141,12 +182,16 @@ Useful tricks:
 Etiquette:
 ==========
 
+.. note:: who presents this slide
+
 * Lurk more
 * Don't ask to ask
 * Show that you're worth helping
 
 Terminology: 
 ============
+
+.. note:: who presents this slide
 
 * ping/pong
 * flapping
