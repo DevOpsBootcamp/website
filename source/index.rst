@@ -6,6 +6,10 @@
 DevOps Bootcamp
 ===============
 
+.. note:: Recurring meetings will be Thursdays, 6-8pm. Due to Halloween in
+          Week 5, our *first lesson* will be during week 6 of the term, on
+          *Thursday 11/7*. 
+
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program 
 aimed at boosting our impact and outreach while shrinking the skills gap for 
 OSU students interested in DevOps.
