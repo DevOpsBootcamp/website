@@ -4,8 +4,23 @@ Lesson 1: The Very Basics
 
 .. note:: Lance and Emily introduce themselves
 
-A note about notation:
-======================
+Today's Agenda
+==============
+
+.. note:: Emily presents
+
+* Getting (to) Linux
+* The Terminal & Shell
+    * Scripts, file paths, special characters
+* Productivity tricks
+    * Getting help
+* IRC
+    * Vocabulary
+    * Get connected
+    * Etiquette
+
+A note about notation
+=====================
 
 .. note:: who presents this slide
 
@@ -23,7 +38,7 @@ How to get (to) Linux
 .. note:: who presents this slide
 
 * How many have it already installed?
-* Otherwise, PuTTy: 
+* When stuck on Windows, use PuTTy: 
     * http://www.chiark.greenend.org.uk/~sgtatham/putty/
 * Students: 
     * ssh <onidusername>@shell.onid.oregonstate.edu
@@ -48,8 +63,8 @@ The Terminal
 * Shell: Use bash; others include csh, zsh, tsch
     * ~/.bashrc
 
-Basic Shell Commands:
-=====================
+Basic Shell Commands
+====================
 
 .. note:: who presents this slide
 
@@ -60,8 +75,8 @@ Basic Shell Commands:
 * get help for an installed program
     * man <program>
 
-Invoking a script: 
-==================
+Invoking a script
+=================
 
 .. note:: who presents this slide
 
@@ -72,8 +87,8 @@ Invoking a script:
     * ls -a -l
     * ls -al
 
-File Paths:
-===========
+File Paths
+==========
 
 .. note:: who presents this slide
 
@@ -81,8 +96,8 @@ File Paths:
 * .. means parent directory
 * Tilde (~) means your homedir
 
-Special Characters:
-===================
+Special Characters
+==================
 
 .. note:: who presents this slide
 
@@ -92,8 +107,8 @@ Special Characters:
 * !, ?, \*, &&, &
 * Regular expressions (we'll learn more later)
 
-Type less!
-==========
+Type less
+=========
 
 .. note:: who presents this slide
 
@@ -115,14 +130,15 @@ Help, get me out of here!
 * read what's on your screen; it'll help you
 * $ clear
 
-More about Man Pages:
-=====================
+More about Man Pages
+====================
 
 .. note:: who presents this slide
 
 * the manual (rtfm)
 * $ man <program>
 * $ man man
+* use `/phrase` to search for `phrase` in the document; `n` for next match
 * else, $ <program> --help
 
 IRC
@@ -135,31 +151,30 @@ IRC
 * Works on everything (no GUI needed)
 * standardized, and the people you want to listen to are there
 
-A Client: 
-=========
+A Client 
+========
 
-.. note:: who presents this slide
+.. note:: Emily switches to terminal and shows example
 
-* use irssi
-* see lug guide
+* use irssi in screen
 
-Networks:
-=========
+Networks
+========
 
 .. note:: who presents this slide
 
 * /connect irc.freenode.net
 
-Channels: 
-=========
+Channels
+========
 
 .. note:: who presents this slide
 
 * /join #osu-lug
 * /join #devopsbootcamp
 
-Commands:
-=========
+Commands
+========
 
 .. note:: who presents this slide
 
@@ -169,8 +184,8 @@ Commands:
 * /join, /part, /whois <nick>, /msg, /help <command>
 
 
-Useful tricks:
-==============
+Useful tricks
+=============
 
 .. note:: who presents this slide
 
@@ -179,17 +194,27 @@ Useful tricks:
 * Symbols are *not* part of names; they mark status in channel
 * Logging (expect it); \`/set autolog on\`
 
-Etiquette:
-==========
+Screen & Irssi Hints
+====================
+
+* Paste with ctrl+shift+v
+    * PuTTY defaults to right-click to paste
+* to get back, `screen -dr IRC`
+* Can you use `man screen` to find out what the d and r flags mean?
+
+Etiquette
+=========
 
 .. note:: who presents this slide
 
 * Lurk more
 * Don't ask to ask
 * Show that you're worth helping
+* Read the topic
+* Pastebin code
 
-Terminology: 
-============
+Terminology 
+===========
 
 .. note:: who presents this slide
 
@@ -199,5 +224,16 @@ Terminology:
 * hat
 * common emotes
     * o/ \o high fives
-    
+    * `/me &` means afk
+  
+Review
+======
 
+* What's Linux? 
+* How do you open a terminal? 
+* How do you run a Python script? 
+* How do you list all the files in this directory? 
+* Give 2 ways to change directory to your home directory.
+* How do you start an irc client?
+* How do you reconnect to a screen session?
+* Give an example of something not to do in IRC
