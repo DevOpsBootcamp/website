@@ -45,12 +45,79 @@ How to get (to) Linux
     * flip{1-3} are Engineering servers; less reliable
 * Install VM or dual-boot
 
+Trying Linux on a Virtual Machine
+=================================
+
+* Virtual machines act as a full system on a physical machine
+* Hypervisors:
+    * VirtualBox (free)
+    * VMWare (mostly free)
+    * KVM (Linux only hosts)
+    * Parallels
+* Public Cloud Virtual Machines
+    * Amazon EC2, Rackspace Cloud, Google Compute Engine, etc
+* Easy way to test without breaking your machine!
+
+Installing Linux on Virtualbox
+==============================
+
+.. note:: Try other distributions if you like to see what's different. Debian
+          is a great next step to try out.
+
+#. Download and install: https://www.virtualbox.org/wiki/Downloads
+#. Grab the latest minimal ISO: http://centos.osuosl.org/6/isos/x86_64/
+#. Create VM
+    #. New -> Name "CentOS" -> Default Ram -> Default Disk settings
+    #. Settings -> Storage -> Empty -> CD/DVD Drive -> Select ISO
+    #. Start -> press enter -> Skip media check
+#. ``\o/``
+
 Vagrant & VirtualBox
 ====================
 
-.. note:: Lance, please fill in as many slides as you need for this tutorial.
-          Their homework for this week is to have tried to install Linux, but
-          they may not all have succeeded. 
+.. note:: We're using CentOS as our base image for now but will use Debian
+          later. You can see the gui by uncommenting the line in the
+          Vagrantfile.
+
+* Vagrant is a tool used with Virtualbox (and other) platforms
+* Make a reproducible pre-installed Linux environment
+* Download and install: http://www.vagrantup.com/
+* Clone our repo, start and access the vm:
+
+.. code-block:: bash
+
+    # clone
+    git clone https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant.git
+
+    # start up
+    cd devopsbootcamp-vagrant
+    vagrant up
+    
+    # access vm
+    vagrant ssh
+
+Vagrant cheat sheet
+==================
+
+.. note:: We'll get into more detail later in how you can access ports on your
+          VMs and other use cases.
+
+.. code-block:: bash
+
+    # start
+    vagrant up
+
+    # stop
+    vagrant halt
+
+    # destroy (remove vm)
+    vagrant destroy
+
+    # ssh to the vm
+    vagrant ssh
+
+Also check out the `Vagrant Documentation
+<http://docs.vagrantup.com/v2/cli/index.html>`_ for more information.
 
 The Terminal
 ============
