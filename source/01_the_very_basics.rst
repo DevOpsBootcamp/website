@@ -25,11 +25,11 @@ A note about notation
 .. note:: who presents this slide
 
 * Variables
-    * $varname
-    * <varname>
+    * ``$varname``
+    * ``<varname>``
 * Shell prompt
-    * $
-    * \`literal stuff in backticks\`
+    * ``$``
+    * ```literal stuff in backticks```
 * foo, bar, baz, username, etc.
 
 How to get (to) Linux
@@ -40,9 +40,11 @@ How to get (to) Linux
 * How many have it already installed?
 * When stuck on Windows, use PuTTy: 
     * http://www.chiark.greenend.org.uk/~sgtatham/putty/
-* Students: 
-    * ssh <onidusername>@shell.onid.oregonstate.edu
-    * flip{1-3} are Engineering servers; less reliable
+* Students::
+
+    ssh <onidusername>@shell.onid.oregonstate.edu
+
+* flip{1-3} are Engineering servers; less reliable
 * Install VM or dual-boot
 
 Trying Linux on a Virtual Machine
@@ -128,39 +130,41 @@ The Terminal
     * Now that's a crash cart
 * Terminal emulator
 * Shell: Use bash; others include csh, zsh, tsch
-    * ~/.bashrc
+    * ``~/.bashrc``
 
 Basic Shell Commands
 ====================
 
 .. note:: who presents this slide
 
-* ls
-* cd
+* ``ls``
+* ``cd``
 * invoke/call an installed program
     * python
 * get help for an installed program
-    * man <program>
+    * ``man <program>``
 
 Invoking a script
 =================
 
-.. note:: who presents this slide
+.. note:: who presents this slide. Permissions discussed later.
 
-* ls -l
-    * permissions later
-* chmod +x $filename
-* arguments
-    * ls -a -l
-    * ls -al
+.. code-block:: bash
+
+    ls -l
+    chmod +x $filename
+
+    # arguments
+    ls -a -l
+    ls -al
 
 File Paths
 ==========
 
 .. note:: who presents this slide
 
-* . means current directory
-* .. means parent directory
+* ``.`` means current directory
+* ``..`` means parent directory
 * Tilde (~) means your homedir
 
 Special Characters
@@ -182,7 +186,7 @@ Type less
 * Reverse-i-search
     * ctrl+r then type command
 * aliases
-    * ~/.bashrc
+    * ``~/.bashrc``
 * Tab completion
 
 Help, get me out of here!
@@ -202,11 +206,15 @@ More about Man Pages
 
 .. note:: who presents this slide
 
-* the manual (rtfm)
-* $ man <program>
-* $ man man
+* the manual (rtfm)::
+
+    $ man <program>
+    $ man man
+
 * use `/phrase` to search for `phrase` in the document; `n` for next match
-* else, $ <program> --help
+* else::
+
+    $ <program> --help
 
 IRC
 ===
