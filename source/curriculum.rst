@@ -5,6 +5,14 @@ The curriculum will be constantly evolving as we develop this course. The
 first unit will be an overview of what students will need to know in order to
 understand the deeper technical concepts which will be covered later. 
 
+Here's what we're hoping to mentor and teach students about:
+
+#. Linux Basics
+#. Basic System Administration
+#. Basic FOSS Development Methodologies
+#. Base infrastructure services for any organization (DNS, Email, etc)
+#. Building a mock infrastructure for a mock company from top to bottom
+
 .. note:: Note that the curriculum past week 4 is currently under development. Lesson
     titles are included to provide an overview of what we'll cover, but specific
     content is likely to get moved around between lessons depending on what we
