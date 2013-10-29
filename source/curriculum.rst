@@ -21,14 +21,14 @@ Here's what we're hoping to mentor and teach students about:
     Slide content will be linked here as soon as it's drafted, but only finalized
     1-2 weeks before the lessons when it's presented. 
 
-:doc:`01_the_very_basics`
+:doc:`the_very_basics`
 -------------------------
 
 - How to get Linux
 - What's the terminal?
 - Internet Relay Chat
 
-:doc:`02_single_system_fundamentals`
+:doc:`single_system_fundamentals`
 ------------------------------------
 
 Or, how to be a power user.
@@ -37,14 +37,14 @@ Or, how to be a power user.
 - What are user accounts?
 - What are packages? 
 
-:doc:`03_fun_with_files`
+:doc:`fun_with_files`
 ------------------------
 
 - What's a text editor?
 - Features of an editor
 - Version control: Git!
 
-:doc:`04_troubleshooting`
+:doc:`troubleshooting`
 -------------------------
 
 We want you to learn these concepts early in the course, because you will
@@ -57,27 +57,27 @@ constantly need them as we continue.
 Lesson 5: Filesystems
 ---------------------
 
-:doc:`05_filesystems` 
+:doc:`filesystems` 
 
 Lesson 6: The boot process
 --------------------------
 
-:doc:`06_boot_process`
+:doc:`boot_process`
 
 Lesson 7: Working with Remote Systems
 -------------------------------------
 
-:doc:`07_remote_systems`
+:doc:`remote_systems`
 
 Lesson 8: Security & Authentication
 -----------------------------------
 
-:doc:`08_security_auth`
+:doc:`security_auth`
 
 Lesson 9: Networking overview
 -----------------------------
 
-:doc:`09_networking`
+:doc:`networking_overview`
 
 Lesson 10: Services
 -------------------
@@ -88,9 +88,9 @@ study
 Lesson 11: Configuration Management & Cron
 ------------------------------------------
 
-:doc:`11_config_mgmt_cron`
+:doc:`config_mgmt_cron`
 
 Lesson 12: Infrastructure Design
 --------------------------------
 
-:doc:`12_infra_design`
+:doc:`infra_design`
