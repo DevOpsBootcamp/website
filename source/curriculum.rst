@@ -57,17 +57,27 @@ constantly need them as we continue.
 Lesson 5: Filesystems
 ---------------------
 
+:doc:`05_filesystems` 
+
 Lesson 6: The boot process
 --------------------------
+
+:doc:`06_boot_process`
 
 Lesson 7: Working with Remote Systems
 -------------------------------------
 
+:doc:`07_remote_systems`
+
 Lesson 8: Security & Authentication
 -----------------------------------
 
+:doc:`08_security_auth`
+
 Lesson 9: Networking overview
 -----------------------------
+
+:doc:`09_networking`
 
 Lesson 10: Services
 -------------------
@@ -78,7 +88,9 @@ study
 Lesson 11: Configuration Management & Cron
 ------------------------------------------
 
+:doc:`11_config_mgmt_cron`
+
 Lesson 12: Infrastructure Design
 --------------------------------
 
-
+:doc:`12_infra_design`
