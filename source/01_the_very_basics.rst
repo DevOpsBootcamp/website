@@ -135,7 +135,12 @@ The Terminal
 Basic Shell Commands
 ====================
 
-.. note:: who presents this slide
+.. note:: Explain architecture: built in commands vs. external binaries
+    Demo commands:
+    Directory movement and file manipulation: Cd, pwd, ls, rm, mv, touch
+    User info: id, whoami, w
+    Pipes, redirection (pipe.txt, redirect.txt)
+    Special variables: $?, $$ (pid.sh), !!, !*, !$
 
 * ``ls``
 * ``cd``
@@ -215,6 +220,19 @@ More about Man Pages
 * else::
 
     $ <program> --help
+
+Documentation
+=============
+
+.. note:: Emily
+
+* Man pages, blogs you find by Googling, StackOverflow
+* Contribute to community
+    * Correct it if it's wrong
+    * Remind them what newbies don't know
+    * Write your own
+* For your future self as well
+* Start now
 
 IRC
 ===
