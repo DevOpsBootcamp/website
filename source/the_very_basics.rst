@@ -35,7 +35,7 @@ A note about notation
 How to get (to) Linux
 =====================
 
-.. note:: who presents this slide
+.. note:: Emily explains OSU-specific options 
 
 * How many have it already installed?
 * When stuck on Windows, use PuTTy: 
@@ -237,7 +237,8 @@ Documentation
 IRC
 ===
 
-.. note:: who presents this slide
+.. note:: probably Emily, though Lance might know more details of history &
+          implementation
 
 * Internet Relay Chat
 * very old
@@ -251,41 +252,67 @@ A Client
 
 * use irssi in screen
 
+.. code-block:: bash
+
+    # This step is optional, but persistent IRC is cool
+    $ ssh <username>@<preferred shell host>
+
+    # start Screen
+    $ screen -S irc
+
+    # start your client
+    $ irssi
+
+    # after ending ssh session, to get back: 
+    $ ssh <username>@<preferred shell host>
+    $ screen -dr IRC
+
 Networks
 ========
 
-.. note:: who presents this slide
+.. figure:: /_static/irc/multiple_networks.gif                                    
+    :scale: 75% 
+    :align: right
 
-* /connect irc.freenode.net
+.. code-block:: bash
+    /connect irc.freenode.net
+
+    /nick <myawesomenickname>
+    /msg nickserv register <password> <email>
+    
+    /nick <myawesomenickname>
+    /msg nickserv identify <password>
 
 Channels
 ========
 
-.. note:: who presents this slide
+.. code-block:: bash
+    /join #osu-lug
+    /join #devopsbootcamp
 
-* /join #osu-lug
-* /join #devopsbootcamp
+* ``/list`` tells all channels on network
+    * Don't do this on Freenode!
+* ``/topic`` tells you the current channel's topic
+* ``/names`` tells you who's here
 
 Commands
 ========
 
-.. note:: who presents this slide
-
-* take action with \`/me does thing\`
+* take action with ``/me does thing```
 * everything else starting with / is a command
-* /say $thing
+* ``/say $thing``
 * /join, /part, /whois <nick>, /msg, /help <command>
 
 
 Useful tricks
 =============
 
-.. note:: who presents this slide
-
 * Tab-complete works on nicknames. use it.
 * Highlight when people say your name
 * Symbols are *not* part of names; they mark status in channel
 * Logging (expect it); \`/set autolog on\`
+* chanserv and nickserv are good bots to know
+    * hamper is also a bot
 
 Screen & Irssi Hints
 ====================
@@ -298,26 +325,27 @@ Screen & Irssi Hints
 Etiquette
 =========
 
-.. note:: who presents this slide
-
 * Lurk more
 * Don't ask to ask
+    * Lure help out of hiding with tasty details of problem
 * Show that you're worth helping
 * Read the topic
 * Pastebin code
+* Choose your nick carefully
 
 Terminology 
 ===========
-
-.. note:: who presents this slide
 
 * ping/pong
 * flapping
 * tail
 * hat
+* nick
+* netsplit
+* kick/ban/k-line
 * common emotes
-    * o/ \o high fives
-    * `/me &` means afk
+    * ``o/`` AND  ``\o`` high fives
+    * ``/me &`` means afk
   
 Review
 ======
