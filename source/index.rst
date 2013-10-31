@@ -10,14 +10,17 @@ DevOps Bootcamp
           Week 5, our *first lesson* will be during week 6 of the term, on
           *Thursday 11/7*. 
 
-.. table:: Upcoming Meetings, Fall Term
-    ====    ========    =====
-    Date    Location    Topic
-    ====    ========    =====
-    11/7    TBD         Single System Fundamentals
-    11/14   TBD         Text Editors & Version Control
-    TBD     TBD         Scripting & Troubleshooting
-    ====    ========    =====
+
+          +--------+------------+-----------------------------------+ 
+          | Date   | Location   | Topic                             |
+          +========+============+===================================+ 
+          | 11/7   | TBD        | Single System Fundamentals        |
+          +--------+------------+-----------------------------------+ 
+          | 11/14  | TBD        | Text Editors & Version Control    |
+          +--------+------------+-----------------------------------+ 
+          | TBD    | TBD        | Scripting & Troubleshooting       |
+          +--------+------------+-----------------------------------+ 
+
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program 
 aimed at boosting our impact and outreach while shrinking the skills gap for 
 OSU students interested in DevOps.
