@@ -270,7 +270,7 @@ A Client
 Networks
 ========
 
-.. figure:: /_static/irc/multiple_networks.gif                                    
+.. figure:: /static/multiple_networks.gif                                    
     :scale: 75% 
     :align: right
 
