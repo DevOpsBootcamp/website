@@ -22,7 +22,7 @@ Today's Agenda
 A note about notation
 =====================
 
-.. note:: who presents this slide
+.. note:: Emily presents 
 
 * Variables
     * ``$varname``
@@ -124,7 +124,7 @@ Also check out the `Vagrant Documentation
 The Terminal
 ============
 
-.. note:: who presents this slide
+.. note:: Emily (?)
 
 * Used to mean the keyboard+monitor
     * Now that's a crash cart
@@ -152,7 +152,7 @@ Basic Shell Commands
 Invoking a script
 =================
 
-.. note:: who presents this slide. Permissions discussed later.
+.. note:: Emily. Permissions discussed later.
 
 .. code-block:: bash
 
@@ -166,18 +166,20 @@ Invoking a script
 File Paths
 ==========
 
-.. note:: who presents this slide
-
 * ``.`` means current directory
 * ``..`` means parent directory
-* Tilde (~) means your homedir
+* Tilde (``~``) means your homedir (``/home/$username``)
+* ``/`` separates directories (not ``\``)
+* ``/`` is root directory, so ``~`` expands to ``/home/$username/``
+* current path appears in your prompt: I'm logged in as the user test on the
+  machine named x230, so my default prompt will look like ``test@x230 ~ $``
 
+.. note:: root directory is not to be confused with a home directory for the
+          root account
 Special Characters
 ==================
 
-.. note:: who presents this slide
-
-* escape with \ to use them literally
+* escape with ``\`` to use them literally
 * # means a comment
 * ; allows multiple commands per line
 * !, ?, \*, &&, &
@@ -201,15 +203,54 @@ Help, get me out of here!
 
 * ctrl+c kills/quits
 * ctrl+d sends EOF (end-of-file)
+    * also means logout
 * :q gets you out of Vi derivatives and man pages
     * esc - esc - :q if you changed modes
 * read what's on your screen; it'll help you
 * $ clear
 
+Knowledge Check
+===============
+
+.. code-block:: bash
+    
+    test@x230 ~ $ tree
+    .
+    ├── Documents
+    │   ├── Code
+    │   │   └── scripts
+    │   │       ├── test.py
+    │   │       └── test.sh
+    │   ├── School
+    │   └── Work
+    └── Pictures
+        ├── manatee.gif
+        ├── mom.jpg
+        └── turtle.png
+
+    6 directories, 5 files
+
+* What user am I logged in as?
+* What command did I just run?
+* What is my current directory when I run that command? 
+* I want to get into the ``scripts`` directory. How can I do that with the
+  fewest keystrokes?
+* What do I see after running each of these commands?
+
+.. code-block:: bash
+    $ cd
+    $ ls
+    $ cd Pictures
+    $ ls
+    $ cd ../Documents/School
+    $ ls
+    $ cd ../Pictures
+    $ cd ~/Documents/Code/scripts; ls
+
 More about Man Pages
 ====================
 
-.. note:: who presents this slide
+.. note:: Lance
 
 * the manual (rtfm)::
 
@@ -239,6 +280,10 @@ IRC
 
 .. note:: probably Emily, though Lance might know more details of history &
           implementation
+
+.. figure:: /static/multiple_networks.gif
+    :scale: 75%
+    :align: center
 
 * Internet Relay Chat
 * very old
@@ -301,8 +346,38 @@ Commands
 * take action with ``/me does thing```
 * everything else starting with / is a command
 * ``/say $thing``
-* /join, /part, /whois <nick>, /msg, /help <command>
+* ``/join``, ``/part``, ``/whois <nick>``, ``/msg``, ``/help <command>``
 
+.. code-block:: bash
+
+    [12:01] [_test_(+i)] [3:freenode/#examplechannel(+CFcmnpst)] [Act: 1]
+    [#examplechannel] /me does an action
+
+    12:02  * _test_ does an action
+    12:02 < _test_> I just did an action
+
+    [12:03] [_test_(+i)] [3:freenode/#examplechannel(+CFcmnpst)] [Act: 1]       
+    [#examplechannel] /say /me does an action 
+
+    12:02 < _test_> /me does an action
+
+    [12:04] [_test_(+i)] [3:freenode/#examplechannel(+CFcmnpst)] [Act: 1]
+    [#examplechannel] /whois _test_ 
+
+Note that nothing shows up in the channel when you run a /whois command; it
+shows up either in your status buffer or your conversation with the person. 
+
+.. code-block:: bash
+
+    12:04 -!- _test_ [~test@c-50-137-46-63.hsd1.or.comcast.net]
+    12:04 -!-  ircname  : Example User
+    12:04 -!-  channels : #ExampleChannel 
+    12:04 -!-  server   : moorcock.freenode.net [TX, USA]
+    12:04 -!-  hostname : c-50-137-46-63.hsd1.or.comcast.net 50.137.46.63 
+    12:04 -!-  idle     : 0 days 0 hours 2 mins 38 secs [signon: Wed Nov  6
+    12:00:30 
+                          2013]
+    12:04 -!- End of WHOIS
 
 Useful tricks
 =============
@@ -322,6 +397,34 @@ Screen & Irssi Hints
 * to get back, `screen -dr IRC`
 * Can you use `man screen` to find out what the d and r flags mean?
 
+.. code-block:: bash
+ SCREEN(1)                                                               SCREEN(1)
+ 
+ NAME
+        screen - screen manager with VT100/ANSI terminal emulation
+ 
+ SYNOPSIS
+        screen [ -options ] [ cmd [ args ] ]
+        screen -r [[pid.]tty[.host]]
+        screen -r sessionowner/[[pid.]tty[.host]]
+ 
+ DESCRIPTION
+        Screen  is a full-screen window manager that multiplexes a physical termi‐
+        nal between several processes (typically interactive shells).   Each  vir‐
+        tual terminal provides the functions of a DEC VT100 terminal and, in addi‐
+        tion, several control functions from the ISO 6429 (ECMA  48,  ANSI  X3.64)
+        and  ISO  2022 standards (e.g. insert/delete line and support for multiple
+        character sets).  There is a scrollback history buffer  for  each  virtual
+        terminal  and  a  copy-and-paste mechanism that allows moving text regions
+        between windows.
+ 
+        When screen is called, it creates a single window with a shell in  it  (or
+        the  specified  command) and then gets out of your way so that you can use
+        the program as you normally would.  Then, at any time, you can create  new
+        (full-screen) windows with other programs in them (including more shells),
+        kill existing windows, view a list of windows, turn output logging on  and
+  Manual page screen(1) line 1 (press h for help or q to quit)
+
 Etiquette
 =========
 
@@ -330,6 +433,8 @@ Etiquette
     * Lure help out of hiding with tasty details of problem
 * Show that you're worth helping
 * Read the topic
+    * ``/topic``
+    * Output only shows up in your channel, not to everyone else
 * Pastebin code
 * Choose your nick carefully
 
@@ -351,10 +456,12 @@ Review
 ======
 
 * What's Linux? 
-* How do you open a terminal? 
-* How do you run a Python script? 
-* How do you list all the files in this directory? 
+* How do you open a terminal emultor? 
+    * this varies between window managers
+* I have the script ``test.py``. How do I run it?? 
+* How do you list all the files in the current directory? 
 * Give 2 ways to change directory to your home directory.
 * How do you start an irc client?
+    * How often should you need to start your IRC client?
 * How do you reconnect to a screen session?
-* Give an example of something not to do in IRC
+* Give an example of something which you should not do in IRC
