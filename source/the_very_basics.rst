@@ -14,6 +14,10 @@ Today's Agenda
     * Scripts, file paths, special characters
 * Productivity tricks
     * Getting help
+
+.. figure:: /static/Tux.png
+    :align: right
+
 * IRC
     * Vocabulary
     * Get connected
@@ -23,6 +27,10 @@ A note about notation
 =====================
 
 .. note:: Emily presents 
+
+.. figure:: /static/stickynote.png
+    :align: right
+    :scale: 20%
 
 * Variables
     * ``$varname``
@@ -37,7 +45,12 @@ How to get (to) Linux
 
 .. note:: Emily explains OSU-specific options 
 
+.. figure:: /static/dualboot.png
+    :align: right 
+    :scale: 40%
+
 * How many have it already installed?
+* Install VM or dual-boot
 * When stuck on Windows, use PuTTy: 
     * http://www.chiark.greenend.org.uk/~sgtatham/putty/
 * Students::
@@ -45,12 +58,20 @@ How to get (to) Linux
     ssh <onidusername>@shell.onid.oregonstate.edu
 
 * flip{1-3} are Engineering servers; less reliable
-* Install VM or dual-boot
+
+.. figure:: /static/osm_server.jpg
+    :align: center
+    :scale: 75%
 
 Trying Linux on a Virtual Machine
 =================================
 
 * Virtual machines act as a full system on a physical machine
+
+.. figure:: /static/virtualbox.png
+    :align: right
+    :scale: 50%
+
 * Hypervisors:
     * VirtualBox (free)
     * VMWare (mostly free)
@@ -124,13 +145,22 @@ Also check out the `Vagrant Documentation
 The Terminal
 ============
 
-.. note:: Emily (?)
+.. figure:: /static/crashcart.jpg
+    :align: right
+    :scale: 75% 
 
 * Used to mean the keyboard+monitor
     * Now that's a crash cart
 * Terminal emulator
 * Shell: Use bash; others include csh, zsh, tsch
     * ``~/.bashrc``
+
+.. figure:: /static/televideo_terminal.jpg
+    :align: right
+    :scale: 40%
+
+.. figure:: /static/teletype_terminal.jpg
+    :align: left
 
 Basic Shell Commands
 ====================
@@ -142,12 +172,29 @@ Basic Shell Commands
     Pipes, redirection (pipe.txt, redirect.txt)
     Special variables: $?, $$ (pid.sh), !!, !*, !$
 
-* ``ls``
-* ``cd``
+.. figure:: /static/pylogo.png
+    :align: right
+    :scale: 75%
+
+* ``ls``, ``cd``, ``cat``, ``echo``
 * invoke/call an installed program
-    * python
-* get help for an installed program
-    * ``man <program>``
+* get help: ``man <program>``
+
+.. code-block:: bash
+ 
+    test@x230 ~ $ tree
+    .
+    ├── Documents
+    │   ├── Code
+    │   │   └── scripts
+    │   │       └── test.sh
+    │   ├── School
+    │   └── Work
+    └── Pictures
+        ├── manatee.gif
+        └── turtle.png
+
+    6 directories, 5 files
 
 Invoking a script
 =================
@@ -156,12 +203,18 @@ Invoking a script
 
 .. code-block:: bash
 
-    ls -l
-    chmod +x $filename
+    $ ls -l
+    $ chmod +x $filename
 
-    # arguments
-    ls -a -l
-    ls -al
+**Arguments** are extra information that you pass to a script or program when
+you call it. They tell it in more detail what you want to do.
+
+.. code-block:: bash
+
+    $ ls -a -l
+    $ ls -al
+
+Why pass arguments on the command line rather than having an interactive mode?
 
 File Paths
 ==========
@@ -172,10 +225,21 @@ File Paths
 * ``/`` separates directories (not ``\``)
 * ``/`` is root directory, so ``~`` expands to ``/home/$username/``
 * current path appears in your prompt: I'm logged in as the user test on the
-  machine named x230, so my default prompt will look like ``test@x230 ~ $``
+  machine named x230
+
+.. code-block:: bash
+
+    test@x230 ~ $ ls
+    Documents  Pictures
+    test@x230 ~ $ cd Documents/
+    test@x230 ~/Documents $ ls
+    Code  School  Work
+    test@x230 ~/Documents $ 
+
 
 .. note:: root directory is not to be confused with a home directory for the
           root account
+
 Special Characters
 ==================
 
@@ -184,6 +248,10 @@ Special Characters
 * ; allows multiple commands per line
 * !, ?, \*, &&, &
 * Regular expressions (we'll learn more later)
+
+.. figure:: /static/xkcd_regex.png
+    :align: center
+    :scale: 50%
 
 Type less
 =========
@@ -196,10 +264,17 @@ Type less
     * ``~/.bashrc``
 * Tab completion
 
+.. figure:: /static/space_cadet_keyboard.gif
+    :align: center
+    :scale: 75%
+
+Automation > Typing > Mouse
+
 Help, get me out of here!
 =========================
 
-.. note:: who presents this slide
+.. figure:: /static/exit.jpg
+    :align: center
 
 * ctrl+c kills/quits
 * ctrl+d sends EOF (end-of-file)
@@ -207,7 +282,6 @@ Help, get me out of here!
 * :q gets you out of Vi derivatives and man pages
     * esc - esc - :q if you changed modes
 * read what's on your screen; it'll help you
-* $ clear
 
 Knowledge Check
 ===============
@@ -219,33 +293,17 @@ Knowledge Check
     ├── Documents
     │   ├── Code
     │   │   └── scripts
-    │   │       ├── test.py
     │   │       └── test.sh
     │   ├── School
     │   └── Work
     └── Pictures
         ├── manatee.gif
-        ├── mom.jpg
         └── turtle.png
-
     6 directories, 5 files
 
 * What user am I logged in as?
 * What command did I just run?
 * What is my current directory when I run that command? 
-* I want to get into the ``scripts`` directory. How can I do that with the
-  fewest keystrokes?
-* What do I see after running each of these commands?
-
-.. code-block:: bash
-    $ cd
-    $ ls
-    $ cd Pictures
-    $ ls
-    $ cd ../Documents/School
-    $ ls
-    $ cd ../Pictures
-    $ cd ~/Documents/Code/scripts; ls
 
 More about Man Pages
 ====================
@@ -266,9 +324,13 @@ Documentation
 =============
 
 .. note:: Emily
-
 * Man pages, blogs you find by Googling, StackOverflow
-* Contribute to community
+
+.. figure:: /static/google.gif
+    :align: center
+    :scale: 50%
+
+*  Contribute to community
     * Correct it if it's wrong
     * Remind them what newbies don't know
     * Write your own
@@ -280,15 +342,17 @@ Asking for help
 
 It's okay to ask. 
 
-#. Identify what you think the system should be doing
-#. Identify what it's actually doing instead
-#. Google a couple different descriptions of what's happening
-#. Skim the manuals of each component involved, if they didn't show up as
-   Google hits
-#. Identify a friend, mentor, or IRC channel who seems likely to know the
-   answer
+#. What should be happening? 
+#. What's actually happening?
+#. Google it
+#. Skim the manuals of each component
+#. Identify a friend, mentor, or IRC channel who could help
 #. When they're not busy, give them a quick synopsis of points 1 and 2,
    mentioning what possibilities you've ruled out by searching.
+
+**Contributions = expertise + time** 
+
+Don't waste experts' time, but do build your expertise.
 
 IRC
 ===
@@ -297,13 +361,13 @@ IRC
           implementation
 
 .. figure:: /static/multiple_networks.gif
-    :scale: 75%
+    :scale: 40%
     :align: center
 
 * Internet Relay Chat
-* very old
+* Very old (RFC 1459 May 1993)
 * Works on everything (no GUI needed)
-* standardized, and the people you want to listen to are there
+* The people you want to listen to are there
 
 A Client 
 ========
@@ -331,10 +395,11 @@ Networks
 ========
 
 .. figure:: /static/multiple_networks.gif                                    
-    :scale: 75% 
-    :align: right
+    :scale: 30% 
+    :align: center 
 
 .. code-block:: bash
+
     /connect irc.freenode.net
 
     /nick <myawesomenickname>
@@ -347,6 +412,7 @@ Channels
 ========
 
 .. code-block:: bash
+
     /join #osu-lug
     /join #devopsbootcamp
 
@@ -362,22 +428,6 @@ Commands
 * everything else starting with / is a command
 * ``/say $thing``
 * ``/join``, ``/part``, ``/whois <nick>``, ``/msg``, ``/help <command>``
-
-.. code-block:: bash
-
-    [12:01] [_test_(+i)] [3:freenode/#examplechannel(+CFcmnpst)] [Act: 1]
-    [#examplechannel] /me does an action
-
-    12:02  * _test_ does an action
-    12:02 < _test_> I just did an action
-
-    [12:03] [_test_(+i)] [3:freenode/#examplechannel(+CFcmnpst)] [Act: 1]       
-    [#examplechannel] /say /me does an action 
-
-    12:02 < _test_> /me does an action
-
-    [12:04] [_test_(+i)] [3:freenode/#examplechannel(+CFcmnpst)] [Act: 1]
-    [#examplechannel] /whois _test_ 
 
 Note that nothing shows up in the channel when you run a /whois command; it
 shows up either in your status buffer or your conversation with the person. 
@@ -413,6 +463,7 @@ Screen & Irssi Hints
 * Can you use `man screen` to find out what the d and r flags mean?
 
 .. code-block:: bash
+
  SCREEN(1)                                                               SCREEN(1)
  
  NAME
@@ -422,23 +473,7 @@ Screen & Irssi Hints
         screen [ -options ] [ cmd [ args ] ]
         screen -r [[pid.]tty[.host]]
         screen -r sessionowner/[[pid.]tty[.host]]
- 
- DESCRIPTION
-        Screen  is a full-screen window manager that multiplexes a physical termi‐
-        nal between several processes (typically interactive shells).   Each  vir‐
-        tual terminal provides the functions of a DEC VT100 terminal and, in addi‐
-        tion, several control functions from the ISO 6429 (ECMA  48,  ANSI  X3.64)
-        and  ISO  2022 standards (e.g. insert/delete line and support for multiple
-        character sets).  There is a scrollback history buffer  for  each  virtual
-        terminal  and  a  copy-and-paste mechanism that allows moving text regions
-        between windows.
- 
-        When screen is called, it creates a single window with a shell in  it  (or
-        the  specified  command) and then gets out of your way so that you can use
-        the program as you normally would.  Then, at any time, you can create  new
-        (full-screen) windows with other programs in them (including more shells),
-        kill existing windows, view a list of windows, turn output logging on  and
-  Manual page screen(1) line 1 (press h for help or q to quit)
+ Manual page screen(1) line 1 (press h for help or q to quit)
 
 Etiquette
 =========
@@ -458,6 +493,11 @@ Terminology
 
 * ping/pong
 * flapping
+
+.. figure:: /static/jargon.jpg
+    :align: right
+    :scale: 50%
+
 * tail
 * hat
 * nick
