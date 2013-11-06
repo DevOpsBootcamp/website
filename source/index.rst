@@ -11,15 +11,15 @@ DevOps Bootcamp
           *Thursday 11/7*. 
 
 
-          +--------+------------+-----------------------------------+ 
-          | Date   | Location   | Topic                             |
-          +========+============+===================================+ 
-          | 11/7   | KEC1007    | Single System Fundamentals        |
-          +--------+------------+-----------------------------------+ 
-          | 11/14  | KEC1007    | Text Editors & Version Control    |
-          +--------+------------+-----------------------------------+ 
-          | TBD    | TBD        | Scripting & Troubleshooting       |
-          +--------+------------+-----------------------------------+ 
++--------+------------+-----------------------------------+ 
+| Date   | Location   | Topic                             |
++========+============+===================================+ 
+| 11/7   | KEC1007    | Single System Fundamentals        |
++--------+------------+-----------------------------------+ 
+| 11/14  | KEC1007    | Text Editors & Version Control    |
++--------+------------+-----------------------------------+ 
+| TBD    | TBD        | Scripting & Troubleshooting       |
++--------+------------+-----------------------------------+ 
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program 
 aimed at boosting our impact and outreach while shrinking the skills gap for 
