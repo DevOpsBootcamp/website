@@ -275,6 +275,21 @@ Documentation
 * For your future self as well
 * Start now
 
+Asking for help
+===============
+
+It's okay to ask. 
+
+#. Identify what you think the system should be doing
+#. Identify what it's actually doing instead
+#. Google a couple different descriptions of what's happening
+#. Skim the manuals of each component involved, if they didn't show up as
+   Google hits
+#. Identify a friend, mentor, or IRC channel who seems likely to know the
+   answer
+#. When they're not busy, give them a quick synopsis of points 1 and 2,
+   mentioning what possibilities you've ruled out by searching.
+
 IRC
 ===
 
