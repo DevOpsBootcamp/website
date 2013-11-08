@@ -426,8 +426,10 @@ Commands
 
 * take action with ``/me does thing```
 * everything else starting with / is a command
-* ``/say $thing``
-* ``/join``, ``/part``, ``/whois <nick>``, ``/msg``, ``/help <command>``
+
+.. code-block:: bash
+    /say $thing
+    /join, /part, /whois <nick>, /msg, /help <command>
 
 Note that nothing shows up in the channel when you run a /whois command; it
 shows up either in your status buffer or your conversation with the person. 
