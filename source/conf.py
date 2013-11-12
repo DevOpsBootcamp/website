@@ -92,10 +92,9 @@ pygments_style = 'sphinx'
 # sections. If autoslides is set to False, only generate slides from the slide
 # directive.
 # This can be overridden on a per-document basis using the slideconf directive.
-if not os.environ.get('READTHEDOCS', None):
-    extensions += ['hieroglyph',]
-    autoslides = True 
-    slide_theme = 'single-level'
+extensions += ['hieroglyph',]
+autoslides = True 
+slide_theme = 'single-level'
 
 # -- Options for HTML output ---------------------------------------------------
 
