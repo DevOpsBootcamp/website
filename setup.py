@@ -11,3 +11,6 @@ setup(name="DevOps Bootcamp",
       packages=find_packages(exclude=["contrib", "docs", "tests*"]),
       zip_safe=False,
 )
+
+def install():
+    pass
