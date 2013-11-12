@@ -6,10 +6,8 @@
 DevOps Bootcamp
 ===============
 
-.. note:: Recurring meetings will be Thursdays, 6-8pm. Due to Halloween in
-          Week 5, our *first lesson* will be during week 6 of the term, on
-          *Thursday 11/7*. 
-
+.. note:: Recurring meetings will be Thursdays, 6-8pm but always check here
+          first.
 
           +--------+------------+-----------------------------------+ 
           | Date   | Location   | Topic                             |
