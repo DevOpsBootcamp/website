@@ -6,14 +6,12 @@
 DevOps Bootcamp
 ===============
 
-.. note:: Recurring meetings will be Thursdays, 6-8pm but always check here
-          first.
+.. note:: Recurring meetings will be Thursdays, 6-8pm most weeks for the rest 
+          of Fall term. Always check here for updated locations!
 
           +--------+------------+-----------------------------------+ 
           | Date   | Location   | Topic                             |
           +========+============+===================================+
-          | 11/7   | KEC1007    | The Very Basics (shell & irc)     |
-          +--------+------------+-----------------------------------+
           | 11/14  | KEC1001    | Single System Fundamentals        |
           +--------+------------+-----------------------------------+ 
           | TBD    | KEC1007    | Text Editors & Version Control    |
