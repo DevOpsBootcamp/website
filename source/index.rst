@@ -59,6 +59,7 @@ Contents:
    get_involved
    policies
    curriculum
+   guide
    resources
    faq
 
