@@ -1,0 +1,3 @@
+[console_scripts]
+hieroglyph-quickstart = hieroglyph.quickstart:main
+
