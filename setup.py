@@ -8,6 +8,5 @@ setup(name="DevOps Bootcamp",
       author='OSU OSL & OSU LUG',
       author_email='devopsbootcamp@osuosl.org',
       url='http://devopsbootcamp.osuosl.org',
-      packages=find_packages(exclude=["contrib", "docs", "tests*"]),
       zip_safe=False,
 )
