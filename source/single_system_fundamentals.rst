@@ -17,16 +17,18 @@ Today's Topics
     * other options (tarballs, build from source)
     * how installation works
     * what're scripts
-* Backups
-    * What should you back up?
-    * The easier solutions for an individual user
 
 What are users?
 ===============
 
 * You, right now
 
-* ``whoami``, ``who``, ``w``, ``id``
+.. code-block:: bash
+
+    $ whoami
+    $ who
+    $ w
+    $ id
 
 * Not just people: Apache, Mailman, ntp
 
@@ -41,16 +43,39 @@ Users have
 Managing users
 --------------
 
-* ``/etc/passwd``
+.. code-block:: bash
 
-* ``useradd`, ``userdel``, ``usermod``
-* ``passwd``
+    $ cat /etc/passwd
+    $ useradd $USER # vs adduser
+    $ userdel $USER
+    $ passwd
 
 Passwords
 ---------
 
 * ``/etc/shadow``, not ``/etc/passwd``
-* What the fields mean
+
+.. code-block:: bash
+
+    test@x230 ~ $ ls -l /etc/ | grep shadow
+    -rw-r-----  1 root shadow    857 Nov 12 17:37 gshadow
+    -rw-------  1 root root      846 Nov 12 17:37 gshadow-
+    -rw-r-----  1 root shadow   1503 Nov 12 17:37 shadow
+    -rw-------  1 root root     1378 Nov 12 17:37 shadow-
+
+    $ sudo su -
+    $ cat /etc/shadow
+    daemon:*:15630:0:99999:7:::
+    bin:*:15630:0:99999:7:::
+    sys:*:15630:0:99999:7:::
+    sync:*:15630:0:99999:7:::
+    games:*:15630:0:99999:7:::
+    man:*:15630:0:99999:7:::
+    lp:*:15630:0:99999:7:::
+    mail:*:15630:0:99999:7:::
+    news:*:15630:0:99999:7:::
+
+
 * Expire or disable (``chage``)
 
 Root/Superuser
@@ -59,14 +84,39 @@ Root/Superuser
 * UID 0
 * ``sudo``
 
+Acting as another user
+----------------------
+
+.. code-block:: bash
+
+    $ su $USER
+    $ sudo su -
+    $ sudo su $USER
+
+If someone has permissions errors: 
+    * Check that they or their group owns the files
+    * Check that they have the flag +x to execute 
+
 
 What are groups?
 ================
 
 * Manage permissions for groups of users
-* ``groupadd``
-* ``usermod``, ``groupmod``
 
+.. code-block:: bash
+
+    $ groupadd
+    $ usermod
+    $ groupmod
+
+Hands-On
+========
+ 
+* Create group ``bootcamp``
+* Create user foo
+* Create user baz
+* Add baz to the bootcamp group
+* Give foo sudo powers
 
 What are files?
 =============== 
@@ -86,8 +136,11 @@ File extensions
 * Really more of a recommendation
     * File contains information about its encoding
 
+.. code-block:: bash
+    
+    $ file $FILENAME # tells you about the filetype
 
-ls -al
+ls -l
 ------
 
 * First bit: type
@@ -97,27 +150,74 @@ ls -al
 
 * user & group
 
+.. code-block:: bash
+
+    drwxrwxr-x 5 test test 4096 Nov  6 11:46 Documents
+    -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
+    drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
+
+
 chmod and octal permissions
 ---------------------------
+    
+.. code-block:: bash
 
-[table of translations goes here]
+    +=====+========+=======+
+    | rwx | Binary | Octal |
+    +=====+========+=======+
+    | --- | 000    | 0     |
+    | --x | 001    | 1     |
+    | -w- | 010    | 2     |
+    | -wx | 011    | 3     |
+    | r-- | 100    | 4     |
+    | r-x | 101    | 5     |
+    | rw- | 110    | 6     |
+    | rwx | 111    | 7     |
+    +=====+========+=======+
+
+* u, g, o for user, group, other
+* -, +, = for remove, add, set
+* r, w, x for read, write, execute
+
 
 chown
 -----
 
 user & group
 
-umask
------
+.. code-block:: bash
 
-defaults when creating files
+    # Change the owner of myfile to "root".
+    $ chown root myfile
 
-Acting as another user
-----------------------
+    # Likewise, but also change its group to "staff".
+    $ chown root:staff myfile
 
-If someone has permissions errors: 
-    * Check that they or their group owns the files
-    * Check that they have the flag 
+    # Change the owner of /mydir and subfiles to "root".
+    $ chown -hR root /mydir
+
+Types of files
+--------------
+
+.. code-block:: bash
+    
+    drwxrwxr-x      5 test    test      4096    Nov  6 11:46 Documents
+    -rw-rw-r--      1 test    test         0    Nov 13 14:09 file.txt
+    drwxrwxr-x      2 test    test      4096    Nov  6 13:22 Pictures
+    ----------     -------  -------  -------- ------------ -------------
+        |             |        |         |         |             |
+        |             |        |         |         |         File Name
+        |             |        |         |         +---  Modification Time
+        |             |        |         +-------------   Size (in bytes)
+        |             |        +-----------------------        Group
+        |             +--------------------------------        Owner
+        +----------------------------------------------   File Permissions
+
+``-`` is a normal file
+
+``d`` is a directory
+
+``b`` is a block device
 
 Packages
 ========
