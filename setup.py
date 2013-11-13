@@ -10,3 +10,6 @@ setup(name="DevOps Bootcamp",
       url='http://devopsbootcamp.osuosl.org',
       zip_safe=False,
 )
+
+def install():
+    pass
