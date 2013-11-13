@@ -21,38 +21,35 @@ Here's what we're hoping to mentor and teach students about:
     Slide content will be linked here as soon as it's drafted, but only finalized
     1-2 weeks before the lessons when it's presented. 
 
-:doc:`the_very_basics`
+Lesson 1: The Very Basics
 -------------------------
 
-- How to get Linux
-- What's the terminal?
-- Internet Relay Chat
+Shell, virtualbox+vagrant, IRC.
 
-:doc:`single_system_fundamentals`
+- 6pm 11/7/2013, KEC1007. 34 people attended. 
+- Slides: :doc:`the_very_basics`
+- YouTube: `http://www.youtube.com/watch?v=UiiPiIoTxnw`_
+
+Lesson 2: Single System Fundamentals
 ------------------------------------
 
-Or, how to be a power user.
+Users, Groups, and package management
 
-- What are files? 
-- What are user accounts?
-- What are packages? 
+- 6pm 11/14/2013, KEC1001
+- slides: :doc:`single_system_fundamentals`
+- YouTube: Will be posted after the lecture
 
-:doc:`fun_with_files`
-------------------------
+Lesson 3: Files
+---------------
 
-- What's a text editor?
-- Features of an editor
-- Version control: Git!
+Version control & text editors (Vim)
 
-:doc:`troubleshooting`
--------------------------
+- slides: :doc:`fun_with_files`
+- YouTube: Will be posted after the lecture
 
-We want you to learn these concepts early in the course, because you will
-constantly need them as we continue. 
+Lesson 4: Scripting & Troubleshooting
 
-- Debugging problems
-- Don't make it worse
-- Good bug reports
+- slides: :doc:`troubleshooting`
 
 Lesson 5: Filesystems
 ---------------------
