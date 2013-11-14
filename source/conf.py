@@ -94,7 +94,7 @@ pygments_style = 'sphinx'
 # This can be overridden on a per-document basis using the slideconf directive.
 if not os.environ.get('READTHEDOCS', None):
     extensions += ['hieroglyph',]
-    autoslides = True 
+    autoslides = True
     slide_theme = 'single-level'
 
 # -- Options for HTML output ---------------------------------------------------

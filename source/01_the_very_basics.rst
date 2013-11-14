@@ -26,7 +26,7 @@ Today's Agenda
 A note about notation
 =====================
 
-.. note:: Emily presents 
+.. note:: Emily presents
 
 .. figure:: /static/stickynote.png
     :align: right
@@ -43,15 +43,15 @@ A note about notation
 How to get (to) Linux
 =====================
 
-.. note:: Emily explains OSU-specific options 
+.. note:: Emily explains OSU-specific options
 
 .. figure:: /static/dualboot.png
-    :align: right 
+    :align: right
     :scale: 40%
 
 * How many have it already installed?
 * Install VM or dual-boot
-* When stuck on Windows, use PuTTy: 
+* When stuck on Windows, use PuTTy:
     * http://www.chiark.greenend.org.uk/~sgtatham/putty/
 * Students::
 
@@ -115,7 +115,7 @@ Vagrant & VirtualBox
     # start up
     cd devopsbootcamp-vagrant
     vagrant up
-    
+
     # access vm
     vagrant ssh
 
@@ -147,7 +147,7 @@ The Terminal
 
 .. figure:: /static/crashcart.jpg
     :align: right
-    :scale: 75% 
+    :scale: 75%
 
 * Used to mean the keyboard+monitor
     * Now that's a crash cart
@@ -181,7 +181,7 @@ Basic Shell Commands
 * get help: ``man <program>``
 
 .. code-block:: bash
- 
+
     test@x230 ~ $ tree
     .
     ├── Documents
@@ -234,7 +234,7 @@ File Paths
     test@x230 ~ $ cd Documents/
     test@x230 ~/Documents $ ls
     Code  School  Work
-    test@x230 ~/Documents $ 
+    test@x230 ~/Documents $
 
 
 .. note:: root directory is not to be confused with a home directory for the
@@ -287,7 +287,7 @@ Knowledge Check
 ===============
 
 .. code-block:: bash
-    
+
     test@x230 ~ $ tree
     .
     ├── Documents
@@ -303,7 +303,7 @@ Knowledge Check
 
 * What user am I logged in as?
 * What command did I just run?
-* What is my current directory when I run that command? 
+* What is my current directory when I run that command?
 
 More about Man Pages
 ====================
@@ -340,9 +340,9 @@ Documentation
 Asking for help
 ===============
 
-It's okay to ask. 
+It's okay to ask.
 
-#. What should be happening? 
+#. What should be happening?
 #. What's actually happening?
 #. Google it
 #. Skim the manuals of each component
@@ -350,7 +350,7 @@ It's okay to ask.
 #. When they're not busy, give them a quick synopsis of points 1 and 2,
    mentioning what possibilities you've ruled out by searching.
 
-**Contributions = expertise + time** 
+**Contributions = expertise + time**
 
 Don't waste experts' time, but do build your expertise.
 
@@ -369,7 +369,7 @@ IRC
 * Works on everything (no GUI needed)
 * The people you want to listen to are there
 
-A Client 
+A Client
 ========
 
 .. note:: Emily switches to terminal and shows example
@@ -387,16 +387,16 @@ A Client
     # start your client
     $ irssi
 
-    # after ending ssh session, to get back: 
+    # after ending ssh session, to get back:
     $ ssh <username>@<preferred shell host>
     $ screen -dr IRC
 
 Networks
 ========
 
-.. figure:: /static/multiple_networks.gif                                    
-    :scale: 30% 
-    :align: center 
+.. figure:: /static/multiple_networks.gif
+    :scale: 30%
+    :align: center
 
 .. code-block:: bash
 
@@ -404,7 +404,7 @@ Networks
 
     /nick <myawesomenickname>
     /msg nickserv register <password> <email>
-    
+
     /nick <myawesomenickname>
     /msg nickserv identify <password>
 
@@ -432,17 +432,17 @@ Commands
     /join, /part, /whois <nick>, /msg, /help <command>
 
 Note that nothing shows up in the channel when you run a /whois command; it
-shows up either in your status buffer or your conversation with the person. 
+shows up either in your status buffer or your conversation with the person.
 
 .. code-block:: bash
 
     12:04 -!- _test_ [~test@c-50-137-46-63.hsd1.or.comcast.net]
     12:04 -!-  ircname  : Example User
-    12:04 -!-  channels : #ExampleChannel 
+    12:04 -!-  channels : #ExampleChannel
     12:04 -!-  server   : moorcock.freenode.net [TX, USA]
-    12:04 -!-  hostname : c-50-137-46-63.hsd1.or.comcast.net 50.137.46.63 
+    12:04 -!-  hostname : c-50-137-46-63.hsd1.or.comcast.net 50.137.46.63
     12:04 -!-  idle     : 0 days 0 hours 2 mins 38 secs [signon: Wed Nov  6
-    12:00:30 
+    12:00:30
                           2013]
     12:04 -!- End of WHOIS
 
@@ -467,10 +467,10 @@ Screen & Irssi Hints
 .. code-block:: bash
 
  SCREEN(1)                                                               SCREEN(1)
- 
+
  NAME
         screen - screen manager with VT100/ANSI terminal emulation
- 
+
  SYNOPSIS
         screen [ -options ] [ cmd [ args ] ]
         screen -r [[pid.]tty[.host]]
@@ -490,7 +490,7 @@ Etiquette
 * Pastebin code
 * Choose your nick carefully
 
-Terminology 
+Terminology
 ===========
 
 * ping/pong
@@ -508,15 +508,15 @@ Terminology
 * common emotes
     * ``o/`` AND  ``\o`` high fives
     * ``/me &`` means afk
-  
+
 Review
 ======
 
-* What's Linux? 
-* How do you open a terminal emultor? 
+* What's Linux?
+* How do you open a terminal emultor?
     * this varies between window managers
-* I have the script ``test.py``. How do I run it?? 
-* How do you list all the files in the current directory? 
+* I have the script ``test.py``. How do I run it??
+* How do you list all the files in the current directory?
 * Give 2 ways to change directory to your home directory.
 * How do you start an irc client?
     * How often should you need to start your IRC client?

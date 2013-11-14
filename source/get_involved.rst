@@ -18,7 +18,7 @@ Website & Curriculum
 If you'd like to help edit this site, `email devopsbootcamp`_ or ping anyone in
 #devopsbootcamp on Freenode with your github username to get access to the web
 site repo.  You'll also want to learn the `ReStructured Text`_ markup language
-to edit the site, if you don't already know it. 
+to edit the site, if you don't already know it.
 
 Meetings
 --------
@@ -27,12 +27,12 @@ Our first meeting will be held twice: **Tuesday, October 15th** at 6pm in KEC100
 **Friday, October 18th** at 6pm in KEC1007. Recurring meeting times will be
 decided based on the availability of those who show up for either session of
 the first meeting. Note that we'll be presenting basically the same thing on
-both Tuesday and Friday, so attend whichever one session works for you. 
+both Tuesday and Friday, so attend whichever one session works for you.
 
 Sign Up
 -------
 
-Please fill out the `signup form`_ if you plan to join the bootcamp, so that we can 
+Please fill out the `signup form`_ if you plan to join the bootcamp, so that we can
 choose a meeting time which works for everyone.
 
 .. _mailing list: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp

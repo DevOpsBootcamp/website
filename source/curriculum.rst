@@ -3,7 +3,7 @@ Curriculum
 
 The curriculum will be constantly evolving as we develop this course. The
 first unit will be an overview of what students will need to know in order to
-understand the deeper technical concepts which will be covered later. 
+understand the deeper technical concepts which will be covered later.
 
 Here's what we're hoping to mentor and teach students about:
 
@@ -16,17 +16,17 @@ Here's what we're hoping to mentor and teach students about:
 .. note:: Note that the curriculum past week 4 is currently under development. Lesson
     titles are included to provide an overview of what we'll cover, but specific
     content is likely to get moved around between lessons depending on what we
-    learn about the pace of the class during the first few weeks. 
+    learn about the pace of the class during the first few weeks.
 
     Slide content will be linked here as soon as it's drafted, but only finalized
-    1-2 weeks before the lessons when it's presented. 
+    1-2 weeks before the lessons when it's presented.
 
 Lesson 1: The Very Basics
 -------------------------
 
 Shell, virtualbox+vagrant, IRC.
 
-- 6pm 11/7/2013, KEC1007. 34 people attended. 
+- 6pm 11/7/2013, KEC1007. 34 people attended.
 - Slides: :doc:`the_very_basics`
 - YouTube: `http://www.youtube.com/watch?v=UiiPiIoTxnw`_
 
@@ -54,7 +54,7 @@ Lesson 4: Scripting & Troubleshooting
 Lesson 5: Filesystems
 ---------------------
 
-:doc:`filesystems` 
+:doc:`filesystems`
 
 Lesson 6: The boot process
 --------------------------

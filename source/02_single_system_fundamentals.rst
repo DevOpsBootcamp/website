@@ -93,9 +93,9 @@ Acting as another user
     $ sudo su -
     $ sudo su $USER
 
-If someone has permissions errors: 
+If someone has permissions errors:
     * Check that they or their group owns the files
-    * Check that they have the flag +x to execute 
+    * Check that they have the flag +x to execute
 
 
 What are groups?
@@ -111,7 +111,7 @@ What are groups?
 
 Hands-On
 ========
- 
+
 * Create group ``bootcamp``
 * Create user foo
 * Create user baz
@@ -119,7 +119,7 @@ Hands-On
 * Give foo sudo powers
 
 What are files?
-=============== 
+===============
 
 * Nearly everything
 * Files have:
@@ -137,7 +137,7 @@ File extensions
     * File contains information about its encoding
 
 .. code-block:: bash
-    
+
     $ file $FILENAME # tells you about the filetype
 
 ls -l
@@ -159,7 +159,7 @@ ls -l
 
 chmod and octal permissions
 ---------------------------
-    
+
 .. code-block:: bash
 
     +=====+========+=======+
@@ -200,7 +200,7 @@ Types of files
 --------------
 
 .. code-block:: bash
-    
+
     drwxrwxr-x      5 test    test      4096    Nov  6 11:46 Documents
     -rw-rw-r--      1 test    test         0    Nov 13 14:09 file.txt
     drwxrwxr-x      2 test    test      4096    Nov  6 13:22 Pictures

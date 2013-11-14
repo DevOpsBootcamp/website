@@ -17,8 +17,8 @@ Systems Administration Tutorials
       administrators. The whole book is `here
       <http://linux-training.be/files/books/LinuxTraining.pdf>`_.
 
-* `OpsSchool <http://www.opsschool.org/en/latest/>`_ is working on a tutorial 
-  somewhat like DevOps Bootcamp, but it's currently incomplete. Consider 
+* `OpsSchool <http://www.opsschool.org/en/latest/>`_ is working on a tutorial
+  somewhat like DevOps Bootcamp, but it's currently incomplete. Consider
   contributing to it!
 
 Open Source
@@ -34,7 +34,7 @@ Source class:
 Culture
 -------
 
-* `The Jargon File <http://www.catb.org/jargon/html/index.html>`_ 
+* `The Jargon File <http://www.catb.org/jargon/html/index.html>`_
 * `Geek Feminism <http://geekfeminism.wikia.com/wiki/Geek_Feminism_Wiki>`_ and
   `Systers <http://anitaborg.org/initiatives/systers/>`_ are worth looking
-  into if you enjoy discussing diversity or IT's lack thereof. 
+  into if you enjoy discussing diversity or IT's lack thereof.

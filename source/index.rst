@@ -6,21 +6,21 @@
 DevOps Bootcamp
 ===============
 
-.. note:: Recurring meetings will be Thursdays, 6-8pm most weeks for the rest 
+.. note:: Recurring meetings will be Thursdays, 6-8pm most weeks for the rest
           of Fall term. Always check here for updated locations!
 
-          +--------+------------+-----------------------------------+ 
+          +--------+------------+-----------------------------------+
           | Date   | Location   | Topic                             |
           +========+============+===================================+
           | 11/14  | KEC1001    | Single System Fundamentals        |
-          +--------+------------+-----------------------------------+ 
+          +--------+------------+-----------------------------------+
           | TBD    | KEC1007    | Text Editors & Version Control    |
-          +--------+------------+-----------------------------------+ 
+          +--------+------------+-----------------------------------+
           | TBD    | TBD        | Scripting & Troubleshooting       |
-          +--------+------------+-----------------------------------+ 
+          +--------+------------+-----------------------------------+
 
-DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program 
-aimed at boosting our impact and outreach while shrinking the skills gap for 
+DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
+aimed at boosting our impact and outreach while shrinking the skills gap for
 OSU students interested in DevOps.
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
@@ -36,11 +36,11 @@ with 2 to 3 sessions per month through the school year, in which current OSL
 students and software professionals will teach all of the topics with which one
 must be familiar in order to succeed. Although hands-on labs will be offered
 later in the program, no initial familiarity with software development or Linux
-will be assumed. 
+will be assumed.
 
 This program is based on the `PSU Braindump <http://braindump.cat.pdx.edu>`_,
 where for 21 years they have been turning PSU students into sysadmins who have
-rapidly been flowing into the growing number of startups in Portland.  
+rapidly been flowing into the growing number of startups in Portland.
 
 The DevOps Bootcamp program will be dynamically shaping itself based on the
 feedback we get from  interested students.

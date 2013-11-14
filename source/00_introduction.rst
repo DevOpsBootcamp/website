@@ -5,14 +5,14 @@ DevOps Bootcamp Introduction
 OSU OSL & OSU LUG
 devopsbootcamp.osuosl.org
 
-What's DevOps? 
+What's DevOps?
 ==============
 
 .. figure:: /static/devops.jpg
 
 Software Development + Operations Engineering
 
-What's BootCamp? 
+What's BootCamp?
 ================
 
 * New this year

@@ -4,7 +4,7 @@ Documentation
 
 SysAdmin Traits
 ===============
-* Lazy: 
+* Lazy:
     * If you have to do something once, you will very likely have to do it again
     * Script and document as much as possible
 
@@ -73,7 +73,7 @@ What to document: Procedures!
 .. note:: * Think if you have to fix something at 4AM, if it was documented it
     would make things better!
         * What happens if all the power goes out? How do you bring everything back
-        * online? 
+        * online?
         * Specific hardware/software docs are key!!!
 
 * Server Migrations
@@ -103,7 +103,7 @@ Commit messages
 .. note:: Example: I hit a bug in software and knew I would forget about it.
     So I wrote a whole paragraph with web links to explain to myself why it
     doesn't work. I hit the same bug again and remembered I hit it before and
-    found my commit message! 
+    found my commit message!
 
 * Useful and informative but short
 * If complex, then describe & document
