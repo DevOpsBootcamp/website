@@ -14,7 +14,7 @@ DevOps Bootcamp
           +========+============+===================================+
           | 11/14  | KEC1001    | Single System Fundamentals        |
           +--------+------------+-----------------------------------+
-          | TBD    | KEC1007    | Text Editors & Version Control    |
+          | 11/21  | KEC1007    | Text Editors & Version Control    |
           +--------+------------+-----------------------------------+
           | TBD    | TBD        | Scripting & Troubleshooting       |
           +--------+------------+-----------------------------------+
