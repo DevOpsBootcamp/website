@@ -219,40 +219,84 @@ Types of files
 
 ``b`` is a block device
 
-Packages
-========
+Package Management
+==================
 
-Why you need them: Installing software
+*Take care of installation and removal of software*
 
-Dependencies
-------------
+**Core Functionality:**
 
-what your software needs to run
+* Install & uninstall packages
+* Resolve package dependencies
+* Upgrade packages
+* Install packages from a central repository
+* Search for information on installed packages and files
 
-examples
+**Popular Linux Package Managers**
 
-Package Manager
----------------
+* .deb / APT (used by Debian, Ubuntu)
+* .rpm / YUM (used by RedHat, CentOS, Fedora, SuSe)
 
-* Comes with your distro
-* Usually pre-built packages
-* Exceptions: 
-    * portage (builds it for you)
-    * pypi (distro-agnostic)
+RPM & yum (RedHat, CentOS, Fedora)
+----------------------------------
 
-CentOS: yum
-------------
+.. image:: /static/rpm.png
+    :align: right
+    :width: 30%
 
-* search
-* install
-* remove
+**RPM**
 
-Ubuntu/Mint: Apt
-----------------
+  Binary file format which includes metadata about the package and the
+  application binaries as well.
 
-* search
-* install
-* remove
+.. image:: /static/yum.png
+    :align: right
+    :width: 30%
+
+**Yum**
+
+  RPM package manager used to query a central repository and resolve RPM
+  package dependencies.
+
+yum search
+----------
+
+.. code-block:: bash
+
+  $ yum search tree
+  Loaded plugins: fastestmirror, security
+  Loading mirror speeds from cached hostfile
+  ======================== N/S Matched: tree =========================
+  tree.x86_64 : File system tree viewer
+
+yum info
+--------
+
+.. code-block:: bash
+
+  $ yum info tree
+  Loaded plugins: fastestmirror, security
+  Loading mirror speeds from cached hostfile
+  Available Packages
+  Name        : tree
+  Arch        : x86_64
+  Version     : 1.5.3
+  Release     : 2.el6
+  Size        : 36 k
+  Repo        : base
+  Summary     : File system tree viewer
+  URL         : http://mama.indstate.edu/users/ice/tree/
+  License     : GPLv2+
+  Description : The tree utility recursively displays the contents of
+              : directories in a tree-like format.  Tree is basically
+              : a UNIX port of the DOS tree utility.
+
+yum install
+-----------
+
+.. code-block:: text
+
+  $ yum install tree
 
 Other ways to install stuff
 ---------------------------
