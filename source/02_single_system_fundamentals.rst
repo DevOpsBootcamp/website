@@ -95,10 +95,11 @@ Passwords
     sys:*:15630:0:99999:7:::
     mail:*:15630:0:99999:7:::
 
-    # name:hash:time last changed: min days between changes: max days between changes:
-    # days to wait before expiry or disabling:day of account expiry
+    # name:hash:time last changed: min days between changes: max days 
+    #    between changes:days to wait before expiry or disabling:day of
+    #    account expiry
 
-    $ change # change when a user's password expires
+    $ chage # change when a user's password expires
 
 Root/Superuser
 ==============
@@ -154,7 +155,7 @@ Hands-On: Users and Groups
 * Use use su to get into your user account
 * Change your password
 * Create a directory called bootcamp in your home directory
-* Create a group called bootcamp
+* Create a group called devops 
 
 
 What are files?
@@ -168,6 +169,15 @@ What are files?
     * Size
     * Filename
 
+.. code-block:: bash
+
+    test@x230 ~ $ ls -il
+    total 8
+    2884381 drwxrwxr-x 5 test test 4096 Nov  6 11:46 Documents
+    2629156 -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
+    2884382 drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
+
+
 File extensions
 ===============
 
@@ -179,6 +189,12 @@ File extensions
 .. code-block:: bash
 
     $ file $FILENAME # tells you about the filetype
+
+    test@x230 ~ $ file file.txt
+    file.txt: ASCII text
+
+    test@x230 ~ $ file squirrel.jpg 
+    squirrel.jpg: JPEG image data, JFIF standard 1.01
 
 ls -l
 ======
@@ -274,8 +290,8 @@ ACLs
 
 * Support depends on OS and filesystem
 
-Hands-On
-========
+Hands-On: Files and Permissions
+===============================
 
 .. code-block:: bash
    
