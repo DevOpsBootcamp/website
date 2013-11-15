@@ -150,6 +150,17 @@ What are groups?
 Hands-On: Users and Groups
 ==========================
 
+.. note:: To give yourself sudo powers do the following:
+
+  #. Add your user to the ``wheel`` group using ``gpasswd``.
+  #. As the root user, use ``visudo`` and uncomment this line::
+
+      %wheel  ALL=(ALL)   ALL
+
+  #. Save the file and now you should have sudo!
+
+  *We'll cover sudo in more depth at a later time.*
+
 * Create a user on your system for yourself, with your preferred username
 * Give your user sudo powers
 * Use use su to get into your user account
