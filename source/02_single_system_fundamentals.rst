@@ -4,6 +4,22 @@ Lesson 2: Single System Fundamentals
 
 Or, how to be a power user.
 
+Housekeeping
+============
+
+.. figure:: /static/virtualbox.png
+    :align: center
+    :scale: 30%
+10 minutes to make sure everyone's Virtualbox instances are up and running
+
+
+**Your opinions:**
+
+* Want to meet during dead week vs. have last meeting of term next week?
+
+* Start wk1 of winter term?
+
+
 Today's Topics
 ==============
 * What are files?
@@ -25,73 +41,87 @@ What are users?
 
 .. code-block:: bash
 
-    $ whoami
-    $ who
-    $ w
-    $ id
+    $ whoami    # your username
+    $ who       # who is logged in?
+    $ w         # who is here and what are they doing?
+    $ id        # user ID, group ID, and groups you're in
 
 * Not just people: Apache, Mailman, ntp
 
 Users have
-----------
+==========
 
 * Username
 * UID
+* Group
 * Usually (but not always) password
 * Usually (but not always) home directory
 
 Managing users
---------------
+==============
 
 .. code-block:: bash
 
     $ cat /etc/passwd
-    $ useradd $USER # vs adduser
+    # username:x:UID:GID:GECOS:homedir:shell
+    $ useradd $USER # vs adduser, the friendly Ubuntu version
     $ userdel $USER
     $ passwd
 
+.. figure:: /static/xkcd215.png
+    :align: center
+
+.. code-block:: bash
+
+    # GECOS: full name, office number and building, office phone extension, 
+    # home phone number (General Eletric Comprehensive Operating System)
+    $ chfn # change GECOS information; only works sometimes
+    $ finger # tells you someone's GECOS info
+    
+
 Passwords
----------
+=========
 
 * ``/etc/shadow``, not ``/etc/passwd``
 
 .. code-block:: bash
 
     test@x230 ~ $ ls -l /etc/ | grep shadow
-    -rw-r-----  1 root shadow    857 Nov 12 17:37 gshadow
-    -rw-------  1 root root      846 Nov 12 17:37 gshadow-
     -rw-r-----  1 root shadow   1503 Nov 12 17:37 shadow
-    -rw-------  1 root root     1378 Nov 12 17:37 shadow-
 
     $ sudo su -
     $ cat /etc/shadow
     daemon:*:15630:0:99999:7:::
     bin:*:15630:0:99999:7:::
     sys:*:15630:0:99999:7:::
-    sync:*:15630:0:99999:7:::
-    games:*:15630:0:99999:7:::
-    man:*:15630:0:99999:7:::
-    lp:*:15630:0:99999:7:::
     mail:*:15630:0:99999:7:::
-    news:*:15630:0:99999:7:::
 
+    # name:hash:time last changed: min days between changes: max days between changes:
+    # days to wait before expiry or disabling:day of account expiry
 
-* Expire or disable (``chage``)
+    $ chage # change when a user's password expires
 
 Root/Superuser
---------------
+==============
 
 * UID 0
 * ``sudo``
 
+.. figure:: /static/xkcd149.png
+    :align: center
+
 Acting as another user
-----------------------
+======================
 
 .. code-block:: bash
 
-    $ su $USER
-    $ sudo su -
-    $ sudo su $USER
+    $ su $USER          # become user, with THEIR password
+    $ su                # become root, with root's password
+    $ sudo su -         # use user password instead of root's
+    $ sudo su $USER     # become $USER with your password
+
+.. figure:: /static/xkcd838.png
+    :scale: 80%
 
 If someone has permissions errors:
     * Check that they or their group owns the files
@@ -108,15 +138,25 @@ What are groups?
     $ groupadd
     $ usermod
     $ groupmod
+    $ cat /etc/group
+        root:x:0:
+        daemon:x:1:
+        bin:x:2:
+        sys:x:3:
+        adm:x:4:
+        tty:x:5:
+    # group name:password or placeholder:GID:member,member,member
 
 Hands-On: Users and Groups
 ==========================
 
-* Create group ``bootcamp``
-* Create user foo
-* Create user baz
-* Add baz to the bootcamp group
-* Give foo sudo powers
+* Create a user on your system for yourself, with your preferred username
+* Give your user sudo powers
+* Use use su to get into your user account
+* Change your password
+* Create a directory called bootcamp in your home directory
+* Create a group called bootcamp
+
 
 What are files?
 ===============
@@ -125,11 +165,12 @@ What are files?
 * Files have:
     * Owner
     * Permissions
+    * inode
     * Size
     * Filename
 
 File extensions
----------------
+===============
 
 * ``.jpg``, ``.txt``, ``.doc``
 
@@ -141,7 +182,7 @@ File extensions
     $ file $FILENAME # tells you about the filetype
 
 ls -l
-------
+======
 
 * First bit: type
 * Next 3: user
@@ -152,6 +193,7 @@ ls -l
 
 .. code-block:: bash
 
+    $ ls -l
     drwxrwxr-x 5 test test 4096 Nov  6 11:46 Documents
     -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
     drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
@@ -180,8 +222,8 @@ chmod and octal permissions
 * r, w, x for read, write, execute
 
 
-chown
------
+chown, chgrp
+------------
 
 user & group
 
@@ -195,9 +237,12 @@ user & group
 
     # Change the owner of /mydir and subfiles to "root".
     $ chown -hR root /mydir
+    
+    # Make the group devops own the bootcamp dir
+    $ chgrp -R devops /home/$yourusername/bootcamp
 
 Types of files
---------------
+==============
 
 .. code-block:: bash
 
@@ -218,6 +263,30 @@ Types of files
 ``d`` is a directory
 
 ``b`` is a block device
+
+ACLs
+====
+
+* Access control lists
+
+* Not recomended; hard to maintain
+
+* Typically how other OSes manage permissions
+
+* Support depends on OS and filesystem
+
+Hands-On
+========
+
+.. code-block:: bash
+   
+    $ touch foo # create empty file called foo
+
+* As root, create a file in /home/$yourusername/bootcamp
+* Who can do what to the file? 
+* Make the devops group own the file
+* Make a file called allperms and give user, group, and world +rwx 
+* Make more files and practice changing their permissions
 
 Package Management
 ==================
