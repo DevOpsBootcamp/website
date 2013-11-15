@@ -35,7 +35,7 @@ Lesson 2: Single System Fundamentals
 
 Users, Groups, and package management
 
-- 6pm 11/14/2013, KEC1001
+- 6pm 11/14/2013, KEC1001. 27 people showed up.
 - slides: :doc:`02_single_system_fundamentals`
 - YouTube: Will be posted after the lecture
 
