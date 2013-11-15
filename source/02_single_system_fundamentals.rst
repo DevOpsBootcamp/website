@@ -226,11 +226,11 @@ Package Management
 
 **Core Functionality:**
 
-* Install & uninstall packages
+* Install, Upgrade & uninstall packages easily
 * Resolve package dependencies
-* Upgrade packages
 * Install packages from a central repository
 * Search for information on installed packages and files
+* Pre-built binaries (usually)
 
 **Popular Linux Package Managers**
 
@@ -258,59 +258,170 @@ RPM & yum (RedHat, CentOS, Fedora)
   RPM package manager used to query a central repository and resolve RPM
   package dependencies.
 
-yum search
-----------
+Yum Commands (Redhat, CentOS, Fedora)
+-------------------------------------
+
+We'll use the ``tree`` package as an example below.
 
 .. code-block:: bash
 
+  # Searching for a package
   $ yum search tree
-  Loaded plugins: fastestmirror, security
-  Loading mirror speeds from cached hostfile
-  ======================== N/S Matched: tree =========================
-  tree.x86_64 : File system tree viewer
 
-yum info
---------
-
-.. code-block:: bash
-
+  # Information about a package
   $ yum info tree
-  Loaded plugins: fastestmirror, security
-  Loading mirror speeds from cached hostfile
-  Available Packages
-  Name        : tree
-  Arch        : x86_64
-  Version     : 1.5.3
-  Release     : 2.el6
-  Size        : 36 k
-  Repo        : base
-  Summary     : File system tree viewer
-  URL         : http://mama.indstate.edu/users/ice/tree/
-  License     : GPLv2+
-  Description : The tree utility recursively displays the contents of
-              : directories in a tree-like format.  Tree is basically
-              : a UNIX port of the DOS tree utility.
 
-yum install
------------
-
-.. code-block:: text
-
+  # Installing a package
   $ yum install tree
 
-Other ways to install stuff
----------------------------
+  # Upgrade all packages to a newer version
+  $ yum upgrade
 
-* source then compile
-* prebuilt, download
+  # Uninstalling a package
+  $ yum remove tree
+
+  # Cleaning the RPM database
+  $ yum clean all
+
+RPM Commands
+------------
+
+Low level package management. No dependency checking or central repository.
+
+.. code-block:: bash
+
+  # Install an RPM file
+  $ rpm -i tree-1.5.3-2.el6.x86_64.rpm
+
+  # Upgrade an RPM file
+  $ rpm -Uvh tree-1.5.3-3.el6.x86_64
+
+  # Uninstall an RPM package
+  $ rpm -e tree
+
+  # Querying the RPM database
+  $ rpm -qa tree
+
+  # Listing all files in an RPM package
+  $ rpm -ql tree
+
+DPKG & Apt (Debian, Ubuntu)
+----------------------------------
 
 
-Backups
-=======
+**Deb**
 
-* Anything you customized
-* system-specific config files
-* Home directories
+  Binary file format which includes metadata about the package and the
+  application binaries as well.
+
+.. image:: /static/debian.png
+    :align: right
+
+**DPKG**
+
+  Low level package installer for the .deb file format. Does no package
+  dependency resolution.
+
+**Apt**
+
+  DPKG package manager used to query a central repository and resolve Deb
+  package dependencies. Considered mostly a front-end to dpkg.
+
+Apt/Aptitude Commands (Debian, Ubuntu)
+--------------------------------------
+
+.. code-block:: bash
+
+  # Update package cache database
+  $ apt-get update
+
+  # Searching for a package
+  $ apt-cache search tree
+
+  # Information about a package
+  $ apt-cache showpkg tree
+  $ aptitude show tree
+
+  # Installing a package
+  $ apt-get install tree
+
+  # Upgrade all packages to a newer version
+  $ apt-get upgrade
+  $ apt-get dist-upgrade
+
+  # Uninstalling a package
+  $ apt-get remove tree
+  $ apt-get purge tree
+
+Dpkg Commands
+-------------
+
+Low level package management. No dependency checking or central repository.
+
+.. code-block:: bash
+
+  # Install or upgrade a DEB file
+  $ dpkg -i tree_1.6.0-1_amd64.deb
+
+  # Removing a DEB package
+  $ dpkg -r tree
+
+  # Purging a DEB package
+  $ dpkg -P tree
+
+  # Querying the DPKG database
+  $ dpkg-query -l tree
+
+  # Listing all files in a DEB package
+  $ dpkg-query -L tree
+
+Language-specific Package Managers
+----------------------------------
+
+* Languages sometimes have their own package management suite
+* Can be useful for using newer versions of packages
+* **Examples**
+    * pip (Python)
+    * rubygems (Ruby)
+    * CPAN (Perl)
+    * cabal (Haskell)
+    * npm (NodeJS)
+    * *... and so on forever ...*
+
+Other Package Managers
+----------------------
+
+They each fill a specific niche and have their own pros and cons.
+
+* Portage (Gentoo) -- Source based package installer
+* pacman (Arch Linux)
+* ZYpp / Zypper (SUSE) -- Yet another RPM package manager
+
+Installing from source
+----------------------
+
+* Download source tarball, run build scripts and install in a local directory.
+* RPM/DEB packages do this for you
+* Not for the faint of heart ... **Not recommended!**
+* Using ``grep`` as an example
+
+.. code-block:: bash
+
+  $ wget http://mirrors.kernel.org/gnu/grep/grep-2.15.tar.xz
+  $ tar -Jxvf grep-2.15.tar.xz
+  $ cd grep-2.15
+  $ ./configure
+  $ make
+  $ make install
+
+
+Hands-on: Package Management
+----------------------------
+
+* Install the ``git`` package
+* Query the RPM/APT database for installed packages
+* List the files in an installed package
+* Remove the ``git`` package
 
 Questions:
 ==========
