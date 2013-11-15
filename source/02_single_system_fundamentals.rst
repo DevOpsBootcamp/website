@@ -73,7 +73,7 @@ Managing users
 .. code-block:: bash
 
     # GECOS: full name, office number and building, office phone extension, 
-    # home phone number (General Eletric Comprehensive Operating System)
+    # home phone number (General Electric Comprehensive Operating System)
     $ chfn # change GECOS information; only works sometimes
     $ finger # tells you someone's GECOS info
     
