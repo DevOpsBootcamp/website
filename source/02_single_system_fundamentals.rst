@@ -109,8 +109,8 @@ What are groups?
     $ usermod
     $ groupmod
 
-Hands-On
-========
+Hands-On: Users and Groups
+==========================
 
 * Create group ``bootcamp``
 * Create user foo
@@ -238,7 +238,7 @@ Package Management
 * .rpm / YUM (used by RedHat, CentOS, Fedora, SuSe)
 
 RPM & yum (RedHat, CentOS, Fedora)
-----------------------------------
+==================================
 
 .. image:: /static/rpm.png
     :align: right
@@ -306,8 +306,7 @@ Low level package management. No dependency checking or central repository.
   $ rpm -ql tree
 
 DPKG & Apt (Debian, Ubuntu)
-----------------------------------
-
+===========================
 
 **Deb**
 
@@ -376,7 +375,7 @@ Low level package management. No dependency checking or central repository.
   $ dpkg-query -L tree
 
 Language-specific Package Managers
-----------------------------------
+==================================
 
 * Languages sometimes have their own package management suite
 * Can be useful for using newer versions of packages
@@ -389,7 +388,7 @@ Language-specific Package Managers
     * *... and so on forever ...*
 
 Other Package Managers
-----------------------
+======================
 
 They each fill a specific niche and have their own pros and cons.
 
@@ -398,7 +397,7 @@ They each fill a specific niche and have their own pros and cons.
 * ZYpp / Zypper (SUSE) -- Yet another RPM package manager
 
 Installing from source
-----------------------
+======================
 
 * Download source tarball, run build scripts and install in a local directory.
 * RPM/DEB packages do this for you
@@ -416,7 +415,7 @@ Installing from source
 
 
 Hands-on: Package Management
-----------------------------
+============================
 
 * Install the ``git`` package
 * Query the RPM/APT database for installed packages
