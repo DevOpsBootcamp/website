@@ -25,14 +25,13 @@ Today's Topics
 * What are files?
     * Permissions/users
 * What are user accounts?
-    * user management
-    * root vs. normal
-    * groups
+    * User management
+    * Root vs. normal
+    * Groups
 * What are packages?
-    * repositories
-    * other options (tarballs, build from source)
-    * how installation works
-    * what're scripts
+    * How to use package managers
+    * Differences between Linux Distributions
+    * Other package managers
 
 What are users?
 ===============
