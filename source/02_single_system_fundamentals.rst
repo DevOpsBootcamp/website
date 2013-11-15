@@ -319,7 +319,7 @@ Package Management
 **Popular Linux Package Managers**
 
 * .deb / APT (used by Debian, Ubuntu)
-* .rpm / YUM (used by RedHat, CentOS, Fedora, SuSe)
+* .rpm / YUM (used by RedHat, CentOS, Fedora)
 
 RPM & yum (RedHat, CentOS, Fedora)
 ==================================
@@ -378,7 +378,7 @@ Low level package management. No dependency checking or central repository.
   $ rpm -i tree-1.5.3-2.el6.x86_64.rpm
 
   # Upgrade an RPM file
-  $ rpm -Uvh tree-1.5.3-3.el6.x86_64
+  $ rpm -Uvh tree-1.5.3-3.el6.x86_64.rpm
 
   # Uninstall an RPM package
   $ rpm -e tree
@@ -410,8 +410,10 @@ DPKG & Apt (Debian, Ubuntu)
   DPKG package manager used to query a central repository and resolve Deb
   package dependencies. Considered mostly a front-end to dpkg.
 
-Apt/Aptitude Commands (Debian, Ubuntu)
---------------------------------------
+Apt Commands (Debian, Ubuntu)
+-----------------------------
+
+.. note:: You can also use aptitude as a front-end to dpkg instead of apt-get.
 
 .. code-block:: bash
 
@@ -422,8 +424,7 @@ Apt/Aptitude Commands (Debian, Ubuntu)
   $ apt-cache search tree
 
   # Information about a package
-  $ apt-cache showpkg tree
-  $ aptitude show tree
+  $ apt-cache show tree
 
   # Installing a package
   $ apt-get install tree
