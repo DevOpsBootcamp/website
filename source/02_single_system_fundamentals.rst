@@ -98,7 +98,7 @@ Passwords
     # name:hash:time last changed: min days between changes: max days between changes:
     # days to wait before expiry or disabling:day of account expiry
 
-    $ chage # change when a user's password expires
+    $ change # change when a user's password expires
 
 Root/Superuser
 ==============
@@ -268,7 +268,7 @@ ACLs
 
 * Access control lists
 
-* Not recomended; hard to maintain
+* Not recommended; hard to maintain
 
 * Typically how other OSes manage permissions
 
