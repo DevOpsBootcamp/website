@@ -21,33 +21,31 @@ Here's what we're hoping to mentor and teach students about:
     Slide content will be linked here as soon as it's drafted, but only finalized
     1-2 weeks before the lessons when it's presented.
 
-Lesson 1: The Very Basics
--------------------------
+:doc:`Lesson 1: The Very Basics <01_the_very_basics>`
+-----------------------------------------------------
 
 Shell, virtualbox+vagrant, IRC.
 
 - 6pm 11/7/2013, KEC1007. 34 people attended.
-- Slides: :doc:`01_the_very_basics`
-- YouTube: `http://www.youtube.com/watch?v=UiiPiIoTxnw`_
+- `Video <http://youtu.be/UiiPiIoTxnw>`_
 
-Lesson 2: Single System Fundamentals
-------------------------------------
+:doc:`Lesson 2: Single System Fundamentals <02_single_system_fundamentals>`
+---------------------------------------------------------------------------
 
 Users, Groups, and package management
 
 - 6pm 11/14/2013, KEC1001. 27 people showed up.
-- slides: :doc:`02_single_system_fundamentals`
-- YouTube: Will be posted after the lecture
+- `Video <http://youtu.be/0mWSep_qmJM>`_
 
-Lesson 3: Files
----------------
+:doc:`Lesson 3: Files <03_files>`
+---------------------------------
 
 Version control & text editors (Vim)
 
-- slides: :doc:`03_files`
-- YouTube: Will be posted after the lecture
+- Video: *Will be posted after the lecture*
 
 Lesson 4: Scripting & Troubleshooting
+-------------------------------------
 
 - slides: :doc:`troubleshooting`
 
