@@ -37,7 +37,7 @@ Users, Groups, and package management
 - 6pm 11/14/2013, KEC1001. 27 people showed up.
 - `Video <http://youtu.be/0mWSep_qmJM>`_
 
-:doc:`Lesson 3: Files <03_files>`
+:doc:`Lesson 3: Files <03_editors_git>`
 ---------------------------------
 
 Version control & text editors (Vim)
