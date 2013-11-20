@@ -173,10 +173,13 @@ Editor questions?
 .. code-block:: bash
     $ vim testvim.txt            $ emacs testemacs.txt
     <i>                          Hello world!
-    Hello world!                 <alt + x> replace-regexp
-    <esc>                        [aeiou]
-    :s/[aeiou]//g                <enter>
-    :wq                          <ctrl + x> <ctrl + c>
+    Hello world!                 <esc
+    <esc>                        <
+    :s/[aeiou]//g                <esc>
+    :wq                          x
+                                 replace-regexp
+                                 [aeiou]
+                                 <enter>
 
 Version control: Git!
 =====================
