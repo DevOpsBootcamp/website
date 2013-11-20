@@ -138,6 +138,14 @@ Modes
 
 Command, Insert, Visual
 
+How to tell? 
+
+.. code-block:: bash
+    -- INSERT --                                          144,1    36%
+
+    -- VISUAL --                                          144,77   36%
+
+
 Commands
 ========
 
@@ -153,6 +161,13 @@ Configuration/customization
 * .vimrc
 * :set
 
+Learning Resources
+==================
+
+* $ vimtutor
+* http://vim-adventures.com/
+
+
 Regular expressions (questions to ask)
 ======================================
 
@@ -163,6 +178,7 @@ You should know basic substitution:
     :%s/foo/bar/g
 
 This is not `shell globbing <http://tldp.org/LDP/abs/html/globbingref.html>`_
+
 
 Editor questions?
 =================
@@ -248,6 +264,25 @@ Using Git Locally
 
 * What commits have I made lately?
 ``$ git log``
+
+More on commits
+===============
+
+* Your work goes from unstaged to staging area with 'git add'
+
+.. code-block:: bash
+    $ git config --global user.name 'Your Name'
+    $ git config --global user.email you@somedomain.com
+
+* Everything in staging gets wrapped up into an object that contains
+    * changes
+    * timestamp
+    * author info
+    * parent commit hash
+
+* These live in .git/ in your project directory
+
+* Commits go to other locations with 'git push' 
 
 What Not To Do
 ==============
@@ -380,3 +415,31 @@ Solution: ``ssh-add ~/.ssh/id-rsa`` or whatever key you have added on github
 
 Solution: To avoid a messy merge commit, ``git pull --rebase``. 
 
+Learn More
+==========
+
+* http://git-scm.com/book
+
+* http://try.github.io/levels/1/challenges/1
+
+Hands-On
+========
+
+* Create a GitHub account
+    * github.com
+* Make an ssh key on your VM
+    * $ ssh-keygen -t rsa
+* Fork the devopsbootcamp-website repo
+    * https://github.com/DevOpsBootcamp/website
+* Clone a copy of the repo to your VM
+    * $ git clone <url from sidebar of your fork>
+* Fix a spelling error and save the file
+    * $ vim <filename>
+    * 'i' to enter insert mode
+    * <esc> to get back to command mode
+    * :wq to save and quit
+* Make a commit with a helpful commit message
+    * $ git add <filename>
+    * $ git commit -m "your commit message"
+* Push to your fork
+    * $ git push
