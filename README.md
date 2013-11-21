@@ -21,10 +21,14 @@ one is to simply build the slides yourself.
 Building the slides is also necessary if you've been editing them and want to
 see how they'll look before you push. 
 
-    $ sudo pip install sphinx
-    $ sudo pip install hieroglyph
+We now have virtualenv set up for this project: 
+
+    $ sudo pip install virtualenv
     $ git clone https://github.com/DevOpsBootcamp/website.git
+    $ virtualenv website
     $ cd website
+    $ source bin/activate # enter the virtual environment
+    $ pip install -r requirements.txt
 
     # output lives in build/ and the stuff you want to edit is in source/
     # images and things go in source/static/
@@ -32,5 +36,6 @@ see how they'll look before you push.
     $ make slides # slides will go to build/slides
     $ make html # to preview roughly how it'll look on readthedocs
 
+    $ deactivate # leave the virtual environment
 
 
