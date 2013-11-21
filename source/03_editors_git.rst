@@ -20,7 +20,11 @@ What we'll discuss
 How do you edit files?
 ======================
 
+|
+
 .. figure:: /static/word_screenshot.gif
+    :align: center
+    :scale: 125%
 
 ==============================================
 No. Never, Ever edit code in Word/LibreOffice.
@@ -41,10 +45,13 @@ Then what should you use?
 Integrated Development Environments
 ===================================
 
+|
 .. figure:: /static/eclipse_screenshot.gif
+    :scale: 40%
+    :align: right
 
 * Entire toolchain in one place
-* Almost always graphical
+* Usually graphical
 
 Sysadmin tools
 ==============
@@ -144,6 +151,7 @@ Command, Insert, Visual
 How to tell? 
 
 .. code-block:: bash
+
     -- INSERT --                                          144,1    36%
 
     -- VISUAL --                                          144,77   36%
@@ -197,15 +205,17 @@ Editor questions?
 * Modify the text: "disemvowel" it
 
 .. code-block:: bash
+
     $ vim testvim.txt            $ emacs testemacs.txt
     <i>                          Hello world!
-    Hello world!                 <esc
+    Hello world!                 <esc>
     <esc>                        <
-    :s/[aeiou]//g                <esc>
-    :wq                          x
-                                 replace-regexp
+    :%s/[aeiou]//g               <alt + x>
+    :wq                          replace-regexp
                                  [aeiou]
                                  <enter>
+                                 <ctrl + x> <ctrl + s>
+                                 <ctrl + x> <ctrl + c>
 
 ============
 Intro to Git
@@ -282,6 +292,7 @@ More on commits
 * Your work goes from unstaged to staging area with 'git add'
 
 .. code-block:: bash
+
     $ git config --global user.name 'Your Name'
     $ git config --global user.email you@somedomain.com
 
