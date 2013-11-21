@@ -5,8 +5,11 @@ Lesson 3: Editors & Version Control
 Check in from last week
 =======================
 
+|
+|
 Is anyone having problems with package management?
 
+|
 Install the packages named git, vim, and emacs
 
 
@@ -64,8 +67,7 @@ Sysadmin tools
 
 Editor Requirements:
 
-* Small program
-* Runs in terminal
+* Small program, runs in terminal
 * Preferably installed by default on most systems
 
 
@@ -92,12 +94,17 @@ Text Editors
 * ed -> Vi -> Vim
 * Stallman -> lisp -> emacs
 
-* Avoid: 
-    * pico/nano
-    * SublimeText
+.. figure:: /static/xkcd_378.png
+    :align: center
+    :scale: 85%
+
+Avoid Pico/Nano, Notepad++, SublimeText
 
 Emacs
 =====
+
+.. figure:: /static/emacs_logo.jpeg
+    :align: right
 
 .. note:: Originally released 1976
     name from Editor MACros for TECO editor, originally Tape Editor and
@@ -107,15 +114,15 @@ But, along the way, I wrote a text editor, Emacs. The interesting idea about
 Emacs was that it had a programming language, and the user's editing commands
 would be written in that interpreted programming language, so that you could
 load new commands into your editor while you were editing. You could edit the
-programs you were using and then go on editing with them. So, we had a system
-that was useful for things other than programming, and yet you could program
-it while you were using it. I don't know if it was the first one of those, but
-it certainly was the first editor like that.
+programs you were using and then go on editing with them.
 
  -- Richard Stallman, http://www.gnu.org/gnu/rms-lisp.html
 
 Vim
 ===
+
+.. figure:: /static/vim_logo.jpeg
+    :align: right
 
 .. note:: originally written for Amiga systems (Commodore PCs), 1988
     vim released 1991
@@ -133,8 +140,7 @@ How to choose
 =============
 
 * What can the people around you help with?
-* Try both
-* Choose one and get good at it
+* Try both; choose one and get good at it
 * Have a good answer when people ask why you made that choice
     * "Because it's familiar" is tolerated
     * "Because I was initially taught it" is common but accepted (honesty)
