@@ -191,6 +191,13 @@ Configuration/customization
 * .vimrc
 * :set
 
+Some sets of Vim plugins and configurations are available
+
+* https://github.com/astrails/dotvim
+* https://github.com/carlhuda/janus
+
+Use them for research on what's available to improve dev productivity
+
 Learning Resources
 ==================
 
