@@ -28,6 +28,7 @@ No. Never, Ever edit code in Word/LibreOffice.
 
 * Autocorrect is your worst enemy
 * Syntax highlighting is nice
+* You are editing plain text, not 'documents', i.e. .doc, .rtf, etc
 
 Then what should you use?
 =========================
@@ -78,6 +79,9 @@ Text Editors
     Pros: low-bandwidth, installed pretty much everywhere, very fast and powerful
     for complicated and repetitive tasks
     Cons: Steep learning curve, different “modes” can be confusing at first
+    Sublime and other desktop editors: nice for serious programming, but learn 
+    the basics of simple text editors even if you want to be a developer, you
+    won't always be able to edit your code on your own desktop
 
 * ed -> Vi -> Vim
 * Stallman -> lisp -> emacs
@@ -130,8 +134,7 @@ How to choose
     * "Because I was initially taught it" is common but accepted (honesty)
     * "Because $usecase" provokes argument but more respected
     * "Because I tried both and picked this one" is rare but good
-* Your use case as a sysadmin
-ks
+* Your use case as a sysadmin or developer
 
 Modes
 =====
@@ -157,6 +160,8 @@ Commands
 
 Configuration/customization
 ===========================
+.. note:: there are many many options and pre-existing packages to make
+    editing nice for sysadmins and developers
 
 * .vimrc
 * :set
@@ -178,6 +183,11 @@ You should know basic substitution:
     :%s/foo/bar/g
 
 This is not `shell globbing <http://tldp.org/LDP/abs/html/globbingref.html>`_
+
+Resources for learning:
+
+* `RegExr <http://gskinner.com/RegExr/>`_ - an interactive Regular Expression editor and debugger
+* `Regular-Expressions.info <http://www.regular-expressions.info/>`_ - Tutorials and general information
 
 
 Editor questions?
@@ -222,6 +232,7 @@ Image from
 
 Better Options: Version Control
 ===============================
+.. note:: Collaboration with multiple developers is important to mention
 
 * Commit = Snapshot of part of your project's state
 * Centralized (SVN, CVS) vs. Decentralized (Git, hg)
@@ -302,6 +313,10 @@ What Not To Do
     state. You can revert back to any previous commit, but there is no way to
     magically add a commit in where you forgot to make one.
 
+* Don't commit compiled/generated items
+.. note:: Mostly relevant to writing code, .gitignore allows you to avoid
+    dealing with compiled binaries, generated output, log files, etc
+
 * Don't commit secrets...
 
 .. note:: Yes, there are ways to sort of take them down off of GitHub, but
@@ -327,6 +342,9 @@ Larger projects have more complex workflows
 
 .. note:: The picture is of the Git Flow branching model, and you'll probably
     see it every single time anyone explains Git branching and merging to you.
+    If you are working on a larger project or writing code, you'll likely be
+    using branches, this allows a project to keep many simultaneous code 
+    changes organized.
 
 GitHub!
 =======
