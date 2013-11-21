@@ -21,7 +21,6 @@ How do you edit files?
 ======================
 
 |
-
 .. figure:: /static/word_screenshot.gif
     :align: center
     :scale: 125%
@@ -146,16 +145,16 @@ How to choose
 Modes
 =====
 
-Command, Insert, Visual
+.. figure:: /static/vim_modes.png
+    :align: center
+    :scale: 75%
 
 How to tell? 
 
 .. code-block:: bash
 
     -- INSERT --                                          144,1    36%
-
     -- VISUAL --                                          144,77   36%
-
 
 Commands
 ========
@@ -165,6 +164,24 @@ Commands
     Text manipulation, ie: cw, dw, c$, yy / p, x, .
 
 .. figure:: /static/vim_cheatsheet.gif
+    :scale: 75%
+
+Moving Around
+=============
+
+.. code-block:: bash
+
+    h move one character to the left.
+    j move down one line.
+    k move up one line.
+    l move one character to the right.
+    0 move to the beginning of the line.
+    $ move to the end of the line.
+    w move forward one word.
+    b move backward one word.
+    G move to the end of the file.
+    gg move to the beginning of the file.
+    . move to the last edit.
 
 Configuration/customization
 ===========================
@@ -180,15 +197,21 @@ Learning Resources
 * $ vimtutor
 * http://vim-adventures.com/
 
+.. figure:: /static/learning_curves.jpg
+    :align: center
+    :scale: 140%
 
-Regular expressions (questions to ask)
-======================================
+Regular expressions
+===================
 
-You should know basic substitution: 
+You should know basic substitution:
 
 .. code-block:: bash
 
     :%s/foo/bar/g
+
+On IRC, Hamper does rudimentary regex in the form s/foo/bar/ applying only to the most
+recent comment.
 
 This is not `shell globbing <http://tldp.org/LDP/abs/html/globbingref.html>`_
 
@@ -309,22 +332,33 @@ More on commits
 What Not To Do
 ==============
 
+.. figure:: /static/dont_do_this.jpg
+    :scale: 50%
+    :align: right
+
+.. note:: image from http://arstechnica.com/security/2013/01/psa-dont-upload-your-important-passwords-to-github/
+
 * Don't delete the .git files
+
 .. note:: If you kill them, git loses its memory :(
-* Avoid redundant copies of the same work in one revision
-* Don't make "oops, undoing that" commits.
+
+* Redundant copies of same work
+* "oops, undoing that" commits.
     * Use git commit --amend
+
 .. note:: Amending is fine as long as you haven't pushed yet. It's generally a
     bad idea to amend or rebase work that you've already shared with others,
     unless you really know what you're doing.
 
 * Don't wait too long between commits
-    * You can squash them all together later
+    * Squashing them together later is easy
+
 .. note:: Commit every time you think you might want to return to the current 
     state. You can revert back to any previous commit, but there is no way to
     magically add a commit in where you forgot to make one.
 
 * Don't commit compiled/generated items
+
 .. note:: Mostly relevant to writing code, .gitignore allows you to avoid
     dealing with compiled binaries, generated output, log files, etc
 
@@ -334,20 +368,18 @@ What Not To Do
     somebody might have cloned your repo while it had the secrets in. Once
     someone has a piece of information, you can't just take it away.
 
-.. figure:: /static/dont_do_this.jpg
-    :scale: 50%
-    :align: right
-
-http://arstechnica.com/security/2013/01/psa-dont-upload-your-important-passwords-to-github/
-
 Daily workflow
 ==============
 
 .. figure:: /static/gitflow.png
     :scale: 75%
     :align: right
-
-Pull -> Work -> Add changes -> Commit -> Push
+|
+* Pull
+* Work
+* Add changes
+* Commit
+* Push
 
 Larger projects have more complex workflows
 
@@ -361,13 +393,14 @@ GitHub!
 =======
 
 .. figure:: /static/octocat.jpg
+    :align: right 
 
+* Manage permissions on repos
+* Back up your work
+* Social/gamification
+* Amazing documentation: help.github.com
+ 
 .. note:: GitHub serves a threefold purpose: 
-
-    * Makes it easier to manage permissions & share code with others
-    * Backs up all your work in case bad things happen to your laptop
-    * Social/gamification/resume building
-
     It also has `amazing documentation <https://help.github.com/>`_ which you
     should all go read right now and consult whenever you're the least bit
     confused. It's like the Ubuntu forums in that it's explained in a way the
@@ -376,6 +409,9 @@ GitHub!
 
 Let's Walk Through
 ==================
+
+.. figure:: /static/octocat.jpg
+    :align: right 
 
 * Creating an account
     * Gravatar
@@ -391,36 +427,12 @@ Let's Walk Through
     them, got to the 'repositories' tab instead of 'contributions'. 
 
 * Creating SSH keys
-
-.. note:: ``ssh-keygen -t rsa``
-    accept most defaults; give it a passphrase; write yourself a hint for the
-    passphrase somewhere. For instance if the passphrase is the funny way that
-    your friend misheard a song lyric, you might write down the initials of
-    the venue where you went to go see that band with that person. Basically
-    you want to pick a hint that's meaningful to you but likely to be
-    meaningless to anyone else.
-
+    * ``ssh-keygen -t rsa``
 * Uploading your SSH key
-
-.. note:: account settings (icon in upper right) -> ssh keys (in menu on left)
-
 * Creating a new repository
-
-.. note:: icon in upper right
-
 * Fork somebody else's repo
-
-.. note:: button in upper right on repo main page
-
 * Edit files online
-
-.. note:: navigate to file, edit button is in the upper right of where the
-    file is displayed
-
 * Submit a pull request
-
-.. note:: on main repo, it's that green button with the arrows just to the
-    left of where it says which branch you're on
 
 Help, Everythings's Broken!
 ===========================
@@ -447,6 +459,8 @@ Solution: To avoid a messy merge commit, ``git pull --rebase``.
 Learn More
 ==========
 
+.. figure:: /static/octocat.jpg
+
 * http://git-scm.com/book
 
 * http://try.github.io/levels/1/challenges/1
@@ -454,21 +468,20 @@ Learn More
 Hands-On
 ========
 
-* Create a GitHub account
-    * github.com
-* Make an ssh key on your VM
-    * $ ssh-keygen -t rsa
-* Fork the devopsbootcamp-website repo
-    * https://github.com/DevOpsBootcamp/website
-* Clone a copy of the repo to your VM
-    * $ git clone <url from sidebar of your fork>
-* Fix a spelling error and save the file
-    * $ vim <filename>
-    * 'i' to enter insert mode
-    * <esc> to get back to command mode
-    * :wq to save and quit
-* Make a commit with a helpful commit message
-    * $ git add <filename>
-    * $ git commit -m "your commit message"
-* Push to your fork
-    * $ git push
+* Fork the devopsbootcamp dotfiles repo
+* Clone a copy of the repo to your VM and make a branch
+* Make a commit with a helpful commit message and push to your fork
+
+.. code-block:: bash
+
+    $ ssh-keygen -t rsa # make an SSH key and add it to your account
+    $ git clone <url from sidebar of your fork> # clone the repo
+    $ cd dotfiles # git commands only work in project directlry
+    $ git checkout -b <yourname> # -b creates branch
+    $ vim <filename>
+        # 'i' to enter insert mode
+        # <esc> to get back to command mode
+        # :wq to save and quit
+    $ git add <filename>
+    $ git commit -m "please use a helpful commit message, not like this one"
+    $ git push
