@@ -42,7 +42,8 @@ Users, Groups, and package management
 
 Version control & text editors (Vim)
 
-- Video: *Will be posted after the lecture*
+- `Part 1, text editors video <https://www.youtube.com/watch?v=4ce3P_mvOvA>`_ 
+- `Part 2, version control video <https://www.youtube.com/watch?v=vBeAP7i_mPg>`_
 
 Lesson 4: Scripting & Troubleshooting
 -------------------------------------
