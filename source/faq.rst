@@ -58,6 +58,13 @@ education that's outside the scope of regular LUG meetings. As you progress
 through Bootcamp, you'll understand more and more of the technical content of
 LUG talks.
 
+I wasn't able to participate during Fall term. Can I still join?
+----------------------------------------------------------------
+
+Yes! Please read through lessons 1-3 (linked from the curriculum page) and 
+ask in IRC if you have trouble following the instructions for them. Catch up
+on that content and you'll be ready to join in Winter term. 
+
 I have a question?
 ------------------
 
