@@ -108,7 +108,7 @@ html_theme = 'default'
 
 # thanks http://ericholscher.com/blog/2013/nov/4/new-theme-read-the-docs/
 # new theme has problems with notes in tables; go back to how it was for now
-RTD_OLD_THEME = True
+# RTD_OLD_THEME = True
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
