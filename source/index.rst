@@ -9,15 +9,24 @@ DevOps Bootcamp
 .. note:: Recurring meetings will be Thursdays, 6-8pm most weeks for the rest
           of Fall term. Always check here for updated locations!
 
-          +--------+------------+-----------------------------------+
-          | Date   | Location   | Topic                             |
-          +========+============+===================================+
-          | 11/14  | KEC1001    | Single System Fundamentals        |
-          +--------+------------+-----------------------------------+
-          | 11/21  | BEXL 207   | Text Editors & Version Control    |
-          +--------+------------+-----------------------------------+
-          | TBD    | TBD        | Scripting & Troubleshooting       |
-          +--------+------------+-----------------------------------+
+          +--------+------------+-----------------------------------+--------------+
+          | Date   | Location   | Topic                             | Week of term |
+          +========+============+===================================+==============+
+          | 1/9/14 | TBD        | Scripting & Troubleshooting       | 1            |
+          +--------+------------+-----------------------------------+--------------+
+          | 1/16   | TBD        | Services & Deploying a Web App    | 2            |
+          +--------+------------+-----------------------------------+--------------+
+          | 1/30   | TBD        | Boot Process & Filesystem         | 4            |
+          +--------+------------+-----------------------------------+--------------+
+          | 2/6    | TBD        | Databases                         | 5            |
+          +--------+------------+-----------------------------------+--------------+
+          | 2/20   | TBD        | Security & Authentication         | 7            |
+          +--------+------------+-----------------------------------+--------------+
+          | 2/27   | TBD        | TBD                               | 8            |
+          +--------+------------+-----------------------------------+--------------+
+          | 3/6    | TBD        | Cron & Configuration Management   | 9            |
+          +--------+------------+-----------------------------------+--------------+
+
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
 aimed at boosting our impact and outreach while shrinking the skills gap for
