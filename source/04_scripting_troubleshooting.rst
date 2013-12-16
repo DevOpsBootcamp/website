@@ -30,7 +30,21 @@ What's a script?
 What's a scripting language?
 ----------------------------
 
+.. note:: This is more programming language than scripting specific.
 * Compiled vs interpreted
+
+Common Scripting Languages
+--------------------------
+
+* Bash
+* Python
+* Language affects the speed of development and performance of a task
+* Most tasks can be done using any language
+
+.. note:: Bash should have some slides here
+
+Python
+------
 
 Troubleshooting
 ===============
