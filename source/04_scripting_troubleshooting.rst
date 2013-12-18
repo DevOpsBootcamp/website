@@ -2,6 +2,11 @@
 Lesson 4: Scripting, Troubleshooting, & Workflow 
 ================================================
 
+.. note:: week 1, 1/9/2014
+    - log files
+    - git bisect, git log, git blame
+    - scientific method (small changes)
+
 We want you to learn these concepts early in the course, because you will
 constantly need them as we continue.
 
