@@ -15,9 +15,7 @@ Here's what we're hoping to mentor and teach students about:
 
 .. note:: Note that the curriculum for future weeks is constantly under development. Lesson
     titles are included to provide an overview of what we'll cover, but specific
-    content is likely to get moved around between lessons depending on what we
-    learn about the pace of the class during the first few weeks.
-
+    content is likely to get moved around between lessons as we refine the curriculum.
     Slide content will be linked here as soon as it's drafted, but only finalized
     1-2 weeks before the lessons when it's presented.
 
@@ -52,8 +50,14 @@ Vim, Emacs, and Git for version control
 Lesson 4: Scripting & Troubleshooting
 -------------------------------------
 
+Python and Bash. Overview of troubleshooting/debugging skills.
+
+- `Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
+
 Lesson 5: Services & Deploying a Web App 
 ----------------------------------------
+
+- `Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
 
 Lesson 6: Boot Process & Filesystem Hierarchy
 ---------------------------------------------
