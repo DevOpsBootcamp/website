@@ -52,24 +52,34 @@ Lesson 4: Scripting & Troubleshooting
 
 Python and Bash. Overview of troubleshooting/debugging skills.
 
+- 6pm 01/9/2014, KEC1007. 
 - `Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
 
 Lesson 5: Services & Deploying a Web App 
 ----------------------------------------
 
+- 6pm 1/16/2014
 - `Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
 
 Lesson 6: Boot Process & Filesystem Hierarchy
 ---------------------------------------------
 
+- 6pm 1/30/3014
+
 Lesson 7: Databases
 -------------------
+
+- 6pm 2/6/2014
 
 Lesson 8: Security & Authentication
 -----------------------------------
 
+- 6pm 2/20/2014
+
 Lesson 9: Networking overview
 -----------------------------
+
+- 6pm 2/27/2014
 
 Lesson 10: Services
 -------------------
@@ -79,6 +89,8 @@ study
 
 Lesson 11: Configuration Management & Cron
 ------------------------------------------
+
+- 6pm 3/6/2014
 
 Lesson 12: Infrastructure Design
 --------------------------------

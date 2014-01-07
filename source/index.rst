@@ -6,13 +6,12 @@
 DevOps Bootcamp
 ===============
 
-.. note:: Recurring meetings will be Thursdays, 6-8pm most weeks for the rest
-          of Fall term. Always check here for updated locations!
+.. note:: Recurring meetings will be Thursdays, 6-8pm. Always check here for updated locations!
 
           +--------+------------+-----------------------------------+--------------+
           | Date   | Location   | Topic                             | Week of term |
           +========+============+===================================+==============+
-          | 1/9/14 | TBD        | Scripting & Troubleshooting       | 1            |
+          | 1/9/14 | KEC1007    | Scripting & Troubleshooting       | 1            |
           +--------+------------+-----------------------------------+--------------+
           | 1/16   | TBD        | Services & Deploying a Web App    | 2            |
           +--------+------------+-----------------------------------+--------------+
