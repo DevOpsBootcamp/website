@@ -7,22 +7,19 @@ Lesson 4: Scripting, Troubleshooting, & Workflow
     - git bisect, git log, git blame
     - scientific method (small changes)
 
-We want you to learn these concepts early in the course, because you will
-constantly need them as we continue.
 
-- Debugging problems
-    - Isolate moving parts
-    - Test hypotheses
-- Don't make it worse
-    - Plan ahead
-    - Know what will be overwritten/changed by your actions
-- Good bug reports
-    - How to reproduce
-    - Anticipate what they'll do when they get the report
-    - Which logs and details will they need?
-    - Why is this a problem?
-- Zendo
+Agenda
+======
 
+* Scripting
+    * What's a script?
+    * What's a scripting language?
+    * Common scripting languages
+    * Bash & Python examples
+
+* Troubleshooting
+    * Techniques
+    * Examples
 
 Scripting
 =========
@@ -54,30 +51,45 @@ Python
 Troubleshooting
 ===============
 
+
+
 Informal method
 ---------------
 
 * Notice that something isn't working right
 * Identify what should be happening
     * Define a success criterion ("it works if...")
-* If it used to work: 
-    * Determine what changed
-        * Git bisect
-        * Check for cron jobs or config mgmt.
-        * Ask others who've been working on system
-* If it has never worked for you:
-    * Determine whether it's possible at all
-    * Find evidence of similar things working (code, blog posts, stackoverflow)
-    * If there's no evidence of anything like this working, you might be Doing It Wrong (tm)
-    * If there's documentation of something similar working: 
-        * Confirm that the docs are correct for the versions of things that you're using
-        * If they docs are wrong, fix them
-        * If the docs appear right, figure out what differs between your code and the example
-    * If there's sample code, make sure you can run it
-        * Your goal is minimum viable test case
-* Once you find the problem, fix it if you can
-    * If you can't fix the problem, identify why not, and then fix that
-    * Ask for help
+
+If it used to work
+------------------
+* Determine what changed
+    * Version control history (Git bisect)
+    * Emails from the system? Logs? (Check for cron jobs or config mgmt)
+    * Ask others who've been working on system
+* Use your own notes/documentation
+
+
+If it's never worked for you
+----------------------------
+
+* Determine whether it's possible at all
+* Find evidence of similar things working (code, blog posts, stackoverflow)
+* If there's no evidence of anything like this working, you might be Doing It Wrong (tm)
+* If there's documentation of something similar working:
+    * Confirm that the docs are correct for the versions of things that you're using
+    * If they docs are wrong, fix them
+    * If the docs appear right, figure out what differs between your code and the example
+* If there's sample code, make sure you can run it
+    * Your goal is minimum viable test case
+
+After finding the problem
+-------------------------
+
+* Did the docs tell you how to fix it?
+* If you can't fix the problem, identify why not, and then fix that
+* Ask for help
+    * Expert takes 5 minutes to answer a well-asked question
+    * Newbie can waste hours
 
 Formal method
 -------------
@@ -107,6 +119,10 @@ Documentation
 * Wikis
 * Google (used wisely)
     * Assessing sites' applicablity and reliability
+        * Who wrote it?
+        * When?
+        * Is the other content reliable?
+        * Is feedback from others visible? If so, what does it say?
 
 Sources of trouble
 ------------------
@@ -124,21 +140,39 @@ When something previously working breaks:
 * Someone updated something
 * Figure out who and why; document
 
-
 Tickets
 =======
 
-* Tickets vs. Issues 
-    * Workflow defined by tracker system
+* Ticket (often sysadmin) or Issue (often developer)
+* Ticket comes into tracking system, submitted by a user
+* Triage
+    * Add details to tickets; consolidate duplicates
+    * Contact submitter if more info needed
+    * Add tags, milestones, priority, etc.
+* Ticket is assigned to someone, who fixes it
+* Someone else confirms that the fix works, then ticket is closed
+
+
+Tickets vs. Issues
+==================
+
+* Workflow defined by tracker system
     * RT, Redmine, Chiliproject, GitHub issues, mailing lists
 
 * Issues/Bugs are developer work items which need to be included in a release of code
 * Tickets are sysadmin work items, often related to systems improvement or maintenance
 
-* Can't log in because your account got reset: Ticket. 
+* Can't log in because your account got reset: Ticket.
 * Can't log in because the newest release of the software is incompatible with
   the old database format: Bug.
 
+Some Examples
+=============
+
+Trac
+Chiliproject
+RT
+Bugzilla
 
 
 
