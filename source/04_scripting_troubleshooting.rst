@@ -50,7 +50,8 @@ Python
 ------
 
 * Easy to read
-* Can use libraries to handle data 
+* Easy to maintain
+* Quick to write 
 
 Troubleshooting
 ===============
