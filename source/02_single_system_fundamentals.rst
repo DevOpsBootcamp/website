@@ -120,7 +120,7 @@ Acting as another user
     $ sudo su -         # use user password instead of root's
     $ sudo su $USER     # become $USER with your password
 
-.. figure:: /static/xkcd838.png
+.. figure:: /static/xkcd_838.png
     :scale: 80%
 
 If someone has permissions errors:

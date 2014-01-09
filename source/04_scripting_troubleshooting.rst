@@ -16,10 +16,11 @@ Agenda
     * What's a scripting language?
     * Common scripting languages
     * Bash & Python examples
-
 * Troubleshooting
     * Techniques
     * Examples
+* Workflow
+    * Life cycle of a bug
 
 Scripting
 =========
@@ -51,10 +52,16 @@ Python
 Troubleshooting
 ===============
 
-
+.. figure:: static/xkcd_627.png
+    :align: center
+    :scale: 65%
 
 Informal method
 ---------------
+
+.. figure:: static/xkcd_349.png
+    :align: right
+    :scale: 60%
 
 * Notice that something isn't working right
 * Identify what should be happening
@@ -62,6 +69,10 @@ Informal method
 
 If it used to work
 ------------------
+
+.. figure:: static/xkcd_1172.png
+    :align: right
+
 * Determine what changed
     * Version control history (Git bisect)
     * Emails from the system? Logs? (Check for cron jobs or config mgmt)
@@ -84,6 +95,10 @@ If it's never worked for you
 
 After finding the problem
 -------------------------
+
+.. figure:: static/xkcd_806.png
+    :align: right
+    :scale: 50%
 
 * Did the docs tell you how to fix it?
 * If you can't fix the problem, identify why not, and then fix that
