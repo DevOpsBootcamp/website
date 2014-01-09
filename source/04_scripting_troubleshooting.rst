@@ -28,13 +28,21 @@ Scripting
 What's a script?
 ----------------
 
+.. figure:: static/xkcd_1205.png
+    :align: right
+    :scale: 75%
+
 * Piece of code to automate a boring task
+* Explanation of how to do what you do
 
 What's a scripting language?
 ----------------------------
 
 .. note:: This is more programming language than scripting specific.
 * Compiled vs interpreted
+* Expresses logic and actions
+    * Logic: loops, conditionals, statements
+    * Actions: File I/O, print to console, interact with system utilities
 
 Common Scripting Languages
 --------------------------
@@ -44,7 +52,8 @@ Common Scripting Languages
 * Language affects the speed of development and performance of a task
 * Most tasks can be done using any language
 
-.. note:: Bash should have some slides here
+Bash
+----
 
 Python
 ------
