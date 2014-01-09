@@ -49,6 +49,9 @@ Common Scripting Languages
 Python
 ------
 
+* Easy to read
+* Can use libraries to handle data 
+
 Troubleshooting
 ===============
 
