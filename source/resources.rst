@@ -21,6 +21,10 @@ Systems Administration Tutorials
   somewhat like DevOps Bootcamp, but it's currently incomplete. Consider
   contributing to it!
 
+* `Linux Command Line Tips: Become a Master
+  <http://requiremind.com/linux-command-line-tips-become-a-master/>`_ is a quick
+  start guide to get you going with bash
+
 Open Source
 -----------
 
