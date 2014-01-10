@@ -64,11 +64,16 @@ Bash
 
 Python
 ------
+.. figure:: static/xkcd_353.png
+    :align: center
+    :scale: 65%
 
+Why Python?
+----------
 * Easy to read
 * Easy to maintain
 * Quick to write
-* Lots of libraries (though not all are equal)
+* Lots of libraries
 
 Troubleshooting
 ===============
