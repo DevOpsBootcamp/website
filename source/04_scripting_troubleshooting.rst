@@ -35,6 +35,8 @@ What's a script?
 * Piece of code to automate a boring task
 * Explanation of how to do what you do
 
+
+
 What's a scripting language?
 ----------------------------
 
@@ -55,12 +57,18 @@ Common Scripting Languages
 Bash
 ----
 
+* Adds a bit of logic to automate your shell commands
+* Saves re-typing things
+* Powered by the tools you invoke from the shell
+* Scripts can be hard to read at first because they call to external utilities
+
 Python
 ------
 
 * Easy to read
 * Easy to maintain
-* Quick to write 
+* Quick to write
+* Lots of libraries (though not all are equal)
 
 Troubleshooting
 ===============
