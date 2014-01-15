@@ -5,7 +5,7 @@ Lesson 5: Web Applications
 What is a web app?
 ==================
 
-.. note:: talk breifly about responsibilities of each component
+.. note:: talk briefly about responsibilities of each component
     talk briefly about http
     mention Virtual Environments (red box on diagram)
 
@@ -138,7 +138,7 @@ Pip
 A package manager for Python packages
 
 * Connects to PyPi, a vast repository of Python modules
-* Resolves dependencies, installs prerequites
+* Resolves dependencies, installs prerequisites
 * Can install packages from a list in a file
 
 
