@@ -107,17 +107,20 @@ Get the Code
 
 	git clone git@github.com:DevOpsBootcamp/systemview.git
 
-Then run it:
-
-.. code-block:: bash
-
-	cd systemview
-	python systemview.py 
 
 .. note:: break here for github account setup, key location (where are they checking
 	code out from? Where is their key located?), etc
 	https://github.com/DevOpsBootcamp/systemview.git for anyone who can't
 	get their account/key working
+
+
+Run the Code
+------------
+
+.. code-block:: bash
+
+	cd systemview
+	python systemview.py 
 
 
 Fail
