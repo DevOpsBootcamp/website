@@ -46,11 +46,10 @@ Django, CakePHP, Ruby on Rails, Flask
 The SystemView app
 ==================
 
-Display a list of processes on the system matching a search term
+Display a filtered list of processes on the system
 
-.. figure:: static/systemview_app.jpg
+.. figure:: static/systemview_app.png
     :align: center
-    :scale: 60%
 
 .. note:: explain basic idea of the app
 	reference code from lesson 4
