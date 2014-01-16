@@ -77,7 +77,6 @@ Install packages
 
 .. code-block:: bash
 
-	sudo yum update
 	sudo yum install python-virtualenv*
 	sudo yum install git
 
@@ -94,7 +93,7 @@ And activate it
 	source systemview_venv/bin/activate
 
 .. note:: students probably already have git?
-	discuss what virtualenve actually does, what is in it
+	discuss what virtualenv actually does, what is in it
 	env variables, etc
 	they can put the virtualenv anywhere, discuss locations
 	discuss, but don't use virtualenv tools (mkvirtualenv, use, etc)
@@ -106,7 +105,7 @@ Get the Code
 
 .. code-block:: bash
 
-	git clone https://github.com/DevOpsBootcamp/systemview.git
+	git clone git@github.com:DevOpsBootcamp/systemview.git
 
 Then run it:
 
@@ -114,6 +113,11 @@ Then run it:
 
 	cd systemview
 	python systemview.py 
+
+.. note:: break here for github account setup, key location (where are they checking
+	code out from? Where is their key located?), etc
+	https://github.com/DevOpsBootcamp/systemview.git for anyone who can't
+	get their account/key working
 
 
 Fail
@@ -152,23 +156,31 @@ Make sure you are in your virtualenv, then:
 	pip install flask
 	pip install argparse
 
+.. note:: How do you know if you are in the virtualenv?
+	can put requirements in requirements.txt for easy installation
+
 
 Run and Test!
 -------------
 
 .. code-block:: bash
 	
-	python systemsettings.py -i 0.0.0.0 -d
+	python systemview.py -i 0.0.0.0 -d
 
 Now go to http://localhost:5050
 
-.. note:: talk about flags - go to terminal after this slide
-	and talk about the code:
+.. note:: talk about flags 
+	go to terminal after this slide and talk about the code:
 	main module, templates, css, etc
+	Point out areas where bugs could be fixed or features added
 
 
 Branch and Modify
 -----------------
+
+Create a Github issue for your changes
+
+https://github.com/DevOpsBootcamp/systemview/issues
 
 Create a branch for your changes
 
@@ -183,10 +195,13 @@ When you have made changes and everything works, push it up
 	git push origin my_name
 
 .. note:: talk about branching vs forking, get everyone working
-	on a new feature or bug, create github issues?
+	on a new feature or bug
+	use IRC handles for branch names to make sure you are unique and
+	identifiable
+
 
 Homework
---------
+========
 
 Add a feature or fix a bug, push your changes up.
 
