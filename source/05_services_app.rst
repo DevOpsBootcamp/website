@@ -19,9 +19,9 @@ What is this Virtual Environment thing?
 .. note:: Discuss system packages vs local, mention rvm
 
 * Separates application packages from system packages
-* Install modules as a user
 * Choose versions that differ from the system versions
 * Maintain a list of required packages for easy install
+* Install modules as a user
 * Pip and Gem
 
 
