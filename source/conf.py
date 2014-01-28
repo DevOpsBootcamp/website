@@ -25,10 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo', 'sphinx.ext.ifconfig',]
-
-if not os.environ.get('READTHEDOCS', None):
-    extensions += ['sphinxcontrib.fulltoc',]
+extensions = ['sphinx.ext.todo',]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -105,10 +102,6 @@ if not os.environ.get('READTHEDOCS', None):
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'default'
-
-# thanks http://ericholscher.com/blog/2013/nov/4/new-theme-read-the-docs/
-# new theme has problems with notes in tables; go back to how it was for now
-# RTD_OLD_THEME = True
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
