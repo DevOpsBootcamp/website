@@ -25,8 +25,8 @@ Lesson 1: The Very Basics
 Shell, virtualbox+vagrant, IRC.
 
 - 6pm 11/7/2013, KEC1007. 34 people attended.
-- `Video <http://youtu.be/UiiPiIoTxnw>`_
-- `Slides <http://slides.osuosl.org/devopsbootcamp/01_the_very_basics.html>`_
+- `Lesson 1 Video <http://youtu.be/UiiPiIoTxnw>`_
+- `Lesson 1 Slides <http://slides.osuosl.org/devopsbootcamp/01_the_very_basics.html>`_
 
 Lesson 2: Single System Fundamentals
 ------------------------------------
@@ -34,8 +34,8 @@ Lesson 2: Single System Fundamentals
 File permissions, users, groups, and package management
 
 - 6pm 11/14/2013, KEC1001. 27 people showed up.
-- `Video <http://youtu.be/0mWSep_qmJM>`_
-- `Slides <http://slides.osuosl.org/devopsbootcamp/02_single_system_fundamentals.html>`_
+- `Lesson 2 Video <http://youtu.be/0mWSep_qmJM>`_
+- `Lesson 2 Slides <http://slides.osuosl.org/devopsbootcamp/02_single_system_fundamentals.html>`_
 
 Lesson 3: Editors & Git
 -----------------------
@@ -45,7 +45,7 @@ Vim, Emacs, and Git for version control
 - 6pm 11/21/2014, BEXL. 21 people showed up.
 - `Part 1, text editors video <https://www.youtube.com/watch?v=4ce3P_mvOvA>`_ 
 - `Part 2, version control video <https://www.youtube.com/watch?v=vBeAP7i_mPg>`_
-- `Slides <http://slides.osuosl.org/devopsbootcamp/03_editors_git.html>`_
+- `Lesson 3 Slides <http://slides.osuosl.org/devopsbootcamp/03_editors_git.html>`_
 
 Lesson 4: Scripting & Troubleshooting
 -------------------------------------
@@ -53,13 +53,13 @@ Lesson 4: Scripting & Troubleshooting
 Python and Bash. Overview of troubleshooting/debugging skills.
 
 - 6pm 01/9/2014, KEC1007. 
-- `Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
+- `Lesson 4 Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
 
 Lesson 5: Services & Deploying a Web App 
 ----------------------------------------
 
 - 6pm 1/16/2014
-- `Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
+- `Lesson 5 Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
 
 Lesson 6: Boot Process & Filesystem Hierarchy
 ---------------------------------------------
@@ -94,4 +94,5 @@ Lesson 11: Configuration Management & Cron
 
 Lesson 12: Infrastructure Design
 --------------------------------
+
 

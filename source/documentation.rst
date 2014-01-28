@@ -70,11 +70,10 @@ What to document: Applications!
 What to document: Procedures!
 =============================
 
-.. note:: * Think if you have to fix something at 4AM, if it was documented it
+.. note:: Think if you have to fix something at 4AM, if it was documented it
     would make things better!
-        * What happens if all the power goes out? How do you bring everything back
-        * online?
-        * Specific hardware/software docs are key!!!
+    What happens if all the power goes out? How do you bring everything back online?
+    Specific hardware/software docs are key!!!
 
 * Server Migrations
 * Emergency Procedures

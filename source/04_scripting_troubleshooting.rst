@@ -41,6 +41,7 @@ What's a scripting language?
 ----------------------------
 
 .. note:: This is more programming language than scripting specific.
+
 * Compiled vs interpreted
 * Expresses logic and actions
     * Logic: loops, conditionals, statements

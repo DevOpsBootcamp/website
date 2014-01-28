@@ -10,6 +10,7 @@ Housekeeping
 .. figure:: /static/virtualbox.png
     :align: center
     :scale: 30%
+
 10 minutes to make sure everyone's Virtualbox instances are up and running
 
 

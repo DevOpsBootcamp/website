@@ -120,7 +120,7 @@ Vagrant & VirtualBox
     vagrant ssh
 
 Vagrant cheat sheet
-==================
+===================
 
 .. note:: We'll get into more detail later in how you can access ports on your
           VMs and other use cases.
@@ -324,6 +324,7 @@ Documentation
 =============
 
 .. note:: Emily
+
 * Man pages, blogs you find by Googling, StackOverflow
 
 .. figure:: /static/google.gif
@@ -428,6 +429,7 @@ Commands
 * everything else starting with / is a command
 
 .. code-block:: bash
+
     /say $thing
     /join, /part, /whois <nick>, /msg, /help <command>
 

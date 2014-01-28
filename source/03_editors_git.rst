@@ -7,9 +7,11 @@ Check in from last week
 
 |
 |
+
 Is anyone having problems with package management?
 
 |
+
 Install the packages named git, vim, and emacs
 
 
@@ -24,6 +26,7 @@ How do you edit files?
 ======================
 
 |
+
 .. figure:: /static/word_screenshot.gif
     :align: center
     :scale: 125%
@@ -48,6 +51,7 @@ Integrated Development Environments
 ===================================
 
 |
+
 .. figure:: /static/eclipse_screenshot.gif
     :scale: 40%
     :align: right
@@ -291,6 +295,7 @@ Git
 
 .. figure:: /static/Linus_Torvalds.jpeg
     :align: left
+
 git, noun. Brit.informal. 
 1. an unpleasant or contemptible person.
 
@@ -317,10 +322,10 @@ Using Git Locally
   well
 
 * Did I remember to commit that?
-``$ git status``
+  ``$ git status``
 
 * What commits have I made lately?
-``$ git log``
+  ``$ git log``
 
 More on commits
 ===============
@@ -387,7 +392,9 @@ Daily workflow
 .. figure:: /static/gitflow.png
     :scale: 75%
     :align: right
+
 |
+
 * Pull
 * Work
 * Add changes

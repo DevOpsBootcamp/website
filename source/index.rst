@@ -67,6 +67,27 @@ Contents:
    resources
    faq
 
+.. toctree::
+    :hidden:
+
+    00_introduction
+    01_the_very_basics
+    02_homework
+    02_single_system_fundamentals
+    03_editors_git
+    04_scripting_troubleshooting
+    05_services_app
+    06_boot_filesystem
+    07_database_integration
+    08_security_auth
+    09_networking
+    10_services
+    11_config_mgmt_cron
+    12_infra_design
+    scripting
+    vagrant
+    documentation
+
 Indices and tables
 ==================
 
