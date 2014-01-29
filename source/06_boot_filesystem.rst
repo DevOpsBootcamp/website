@@ -4,12 +4,83 @@ Lesson 6: Boot and the Filesystem Hierarchy
 
 .. note:: more ops-focused
     1/30/2014
+    - grub, filesystem stuff based roughly on Frostsnow's talk
+    - basics of kernel and differences between virtualization/physical
+      (the picture that kevin draws)
 
-- grub, filesystem stuff based roughly on Frostsnow's talk
-- basics of kernel and differences between virtualization/physical
-  (the picture that kevin draws)
+    - build a piece of web app to perform systems monitoring based on ^^
 
-- build a piece of web app to perform systems monitoring based on ^^
+The Linux Filesystem
+====================
+
+.. note:: Based on Wade's talk
+    https://github.com/clinew/presentation_filesystems/blob/master/presentation.tex
+
+Moving from Windows
+-------------------
+
+* Binaries, not executables.
+* Directories, not folders.
+* Read, not load.
+* Symbolic links, not shortcuts.
+* Write, not save.
+
+"Program Files"
+---------------
+
+* /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, usr/local/sbin
+* PATH environment variable
+* which command
+
+"Recycle Bin"
+-------------
+
+* Depends on the Desktop, not the filesystem.
+* “So then what’s Lost+Found?”
+    * Lost blocks of the filesystem.
+    * Usually not an issue.
+
+Where Things Live
+-----------------
+
+* Data stored at /home/<username>
+* Configurations in dotfiles within home (/.)
+
+
+Where are drives mounted?
+----------------------------
+
+* Raw file appears under /dev.
+    * `dmesg | tail` for the exact name.
+* USB filesystem usually mounted under /media.
+* Main disk mounts as root (/)
+
+Space on drives
+---------------
+
+* Use df to see disk free space.
+* Use du to see disk usage.
+* Default output is in bytes, -h for human-readable output.
+
+Three Tiers of Filesystem Hierarchy
+-----------------------------------
+
+* /, essential for system booting and mounting /usr.
+* /usr, read-only system data for normal system operation.
+* /usr/local, locally-installed software.
+    * Package managers usually install under / and /usr.
+
+Common Directories
+------------------
+
+* /bin, binary files.
+* /include, header files for C/C++ Programs (stdlib.h, stdio.h, string.h, &c.).
+* /lib, libraries for programs.
+* /sbin, binary files for root (superuser binaries).
+
+
+The Boot Process
+================
 
 Bootstrapping
 -------------
