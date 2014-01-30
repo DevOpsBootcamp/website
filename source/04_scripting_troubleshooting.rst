@@ -70,7 +70,7 @@ Python
     :scale: 65%
 
 Why Python?
-----------
+-----------
 * Easy to read
 * Easy to maintain
 * Quick to write
