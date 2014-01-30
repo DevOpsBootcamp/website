@@ -2,13 +2,11 @@
 Lesson 6: Boot and the Filesystem Hierarchy
 ===========================================
 
-.. note:: more ops-focused
+.. note::
+    more ops-focused
     1/30/2014
-    - grub, filesystem stuff based roughly on Frostsnow's talk
-    - basics of kernel and differences between virtualization/physical
-    (the picture that kevin draws)
-
-    - build a piece of web app to perform systems monitoring based on ^^
+    * grub, filesystem stuff based roughly on Frostsnow's talk
+    * basics of kernel and differences between virtualization/physical (the picture that kevin draws)
 
 The Linux Filesystem Hierarchy
 ==============================
@@ -286,6 +284,12 @@ More about Journaling
 The Boot Process
 ================
 
+* Bootstrapping
+* Steps in the process
+* Boot loaders
+* Startup scripts
+* Boot levels
+
 Bootstrapping
 -------------
 
@@ -302,9 +306,14 @@ Bootstrapping
 * Driver Loading
 * Period of vulnerability
 
-  * configuration errors, missing hardware, damaged filesystems
+  * configuration errors
+  * missing hardware
+  * damaged filesystems
 
-* init -- **Always PID 1**
+* ``init`` -- **Always Process ID (PID) #1**
+
+  * First process to start
+  * Either a binary or can be a simple script (even a bash shell!)
 
 Steps in boot process
 ---------------------
@@ -360,8 +369,8 @@ Booting
   * Successor to BIOS
   * Flexible pre-OS environment including network booting
 
-Boot Loaders
-------------
+Boot Loaders (Grub)
+-------------------
 
 .. note::
   Grub
@@ -372,16 +381,16 @@ Boot Loaders
    * grub install commands
    * netboot, pretty, serial
    * device.map, grub.conf
+   * robust with weird disk geometry
 
-   robust with weird disk geometry
+* **Gr**\ and **U**\ nified **B**\ ootloader
+* Dynamic fixes during booting
+* Can read the filesystem
+* Index based – ``(hd0,0) = sda1``
+* Grub "version 1" vs. "version 2"
 
-
-* Grub (Grand Unified Bootloader)
-
-  * Dynamic fixes during booting
-  * Can read the filesystem
-  * Index based – ``(hd0,0) = sda1``
-  * Backup Kernel Images
+  * Version 2 has more features, but more complicated
+  * Latest Debian, Ubuntu and Fedora use v2
 
 .. code::
 
@@ -398,8 +407,6 @@ Single User Mode
   Show on VM
    * enter grub, hit ESC, pick kernel, hit “e” for edit
    * use arrows
-
-  Solaris x86 is different, uses grub
 
   Typically ask for root password
 
@@ -428,24 +435,28 @@ Startup Script Tasks
 * Configuring network interfaces
 * Starting up daemons & network services
 
-System-V
---------
+System-V Boot Style
+-------------------
 
 .. note::
   * System-V Most common today
   * Show system changing between different run levels.
   * Slightly different between Distros
-  * init replacements
 
-    * upstart (ubuntu)
-    * SMF (Service Management Facility) -- Solaris
+* Linux derived from System-V originally
+* Alternative init systems
 
-* Linux derived from System-V
-* Run levels
-* level 0 – sys is completely down
-* level 1 or S – single-user mode
-* level 2 through 5 – multi-user levels
-* level 6 – reboot level
+  * **systemd** - Fedora 15+, Redhat 7+ and Debian* (dependency driven)
+  * **upstart** - Ubuntu, Redhat 6 (event driven, faster boot times)
+
+Run levels:
+
+================= =============================
+level 0           sys is completely down (halt)
+level 1 or S      single-user mode
+level 2 through 5 multi-user levels
+level 6           reboot level
+================= =============================
 
 /etc/inittab
 ------------
@@ -454,9 +465,25 @@ System-V
   Look at inittab
 
 * Tells init what to do on each level
-* Starts getty (terminals)
+* Starts ``getty`` (terminals, serial console)
 * Commands to be run or kept running
-* Setting up a serial console
+* ``inittab`` not used with systemd or upstart
+
+.. code::
+
+  # The default runlevel.
+  id:2:initdefault:
+
+  # What to do in single-user mode.
+  ~~:S:wait:/sbin/sulogin
+
+  # What to do when CTRL-ALT-DEL is pressed.
+  ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
+
+  # terminals
+  1:2345:respawn:/sbin/getty 38400 tty1
+  T0:23:respawn:/sbin/getty -L ttyS0 9600 vt100
+
 
 init.d Scripts
 --------------
