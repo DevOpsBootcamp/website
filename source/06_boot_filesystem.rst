@@ -51,7 +51,7 @@ The File System
 
 .. code-block:: bash
 
-    x230 / # ls
+    $ ls
     bin   etc         initrd.img.old  lost+found  opt   run      srv  usr
     boot  home        lib             media       proc  sbin     sys  var
     dev   initrd.img  lib64           mnt         root  selinux  tmp  vmlinuz
@@ -70,14 +70,14 @@ Installed programs and utilities
 
 .. code-block:: bash
 
-    x230 ~ # echo $PATH
+    $ echo $PATH
     /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 * `which` command
 
 .. code-block:: bash
 
-    x230 ~ # which bash
+    $ which bash
     /bin/bash
 
 User-Specific Data & Configuration
@@ -102,7 +102,7 @@ Where are drives mounted?
 
 .. code-block:: bash
 
-    x230 ~ # dmesg | tail
+    $ dmesg | tail
     [260930.208715]  sdb: sdb1
     [260930.320756] sd 6:0:0:0: >[sdb] Asking for cache data failed
     [260930.320765] sd 6:0:0:0: >[sdb] Assuming drive cache: write through
@@ -123,7 +123,7 @@ Space on drives
 
 .. code-block:: bash
 
-    x230 ~ # df -h /
+    $ df -h /
     Filesystem      Size  Used Avail Use% Mounted on
     /dev/sda8        73G   29G   41G  42% /
 
@@ -131,7 +131,7 @@ Space on drives
 
 .. code-block:: bash
 
-    x230 ~ # du -sh /home/
+    $ du -sh /home/
     21G /home/
 
 * Default output is in bytes, -h for human-readable output.
@@ -203,7 +203,7 @@ Which Linux kernel version are you running?
 
 .. code-block:: bash
 
-    x230 ~ # cat /proc/version
+    $ cat /proc/version
     Linux version 3.5.0-17-generic (buildd@allspice) (gcc version 4.7.2
     (Ubuntu/Linaro 4.7.2-2ubuntu1) ) #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012
 
@@ -211,8 +211,8 @@ Learn about system's hardware
 
 .. code-block:: bash
 
-    x230 ~ # less /proc/cpuinfo
-    x230 ~ # less /proc/meminfo
+    $ less /proc/cpuinfo
+    $ less /proc/meminfo
 
 Some parts of /proc can be written as well as read...
 
