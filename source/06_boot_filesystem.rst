@@ -6,15 +6,34 @@ Lesson 6: Boot and the Filesystem Hierarchy
     1/30/2014
     - grub, filesystem stuff based roughly on Frostsnow's talk
     - basics of kernel and differences between virtualization/physical
-      (the picture that kevin draws)
+    (the picture that kevin draws)
 
     - build a piece of web app to perform systems monitoring based on ^^
 
-The Linux Filesystem
-====================
+The Linux Filesystem Hierarchy
+==============================
 
 .. note:: Based on Wade's talk
     https://github.com/clinew/presentation_filesystems/blob/master/presentation.tex
+
+What's a filesystem?
+
+    In computing, a file system is used to control how information is stored and
+    retrieved. Without a file system, information placed in a storage area would
+    be one large body of information with no way to tell where one piece of
+    information stops and the next begins.
+
+                       - (http://en.wikipedia.org/wiki/Filesystem)
+
+Filesystem can mean:
+--------------------
+
+    * **How the system's files are arranged on the disk**
+    * How the disk actually holds the files
+        * FAT and NTFS are old but Windows-compatible
+        * ext3 is standard, ext4 is newer, xfs has fancier journaling
+            * journaling tracks changes before write
+        * sysadmins will encounter NFS and its competitors like Gluster
 
 Moving from Windows
 -------------------
@@ -28,38 +47,80 @@ Moving from Windows
 "Program Files"
 ---------------
 
-* /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, usr/local/sbin
+.. code-block:: bash
+
+    /bin                /usr/sbin
+    /sbin               /usr/local/bin
+    /usr/bin            /usr/local/sbin
+
 * PATH environment variable
-* which command
 
-"Recycle Bin"
--------------
+.. code-block:: bash
 
-* Depends on the Desktop, not the filesystem.
-* “So then what’s Lost+Found?”
+    x230 ~ # echo $PATH
+    /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+* `which` command
+
+.. code-block:: bash
+
+    x230 ~ # which bash
+    /bin/bash
+
+User-Specific Data & Configuration
+----------------------------------
+
+* Data stored at `/home/<username>`
+    * Desktop environment creates folders Documents, Pictures, Videos, etc.
+* Configurations in dotfiles within home (`/.`)
+
+* Lost+Found is **not** your desktop trash can
     * Lost blocks of the filesystem.
     * Usually not an issue.
-
-Where Things Live
------------------
-
-* Data stored at /home/<username>
-* Configurations in dotfiles within home (/.)
+    * If your desktop provides backups of deleted files, they'll be somewhere
+      in /home/<username>/
 
 
 Where are drives mounted?
 ----------------------------
 
-* Raw file appears under /dev.
+* Raw device appears under `/dev`.
     * `dmesg | tail` for the exact name.
-* USB filesystem usually mounted under /media.
-* Main disk mounts as root (/)
+
+.. code-block:: bash
+
+    x230 ~ # dmesg | tail
+    [260930.208715]  sdb: sdb1
+    [260930.320756] sd 6:0:0:0: >[sdb] Asking for cache data failed
+    [260930.320765] sd 6:0:0:0: >[sdb] Assuming drive cache: write through
+    [260930.320771] sd 6:0:0:0: >[sdb] Attached SCSI removable disk
+
+* USB filesystem usually mounted under `/media`.
+* Main disk mounts as root (`/`)
+* You can manually mount devices with `mount`
+    * "Everything's a file"
+
+* `/etc/fstab` tells things where to mount
+* `/etc/mtab` shows where things are currently mounted
 
 Space on drives
 ---------------
 
 * Use df to see disk free space.
+
+.. code-block:: bash
+
+    x230 ~ # df -h /
+    Filesystem      Size  Used Avail Use% Mounted on
+    /dev/sda8        73G   29G   41G  42% /
+
 * Use du to see disk usage.
+
+.. code-block:: bash
+
+    x230 ~ # du -sh /home/
+    21G /home/
+
 * Default output is in bytes, -h for human-readable output.
 
 Three Tiers of Filesystem Hierarchy
@@ -71,13 +132,156 @@ Three Tiers of Filesystem Hierarchy
     * Package managers usually install under / and /usr.
 
 Common Directories
+==================
+
++------------+-----------------------------------------------+
+| Directory  | Contents                                      |
++============+===============================================+
+| /bin       | Binary files                                  |
++------------+-----------------------------------------------+
+| /include   | Header files for C/C++ programs               |
++------------+-----------------------------------------------+
+| /lib       | Libraries                                     |
++------------+-----------------------------------------------+
+| /sbin      | Binary files for root (superuser)             |
++------------+-----------------------------------------------+
+| /boot      | Files essential for booting kernel, initramfs |
++------------+-----------------------------------------------+
+| /dev       | Virtual filesystem, exports hardware devices  |
++------------+-----------------------------------------------+
+| /etc       | System-wide configurations                    |
++------------+-----------------------------------------------+
+| /home      | Individual users' data                        |
++------------+-----------------------------------------------+
+| /media     | Removable storage devices                     |
++------------+-----------------------------------------------+
+| /mnt       | Like media -- place to mount disks and things |
++------------+-----------------------------------------------+
+
+Common Directories
 ------------------
 
-* /bin, binary files.
-* /include, header files for C/C++ Programs (stdlib.h, stdio.h, string.h, &c.).
-* /lib, libraries for programs.
-* /sbin, binary files for root (superuser binaries).
++------------+-----------------------------------------------+
+| Directory  | Contents                                      |
++============+===============================================+
+| /opt       | "Add-on application software packages"        |
++------------+-----------------------------------------------+
+| /proc      | Virtual filesystem exporting system data      |
++------------+-----------------------------------------------+
+| /root      | homedir for root                              |
++------------+-----------------------------------------------+
+| /run       | Volatile information accumulated since boot   |
++------------+-----------------------------------------------+
+| /sys       | Virtual filesystem exporting kernel objects   |
++------------+-----------------------------------------------+
+| /tmp       | Temporary files                               |
++------------+-----------------------------------------------+
+| /var       | Data which varies -- logs, mail, etc.         |
++------------+-----------------------------------------------+
+| /usr/share | Architecture-independent, read-only data      |
++------------+-----------------------------------------------+
+| /usr/src   | Kernel source code                            |
++------------+-----------------------------------------------+
 
+/proc has lots of useful system information
+-------------------------------------------
+
+Which Linux kernel version are you running?
+
+.. code-block:: bash
+
+    x230 ~ # cat /proc/version
+    Linux version 3.5.0-17-generic (buildd@allspice) (gcc version 4.7.2
+    (Ubuntu/Linaro 4.7.2-2ubuntu1) ) #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012
+
+Learn about system's hardware
+
+.. code-block:: bash
+
+    x230 ~ # less /proc/cpuinfo
+    x230 ~ # less /proc/meminfo
+
+Some parts of /proc can be written as well as read...
+
+.. code-block:: bash
+
+    $ echo 3 > /proc/sys/vm/drop_caches # drop caches
+
+Commands for working with filesystems
+-------------------------------------
+
+Creating filesystems
+
+.. code-block:: bash
+
+    $ mkfs
+
+Mounting filesystems
+
+.. code-block:: bash
+
+    $ mount
+    # -t for type
+    # -o for options
+    # requires device path and mount point
+
+Loopback devices
+
+.. code-block:: bash
+
+    $ losetup
+    $ /dev/loop*
+    # makes it look like a device instead of a file
+
+devfs
+-----
+
+.. code-block:: bash
+
+    sd*
+    sr*
+    /dev/null
+    /dev/random
+    /dev/urandom
+    /dev/zero
+
+Blocks and dd
+-------------
+
+* Block size is the size of chunks allocated for files
+
+* dd
+    * Disk duplicator (or disk dump).
+        * if=<path>, input file.
+        * of=<path>, ooutput file.
+        * bs=<size>, block size.
+        * count=<size>, number of block to transfer.
+
+.. code-block:: bash
+
+    $ dd if=/dev/random of=/dev/sda
+    # What will this do?
+
+
+Filesystem Consistency
+----------------------
+
+* Metadata vs. data
+    * Metadata is extra information the filesystem tracks about the file
+    * Data is the file's contents
+
+* Filesystem is **consistent** if all metadata is intact
+    * `fsck` is FileSystem Consistency Check
+
+More about Journaling
+---------------------
+
+* Filesystem consistency tool; protections against system freezes, power outages, etc.
+* Replaying the journal.
+* ext3’s three modes of journaling:
+    * journal: Data and metadata to journal.
+    * ordered: Data updates to filesystem, then metadata committed to journal.
+    * writeback: Metadata comitted to journal, possibly before data updates.
 
 The Boot Process
 ================
@@ -169,7 +373,7 @@ Boot Loaders
    * netboot, pretty, serial
    * device.map, grub.conf
 
-  robust with weird disk geometry::
+   robust with weird disk geometry
 
 
 * Grub (Grand Unified Bootloader)
