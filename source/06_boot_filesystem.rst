@@ -33,17 +33,32 @@ Filesystem can mean:
             * journaling tracks changes before write
         * sysadmins will encounter NFS and its competitors like Gluster
 
-Moving from Windows
--------------------
+.. note:: Moving from Windows?
+    * Binaries, not executables.
+    * Directories, not folders.
+    * Read, not load.
+    * Symbolic links, not shortcuts.
+    * Write, not save.
 
-* Binaries, not executables.
-* Directories, not folders.
-* Read, not load.
-* Symbolic links, not shortcuts.
-* Write, not save.
+The File System
+===============
 
-"Program Files"
----------------
+|
+
+.. figure:: static/you_are_here.jpg
+    :align: center
+    :scale: 75%
+
+.. code-block:: bash
+
+    x230 / # ls
+    bin   etc         initrd.img.old  lost+found  opt   run      srv  usr
+    boot  home        lib             media       proc  sbin     sys  var
+    dev   initrd.img  lib64           mnt         root  selinux  tmp  vmlinuz
+
+
+Installed programs and utilities
+--------------------------------
 
 .. code-block:: bash
 
