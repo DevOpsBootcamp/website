@@ -112,6 +112,7 @@ Where are drives mounted?
 * Main disk mounts as root (`/`)
 * You can manually mount devices with ``mount``
     * "Everything's a file"
+    * ``umount`` to unmount
 
 * ``/etc/fstab`` tells things where to mount
 * ``/etc/mtab`` shows where things are currently mounted
