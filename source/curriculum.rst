@@ -64,7 +64,8 @@ Lesson 5: Services & Deploying a Web App
 Lesson 6: Boot Process & Filesystem Hierarchy
 ---------------------------------------------
 
-- 6pm 1/30/3014
+- 6pm 1/30/3014 -- 14 attendees; time conflicts with Intel and Reddit founder
+- `Lesson 6 slides <slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>_`
 
 Lesson 7: Databases
 -------------------
