@@ -286,15 +286,15 @@ More about Journaling
 The Boot Process
 ================
 
-.. figure:: static/booting.png
-    :align: right
-    :scale: 70%
-
 * Bootstrapping
 * Steps in the process
 * Boot loaders
 * Startup scripts
 * Boot levels
+
+.. figure:: static/xkcd-fight.png
+    :align: center
+    :scale: 100%
 
 Bootstrapping
 -------------
@@ -337,6 +337,10 @@ Steps in boot process
    * init, kswapd, pdflush, etc
    * init only real process
    * Others look like processes for scheduling (appear as [kswapd] with ps)
+
+.. figure:: static/booting.png
+    :align: right
+    :scale: 70%
 
 #. Kernel initialization
 #. Hardware configuration
@@ -416,11 +420,12 @@ Single User Mode
 
   Typically ask for root password
 
+* What is it used for?
+
 .. figure:: static/single-user-mode.png
     :align: right
     :scale: 60%
-
-* What is it used for?
+..
 
   * Troubleshoot problems
   * Manual Filesystem Checks
@@ -439,6 +444,8 @@ Startup Script Tasks
   Verbose and print out description of what its doing.
 
   Old days were to manually adjust scripts, not anymore. Most are configurable now.
+
+|
 
 .. figure:: static/fsck.jpg
     :align: center
