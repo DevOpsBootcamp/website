@@ -98,7 +98,6 @@ Where are drives mounted?
 ----------------------------
 
 * Raw device appears under ``/dev``.
-    * ``dmesg | tail`` for the exact name.
 
 .. code-block:: bash
 
