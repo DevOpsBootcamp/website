@@ -66,14 +66,14 @@ Installed programs and utilities
     /sbin               /usr/local/bin
     /usr/bin            /usr/local/sbin
 
-* PATH environment variable
+* ``PATH`` environment variable
 
 .. code-block:: bash
 
     $ echo $PATH
     /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-* `which` command
+* ``which`` command
 
 .. code-block:: bash
 
@@ -83,22 +83,22 @@ Installed programs and utilities
 User-Specific Data & Configuration
 ----------------------------------
 
-* Data stored at `/home/<username>`
+* Data stored at ``/home/<username>``
     * Desktop environment creates folders Documents, Pictures, Videos, etc.
-* Configurations in dotfiles within home (`/.`)
+* Configurations in dotfiles within home (``/.``)
 
 * Lost+Found is **not** your desktop trash can
     * Lost blocks of the filesystem.
     * Usually not an issue.
     * If your desktop provides backups of deleted files, they'll be somewhere
-      in /home/<username>/
+      in ``/home/<username>/``
 
 
 Where are drives mounted?
 ----------------------------
 
-* Raw device appears under `/dev`.
-    * `dmesg | tail` for the exact name.
+* Raw device appears under ``/dev``.
+    * ``dmesg | tail`` for the exact name.
 
 .. code-block:: bash
 
@@ -108,13 +108,13 @@ Where are drives mounted?
     [260930.320765] sd 6:0:0:0: >[sdb] Assuming drive cache: write through
     [260930.320771] sd 6:0:0:0: >[sdb] Attached SCSI removable disk
 
-* USB filesystem usually mounted under `/media`.
+* USB filesystem usually mounted under ``/media``.
 * Main disk mounts as root (`/`)
-* You can manually mount devices with `mount`
+* You can manually mount devices with ``mount``
     * "Everything's a file"
 
-* `/etc/fstab` tells things where to mount
-* `/etc/mtab` shows where things are currently mounted
+* ``/etc/fstab`` tells things where to mount
+* ``/etc/mtab`` shows where things are currently mounted
 
 Space on drives
 ---------------
@@ -134,7 +134,7 @@ Space on drives
     $ du -sh /home/
     21G /home/
 
-* Default output is in bytes, -h for human-readable output.
+* Default output is in bytes, ``-h`` for human-readable output.
 
 Three Tiers of Filesystem Hierarchy
 -----------------------------------
@@ -267,7 +267,7 @@ Filesystem Consistency
     * Data is the file's contents
 
 * Filesystem is **consistent** if all metadata is intact
-    * `fsck` is FileSystem Consistency Check
+    * ``fsck`` is FileSystem Consistency Check
 
 More about Journaling
 ---------------------
