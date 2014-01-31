@@ -147,54 +147,37 @@ Three Tiers of Filesystem Hierarchy
 Common Directories
 ==================
 
-+------------+-----------------------------------------------+
-| Directory  | Contents                                      |
-+============+===============================================+
-| /bin       | Binary files                                  |
-+------------+-----------------------------------------------+
-| /include   | Header files for C/C++ programs               |
-+------------+-----------------------------------------------+
-| /lib       | Libraries                                     |
-+------------+-----------------------------------------------+
-| /sbin      | Binary files for root (superuser)             |
-+------------+-----------------------------------------------+
-| /boot      | Files essential for booting kernel, initramfs |
-+------------+-----------------------------------------------+
-| /dev       | Virtual filesystem, exports hardware devices  |
-+------------+-----------------------------------------------+
-| /etc       | System-wide configurations                    |
-+------------+-----------------------------------------------+
-| /home      | Individual users' data                        |
-+------------+-----------------------------------------------+
-| /media     | Removable storage devices                     |
-+------------+-----------------------------------------------+
-| /mnt       | Like media -- place to mount disks and things |
-+------------+-----------------------------------------------+
+=========  =============================================
+Directory  Contents
+=========  =============================================
+/bin       Binary files
+/include   Header files for C/C++ programs
+/lib       Libraries
+/sbin      Binary files for root (superuser)
+/boot      Files essential for booting kernel, initramfs
+/dev       Virtual filesystem, exports hardware devices
+/etc       System-wide configurations
+/home      Individual users' data
+/media     Removable storage devices
+/mnt       Like media -- place to mount disks and things
+=========  =============================================
 
 Common Directories
 ------------------
 
-+------------+-----------------------------------------------+
-| Directory  | Contents                                      |
-+============+===============================================+
-| /opt       | "Add-on application software packages"        |
-+------------+-----------------------------------------------+
-| /proc      | Virtual filesystem exporting system data      |
-+------------+-----------------------------------------------+
-| /root      | homedir for root                              |
-+------------+-----------------------------------------------+
-| /run       | Volatile information accumulated since boot   |
-+------------+-----------------------------------------------+
-| /sys       | Virtual filesystem exporting kernel objects   |
-+------------+-----------------------------------------------+
-| /tmp       | Temporary files                               |
-+------------+-----------------------------------------------+
-| /var       | Data which varies -- logs, mail, etc.         |
-+------------+-----------------------------------------------+
-| /usr/share | Architecture-independent, read-only data      |
-+------------+-----------------------------------------------+
-| /usr/src   | Kernel source code                            |
-+------------+-----------------------------------------------+
+==========  ===========================================
+Directory   Contents
+==========  ===========================================
+/opt        "Add-on application software packages"
+/proc       Virtual filesystem exporting system data
+/root       homedir for root
+/run        Volatile information accumulated since boot
+/sys        Virtual filesystem exporting kernel objects
+/tmp        Temporary files
+/var        Data which varies -- logs, mail, etc.
+/usr/share  Architecture-independent, read-only data
+/usr/src    Kernel source code
+==========  ===========================================
 
 /proc has lots of useful system information
 -------------------------------------------
