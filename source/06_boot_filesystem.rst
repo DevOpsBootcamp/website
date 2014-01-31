@@ -108,8 +108,7 @@ Where are drives mounted?
     [260930.320765] sd 6:0:0:0: >[sdb] Assuming drive cache: write through
     [260930.320771] sd 6:0:0:0: >[sdb] Attached SCSI removable disk
 
-* USB filesystem usually mounted under ``/media``.
-* Main disk mounts as root (`/`)
+* USB filesystem under ``/media``, main disk ``/``
 * You can manually mount devices with ``mount``
     * "Everything's a file"
     * ``umount`` to unmount
@@ -144,6 +143,10 @@ Three Tiers of Filesystem Hierarchy
 * /usr, read-only system data for normal system operation.
 * /usr/local, locally-installed software.
     * Package managers usually install under / and /usr.
+
+.. figure:: /static/hierarchy.jpg
+    :align: center
+    :scale: 60%
 
 Common Directories
 ==================
