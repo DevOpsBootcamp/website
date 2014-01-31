@@ -282,6 +282,10 @@ More about Journaling
 The Boot Process
 ================
 
+.. figure:: static/booting.png
+    :align: right
+    :scale: 70%
+
 * Bootstrapping
 * Steps in the process
 * Boot loaders
@@ -408,6 +412,10 @@ Single User Mode
 
   Typically ask for root password
 
+.. figure:: static/single-user-mode.png
+    :align: right
+    :scale: 60%
+
 * What is it used for?
 
   * Troubleshoot problems
@@ -419,6 +427,7 @@ Single User Mode
 
   * ``boot -s``
 
+
 Startup Script Tasks
 --------------------
 
@@ -426,6 +435,10 @@ Startup Script Tasks
   Verbose and print out description of what its doing.
 
   Old days were to manually adjust scripts, not anymore. Most are configurable now.
+
+.. figure:: static/fsck.jpg
+    :align: center
+    :scale: 75
 
 * Setting up hostname & timezone
 * Checking disks with fsck
@@ -499,6 +512,15 @@ init.d Scripts
   * start, stop, reload, restart
 * sshd init script
 
+.. code-block:: bash
+
+  $ service sshd status
+  openssh-daemon (pid  1186) is running...
+
+  $ service sshd restart
+  Stopping sshd:                                             [  OK  ]
+  Starting sshd:                                             [  OK  ]
+
 Starting services on boot
 -------------------------
 
@@ -514,6 +536,16 @@ Starting services on boot
   * Easy way to enable/disable services in RH/Debian
 * Other distributions work differently
 
+.. code-block:: bash
+
+  $ chkconfig --list sshd
+  sshd            0:off 1:off 2:on  3:on  4:on  5:on  6:off
+
+  $ chkconfig sshd off
+
+  $ chkconfig --list sshd
+  sshd            0:off 1:off 2:off 3:off 4:off 5:off 6:off
+
 Configuring init.d Scripts
 --------------------------
 
@@ -528,6 +560,12 @@ Configuring init.d Scripts
 * Networking settings
 * Other distributions are vastly different
 
+.. code-block:: bash
+
+  $ cat /etc/sysconfig/ntpd
+  # Drop root to id 'ntp:ntp' by default.
+  OPTIONS="-u ntp:ntp -p /var/run/ntpd.pid -g"
+
 Shutting Down
 -------------
 
@@ -537,12 +575,24 @@ Shutting Down
 
   Shutdown -h
 
-  Wall “hey you guys!”
-
 * Not Windows, don't reboot to fix issue
-* Can take a long time (i.e. SPARC)
+* Can take a long time (i.e. servers)
 * Reboot only to
 
-  * load new kernel, new hardware, or system-wide configuration changes
-* shutdown, reboot, halt, init
-* wall
+  * load new kernel
+  * new hardware
+  * system-wide configuration changes
+* ``shutdown``, ``reboot``, ``halt``, ``init``
+* ``wall`` - send system-wide message to all users
+
+.. code-block:: bash
+
+  $ wall hello world
+  Broadcast message from root@devops-bootcamp (pts/0) (Fri Jan 31 00:40:29 2014):
+
+  hello world
+
+Homework
+========
+
+
