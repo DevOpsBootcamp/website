@@ -432,10 +432,10 @@ Single User Mode
   * Booting with bare services
   * Fix boot problems
   * Add “single” to kernel option
+
 * Solaris/BSD
 
   * ``boot -s``
-
 
 Startup Script Tasks
 --------------------
