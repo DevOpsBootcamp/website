@@ -1,15 +1,146 @@
 ==================================================
-Lesson 7: Integration of applicationa and database
+Lesson 7: A data base with a clever soup pun (TBD)
 ==================================================
 
 
 .. note:: more dev-focused
     2/6/2014
 
-- explain what DBs are and why we need them (transactions, relations, indices,
-  performance)
-- set up DB instance
+Review Questions About Filesystems
+---------------------------------------
+
+.. rst-class:: build
+
+- What might happen to a busy ext2 volume on power loss?
+- ext3?
+- ext4?
+
+.. note:: ext2 may not be consistent upon restart 
+    * ext3 and ext 4 are not
+    * but consistency only guarentees metadata is intact
+
+    * What might happen to a busy ext2 volume on power loss?
+    * ext3?
+    * ext4?
+
+But what about our poor data?
+-----------------------------
+
+.. rst-class:: build
+
+- Possibly gone, like the wind
+
+- Or worse: Half completed writes!
+
+- **General purpose operating systems, by design, don't understand structured data**
+
+Enter the Database
+==================
+ 
+  A database system's fundamental goal is to provide consistent views of structured
+  data using the tools the operating system makes available.
+  
+  Chief among them is *fsync(2)*
+
+.. note:: fsync instructs the operating system to flush all writes to disk before returning
+
+Structure
+=========
+
+  Relational Algebra
+  - Tables
+  - Rows, Columns
+  - Relations form a structure between tables
+
+Joins
+-----
+ * Venn diagrams of join types
+
+.. note:: join are the principle use of relations.
+
+Installing MySQL
+================
+
+- apt-get install mysql
+
+Managing MySQL
+-------------------
+- mysqladmin create nobel
+- console
+
+Importing Data
+--------------
+
+- wget file http://osl.io/nobel
+- mysql import data into nobel
+
+Basic Queries
+=============
+4 basic operations on data:
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+
+SELECT
+------
+SELECT yr, subject, winner
+  FROM nobel
+ Where yr = 1960
+
+Practice
+--------
+
+Who won the prize for Medicine in 1952?
+
+
+INSERT
+------
+INSERT values ('2013','Literature','Herta Müller')
+ INTO nobel;
+
+.. note:: this data stops at 2008, so lets insert some 2009 awards
+
+Practice
+--------
+In 2009:
+ - Barack Obama won the Peace Prize
+ - Elinor Ostrom and Oliver E. Williamson won the prize in Economics
+ - http://en.wikipedia.org/wiki/List_of_Nobel_laureates
+
+UPDATE
+------
+UPDATE nobel
+SET winner='Andrew Ryan'
+WHERE subject='Peace' AND yr='1951'
+
+
+.. note:: obviously andrew ryan deserves the peace price for his work 
+          in the Rapture planned community
+
+Practice
+--------
+
+ - Brigid Tenenbaum Medicine prize in 1952
+
+DELETE
+------
+
+Delete from nobel where yr = 1989, subject = peace
+
+.. note:: peace prizes can be contraversial, and perhaps there's a political interest in censoring our database?
+
+Further Reading, Resources, etc.
+--------------------------------
+
+  * Codd, E.F. (1970). "A Relational Model of Data for Large Shared Data Banks". Communications of the ACM 13 (6): 377–387.
+  * sqlzoo.net
+  * CS 440: Database Management Systems
+
+
+
+Parking lot
+===========
+- indicies, performance)
 - connect app to DB
-- show manual queries for doing things
-- show what happens when app does things
-- teach mysql & postgres like vim & emacs (only install _____ right now)
+
