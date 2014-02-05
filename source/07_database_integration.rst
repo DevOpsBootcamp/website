@@ -61,11 +61,13 @@ Joins
 Installing MySQL
 ================
 
-- apt-get install mysql
+- yum install mysql-server
 
 Managing MySQL
 -------------------
-- mysqladmin create nobel
+- sudo /sbin/service mysqld start
+- sudo mysqladmin ping
+- sudo mysqladmin create nobel
 - console
 
 Importing Data
@@ -114,8 +116,7 @@ UPDATE nobel
 SET winner='Andrew Ryan'
 WHERE subject='Peace' AND yr='1951'
 
-
-.. note:: obviously andrew ryan deserves the peace price for his work 
+.. note:: obviously Andrew Ryan deserves the peace price for his work 
           in the Rapture planned community
 
 Practice
