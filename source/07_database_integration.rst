@@ -61,23 +61,32 @@ Joins
 Installing MySQL
 ================
 
-- yum install mysql-server
+- sudo yum install mysql-server
+- /usr/bin/mysql_secure_installation
 
 Managing MySQL
--------------------
+--------------
 - sudo /sbin/service mysqld start
 - sudo mysqladmin ping
 - sudo mysqladmin create nobel
-- console
+
+
+Users & Permissions
+-------------------
+
+- GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
 
 Importing Data
 --------------
 
-- wget file http://osl.io/nobel
-- mysql import data into nobel
+- wget http://osl.io/nobel -O nobel.sql
+- cat nobel.sql | mysql nobel
+- mysql nobel
+- mysql> describe nobel;
 
 Basic Queries
 =============
+
 4 basic operations on data:
 - SELECT
 - INSERT
