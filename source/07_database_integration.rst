@@ -80,9 +80,9 @@ Importing Data
 --------------
 
 - wget http://osl.io/nobel -O nobel.sql
-- cat nobel.sql | mysql nobel
+- mysql nobel < nobel.sql
 - mysql nobel
-- mysql> describe nobel;
+- mysql> DESCRIBE nobel;
 
 Basic Queries
 =============
@@ -95,9 +95,12 @@ Basic Queries
 
 SELECT
 ------
-SELECT yr, subject, winner
-  FROM nobel
- Where yr = 1960
+SELECT 
+   yr, subject, winner
+FROM 
+   nobel
+WHERE 
+   yr = 1960
 
 Practice
 --------
@@ -107,8 +110,10 @@ Who won the prize for Medicine in 1952?
 
 INSERT
 ------
-INSERT values ('2013','Literature','Herta Müller')
- INTO nobel;
+INSERT VALUES
+   ('2013','Literature','Herta Müller')
+INTO 
+   nobel;
 
 .. note:: this data stops at 2008, so lets insert some 2009 awards
 
@@ -121,9 +126,12 @@ In 2009:
 
 UPDATE
 ------
-UPDATE nobel
-SET winner='Andrew Ryan'
-WHERE subject='Peace' AND yr='1951'
+UPDATE 
+   nobel
+SET 
+   winner='Andrew Ryan'
+WHERE 
+   subject='Peace' AND yr='1951'
 
 .. note:: obviously Andrew Ryan deserves the peace price for his work 
           in the Rapture planned community
@@ -136,7 +144,10 @@ Practice
 DELETE
 ------
 
-Delete from nobel where yr = 1989, subject = peace
+DELETE FROM 
+   nobel 
+WHERE 
+   yr = 1989, subject = peace;
 
 .. note:: peace prizes can be contraversial, and perhaps there's a political interest in censoring our database?
 
