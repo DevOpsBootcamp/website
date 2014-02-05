@@ -61,20 +61,21 @@ Joins
 Installing MySQL
 ================
 
-- sudo yum install mysql-server
+- yum install mysql-server
 - /usr/bin/mysql_secure_installation
 
 Managing MySQL
 --------------
-- sudo /sbin/service mysqld start
-- sudo mysqladmin ping
-- sudo mysqladmin create nobel
+- /sbin/service mysqld start
+- mysqladmin ping
+- mysqladmin create nobel
 
 
 Users & Permissions
 -------------------
-- CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
-- GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
+- sudo mysql
+- mysql> CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
+- mysql> GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
 
 Importing Data
 --------------
