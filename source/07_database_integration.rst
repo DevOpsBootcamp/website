@@ -132,7 +132,7 @@ UPDATE
 SET 
    winner='Andrew Ryan'
 WHERE 
-   subject='Peace' AND yr='1951'
+   subject='Peace' AND yr='1951';
 
 .. note:: obviously Andrew Ryan deserves the peace price for his work 
           in the Rapture planned community
