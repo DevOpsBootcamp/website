@@ -54,6 +54,7 @@ Structure
 
 Joins
 -----
+
  * Venn diagrams of join types
 
 .. note:: join are the principle use of relations.
@@ -66,6 +67,7 @@ Installing MySQL
 
 Managing MySQL
 --------------
+
 - /sbin/service mysqld start
 - mysqladmin ping
 - mysqladmin create nobel
@@ -73,6 +75,7 @@ Managing MySQL
 
 Users & Permissions
 -------------------
+
 - sudo mysql
 - mysql> CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
 - mysql> GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
@@ -80,15 +83,18 @@ Users & Permissions
 Importing Data
 --------------
 
-- wget http://osl.io/nobel -O nobel.sql
-- mysql nobel < nobel.sql
-- mysql nobel
-- mysql> DESCRIBE nobel;
+.. code-block:: bash
+
+    $ wget http://osl.io/nobel -O nobel.sql
+    $ mysql nobel < nobel.sql
+    $ mysql nobel
+    $ mysql> DESCRIBE nobel;
 
 Basic Queries
 =============
 
 4 basic operations on data:
+
 - SELECT
 - INSERT
 - UPDATE
@@ -96,12 +102,15 @@ Basic Queries
 
 SELECT
 ------
-SELECT 
-   yr, subject, winner
-FROM 
-   nobel
-WHERE 
-   yr = 1960;
+
+.. code-block:: sql
+
+    SELECT 
+       yr, subject, winner
+    FROM 
+       nobel
+    WHERE 
+       yr = 1960;
 
 Practice
 --------
@@ -111,15 +120,19 @@ Who won the prize for Medicine in 1952?
 
 INSERT
 ------
-INSERT VALUES
-   ('2013','Literature','Herta Müller')
-INTO 
-   nobel;
+
+.. code-block:: sql
+
+    INSERT VALUES
+       ('2013','Literature','Herta Müller')
+    INTO 
+       nobel;
 
 .. note:: this data stops at 2008, so lets insert some 2009 awards
 
 Practice
 --------
+
 In 2009:
  - Barack Obama won the Peace Prize
  - Elinor Ostrom and Oliver E. Williamson won the prize in Economics
@@ -127,12 +140,15 @@ In 2009:
 
 UPDATE
 ------
-UPDATE 
-   nobel
-SET 
-   winner='Andrew Ryan'
-WHERE 
-   subject='Peace' AND yr='1951';
+
+.. code-block:: sql
+
+    UPDATE 
+       nobel
+    SET 
+       winner='Andrew Ryan'
+    WHERE 
+       subject='Peace' AND yr='1951';
 
 .. note:: obviously Andrew Ryan deserves the peace price for his work 
           in the Rapture planned community
@@ -145,10 +161,12 @@ Practice
 DELETE
 ------
 
-DELETE FROM 
-   nobel 
-WHERE 
-   yr = 1989, subject = peace;
+.. code-block:: sql
+
+    DELETE FROM 
+       nobel 
+    WHERE 
+       yr = 1989, subject = peace;
 
 .. note:: peace prizes can be contraversial, and perhaps there's a political interest in censoring our database?
 
