@@ -73,7 +73,7 @@ Managing MySQL
 
 Users & Permissions
 -------------------
-
+- CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
 - GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
 
 Importing Data
@@ -100,7 +100,7 @@ SELECT
 FROM 
    nobel
 WHERE 
-   yr = 1960
+   yr = 1960;
 
 Practice
 --------
