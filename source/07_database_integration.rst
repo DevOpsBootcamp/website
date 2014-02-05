@@ -163,6 +163,5 @@ Further Reading, Resources, etc.
 
 Parking lot
 ===========
-- indicies, performance)
 - connect app to DB
 
