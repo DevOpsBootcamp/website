@@ -4,6 +4,11 @@ Lesson 8: Security & Authentication
 
 .. note:: 2/13/2014
 
+    - basic concepts & philosophies
+        - authentication vs authorization
+        - identity (absolute vs. relative)
+        - system security (close ports, firewalls, fail2ban)
+
     - key pairs
     - ssh keys (passphrase vs none; automation; authorized_keys)
     - GPG keys, signing stuff, publishing to keyservers
