@@ -1,10 +1,6 @@
 ==================================================
-Lesson 7: A data base with a clever soup pun (TBD)
+Lesson 7: Databases
 ==================================================
-
-
-.. note:: more dev-focused
-    2/6/2014
 
 Review Questions About Filesystems
 ---------------------------------------
@@ -116,7 +112,9 @@ Practice
 --------
 
 Who won the prize for Medicine in 1952?
-
+How many people were awarded the 1903 Nobel in Physics?
+How many prizes were awarded to Linus Pauling?
+How many people have won more than once? (Difficult)
 
 INSERT
 ------
