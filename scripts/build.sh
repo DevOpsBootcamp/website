@@ -13,8 +13,12 @@ source venv/bin/activate
 # Update packages
 pip install -r requirements.txt
 
-# Build docs
+# Build slides 
 make slides
+
+# Delete non-slide content
+cd build/slides
+rm -f [a-zA-Z]*
 
 # Disable venv
 deactivate
