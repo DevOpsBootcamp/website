@@ -53,24 +53,29 @@ Lesson 4: Scripting & Troubleshooting
 Python and Bash. Overview of troubleshooting/debugging skills.
 
 - 6pm 01/9/2014, KEC1007. 
+- `Scripting and Troubleshooting Video <https://www.youtube.com/watch?v=98XtvsbN56g>`_
 - `Lesson 4 Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
 
 Lesson 5: Services & Deploying a Web App 
 ----------------------------------------
 
-- 6pm 1/16/2014
+- 6pm 1/16/2014, KEC1007
+- `Services & Web App video 1/2 <https://www.youtube.com/watch?v=acqOeOPcSHY>`_
+- `Services & Web App video 2/2 <https://www.youtube.com/watch?v=2RSWKkJVodM>`_
 - `Lesson 5 Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
 
 Lesson 6: Boot Process & Filesystem Hierarchy
 ---------------------------------------------
 
 - 6pm 1/30/3014 -- 14 attendees; time conflicts with Intel and Reddit founder
-- `Lesson 6 slides <slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>_`
+- `Boot & Filesystem Video <https://www.youtube.com/watch?v=CsQbAInzTzQ>`_
+- `Lesson 6 slides <slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>`_
 
 Lesson 7: Databases
 -------------------
 
-- 6pm 2/6/2014
+- 6pm 2/13/2014 (moved from 2/6 due to snow)
+- `Lesson 7 slides <http://slides.osuosl.org/devopsbootcamp/07_database_integration.html#1>`_
 
 Lesson 8: Security & Authentication
 -----------------------------------
