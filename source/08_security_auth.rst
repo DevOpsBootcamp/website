@@ -2,18 +2,25 @@
 Lesson 8: Security & Authentication
 ===================================
 
-.. note:: 2/13/2014
+.. note::
 
+    edunham
     - basic concepts & philosophies
         - authentication vs authorization
-        - identity (absolute vs. relative)
+        - identity (persistent vs authoritative(?))
         - system security (close ports, firewalls, fail2ban)
+            - process isolation
+        - principle of least authority
+            - users/groups/permissions
+        - passwords/hashing (plaintext -> hash -> salt)
 
+    Pono
     - key pairs
     - ssh keys (passphrase vs none; automation; authorized_keys)
     - GPG keys, signing stuff, publishing to keyservers
     - certificates (SSL/TLS)
 
+    Jack???? (else dean/emily/ken w/ emily presenting)
     - web app security
         - parameterize or sanitize inputs
         - SQL injection
