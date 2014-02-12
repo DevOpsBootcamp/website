@@ -51,7 +51,7 @@ Structure
 Joins
 -----
 
- * Venn diagrams of join types
+.. figure:: static/inner-outer-join-venn.jpg
 
 .. note:: join are the principle use of relations.
 
