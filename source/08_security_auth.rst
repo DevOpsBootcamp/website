@@ -12,9 +12,9 @@ Lesson 8: Security & Authentication
             - process isolation
         - principle of least authority
             - users/groups/permissions
-        - passwords/hashing (plaintext -> hash -> salt)
 
     Pono
+    - passwords/hashing (plaintext -> hash -> salt)
     - key pairs
     - ssh keys (passphrase vs none; automation; authorized_keys)
     - GPG keys, signing stuff, publishing to keyservers
@@ -27,6 +27,7 @@ Lesson 8: Security & Authentication
         - XSS, csrf tokens
         - https://www.owasp.org/index.php/Top_10_2013-Top_10
         - filesystem & user permissions (remember lesson 2?)
+        - CRIME attack
 
     - mention social engineering type attacks
 
