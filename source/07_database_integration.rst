@@ -43,7 +43,7 @@ Enter the Database
 Structure
 =========
 
-Relational Algebra
+SQL databases are structured around **Relational Algebra**
 
 * Tables
 * Rows, Columns
@@ -66,6 +66,7 @@ Installing MySQL
 .. code-block:: bash
 
     $ yum install mysql-server
+    $ /sbin/service mysqld start
     $ /usr/bin/mysql_secure_installation
 
 Managing MySQL
@@ -73,10 +74,19 @@ Managing MySQL
 
 .. code-block:: bash
 
-    $ /sbin/service mysqld start
-    $ /usr/bin/mysql_secure_installation
+    $ /sbin/service mysqld status
     $ mysqladmin ping
     $ mysqladmin create nobel
+
+Configuration
+-------------
+
+    /etc/my.conf
+
+  
+.. note:: 
+    we're going to add 
+       default_storage_engine         = InnoDB
 
 Users & Permissions
 -------------------
