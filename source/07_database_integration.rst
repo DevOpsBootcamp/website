@@ -45,11 +45,11 @@ Structure
 
 SQL databases are structured around **Relational Algebra**
 
-* Tables
-  * **Columns** are fields
-  * **Rows** define a relation between fields
-* A **Primary key** is a set of columns that uniquely identify rows in a table
-* A **Foreign key** is a column that matches the primary key of another table
+- Tables
+  - **Columns** are fields
+  - **Rows** define a relation between fields
+- A **Primary key** is a set of columns that uniquely identify rows in a table
+- A **Foreign key** is a column that matches the primary key of another table
 
 Relational Algebra Visualized
 -----------------------------
