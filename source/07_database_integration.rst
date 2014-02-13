@@ -43,38 +43,51 @@ Enter the Database
 Structure
 =========
 
-  Relational Algebra
-  - Tables
-  - Rows, Columns
-  - Relations form a structure between tables
+Relational Algebra
+
+* Tables
+* Rows, Columns
+* Relations form a structure between tables
 
 Joins
 -----
 
-.. figure:: static/inner-outer-join-venn.jpg
+|
 
-.. note:: join are the principle use of relations.
+.. figure:: static/inner-outer-join-venn.jpg
+    :align: center
+    :scale: 150%
+   
+.. note:: joins are the principle use of relations.
 
 Installing MySQL
 ================
 
-- yum install mysql-server
-- /usr/bin/mysql_secure_installation
+.. code-block:: bash
+
+    $ yum install mysql-server
+    $ /usr/bin/mysql_secure_installation
 
 Managing MySQL
 --------------
 
-- /sbin/service mysqld start
-- mysqladmin ping
-- mysqladmin create nobel
+.. code-block:: bash
 
+    $ /sbin/service mysqld start
+    $ mysqladmin ping
+    $ mysqladmin create nobel
 
 Users & Permissions
 -------------------
 
-- sudo mysql
-- mysql> CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
-- mysql> GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
+.. code-block:: bash
+
+    $ sudo mysql
+
+.. code-blocck:: sql
+
+    mysql> CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
+    mysql> GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
 
 Importing Data
 --------------
@@ -111,10 +124,10 @@ SELECT
 Practice
 --------
 
-Who won the prize for Medicine in 1952?
-How many people were awarded the 1903 Nobel in Physics?
-How many prizes were awarded to Linus Pauling?
-How many people have won more than once? (Difficult)
+* Who won the prize for Medicine in 1952?
+* How many people were awarded the 1903 Nobel in Physics?
+* How many prizes were awarded to Linus Pauling?
+* How many people have won more than once? (Difficult)
 
 INSERT
 ------
@@ -175,15 +188,19 @@ Further Reading, Resources, etc.
   * sqlzoo.net
   * CS 440: Database Management Systems
 
+Hands-On: Make a Database
+---------------
 
+* Create a new database
+* Grant a user priviliges on your new database
 
-Parking lot
-===========
-- connect app to DB
+.. note:: challenge them to do this based on the material in the last hour, maybe also demo the mysql console. Make sure everyone remembers the username and password for the next step.
 
 
 Databases in Applications
 =========================
+
+|
 
 Applications love databases.
 
@@ -192,7 +209,6 @@ Applications love databases.
 * Logging, statistics, state and session data, etc...
 
 .. note:: All the various things an app might use a database for - note that the vast majority of web apps use them for something
-
 
 Native SQL
 ----------
@@ -236,6 +252,8 @@ Object Relational Mapper
 
 Life With a Python ORM
 ----------------------
+
+|
 
 Look, ma! No SQL!
 
@@ -306,14 +324,6 @@ Hands On
 
 .. note:: Talk about git branches again, explain tracking, git pull for people who already have it cloned, etc. Talk about the virtualenv, have people create a new one if they have lost the one they made last time. Talk about pip and what requirements.txt is all about - point out how easy it is to set up an app this way. Make sure requirements.txt contains sqlalchemy.
   DANGER! - people will need mysql-dev package! name varies by distribution, for centos it is libmysqlclient-dev
-
-Make a Database
----------------
-
-* Create a new database
-* Grant a user priviliges on your new database
-
-.. note:: challenge them to do this based on the material in the last hour, maybe also demo the mysql console. Make sure everyone remembers the username and password for the next step.
 
 Goals
 -----
