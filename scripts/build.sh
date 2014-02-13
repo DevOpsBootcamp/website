@@ -13,6 +13,9 @@ source venv/bin/activate
 # Update packages
 pip install -r requirements.txt
 
+# Nuke the old build dir
+rm -rf build/
+
 # Build slides 
 make slides
 
