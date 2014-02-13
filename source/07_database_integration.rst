@@ -74,6 +74,7 @@ Managing MySQL
 .. code-block:: bash
 
     $ /sbin/service mysqld start
+    $ /usr/bin/mysql_secure_installation
     $ mysqladmin ping
     $ mysqladmin create nobel
 
