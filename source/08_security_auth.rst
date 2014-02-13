@@ -14,11 +14,14 @@ Lesson 8: Security & Authentication
             - users/groups/permissions
 
     Pono
-    - passwords/hashing (plaintext -> hash -> salt)
-    - key pairs
-    - ssh keys (passphrase vs none; automation; authorized_keys)
-    - GPG keys, signing stuff, publishing to keyservers
-    - certificates (SSL/TLS)
+    - passwords, keys, encryption
+        - passwords/hashing (plaintext -> hash -> salt)
+        - key pairs
+        - ssh keys (passphrase vs none; automation; authorized_keys)
+        - GPG keys, signing stuff, publishing to keyservers
+        - certificates (SSL/TLS)
+        - ciphers
+        - https
 
     Jack???? (else dean/emily/ken w/ emily presenting)
     - web app security
