@@ -49,8 +49,8 @@ Relational Algebra
 * Rows, Columns
 * Relations form a structure between tables
 
-Joins
------
+Structured Data
+---------------
 
 |
 
