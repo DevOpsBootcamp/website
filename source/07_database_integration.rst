@@ -101,7 +101,7 @@ Users & Permissions
 
     $ sudo mysql
 
-.. code-blocck:: sql
+.. code-block:: sql
 
     mysql> CREATE USER 'vagrant'@'localhost' IDENTIFIED BY 'password';
     mysql> GRANT ALL PRIVILEGES ON nobel.* TO 'vagrant'@'localhost' WITH GRANT OPTION;
