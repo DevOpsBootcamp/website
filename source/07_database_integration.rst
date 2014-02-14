@@ -81,15 +81,19 @@ Managing MySQL
 .. code-block:: bash
 
     $ /sbin/service mysqld status
-    $ mysqladmin ping
-    $ mysqladmin create nobel
+    $ mysqladmin -p ping
+    $ mysqladmin -p create nobel
 
 Configuration
 -------------
 
-    /etc/my.conf
+.. rst-class:: build
 
-  
+- /etc/my.conf
+- The most important MySQL tuning rule: 
+   - almost always prefer **InnoDB**
+
+ 
 .. note:: 
     we're going to add 
        default_storage_engine         = InnoDB
