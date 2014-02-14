@@ -253,7 +253,7 @@ Python:
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT yr, subject, winner FROM nobel WHERE yr = 1960)
+    cursor.execute("SELECT subject, yr, winner FROM nobel WHERE yr = 1960)
 
     data = cursor.fetchall()
 
@@ -286,7 +286,7 @@ Look, ma! No SQL!
 
 .. code-block:: python
 
-    for yr, subject, winner in session.query(Nobel).filter_by(yr=1960):
+    for subject, yr, winner in session.query(Nobel).filter_by(yr=1960):
         print "%s winner in %s: %s " % (subject, yr, winner)
 
 Much easier to read and understand, but requires some setting up first.
