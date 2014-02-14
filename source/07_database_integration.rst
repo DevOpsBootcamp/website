@@ -227,9 +227,7 @@ Hands-On: Make a Database
 
 
 Databases in Applications
-=========================
-
-|
+-------------------------
 
 Applications love databases.
 
@@ -327,11 +325,21 @@ What else? Ideas?
 Hands On
 --------
 
+* Install the following packages:
+
+.. code-block:: bash
+
+      sudo yum install python-devel
+      sudo yum install mysql-devel
+
 * Check out systemview from GitHub (if you don't have it already)
 
 .. code-block:: bash
 
       git clone git@github.com:DevOpsBootcamp/systemview
+
+Hands On (Cont...)
+------------------
 
 * Switch to 'save-search' branch
 
