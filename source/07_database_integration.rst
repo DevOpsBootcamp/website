@@ -103,7 +103,7 @@ Users & Permissions
 
 .. code-block:: bash
 
-    $ sudo mysql
+    $ sudo mysql -p
 
 .. code-block:: sql
 
@@ -120,9 +120,13 @@ Importing Data
 .. code-block:: bash
 
     $ wget http://osl.io/nobel -O nobel.sql
-    $ mysql nobel < nobel.sql
-    $ mysql nobel
-    $ mysql> DESCRIBE nobel;
+    $ mysql -p nobel < nobel.sql
+    $ mysql -p nobel
+
+.. code-block:: sql
+
+    SHOW TABLES;
+    DESCRIBE nobel;
 
 Basic Queries
 =============
