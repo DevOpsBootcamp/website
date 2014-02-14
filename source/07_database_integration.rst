@@ -221,6 +221,16 @@ Hands-On: Make a Database
 ---------------
 
 * Create a new database
+
+.. code-block:: sql
+
+    mysql> create database systemview
+
+    mysql> GRANT ALL PRIVILEGES ON systemview.* 
+           TO 'vagrant'@'localhost' 
+           WITH GRANT OPTION;
+
+
 * Grant a user priviliges on your new database
 
 .. note:: challenge them to do this based on the material in the last hour, maybe also demo the mysql console. Make sure everyone remembers the username and password for the next step.
