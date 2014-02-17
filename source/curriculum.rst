@@ -77,15 +77,19 @@ Lesson 7: Databases
 - 6pm 2/13/2014 (moved from 2/6 due to snow)
 - `Lesson 7 slides <http://slides.osuosl.org/devopsbootcamp/07_database_integration.html#1>`_
 
+Review of VM and App Setup
+--------------------------
+
+- 6pm 2/20/2014
+
 Lesson 8: Security & Authentication
 -----------------------------------
 
-- 6pm 2/20/2014
+- 6pm 2/27/2014
 
 Lesson 9: Networking overview
 -----------------------------
 
-- 6pm 2/27/2014
 
 Lesson 10: Services
 -------------------
