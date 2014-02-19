@@ -148,3 +148,39 @@ Some places have bug bounties
 
 Keys
 ====
+
+
+What Not to Do: The Exercise
+============================
+
+Getting Up to Date
+------------------
+
+* ssh into your vagrant environment
+* change directory to your local systemview repo
+
+    .. code-block:: bash
+
+        $ cd ~/projects/systemview
+    
+
+* Make sure your local copy is up to date
+
+    .. code-block:: bash
+
+        $ git pull
+
+    * If you've modified code you'll need to follow these instructions
+
+    .. code-block:: bash
+
+        $ git stash save "some witty name about your work"
+        $ git pull --rebase
+
+
+Let's Check out Dean's (not so) Awesome Code
+--------------------------------------------
+
+.. code-block:: bash
+
+    $ git checkout <not so awesome code branch goes here>
