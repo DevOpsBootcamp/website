@@ -4,14 +4,25 @@ Review
 Today's Goals
 -------------
 
+* Working VM
+* Run Systemview app
+* Connect to Systemview from browser in host
+* Understand what's happening
+
 How to set up a VM
 ==================
 
 Linux
 -----
 
+.. code-block:: shell
+
+    $ wget <stuff>
+
 Windows
 -------
+
+* Instructions
 
 Installing the Web App
 ======================
@@ -19,11 +30,22 @@ Installing the Web App
 Prerequisite tools
 ------------------
 
+* Git
+* Pip (Python Package Manager)
+* Virtualenv 
+
 Git Clone
 ---------
 
+* Makes a copy of the repo
+* Forking copies it to your account. You can clone your fork.
+
 Branches
 --------
+
+* Start one with ``git checkout -b branchname``
+* Which are you on? ``git branch``
+* Switch with ``git checkout branchname``
 
 Connecting to the App
 =====================
