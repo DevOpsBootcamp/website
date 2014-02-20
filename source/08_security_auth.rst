@@ -138,7 +138,9 @@ TODO: add examples and more explanation and stuff
 What to do if you discover a vulnerability
 ------------------------------------------
 
-First, disclose it *privately* to those responsible for fixing it
+First, test and document to verify that it exists.
+
+Then, disclose it *privately* to those responsible for fixing it
 
 Provide examples -- it's basically a bug report, but through private channels (not public tracker yet!)
 

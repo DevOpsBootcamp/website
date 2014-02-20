@@ -12,6 +12,11 @@ Today's Goals
 How to set up a VM
 ==================
 
+Enable VirtualBox (VT extensions)
+---------------------------------
+
+
+
 Linux
 -----
 
@@ -23,6 +28,22 @@ Windows
 -------
 
 * Instructions
+
+IRC
+===
+
+* guide link
+* channel
+
+GitHub Account
+==============
+
+SSH keys
+--------
+
+Joining the organization
+------------------------
+
 
 Installing the Web App
 ======================
@@ -46,6 +67,12 @@ Branches
 * Start one with ``git checkout -b branchname``
 * Which are you on? ``git branch``
 * Switch with ``git checkout branchname``
+
+Setting up Database
+===================
+
+Install MySql
+Check out the branch (tags!)
 
 Connecting to the App
 =====================
