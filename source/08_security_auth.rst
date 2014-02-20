@@ -132,8 +132,7 @@ Passwords
 * Don't reuse them
 * pwgen
 * Hashing / salt
-
-TODO: add examples and more explanation and stuff 
+* Password managers (LastPass, 1Password)
 
 What to do if you discover a vulnerability
 ------------------------------------------
