@@ -6,31 +6,37 @@ Lesson 8: Security & Authentication
 
     edunham
     - basic concepts & philosophies
-        - authentication vs authorization
-        - identity (persistent vs authoritative(?))
-        - system security (close ports, firewalls, fail2ban)
-            - process isolation
-        - principle of least authority
-            - users/groups/permissions
+
+      - authentication vs authorization
+      - identity (persistent vs authoritative(?))
+      - system security (close ports, firewalls, fail2ban)
+
+        - process isolation
+
+      - principle of least authority
+
+        - users/groups/permissions
 
     Pono
     - passwords, keys, encryption
-        - passwords/hashing (plaintext -> hash -> salt)
-        - key pairs
-        - ssh keys (passphrase vs none; automation; authorized_keys)
-        - GPG keys, signing stuff, publishing to keyservers
-        - certificates (SSL/TLS)
-        - ciphers
-        - https
+
+     - passwords/hashing (plaintext -> hash -> salt)
+     - key pairs
+     - ssh keys (passphrase vs none; automation; authorized_keys)
+     - GPG keys, signing stuff, publishing to keyservers
+     - certificates (SSL/TLS)
+     - ciphers
+     - https
 
     Jack???? (else dean/emily/ken w/ emily presenting)
     - web app security
-        - parameterize or sanitize inputs
-        - SQL injection
-        - XSS, csrf tokens
-        - https://www.owasp.org/index.php/Top_10_2013-Top_10
-        - filesystem & user permissions (remember lesson 2?)
-        - CRIME attack
+
+     - parameterize or sanitize inputs
+     - SQL injection
+     - XSS, csrf tokens
+     - https://www.owasp.org/index.php/Top_10_2013-Top_10
+     - filesystem & user permissions (remember lesson 2?)
+     - CRIME attack
 
     - mention social engineering type attacks
 
@@ -145,10 +151,15 @@ Web application security
     :align: right
 
 * Who needs to worry about web application security?
+
   * Everyone!
+
 * What kinds of attacks are seen in the wild?
+
   * Many!
+
 * What can devops do about these attacks?
+
   * A lot!
 
 (image source: https://info.cenzic.com/rs/cenzic/images/2013-vulnerability-summary_290x250.png)
@@ -178,16 +189,19 @@ Code Injection
     :align: right
 
 * Attacks
- * SQL Injection
- * Cross-Site Scripting (XSS)
- * Cross-Site Request Forgery (CSRF)
- * Remote Code Execution
+
+  * SQL Injection
+  * Cross-Site Scripting (XSS)
+  * Cross-Site Request Forgery (CSRF)
+  * Remote Code Execution
 
 * Defenses
- * Sanitize your inputs!
-   http://bobby-tables.com/
-   https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
-   http://guides.rubyonrails.org/security.html
+
+  * Sanitize your inputs!
+
+http://bobby-tables.com/
+https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
+http://guides.rubyonrails.org/security.html
 
 .. note:: 
 
@@ -236,8 +250,8 @@ Web Server-Specific Attacks
 .. figure:: static/apache-vulns1.png
     :align: right
 
-  * Version-Based
-  * Configuration-Based
+* Version-Based
+* Configuration-Based
 
 (image source http://news.netcraft.com/wp-content/uploads/2014/02/apache-vulns1.png)
 
