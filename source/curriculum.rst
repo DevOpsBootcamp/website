@@ -81,6 +81,7 @@ Review of VM and App Setup
 --------------------------
 
 - 6pm 2/20/2014
+- No video, hands-on... 14 people showed up
 
 Lesson 8: Security & Authentication
 -----------------------------------
@@ -104,5 +105,6 @@ Lesson 11: Configuration Management & Cron
 
 Lesson 12: Infrastructure Design
 --------------------------------
+
 
 
