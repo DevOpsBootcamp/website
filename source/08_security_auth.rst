@@ -21,12 +21,48 @@ Lesson 8: Security & Authentication
     - passwords, keys, encryption
 
      - passwords/hashing (plaintext -> hash -> salt)
-     - key pairs
+        - what are passwords for
+        - why use them
+        - how to not store them
+        - how to store them
+     - keys
+        - just like for houses, but better
+        - symmetric, asymmetric
+        - diffie helman
+        - rsa
      - ssh keys (passphrase vs none; automation; authorized_keys)
+        - why is a key better than a password
+        - passphrases
+        - automation
+        - authorized_keys
      - GPG keys, signing stuff, publishing to keyservers
-     - certificates (SSL/TLS)
-     - ciphers
-     - https
+        - email
+        - why you should use it
+        - why people don't use it
+        - making keys
+        - keysigning parties
+        - keyserver
+        - encryption
+     - certificates (SSL/TLS)/ https
+        -
+     - wifi
+        - wep
+            - attacks
+        - wpa
+            - attacks
+        - wpa2
+            - weakness
+        - vpn
+            - mschapv2
+     - intro to crypto
+        - encryption
+            - full disk
+        - math
+     - one last thing
+        - social engineering
+        - privly
+        - 'i have nothing to hide'
+
 
     Jack???? (else dean/emily/ken w/ emily presenting)
     - web app security
@@ -115,18 +151,6 @@ Principle of Least Authority
 * ACLs
 * File permissions
 
-Passwords
----------
-
-.. figure:: static/xkcd_936.png
-    :align: center
-
-* Don't reuse them
-* pwgen
-* Hashing / salt
-* Password managers (LastPass, 1Password)
-
-TODO: add examples and more explanation and stuff 
 
 What to do if you discover a vulnerability
 ------------------------------------------
@@ -143,6 +167,152 @@ Some places have bug bounties
 
 Keys
 ====
+
+Passwords
+---------
+
+.. figure:: static/xkcd_936.png
+    :align: center
+
+* Don't reuse them
+* pwgen
+* Hashing / salt
+* Password managers (LastPass, 1Password)
+
+.. note:: 
+    We use passwords for everything we do online.  Some (hopefully) 
+    semirandom grouping of letters, numbers, and symbols which when combined
+    with a username allow you to authenticate with a server or process.
+    There are a couple common attacks on passwords, the most common of which
+    is called a dictionary attack.  This uses the fact that words are easier
+    to remember than random characters, so it abuses human memory in order
+    to greatly reduce the search space for passwords.  
+    
+    pwgen + a password manager will help you have better passwords which you
+    dont even have to remember!
+    
+    Storing passwords on the server side is a whole nother matter.  One of 
+    the primary issues of concern is what happens if your server gets
+    compromised.  Lets say for instance that you just have a giant text file
+    that has the form "username password" on each row.  This would be super
+    fast to to lookup users in, but if that file ends up in the wrong hands,
+    you lose.  A better option is to not store the passwords directly, but
+    to store some representation of the password.  This is where a hash
+    comes in.  Essentially a hash is a one way function that is fast to
+    calculate, deterministic in output, but _very_ hard to reverse.  If you 
+    store the hash of a password you can hash what they send you to verify
+    who they are.  Again we must consider what happens if our database was
+    compromised.  Since these hashes are deterministic and computing power
+    is so cheap, we can precalculate what passwords correspond to what
+    hashes, these precomputed files are called rainbow tables.  To avoid
+    the issue with rainbow tables we 'salt' our passwords.  This adds a 
+    small random string to each password so that the search space for 
+    precomputing possible passwords becomes tera/petabytes large.
+    
+    Enough about passwords, we now move into more interesting things called
+    keys!
+    
+
+Keys
+----
+* Better than passwords
+* Symmetric vs Asymmetric
+* Diffie-Hellman
+* RSA
+
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg
+    :align: center
+
+.. note:: 
+    Keys are password files.  These can be used in place of a password for
+    authentiation and encryption.
+    Symmetric keys essentially work like passwords.  They are basicallly a
+    one-time pad where both parties need to know the key to enable data to
+    be stored and retrieved.  Asymmetric keys work by encrypting with a
+    public key (one everyone can see), but only being able to be decrypted
+    by the private key (which you shouldn't show anyone).
+    The fundamental problem with communication is that if you don't have a
+    preshared key between two users, everything you say is being listened
+    to and presumably logged.
+    Diffie Hellman key exchange is probably the most important result in
+    cryptography.  It allows two users to communicate in plaintext
+    (non-encrypted) and trade their public keys in order to generate a 
+    shared secret so then they can communicate with encryption.
+    RSA is an algorithm that follows Diffie-Hellman and is the most common
+    way to do key exchange.
+
+SSH
+---
+* Password vs Keys
+* Passphrases
+* authorized_keys
+* Automation
+
+.. note:: 
+    ssh is secure shell and provides a shell to a unix machine over the
+    'net by using RSA to encrypt communications between a client and
+    server. Passwordless login, refuse connections without keys, etc.
+    Passphrases work by adding a password to a key file.
+    Add your friends public keys to authorized_keys so they don't need a
+    password to login.  
+    ssh-agent, .ssh/config, /etc/ssh/sshd_config
+
+GPG
+---
+* E-mail privacy
+* Why you should use GPG
+* Why people don't use GPG
+* Keys, signing, keyservers
+* Encryption
+
+.. note:: 
+
+Certificates
+------------
+* Certificate Authorities
+* https
+* ssl/tls
+* attacks
+* https://tack.io
+
+.. note:: 
+
+     650 CAs
+     Attacks on https/ssl
+     Future
+
+WiFi
+----
+* wep
+* wpa
+* wpa2
+
+.. note:: 
+    Attacks
+    mschapv2
+    
+
+Introduction to Cryptography
+----------------------------
+* Encryption
+    * Files
+        * Tarsnap, SpiderOak, rsync over ssh
+    * Full disk
+    * Communications
+        * VPN
+* Math!
+
+
+.. note:: 
+
+One Last Thing
+--------------
+* Social Engineering
+* https://priv.ly ( proudly hosted at the OSL)
+* "I have nothing to hide"
+
+.. note:: 
+
 
 Web application security
 ========================
