@@ -165,21 +165,37 @@ Give them time to release a patch before announcing it
 
 Some places have bug bounties
 
-Keys
-====
-
 Passwords
----------
+=========
 
 .. figure:: static/xkcd_936.png
     :align: center
 
+Good Passwording
+----------------
+
 * Don't reuse them
 * pwgen
+
+Server Side
+-----------
+
+.. figure:: static/rainbow-table.jpg
+
+* Rainbow Table
 * Hashing / salt
-* Password managers (LastPass, 1Password)
+* bcrypt/ scrypt
+
+Password Managers
+-----------------
+
+* Password managers (LastPass, 1Password, KeepPass*)
+    * Works with phones and other things
+* pass http://www.zx2c4.com/projects/password-store/
+* vim -x passwords.txt
 
 .. note:: 
+    http://makezineblog.files.wordpress.com/2013/01/fractal-rainbow-table-runner-1.jpg
     We use passwords for everything we do online.  Some (hopefully) 
     semirandom grouping of letters, numbers, and symbols which when combined
     with a username allow you to authenticate with a server or process.
@@ -220,8 +236,17 @@ Keys
 * Diffie-Hellman
 * RSA
 
+Key Exchange
+------------
 .. figure:: static/Diffie-Hellman_Key_Exchange.svg
     :align: center
+
+RSA
+---
+* Math
+* Math
+* More Math
+* Don't be shy
 
 .. note:: 
     Keys are password files.  These can be used in place of a password for
@@ -249,10 +274,17 @@ SSH
 * authorized_keys
 * Automation
 
+
+    .. code-block:: bash
+
+        $ ssh -D 9999 manatee@freshblue.lake
+        $ ssh -R 2222:localhost:22 freshblue.lake
+
 .. note:: 
     ssh is secure shell and provides a shell to a unix machine over the
     'net by using RSA to encrypt communications between a client and
-    server. Passwordless login, refuse connections without keys, etc.
+    server. Passwordless login, refuse connections without keys, tunneling.
+    Commands at the end are run unecrypted.
     Passphrases work by adding a password to a key file.
     Add your friends public keys to authorized_keys so they don't need a
     password to login.  
@@ -261,11 +293,28 @@ SSH
     **DEMO** Make ssh-keys, post to pastebin.osuosl.org
 GPG
 ---
+
 * E-mail privacy
 * Why you should use GPG
 * Why people don't use GPG
 * Keys, signing, keyservers
 * Encryption
+
+Brief History of Time (line of GPG)
+----------------------------------
+* P(retty)G(ood)P(rivacy)
+* Phil Zimmermann
+* Treason
+
+Ways to use GPG
+---------------
+* Enigamail
+* mutt
+* Command line
+
+    .. code-block:: bash
+        $ gpg --encrypt manateessecrets.jpg.exe 
+
 
 .. note:: 
 
@@ -274,8 +323,11 @@ Certificates
 * Certificate Authorities
 * https
 * ssl/tls
-* attacks
-* https://tack.io
+
+Man in the Middle
+-----------------
+.. figure:: static/mitm.png
+    :align: center
 
 .. note:: 
 
@@ -290,6 +342,7 @@ WiFi
 * wep
 * wpa
 * wpa2
+*Wireshark
 
 .. note:: 
     Attacks
@@ -297,7 +350,7 @@ WiFi
     
     **DEMO** Wireshark
 
-Introduction to Cryptography
+Crypto-wares
 ----------------------------
 * Encryption
     * Files
@@ -305,16 +358,26 @@ Introduction to Cryptography
     * Full disk
     * Communications
         * VPN
-* Math!
+        * TextSecure/ RedPhone
+        * Tor
+        * https everywhere
+Math!
+-----
+* Primes
+* Number Theory
+* Fields
+* Elliptic Curves
 
 .. note:: 
     **DEMO** rot13
 
 One Last Thing
 --------------
-* Social Engineering
 * https://priv.ly ( proudly hosted at the OSL)
 * "I have nothing to hide"
+
+* jeremykun.com
+* thoughtcrime.org
 
 .. note:: 
 
