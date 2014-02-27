@@ -176,6 +176,10 @@ Good Passwording
 
 * Don't reuse them
 * pwgen
+* Entropy
+* http://dicewords.com
+* hunter2
+* **********
 
 Server Side
 -----------
@@ -242,7 +246,7 @@ Key Exchange
 ------------
 .. figure:: static/Diffie-Hellman_Key_Exchange.svg
     :align: center
-    :scale: 85%
+    :scale: 65%
 
 RSA
 ---
