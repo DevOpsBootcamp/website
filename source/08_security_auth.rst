@@ -189,7 +189,7 @@ Passwords
     to greatly reduce the search space for passwords.  
     
     pwgen + a password manager will help you have better passwords which you
-    dont even have to remember!
+    dont even have to remember! **DEMO**
     
     Storing passwords on the server side is a whole nother matter.  One of 
     the primary issues of concern is what happens if your server gets
@@ -220,7 +220,7 @@ Keys
 * Diffie-Hellman
 * RSA
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg
+.. figure:: static/Diffie-Hellman_Key_Exchange.svg
     :align: center
 
 .. note:: 
@@ -241,6 +241,7 @@ Keys
     RSA is an algorithm that follows Diffie-Hellman and is the most common
     way to do key exchange.
 
+
 SSH
 ---
 * Password vs Keys
@@ -257,6 +258,7 @@ SSH
     password to login.  
     ssh-agent, .ssh/config, /etc/ssh/sshd_config
 
+    **DEMO** Make ssh-keys, post to pastebin.osuosl.org
 GPG
 ---
 * E-mail privacy
@@ -281,6 +283,8 @@ Certificates
      Attacks on https/ssl
      Future
 
+    **DEMO** sslsniff
+
 WiFi
 ----
 * wep
@@ -291,6 +295,7 @@ WiFi
     Attacks
     mschapv2
     
+    **DEMO** Wireshark
 
 Introduction to Cryptography
 ----------------------------
@@ -302,8 +307,8 @@ Introduction to Cryptography
         * VPN
 * Math!
 
-
 .. note:: 
+    **DEMO** rot13
 
 One Last Thing
 --------------
