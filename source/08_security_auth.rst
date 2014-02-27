@@ -181,6 +181,8 @@ Server Side
 -----------
 
 .. figure:: static/rainbow-table.jpg
+    :align: center
+    :scale: 85%
 
 * Rainbow Table
 * Hashing / salt
@@ -240,6 +242,7 @@ Key Exchange
 ------------
 .. figure:: static/Diffie-Hellman_Key_Exchange.svg
     :align: center
+    :scale: 85%
 
 RSA
 ---
@@ -328,6 +331,7 @@ Man in the Middle
 -----------------
 .. figure:: static/mitm.png
     :align: center
+    :scale: 85%
 
 .. note:: 
 
