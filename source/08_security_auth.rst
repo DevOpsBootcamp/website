@@ -174,12 +174,24 @@ Passwords
 Good Passwording
 ----------------
 
-* Don't reuse them
-* pwgen
-* Entropy
-* http://dicewords.com
-* hunter2
-* **********
+<Cthon98> hey, if you type in your pw, it will show as stars
+<Cthon98> ********* see!
+<AzureDiamond> hunter2
+<AzureDiamond> doesnt look like stars to me
+<Cthon98> <AzureDiamond> *******
+<Cthon98> thats what I see
+<AzureDiamond> oh, really?
+<Cthon98> Absolutely
+<AzureDiamond> you can go hunter2 my hunter2-ing hunter2
+<AzureDiamond> haha, does that look funny to you?
+<Cthon98> lol, yes. See, when YOU type hunter2, it shows to us as *******
+<AzureDiamond> thats neat, I didnt know IRC did that
+<Cthon98> yep, no matter how many times you type hunter2, it will show to us as *******
+<AzureDiamond> awesome!
+<AzureDiamond> wait, how do you know my pw?
+<Cthon98> er, I just copy pasted YOUR ******'s and it appears to YOU as hunter2 cause its your pw
+<AzureDiamond> oh, ok.
+
 
 Server Side
 -----------
@@ -199,6 +211,7 @@ Password Managers
     * Works with phones and other things
 * pass http://www.zx2c4.com/projects/password-store/
 * vim -x passwords.txt
+* http://dicewords.com
 
 .. note:: 
     http://makezineblog.files.wordpress.com/2013/01/fractal-rainbow-table-runner-1.jpg
@@ -239,8 +252,11 @@ Keys
 ----
 * Better than passwords
 * Symmetric vs Asymmetric
-* Diffie-Hellman
-* RSA
+* Diffie-Hellman / RSA
+
+.. figure:: static/Llave_bronce.jpg
+    :scale: 65%
+    :align: center 
 
 Key Exchange
 ------------
@@ -254,6 +270,10 @@ RSA
 * Math
 * More Math
 * Don't be shy
+
+.. figure:: static/rsa.jpg
+    :align: center
+    :scale: 85%
 
 .. note:: 
     Keys are password files.  These can be used in place of a password for
@@ -307,11 +327,16 @@ GPG
 * Keys, signing, keyservers
 * Encryption
 
+.. figure:: static/nobody-listens31.jpg
+    :align: center
+
 Brief History of Time (line of GPG)
 ----------------------------------
 * P(retty)G(ood)P(rivacy)
 * Phil Zimmermann
-* Treason
+
+.. figure:: static/125.jpg
+    :align: center
 
 Ways to use GPG
 ---------------
