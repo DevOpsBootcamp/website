@@ -39,6 +39,7 @@ Culture
 -------
 
 * `The Jargon File <http://www.catb.org/jargon/html/index.html>`_
+* `ESR's guide to asking good questions <http://www.catb.org/~esr/faqs/smart-questions.html>`_
 * `Geek Feminism <http://geekfeminism.wikia.com/wiki/Geek_Feminism_Wiki>`_ and
   `Systers <http://anitaborg.org/initiatives/systers/>`_ are worth looking
   into if you enjoy discussing diversity or IT's lack thereof.
