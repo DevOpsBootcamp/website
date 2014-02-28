@@ -86,7 +86,9 @@ Review of VM and App Setup
 Lesson 8: Security & Authentication
 -----------------------------------
 
-- 6pm 2/27/2014
+- 6pm 2/27/2014 -- 22 people present
+- `Lesson 8 video <http://www.youtube.com/watch?v=1idty-a052M>`_
+- `Lesson 8 slides <http://slides.osuosl.org/devopsbootcamp/08_security_auth.html>`_
 
 Lesson 9: Networking overview
 -----------------------------
