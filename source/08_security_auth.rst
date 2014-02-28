@@ -404,8 +404,9 @@ Ways to use GPG
 * mutt
 * Command line
 
-    .. code-block:: bash
-        $ gpg --encrypt manateessecrets.jpg.exe 
+.. code-block:: bash
+
+    $ gpg --encrypt manateessecrets.jpg.exe 
 
 
 .. note:: 
