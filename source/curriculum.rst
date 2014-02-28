@@ -82,6 +82,7 @@ Review of VM and App Setup
 
 - 6pm 2/20/2014
 - No video, hands-on... 14 people showed up
+- `Review Slides <http://slides.osuosl.org/devopsbootcamp/13_review.html>`_
 
 Lesson 8: Security & Authentication
 -----------------------------------
