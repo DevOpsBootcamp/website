@@ -151,8 +151,9 @@ System Security
 
 * Close ports
 * Firewalls
-* fail2ban
 * Process isolation
+
+* `nmap <http://nmap.org/>`_ vs. `fail2ban <http://www.fail2ban.org/wiki/index.php/Main_Page>`_
 
 Other Attacks
 -------------
