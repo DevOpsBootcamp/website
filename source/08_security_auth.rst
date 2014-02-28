@@ -126,12 +126,22 @@ Imagine an identity thief who takes out lines of credit in their victim's name t
 
 How about a project maintainer who never uses their real name online, but uses the same handle and email address across all sites?
 
+Identity
+--------
+
 How about a project maintainer who loses the domain which was hosting their email, and thus changes addresses abruptly?
 
 If you're a sysadmin who works with multiple projects, you will run into these concerns often.
 
 .. figure:: static/xkcd_565.png
     :align: center
+
+Principle of Least Authority
+----------------------------
+
+* User & Group management
+* ACLs
+* File permissions
 
 System Security
 ---------------
@@ -144,13 +154,62 @@ System Security
 * fail2ban
 * Process isolation
 
-Principle of Least Authority
-----------------------------
+Other Attacks
+-------------
 
-* User & Group management
-* ACLs
-* File permissions
+.. figure:: static/xkcd_538.png
+    :align: right
 
+* Social engineering
+    * Pretexting
+    * Phishing
+    * Baiting
+    * Quid Pro Quo
+    * Tailgaiting
+* Zero-Day vulnerabilities
+
+.. note::
+
+   Social engineering leverages those person-to-person skills us
+   computer folks are so well known for not having.  Can someone let
+   me borrow their laptop for a minute?  I just want to tell my mom
+   I'll be home late tonight... honest!
+
+   Pretexting is when someone contacts you with a pretext.  They sound
+   like they're authentic because they know something about you which
+   they probably got off Facebook or something else.  "Hi, I'm calling
+   from Chase Bank and I noticed that your card might have been used
+   at a location where fraud was committed.  I have your name as Bob
+   Smith and your date of birth as May third, 1992.  Can you read me
+   your card number and the three digits on the back?"
+
+   Phishing is something we've all been warned about.  We all know
+   that eBay and Paypal aren't going to email us asking for our bank
+   account information.  Just don't fall for it and you'll be okay.
+
+   Baiting is a little more interesting.  Ever walk down the street
+   and notice a thumb drive or SD card on the ground?  Hey -- free
+   thumb drive, right?  Let's just put it in the computer, what could
+   go wrong?  Plenty.  If it's too good to be true, it probably is.
+
+   Quid pro quo is a trade -- I'll give you something if you give me
+   something.  Would you trade your password for a chocolate bar?
+   According to the BBC, someone tried this outside a subway station
+   in London in 2004, and more than seventy percent of people took
+   that trade!  Thirty-four percent gave it up for free.  Don't do
+   that.
+
+   I suspect many of you who live in the dorms have been told about
+   tailgating.  You're unlocking the dorm door and someone comes up
+   and says "hey, I forgot my key in my room, can you let me in" or
+   maybe they're wearing a Domino's uniform and are carrying a pizza.
+   You're a nice person, you want to help them.  Don't do it.
+
+   And that leaves us with zero-day vulnerabilities.  The term 'zero
+   day' refers to the amount of time that the folks who write and
+   maintain the code have had to fix it.  If they don't know about it,
+   they can't fix it.  This is why it's so important for us to report
+   vulnerabilities when we discover them as was discussed earlier.
 
 What to do if you discover a vulnerability
 ------------------------------------------
@@ -332,6 +391,7 @@ GPG
 
 Brief History of Time (line of GPG)
 ----------------------------------
+
 * P(retty)G(ood)P(rivacy)
 * Phil Zimmermann
 
@@ -352,12 +412,14 @@ Ways to use GPG
 
 Certificates
 ------------
+
 * Certificate Authorities
 * https
 * ssl/tls
 
 Man in the Middle
 -----------------
+
 .. figure:: static/mitm.png
     :align: center
     :scale: 85%
@@ -372,6 +434,7 @@ Man in the Middle
 
 WiFi
 ----
+
 * wep
 * wpa
 * wpa2
@@ -384,7 +447,8 @@ WiFi
     **DEMO** Wireshark
 
 Crypto-wares
-----------------------------
+------------
+
 * Encryption
     * Files
         * Tarsnap, SpiderOak, rsync over ssh
@@ -396,6 +460,7 @@ Crypto-wares
         * https everywhere
 Math!
 -----
+
 * Primes
 * Number Theory
 * Fields
@@ -406,6 +471,7 @@ Math!
 
 One Last Thing
 --------------
+
 * https://priv.ly ( proudly hosted at the OSL)
 * "I have nothing to hide"
 
@@ -433,7 +499,7 @@ Web application security
 
   * A lot!
 
-(image source: https://info.cenzic.com/rs/cenzic/images/2013-vulnerability-summary_290x250.png)
+.. note:: image source: https://info.cenzic.com/rs/cenzic/images/2013-vulnerability-summary_290x250.png
 
 .. note::
 
@@ -524,7 +590,7 @@ Web Server-Specific Attacks
 * Version-Based
 * Configuration-Based
 
-(image source http://news.netcraft.com/wp-content/uploads/2014/02/apache-vulns1.png)
+.. note:: image source http://news.netcraft.com/wp-content/uploads/2014/02/apache-vulns1.png
 
 .. note:: 
 
@@ -582,68 +648,6 @@ Problems with Design and Implementation
    leakage -- while it's nice to let people know how to contact your
    staff, you might not want to let them download everyone's email
    address and such.
-
-Other Attacks
--------------
-
-.. figure:: static/xkcd_538.png
-    :align: right
-
-* Social engineering
-    * Pretexting
-    * Phishing
-    * Baiting
-    * Quid Pro Quo
-    * Tailgaiting
-* Zero-Day vulnerabilities
-
-.. note::
-
-   There are two other major categories of attacks that haven't been
-   discussed, mainly because they're different than the broad
-   categories previously mentioned.  
-
-   Social engineering leverages those person-to-person skills us
-   computer folks are so well known for not having.  Can someone let
-   me borrow their laptop for a minute?  I just want to tell my mom
-   I'll be home late tonight... honest!
-
-   Pretexting is when someone contacts you with a pretext.  They sound
-   like they're authentic because they know something about you which
-   they probably got off Facebook or something else.  "Hi, I'm calling
-   from Chase Bank and I noticed that your card might have been used
-   at a location where fraud was committed.  I have your name as Bob
-   Smith and your date of birth as May third, 1992.  Can you read me
-   your card number and the three digits on the back?"
-
-   Phishing is something we've all been warned about.  We all know
-   that eBay and Paypal aren't going to email us asking for our bank
-   account information.  Just don't fall for it and you'll be okay.
-
-   Baiting is a little more interesting.  Ever walk down the street
-   and notice a thumb drive or SD card on the ground?  Hey -- free
-   thumb drive, right?  Let's just put it in the computer, what could
-   go wrong?  Plenty.  If it's too good to be true, it probably is.
-
-   Quid pro quo is a trade -- I'll give you something if you give me
-   something.  Would you trade your password for a chocolate bar?
-   According to the BBC, someone tried this outside a subway station
-   in London in 2004, and more than seventy percent of people took
-   that trade!  Thirty-four percent gave it up for free.  Don't do
-   that.
-
-   I suspect many of you who live in the dorms have been told about
-   tailgating.  You're unlocking the dorm door and someone comes up
-   and says "hey, I forgot my key in my room, can you let me in" or
-   maybe they're wearing a Domino's uniform and are carrying a pizza.
-   You're a nice person, you want to help them.  Don't do it.
-
-   And that leaves us with zero-day vulnerabilities.  The term 'zero
-   day' refers to the amount of time that the folks who write and
-   maintain the code have had to fix it.  If they don't know about it,
-   they can't fix it.  This is why it's so important for us to report
-   vulnerabilities when we discover them as was discussed earlier.
-
 
 What Not to Do: The Exercise
 ============================
