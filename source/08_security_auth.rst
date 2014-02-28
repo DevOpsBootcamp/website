@@ -309,19 +309,21 @@ Password Managers
 
 Keys
 ----
+
 * Better than passwords
 * Symmetric vs Asymmetric
 * Diffie-Hellman / RSA
 
 .. figure:: static/Llave_bronce.jpg
-    :scale: 65%
-    :align: center 
+    :scale: 50%
+    :align: right 
 
 Key Exchange
 ------------
+
 .. figure:: static/Diffie-Hellman_Key_Exchange.svg
     :align: center
-    :scale: 65%
+    :scale: 50% 
 
 RSA
 ---
@@ -332,7 +334,7 @@ RSA
 
 .. figure:: static/rsa.jpg
     :align: center
-    :scale: 85%
+    :scale: 75%
 
 .. note:: 
     Keys are password files.  These can be used in place of a password for
