@@ -298,7 +298,7 @@ Keys
 * Diffie-Hellman / RSA
 
 .. figure:: static/Llave_bronce.jpg
-    :scale: 50%
+    :scale: 20%
     :align: right 
 
 Key Exchange
@@ -345,8 +345,8 @@ SSH
 * authorized_keys
 * Automation
 
-
 .. code-block:: bash
+
     $ ssh -D 9999 manatee@freshblue.lake
     $ ssh -R 2222:localhost:22 freshblue.lake
 
@@ -361,6 +361,16 @@ SSH
     ssh-agent, .ssh/config, /etc/ssh/sshd_config
 
     **DEMO** Make ssh-keys, post to pastebin.osuosl.org
+
+Brief History of Time (line of GPG)
+----------------------------------
+
+* P(retty)G(ood)P(rivacy)
+* Phil Zimmermann
+
+.. figure:: static/125.jpg
+    :align: center
+
 GPG
 ---
 
@@ -373,15 +383,6 @@ GPG
 .. figure:: static/nobody-listens31.jpg
     :align: center
 
-Brief History of Time (line of GPG)
-----------------------------------
-
-* P(retty)G(ood)P(rivacy)
-* Phil Zimmermann
-
-.. figure:: static/125.jpg
-    :align: center
-
 Ways to use GPG
 ---------------
 * Enigamail
@@ -389,10 +390,9 @@ Ways to use GPG
 * Command line
 
 .. code-block:: bash
+
     $ gpg --encrypt manateessecrets.jpg.exe 
 
-
-.. note:: 
 
 Certificates and HTTP
 ------------
@@ -401,7 +401,9 @@ Certificates and HTTP
 * https
 * ssl/tls
 
+.. code-block:: bash
 
+    $ openssl req -new -x509 -key /etc/ssl/private/privkey.pem -out /etc/ssl/certs/cacert.pem -days 1095
 
 Man in the Middle
 -----------------
@@ -425,6 +427,7 @@ WiFi
 * wpa
 * wpa2
 * Wireshark
+    * Demo
 
 .. note:: 
     Attacks
@@ -437,7 +440,6 @@ Crypto-wares
 
 * Files
     * Tarsnap, SpiderOak, rsync over ssh
-* Full disk
 * Communications
     * VPN
     * TextSecure/ RedPhone
@@ -447,6 +449,7 @@ Crypto-wares
     * Metasploit
     * BEEF
     * AirCrack
+    * sslstrip
 
 Math!
 -----
