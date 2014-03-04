@@ -13,15 +13,16 @@ readthedocs to investigate what it reports is broken.
 Viewing Slides: 
 ---------------
 
-Slides aren't displayed on readthedocs yet, because it doesn't play nicely
-with Hieroglyph by default. The long-term solution is to make readthedocs
-build the project in a virtualenv with Hieroglyph installed; the short-term
-one is to simply build the slides yourself. 
+Slides are available on http://slides.osuosl.org/devopsbootcamp/ , and rebuild
+automatically whenever new content is pushed to the master branch of this repo.
 
-Building the slides is also necessary if you've been editing them and want to
-see how they'll look before you push. 
+The script in scripts/build.sh automatically removes the slides that were built
+of non-slides content, based on the assumption that the filenames of all actual 
+slides start with the week number.   
 
-We now have virtualenv set up for this project: 
+You can also build the slides locally if you've been editing them and want to
+see how they'll look before you push, or if you don't have push access to the
+project: 
 
     $ sudo pip install virtualenv
     $ git clone https://github.com/DevOpsBootcamp/website.git
