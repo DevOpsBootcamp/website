@@ -86,6 +86,7 @@ Contents:
     11_config_mgmt_cron
     12_infra_design
     13_review
+    mission
     homework02
     scripting
     vagrant
