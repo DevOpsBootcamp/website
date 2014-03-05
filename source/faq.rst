@@ -71,3 +71,13 @@ I have a question?
 Ask it. On IRC if you have that set up, or email devopsbootcamp@osuosl.org or
 the mailing list.
 
+Can I Re-Use/Re-Distribute Course Content?
+------------------------------------------
+
+The website, slides, homework, and other curriculum are available under a
+`Creative Commons BY-SA`_ license. Other materials may have different licenses,
+so be sure to check the LICENSE file of each repo. If you re-use part of this
+course, we'd love to hear about it -- please email devopsbootcamp@osuosl.org to
+let us know.
+
+.. _Creative Commons BY-SA: http://creativecommons.org/licenses/by-sa/4.0/
