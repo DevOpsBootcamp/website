@@ -94,20 +94,20 @@ Lesson 8: Security & Authentication
 Lesson 9: Networking overview
 -----------------------------
 
+Lesson 10: DNS 
+--------------
 
-Lesson 10: Services
--------------------
+Lesson 11: How the Web Works: HTTP and APIs 
+-------------------------------------------
 
-Note: This will take several weeks, probably one week per service that we'll
-study
+Lesson 12: How Email Works 
+--------------------------
 
-Lesson 11: Configuration Management & Cron
-------------------------------------------
+Lesson 13: Deploy by hand and intro to Puppet
+---------------------------------------------
 
-- 6pm 3/6/2014
-
-Lesson 12: Infrastructure Design
---------------------------------
+Lesson 14: Configuration Management with Puppet
+-----------------------------------------------
 
 
 
