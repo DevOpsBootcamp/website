@@ -6,26 +6,30 @@
 DevOps Bootcamp
 ===============
 
-.. note:: Recurring meetings will be Thursdays, 6-8pm. Always check here for updated locations!
+.. note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
+    reserved but typically get moved during the week of career fairs, so check
+    back here to confirm locations.
 
       +--------+-----------+---------------------------------+--------------+
       | Date   | Location  | Topic                           | Week of term |
       +========+===========+=================================+==============+
-      | 1/9/14 | KEC1007   | Scripting & Troubleshooting     | 1            |
+      | 4/3/14 | KEC1007   | Networking                      | 1            |
       +--------+-----------+---------------------------------+--------------+
-      | 1/16   | KEC1007   | Web Applications                | 2            |
+      | 4/10   | KEC1007   | DNS                             | 2            |
       +--------+-----------+---------------------------------+--------------+
-      | 1/30   | KEC1007   | Boot Process & Filesystem       | 4            |
+      | 4/17   | KEC1007   | Review and catch-up             | 3            |
       +--------+-----------+---------------------------------+--------------+
-      | 2/6    | N/A       | Canceled due to campus closure  | 5            |
+      | 4/24   | KEC1007   | How the Web Works (HTTP, APIs)  | 4            |
       +--------+-----------+---------------------------------+--------------+
-      | 2/13   | KEC1007   | Databases                       | 6            |
+      | 5/1    | KEC1007   | How email works                 | 5            |
       +--------+-----------+---------------------------------+--------------+
-      | 2/20   | KEC1007   | Review of VM & App Setup        | 7            |
+      | 5/8    | KEC1007   | Review and catch-up             | 6            |
       +--------+-----------+---------------------------------+--------------+
-      | 2/27   | KEC1007   | Security & Authentication       | 8            |
+      | 5/15   | KEC1007   | Deploy by hand and Puppet intro | 7            |
       +--------+-----------+---------------------------------+--------------+
-      | 3/6    | KEC1007   | Hands-on security and review    | 9            |
+      | 5/22   | KEC1007   | Config management with Puppet   | 8            |
+      +--------+-----------+---------------------------------+--------------+
+      | 5/29   | KEC1007   | Review and catch-up             | 9            |
       +--------+-----------+---------------------------------+--------------+
 
 
