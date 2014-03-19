@@ -88,10 +88,12 @@ Contents:
     07_database_integration
     08_security_auth
     09_networking
-    10_services
-    11_config_mgmt_cron
-    12_infra_design
-    13_review
+    10_dns
+    11_http
+    12_email
+    13_manual_deployment
+    14_config_mgmt_puppet
+    15_review
     mission
     homework02
     scripting

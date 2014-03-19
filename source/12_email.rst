@@ -2,15 +2,13 @@
 Services
 ========
 
-Email & DNS
-===========
+Email
+=====
 
 * Email service
     * How it works
     * Configuration Postfix
     * Planning
-* DNS
-    * Caching vs. Authoritative
 
 Email: System Components
 ------------------------
