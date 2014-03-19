@@ -19,7 +19,7 @@ DevOps Bootcamp
       +--------+-----------+---------------------------------+--------------+
       | 4/17   | KEC1007   | Review and catch-up             | 3            |
       +--------+-----------+---------------------------------+--------------+
-      | 4/24   | KEC1007   | How the Web Works (HTTP, APIs)  | 4            |
+      | 4/24 * | KEC1007   | How the Web Works (HTTP, APIs)  | 4            |
       +--------+-----------+---------------------------------+--------------+
       | 5/1    | KEC1007   | How email works                 | 5            |
       +--------+-----------+---------------------------------+--------------+
@@ -32,6 +32,8 @@ DevOps Bootcamp
       | 5/29   | KEC1007   | Review and catch-up             | 9            |
       +--------+-----------+---------------------------------+--------------+
 
+    * Since the spring career fair is April 23rd, it's possible that we may be
+      displaced from our usual room in favor of industry events on the 24th.
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
 aimed at boosting our impact and outreach while shrinking the skills gap for
