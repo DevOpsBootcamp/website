@@ -4,6 +4,9 @@
 git checkout master
 git pull -q --ff-only
 
+# script got moved...
+cd ..
+
 # Enable venv
 if [ ! -d venv ]; then
     virtualenv venv
