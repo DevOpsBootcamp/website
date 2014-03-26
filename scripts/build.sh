@@ -6,6 +6,7 @@ git pull -q --ff-only
 
 # script got moved...
 cd ..
+pwd
 
 # Enable venv
 if [ ! -d venv ]; then
