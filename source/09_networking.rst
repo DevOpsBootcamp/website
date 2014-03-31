@@ -44,4 +44,14 @@ Layers of abstraction
 .. figure:: static/osi-layers.jpg
     :align: center
 
-Layer 1:  
+
+Layer 1: Physical
+-----------------
+
+* Digital vs analog
+
+.. figure:: static/cat5_cable.jpg
+    :align: center
+
+Layer 2: Data Link
+------------------ 
