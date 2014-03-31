@@ -35,23 +35,56 @@ To us, a network is:
 
 ECE372 at OSU teaches this content, more or less
 
+Modern Standards Organizations
+------------------------------
+
+ICANN: Internet Corporation for Assigned Names and Numbers
+    * Allocation of addresses & domain names
+    * Protocol port numbers
+ISOC: Internet Society
+    * Parent of IETF, Internet Engineering Task Force
+    * IETF issues RFCs (Requests for Comment)
+ISO: International Organization for Standardization
+    * Parent of Open Systems Interconnection project
+    * OSI model describes components of network
+
 The OSI Model
 =============
 
 Open Systems Interconnection
-Layers of abstraction
+* Layers of abstraction
+    * Not all systems contain all layers
 
 .. figure:: static/osi-layers.jpg
     :align: center
 
+* Reference model is not a functional spec
+
+.. note:: "Create a layer of easily localized functions so that the layer
+    could be totally redesigned and its protocols changed in a major way...
+    without changing the services expected from and provided to adjacent
+    layers"
 
 Layer 1: Physical
 -----------------
 
-* Digital vs analog
+Networking Hardware
+    * Connector shapes
+    * Wire, optical fiber, or radio signal specifications
 
 .. figure:: static/cat5_cable.jpg
     :align: center
 
+RS-232
+
+.. figure:: static/db25.png
+
 Layer 2: Data Link
------------------- 
+------------------
+
+
+TCP/IP Model
+============
+
+.. figure:: static/tcp-ip-model.png
+
