@@ -79,9 +79,48 @@ RS-232
 
 .. figure:: static/db25.png
 
+Multiplexers
+
 Layer 2: Data Link
 ------------------
 
+MAC: Media Access Control
+    * MAC address should be globally unique
+
+ARP: Address Resolution Protocol (between layer 2 & 3)
+    * Converts IP address to physical address
+    * NDP (neighbor discovery protocol) used in IPv6
+
+Flow control & error checking
+
+Layer 3: Network
+----------------
+
+Packet forwarding and routing
+
+Connectionless communication
+
+Host Addressing
+
+* IPv4/IPv6
+* ICMP
+* IPsec
+
+Layer 4: Transport
+------------------
+
+Interact directly with program
+same-order delivery, reliability, flow control, congestion avoidance,
+multiplexing
+
+TCP: Transmission Control Protocol
+    * reliable, ordered, error-checked delivery of octets
+    * used by HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet
+
+UDP: User Datagram Protocol
+    * No error checking built in
+    * No retransmission delays
+    * VoIP, media, games
 
 TCP/IP Model
 ============
