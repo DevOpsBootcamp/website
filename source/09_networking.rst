@@ -266,7 +266,26 @@ Dynamic Configuration
 
 All of the statically defined parameters are retrieved over the network via DHCP
 
-But how do you retrieve it over the network without a network configuration?
+But how do you communicate over the network without a network configuration?
+
+Reserved IPv4 Addresses
+=====================
+
+127.0.0.1
+.. figure:: static/noplacelike_home.jpg
+192.168.0.0
+172.16.0.0
+10.0.0.0
+
+169.254.0.0
+
+Public vs Private Address
+=========================
+  NAT 
+    * lose end-to-end traceability
+    * hides internal network topology
+    * allows use of private IP's over public internet
+      * conserves limited public IP's
 
 Network Devices
 ===============
@@ -281,10 +300,18 @@ Network Devices
 .. figure:: static/switch1.gif
 .. figure:: static/router1.jpg
 
+Why is this important?
+http://articles.latimes.com/2007/aug/15/local/me-lax15
+
 Control Layer
 =============
 
 Connection oriented vs Connectionless
 
+Collisions
+==========
+CSMA CA - all Wireless networks use this
+Carrier Sense Multiple Access with Collisions Avoidance
 
-
+CSMA CD
+Carrier Sense Multiple Access with Collisions Detection
