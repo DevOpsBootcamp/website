@@ -78,7 +78,7 @@ Networking Hardware
   * Connector shapes
   * Wire, optical fiber, or radio signal specifications
 
-.. figure:: static/cat5_cable.jpg
+.. figure:: static/cat5.jpg
     :align: center
 
 RS-232
@@ -127,7 +127,7 @@ In a linux terminal run:::
 
   ip a
 
-This will display a lot of information about your network interfaces.
+These will display information about your network interfaces.
 See also:::
 
   ifconfig
@@ -161,7 +161,7 @@ Decimal IP Address          Binary IP Address
 255.255.255.0            11111111.11111111.11111111.00000000
 ====================    ====================================
 
-Perform the binary and operation on the mask, IP
+Perform the binary 'and' operation on the mask and IP
 
 =======================    ===================================
 Part of address            Corresponding address
@@ -172,26 +172,60 @@ Host (Decimal)             0.0.0.55
 Host (Binary)              00000000.00000000.00000000.00110111
 =======================    ===================================
 
+Available Hosts:   192.168.1.[1-254]
+Broadcast address: 192.168.1.255
 
 Netmask Example:
 ========
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
-192.168.1.55             11000000.10101000.00000001.00110111
-255.255.255.0            11111111.11111111.11111111.00000000
+192.168.90.55            
+255.255.192.0            
 ====================    ====================================
 
-Perform the binary and operation on the mask, IP
+Netmask Example:
+========
+====================    ====================================
+Decimal IP Address          Binary IP Address          
+--------------------    ------------------------------------
+192.168.90.55            11000000.10101000.01011010.00110111
+255.255.192.0            11111111.11111111.11000000.00000000
+====================    ====================================
+
+Perform the binary 'and' operation on the mask and IP
 
 =======================    ===================================
 Part of address            Corresponding address
 -----------------------    -----------------------------------
-Network (Decimal)          192.168.1.0                
-Network (Binary)           11000000.10101000.00000001.00000000
-Host (Decimal)             0.0.0.55
-Host (Binary)              00000000.00000000.00000000.00110111
+Network (Decimal)          192.168.64.0                
+Network (Binary)           
+Host (Decimal)             0.0.26.55
+Host (Binary)              
 =======================    ===================================
+
+Netmask Example:
+========
+====================    ====================================
+Decimal IP Address          Binary IP Address          
+--------------------    ------------------------------------
+192.168.90.55            11000000.10101000.01011010.00110111
+255.255.192.0            11111111.11111111.11000000.00000000
+====================    ====================================
+
+Perform the binary 'and' operation on the mask and IP
+
+=======================    ===================================
+Part of address            Corresponding address
+-----------------------    -----------------------------------
+Network (Decimal)          192.168.64.0                
+Network (Binary)           11000000.10101000.01000000.00000000
+Host (Decimal)             0.0.26.55
+Host (Binary)              00000000.00000000.00011010.00110111
+=======================    ===================================
+
+Available Hosts:   192.168.[64-127].[1-254]
+Broadcast Address: 192.168.127.255
 
 Clever Slide Title
 ===============
@@ -199,7 +233,7 @@ Clever Slide Title
 user@host:~$ route
 Kernal IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-default         www.asusnetwork 0.0.0.0         UG    0      0        0 wlan1
+default         foo.osuosl      0.0.0.0         UG    0      0        0 wlan1
 link-local      *               255.255.0.0     U     1000   0        0 wlan1
 192.168.1.0     *               255.255.255.0   U     2      0        0 wlan1
 
@@ -210,15 +244,13 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan1
 192.168.1.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan1
 
-
 Bootstrapping
 =============
 
 What happens when your computer connects to a network?
 
-1. Duplex negotiation
+1. Duplex and speed negotiation
 2. Static or dynamic configuration is applied
-
 
 Static Configuration
 ====================
@@ -232,4 +264,27 @@ Must in advance know:
 Dynamic Configuration
 =====================
 
-All of the staticly defined parameters are retrieved over the network via DHCP
+All of the statically defined parameters are retrieved over the network via DHCP
+
+But how do you retrieve it over the network without a network configuration?
+
+Network Devices
+===============
+
+.. figure:: static/router.jpg
+.. figure:: static/switch.jpg
+.. figure:: static/hub.jpg
+
+Network Devices
+===============
+
+.. figure:: static/switch1.gif
+.. figure:: static/router1.jpg
+
+Control Layer
+=============
+
+Connection oriented vs Connectionless
+
+
+
