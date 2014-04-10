@@ -3,25 +3,32 @@ Lesson 9: Networking
 ====================
 
 * What's a network?
-* OSI Model of internet (1-4)
-    * Relevant devices
-    * IPs and what they mean
-        * 3 reserved spaces
-        * protocol when no router detected & 2 devices trying to BS it
-        * class D vs class E
-        * DHCP vs static
-        * subnet masks
-        * broadcast?
-        * ports
-            * 3 port ranges -- 0-1024 god ports, 1025-?? less hard-set, others
-              allocated by system
-    * MAC addresses
-    * IPV4 vs IPV6
-    * TCP/UDP/ping protocol (ICMP?)
-* layers 5/6/7 basics
-* Modern internet vs. intranets etc.
-    * NAT    
-* hosts files
+* Big Picture
+  * OSI Model of networks (1-4)
+    * Physical
+      * Medium used
+    * Data Link
+      * MAC address
+    * Network
+      * IP Address
+    * Transport
+      * What happens if something goes wrong?
+* Get your hands dirty
+  * Run the command 'ip a'
+  * Run the command 'route -n'
+  * traceroute
+* Bootstrapping
+  * Full Duplex / Half Duplex
+  * Configuration: Static vs Dynamic
+  * IP Addresses: Public vs Private, reserved addresses
+* Network Devices
+  * Wireless Router demystified
+  * Hubs and Switches
+  * Routers
+* Bonus Material
+  * Control Layer
+  * Collisions
+  * NAT/PAT
 
 What's a network? 
 -----------------
@@ -35,25 +42,11 @@ To us, a network is:
 
 ECE372 at OSU teaches this content, more or less
 
-Modern Standards Organizations
-------------------------------
-
-ICANN: Internet Corporation for Assigned Names and Numbers
-    * Allocation of addresses & domain names
-    * Protocol port numbers
-ISOC: Internet Society
-    * Parent of IETF, Internet Engineering Task Force
-    * IETF issues RFCs (Requests for Comment)
-ISO: International Organization for Standardization
-    * Parent of Open Systems Interconnection project
-    * OSI model describes components of network
-
 The OSI Model
 =============
 
 Open Systems Interconnection
 * Layers of abstraction
-    * Not all systems contain all layers
 
 .. figure:: static/osi-layers.jpg
     :align: center
@@ -69,8 +62,8 @@ Layer 1: Physical
 -----------------
 
 Networking Hardware
-    * Connector shapes
-    * Wire, optical fiber, or radio signal specifications
+  * Connector shapes
+  * Wire, optical fiber, or radio signal specifications
 
 .. figure:: static/cat5_cable.jpg
     :align: center
@@ -78,8 +71,6 @@ Networking Hardware
 RS-232
 
 .. figure:: static/db25.png
-
-Multiplexers
 
 Layer 2: Data Link
 ------------------
@@ -98,23 +89,17 @@ Layer 3: Network
 
 Packet forwarding and routing
 
-Connectionless communication
-
 Host Addressing
 
 * IPv4/IPv6
-* ICMP
-* IPsec
 
 Layer 4: Transport
 ------------------
 
 Interact directly with program
 same-order delivery, reliability, flow control, congestion avoidance,
-multiplexing
 
 TCP: Transmission Control Protocol
-    * reliable, ordered, error-checked delivery of octets
     * used by HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet
 
 UDP: User Datagram Protocol
@@ -122,8 +107,21 @@ UDP: User Datagram Protocol
     * No retransmission delays
     * VoIP, media, games
 
-TCP/IP Model
+Get your hands dirty
 ============
+In a linux terminal run:
 
-.. figure:: static/tcp-ip-model.png
+::
+
+  ip a
+
+This will display a lot of information about your network interfaces.
+See also::
+
+  ifconfig
+  iwconfig
+
+
+
+
 
