@@ -2,36 +2,6 @@
 Lesson 9: Networking
 ====================
 
-* What's a network?
-* Big Picture
-  * OSI Model of networks (1-4)
-    * Physical
-      * Medium used
-      * Ethernet / RJ-45
-    * Data Link
-      * MAC address
-      * Ethernet Datagrams
-    * Network
-      * IP Address
-    * Transport
-      * What happens if something goes wrong?
-* Get your hands dirty
-  * Run the command 'ip a'
-  * Run the command 'route -n'
-  * traceroute
-* Bootstrapping
-  * Full Duplex / Half Duplex
-  * Configuration: Static vs Dynamic
-  * IP Addresses: Public vs Private, reserved addresses
-* Network Devices
-  * Wireless Router demystified
-  * Hubs and Switches
-  * Routers
-* Bonus Material
-  * Control Layer
-  * Collisions
-  * NAT/PAT
-
 Who is this talk for?
 ----------------
 
@@ -45,6 +15,7 @@ What is a network?
 "a group or system of interconnected people or things"
 
 To us, a network is:
+
 * Electronic devices
 * Sending signals over wire, fiber, or radio
 * Communicating data using a standardized protocol
@@ -61,6 +32,7 @@ The OSI Model
 =============
 
 Open Systems Interconnection
+
 * Layers of abstraction
 
 .. figure:: static/osi-layers.jpg
@@ -75,8 +47,9 @@ Layer 1: Physical
 -----------------
 
 Networking Hardware
-  * Connector shapes
-  * Wire, optical fiber, or radio signal specifications
+
+* Connector shapes
+* Wire, optical fiber, or radio signal specifications
 
 .. figure:: static/cat5.jpg
     :align: center
@@ -89,11 +62,13 @@ Layer 2: Data Link
 ------------------
 
 MAC: Media Access Control
-    * MAC address should be globally unique
+
+* MAC address should be globally unique
 
 ARP: Address Resolution Protocol (between layer 2 & 3)
-    * Converts IP address to physical address
-    * NDP (neighbor discovery protocol) used in IPv6
+
+* Converts IP address to physical address
+* NDP (neighbor discovery protocol) used in IPv6
 
 Flow control & error checking
 
@@ -114,12 +89,14 @@ Interact directly with program
 same-order delivery, reliability, flow control, congestion avoidance,
 
 TCP: Transmission Control Protocol
-    * used by HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet
+
+* used by HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet
 
 UDP: User Datagram Protocol
-    * No error checking built in
-    * No retransmission delays
-    * VoIP, media, games
+
+* No error checking built in
+* No retransmission delays
+* VoIP, media, games
 
 Get your hands dirty
 ============
@@ -138,6 +115,7 @@ Example output:
 ===============
 
 ::
+
 user@host:~$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -256,6 +234,7 @@ Static Configuration
 ====================
 
 Must in advance know:
+
 * IP Address
 * Netmask
 * Default Gateway
@@ -281,11 +260,13 @@ Reserved IPv4 Addresses
 
 Public vs Private Address
 =========================
-  NAT 
-    * lose end-to-end traceability
-    * hides internal network topology
-    * allows use of private IP's over public internet
-      * conserves limited public IP's
+
+NAT 
+
+* lose end-to-end traceability
+* hides internal network topology
+* allows use of private IP's over public internet
+* conserves limited public IP's
 
 Network Devices
 ===============
