@@ -7,8 +7,10 @@ Lesson 9: Networking
   * OSI Model of networks (1-4)
     * Physical
       * Medium used
+      * Ethernet / RJ-45
     * Data Link
       * MAC address
+      * Ethernet Datagrams
     * Network
       * IP Address
     * Transport
@@ -30,7 +32,14 @@ Lesson 9: Networking
   * Collisions
   * NAT/PAT
 
-What's a network? 
+Who is this talk for?
+----------------
+
+Someone with little or no networking knowledge. 
+
+ECE/CS 372 at OSU covers this content, more or less
+
+What is a network? 
 -----------------
 
 "a group or system of interconnected people or things"
@@ -40,7 +49,13 @@ To us, a network is:
 * Sending signals over wire, fiber, or radio
 * Communicating data using a standardized protocol
 
-ECE372 at OSU teaches this content, more or less
+What is a protocol? 
+-----------------
+A protocol is:
+
+"A set of agreed upon rules for communication"
+
+* Defines a sequence & format of packets being sent
 
 The OSI Model
 =============
@@ -50,8 +65,6 @@ Open Systems Interconnection
 
 .. figure:: static/osi-layers.jpg
     :align: center
-
-* Reference model is not a functional spec
 
 .. note:: "Create a layer of easily localized functions so that the layer
     could be totally redesigned and its protocols changed in a major way...
@@ -65,7 +78,7 @@ Networking Hardware
   * Connector shapes
   * Wire, optical fiber, or radio signal specifications
 
-.. figure:: static/cat5_cable.jpg
+.. figure:: static/cat5.jpg
     :align: center
 
 RS-232
@@ -89,9 +102,10 @@ Layer 3: Network
 
 Packet forwarding and routing
 
-Host Addressing
+Network and host addressing
 
-* IPv4/IPv6
+* IPv4
+* IPv6
 
 Layer 4: Transport
 ------------------
@@ -109,19 +123,195 @@ UDP: User Datagram Protocol
 
 Get your hands dirty
 ============
-In a linux terminal run:
-
-::
+In a linux terminal run:::
 
   ip a
 
-This will display a lot of information about your network interfaces.
-See also::
+These will display information about your network interfaces.
+See also:::
 
   ifconfig
   iwconfig
 
 
+Example output:
+===============
 
+::
+user@host:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth2: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN qlen 1000
+    link/ether 33:77:00:44:66:33 brd ff:ff:ff:ff:ff:ff
+3: wlan1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
+    link/ether 24:77:33:44:55:66 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.55/24 brd 192.168.1.255 scope global wlan1
+    inet6 fe80::2677:3ff:fed4:538c/64 scope link 
+       valid_lft forever preferred_lft forever
 
+Netmask:
+========
+====================    ====================================
+Decimal IP Address          Binary IP Address          
+--------------------    ------------------------------------
+192.168.1.55             11000000.10101000.00000001.00110111
+255.255.255.0            11111111.11111111.11111111.00000000
+====================    ====================================
 
+Perform the binary 'and' operation on the mask and IP
+
+=======================    ===================================
+Part of address            Corresponding address
+-----------------------    -----------------------------------
+Network (Decimal)          192.168.1.0                
+Network (Binary)           11000000.10101000.00000001.00000000
+Host (Decimal)             0.0.0.55
+Host (Binary)              00000000.00000000.00000000.00110111
+=======================    ===================================
+
+Available Hosts:   192.168.1.[1-254]
+Broadcast address: 192.168.1.255
+
+Netmask Example:
+========
+====================    ====================================
+Decimal IP Address          Binary IP Address          
+--------------------    ------------------------------------
+192.168.90.55            
+255.255.192.0            
+====================    ====================================
+
+Netmask Example:
+========
+====================    ====================================
+Decimal IP Address          Binary IP Address          
+--------------------    ------------------------------------
+192.168.90.55            11000000.10101000.01011010.00110111
+255.255.192.0            11111111.11111111.11000000.00000000
+====================    ====================================
+
+Perform the binary 'and' operation on the mask and IP
+
+=======================    ===================================
+Part of address            Corresponding address
+-----------------------    -----------------------------------
+Network (Decimal)          192.168.64.0                
+Network (Binary)           
+Host (Decimal)             0.0.26.55
+Host (Binary)              
+=======================    ===================================
+
+Netmask Example:
+========
+====================    ====================================
+Decimal IP Address          Binary IP Address          
+--------------------    ------------------------------------
+192.168.90.55            11000000.10101000.01011010.00110111
+255.255.192.0            11111111.11111111.11000000.00000000
+====================    ====================================
+
+Perform the binary 'and' operation on the mask and IP
+
+=======================    ===================================
+Part of address            Corresponding address
+-----------------------    -----------------------------------
+Network (Decimal)          192.168.64.0                
+Network (Binary)           11000000.10101000.01000000.00000000
+Host (Decimal)             0.0.26.55
+Host (Binary)              00000000.00000000.00011010.00110111
+=======================    ===================================
+
+Available Hosts:   192.168.[64-127].[1-254]
+Broadcast Address: 192.168.127.255
+
+Clever Slide Title
+===============
+
+user@host:~$ route
+Kernal IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         foo.osuosl      0.0.0.0         UG    0      0        0 wlan1
+link-local      *               255.255.0.0     U     1000   0        0 wlan1
+192.168.1.0     *               255.255.255.0   U     2      0        0 wlan1
+
+user@host:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 wlan1
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan1
+192.168.1.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan1
+
+Bootstrapping
+=============
+
+What happens when your computer connects to a network?
+
+1. Duplex and speed negotiation
+2. Static or dynamic configuration is applied
+
+Static Configuration
+====================
+
+Must in advance know:
+* IP Address
+* Netmask
+* Default Gateway
+* DNS Servers (optional in some cases)
+
+Dynamic Configuration
+=====================
+
+All of the statically defined parameters are retrieved over the network via DHCP
+
+But how do you communicate over the network without a network configuration?
+
+Reserved IPv4 Addresses
+=====================
+
+127.0.0.1
+.. figure:: static/noplacelike_home.jpg
+192.168.0.0
+172.16.0.0
+10.0.0.0
+
+169.254.0.0
+
+Public vs Private Address
+=========================
+  NAT 
+    * lose end-to-end traceability
+    * hides internal network topology
+    * allows use of private IP's over public internet
+      * conserves limited public IP's
+
+Network Devices
+===============
+
+.. figure:: static/router.jpg
+.. figure:: static/switch.jpg
+.. figure:: static/hub.jpg
+
+Network Devices
+===============
+
+.. figure:: static/switch1.gif
+.. figure:: static/router1.jpg
+
+Why is this important?
+http://articles.latimes.com/2007/aug/15/local/me-lax15
+
+Control Layer
+=============
+
+Connection oriented vs Connectionless
+
+Collisions
+==========
+CSMA CA - all Wireless networks use this
+Carrier Sense Multiple Access with Collisions Avoidance
+
+CSMA CD
+Carrier Sense Multiple Access with Collisions Detection
