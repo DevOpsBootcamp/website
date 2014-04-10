@@ -22,7 +22,6 @@ To us, a network is:
 
 What is a protocol? 
 -----------------
-A protocol is:
 
 "A set of agreed upon rules for communication"
 
@@ -64,13 +63,10 @@ Layer 2: Data Link
 MAC: Media Access Control
 
 * MAC address should be globally unique
-
-ARP: Address Resolution Protocol (between layer 2 & 3)
-
+* ARP: Address Resolution Protocol (between layer 2 & 3)
 * Converts IP address to physical address
 * NDP (neighbor discovery protocol) used in IPv6
-
-Flow control & error checking
+* Flow control & error checking
 
 Layer 3: Network
 ----------------
@@ -91,6 +87,8 @@ same-order delivery, reliability, flow control, congestion avoidance,
 TCP: Transmission Control Protocol
 
 * used by HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet
+
+
 
 UDP: User Datagram Protocol
 
@@ -250,18 +248,19 @@ But how do you communicate over the network without a network configuration?
 Reserved IPv4 Addresses
 =====================
 
-127.0.0.1
-.. figure:: static/noplacelike_home.jpg
-192.168.0.0
-172.16.0.0
-10.0.0.0
+* 127.0.0.1
 
-169.254.0.0
+.. figure:: static/noplacelike_home.jpg
+
+* 192.168.0.0
+* 172.16.0.0
+* 10.0.0.0
+* 169.254.0.0
 
 Public vs Private Address
 =========================
 
-NAT 
+NAT - Network Address Translation
 
 * lose end-to-end traceability
 * hides internal network topology
@@ -272,13 +271,16 @@ Network Devices
 ===============
 
 .. figure:: static/router.jpg
+
 .. figure:: static/switch.jpg
+
 .. figure:: static/hub.jpg
 
 Network Devices
 ===============
 
 .. figure:: static/switch1.gif
+
 .. figure:: static/router1.jpg
 
 Why is this important?
