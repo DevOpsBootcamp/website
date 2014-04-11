@@ -197,7 +197,6 @@ Broadcast Address: 192.168.127.255
 
 Clever Slide Title
 ===============
-
 :: 
   user@host:~$ route
   Kernal IP routing table
@@ -274,12 +273,10 @@ Network Devices
 Network Devices
 ===============
 
-.. figure:: static/switch1.gif
-
 .. figure:: static/router1.jpg
 
-Why is this important?
-http://articles.latimes.com/2007/aug/15/local/me-lax15
+.. figure:: static/switch1.gif
+
 
 Control Layer
 =============
@@ -293,3 +290,6 @@ Carrier Sense Multiple Access with Collisions Avoidance
 
 CSMA CD
 Carrier Sense Multiple Access with Collisions Detection
+
+Why is this important?
+http://articles.latimes.com/2007/aug/15/local/me-lax15
