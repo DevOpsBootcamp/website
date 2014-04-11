@@ -197,21 +197,24 @@ Broadcast Address: 192.168.127.255
 
 Clever Slide Title
 ===============
+
 :: 
-  user@host:~$ route
-  Kernal IP routing table
-  Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-  default         foo.osuosl      0.0.0.0         UG    0      0        0 wlan1
-  link-local      *               255.255.0.0     U     1000   0        0 wlan1
-  192.168.1.0     *               255.255.255.0   U     2      0        0 wlan1
+
+    user@host:~$ route
+    Kernal IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    default         foo.osuosl      0.0.0.0         UG    0      0        0 wlan1
+    link-local      *               255.255.0.0     U     1000   0        0 wlan1
+    192.168.1.0     *               255.255.255.0   U     2      0        0 wlan1
 
 ::
-  user@host:~$ route -n
-  Kernel IP routing table
-  Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-  0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 wlan1
-  169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan1
-  192.168.1.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan1
+
+    user@host:~$ route -n
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 wlan1
+    169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan1
+    192.168.1.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan1
 
 Bootstrapping
 =============
