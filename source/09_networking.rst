@@ -112,19 +112,15 @@ Example output:
 ===============
 
 ::
-  user@host:~$ ip a
-  1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
-      link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-      inet 127.0.0.1/8 scope host lo
-      inet6 ::1/128 scope host 
-         valid_lft forever preferred_lft forever
-  2: eth2: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN qlen 1000
-      link/ether 33:77:00:44:66:33 brd ff:ff:ff:ff:ff:ff
-  3: wlan1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
-      link/ether 24:77:33:44:55:66 brd ff:ff:ff:ff:ff:ff
-      inet 192.168.1.55/24 brd 192.168.1.255 scope global wlan1
-      inet6 fe80::2677:3ff:fed4:538c/64 scope link 
-         valid_lft forever preferred_lft forever
+    user@host:~$ ip a
+    ...
+    2: eth2: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN qlen 1000
+        link/ether 33:77:00:44:66:33 brd ff:ff:ff:ff:ff:ff
+    3: wlan1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000
+        link/ether 24:77:33:44:55:66 brd ff:ff:ff:ff:ff:ff
+        inet 192.168.1.55/24 brd 192.168.1.255 scope global wlan1
+        inet6 fe80::2677:3ff:fed4:538c/64 scope link 
+           valid_lft forever preferred_lft forever
 
 Netmask:
 ========
@@ -145,6 +141,7 @@ Host (Binary)              00000000.00000000.00000000.00110111
 =======================    ===================================
 
 Available Hosts:   192.168.1.[1-254]
+
 Broadcast address: 192.168.1.255
 
 Netmask Example:
@@ -193,6 +190,7 @@ Host (Binary)              00000000.00000000.00011010.00110111
 =======================    ===================================
 
 Available Hosts:   192.168.[64-127].[1-254]
+
 Broadcast Address: 192.168.127.255
 
 Clever Slide Title
