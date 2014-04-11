@@ -112,6 +112,7 @@ Example output:
 ===============
 
 ::
+
     user@host:~$ ip a
     ...
     2: eth2: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN qlen 1000
