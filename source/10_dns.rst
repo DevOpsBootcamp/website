@@ -213,39 +213,6 @@ Reverse segments, then end with in-addr.arpa
     ;; AUTHORITY SECTION:
     15.211.140.in-addr.arpa. 10795  IN  SOA ns1.auth.osuosl.org. hostmaster.osuosl.org. 1398356710 300 900 604800 86400
 
- 
-
-Next Slide Here
----------------
-* What is DNS
-* Why does it matter
-* Role of the DNS server
-* Record types
-    * A
-    * AAAA
-    * C
-    * MX
-    * text?
-* commands: 
-    * dig
-    * dig mx
-* what's reverse DNS and how's it work
-* amplification attacks? 
-* caching vs authoritative
-
-.. note:: Running a local caching server gives you control
-    restrict caching access to local network, zone transfers
-
-.. code-block:: shell
-
-    $ yum install caching-nameserver
-    # primary config file is /etc/named.conf
-    # all data files are in /var/named
-
-* RFCs 
-    * what they are
-    * why they matter
-
 
 Web Apps: A Bit of Review
 =========================
