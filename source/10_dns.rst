@@ -2,11 +2,99 @@
 Lesson 10: Networking part 2
 ============================
 
+Agenda
+------
+
+* Networking review
+* DNS
+* Web Server Setup
+
 Networking Review
 -----------------
-.. figure:: static/diagram1.png
+
+.. figure:: static/Diagram1.png
+
+Intro to DNS
+------------
+
+|
+
+.. figure:: static/visit_osuosl.org.png
+    :align: center
+
+I get the OSL's home page when visiting osuosl.org
+
+How do I know where the page came from?
+---------------------------------------
+
+.. code-block:: bash
+
+    HOST(1)                       BIND9                       HOST(1)
+
+    NAME
+           host - DNS lookup utility
+
+    SYNOPSIS
+           host [-aCdlnrsTwv] [-c class] [-N ndots] [-R number]
+                [-t type] [-W wait] [-m flag] [-4] [-6] {name}
+                [server]
+
+    DESCRIPTION
+           host is a simple utility for performing DNS lookups. It is
+           normally used to convert names to IP addresses and vice
+           versa. When no arguments or options are given, host prints
+           a short summary of its command line arguments and options.
 
 
+OSL
+---
+
+.. code-block:: bash
+
+    $ host osuosl.org
+    osuosl.org has address 140.211.15.183
+
+How did it know?
+
+DNS
+---
+
+Domain Name System
+
+.. figure:: static/phonebook_wikipedia.jpg
+    :align: center
+
+Pop quiz
+--------
+
+.. rst-class:: build
+
+- What's 15 * 823?
+
+- 12345
+
+Recursive DNS
+-------------
+
+.. figure:: static/An_example_of_theoretical_DNS_recursion_wikimedia.png
+    :align: center
+    :scale: 75%
+
+Caching
+-------
+
+.. rst-class:: build
+
+- What's 15 * 823?
+
+- How did you know so fast? 
+
+- You cached the answer.
+
+- DNS can be cached at routers, ISPs, and DNS servers to improve performance.
+
+Hosts File
+----------
 
 Next Slide Here
 ---------------
