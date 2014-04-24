@@ -215,7 +215,7 @@ Reverse segments, then end with in-addr.arpa
 
 
 Web Apps: A Bit of Review
-=========================
+-------------------------
 
 * We created a python app called Systemview using the Flask framework
 * We tested Systemview by running Flask's built-in webserver on the command line
@@ -223,7 +223,7 @@ Web Apps: A Bit of Review
 
 
 What We Want To Do
-==================
+------------------
 
 * Install a production-quality web server on a standard port
 * Serve Systemview using that web server
@@ -231,7 +231,7 @@ What We Want To Do
 
 
 Why?
-====
+----
 
 * Flask's web server is not robust or secure
 * We want to use standard ports for our web apps
@@ -240,7 +240,7 @@ Why?
   
 
 What is a Web Server
-====================
+--------------------
 
 .. figure:: static/web_app_diagram.png
     :align: center
@@ -250,7 +250,7 @@ What is a Web Server
 
 
 Webservers Talk HTTP
-====================
+--------------------
 
 They don't run code (well, they kinda do)
 
@@ -262,7 +262,7 @@ They don't run code (well, they kinda do)
 
 
 Let's Install a Web Server!
-===========================
+---------------------------
 
 .. code-block:: bash
 
@@ -270,7 +270,7 @@ Let's Install a Web Server!
 
 
 Apache
-======
+------
 
 What's this httpd thing?
 
@@ -283,7 +283,7 @@ What's this httpd thing?
   
 
 Let's Serve Some Web
-====================
+--------------------
 
 Apache's DocumentRoot is the default place where it will look for files to serve. It maps "/" in the URL to a location on disk
 
@@ -298,7 +298,7 @@ We'll write some HTML in the DocumentRoot for Apache to serve.
 
 
 But First, Config Files
-=======================
+-----------------------
 
 .. code-block:: bash
 
@@ -320,7 +320,7 @@ But First, Config Files
 
 
 Wait, What am I Writing Again?
-==============================
+------------------------------
 
 **HTML**: **H**\ yper **T**\ ext **M**\ arkup **L**\ anguage
 
@@ -349,7 +349,7 @@ Point your browser to: http://localhost:8080/index.html
 
 
 Voila!
-======
+------
 
 * Apache recieves a request for /index.html
 * It translates "/" into /var/www/html using the DocumentRoot directive
@@ -360,7 +360,7 @@ Voila!
 
 
 But I Want to Run Code!
-=======================
+-----------------------
 
 Let's put some PHP code in the DocumentRoot:
 
@@ -383,7 +383,7 @@ Then go to  http://localhost:8080/index.php
 
 
 What Went Wrong?
-================
+----------------
 
 Apache doesn't know what PHP is, it needs a module to execute the PHP code and return data it can serve
 
@@ -398,7 +398,7 @@ Apache doesn't know what PHP is, it needs a module to execute the PHP code and r
 
 
 Voila, Again.
-=============
+-------------
 
 How does Apache know what to do with index.php?
 
@@ -425,7 +425,7 @@ How does Apache know what to do with index.php?
 
 
 Ok, But I Want To Serve a Python App...
-=======================================
+---------------------------------------
 
 There's a module for that! (Actually several, but we are going to use this one)
 
@@ -439,7 +439,7 @@ There's a module for that! (Actually several, but we are going to use this one)
 
 
 Sounds Great, Let's Go!
-=======================
+-----------------------
 
 .. code-block:: bash
 
@@ -458,7 +458,7 @@ Let's clone the systemview app into a reasonable location while we are at it
 
 
 Don't Forget Virtualenv!
-========================
+------------------------
 
 (in the systemview/ directory)
 
@@ -480,7 +480,7 @@ And lets make sure everything is owned by the web server:
 
 
 What Makes an App WSGI?
-=======================
+-----------------------
 
 .. code-block:: bash
     
@@ -499,7 +499,7 @@ What Makes an App WSGI?
 
 
 Configuring Apache for Systemview
-=================================
+---------------------------------
 
 .. code-block:: bash
 
@@ -524,7 +524,7 @@ Configuring Apache for Systemview
 
 
 Even More Voila
-===============
+---------------
 
 http://localhost:8080/systemview
 
@@ -533,7 +533,7 @@ There are a lot of steps to getting this app up, wouldn't it be nice to automate
 .. note:: Future topics - configuration management and automated deploys, virtual hosts, best practices for app location, Nginx, UWSGI, PHP-FPM, etc
 
 Homework
-========
+--------
 
 * Deploy Systemview's master branch with Apache (we merged the database code)
 * Read about Apache Virtualhosts
