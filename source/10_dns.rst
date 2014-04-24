@@ -32,3 +32,279 @@ Lesson 10: Networking part 2
     * why they matter
 
 
+What is a Web Server
+====================
+
+.. figure:: static/web_app_diagram.png
+    :align: center
+    :scale: 100%
+
+.. note:: Webserver software, not hardware
+
+
+Webservers Talk HTTP
+====================
+
+They don't run code (well, they kinda do)
+
+* PHP, Python, Ruby, C don't run in your browser
+* Seperate servers (usually) run that code, and send text data to the web server to send to you
+* Sometimes those seperate servers are web server modules
+
+.. note:: Apache modules generally run in the apache process itself
+
+
+Let's Install a Web Server!
+===========================
+
+.. code-block:: bash
+
+    yum install httpd
+
+
+Apache
+======
+
+What's this httpd thing?
+
+"A patchy web server" - born of many patches to NCSA's HTTPD (1995)
+
+* Venerable, tested, solid
+* Old, complex, slow (not really that slow)
+* Many modules for executing code
+* Many modules for all kinds of other things too
+  
+
+Let's Serve Some Web
+====================
+
+Apache's DocumentRoot is the default place where it will look for files to serve. It maps "/" in the URL to a location on disk
+
+.. code-block:: bash
+
+    http://localhost:8080/index.html
+                         ^
+                         "/" is the DocumentRoot
+
+
+We'll write some HTML in the DocumentRoot for Apache to serve.
+
+
+But First, Config Files
+=======================
+
+.. code-block:: bash
+
+    /etc/httpd/conf/httpd.conf
+
+.. code-block:: bash
+
+    DocumentRoot "/var/www/html"
+
+    <Directory "/var/www/html">
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+
+.. note:: Just looking, we are not editing the configs here. Note the DocumentRoot and Directory 
+
+
+Wait, What am I Writing Again?
+==============================
+
+HTML (Hyper Text Markup Language)
+
+Go to the DocumentRoot and create an html file:
+
+.. code-block:: bash
+
+    cd /var/www/html
+    vim index.html
+
+.. code-block:: html
+
+    <html>
+        <head>
+            <title>This is only a test!</title>
+        </head>
+        <body>
+            <p>Nothing to see here, move along</p>
+        </body>
+    </html>
+
+
+Point your browser to: http://localhost:8080/index.html
+
+.. note:: HTML, is it code? Is it a language? Can you do logic with it? What happens if you forget the <html>? The browser does the rendering, the web server doesn't care, it just sends the data along. HTTP Content-Type header says what kind of data.
+
+
+Voila!
+======
+
+* Apache recieves a request for /index.html
+* It translates "/" into /var/www/html using the DocumentRoot directive
+* It looks in /var/www/html for the file "index.html"
+* It finds your file and sends its contents, along with HTTP headers, back to your browser
+
+.. note:: Have a look at the page source. Edit the file, remove <html>, etc, look at source again. If time allows, use developer tools, firebug, etc to look at http headers
+
+
+But I Want to Run Code!
+=======================
+
+Let's put some PHP code in the DocumentRoot:
+
+.. code-block:: bash
+
+    vim index.php
+
+.. code-block:: html
+
+    <html>
+        <head>
+            <title>This is only a test!</title>
+        </head>
+        <body>
+            <?php print "Hey, this is PHP!" ?>
+        </body>
+    </html>
+
+Then go to  http://localhost:8080/index.php
+
+
+What Went Wrong?
+================
+
+Apache doesn't know what PHP is, it needs a module to execute the PHP code and return data it can serve
+
+
+.. code-block:: bash
+
+    yum install php
+    service httpd restart
+
+
+.. note:: Pop quiz - where do you look to find out what went wrong? Look at log files, talk about them, then look at page source.
+
+
+Voila, Again.
+=============
+
+How does Apache know what to do with index.php?
+
+.. code-block:: bash
+
+    /etc/httpd/conf.d/php.conf
+
+.. code-block:: bash
+
+    <IfModule prefork.c>
+      LoadModule php5_module modules/libphp5.so
+    </IfModule>
+    <IfModule worker.c>
+      LoadModule php5_module modules/libphp5-zts.so
+    </IfModule>
+
+    AddHandler php5-script .php
+    AddType text/html .php
+
+    DirectoryIndex index.php
+
+We could tell apache to render any file as php, including html files
+
+.. note:: CentOs, and most distribution system packages put these conf files for modules in place for you. httpd.conf includes everything in conf.d - similar for Nginx
+
+
+Ok, But I Want To Serve a Python App...
+=======================================
+
+There's a module for that! (Actually several, but we are going to use this one)
+
+*WSGI*:  **W** eb  **S** erver  **G** ateway  **I** nterface
+
+* Standardized interface for python apps to talk to web servers
+* Works with many different servers
+* Allows separation of python app and web server processes
+  
+.. note:: talk about mod_python - runs python scripts directly, not bad for single scripts, but unweildy for applications and frameworks.
+
+
+Sounds Great, Let's Go!
+=======================
+
+.. code-block:: bash
+
+    yum install mod_wsgi
+
+Let's clone the systemview app into a reasonable location while we are at it
+
+.. code-block:: bash
+
+    cd /var/www
+    git clone https://github.com/DevOpsBootcamp/systemview.git
+    cd systemview
+    git checkout wsgi
+
+.. note:: Talk about the location - can be anywhere, but be consistent - /var/www is actually not in the web root, not accessible by default, don't put things under the docroot!
+
+
+Don't Forget Virtualenv!
+========================
+
+(in the systemview/ directory)
+
+.. code-block:: bash
+    
+    virtualenv --no-site-packages venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+
+
+And lets make sure everything is owned by the web server:
+
+.. code-block:: bash
+    
+    chown -R apache ../systemview
+
+
+Configuring Apache for Systemview
+=================================
+
+.. code-block:: bash
+
+    /etc/httpd/conf/httpd.conf
+
+.. code-block:: bash
+
+    WSGISocketPrefix /var/run
+    WSGIDaemonProcess systemview user=apache group=apache threads=5
+    WSGIScriptAlias /systemview /var/www/systemview/systemview.wsgi
+
+    <Directory /var/www/systemview>
+            WSGIProcessGroup systemview
+            WSGIApplicationGroup %{GLOBAL}
+            Order deny,allow
+            Allow from all
+    </Directory>
+
+(Look for this in systemview/docs/apache_config.txt)
+
+
+Even More Voila
+===============
+
+http://localhost:8080/systemview
+
+There are a lot of steps to getting this app up, wouldn't it be nice to automate this?
+
+.. note:: Future topics - configuration management and automated deploys, virtual hosts, best practices for app location, Nginx, UWSGI, PHP-FPM, etc
+
+Homework
+========
+
+* Deploy Systemview's master branch with Apache (we merged the database code)
+* Read about Apache Virtualhosts
+* Install Nginx and UWSGI, deploy Systemview
