@@ -2,6 +2,14 @@
 Lesson 10: Networking part 2
 ============================
 
+Networking Review
+-----------------
+.. figure:: static/diagram1.png
+
+
+
+Next Slide Here
+---------------
 * What is DNS
 * Why does it matter
 * Role of the DNS server
