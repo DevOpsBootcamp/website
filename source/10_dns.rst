@@ -123,7 +123,7 @@ But First, Config Files
 Wait, What am I Writing Again?
 ==============================
 
-HTML (Hyper Text Markup Language)
+**HTML**: **H**\ yper **T**\ ext **M**\ arkup **L**\ anguage
 
 Go to the DocumentRoot and create an html file:
 
@@ -231,7 +231,7 @@ Ok, But I Want To Serve a Python App...
 
 There's a module for that! (Actually several, but we are going to use this one)
 
-*WSGI*:  **W** eb  **S** erver  **G** ateway  **I** nterface
+**WSGI**:  **W**\ eb  **S**\ erver  **G**\ ateway  **I**\ nterface
 
 * Standardized interface for python apps to talk to web servers
 * Works with many different servers
