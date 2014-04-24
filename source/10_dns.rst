@@ -40,6 +40,31 @@ Next Slide Here
     * why they matter
 
 
+Web Apps: A Bit of Review
+=========================
+
+* We created a python app called Systemview using the Flask framework
+* We tested Systemview by running Flask's built-in webserver on the command line
+* Systemview ran on a special port we had to open up on the virtual machine
+
+
+What We Want To Do
+==================
+
+* Install a production-quality web server on a standard port
+* Serve Systemview using that web server
+* Party
+
+
+Why?
+====
+
+* Flask's web server is not robust or secure
+* We want to use standard ports for our web apps
+* We may want to run multiple apps on one server
+* Web server administration is *cool*
+  
+
 What is a Web Server
 ====================
 
@@ -56,7 +81,7 @@ Webservers Talk HTTP
 They don't run code (well, they kinda do)
 
 * PHP, Python, Ruby, C don't run in your browser
-* Seperate servers (usually) run that code, and send text data to the web server to send to you
+* Seperate servers (usually) run that code, and send the output of the code to the web server to send to your browser
 * Sometimes those seperate servers are web server modules
 
 .. note:: Apache modules generally run in the apache process itself
@@ -221,7 +246,6 @@ How does Apache know what to do with index.php?
 
     DirectoryIndex index.php
 
-We could tell apache to render any file as php, including html files
 
 .. note:: CentOs, and most distribution system packages put these conf files for modules in place for you. httpd.conf includes everything in conf.d - similar for Nginx
 
@@ -278,6 +302,9 @@ And lets make sure everything is owned by the web server:
     chown -R apache ../systemview
 
 
+.. note:: Web server user/group ownership is a major source of breakage - get cloning/pulling as the wrong user will change perms on files, possibly breaking things
+
+
 What Makes an App WSGI?
 =======================
 
@@ -302,7 +329,7 @@ Configuring Apache for Systemview
 
 .. code-block:: bash
 
-    /etc/httpd/conf/httpd.conf
+    /etc/httpd/conf.d/systemview.conf
 
 .. code-block:: bash
 
@@ -317,7 +344,9 @@ Configuring Apache for Systemview
             Allow from all
     </Directory>
 
-(Look for this in systemview/docs/apache_config.txt)
+(Look for this in systemview/docs/systemview.conf)
+
+.. note:: This will go into a vhost some day
 
 
 Even More Voila
