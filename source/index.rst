@@ -19,11 +19,11 @@ DevOps Bootcamp
       +--------+-----------+---------------------------------+--------------+
       | 4/17   | n/a       | No Meeting                      | 3            |
       +--------+-----------+---------------------------------+--------------+
-      | 4/24 * | KEC1007   | How the Web Works (HTTP, APIs)  | 4            |
+      | 4/24   | KEC1007   | Midterms... hack day instead    | 4            |
       +--------+-----------+---------------------------------+--------------+
-      | 5/1    | KEC1007   | How email works                 | 5            |
+      | 5/1    | KEC1007   | DNS and HTTP                    | 5            |
       +--------+-----------+---------------------------------+--------------+
-      | 5/8    | KEC1007   | Review and catch-up             | 6            |
+      | 5/8    | KEC1007   | Email                           | 6            |
       +--------+-----------+---------------------------------+--------------+
       | 5/15   | KEC1005   | Deploy by hand and Puppet intro | 7            |
       +--------+-----------+---------------------------------+--------------+
@@ -32,8 +32,6 @@ DevOps Bootcamp
       | 5/29   | KEC1007   | Review and catch-up             | 9            |
       +--------+-----------+---------------------------------+--------------+
 
-    * Since the spring career fair is April 23rd, it's possible that we may be
-      displaced from our usual room in favor of industry events on the 24th.
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
 aimed at boosting our impact and outreach while shrinking the skills gap for
