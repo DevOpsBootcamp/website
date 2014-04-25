@@ -12,6 +12,11 @@ Agenda
 Networking Review
 -----------------
 
+.. figure:: static/Diagram2.png
+
+Networking Review
+-----------------
+
 .. figure:: static/Diagram1.png
 
 Intro to DNS
