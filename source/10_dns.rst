@@ -242,7 +242,7 @@ Why?
 What is a Web Server
 --------------------
 
-.. figure:: static/web_app_diagram.png
+.. figure:: static/web_app_diagram-server-highlight.png
     :align: center
     :scale: 100%
 
@@ -259,6 +259,84 @@ They don't run code (well, they kinda do)
 * Sometimes those seperate servers are web server modules
 
 .. note:: Apache modules generally run in the apache process itself
+
+
+A Digression: AJAX, JSON and APIs 
+---------------------------------
+
+* Browsers render HTML/CSS (layout)
+* Browsers execute Javascipt (logic)
+* Javascript can dynamically update the layout
+* Javascript can handle user interaction
+* Javascript can call back to the server for more data
+* Javascript can process data
+* **Javascript is Client Side Logic**
+
+
+AJAX
+----
+
+* Asynchronous Javascript And XML
+* An http request initiated by Javascript
+* Javascript listens in the background
+* The app sends a response containing data
+* Javascript processes the data
+* Traditionally XML, but now mostly JSON
+  
+.. note:: Lots of issues around security, javascript calling many servers, gathering data, calling servers outside the domain of the originating page, etc. Install RequestPolicy and NoScript, just to see who that web page is talking to while you read it.
+  
+
+JSON
+----
+
+JavaScript Object Notation
+
+.. code-block:: json
+
+    {"menu": {
+      "id": "file",
+      "value": "File",
+      "popup": {
+        "menuitem": [
+          {"value": "New", "onclick": "CreateNewDoc()"},
+          {"value": "Open", "onclick": "OpenDoc()"},
+          {"value": "Close", "onclick": "CloseDoc()"}
+        ]
+      }
+    }}
+
+XML
+---
+
+The same text expressed as XML:
+
+.. code-block:: xml
+
+    <menu id="file" value="File">
+      <popup>
+        <menuitem value="New" onclick="CreateNewDoc()" />
+        <menuitem value="Open" onclick="OpenDoc()" />
+        <menuitem value="Close" onclick="CloseDoc()" />
+      </popup>
+    </menu>
+
+
+APIs
+----
+
+* When web apps talk to web apps
+* When javascript talks to a web app
+* When curl talks to a web app
+
+They talk HTTP, using clearly defined GET or POST params to initiate actions on the remote application.
+
+.. code-block:: bash
+
+    https://graph.facebook.com/{user-id}/friendlists
+    
+**That's an API**
+
+.. note:: Take a look at the source of a web page, look at all the javascript! How much of it is talking to Google, to Facebook, etc?
 
 
 Let's Install a Web Server!
