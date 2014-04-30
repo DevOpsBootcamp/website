@@ -281,7 +281,7 @@ A Digression: AJAX, JSON and APIs
 AJAX
 ----
 
-* Asynchronous Javascript And XML
+* **A**\ synchronous **J**\ avascript **A**\ nd **X**\ ML
 * An http request initiated by Javascript
 * Javascript listens in the background
 * The app sends a response containing data
@@ -294,7 +294,7 @@ AJAX
 JSON
 ----
 
-JavaScript Object Notation
+**J**\ ava\ **S**\ cript **O**\ bject **N**\ otation
 
 .. code-block:: json
 
@@ -337,9 +337,10 @@ They talk HTTP, using clearly defined GET or POST params to initiate actions on 
 
 .. code-block:: bash
 
-    https://graph.facebook.com/{user-id}/friendlists
+    curl http://graph.facebook.com/12345/friendlists
+    curl https://api.github.com/users/osuosl/repos
+    curl http://pub.sandbox.orcid.org/v1.1/0000-0001-7857-2795/orcid-bio
     
-**That's an API**
 
 .. note:: Take a look at the source of a web page, look at all the javascript! How much of it is talking to Google, to Facebook, etc?
 
