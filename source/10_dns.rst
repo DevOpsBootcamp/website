@@ -12,6 +12,26 @@ Agenda
 Networking Review
 -----------------
 
+.. figure:: static/Home.png
+
+Networking Review
+-----------------
+
+.. figure:: static/Home1.png
+
+Networking Review
+-----------------
+
+.. figure:: static/Home2.png
+
+Networking Review
+-----------------
+
+.. figure:: static/Home3.png
+
+Networking Review
+-----------------
+
 .. figure:: static/Diagram2.png
 
 Networking Review
