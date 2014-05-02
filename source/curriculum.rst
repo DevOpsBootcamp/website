@@ -94,20 +94,28 @@ Lesson 8: Security & Authentication
 Lesson 9: Networking overview
 -----------------------------
 
+- 6pm 4/10/2014
+- `Lesson 9 video <https://www.youtube.com/watch?v=eUOF2HVx88M>`_
+- `Lesson 9 slides <http://slides.osuosl.org/devopsbootcamp/09_networking.html#1>`_
+
 Lesson 10: DNS 
 --------------
 
-Lesson 11: How the Web Works: HTTP and APIs 
--------------------------------------------
+- 6pm 5/1/2014
+- `Lesson 10 video <https://www.youtube.com/watch?v=v2nBXO10WlM>`_
+- `Lesson 10 slides <http://slides.osuosl.org/devopsbootcamp/10_dns.html#1>`_
 
-Lesson 12: How Email Works 
---------------------------
+Lesson 11: Automation and DevOps
+--------------------------------
 
-Lesson 13: Deploy by hand and intro to Puppet
----------------------------------------------
+Lesson 12: Configuration Management 
+-----------------------------------
 
-Lesson 14: Configuration Management with Puppet
------------------------------------------------
+Lesson 13: Open Source & Hands-On
+---------------------------------
+
+Lesson 14: Feedback, Review, and catch-up
+-----------------------------------------
 
 
 
