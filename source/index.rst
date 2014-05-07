@@ -87,11 +87,12 @@ Contents:
     08_security_auth
     09_networking
     10_dns
-    11_http
-    12_email
-    13_manual_deployment
-    14_config_mgmt_puppet
-    15_review
+    11_devops
+    12_configmgmt
+    13_opensource
+    14_review
+    15_http
+    16_email
     mission
     homework02
     scripting
