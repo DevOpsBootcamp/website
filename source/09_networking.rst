@@ -3,14 +3,14 @@ Lesson 9: Networking
 ====================
 
 Who is this talk for?
-----------------
+---------------------
 
-Someone with little or no networking knowledge. 
+Someone with little or no networking knowledge.
 
 ECE/CS 372 at OSU covers this content, more or less
 
-What is a network? 
------------------
+What is a network?
+------------------
 
 "a group or system of interconnected people or things"
 
@@ -20,8 +20,8 @@ To us, a network is:
 * Sending signals over wire, fiber, or radio
 * Communicating data using a standardized protocol
 
-What is a protocol? 
------------------
+What is a protocol?
+-------------------
 
 "A set of agreed upon rules for communication"
 
@@ -96,7 +96,7 @@ UDP: User Datagram Protocol
 * VoIP, media, games
 
 Get your hands dirty
-============
+====================
 In a linux terminal run:::
 
   ip a
@@ -146,7 +146,7 @@ Available Hosts:   192.168.1.[1-254]
 Broadcast address: 192.168.1.255
 
 Netmask Example:
-========
+================
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -155,7 +155,7 @@ Decimal IP Address          Binary IP Address
 ====================    ====================================
 
 Netmask Example:
-========
+================
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -173,7 +173,7 @@ Host (Binary)
 =======================    ===================================
 
 Netmask Example:
-========
+================
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -195,7 +195,7 @@ Available Hosts:   192.168.[64-127].[1-254]
 Broadcast Address: 192.168.127.255
 
 Clever Slide Title
-===============
+==================
 
 :: 
 
@@ -241,7 +241,7 @@ All of the statically defined parameters are retrieved over the network via DHCP
 But how do you communicate over the network without a network configuration?
 
 Reserved IPv4 Addresses
-=====================
+=======================
 
 * 127.0.0.1
 
