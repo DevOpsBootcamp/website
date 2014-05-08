@@ -21,8 +21,8 @@ What is it?
 Definition of Devops
 --------------------
 
-- Software Engineering
-- Technology Operations
+- Software Engineering (Dev)
+- Technology Operations (Ops)
 - Quality Assurance (QA)
 
 .. figure:: static/Devops.svg
@@ -45,7 +45,23 @@ The old view
     photo by http://thoriseador.deviantart.com/ (CC)
 
 This siloed environment has created much harm in the industry and the core
-principle behind Devops.
+reason behind creating Devops.
+
+**Burn down those silos!**
+
+History of Devops
+-----------------
+
+- mid-2000s
+
+    "*Hey, our methodology of running systems seems to still be in a pretty
+    primitive state despite years of effort.  Let’s start talking about doing it
+    better"*
+
+- Velocity Conf 2008/2009 - increased presentations on *"Agile System
+  Administration*"
+- Agile 2008 Conf - "Agile Infrastructure" BOF -- nobody showed up!
+- 2009 DevOpsDays in Ghent, Belgium - Patrick Debois
 
 The Agile Approach
 ------------------
@@ -79,8 +95,8 @@ Adapting Agile to Ops
 
 - Utilizing more specific metric and monitoring schemes
 
-Better Tools for Devops
------------------------
+Better Tools enable Devops
+--------------------------
 
 Explosion of new tools over the past few years:
 
@@ -90,10 +106,20 @@ Explosion of new tools over the past few years:
   - Monitoring & Metrics (statsd, graphite, etc)
   - Virtualization & containerization (AWS, Openstack, vagrant, docker)
 
+It's not NoOps
+--------------
+
+- Existing ops principles, processes and practices have not kept pace
+- Business & dev teams need more agility to keep up with competitors
+- Deep dev skill set + Deep ops skill set == awesomesauce
+- Ops people need to do a little dev
+- Dev people need to do a little ops
+
 References
 ----------
 
 http://theagileadmin.com/what-is-devops/
+http://itrevolution.com/the-convergence-of-devops/
 http://en.wikipedia.org/wiki/DevOps
 http://en.wikipedia.org/wiki/Agile_software_development
 https://www.youtube.com/watch?v=g-BF0z7eFoU
