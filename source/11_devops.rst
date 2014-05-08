@@ -115,6 +115,135 @@ It's not NoOps
 - Ops people need to do a little dev
 - Dev people need to do a little ops
 
+What is Devops Video
+--------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/_I94-tJlovg"
+    frameborder="0" allowfullscreen></iframe>
+
+Devops Explained: No Horse Manure
+---------------------------------
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/g-BF0z7eFoU"
+  frameborder="0" allowfullscreen></iframe>
+
+Configuration Management
+========================
+
+What is it?
+
+    *"Configuration management is the process of standardizing resource
+    configurations and enforcing their state across IT infrastructure in an
+    automated yet agile manner."* [PuppetLabs]
+
+.. [PuppetLabs] http://puppetlabs.com/solutions/configuration-management
+
+History of CM
+-------------
+
+- mid-1990s -- "snowflake system"; few systems
+- Rise of Unix-like systems and commodity x86 hardware increased the need
+- CFEngine -- First release 1993; v2 released in 2002
+- mid-2000s through present
+
+  - More agile CM systems emerged developed with the cloud in mind
+- 2008
+
+  - provisioning and management of individual systems were well-understood
+
+Infrastructure as code
+----------------------
+
+- CM enables ops to define their infrastructure in *code*
+- Install packages, configure software, start/stop services
+- Ensure a state of a machine
+- Ensure policies and standards are in place
+- Provide history of changes for a system
+- Repeatable way of rebuild a system
+- Orchestrate a cluster of services together
+
+CM Platforms
+------------
+
+- CFengine
+
+  - Lightweight agent system. Manages configuration of a large number of
+    computers using the client–server paradigm or stand-alone.
+- Puppet
+
+  - Puppet consists of a custom declarative language to describe system
+    configuration, distributed using the client–server paradigm.
+
+CM Platforms (part 2)
+---------------------
+
+- Chef
+
+  - Chef is a configuration management tool written in Ruby, and uses a pure
+    Ruby DSL for writing configuration "recipes". Also a client-server model.
+
+- Ansible
+
+  - Combines multi-node deployment, ad-hoc task execution, and configuration
+    management in one package. Utilizes SSH with little to no remote agents.
+
+Puppet Example
+--------------
+
+- Install apache and start the service
+- Puppet Domain Specific Language (DSL)
+
+.. code-block:: puppet
+
+  package { "apache":
+    name    => "httpd",
+    ensure  => present,
+  }
+
+  service { "apache":
+    name    => "apache",
+    ensure  => running,
+    enable  => true,
+    require => Package["apache"],
+  }
+
+Chef Example
+------------
+
+- Install apache and start the service
+- Ruby code
+
+.. code-block:: ruby
+
+  package "apache" do
+    package_name "httpd"
+    action :install
+  end
+
+  service "apache" do
+    action [:enable, :start]
+  end
+
+CM Platform Comparison
+----------------------
+
+- CFEngine scales like mad, not very agile
+- Puppet
+
+  - Uses a list of dependencies and figures out what order to run it in
+  - The Puppet DSL can become a blocker and a problem, puppet also has scaling
+    issues
+- Chef
+
+  - Executes commands and scripts as they are listed with minimal amount of
+    dependencies
+  - Using ruby offers both its advantages and disadvantages
+- Each platform offers its own level of complexity
+
 References
 ----------
 
@@ -122,7 +251,11 @@ http://theagileadmin.com/what-is-devops/
 http://itrevolution.com/the-convergence-of-devops/
 http://en.wikipedia.org/wiki/DevOps
 http://en.wikipedia.org/wiki/Agile_software_development
-https://www.youtube.com/watch?v=g-BF0z7eFoU
-https://www.youtube.com/watch?v=_I94-tJlovg
-https://www.youtube.com/watch?v=h5E--QSBVBY
+
+`What is DevOps? - In Simple English (video)`__
+
+`DevOps Explained: No Horse Manure (video)`__
+
+.. __: https://www.youtube.com/watch?v=_I94-tJlovg
+.. __: https://www.youtube.com/watch?v=g-BF0z7eFoU
 
