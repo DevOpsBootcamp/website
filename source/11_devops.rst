@@ -259,67 +259,229 @@ References
 
 
 Traditional Development Workflow
---------------------------------
+================================
 
-.. slide::
+Email #1
+--------
 
-    .. figure:: static/devops/email1.png
-        :align: center
-        :scale: 125%
+.. rst-class:: codeblock-sm
 
-.. slide::
+::
 
-    .. figure:: static/devops/email2.png
-        :align: center
-        :scale: 125%
+    >>>>>> On April 3, 2013, at 4:22 PM, Mary Smith <msmith@cruftware.com> wrote:
+    >>>>>>
+    >>>>>> Ops team,
+    >>>>>>
+    >>>>>> As discussed in the release schedule distributed by Mr. Bossman on 2/5, the
+    >>>>>> development team is ready to deploy our flagship product SystemView this week.
+    >>>>>> We will need Python 3.4 an Virtualenv on the production server, as well as a
+    >>>>>> correctly configured Nginx vhost to direct users to the site.
+    >>>>>>
+    >>>>>> When we log into the production server to deploy the app's code, we'll need
+    >>>>>> permission to write to /var/www and all of /etc for configuration reasons.
+    >>>>>>
+    >>>>>> Please also create the user and tables detailed in the attached spreadsheet on
+    >>>>>> our MySql 5.7 database.
+    >>>>>>
+    >>>>>> Mary Smith
+    >>>>>> Lead Developer, CruftWare SystemView product division
 
-.. slide::
+Email #2
+--------
 
-    .. figure:: static/devops/email3.png
-        :align: center
-        :scale: 125%
+.. rst-class:: codeblock-sm
 
-.. slide::
+::
 
-    .. figure:: static/devops/email4.png
-        :align: center
-        :scale: 125%
+    >>>>> On April 5, 2013, at 9:15 AM, Ivan Bofh <ibofh@cruftware.com> wrote:
+    >>>>>
+    >>>>> Mary,
+    >>>>>
+    >>>>> Our production systems are standardized to CentOS 6, so Python is only
+    >>>>> supported up to version 2.6. The Python 2.6 version of virtualenv can be
+    >>>>> installed after you work with legal to file documentation of a full security
+    >>>>> audit of the package.
+    >>>>>
+    >>>>> Providing any account, let alone root, to developers on a production system is
+    >>>>> absolutely out of the question. Just document the app's deployment process
+    >>>>> clearly and we'll handle it.
+    >>>>>
+    >>>>> Ivan Bofh
+    >>>>> Senior Systems Engineer, CruftWare
 
-.. slide::
+Email #3
+--------
 
-    .. figure:: static/devops/email5.png
-        :align: center
-        :scale: 125%
+.. rst-class:: codeblock-sm
 
-.. slide::
+::
 
-    .. figure:: static/devops/email6.png
-        :align: center
-        :scale: 125%
+    >>>> On April 5, 2013, at 11:32 AM, Mary Smith <msmith@cruftware.com> wrote:
+    >>>>
+    >>>> Ivan,
+    >>>>
+    >>>> That sounds like it will be simpler to just install the dependencies directly
+    >>>> on the server instead of using virtualenv. I should be able to include this
+    >>>> in the Jenkins configuration, as long as the CI users is running as root.
+    >>>> Speaking of which, the development team will need access to Jenkins or other
+    >>>> continuous integration in order to automatically update the site when changes
+    >>>> are pushed.
+    >>>>
+    >>>> Is mysql-dev installed yet? Also please confirm that the database is at
+    >>>> systemview-prod.mysql57.cruftware.com.
+    >>>>
+    >>>> Mary Smith
+    >>>> Lead Developer, CruftWare SystemView product division
+
+
+Email #4
+--------
+
+.. rst-class:: codeblock-sm
+
+::
+
+    >>> On April 6, 2013, at 10:08 AM, Ivan Bofh <ibofh@cruftware.com> wrote:
+    >>>
+    >>> Mary,
+    >>>
+    >>> Why do you need to use Jenkins? I Googled it and it looks like a non-standard
+    >>> and immature implementation of some of CFEngine's features. Just send me a
+    >>> CFEngine configuration file for the settings that you need. The updates can be
+    >>> done with an SVN post-commit hook.
+    >>>
+    >>> Due to administrative decisions that Mr. Bossman explained in a company-wide
+    >>> memo a couple of months ago, absolutely no dev libraries may be installed on
+    >>> production servers. Servers are for serving, not for compiling.
+    >>>
+    >>> Ivan Bofh
+    >>> Senior Systems Engineer, CruftWare
+
+Email #5
+--------
+
+.. rst-class:: codeblock-sm
+
+::
+
+    >> On April 6, 2013, at 10:14 AM, Mary Smith <msmith@cruftware.com> wrote:
+    >>
+    >> Do you at least have the Nginx vhost and uWsgi installation ready?
+    >>
+    >> Mary Smith
+    >> Lead Developer, CruftWare SystemView product division
+    >>
+    >> On April 6, 2013, at 1:53 PM, Ivan Bofh <ibofh@cruftware.com> wrote:
+    >>
+    >> We don't use Nginx or uWsgi. The specs should have said to convert the app to
+    >> work with Apache and mod_wsgi for production deployment.
+    >>
+    >> Ivan Bofh
+    >> Senior Systems Engineer, CruftWare
+
+
+Email #6
+--------
+
+.. rst-class:: codeblock-sm
+
+::
+
+    > On April 6, 2013, at 2:37 PM, Mary Smith <msmith@cruftware.com> wrote:
+    >
+    > Ivan,
+    >
+    > What's the URL for the database?
+    >
+    > Mary Smith
+    > Lead Developer, CruftWare SystemView product division
+    >
+    On April 6, 2013, at 4:22 PM, Ivan Bofh <ibofh@cruftware.com> wrote:
+
+    Mary,
+
+    You'll have to contact Sharon Negative (snegative@cruftware.com), our DBA, and
+    file a ticket to get the database access. She won't be back from vacation for
+    another 2 weeks so it might take awhile.
+
+    Ivan Bofh
+    Senior Systems Engineer, CruftWare
 
 DevOps Workflow
----------------
+===============
 
-.. slide::
+IRC #1
+--------
 
-    .. figure:: static/devops/irc1.png
-        :align: center
-        :scale: 125%
+.. rst-class:: codeblock-sm
 
-.. slide::
+.. code-block:: irc
 
-    .. figure:: static/devops/irc2.png
-        :align: center
-        :scale: 125%
+    14:03 < JnomiS> AdaOpdev: hey, all the systemview tests are passing on
+                    python 3.4
+    14:04 <@AdaOpdev> yay! I'll spin up a VM on the cluster with the production
+                      cookbook
+    14:04 < JnomiS> that'll be at sysview23dev.internal.ourcorp, right?
+    14:05 <@AdaOpdev> actually we're migrating over to a new test cluster
+    14:05 <@AdaOpdev> could you use sysview23.dev.ourcorp instead?
+    14:06 < JnomiS> sure
+    14:06 <@AdaOpdev> it's set up for passwordless ssh login with your ldap
+                      account
+    14:07 < JnomiS> ok, awesome.
+    14:07 < JnomiS> thanks!
 
-.. slide::
+IRC #2
+--------
 
-    .. figure:: static/devops/irc3.png
-        :align: center
-        :scale: 125%
+.. rst-class:: codeblock-sm
 
-.. slide::
+.. code-block:: irc
 
-    .. figure:: static/devops/irc4.png
-        :align: center
-        :scale: 125%
+    15:12 < JnomiS> hmm, I've been building mysql-python for the app with the
+                    mysql dev libraries, but it doesn't look like you have
+                    those in production
+    15:22 < JnomiS> also, what database should i connect to from the dev
+                    instance? I've been using MySql 5.7 in testing
+    15:25 <@AdaOpdev> just get me a list of the names and databases you'll
+                      need, and I'll plug them into our MySql Chef cookbooks.
+    15:25 <@AdaOpdev> I checked the ORM docs, and you're not actually using any
+                      features that changed between MySql 5.5 (which is what
+                      we've got in production right now) and 5.7
+    15:26 < JnomiS> okay, I'll run the tests with mysql5.5
+    15:27 < JnomiS> everything seems to be working fine locally
+
+IRC #3
+--------
+
+.. rst-class:: codeblock-sm
+
+.. code-block:: irc
+
+    16:00 < JnomiS> ugh, I totally forgot -- I'll need to get root on the dev vm
+                    so I can install uwsgi and nginx
+    16:00 <@AdaOpdev> We actually manage UWsgi and Nginx through chef as well.
+                      Have you written cookbooks before?
+    16:02 < JnomiS> nope, I've always just used yours :)
+    16:05 <@AdaOpdev> http://reiddraper.com/first-chef-recipe/ and
+                      https://www.digitalocean.com/community/articles/how-to-create-simple-chef-cookbooks-to-manage-infrastructure-on-ubuntu
+                      are a couple of good places to start
+    16:05 < JnomiS> thanks!
+
+IRC #4
+--------
+
+.. rst-class:: codeblock-sm
+
+.. code-block:: irc
+
+    16:52 < JnomiS> do we have jenkins deployed anywhere yet?
+    16:53 < JnomiS> I'd like to get continuous integration set up
+    16:54 <@AdaOpdev> I've heard of Jenkins but not worked with it much
+    16:54 < JnomiS> yeah, it'll automate that deploy hook mess we used to have
+    16:54 <@AdaOpdev> cool!
+    16:55 <@AdaOpdev> let's talk to our boss about getting an instance
+                      provisioned
+    16:55 < JnomiS> okay, I'll email him about it and cc you
+    16:57 <@AdaOpdev> thanks
+    16:57 <@AdaOpdev> for now let's keep using Chef for everything we can
+    16:58 < JnomiS> okay, sounds good.
