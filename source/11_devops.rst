@@ -259,3 +259,69 @@ http://en.wikipedia.org/wiki/Agile_software_development
 .. __: https://www.youtube.com/watch?v=_I94-tJlovg
 .. __: https://www.youtube.com/watch?v=g-BF0z7eFoU
 
+
+Traditional Development Workflow
+--------------------------------
+
+.. slide::
+
+    .. figure:: static/devops/email1.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/email2.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/email3.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/email4.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/email5.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/email6.png
+        :align: center
+        :scale: 125%
+
+DevOps Workflow
+---------------
+
+.. slide::
+
+    .. figure:: static/devops/irc1.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/irc2.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/irc3.png
+        :align: center
+        :scale: 125%
+
+.. slide::
+
+    .. figure:: static/devops/irc4.png
+        :align: center
+        :scale: 125%
