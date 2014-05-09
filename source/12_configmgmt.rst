@@ -354,15 +354,12 @@ Let's create a module for our Apache configuration.
     > vim bootcamp_apache/manifests/init.pp
 
         class bootcamp_apache {
-
             package{'httpd':
                 ensure => 'present'
             }
-
             package{'mod_wsgi':
                 ensure => 'present'
             }
-
             service{'httpd':
                 ensure => 'running',
                 enable => 'true',
@@ -424,7 +421,7 @@ We want to create a database and users, so lets make a module and not clutter up
             class { '::mysql::server' }
         }   
 
-* ::mysql::server causes Puppet to install MySql and makes available many methods for managing MySql. 
+**::mysql::server** causes Puppet to install MySql and makes available many methods for managing MySql. 
   
 .. note:: confusingly, puppetlabs-mysql declares the 'mysql' class, rather than 'puppetlabs-mysql'. Calling the class essentially includes that module, which includes a package declaration insuring mysql is installed. It is easy to explore the module files and see what is in it.
 
@@ -434,8 +431,6 @@ Databases, Users, and Grants
 
 .. code-block:: puppet
 
-    > vim bootcamp_mysql/manifests/init.pp
-
         class bootcamp_mysql {
             class { '::mysql::server' }
 
@@ -444,11 +439,9 @@ Databases, Users, and Grants
                 charset => 'utf8',
                 collate => 'utf8_swedish_ci',
             }
-
             mysql_user { 'vagrant@localhost':
                 ensure  => 'present',
             }
-
             mysql_grant { 'vagrant@localhost/systemview.*':
                 ensure     => 'present',
                 options    => ['GRANT'],
