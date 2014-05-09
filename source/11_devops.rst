@@ -73,13 +73,13 @@ The Agile Approach
 
 Manifesto:
 
-  *Individuals and interactions over processes and tools
-  Working software over comprehensive documentation
-  Customer collaboration over contract negotiation
-  Responding to change over following a plan*
+- *Individuals and interactions over processes and tools*
+- *Working software over comprehensive documentation*
+- *Customer collaboration over contract negotiation*
+- *Responding to change over following a plan*
 
-  *That is, while there is value in the items on
-  the right, we value the items on the left more.*
+*That is, while there is value in the items on the right, we value the items on
+the left more.*
 
 Adapting Agile to Ops
 ---------------------
@@ -247,14 +247,12 @@ CM Platform Comparison
 References
 ----------
 
-http://theagileadmin.com/what-is-devops/
-http://itrevolution.com/the-convergence-of-devops/
-http://en.wikipedia.org/wiki/DevOps
-http://en.wikipedia.org/wiki/Agile_software_development
-
-`What is DevOps? - In Simple English (video)`__
-
-`DevOps Explained: No Horse Manure (video)`__
+- http://theagileadmin.com/what-is-devops/
+- http://itrevolution.com/the-convergence-of-devops/
+- http://en.wikipedia.org/wiki/DevOps
+- http://en.wikipedia.org/wiki/Agile_software_development
+- `What is DevOps? - In Simple English (video)`__
+- `DevOps Explained: No Horse Manure (video)`__
 
 .. __: https://www.youtube.com/watch?v=_I94-tJlovg
 .. __: https://www.youtube.com/watch?v=g-BF0z7eFoU
