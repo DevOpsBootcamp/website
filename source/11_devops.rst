@@ -261,6 +261,13 @@ References
 Traditional Development Workflow
 ================================
 
+Scenario: Developer Mary Smith wants to deploy SystemView to a server
+administered by Ivan Bofh, a strict old-school sysadmin.
+
+`email conversation link
+<http://web.engr.oregonstate.edu/~dunhame/devops/emailthread.txt>`_
+
+
 Email #1
 --------
 
@@ -410,6 +417,12 @@ Email #6
 DevOps Workflow
 ===============
 
+Scenario: DevOps-oriented developer Simon Johnson wants to deploy SystemView
+to a server administered by Ada Opdev, a DevOps-oriented sysadmin.
+
+`irc conversation link
+<http://web.engr.oregonstate.edu/~dunhame/devops/devooops.log>`_
+
 IRC #1
 --------
 
@@ -485,3 +498,25 @@ IRC #4
     16:57 <@AdaOpdev> thanks
     16:57 <@AdaOpdev> for now let's keep using Chef for everything we can
     16:58 < JnomiS> okay, sounds good.
+
+Non-DevOps
+----------
+
+* Poor communication, territorialism (silos)
+* Development environment wildly different from production
+* Sysadmin averse to changes because environment is hard to test
+* Little willingness to cooperate or educate (trust/teamwork)
+* It can get even worse
+    * More people in email thread = more confusion
+    * Bikeshedding about top post vs bottom post
+    * Mary is surprisingly clear about her exact requirements
+
+DevOps
+------
+
+* Developer tests on VM with same config as production
+* Realistic expectations about access and compatibility
+* More automation, configuration management
+* Sysadmin can debug the code and help developer
+* Developer and sysadmin help and educate one another (Chef, Jenkins)
+* Distributed tasks mean fewer choke points (single person who can block task)
