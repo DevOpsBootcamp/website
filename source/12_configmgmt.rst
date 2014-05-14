@@ -245,7 +245,8 @@ But First, Nodes
 ----------------
 
 * Nodes are defined in the site manifest
-* A node is a single machine, identified by its fqdn.
+* A node is a single machine, identified by its FQDN (Fully-Qualified Domain
+  Name).
 * You can define many nodes.
 * You can add declarations to a node definition.
 * A special 'default' node will be used if a node's name can't be found.
