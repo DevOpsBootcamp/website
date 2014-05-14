@@ -1,4 +1,3 @@
-========================
 Configuration Management
 ========================
 
@@ -29,7 +28,10 @@ What config management does
 * Ensure packages are up to date
 * Look for file changes
 
-.. note:: Ensures that critical configs always are set like you want. No mucking around by a bad admin
+.. note::
+
+  Ensures that critical configs always are set like you want. No mucking around
+  by a bad admin
 
 Configuration Management
 ------------------------
@@ -55,7 +57,6 @@ CF Management Tools
     Feature set different between them
     Each have their own issues
 
-
 Puppet
 ======
 
@@ -65,14 +66,12 @@ Let's install puppet
 
     yum install puppet
 
-
 Declarative Configuration
 -------------------------
 
 * We 'declare' the desired state of the system
 * Puppet does the necessary work to make the system match our declaration
 * We can save these declarations in a repository, just like code
-
 
 Puppet Resources
 ----------------
@@ -83,7 +82,8 @@ Puppet knows about "resources" on the system
 
     puppet describe -l
 
-Look at all those things Puppet can manage out of the box. We're most interested in these:
+Look at all those things Puppet can manage out of the box. We're most interested
+in these:
 
 .. code-block:: bash
 
@@ -93,7 +93,6 @@ Look at all those things Puppet can manage out of the box. We're most interested
     service         - Manage running services
     user            - Manage users
 
-
 Resources Have Attributes
 -------------------------
 
@@ -101,7 +100,7 @@ Let's take a look at the vagrant user
 
 .. code-block:: puppet
 
-    > puppet resource user vagrant
+    # puppet resource user vagrant
     user { 'vagrant':
       ensure           => 'present',
       gid              => '500',
@@ -114,15 +113,19 @@ Let's take a look at the vagrant user
       uid              => '500',
     }
 
-We can declare a value for any of those attributes, and Puppet will make it happen.
+We can declare a value for any of those attributes, and Puppet will make it
+happen.
 
-.. note:: the password is a password hash, as appears in /etc/shadow - don't put passwords in puppet manifests!
+.. note::
 
+  the password is a password hash, as appears in /etc/shadow - don't put
+  passwords in puppet manifests!
 
 Puppet Manifests
 ----------------
 
-Puppet keeps its declarations in manifest files. We can write a manifest to create a user:
+Puppet keeps its declarations in manifest files. We can write a manifest to
+create a user:
 
 .. code-block:: bash
 
@@ -137,41 +140,44 @@ Puppet keeps its declarations in manifest files. We can write a manifest to crea
       groups    => ['wheel', 'vagrant'],
       shell     => '/bin/tcsh',
     }
-    
 
 Pull the Strings
 ----------------
 
 Lets run our manifest.
 
-.. code-block:: bash
+::
 
-    > puppet apply user.pp 
-    Notice: Compiled catalog for devops-bootcamp.osuosl.org in 
+    > puppet apply user.pp
+    Notice: Compiled catalog for devops-bootcamp.osuosl.org in
     environment production in 0.12 seconds
     Notice: /Stage[main]/Main/User[yournamehere]/ensure: created
     Notice: Finished catalog run in 0.13 seconds
 
 .. note:: we are using stand-alone mode, manually running an individual manifest
-    
+
 
 Declarations Are Idempotent
 ---------------------------
 
 Lets run our manifest again.
 
-.. code-block:: bash
+::
 
-    > puppet apply user.pp 
-    Notice: Compiled catalog for devops-bootcamp.osuosl.org in 
+    > puppet apply user.pp
+    Notice: Compiled catalog for devops-bootcamp.osuosl.org in
     environment production in 0.12 seconds
     Notice: Finished catalog run in 0.02 seconds
 
-The state of the system is already what we declared it should be, so applying the manifest again doesn't change anything.
+The state of the system is already what we declared it should be, so applying
+the manifest again doesn't change anything.
 
 
-.. note:: idempotency is important, the puppet master daemon will run periodically, and it is important that running the same commands over and over does not have cumulative effects
+.. note::
 
+  idempotency is important, the puppet master daemon will run periodically, and
+  it is important that running the same commands over and over does not have
+  cumulative effects
 
 Packages and Services
 ---------------------
@@ -190,11 +196,14 @@ apache.pp:
         ensure => 'running',
         enable => 'true',
         require => Package['httpd'],
-    } 
+    }
 
+.. note::
 
-.. note:: The 'service' block makes sure that the httpd service is started, and that it is enabled, the 'require' directive tells the service that it must wait until the package 'httpd' is processed. Services are anything you would start with "service x start" and packages anything you would install with "yum install x"
-
+  The 'service' block makes sure that the httpd service is started, and that it
+  is enabled, the 'require' directive tells the service that it must wait until
+  the package 'httpd' is processed. Services are anything you would start with
+  "service x start" and packages anything you would install with "yum install x"
 
 Puppet Config
 -------------
@@ -202,7 +211,6 @@ Puppet Config
 Where does Puppet keep its configuration files?
 
 .. note:: the audience really ought to know where to start looking by this point
-
 
 /etc/puppet
 -----------
@@ -212,17 +220,20 @@ Where does Puppet keep its configuration files?
     > ls /etc/puppet
     auth.conf  modules  puppet.conf
 
-* puppet.conf - systemwide configuration
-* auth.conf - puppet agent configuration
-* modules - we'll talk about that later 
+* ``puppet.conf`` - systemwide configuration
+* ``auth.conf`` - puppet agent configuration
+* ``modules`` - we'll talk about that later 
 
-.. note:: there isn't much of anything we need to worry about in any of the config files
+.. note::
 
+  there isn't much of anything we need to worry about in any of the config files
 
 The Site Manifest
 -----------------
 
-We want to move beyond running individual manifests on the command line. '/etc/puppet/manifests/site.pp' is the place to put your site's configuration. 
+We want to move beyond running individual manifests on the command line.
+'``/etc/puppet/manifests/site.pp``' is the place to put your site's
+configuration.
 
 .. code-block:: bash
 
@@ -265,21 +276,25 @@ An Example Site Manifest
             ensure => 'running',
             enable => 'true',
             require => Package['httpd'],
-        } 
+        }
     }
 
-.. note:: have we talked about /etc/issue? The file resource lets you declare the filename, ownership, and contents. You can also have it copy files from the module onto the node instead of manually inserting content here.
+.. note::
 
+  have we talked about /etc/issue? The file resource lets you declare the
+  filename, ownership, and contents. You can also have it copy files from the
+  module onto the node instead of manually inserting content here.
 
 The Master and the Agent
 ------------------------
 
 Puppet uses a Master/Agent architecture.
 
-* The Master reads the site.pp and listens for an Agent to contact it.
+* The Master reads the '``site.pp``' and listens for an Agent to contact it.
 * Agents run on nodes, they contact the master to get their configuration
 * Master and Agent can be on the same machine.
-* When they are on different machines, they need an SSL certificate to authenticate
+* When they are on different machines, they need an SSL certificate to
+  authenticate
 
 Run the master on your vm:
 
@@ -287,13 +302,18 @@ Run the master on your vm:
 
     puppet master
 
-.. note:: the master will background by default and log to syslog, but you can run it in the foreground with --no-daemonize and get extra logging on stdout with --verbose
+.. note::
 
+  the master will background by default and log to syslog, but you can run it in
+  the foreground with --no-daemonize and get extra logging on stdout with
+  --verbose
 
 The Agent
 ---------
 
-The agent will look for its master on the host 'puppet' by default. Lets add the hostname 'puppet' to our local host definition in /etc/hosts, so it will look on the local machine.
+The agent will look for its master on the host '``puppet``' by default. Lets add
+the hostname '``puppet``' to our local host definition in ``/etc/hosts``, so it
+will look on the local machine.
 
 .. code-block:: bash
 
@@ -309,21 +329,28 @@ Now run the agent in test mode:
     
     puppet agent --test --verbose
 
-.. note:: the agent will also background by default, the --test flag prevents that and shows us what is going on. In a production environment, the master and agent would always be running in the background, usually started as services on boot.
+.. note::
 
+  the agent will also background by default, the --test flag prevents that and
+  shows us what is going on. In a production environment, the master and agent
+  would always be running in the background, usually started as services on
+  boot.
 
 Modules
 -------
 
-We can keep adding configurations to site.pp, but it's going to get long and messy. Let's use modules instead.
+We can keep adding configurations to site.pp, but it's going to get long and
+messy. Let's use modules instead.
 
 * Modules are classes
 * Modules encapsulate a set of related configurations
 * Modules make it easy to apply configurations to many nodes
 * Community created modules already exist for almost everything
-  
-.. note:: community or puppetlabs modules vary in quality, always read the docs thoroughly
 
+.. note::
+
+  community or puppetlabs modules vary in quality, always read the docs
+  thoroughly
 
 Module Structure
 ----------------
@@ -338,7 +365,12 @@ Module Structure
                             init.pp
                             some_other_manifest.pp
 
-.. note:: that files directory is served to the puppet agent like a fileserver, file resources can declare their source attribute like "puppet:///modules/module_name/some_file" and the file will be copied into place
+.. note::
+
+  that files directory is served to the puppet agent like a fileserver, file
+  resources can declare their source attribute like
+  "puppet:///modules/module_name/some_file" and the file will be copied into
+  place
 
 
 The Bootcamp Apache Module
@@ -346,12 +378,12 @@ The Bootcamp Apache Module
 
 Let's create a module for our Apache configuration.
 
-.. code-block:: bash
-    
-    > cd /etc/puppet/modules
-    > mkdir bootcamp_apache
-    > mkdir bootcamp_apache/manifests
-    > vim bootcamp_apache/manifests/init.pp
+.. code-block:: puppet
+
+    # cd /etc/puppet/modules
+    # mkdir bootcamp_apache
+    # mkdir bootcamp_apache/manifests
+    # vim bootcamp_apache/manifests/init.pp
 
         class bootcamp_apache {
             package{'httpd':
@@ -364,10 +396,14 @@ Let's create a module for our Apache configuration.
                 ensure => 'running',
                 enable => 'true',
                 require => Package['httpd'],
-            } 
-        }   
+            }
+        }
 
-..note:: it is good practice to namespace the class name of your modules, so instead of just 'apache', we use bootcamp_apache, which won't collide with any other apache related module.
+.. note::
+
+  it is good practice to namespace the class name of your modules, so instead of
+  just 'apache', we use bootcamp_apache, which won't collide with any other
+  apache related module.
 
 Site.pp Modularized
 -------------------
@@ -385,46 +421,57 @@ Site.pp Modularized
         include bootcamp_apache
     }
 
-.. note:: the include statement assumes a module located in modules/ under the pupper config dir. The name is the class name of the the module, which is not necessarily the directory name the module is stored under (but it is much easier to name them the same)
+.. note::
 
+  the include statement assumes a module located in modules/ under the pupper
+  config dir. The name is the class name of the the module, which is not
+  necessarily the directory name the module is stored under (but it is much
+  easier to name them the same)
 
 Community Modules
 -----------------
 
-We need MySql installed for our SystemView app, as well as a database, user, and permissions. We could do all that with package, service and file resources, but there is a better way, the puppetlabs-mysql module.
+We need MySql installed for our SystemView app, as well as a database, user, and
+permissions. We could do all that with package, service and file resources, but
+there is a better way, the puppetlabs-mysql module.
 
-https://github.com/puppetlabs/puppetlabs-mysql  
+https://github.com/puppetlabs/puppetlabs-mysql
 
 (It's in Git, how convenient!)
 
 .. code-block:: bash
 
-    > cd /etc/puppet/modules/
-    > git clone https://github.com/puppetlabs/puppetlabs-mysql.git
+    cd /etc/puppet/modules/
+    git clone https://github.com/puppetlabs/puppetlabs-mysql.git
 
 We can include this module's class into our site manifest or our own modules.
-
 
 The Bootcamp Mysql Module
 -------------------------
 
-We want to create a database and users, so lets make a module and not clutter up the site.pp
+We want to create a database and users, so lets make a module and not clutter up
+the site.pp
 
-.. code-block:: bash
+.. code-block:: puppet
 
-    > cd /etc/puppet/modules
-    > mkdir bootcamp_mysql
-    > mkdir bootcamp_mysql/manifests
-    > vim bootcamp_mysql/manifests/init.pp
+    # cd /etc/puppet/modules
+    # mkdir bootcamp_mysql
+    # mkdir bootcamp_mysql/manifests
+    # vim bootcamp_mysql/manifests/init.pp
 
         class bootcamp_mysql {
             class { '::mysql::server' }
         }   
 
-**::mysql::server** causes Puppet to install MySql and makes available many methods for managing MySql. 
-  
-.. note:: confusingly, puppetlabs-mysql declares the 'mysql' class, rather than 'puppetlabs-mysql'. Calling the class essentially includes that module, which includes a package declaration insuring mysql is installed. It is easy to explore the module files and see what is in it.
+``::mysql::server`` causes Puppet to install MySql and makes available many
+methods for managing MySql.
 
+.. note::
+
+  confusingly, puppetlabs-mysql declares the 'mysql' class, rather than
+  'puppetlabs-mysql'. Calling the class essentially includes that module, which
+  includes a package declaration insuring mysql is installed. It is easy to
+  explore the module files and see what is in it.
 
 Databases, Users, and Grants
 ----------------------------
@@ -451,8 +498,7 @@ Databases, Users, and Grants
             }
         }
 
-.. note:: the mysql module has a lot of stuff in it, there isn't time to get into it all. 
-
+.. note:: the mysql module has a lot of stuff in it, there isn't time to get into it all.
 
 Test It Out
 -----------
@@ -461,9 +507,8 @@ Test It Out
 
     puppet agent --test --verbose
 
-
 Further Reading
 ---------------
 
-http://docs.puppetlabs.com/learning/introduction.html
-https://github.com/puppetlabs/puppetlabs-mysql
+- http://docs.puppetlabs.com/learning/introduction.html
+- https://github.com/puppetlabs/puppetlabs-mysql
