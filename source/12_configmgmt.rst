@@ -443,7 +443,8 @@ https://github.com/puppetlabs/puppetlabs-mysql
 .. code-block:: bash
 
     cd /etc/puppet/modules/
-    git clone https://github.com/puppetlabs/puppetlabs-mysql.git
+    # We'll clone into a directory named mysql, because that's the module name
+    git clone https://github.com/puppetlabs/puppetlabs-mysql.git mysql
 
 We can include this module's class into our site manifest or our own modules.
 
@@ -469,8 +470,7 @@ methods for managing MySql.
 
 .. note::
 
-  confusingly, puppetlabs-mysql declares the 'mysql' class, rather than
-  'puppetlabs-mysql'. Calling the class essentially includes that module, which
+  Calling the 'mysql' class essentially includes that module, which
   includes a package declaration insuring mysql is installed. It is easy to
   explore the module files and see what is in it.
 
