@@ -64,7 +64,7 @@ Let's install puppet
 
 .. code-block:: bash
 
-    yum install puppet
+    $ yum install puppet
 
 Declarative Configuration
 -------------------------
@@ -80,7 +80,7 @@ Puppet knows about "resources" on the system
 
 .. code-block:: bash
 
-    puppet describe -l
+    $ puppet describe -l
 
 Look at all those things Puppet can manage out of the box. We're most interested
 in these:
@@ -96,11 +96,13 @@ in these:
 Resources Have Attributes
 -------------------------
 
-Let's take a look at the vagrant user
+.. code-block:: bash
+
+    # let's look at the vagrant user
+    $ sudo puppet resource user vagrant 
 
 .. code-block:: puppet
 
-    # puppet resource user vagrant
     user { 'vagrant':
       ensure           => 'present',
       gid              => '500',
@@ -129,8 +131,8 @@ create a user:
 
 .. code-block:: bash
 
-    sudo su -
-    vim users.pp
+    $ sudo su -
+    $ vim users.pp
 
 .. code-block:: puppet
 
@@ -217,7 +219,7 @@ Where does Puppet keep its configuration files?
 
 .. code-block:: bash
 
-    > ls /etc/puppet
+    $ ls /etc/puppet
     auth.conf  modules  puppet.conf
 
 * ``puppet.conf`` - systemwide configuration
@@ -237,8 +239,8 @@ configuration.
 
 .. code-block:: bash
 
-    mkdir /etc/puppet/manifests
-    vim /etc/puppet/manifests/site.pp
+    $ mkdir /etc/puppet/manifests
+    $ vim /etc/puppet/manifests/site.pp
 
 
 But First, Nodes
@@ -301,7 +303,7 @@ Run the master on your vm:
 
 .. code-block:: bash
 
-    puppet master
+    $ puppet master
 
 .. note::
 
@@ -318,7 +320,7 @@ will look on the local machine.
 
 .. code-block:: bash
 
-    > vim /etc/hosts
+    $ vim /etc/hosts
 
     127.0.0.1   devops-bootcamp.osuosl.org devops-bootcamp localhost 
     localhost.localdomain localhost4 localhost4.localdomain4 puppet
@@ -328,7 +330,7 @@ Now run the agent in test mode:
 
 .. code-block:: bash
     
-    puppet agent --test --verbose
+    $ puppet agent --test --verbose
 
 .. note::
 
@@ -377,28 +379,29 @@ Module Structure
 The Bootcamp Apache Module
 --------------------------
 
-Let's create a module for our Apache configuration.
+.. code-block:: bash
+
+    # Let's create a module for our Apache configuration.
+    $ cd /etc/puppet/modules
+    $ mkdir bootcamp_apache
+    $ mkdir bootcamp_apache/manifests
+    $ vim bootcamp_apache/manifests/init.pp
 
 .. code-block:: puppet
-
-    # cd /etc/puppet/modules
-    # mkdir bootcamp_apache
-    # mkdir bootcamp_apache/manifests
-    # vim bootcamp_apache/manifests/init.pp
-
-        class bootcamp_apache {
-            package{'httpd':
-                ensure => 'present'
-            }
-            package{'mod_wsgi':
-                ensure => 'present'
-            }
-            service{'httpd':
-                ensure => 'running',
-                enable => 'true',
-                require => Package['httpd'],
-            }
+  
+    class bootcamp_apache {
+        package{'httpd':
+            ensure => 'present'
         }
+        package{'mod_wsgi':
+            ensure => 'present'
+        }
+        service{'httpd':
+            ensure => 'running',
+            enable => 'true',
+            require => Package['httpd'],
+        }
+    }
 
 .. note::
 
@@ -442,9 +445,9 @@ https://github.com/puppetlabs/puppetlabs-mysql
 
 .. code-block:: bash
 
-    cd /etc/puppet/modules/
+    $ cd /etc/puppet/modules/
     # We'll clone into a directory named mysql, because that's the module name
-    git clone https://github.com/puppetlabs/puppetlabs-mysql.git mysql
+    $ git clone https://github.com/puppetlabs/puppetlabs-mysql.git mysql
 
 We can include this module's class into our site manifest or our own modules.
 
@@ -454,16 +457,18 @@ The Bootcamp Mysql Module
 We want to create a database and users, so lets make a module and not clutter up
 the site.pp
 
+.. code-block:: bash
+
+    $ cd /etc/puppet/modules
+    $ mkdir bootcamp_mysql
+    $ mkdir bootcamp_mysql/manifests
+    $ vim bootcamp_mysql/manifests/init.pp
+
 .. code-block:: puppet
 
-    # cd /etc/puppet/modules
-    # mkdir bootcamp_mysql
-    # mkdir bootcamp_mysql/manifests
-    # vim bootcamp_mysql/manifests/init.pp
-
-        class bootcamp_mysql {
-            class { '::mysql::server' }
-        }   
+    class bootcamp_mysql {
+        class { '::mysql::server' }
+    }   
 
 ``::mysql::server`` causes Puppet to install MySql and makes available many
 methods for managing MySql.
@@ -506,7 +511,7 @@ Test It Out
 
 .. code-block:: bash
 
-    puppet agent --test --verbose
+    $ puppet agent --test --verbose
 
 Further Reading
 ---------------
