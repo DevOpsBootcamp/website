@@ -108,9 +108,17 @@ Lesson 10: DNS
 Lesson 11: Automation and DevOps
 --------------------------------
 
+- 6pm 5/8/2014
+- `Lesson 11 video <https://www.youtube.com/watch?feature=player_embedded&v=SrM9s6Kb46E>`_
+- `Lesson 11 slides <http://slides.osuosl.org/devopsbootcamp/11_devops.html>`_
+
+
 Lesson 12: Configuration Management 
 -----------------------------------
 
+- 6pm 5/15/2014 -- 8 students, 10 people total
+- `Lesson 12 video <https://www.youtube.com/watch?feature=player_embedded&v=FWIzvLr4Oj8>`_
+- `Lesson 12 slides <http://slides.osuosl.org/devopsbootcamp/12_configmgmt.html>`_
 Lesson 13: Open Source & Hands-On
 ---------------------------------
 
