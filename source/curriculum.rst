@@ -119,11 +119,10 @@ Lesson 12: Configuration Management
 - 6pm 5/15/2014 -- 8 students, 10 people total
 - `Lesson 12 video <https://www.youtube.com/watch?feature=player_embedded&v=FWIzvLr4Oj8>`_
 - `Lesson 12 slides <http://slides.osuosl.org/devopsbootcamp/12_configmgmt.html>`_
+
 Lesson 13: Open Source & Hands-On
 ---------------------------------
 
-Lesson 14: Feedback, Review, and catch-up
------------------------------------------
-
-
-
+- 6pm 5/22/2014
+- Lesson 13 Video
+- Lesson 13 slides

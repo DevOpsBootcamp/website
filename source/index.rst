@@ -29,8 +29,6 @@ DevOps Bootcamp
       +--------+-----------+---------------------------------+--------------+
       | 5/22   | KEC1007   | Open Source & Hands-On          | 8            |
       +--------+-----------+---------------------------------+--------------+
-      | 5/29   | KEC1007   | Feedback, Review, & Catch-Up    | 9            |
-      +--------+-----------+---------------------------------+--------------+
 
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
