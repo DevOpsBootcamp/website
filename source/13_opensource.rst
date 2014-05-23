@@ -5,17 +5,15 @@ What Next?
 Getting started in Open Source
 ------------------------------
 
-* Carlos's CS419 in a nutshell
-* (http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/)
+* `Carlos's CS419 in a nutshell <http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/)=>`_
 * Relevant books 
-    * The cathedral and the bazaar (Eric Raymond) http://goo.gl/rNXmq
-    * Producing Open Source Software (Karl Fogel) http://producingoss.com/
-    * Open Advice (Lydia Pintscher) http://open-advice.org/Open-Advice.pdf
-
+    * `The cathedral and the bazaar (Eric Raymond) <http://goo.gl/rNXmq>`_
+    * `Producing Open Source Software (Karl Fogel) <http://producingoss.com/>`_
+    * `Open Advice (Lydia Pintscher) <http://open-advice.org/Open-Advice.pdf>`_
 
 Joining vs Starting a Project
 -----------------------------
-
+|
 .. figure:: static/cowbrush.gif
     :align: right
 
@@ -24,9 +22,6 @@ Joining vs Starting a Project
 * Revive dead project vs. rewrite
 * Get involved with communities even if you plan to start your own
     * Learn from their examples
-
-.. figure:: static/osslogos.jpg
-    :align: center
 
 Know your licenses
 ------------------
@@ -55,7 +50,7 @@ Know your licenses
 
 .. figure:: static/licensing.jpg
     :align: right
-    :scale: 50%
+    :scale: 25%
 
 * MIT/X11
 * Apache
@@ -71,17 +66,18 @@ Assessing a new community
 * Elitism vs welcomingness
 * Communication style
 * Documentation and guides
+* Faster or slower change?
 
 .. figure:: static/welcome_mat.jpg
     :align: center
-    :scale: 75%
+    :scale: 30%
 
 Getting involved
 ----------------
 
 .. figure:: static/keeptrying.png
     :align: right
-    :scale: 90%
+    :scale: 60%
 
 * Lurk more
 * Make accounts
@@ -101,6 +97,11 @@ Finding a project
     they've answered the question over and over... read docs/faq then improve
     them
 
+.. figure:: static/osslogos.jpg
+    :align: right 
+    :scale: 60%
+
+
 * Openhatch
 * Easy bugs
 * GSOC submitters who didn't get enough interns
@@ -112,7 +113,7 @@ Finding a project
 
 First steps
 -----------
-
+|
 .. figure:: static/babypenguin.gif
     :align: center 
 
@@ -127,6 +128,10 @@ First steps
 
 DevOps Concerns
 ===============
+
+.. figure:: static/devops_all_the_things.jpg
+    :align: right
+    :scale: 70%
 
 * Configurations often managed in public repos
 * Root can't be handed out to just anyone
@@ -149,6 +154,4 @@ Any questions about anything from this year?
 
 * Conferences: OSBridge, OSCON may have free expo hall passes
 * In Corvallis? Want to come to the OSL and see what we do, pair program, etc.?
-* No meeting next week -- please leave feedback!
-
-https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform
+* No meeting next week -- `please leave feedback! <https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform>`_
