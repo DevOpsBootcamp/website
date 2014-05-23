@@ -16,15 +16,54 @@ Getting started in Open Source
 Joining vs Starting a Project
 -----------------------------
 
+.. figure:: static/cowbrush.gif
+    :align: right
+
+* Scratch an itch.
 * Research first
+* Revive dead project vs. rewrite
+* Get involved with communities even if you plan to start your own
+    * Learn from their examples
+
+.. figure:: static/osslogos.jpg
+    :align: center
 
 Know your licenses
 ------------------
 
-* MIT
+.. note:: I am not a lawyer. There will be a lawyer at LUG on Tuesday. 
+    http://opensource.org/licenses is pretty cool
+    " Freely used, modified, and shared"
+
+    MIT/X11: Short, permissive, says attribution and no liability. Doesn't discuss
+        copyright. Can convert to Apache 2
+
+    Apache: Short, permissive, goes in every file, grants patent rights from
+        contributors to users, author keeps copyright. Plays nice with GPL3 (?)
+
+    BSD: Attribution, keep copyright, no liability
+
+    AGPL: Demands source distribution even when software not distributed (for
+        cloud/hosted)
+
+    GPL: Viral, copyleft. Viral = infects entire program if it links to GPL
+        library or uses a single line of GPL'd code
+
+    LGPL: Fixes library linking issue with GPL
+    
+    CC: Non-code content
+
+.. figure:: static/licensing.jpg
+    :align: right
+    :scale: 50%
+
+* MIT/X11
 * Apache
 * BSD
-* GPL/LGPL
+* AGPL/GPL/LGPL
+* Creative Commons
+* http://choosealicense.com/
+
 
 Assessing a new community
 -------------------------
@@ -33,15 +72,34 @@ Assessing a new community
 * Communication style
 * Documentation and guides
 
+.. figure:: static/welcome_mat.jpg
+    :align: center
+    :scale: 75%
+
 Getting involved
 ----------------
 
+.. figure:: static/keeptrying.png
+    :align: right
+    :scale: 90%
+
 * Lurk more
-* Mailing lists, IRC channels, wikis, issue trackers
+* Make accounts
+    * Mailing lists
+    * IRC channels
+    * Wikis
+    * Issue trackers
 * Your nick is your reputation
+* It's okay to make mistakes... But learn from them.
 
 Finding a project
 =================
+
+.. note:: First contributions will be metric of how nice they are to newbies
+
+    There's a thing where older project members get grumpy at newbies because
+    they've answered the question over and over... read docs/faq then improve
+    them
 
 * Openhatch
 * Easy bugs
@@ -49,9 +107,18 @@ Finding a project
 * Search by language
 * Search by project type -- find something that interests you (web dev?
   bioinformatics? video games?)
+* Your immediate payment for contributions will be satisfaction, so pick
+  something satisfying
 
 First steps
 -----------
+
+.. figure:: static/babypenguin.gif
+    :align: center 
+
+.. note:: It will feel like you have only a vague idea what you're doing. This
+    means you've found a project that's challenging and that you'll learn
+    from.
 
 * Lurk awhile then ask
 * Write a test
@@ -74,3 +141,14 @@ Your Homework
 * Pull the code and run its tests using what you've learned
 * Find something you can contribute to the project
 * Discuss how it's going in #devopsbootcamp on irc.freenode.net
+
+Questions?
+==========
+
+Any questions about anything from this year? 
+
+* Conferences: OSBridge, OSCON may have free expo hall passes
+* In Corvallis? Want to come to the OSL and see what we do, pair program, etc.?
+* No meeting next week -- please leave feedback!
+
+https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform
