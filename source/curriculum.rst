@@ -69,7 +69,7 @@ Lesson 6: Boot Process & Filesystem Hierarchy
 
 - 6pm 1/30/3014 -- 14 attendees; time conflicts with Intel and Reddit founder
 - `Boot & Filesystem Video <https://www.youtube.com/watch?v=CsQbAInzTzQ>`_
-- `Lesson 6 slides <slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>`_
+- `Lesson 6 slides <http://slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>`_
 
 Lesson 7: Databases
 -------------------
