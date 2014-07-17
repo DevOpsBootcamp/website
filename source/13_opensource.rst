@@ -14,6 +14,7 @@ Getting started in Open Source
 Joining vs Starting a Project
 -----------------------------
 |
+
 .. figure:: static/cowbrush.gif
     :align: right
 
@@ -114,6 +115,7 @@ Finding a project
 First steps
 -----------
 |
+
 .. figure:: static/babypenguin.gif
     :align: center 
 

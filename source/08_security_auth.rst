@@ -364,7 +364,7 @@ SSH
     **DEMO** Make ssh-keys, post to pastebin.osuosl.org
 
 Brief History of Time (line of GPG)
-----------------------------------
+-----------------------------------
 
 * P(retty)G(ood)P(rivacy)
 * Phil Zimmermann
@@ -396,7 +396,7 @@ Ways to use GPG
 
 
 Certificates and HTTP
-------------
+---------------------
 
 * Certificate Authorities
 * https
@@ -476,8 +476,6 @@ One Last Thing
 * jeremykun.com
 * thoughtcrime.org
 * https://www.schneier.com/
-
-.. note:: 
 
 
 Web application security

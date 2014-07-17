@@ -218,7 +218,7 @@ Further Reading, Resources, etc.
   * CS 440: Database Management Systems
 
 Hands-On: Make a Database
----------------
+-------------------------
 
 * Create a new database
 

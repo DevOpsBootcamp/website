@@ -25,6 +25,7 @@ Email: System Components
      * sendmail, postfix, exim, qmail
     MDA -- places messages in local store
      * mail.local, procmail
+
     MAA – access to mail store (i.e IMAP, POP)
 
 Email: System Components
@@ -170,6 +171,7 @@ Email: Infrastructure Implementation
 
 .. note:: Consider resources, redundancy, & scalability.
     MDA is hardest to scale.
+
      * Look at Cyrus Murder for large scalability
      * dovecot is another option
 

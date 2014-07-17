@@ -22,7 +22,7 @@ Install `Vagrant <http://www.vagrantup.com/>`_
 Linux
 -----
 
-.. code-block:: shell
+.. code-block:: bash
 
     # clone
     git clone https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant.git
@@ -39,8 +39,7 @@ IRC
 
 * Use the `LUG guide <http://lug.oregonstate.edu/blog/irc/>`_ 
 * #devopsbootcamp on irc.freenode.net
-* Also join the `Mailing List
- <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_
+* Also join the `Mailing List <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_
 
 GitHub Account
 ==============
