@@ -124,5 +124,5 @@ Lesson 13: Open Source & Hands-On
 ---------------------------------
 
 - 6pm 5/22/2014
-- Lesson 13 Video
-- Lesson 13 slides
+- `Lesson 13 Video <https://www.youtube.com/watch?v=G-b_85pYmK4>`_
+- `Lesson 13 slides <http://slides.osuosl.org/devopsbootcamp/13_opensource.html>`_
