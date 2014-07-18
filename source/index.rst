@@ -6,7 +6,7 @@
 DevOps Bootcamp
 ===============
 
-.. note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
+.. : note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
     reserved but typically get moved during the week of career fairs, so check
     back here to confirm locations.
 
