@@ -2,12 +2,8 @@
 Lesson 1: The Very Basics
 =========================
 
-.. note:: Lance and Emily introduce themselves
-
 Today's Agenda
 ==============
-
-.. note:: Emily presents
 
 * Getting (to) Linux
 * The Terminal & Shell
@@ -26,8 +22,6 @@ Today's Agenda
 A note about notation
 =====================
 
-.. note:: Emily presents
-
 .. figure:: /static/stickynote.png
     :align: right
     :scale: 20%
@@ -42,8 +36,6 @@ A note about notation
 
 How to get (to) Linux
 =====================
-
-.. note:: Emily explains OSU-specific options
 
 .. figure:: /static/dualboot.png
     :align: right
@@ -199,7 +191,7 @@ Basic Shell Commands
 Invoking a script
 =================
 
-.. note:: Emily. Permissions discussed later.
+.. note:: Permissions discussed later.
 
 .. code-block:: bash
 
@@ -256,8 +248,6 @@ Special Characters
 Type less
 =========
 
-.. note:: who presents this slide
-
 * Reverse-i-search
     * ctrl+r then type command
 * aliases
@@ -308,8 +298,6 @@ Knowledge Check
 More about Man Pages
 ====================
 
-.. note:: Lance
-
 * the manual (rtfm)::
 
     $ man <program>
@@ -322,8 +310,6 @@ More about Man Pages
 
 Documentation
 =============
-
-.. note:: Emily
 
 * Man pages, blogs you find by Googling, StackOverflow
 
@@ -357,9 +343,6 @@ Don't waste experts' time, but do build your expertise.
 
 IRC
 ===
-
-.. note:: probably Emily, though Lance might know more details of history &
-          implementation
 
 .. figure:: /static/multiple_networks.gif
     :scale: 40%
