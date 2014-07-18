@@ -23,10 +23,10 @@ technologies that the lectures will discuss.
 I don't know about computers! Can I still join?
 -----------------------------------------------
 
-YES! If you already knew all this stuff, you'd be teaching rather than
-studying it. If you think you don't know enough, try anyways -- in the worst
-case you'll discover that your self-assessment was correct, and in the best
-case, you'll become a successful open source contributor.
+YES! If you already knew all this stuff, you'd be teaching rather than studying
+it. If you think you don't know enough, try anyway -- in the worst case you'll
+discover that your self-assessment was correct, and in the best case, you'll
+become a successful open source contributor.
 
 When will meetings be?
 ----------------------
@@ -68,6 +68,6 @@ on that content and you'll be ready to join in Winter term.
 I have a question?
 ------------------
 
-Ask it. On IRC if you have that set up, or email devopsbootcamp@osuosl.org or
-the mailing list.
+Ask it on IRC if you have that set up, or email devopsbootcamp@osuosl.org or the
+mailing list.
 

@@ -4,13 +4,13 @@ Get Involved
 Mailing list
 ------------
 
-Join the `mailing list`_ for updates
+Join the `mailing list`_ for updates.
 
 IRC
 ---
 
-Join us on irc.freenode.net in #devopsbootcamp (students will be setting up an
-IRC network for the program in a later lesson)
+Join us on ``irc.freenode.net`` in ``#devopsbootcamp`` (students will be setting
+up an IRC network for the program in a later lesson).
 
 Website & Curriculum
 --------------------

@@ -32,7 +32,7 @@ DevOps Bootcamp
 
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
-aimed at boosting our impact and outreach while shrinking the skills gap for
+that aims to boost our impact and outreach while shrinking the skills gap for
 OSU students interested in DevOps.
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
@@ -45,10 +45,9 @@ community by training interested students from all disciplines in the
 real-world skills necessary for success as software developers and systems
 engineers. To this end, we'll be offering an extracurricular training program
 with 2 to 3 sessions per month through the school year, in which current OSL
-students and software professionals will teach all of the topics with which one
-must be familiar in order to succeed. Although hands-on labs will be offered
-later in the program, no initial familiarity with software development or Linux
-will be assumed.
+students and software professionals will teach all topics that are essential for
+success. Although hands-on labs will be offered later in the program, no initial
+familiarity with software development or Linux will be assumed.
 
 This program is based on the `PSU Braindump <http://braindump.cat.pdx.edu>`_,
 where for 21 years they have been turning PSU students into sysadmins who have
