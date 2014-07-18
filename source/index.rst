@@ -6,10 +6,6 @@
 DevOps Bootcamp
 ===============
 
-.. note:: As we wrap up the first year of this program, we'd appreciate
-    feedback from everyone who got involved to help us make it even better
-    next year! The one-page survey is available `here <https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform>`_. 
-
 .. note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
     reserved but typically get moved during the week of career fairs, so check
     back here to confirm locations.
