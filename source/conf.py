@@ -252,3 +252,8 @@ texinfo_documents = [
 #texinfo_show_urls = 'footnote'
 
 slide_theme_options = {'custom_css': 'custom.css'}
+
+if not os.environ.get('READTHEDOCS', None):
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
