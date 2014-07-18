@@ -31,11 +31,10 @@ become a successful open source contributor.
 When will meetings be?
 ----------------------
 
-Weekday evenings, probably Thursday or Friday. It depends on when the people
-taking the course are available. Use the `signup form`_ to indicate your
-availability.
-
-.. _signup form: https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform
+Weekday evenings, with a day of the week being chosen during the first meeting.
+We try to choose a day that works best for most students but its always
+difficult to find something that works for everyone. Last year we had meetings
+on Thursdays for example.
 
 Is this only for students?
 --------------------------
