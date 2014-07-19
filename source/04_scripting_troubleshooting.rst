@@ -1,5 +1,4 @@
-================================================
-Lesson 4: Scripting, Troubleshooting, & Workflow 
+Lesson 4: Scripting, Troubleshooting, & Workflow
 ================================================
 
 .. note:: week 1, 1/9/2014
@@ -7,9 +6,8 @@ Lesson 4: Scripting, Troubleshooting, & Workflow
     - git bisect, git log, git blame
     - scientific method (small changes)
 
-
 Agenda
-======
+------
 
 * Scripting
     * What's a script?
@@ -23,7 +21,7 @@ Agenda
     * Life cycle of a bug
 
 Scripting
-=========
+---------
 
 What's a script?
 ----------------
@@ -34,8 +32,6 @@ What's a script?
 
 * Piece of code to automate a boring task
 * Explanation of how to do what you do
-
-
 
 What's a scripting language?
 ----------------------------
@@ -65,19 +61,21 @@ Bash
 
 Python
 ------
+
 .. figure:: static/xkcd_353.png
     :align: center
-    :scale: 65%
+    :scale: 80%
 
 Why Python?
 -----------
+
 * Easy to read
 * Easy to maintain
 * Quick to write
 * Lots of libraries
 
 Troubleshooting
-===============
+---------------
 
 .. figure:: static/xkcd_627.png
     :align: center
@@ -92,7 +90,7 @@ Informal method
 
 * Notice that something isn't working right
 * Identify what should be happening
-    * Define a success criterion ("it works if...")
+    * Define a success criterion ("*it works if...*")
 
 If it used to work
 ------------------
@@ -112,11 +110,14 @@ If it's never worked for you
 
 * Determine whether it's possible at all
 * Find evidence of similar things working (code, blog posts, stackoverflow)
-* If there's no evidence of anything like this working, you might be Doing It Wrong (tm)
+* If there's no evidence of anything like this working, you might be Doing It
+  Wrong (tm)
 * If there's documentation of something similar working:
-    * Confirm that the docs are correct for the versions of things that you're using
+    * Confirm that the docs are correct for the versions of things that you're
+      using
     * If they docs are wrong, fix them
-    * If the docs appear right, figure out what differs between your code and the example
+    * If the docs appear right, figure out what differs between your code and
+      the example
 * If there's sample code, make sure you can run it
     * Your goal is minimum viable test case
 
@@ -135,7 +136,7 @@ After finding the problem
 
 Formal method
 -------------
-(from `this <http://my.safaribooksonline.com/book/certification/aplus/9780768694420/pc-technician-essentials/ch01lev1sec3>`_)
+(from `this`__)
 
 * Identify the problem
 * Establish a theory of probable cause (question the obvious)
@@ -144,6 +145,8 @@ Formal method
 * Verify full system functionality and, if applicable, implement preventative measures
 * Document findings, actions, and outcomes
 
+.. __: http://my.safaribooksonline.com/book/certification/aplus/9780768694420/pc-technician-essentials/ch01lev1sec3
+
 How to get help
 ---------------
 
@@ -151,7 +154,6 @@ How to get help
 * Summarize what's wrong
 * Summarize what you've tried and why it hasn't worked
 * Make a specific request, politely
-
 * Pick the right place & time to ask
 
 Documentation
@@ -160,7 +162,7 @@ Documentation
 * Man pages
 * Wikis
 * Google (used wisely)
-    * Assessing sites' applicablity and reliability
+    * Assessing sites' applicability and reliability
         * Who wrote it?
         * When?
         * Is the other content reliable?
@@ -169,21 +171,19 @@ Documentation
 Sources of trouble
 ------------------
 
-When using something new:
+:When using something new:
+  * You probably misunderstood it.
+  * Maybe their documentation was wrong.
+  * If neither, then perhaps their code is wrong.
+  * Submit a ticket or pull request to fix the docs or code
 
-* You probably misunderstood it.
-* Maybe their documentation was wrong.
-* If neither, then perhaps their code is wrong. 
-* Submit a ticket or pull request to fix the docs or code
-
-When something previously working breaks:
-
-* Something changed
-* Someone updated something
-* Figure out who and why; document
+:When something previously working breaks:
+  * Something changed
+  * Someone updated something
+  * Figure out who and why; document
 
 Tickets
-=======
+-------
 
 * Ticket (often sysadmin) or Issue (often developer)
 * Ticket comes into tracking system, submitted by a user
@@ -194,27 +194,23 @@ Tickets
 * Ticket is assigned to someone, who fixes it
 * Someone else confirms that the fix works, then ticket is closed
 
-
 Tickets vs. Issues
-==================
+------------------
 
 * Workflow defined by tracker system
     * RT, Redmine, Chiliproject, GitHub issues, mailing lists
-
-* Issues/Bugs are developer work items which need to be included in a release of code
-* Tickets are sysadmin work items, often related to systems improvement or maintenance
-
+* Issues/Bugs are developer work items which need to be included in a release of
+  code
+* Tickets are sysadmin work items, often related to systems improvement or
+  maintenance
 * Can't log in because your account got reset: Ticket.
 * Can't log in because the newest release of the software is incompatible with
   the old database format: Bug.
 
 Some Examples
-=============
+-------------
 
-Trac
-Chiliproject
-RT
-Bugzilla
-
-
-
+- Trac
+- Chiliproject
+- RT
+- Bugzilla
