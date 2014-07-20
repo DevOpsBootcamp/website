@@ -132,7 +132,7 @@ Devops Explained: No Horse Manure
   frameborder="0" allowfullscreen></iframe>
 
 Configuration Management
-========================
+------------------------
 
 What is it?
 
@@ -259,7 +259,7 @@ References
 
 
 Traditional Development Workflow
-================================
+--------------------------------
 
 Scenario: Developer Mary Smith wants to deploy SystemView to a server
 administered by Ivan Bofh, a strict old-school sysadmin.
