@@ -70,7 +70,6 @@ Contents:
    resources
    faq
    mission
-   scripting
    vagrant
    documentation
 
