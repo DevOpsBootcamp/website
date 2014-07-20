@@ -88,7 +88,6 @@ Contents:
     12_configmgmt
     13_opensource
     14_review
-    15_http
     16_email
     mission
     homework02
