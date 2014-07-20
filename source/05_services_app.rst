@@ -1,13 +1,13 @@
-==========================
 Lesson 5: Web Applications
 ==========================
 
 What is a web app?
-==================
+------------------
 
-.. note:: talk briefly about responsibilities of each component
-    talk briefly about http
-    mention Virtual Environments (red box on diagram)
+.. note::
+    - talk briefly about responsibilities of each component
+    - talk briefly about http
+    - mention Virtual Environments (red box on diagram)
 
 .. figure:: static/web_app_diagram.png
     :align: center
@@ -39,20 +39,21 @@ Popular frameworks:
 
 Django, CakePHP, Ruby on Rails, Flask
 
-.. note:: Talk about major differences between frameworks, especially
-	Django and Flask
+.. note::
+  Talk about major differences between frameworks, especially Django and Flask
 
 
 The SystemView app
-==================
+------------------
 
 Display a filtered list of processes on the system
 
 .. figure:: static/systemview_app.png
     :align: center
 
-.. note:: explain basic idea of the app
-	reference code from lesson 4
+.. note::
+  - explain basic idea of the app
+	- reference code from lesson 4
 
 
 Setting Up
@@ -91,12 +92,14 @@ And activate it
 
 	source systemview_venv/bin/activate
 
-.. note:: students probably already have git?
-	discuss what virtualenv actually does, what is in it
-	env variables, etc
-	they can put the virtualenv anywhere, discuss locations
-	discuss, but don't use virtualenv tools (mkvirtualenv, use, etc)
-	explain what source does
+.. note::
+
+  - students probably already have git?
+  - discuss what virtualenv actually does, what is in it
+  - env variables, etc
+  - they can put the virtualenv anywhere, discuss locations
+  - discuss, but don't use virtualenv tools (mkvirtualenv, use, etc)
+  - explain what source does
 
 
 Get the Code
@@ -107,11 +110,11 @@ Get the Code
 	git clone git@github.com:DevOpsBootcamp/systemview.git
 
 
-.. note:: break here for github account setup, key location (where are they checking
-	code out from? Where is their key located?), etc
-	https://github.com/DevOpsBootcamp/systemview.git for anyone who can't
-	get their account/key working
-
+.. note::
+  - break here for github account setup, key location (where are they checking
+    code out from? Where is their key located?), etc
+  - https://github.com/DevOpsBootcamp/systemview.git for anyone who can't get
+    their account/key working
 
 Run the Code
 ------------
@@ -121,13 +124,12 @@ Run the Code
 	cd systemview
 	python systemview.py 
 
-
 Fail
 ----
 
 Oops!
 
-.. code-block:: bash
+::
 
 	Traceback (most recent call last):
 	  File "systemview.py", line 2, in <module>
@@ -136,7 +138,6 @@ Oops!
 
 .. note:: talk about missing modules, we need to install them, this is
 	what the venv is for
-
 
 Pip
 ---
@@ -158,9 +159,9 @@ Make sure you are in your virtualenv, then:
 	pip install flask
 	pip install argparse
 
-.. note:: How do you know if you are in the virtualenv?
-	can put requirements in requirements.txt for easy installation
-
+.. note::
+  - How do you know if you are in the virtualenv?
+  - can put requirements in requirements.txt for easy installation
 
 Run and Test!
 -------------
@@ -171,11 +172,12 @@ Run and Test!
 
 Now go to http://localhost:5050
 
-.. note:: talk about flags 
-	go to terminal after this slide and talk about the code:
-	main module, templates, css, etc
-	Point out areas where bugs could be fixed or features added
+.. note::
+  - talk about flags 
+  - go to terminal after this slide and talk about the code:
 
+    - main module, templates, css, etc
+  - Point out areas where bugs could be fixed or features added
 
 Branch and Modify
 -----------------
@@ -196,14 +198,15 @@ When you have made changes and everything works, push it up
 
 	git push origin my_name
 
-.. note:: talk about branching vs forking, get everyone working
-	on a new feature or bug
-	use IRC handles for branch names to make sure you are unique and
-	identifiable
+.. note::
 
+  - talk about branching vs forking, get everyone working on a new feature or
+    bug
+  - use IRC handles for branch names to make sure you are unique and
+    identifiable
 
 Homework
-========
+--------
 
 Add a feature or fix a bug, push your changes up.
 
