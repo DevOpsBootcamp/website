@@ -1,15 +1,13 @@
-===========================================
 Lesson 6: Boot and the Filesystem Hierarchy
 ===========================================
 
 .. note::
-    more ops-focused
-    1/30/2014
-    * grub, filesystem stuff based roughly on Frostsnow's talk
-    * basics of kernel and differences between virtualization/physical (the picture that kevin draws)
+    - grub, filesystem stuff based roughly on Frostsnow's talk
+    - basics of kernel and differences between virtualization/physical (the
+      picture that kevin draws)
 
 The Linux Filesystem Hierarchy
-==============================
+------------------------------
 
 .. note:: Based on Wade's talk
     https://github.com/clinew/presentation_filesystems/blob/master/presentation.tex
@@ -26,23 +24,26 @@ What's a filesystem?
 Filesystem can mean:
 --------------------
 
-    * **How the system's files are arranged on the disk**
-    * How the disk actually holds the files
-        * FAT and NTFS are old but Windows-compatible
-        * ext3 is standard, ext4 is newer, xfs has fancier journaling
-            * journaling tracks changes before write
-        * sysadmins will encounter NFS and its competitors like Gluster
+- **How the system's files are arranged on the disk**
+- How the disk actually holds the files
 
-.. note:: Moving from Windows?
-    * Binaries, not executables.
-    * Directories, not folders.
-    * Read, not load.
-    * Symbolic links, not shortcuts.
-    * Write, not save.
+  - FAT and NTFS are old but Windows-compatible
+  - ext3 is standard, ext4 is newer, xfs has fancier journaling
+
+    - journaling tracks changes before write
+  - sysadmins will encounter NFS and its competitors like Gluster
+
+.. note::
+  Moving from Windows?
+
+  - Binaries, not executables.
+  - Directories, not folders.
+  - Read, not load.
+  - Symbolic links, not shortcuts.
+  - Write, not save.
 
 The File System
-===============
-
+---------------
 |
 
 .. figure:: static/you_are_here.jpg
@@ -148,7 +149,7 @@ Three Tiers of Filesystem Hierarchy
     :scale: 60%
 
 Common Directories
-==================
+------------------
 
 =========  =============================================
 Directory  Contents
@@ -275,15 +276,17 @@ Filesystem Consistency
 More about Journaling
 ---------------------
 
-* Filesystem consistency tool; protections against system freezes, power outages, etc.
-* Replaying the journal.
-* ext3’s three modes of journaling:
-    * journal: Data and metadata to journal.
-    * ordered: Data updates to filesystem, then metadata committed to journal.
-    * writeback: Metadata comitted to journal, possibly before data updates.
+- Filesystem consistency tool; protections against system freezes, power
+  outages, etc.
+- Replaying the journal.
+- ext3’s three modes of journaling:
+
+  - :journal: Data and metadata to journal.
+  - :ordered: Data updates to filesystem, then metadata committed to journal.
+  - :writeback: Metadata comitted to journal, possibly before data updates.
 
 The Boot Process
-================
+----------------
 
 * Bootstrapping
 * Steps in the process
@@ -336,6 +339,8 @@ Steps in boot process
    * init, kswapd, pdflush, etc
    * init only real process
    * Others look like processes for scheduling (appear as [kswapd] with ps)
+
+|
 
 .. figure:: static/booting.png
     :align: right
@@ -603,6 +608,4 @@ Shutting Down
   hello world
 
 Homework
-========
-
-
+--------
