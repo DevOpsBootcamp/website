@@ -1,5 +1,5 @@
-Devops & Configuration Management Intro
-========================================
+Lesson 11: Devops & Configuration Management Intro
+==================================================
 
 Session Summary
 ---------------
@@ -8,7 +8,7 @@ Session Summary
 - Configuration management introduction
 
 Devops Introduction
-===================
+-------------------
 
 What is it?
 
@@ -34,9 +34,9 @@ Definition of Devops
 The old view
 ------------
 
-- **"Dev"** side being the *"makers"*
-- **"Ops"** side being the *"people that deal with the creation after its
-  birth”*
+:"Dev": side being the *"makers"*
+:"Ops":
+  side being the *"people that deal with the creation after its birth”*
 
 .. figure:: static/silo-fire.jpg
     :scale: 50%
@@ -415,13 +415,14 @@ Email #6
     Senior Systems Engineer, CruftWare
 
 DevOps Workflow
-===============
+---------------
 
 Scenario: DevOps-oriented developer Simon Johnson wants to deploy SystemView
 to a server administered by Ada Opdev, a DevOps-oriented sysadmin.
 
-`irc conversation link
-<http://web.engr.oregonstate.edu/~dunhame/devops/devooops.log>`_
+`irc conversation link`_
+
+.. _irc conversation link: http://web.engr.oregonstate.edu/~dunhame/devops/devooops.log
 
 IRC #1
 --------
