@@ -1,4 +1,3 @@
-==========================
 Purpose of DevOps Bootcamp
 ==========================
 
@@ -23,7 +22,7 @@ Students get:
 * Mentorship from students and professionals with advanced skills in software
   development and systems administration
 * Professional connections in the software industry
-* A welcoming environment to start learning in, if you’ve always wanted to
+* A welcoming environment to start learning in, if you've always wanted to
   learn about software development and systems administration but never been sure
   where to start
 * An opportunity to fill in any gaps in your knowledge, if you’re a
@@ -43,11 +42,8 @@ Why we’re offering this:
 Target Audience
 ---------------
 
-Our goal is to make the DevOps Bootcamp program accessible to students and community members from all different backgrounds. You have to want to learn, and be willing to ask questions whenever you don’t understand something, and be open to making time to play with the cool tools/toys which we’ll be teaching you about.
-
-Goals for Spring Term:
-======================
-
-* Deploy infrastructure
-* Work with common services in production
-* Cover core content that didn't make it into winter term
+Our goal is to make the DevOps Bootcamp program accessible to students and
+community members from all different backgrounds. You have to want to learn, and
+be willing to ask questions whenever you don't understand something, and be open
+to making time to play with the cool tools/toys which we’ll be teaching you
+about.
