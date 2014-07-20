@@ -1,94 +1,21 @@
-===================================
 Lesson 8: Security & Authentication
 ===================================
 
-.. note::
-
-    edunham
-    - basic concepts & philosophies
-
-      - authentication vs authorization
-      - identity (persistent vs authoritative(?))
-      - system security (close ports, firewalls, fail2ban)
-
-        - process isolation
-
-      - principle of least authority
-
-        - users/groups/permissions
-
-    Pono
-    - passwords, keys, encryption
-
-     - passwords/hashing (plaintext -> hash -> salt)
-        - what are passwords for
-        - why use them
-        - how to not store them
-        - how to store them
-     - keys
-        - just like for houses, but better
-        - symmetric, asymmetric
-        - diffie helman
-        - rsa
-     - ssh keys (passphrase vs none; automation; authorized_keys)
-        - why is a key better than a password
-        - passphrases
-        - automation
-        - authorized_keys
-     - GPG keys, signing stuff, publishing to keyservers
-        - email
-        - why you should use it
-        - why people don't use it
-        - making keys
-        - keysigning parties
-        - keyserver
-        - encryption
-     - certificates (SSL/TLS)/ https
-        -
-     - wifi
-        - wep
-            - attacks
-        - wpa
-            - attacks
-        - wpa2
-            - weakness
-        - vpn
-            - mschapv2
-     - intro to crypto
-        - encryption
-            - full disk
-        - math
-     - one last thing
-        - social engineering
-        - privly
-        - 'i have nothing to hide'
-
-
-    Jack???? (else dean/emily/ken w/ emily presenting)
-    - web app security
-
-     - parameterize or sanitize inputs
-     - SQL injection
-     - XSS, csrf tokens
-     - https://www.owasp.org/index.php/Top_10_2013-Top_10
-     - filesystem & user permissions (remember lesson 2?)
-     - CRIME attack
-
-    - mention social engineering type attacks
-
 What is security?
-=================
+-----------------
 
 se·cu·ri·ty
 
-siˈkyo͝oritē/
+  siˈkyo͝oritē/
 
-noun
+  noun
 
-* the state of being free from danger or threat.
-* the safety of a state or organization against criminal activity such as terrorism, theft, or espionage.
-* procedures followed or measures taken to ensure the safety of a state or organization.
-* the state of feeling safe, stable, and free from fear or anxiety.
+  - the state of being free from danger or threat.
+  - the safety of a state or organization against criminal activity such as
+    terrorism, theft, or espionage.
+  - procedures followed or measures taken to ensure the safety of a state or
+    organization.
+  - the state of feeling safe, stable, and free from fear or anxiety.
 
 Types of security
 -----------------
@@ -107,9 +34,9 @@ Authentication vs. Authorization
 .. figure:: static/xkcd_1121.png
     :align: center
 
-Authentication: Are they who they say they are?
+:Authentication: Are they who they say they are?
 
-Authorization: Are they allowed access here?
+:Authorization: Are they allowed access here?
 
 * Authentication requires proof of identity
 * Authorization requires authentication, plus permission from an authority
@@ -119,19 +46,25 @@ Identity
 
 **Persistent vs. authoritative**
 
-Imagine an identity thief who takes out lines of credit in their victim's name then pays all the bills on time...
+Imagine an identity thief who takes out lines of credit in their victim's name
+then pays all the bills on time...
 
 * Is their identity *persistent*?
 * Is their identity *authoritative*?
 
-How about a project maintainer who never uses their real name online, but uses the same handle and email address across all sites?
+How about a project maintainer who never uses their real name online, but uses
+the same handle and email address across all sites?
 
 Identity
 --------
 
-How about a project maintainer who loses the domain which was hosting their email, and thus changes addresses abruptly?
+How about a project maintainer who loses the domain which was hosting their
+email, and thus changes addresses abruptly?
 
-If you're a sysadmin who works with multiple projects, you will run into these concerns often.
+If you're a sysadmin who works with multiple projects, you will run into these
+concerns often.
+
+|
 
 .. figure:: static/xkcd_565.png
     :align: center
@@ -153,7 +86,10 @@ System Security
 * Firewalls
 * Process isolation
 
-* `nmap <http://nmap.org/>`_ vs. `fail2ban <http://www.fail2ban.org/wiki/index.php/Main_Page>`_
+* `nmap`_ vs. `fail2ban`_
+
+.. _nmap: http://nmap.org/
+.. _fail2ban: http://www.fail2ban.org/wiki/index.php/Main_Page
 
 Other Attacks
 -------------
@@ -161,13 +97,14 @@ Other Attacks
 .. figure:: static/xkcd_538.png
     :align: right
 
-* Social engineering
-    * Pretexting
-    * Phishing
-    * Baiting
-    * Quid Pro Quo
-    * Tailgaiting
-* Zero-Day vulnerabilities
+- Social engineering
+
+  - Pretexting
+  - Phishing
+  - Baiting
+  - Quid Pro Quo
+  - Tailgaiting
+- Zero-Day vulnerabilities
 
 .. note::
 
@@ -219,14 +156,15 @@ First, test and document to verify that it exists.
 
 Then, disclose it *privately* to those responsible for fixing it
 
-Provide examples -- it's basically a bug report, but through private channels (not public tracker yet!)
+Provide examples -- it's basically a bug report, but through private channels
+(not public tracker yet!)
 
 Give them time to release a patch before announcing it
 
 Some places have bug bounties
 
 Passwords
-=========
+---------
 
 .. figure:: static/xkcd_936.png
     :align: center
@@ -252,14 +190,14 @@ Password Managers
 
 * Password managers (LastPass, 1Password, KeepPass*)
     * Works with phones and other things
-* pass http://www.zx2c4.com/projects/password-store/
-* vim -x passwords.txt
+* ``pass`` http://www.zx2c4.com/projects/password-store/
+* ``vim -x passwords.txt``
 * http://world.std.com/~reinhold/diceware.html
 
 .. note:: 
     http://makezineblog.files.wordpress.com/2013/01/fractal-rainbow-table-runner-1.jpg
     We use passwords for everything we do online.  Some (hopefully) 
-    semirandom grouping of letters, numbers, and symbols which when combined
+    semi random grouping of letters, numbers, and symbols which when combined
     with a username allow you to authenticate with a server or process.
     There are a couple common attacks on passwords, the most common of which
     is called a dictionary attack.  This uses the fact that words are easier
@@ -267,9 +205,9 @@ Password Managers
     to greatly reduce the search space for passwords.  
     
     pwgen + a password manager will help you have better passwords which you
-    dont even have to remember! **DEMO**
+    don't even have to remember! **DEMO**
     
-    Storing passwords on the server side is a whole nother matter.  One of 
+    Storing passwords on the server side is a whole other matter.  One of 
     the primary issues of concern is what happens if your server gets
     compromised.  Lets say for instance that you just have a giant text file
     that has the form "username password" on each row.  This would be super
@@ -289,7 +227,6 @@ Password Managers
     
     Enough about passwords, we now move into more interesting things called
     keys!
-    
 
 Keys
 ----
@@ -318,29 +255,31 @@ RSA
 
 .. figure:: static/rsa.jpg
     :align: center
-    :scale: 75%
+    :scale: 60%
 
 .. note:: 
     Keys are password files.  These can be used in place of a password for
-    authentiation and encryption.
-    Symmetric keys essentially work like passwords.  They are basicallly a
-    one-time pad where both parties need to know the key to enable data to
-    be stored and retrieved.  Asymmetric keys work by encrypting with a
-    public key (one everyone can see), but only being able to be decrypted
-    by the private key (which you shouldn't show anyone).
+    authentication and encryption.
+
+    Symmetric keys essentially work like passwords.  They are basically a
+    one-time pad where both parties need to know the key to enable data to be
+    stored and retrieved.  Asymmetric keys work by encrypting with a public key
+    (one everyone can see), but only being able to be decrypted by the private
+    key (which you shouldn't show anyone).
+
     The fundamental problem with communication is that if you don't have a
-    preshared key between two users, everything you say is being listened
-    to and presumably logged.
+    preshared key between two users, everything you say is being listened to and
+    presumably logged.
+
     Diffie Hellman key exchange is probably the most important result in
     cryptography.  It allows two users to communicate in plaintext
-    (non-encrypted) and trade their public keys in order to generate a 
-    shared secret so then they can communicate with encryption.
-    RSA is an algorithm that follows Diffie-Hellman and is the most common
-    way to do key exchange.
-
+    (non-encrypted) and trade their public keys in order to generate a shared
+    secret so then they can communicate with encryption.  RSA is an algorithm
+    that follows Diffie-Hellman and is the most common way to do key exchange.
 
 SSH
 ---
+
 * Password vs Keys
 * Passphrases
 * authorized_keys
@@ -352,14 +291,15 @@ SSH
     $ ssh -R 2222:localhost:22 freshblue.lake
 
 .. note:: 
-    ssh is secure shell and provides a shell to a unix machine over the
-    'net by using RSA to encrypt communications between a client and
-    server. Passwordless login, refuse connections without keys, tunneling.
-    Commands at the end are run unecrypted.
-    Passphrases work by adding a password to a key file.
-    Add your friends public keys to authorized_keys so they don't need a
-    password to login.  
-    ssh-agent, .ssh/config, /etc/ssh/sshd_config
+    ssh is secure shell and provides a shell to a unix machine over the 'net by
+    using RSA to encrypt communications between a client and server.
+    Passwordless login, refuse connections without keys, tunneling.  Commands at
+    the end are run unecrypted.
+
+    Passphrases work by adding a password to a key file.  Add your friends
+    public keys to authorized_keys so they don't need a password to login.  
+
+    ``ssh-agent, .ssh/config, /etc/ssh/sshd_config``
 
     **DEMO** Make ssh-keys, post to pastebin.osuosl.org
 
@@ -394,7 +334,6 @@ Ways to use GPG
 
     $ gpg --encrypt manateessecrets.jpg.exe 
 
-
 Certificates and HTTP
 ---------------------
 
@@ -404,7 +343,8 @@ Certificates and HTTP
 
 .. code-block:: bash
 
-    $ openssl req -new -x509 -key /etc/ssl/private/privkey.pem -out /etc/ssl/certs/cacert.pem -days 1095
+    $ openssl req -new -x509 -key /etc/ssl/private/privkey.pem \
+      -out /etc/ssl/certs/cacert.pem -days 1095
 
 Man in the Middle
 -----------------
@@ -415,9 +355,9 @@ Man in the Middle
 
 .. note:: 
 
-     650 CAs
-     Attacks on https/ssl
-     Future
+    - 650 CAs
+    - Attacks on https/ssl
+    - Future
 
     **DEMO** sslsniff
 
@@ -431,26 +371,27 @@ WiFi
     * Demo
 
 .. note:: 
-    Attacks
-    mschapv2
+  - Attacks
+  - mschapv2
     
-    **DEMO** Wireshark
+  **DEMO** Wireshark
 
 Crypto-wares
 ------------
 
-* Files
-    * Tarsnap, SpiderOak, rsync over ssh
-* Communications
-    * VPN
-    * TextSecure/ RedPhone
-    * Tor
-    * https everywhere
-* Security
-    * Metasploit
-    * BEEF
-    * AirCrack
-    * sslstrip
+- Files
+
+  - Tarsnap, SpiderOak, rsync over ssh
+- Communications
+
+  - VPN
+  - TextSecure/ RedPhone
+  - Tor
+  - https everywhere
+- Security
+
+  - Metasploit, BEEF
+  - AirCrack, sslstrip
 
 Math!
 -----
@@ -471,32 +412,35 @@ One Last Thing
 --------------
 
 * https://priv.ly ( proudly hosted at the OSL)
-* "I have nothing to hide"
+* "*I have nothing to hide*"
 
 * jeremykun.com
 * thoughtcrime.org
 * https://www.schneier.com/
 
 
-Web application security
-========================
+Lesson 8: Web application security
+==================================
 
 .. figure:: static/2013-vulnerability-summary_290x250.png
-    :align: right
+    :align: center
+
+    image source:
+    https://info.cenzic.com/rs/cenzic/images/2013-vulnerability-summary_290x250.png
+
+Web application security
+------------------------
 
 * Who needs to worry about web application security?
 
   * Everyone!
-
 * What kinds of attacks are seen in the wild?
 
   * Many!
-
 * What can devops do about these attacks?
 
   * A lot!
 
-.. note:: image source: https://info.cenzic.com/rs/cenzic/images/2013-vulnerability-summary_290x250.png
 
 .. note::
 
@@ -521,6 +465,7 @@ Code Injection
 
 .. figure:: static/xkcd_327.png
     :align: right
+    :scale: 70%
 
 * Attacks
 
@@ -582,12 +527,14 @@ Web Server-Specific Attacks
 ---------------------------
 
 .. figure:: static/apache-vulns1.png
-    :align: right
+    :align: center
+
+    image source
+    http://news.netcraft.com/wp-content/uploads/2014/02/apache-vulns1.png
 
 * Version-Based
 * Configuration-Based
 
-.. note:: image source http://news.netcraft.com/wp-content/uploads/2014/02/apache-vulns1.png
 
 .. note:: 
 
@@ -647,7 +594,7 @@ Problems with Design and Implementation
    address and such.
 
 What Not to Do: The Exercise
-============================
+----------------------------
 
 Getting Up to Date
 ------------------
@@ -655,24 +602,25 @@ Getting Up to Date
 * ssh into your vagrant environment
 * change directory to your local systemview repo
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        $ cd ~/projects/systemview
+    $ cd ~/projects/systemview
     
 
 * Make sure your local copy is up to date
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        $ git pull
+    $ git pull
+
+..
 
     * If you've modified code you'll need to follow these instructions
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        $ git stash save "some witty name about your work"
-        $ git pull --rebase
-
+    $ git stash save "some witty name about your work"
+    $ git pull --rebase
 
 Let's Check out Dean's (not so) Awesome Code
 --------------------------------------------
