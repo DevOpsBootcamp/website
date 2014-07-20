@@ -69,6 +69,10 @@ Contents:
    guide
    resources
    faq
+   mission
+   scripting
+   vagrant
+   documentation
 
 .. toctree::
     :hidden:
@@ -76,6 +80,7 @@ Contents:
     00_introduction
     01_the_very_basics
     02_single_system_fundamentals
+    homework02
     03_editors_git
     04_scripting_troubleshooting
     05_services_app
@@ -89,11 +94,6 @@ Contents:
     13_opensource
     14_review
     16_email
-    mission
-    homework02
-    scripting
-    vagrant
-    documentation
 
 Indices and tables
 ==================
