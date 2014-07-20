@@ -1,5 +1,5 @@
-Configuration Management
-========================
+Lesson 12: Configuration Management
+===================================
 
 .. note:: starting off with cs312 content
 
@@ -58,7 +58,7 @@ CF Management Tools
     Each have their own issues
 
 Puppet
-======
+------
 
 Let's install puppet
 
@@ -85,7 +85,7 @@ Puppet knows about "resources" on the system
 Look at all those things Puppet can manage out of the box. We're most interested
 in these:
 
-.. code-block:: bash
+::
 
     file            - Manages files, including their content, owner ...
     group           - Manage groups
@@ -158,7 +158,6 @@ Lets run our manifest.
 
 .. note:: we are using stand-alone mode, manually running an individual manifest
 
-
 Declarations Are Idempotent
 ---------------------------
 
@@ -173,7 +172,6 @@ Lets run our manifest again.
 
 The state of the system is already what we declared it should be, so applying
 the manifest again doesn't change anything.
-
 
 .. note::
 
