@@ -1,4 +1,3 @@
-============================
 Lesson 10: Networking part 2
 ============================
 
@@ -47,7 +46,7 @@ I get the OSL's home page when visiting osuosl.org
 How do I know where the page came from?
 ---------------------------------------
 
-.. code-block:: bash
+::
 
     HOST(1)                       BIND9                       HOST(1)
 
@@ -83,7 +82,7 @@ Domain Name System
 
 .. figure:: static/phonebook_wikipedia.jpg
     :align: center
-    :scale: 90%
+    :scale: 80%
 
 * Port 53
 
@@ -135,13 +134,11 @@ Another Quiz
 Caching
 -------
 
-* You cached the answer.
+- You cached the answer.
+- DNS can be cached at routers, ISPs, and DNS servers to improve performance.
 
-* DNS can be cached at routers, ISPs, and DNS servers to improve performance.
-
-    * Negative caching: Remember fails
-
-* TTL
+    - Negative caching: Remember fails
+- TTL
 
 /etc/resolv.conf
 ----------------
@@ -202,17 +199,16 @@ Records
 
 .. note:: `rfc 1035 <http://tools.ietf.org/html/rfc1035>`_
 
-* ``A``: hostname -> IPV4 address
-* ``AAAA``: hostname -> IPV6 address
-* ``CNAME``: like an alias, "Go look up this name's record"
-* ``PTR``
+:A: hostname -> IPV4 address
+:AAAA: hostname -> IPV6 address
+:CNAME: like an alias, "Go look up this name's record"
+:PTR:
     * Pointer to a canonical name, returns name and stops
     * Used in reverse DNS
-* ``SOA``
+:SOA:
     * Start of Authority for a zone (such as osuosl.org) 
     * Administrator contact info, timers, serial number
-* ``MX``
-    * Email (more on this next week)
+:MX: Email (more on this next week)
 
 Reverse DNS
 -----------
@@ -237,17 +233,17 @@ Reverse segments, then end with in-addr.arpa
 Web Apps: A Bit of Review
 -------------------------
 
-* We created a python app called Systemview using the Flask framework
-* We tested Systemview by running Flask's built-in webserver on the command line
-* Systemview ran on a special port we had to open up on the virtual machine
+- We created a python app called Systemview using the Flask framework
+- We tested Systemview by running Flask's built-in webserver on the command line
+- Systemview ran on a special port we had to open up on the virtual machine
 
 
 What We Want To Do
 ------------------
 
-* Install a production-quality web server on a standard port
-* Serve Systemview using that web server
-* Party
+- Install a production-quality web server on a standard port
+- Serve Systemview using that web server
+- Party
 
 
 Why?
@@ -268,18 +264,17 @@ What is a Web Server
 
 .. note:: Webserver software, not hardware
 
-
 Webservers Talk HTTP
 --------------------
 
 They don't run code (well, they kinda do)
 
-* PHP, Python, Ruby, C don't run in your browser
-* Seperate servers (usually) run that code, and send the output of the code to the web server to send to your browser
-* Sometimes those seperate servers are web server modules
+- PHP, Python, Ruby, C don't run in your browser
+- Separate servers (usually) run that code, and send the output of the code to
+  the web server to send to your browser
+- Sometimes those separate servers are web server modules
 
 .. note:: Apache modules generally run in the apache process itself
-
 
 A Digression: AJAX, JSON and APIs 
 ---------------------------------
@@ -292,7 +287,6 @@ A Digression: AJAX, JSON and APIs
 * Javascript can process data
 * **Javascript is Client Side Logic**
 
-
 AJAX
 ----
 
@@ -303,8 +297,11 @@ AJAX
 * Javascript processes the data
 * Traditionally XML, but now mostly JSON
   
-.. note:: Lots of issues around security, javascript calling many servers, gathering data, calling servers outside the domain of the originating page, etc. Install RequestPolicy and NoScript, just to see who that web page is talking to while you read it.
-  
+.. note::
+  Lots of issues around security, javascript calling many servers, gathering
+  data, calling servers outside the domain of the originating page, etc. Install
+  RequestPolicy and NoScript, just to see who that web page is talking to while
+  you read it.
 
 JSON
 ----
@@ -348,43 +345,43 @@ APIs
 * When javascript talks to a web app
 * When curl talks to a web app
 
-They talk HTTP, using clearly defined GET or POST params to initiate actions on the remote application.
+They talk HTTP, using clearly defined GET or POST params to initiate actions on
+the remote application.
 
-.. code-block:: bash
+::
 
     curl http://graph.facebook.com/12345/friendlists
     curl https://api.github.com/users/osuosl/repos
     curl http://pub.sandbox.orcid.org/v1.1/0000-0001-7857-2795/orcid-bio
-    
 
-.. note:: Take a look at the source of a web page, look at all the javascript! How much of it is talking to Google, to Facebook, etc?
-
+.. note::
+  Take a look at the source of a web page, look at all the javascript! How much
+  of it is talking to Google, to Facebook, etc?
 
 Let's Install a Web Server!
 ---------------------------
 
-.. code-block:: bash
+::
 
     yum install httpd
-
 
 Apache
 ------
 
 What's this httpd thing?
 
-"A patchy web server" - born of many patches to NCSA's HTTPD (1995)
+"*A patchy web server*" - born of many patches to NCSA's HTTPD (1995)
 
 * Venerable, tested, solid
 * Old, complex, slow (not really that slow)
 * Many modules for executing code
 * Many modules for all kinds of other things too
   
-
 Let's Serve Some Web
 --------------------
 
-Apache's DocumentRoot is the default place where it will look for files to serve. It maps "/" in the URL to a location on disk
+Apache's ``DocumentRoot`` is the default place where it will look for files to
+serve. It maps "/" in the URL to a location on disk
 
 .. code-block:: bash
 
@@ -392,18 +389,16 @@ Apache's DocumentRoot is the default place where it will look for files to serve
                          ^
                          "/" is the DocumentRoot
 
-
-We'll write some HTML in the DocumentRoot for Apache to serve.
-
+We'll write some HTML in the ``DocumentRoot`` for Apache to serve.
 
 But First, Config Files
 -----------------------
 
-.. code-block:: bash
+::
 
     /etc/httpd/conf/httpd.conf
 
-.. code-block:: bash
+.. code-block:: apache
 
     DocumentRoot "/var/www/html"
 
@@ -414,8 +409,9 @@ But First, Config Files
         Allow from all
     </Directory>
 
-
-.. note:: Just looking, we are not editing the configs here. Note the DocumentRoot and Directory 
+.. note::
+  Just looking, we are not editing the configs here. Note the ``DocumentRoot``
+  and Directory 
 
 
 Wait, What am I Writing Again?
@@ -423,7 +419,7 @@ Wait, What am I Writing Again?
 
 **HTML**: **H**\ yper **T**\ ext **M**\ arkup **L**\ anguage
 
-Go to the DocumentRoot and create an html file:
+Go to the ``DocumentRoot`` and create an html file:
 
 .. code-block:: bash
 
@@ -441,29 +437,34 @@ Go to the DocumentRoot and create an html file:
         </body>
     </html>
 
-
 Point your browser to: http://localhost:8080/index.html
 
-.. note:: HTML, is it code? Is it a language? Can you do logic with it? What happens if you forget the <html>? The browser does the rendering, the web server doesn't care, it just sends the data along. HTTP Content-Type header says what kind of data.
-
+.. note::
+  HTML, is it code? Is it a language? Can you do logic with it? What happens if
+  you forget the ``<html>``? The browser does the rendering, the web server
+  doesn't care, it just sends the data along. HTTP ``Content-Type`` header says
+  what kind of data.
 
 Voila!
 ------
 
-* Apache recieves a request for /index.html
-* It translates "/" into /var/www/html using the DocumentRoot directive
-* It looks in /var/www/html for the file "index.html"
-* It finds your file and sends its contents, along with HTTP headers, back to your browser
+* Apache receives a request for /index.html
+* It translates "/" into ``/var/www/html`` using the ``DocumentRoot`` directive
+* It looks in ``/var/www/html`` for the file "``index.html``"
+* It finds your file and sends its contents, along with HTTP headers, back to
+  your browser
 
-.. note:: Have a look at the page source. Edit the file, remove <html>, etc, look at source again. If time allows, use developer tools, firebug, etc to look at http headers
-
+.. note::
+  Have a look at the page source. Edit the file, remove <html>, etc, look at
+  source again. If time allows, use developer tools, firebug, etc to look at
+  http headers
 
 But I Want to Run Code!
 -----------------------
 
-Let's put some PHP code in the DocumentRoot:
+Let's put some PHP code in the ``DocumentRoot``:
 
-.. code-block:: bash
+::
 
     vim index.php
 
@@ -480,32 +481,31 @@ Let's put some PHP code in the DocumentRoot:
 
 Then go to  http://localhost:8080/index.php
 
-
 What Went Wrong?
 ----------------
 
-Apache doesn't know what PHP is, it needs a module to execute the PHP code and return data it can serve
+Apache doesn't know what PHP is, it needs a module to execute the PHP code and
+return data it can serve
 
-
-.. code-block:: bash
+::
 
     yum install php
     service httpd restart
 
-
-.. note:: Pop quiz - where do you look to find out what went wrong? Look at log files, talk about them, then look at page source.
-
+.. note::
+  Pop quiz - where do you look to find out what went wrong? Look at log files,
+  talk about them, then look at page source.
 
 Voila, Again.
 -------------
 
 How does Apache know what to do with index.php?
 
-.. code-block:: bash
+::
 
     /etc/httpd/conf.d/php.conf
 
-.. code-block:: bash
+.. code-block:: apache
 
     <IfModule prefork.c>
       LoadModule php5_module modules/libphp5.so
@@ -520,8 +520,9 @@ How does Apache know what to do with index.php?
     DirectoryIndex index.php
 
 
-.. note:: CentOs, and most distribution system packages put these conf files for modules in place for you. httpd.conf includes everything in conf.d - similar for Nginx
-
+.. note::
+  CentOS, and most distribution system packages put these conf files for modules
+  in place for you. httpd.conf includes everything in conf.d - similar for Nginx
 
 Ok, But I Want To Serve a Python App...
 ---------------------------------------
@@ -534,13 +535,14 @@ There's a module for that! (Actually several, but we are going to use this one)
 * Works with many different servers
 * Allows separation of python app and web server processes
   
-.. note:: talk about mod_python - runs python scripts directly, not bad for single scripts, but unweildy for applications and frameworks.
-
+.. note::
+  talk about mod_python - runs python scripts directly, not bad for single
+  scripts, but unwieldy for applications and frameworks.
 
 Sounds Great, Let's Go!
 -----------------------
 
-.. code-block:: bash
+::
 
     yum install mod_wsgi
 
@@ -553,8 +555,10 @@ Let's clone the systemview app into a reasonable location while we are at it
     cd systemview
     git checkout wsgi
 
-.. note:: Talk about the location - can be anywhere, but be consistent - /var/www is actually not in the web root, not accessible by default, don't put things under the docroot!
-
+.. note::
+  Talk about the location - can be anywhere, but be consistent - /var/www is
+  actually not in the web root, not accessible by default, don't put things
+  under the docroot!
 
 Don't Forget Virtualenv!
 ------------------------
@@ -567,21 +571,21 @@ Don't Forget Virtualenv!
     source venv/bin/activate
     pip install -r requirements.txt
 
-
 And lets make sure everything is owned by the web server:
 
 .. code-block:: bash
     
     chown -R apache ../systemview
 
-
-.. note:: Web server user/group ownership is a major source of breakage - get cloning/pulling as the wrong user will change perms on files, possibly breaking things
-
+.. note::
+  Web server user/group ownership is a major source of breakage - get
+  cloning/pulling as the wrong user will change perms on files, possibly
+  breaking things
 
 What Makes an App WSGI?
 -----------------------
 
-.. code-block:: bash
+::
     
     systemview.wsgi
 
@@ -596,15 +600,14 @@ What Makes an App WSGI?
     from systemview import app as application
 
 
-
 Configuring Apache for Systemview
 ---------------------------------
 
-.. code-block:: bash
+::
 
     /etc/httpd/conf.d/systemview.conf
 
-.. code-block:: bash
+.. code-block:: apache
 
     WSGISocketPrefix /var/run
     WSGIDaemonProcess systemview user=apache group=apache threads=5
@@ -621,15 +624,17 @@ Configuring Apache for Systemview
 
 .. note:: This will go into a vhost some day
 
-
 Even More Voila
 ---------------
 
 http://localhost:8080/systemview
 
-There are a lot of steps to getting this app up, wouldn't it be nice to automate this?
+There are a lot of steps to getting this app up, wouldn't it be nice to automate
+this?
 
-.. note:: Future topics - configuration management and automated deploys, virtual hosts, best practices for app location, Nginx, UWSGI, PHP-FPM, etc
+.. note::
+  Future topics - configuration management and automated deploys, virtual hosts,
+  best practices for app location, Nginx, UWSGI, PHP-FPM, etc
 
 Homework
 --------
