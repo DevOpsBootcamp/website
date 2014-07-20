@@ -1,4 +1,3 @@
-====================
 Lesson 9: Networking
 ====================
 
@@ -12,7 +11,7 @@ ECE/CS 372 at OSU covers this content, more or less
 What is a network?
 ------------------
 
-"a group or system of interconnected people or things"
+"*a group or system of interconnected people or things*"
 
 To us, a network is:
 
@@ -23,12 +22,12 @@ To us, a network is:
 What is a protocol?
 -------------------
 
-"A set of agreed upon rules for communication"
+"*A set of agreed upon rules for communication*"
 
 * Defines sequence & format of packets being sent
 
 The OSI Model
-=============
+-------------
 
 Open Systems Interconnection
 
@@ -56,6 +55,7 @@ Networking Hardware
 RS-232
 
 .. figure:: static/db25.png
+    :align: center
 
 Layer 2: Data Link
 ------------------
@@ -80,36 +80,36 @@ Network and host addressing
 Layer 4: Transport
 ------------------
 
-Interact directly with program
-same-order delivery, reliability, flow control, and congestion avoidance
+Interact directly with program same-order delivery, reliability, flow control,
+and congestion avoidance
 
-TCP: Transmission Control Protocol
+:TCP: Transmission Control Protocol
 
 * used by HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet
 
-
-
-UDP: User Datagram Protocol
+:UDP: User Datagram Protocol
 
 * No error checking built in
 * No retransmission delays
 * VoIP, media, games
 
 Get your hands dirty
-====================
+--------------------
+
 In a linux terminal run:::
 
   ip a
 
 These will display information about your network interfaces.
-See also:::
+
+See also::
 
   ifconfig
   iwconfig
 
 
 Example output:
-===============
+---------------
 
 ::
 
@@ -124,7 +124,8 @@ Example output:
            valid_lft forever preferred_lft forever
 
 Netmask:
-========
+--------
+
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -146,7 +147,8 @@ Available Hosts:   192.168.1.[1-254]
 Broadcast address: 192.168.1.255
 
 Netmask Example:
-================
+----------------
+
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -155,7 +157,8 @@ Decimal IP Address          Binary IP Address
 ====================    ====================================
 
 Netmask Example:
-================
+----------------
+
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -173,7 +176,8 @@ Host (Binary)
 =======================    ===================================
 
 Netmask Example:
-================
+----------------
+
 ====================    ====================================
 Decimal IP Address          Binary IP Address          
 --------------------    ------------------------------------
@@ -194,8 +198,8 @@ Available Hosts:   192.168.[64-127].[1-254]
 
 Broadcast Address: 192.168.127.255
 
-Clever Slide Title
-==================
+Routes
+------
 
 :: 
 
@@ -216,7 +220,7 @@ Clever Slide Title
     192.168.1.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan1
 
 Bootstrapping
-=============
+--------------
 
 What happens when your computer connects to a network?
 
@@ -224,7 +228,7 @@ What happens when your computer connects to a network?
 2. Static or dynamic configuration is applied
 
 Static Configuration
-====================
+--------------------
 
 Must in advance know:
 
@@ -234,18 +238,19 @@ Must in advance know:
 * DNS Servers (optional in some cases)
 
 Dynamic Configuration
-=====================
+---------------------
 
 All of the statically defined parameters are retrieved over the network via DHCP
 
 But how do you communicate over the network without a network configuration?
 
 Reserved IPv4 Addresses
-=======================
+-----------------------
 
 * 127.0.0.1
 
 .. figure:: static/noplacelike_home.jpg
+    :align: right
 
 * 192.168.0.0
 * 172.16.0.0
@@ -253,9 +258,9 @@ Reserved IPv4 Addresses
 * 169.254.0.0
 
 Public vs Private Address
-=========================
+-------------------------
 
-NAT - Network Address Translation
+:NAT: Network Address Translation
 
 * lose end-to-end traceability
 * hides internal network topology
@@ -263,35 +268,42 @@ NAT - Network Address Translation
 * conserves limited public IP's
 
 Network Devices
-===============
+---------------
 
 .. figure:: static/router.jpg
+    :align: center
 
 .. figure:: static/switch.jpg
     :align: center
+    :scale: 70%
 
 .. figure:: static/hub.jpg
+    :align: center
 
 Network Devices
-===============
+---------------
 
 .. figure:: static/router1.jpg
+    :align: center
 
 .. figure:: static/switch1.gif
-
+    :align: center
 
 Control Layer
-=============
+-------------
 
 Connection oriented vs Connectionless
 
 Collisions
-==========
-CSMA CA - all Wireless networks use this
-Carrier Sense Multiple Access with Collisions Avoidance
+----------
+
+CSMA CA
+  All Wireless networks use this Carrier Sense Multiple Access with Collisions
+  Avoidance
 
 CSMA CD
-Carrier Sense Multiple Access with Collisions Detection
+  Carrier Sense Multiple Access with Collisions Detection
 
 Why is this important?
+
 http://articles.latimes.com/2007/aug/15/local/me-lax15
