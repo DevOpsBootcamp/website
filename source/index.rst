@@ -71,7 +71,6 @@ Contents:
    faq
    mission
    vagrant
-   documentation
 
 .. toctree::
     :hidden:
