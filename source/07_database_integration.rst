@@ -1,6 +1,5 @@
-==================================================
 Lesson 7: Databases
-==================================================
+===================
 
 Filesystems Review Questions
 ----------------------------
@@ -11,9 +10,10 @@ Filesystems Review Questions
 - ext3?
 - ext4?
 
-.. note:: ext2 may not be consistent upon restart
+.. note::
+    * ext2 may not be consistent upon restart
     * ext3 and ext 4 are not
-    * but consistency only guarentees metadata is intact
+    * but consistency only guarantees metadata is intact
 
     * What might happen to a busy ext2 volume on power loss?
     * ext3?
@@ -25,34 +25,32 @@ But what about our poor data?
 .. rst-class:: build
 
 - Possibly gone, like the wind
-
 - Or worse: Half completed writes!
-
-- **General purpose operating systems, by design, don't understand structured data**
+- **General purpose operating systems, by design, don't understand structured
+  data**
 
 Enter the Database
-==================
+------------------
 
-  A database system's fundamental goal is to provide consistent views of structured
-  data using the tools the operating system makes available.
+  A database system's fundamental goal is to provide consistent views of
+  structured data using the tools the operating system makes available.
 
   Chief among them is *fsync(2)*
 
-.. note:: fsync instructs the operating system to flush all writes to disk before returning
+.. note::
+  fsync instructs the operating system to flush all writes to disk before
+  returning
 
 Structure
-=========
+---------
 
 SQL databases are structured around **Relational Algebra**
 
 - Tables
 
   - **Columns** are fields
-
   - **Rows** define a relation between fields
-
 - A **Primary key** is a set of columns that uniquely identify rows in a table
-
 - A **Foreign key** is a column that matches the primary key of another table
 
 Relational Algebra Visualized
@@ -67,7 +65,7 @@ Relational Algebra Visualized
 .. note:: joins are the principle use of relations.
 
 Installing MySQL
-================
+----------------
 
 .. code-block:: bash
 
@@ -89,14 +87,14 @@ Configuration
 
 .. rst-class:: build
 
-- /etc/my.conf
+- ``/etc/my.conf``
 - The most important MySQL tuning rule: 
-   - almost always prefer **InnoDB**
 
+   - almost always prefer **InnoDB**
  
 .. note:: 
-    we're going to add 
-       default_storage_engine         = InnoDB
+    we're going to add: 
+    ``default_storage_engine         = InnoDB``
 
 Users & Permissions
 -------------------
@@ -129,7 +127,7 @@ Importing Data
     DESCRIBE nobel;
 
 Basic Queries
-=============
+-------------
 
 4 basic operations on data:
 
@@ -190,8 +188,9 @@ UPDATE
     WHERE 
        subject='Peace' AND yr='1951';
 
-.. note:: obviously Andrew Ryan deserves the peace price for his work
-          in the Rapture planned community
+.. note::
+  obviously Andrew Ryan deserves the peace price for his work in the Rapture
+  planned community
 
 Practice
 --------
@@ -208,14 +207,17 @@ DELETE
     WHERE 
        yr = 1989, subject = peace;
 
-.. note:: peace prizes can be contraversial, and perhaps there's a political interest in censoring our database?
+.. note::
+  peace prizes can be controversial, and perhaps there's a political interest in
+  censoring our database?
 
 Further Reading, Resources, etc.
 --------------------------------
 
-  * Codd, E.F. (1970). "A Relational Model of Data for Large Shared Data Banks". Communications of the ACM 13 (6): 377–387.
-  * sqlzoo.net
-  * CS 440: Database Management Systems
+- Codd, E.F. (1970). "A Relational Model of Data for Large Shared Data Banks".
+  Communications of the ACM 13 (6): 377–387.
+- sqlzoo.net
+- CS 440: Database Management Systems
 
 Hands-On: Make a Database
 -------------------------
@@ -231,10 +233,12 @@ Hands-On: Make a Database
            WITH GRANT OPTION;
 
 
-* Grant a user priviliges on your new database
+* Grant a user privileges on your new database
 
-.. note:: challenge them to do this based on the material in the last hour, maybe also demo the mysql console. Make sure everyone remembers the username and password for the next step.
-
+.. note::
+  challenge them to do this based on the material in the last hour, maybe also
+  demo the mysql console. Make sure everyone remembers the username and password
+  for the next step.
 
 Databases in Applications
 -------------------------
@@ -245,7 +249,10 @@ Applications love databases.
 * User data - complex authentication and authorization
 * Logging, statistics, state and session data, etc...
 
-.. note:: All the various things an app might use a database for - note that the vast majority of web apps use them for something
+.. note::
+
+  All the various things an app might use a database for - note that the vast
+  majority of web apps use them for something
 
 Native SQL
 ----------
@@ -272,7 +279,11 @@ Python:
 
     db.close()
 
-.. note:: Note the plain SQL statement, recognizable from earlier. Point out the cumbersome nature of creating the connection, creating a cursor, sending the sql, getting data from the cursor (iterating over it if you want multiple results), etc. Similar interfaces exist for virtually all languages.
+.. note::
+  Note the plain SQL statement, recognizable from earlier. Point out the
+  cumbersome nature of creating the connection, creating a cursor, sending the
+  sql, getting data from the cursor (iterating over it if you want multiple
+  results), etc. Similar interfaces exist for virtually all languages.
 
 Introducing the ORM
 -------------------
@@ -284,8 +295,12 @@ Object Relational Mapper
 * Lets you point to different databases with the same syntax
 * Intelligently manages transactions to the database
 
-.. note:: Make sure people know what you mean by "object", mention possible difference between Postgres, sqlite, MySql, etc. Objects may map to one table, but might also incorporate relationships. ORMs also often optimize queries and manage transactions to make database queries as efficient as possible (like all other magic, though, sometimes this can backfire).
-
+.. note::
+  Make sure people know what you mean by "object", mention possible difference
+  between Postgres, sqlite, MySql, etc. Objects may map to one table, but might
+  also incorporate relationships. ORMs also often optimize queries and manage
+  transactions to make database queries as efficient as possible (like all other
+  magic, though, sometimes this can backfire).
 
 Life With a Python ORM
 ----------------------
@@ -301,36 +316,54 @@ Look, ma! No SQL!
 
 Much easier to read and understand, but requires some setting up first.
 
-.. note:: Of course we actually have to do a lot of setup work - setting up the model, engine, session, etc - but you do that once and can interact with the database as much as you want, without worrying about the cursor or connection. Note that we have no SQL in this statement, it is pythonic and has pythonic methods. The database table is now an object.
-
+.. note::
+  Of course we actually have to do a lot of setup work - setting up the model,
+  engine, session, etc - but you do that once and can interact with the database
+  as much as you want, without worrying about the cursor or connection. Note
+  that we have no SQL in this statement, it is pythonic and has pythonic
+  methods. The database table is now an object.
 
 Setting Up the Magic - SqlAlchemy
 ---------------------------------
 
-SqlAlchemy - a popular Python ORM, frequently used in Flask apps (like SystemView!).
+SqlAlchemy - a popular Python ORM, frequently used in Flask apps (like
+SystemView!).
 
 To use it, we'll need to:
 
 * Import sqlalchemy
-* Create a "model" - a represenation of our data in code
+* Create a "model" - a representation of our data in code
 * Create an "engine" and connect it to the database
 * Create a session to store the model instances and transactions
 
-.. note:: model - a object with all the properties, attributes, etc of our data, can also include code to manipulate that data in order to represent a specific view (i.e. automatically returning sorted results). It's just a python class, instances are just python objects.
-  Engine - this handles the authentication with the database, it's like the MySQLdb.connect above.
-  Session - an in-memory record of your changes to objects - all the orm objects you instantiate live int he session, and are only saved to the database when you say so.
+.. note::
 
+  :Model:
+    A object with all the properties, attributes, etc of our data, can also
+    include code to manipulate that data in order to represent a specific view
+    (i.e. automatically returning sorted results). It's just a python class,
+    instances are just python objects.
+  :Engine:
+    This handles the authentication with the database, it's like the
+    MySQLdb.connect above.
+  :Session:
+    An in-memory record of your changes to objects - all the orm objects you
+    instantiate live int he session, and are only saved to the database when you
+    say so.
 
 Let's Databasify Systemview
 ---------------------------
 
 Project:
 
-* Store search terms, then provide them as links on the search page, so you can just click the most common terms you search for.
+- Store search terms, then provide them as links on the search page, so you can
+  just click the most common terms you search for.
 
 What else? Ideas?
 
-.. note:: solicit ideas for another column or two, maybe number of times the term is used (easy incrementing example), or number of results from the least search.
+.. note::
+  Solicit ideas for another column or two, maybe number of times the term is
+  used (easy incrementing example), or number of results from the least search.
 
 Hands On
 --------
@@ -369,8 +402,16 @@ Hands On (Cont...)
 
       pip install -r requirements.txt
 
-.. note:: Talk about git branches again, explain tracking, git pull for people who already have it cloned, etc. Talk about the virtualenv, have people create a new one if they have lost the one they made last time. Talk about pip and what requirements.txt is all about - point out how easy it is to set up an app this way. Make sure requirements.txt contains sqlalchemy.
-  DANGER! - people will need mysql-dev package! name varies by distribution, for centos it is libmysqlclient-dev
+.. note::
+
+  Talk about git branches again, explain tracking, git pull for people who
+  already have it cloned, etc. Talk about the virtualenv, have people create a
+  new one if they have lost the one they made last time. Talk about pip and what
+  requirements.txt is all about - point out how easy it is to set up an app this
+  way. Make sure requirements.txt contains sqlalchemy.
+
+  **DANGER!** - people will need mysql-dev package! name varies by distribution,
+  for centos it is libmysqlclient-dev
 
 Goals
 -----
@@ -383,4 +424,13 @@ Goals
 
 http://docs.sqlalchemy.org/en/rel_0_9/orm/tutorial.html
 
-.. note:: The code in the repo should have a simple model with one column, 'term', you can make a 'models.py', or just put it all in one file. If you separate them, talk about MVC. The code should start an sqlalchemy engine and session, save the search term normalized (lowercased, stripped), the column should be set to unique. Make sure the code handles the case of the term already exisiting in the database (when you add a count, increment the count when the term exists). You should probably initialize the db directly in the code, otherwise you'll have to open up a python console, import the app and run the db update.
+.. note::
+  The code in the repo should have a simple model with one column, 'term', you
+  can make a ``models.py``, or just put it all in one file. If you separate
+  them, talk about MVC. The code should start an sqlalchemy engine and session,
+  save the search term normalized (lowercased, stripped), the column should be
+  set to unique. Make sure the code handles the case of the term already
+  existing in the database (when you add a count, increment the count when the
+  term exists).  You should probably initialize the db directly in the code,
+  otherwise you'll have to open up a python console, import the app and run the
+  db update.

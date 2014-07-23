@@ -1,13 +1,8 @@
-=========================
 Lesson 1: The Very Basics
 =========================
 
-.. note:: Lance and Emily introduce themselves
-
 Today's Agenda
-==============
-
-.. note:: Emily presents
+--------------
 
 * Getting (to) Linux
 * The Terminal & Shell
@@ -24,9 +19,7 @@ Today's Agenda
     * Etiquette
 
 A note about notation
-=====================
-
-.. note:: Emily presents
+---------------------
 
 .. figure:: /static/stickynote.png
     :align: right
@@ -41,9 +34,7 @@ A note about notation
 * foo, bar, baz, username, etc.
 
 How to get (to) Linux
-=====================
-
-.. note:: Emily explains OSU-specific options
+---------------------
 
 .. figure:: /static/dualboot.png
     :align: right
@@ -51,22 +42,24 @@ How to get (to) Linux
 
 * How many have it already installed?
 * Install VM or dual-boot
-* When stuck on Windows, use PuTTy:
-    * http://www.chiark.greenend.org.uk/~sgtatham/putty/
+* When stuck on Windows, use `PuTTy`_:
 * Students::
 
     ssh <onidusername>@shell.onid.oregonstate.edu
 
-* flip{1-3} are Engineering servers; less reliable
 
 .. figure:: /static/osm_server.jpg
-    :align: center
-    :scale: 75%
+    :align: right
+    :scale: 50%
+
+* flip{1-3} are Engineering servers; less reliable
+
+.. _PuTTy: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 
 Trying Linux on a Virtual Machine
-=================================
+---------------------------------
 
-* Virtual machines act as a full system on a physical machine
+Virtual machines act as a full system on a physical machine
 
 .. figure:: /static/virtualbox.png
     :align: right
@@ -82,10 +75,11 @@ Trying Linux on a Virtual Machine
 * Easy way to test without breaking your machine!
 
 Installing Linux on Virtualbox
-==============================
+------------------------------
 
-.. note:: Try other distributions if you like to see what's different. Debian
-          is a great next step to try out.
+.. note:: 
+  Try other distributions if you like to see what's different. Debian is a great
+  next step to try out.
 
 #. Download and install: https://www.virtualbox.org/wiki/Downloads
 #. Grab the latest minimal ISO: http://centos.osuosl.org/6/isos/x86_64/
@@ -96,11 +90,11 @@ Installing Linux on Virtualbox
 #. ``\o/``
 
 Vagrant & VirtualBox
-====================
+--------------------
 
-.. note:: We're using CentOS as our base image for now but will use Debian
-          later. You can see the gui by uncommenting the line in the
-          Vagrantfile.
+.. note::
+  We're using CentOS as our base image for now but will use Debian later. You
+  can see the gui by uncommenting the line in the Vagrantfile.
 
 * Vagrant is a tool used with Virtualbox (and other) platforms
 * Make a reproducible pre-installed Linux environment
@@ -120,10 +114,11 @@ Vagrant & VirtualBox
     vagrant ssh
 
 Vagrant cheat sheet
-===================
+-------------------
 
-.. note:: We'll get into more detail later in how you can access ports on your
-          VMs and other use cases.
+.. note::
+  We'll get into more detail later in how you can access ports on your VMs and
+  other use cases.
 
 .. code-block:: bash
 
@@ -143,7 +138,7 @@ Also check out the `Vagrant Documentation
 <http://docs.vagrantup.com/v2/cli/index.html>`_ for more information.
 
 The Terminal
-============
+------------
 
 .. figure:: /static/crashcart.jpg
     :align: right
@@ -163,14 +158,16 @@ The Terminal
     :align: left
 
 Basic Shell Commands
-====================
+--------------------
 
-.. note:: Explain architecture: built in commands vs. external binaries
-    Demo commands:
+.. note::
+
+  :Explain architecture: built in commands vs. external binaries
+  :Demo commands:
     Directory movement and file manipulation: Cd, pwd, ls, rm, mv, touch
-    User info: id, whoami, w
-    Pipes, redirection (pipe.txt, redirect.txt)
-    Special variables: $?, $$ (pid.sh), !!, !*, !$
+  :User info: id, whoami, w
+  :Pipes: redirection (pipe.txt, redirect.txt)
+  :Special variables: $?, $$ (pid.sh), !!, !*, !$
 
 .. figure:: /static/pylogo.png
     :align: right
@@ -180,7 +177,7 @@ Basic Shell Commands
 * invoke/call an installed program
 * get help: ``man <program>``
 
-.. code-block:: bash
+::
 
     test@x230 ~ $ tree
     .
@@ -197,9 +194,9 @@ Basic Shell Commands
     6 directories, 5 files
 
 Invoking a script
-=================
+-----------------
 
-.. note:: Emily. Permissions discussed later.
+.. note:: Permissions discussed later.
 
 .. code-block:: bash
 
@@ -217,7 +214,7 @@ you call it. They tell it in more detail what you want to do.
 Why pass arguments on the command line rather than having an interactive mode?
 
 File Paths
-==========
+----------
 
 * ``.`` means current directory
 * ``..`` means parent directory
@@ -237,11 +234,12 @@ File Paths
     test@x230 ~/Documents $
 
 
-.. note:: root directory is not to be confused with a home directory for the
-          root account
+.. note::
+  root directory is not to be confused with a home directory for the root
+  account
 
 Special Characters
-==================
+------------------
 
 * escape with ``\`` to use them literally
 * # means a comment
@@ -254,9 +252,7 @@ Special Characters
     :scale: 50%
 
 Type less
-=========
-
-.. note:: who presents this slide
+---------
 
 * Reverse-i-search
     * ctrl+r then type command
@@ -271,7 +267,7 @@ Type less
 Automation > Typing > Mouse
 
 Help, get me out of here!
-=========================
+-------------------------
 
 .. figure:: /static/exit.jpg
     :align: center
@@ -284,9 +280,9 @@ Help, get me out of here!
 * read what's on your screen; it'll help you
 
 Knowledge Check
-===============
+---------------
 
-.. code-block:: bash
+::
 
     test@x230 ~ $ tree
     .
@@ -306,26 +302,22 @@ Knowledge Check
 * What is my current directory when I run that command?
 
 More about Man Pages
-====================
-
-.. note:: Lance
+--------------------
 
 * the manual (rtfm)::
 
     $ man <program>
     $ man man
 
-* use `/phrase` to search for `phrase` in the document; `n` for next match
+* use ``/phrase`` to search for ``phrase`` in the document; ``n`` for next match
 * else::
 
     $ <program> --help
 
 Documentation
-=============
+-------------
 
-.. note:: Emily
-
-* Man pages, blogs you find by Googling, StackOverflow
+Man pages, blogs you find by Googling, StackOverflow
 
 .. figure:: /static/google.gif
     :align: center
@@ -339,7 +331,7 @@ Documentation
 * Start now
 
 Asking for help
-===============
+---------------
 
 It's okay to ask.
 
@@ -356,10 +348,7 @@ It's okay to ask.
 Don't waste experts' time, but do build your expertise.
 
 IRC
-===
-
-.. note:: probably Emily, though Lance might know more details of history &
-          implementation
+---
 
 .. figure:: /static/multiple_networks.gif
     :scale: 40%
@@ -371,11 +360,11 @@ IRC
 * The people you want to listen to are there
 
 A Client
-========
+--------
 
-.. note:: Emily switches to terminal and shows example
+.. note:: Switche to a terminal and show example
 
-* use irssi in screen
+Use irssi in screen
 
 .. code-block:: bash
 
@@ -393,13 +382,13 @@ A Client
     $ screen -dr IRC
 
 Networks
-========
+--------
 
 .. figure:: /static/multiple_networks.gif
     :scale: 30%
     :align: center
 
-.. code-block:: bash
+::
 
     /connect irc.freenode.net
 
@@ -410,33 +399,36 @@ Networks
     /msg nickserv identify <password>
 
 Channels
-========
+--------
 
-.. code-block:: bash
+::
 
     /join #osu-lug
     /join #devopsbootcamp
 
-* ``/list`` tells all channels on network
-    * Don't do this on Freenode!
-* ``/topic`` tells you the current channel's topic
-* ``/names`` tells you who's here
+:``/list``:
+  - tells all channels on network
+  - Don't do this on Freenode!
+:``/topic``: tells you the current channel's topic
+:``/names``: tells you who's here
 
 Commands
-========
+--------
 
 * take action with ``/me does thing```
 * everything else starting with / is a command
 
-.. code-block:: bash
+::
 
     /say $thing
     /join, /part, /whois <nick>, /msg, /help <command>
 
-Note that nothing shows up in the channel when you run a /whois command; it
+Note that nothing shows up in the channel when you run a ``/whois`` command; it
 shows up either in your status buffer or your conversation with the person.
 
-.. code-block:: bash
+.. rst-class:: codeblock-sm
+
+::
 
     12:04 -!- _test_ [~test@c-50-137-46-63.hsd1.or.comcast.net]
     12:04 -!-  ircname  : Example User
@@ -449,7 +441,7 @@ shows up either in your status buffer or your conversation with the person.
     12:04 -!- End of WHOIS
 
 Useful tricks
-=============
+-------------
 
 * Tab-complete works on nicknames. use it.
 * Highlight when people say your name
@@ -459,14 +451,14 @@ Useful tricks
     * hamper is also a bot
 
 Screen & Irssi Hints
-====================
+--------------------
 
 * Paste with ctrl+shift+v
     * PuTTY defaults to right-click to paste
-* to get back, `screen -dr IRC`
-* Can you use `man screen` to find out what the d and r flags mean?
+* to get back, ``screen -dr IRC``
+* Can you use ``man screen`` to find out what the d and r flags mean?
 
-.. code-block:: bash
+::
 
  SCREEN(1)                                                               SCREEN(1)
 
@@ -480,7 +472,7 @@ Screen & Irssi Hints
  Manual page screen(1) line 1 (press h for help or q to quit)
 
 Etiquette
-=========
+---------
 
 * Lurk more
 * Don't ask to ask
@@ -493,7 +485,7 @@ Etiquette
 * Choose your nick carefully
 
 Terminology
-===========
+-----------
 
 * ping/pong
 * flapping
@@ -512,10 +504,10 @@ Terminology
     * ``/me &`` means afk
 
 Review
-======
+------
 
 * What's Linux?
-* How do you open a terminal emultor?
+* How do you open a terminal emulator?
     * this varies between window managers
 * I have the script ``test.py``. How do I run it??
 * How do you list all the files in the current directory?

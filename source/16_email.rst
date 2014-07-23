@@ -1,9 +1,5 @@
-========
-Services
-========
-
-Email
-=====
+Lesson 16: Email
+================
 
 * Email service
     * How it works
@@ -19,14 +15,17 @@ Email: System Components
 * Access Agent (MAA)
 
 .. note:: 
-    MUA – lets users read & compose mail
-     * Thunderbird, mutt, etc
-    MTA – routes messages to other machines
-     * sendmail, postfix, exim, qmail
-    MDA -- places messages in local store
-     * mail.local, procmail
 
-    MAA – access to mail store (i.e IMAP, POP)
+    :MUA:
+      - lets users read & compose mail
+      - Thunderbird, mutt, etc
+    :MTA:
+      - routes messages to other machines
+      - sendmail, postfix, exim, qmail
+    :MDA:
+      - places messages in local store
+      - mail.local, procmail
+    :MAA: access to mail store (i.e IMAP, POP)
 
 Email: System Components
 ------------------------
@@ -34,20 +33,22 @@ Email: System Components
 .. figure:: static/email_routing.jpg
     :align: center
 
-.. note:: The most confusing part about email is understanding the routing.
-    Knowing the different components is important to fully grasping it.
+.. note::
+  The most confusing part about email is understanding the routing.  Knowing the
+  different components is important to fully grasping it.
 
 Transport Agents
 ----------------
 
-* Accept mail form user agent
-* Postfix
-    * More common, easier to configure & use
-* Sendmail
-    * Highly configurable, steep learning curve
-* Others
-    * Exim – Similar to Postfix
-    * Qmail – Logging is horrid, but some people like it
+Accept mail form user agent
+
+:Postfix:
+  More common, easier to configure & use
+:Sendmail:
+  Highly configurable, steep learning curve
+
+:Exim: Similar to Postfix
+:Qmail: Logging is horrid, but some people like it
 
 .. note:: 
     Postfix is the easiest to learn and understand, but queue management is a “black
@@ -74,6 +75,7 @@ Delivery Agents & Message Stores
 
 .. note:: 
     Consider scaling issues for the mailstore.
+
     Generally maildir is the best & most compatible option
 
 Anatomy of a Mail Message
@@ -86,18 +88,19 @@ Anatomy of a Mail Message
     * Great for tracking down problems
 * Body of the message
 
-.. note:: Headers:
-     * Know how to identify and track queue id's
-     * Originator starts at the bottom
-     * Headers can be forged
-     * X- Headers non-RFC headers
-     * Message ID is always unique
+.. note::
+  Headers:
+   * Know how to identify and track queue id's
+   * Originator starts at the bottom
+   * Headers can be forged
+   * X- Headers non-RFC headers
+   * Message ID is always unique
 
 MTA Log Files
 -------------
 
 * Track emails via queue ID
-    * Look something like: 03CE18819A
+    * Look something like: ``03CE18819A``
 * Tracking via message ID
 * Informational fields
     * to, from, status, relay, etc

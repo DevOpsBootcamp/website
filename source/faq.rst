@@ -23,19 +23,18 @@ technologies that the lectures will discuss.
 I don't know about computers! Can I still join?
 -----------------------------------------------
 
-YES! If you already knew all this stuff, you'd be teaching rather than
-studying it. If you think you don't know enough, try anyways -- in the worst
-case you'll discover that your self-assessment was correct, and in the best
-case, you'll become a successful open source contributor.
+YES! If you already knew all this stuff, you'd be teaching rather than studying
+it. If you think you don't know enough, try anyway -- in the worst case you'll
+discover that your self-assessment was correct, and in the best case, you'll
+become a successful open source contributor.
 
 When will meetings be?
 ----------------------
 
-Weekday evenings, probably Thursday or Friday. It depends on when the people
-taking the course are available. Use the `signup form`_ to indicate your
-availability.
-
-.. _signup form: https://docs.google.com/forms/d/1TGcGJ7Q-Z8d9g8fiECoIsEVLWWi8N0QYBnMNuIQGIPs/viewform
+Weekday evenings, with a day of the week being chosen during the first meeting.
+We try to choose a day that works best for most students but its always
+difficult to find something that works for everyone. Last year we had meetings
+on Thursdays for example.
 
 Is this only for students?
 --------------------------
@@ -68,6 +67,6 @@ on that content and you'll be ready to join in Winter term.
 I have a question?
 ------------------
 
-Ask it. On IRC if you have that set up, or email devopsbootcamp@osuosl.org or
-the mailing list.
+Ask it on IRC if you have that set up, or email devopsbootcamp@osuosl.org or the
+mailing list.
 

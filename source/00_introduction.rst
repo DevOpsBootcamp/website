@@ -1,19 +1,19 @@
-============================
 DevOps Bootcamp Introduction
 ============================
 
 OSU OSL & OSU LUG
-devopsbootcamp.osuosl.org
+
+http://devopsbootcamp.osuosl.org
 
 What's DevOps?
-==============
+--------------
 
 .. figure:: /static/devops.jpg
 
 Software Development + Operations Engineering
 
 What's BootCamp?
-================
+----------------
 
 * New this year
 * New this year
@@ -26,15 +26,15 @@ What's BootCamp?
     * student job
 
 Why are we doing this?
-======================
+----------------------
 
-* OSL’s move to EECS
+* OSL's move to EECS
 * Bridge the “Skills Gap”
 * Demand from companies for students
 * Build community
 
 What you'll do:
-===============
+---------------
 
 * Learn:
     * Linux systems
@@ -48,7 +48,7 @@ What you'll do:
         * solve real problems
 
 Can you do it?
-==============
+--------------
 
 * Probably!
 * No background knowledge needed
@@ -59,7 +59,7 @@ Can you do it?
 * If in doubt… try anyway!
 
 Career Paths:
-=============
+-------------
 
 * Hands-on learning & OSL reputation:
     * Internships
@@ -72,7 +72,7 @@ Career Paths:
     * having your own ‘playground’ to experiment with
 
 OSL Hiring:
-===========
+-----------
 
 * Students need basic skills to join
     * Systems engineers
@@ -83,7 +83,7 @@ OSL Hiring:
     * Google, Rackspace, Intel, Microsoft, Mozilla, Facebook
 
 What next?
-==========
+----------
 
 * Find our site (http://devopsbootcamp.osuosl.org)
 * Fill out registration with times available

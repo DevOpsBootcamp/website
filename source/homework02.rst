@@ -1,5 +1,5 @@
-Lesson 2 Homework
-=================
+Lesson 2: Homework
+==================
 
 #. Why is a salt used when storing encrypted passwords in ``/etc/shadow``?
 #. What portion of the MD5 hash ``'$1$xxUwcovy$JfV9i7j9H/NFA3RBCrVHN.'`` is the

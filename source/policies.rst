@@ -34,23 +34,22 @@ previous session, so if you miss a meeting, you're responsible for studying
 the basics of its content on your own. To facilitate this, we will provide
 resources for independent study about each topic that we cover.
 
-Although Bootcamp leaders will be available at times outside of the regular
-meetings to help answer any questions about any of the training program's
-content, we will not spend class time reviewing material for those who skipped
-a lecture. If you attended a lesson and don't understand something from it,
-you're welcome to ask in class, because others very likely have the same
-concern. But if you want to make up a class you skipped, it's disrespectful to
-those who attended to spend their class time on questions which you could
-resolve on your own time.
+Bootcamp leaders will be available at times outside of the regular meetings to
+help answer any questions about the training program's content. We will not
+spend class time reviewing material for those who skipped a lecture. If you
+attended a lesson and don't understand something from it, you're welcome to ask
+in class, because others very likely have the same concern. But if you want to
+make up a class you skipped, it's disrespectful to those who attended to spend
+their class time on questions which you could resolve on your own time.
 
 Laptops
 =======
 
-As the course progresses, you will need a laptop. We hope and
-recommend that you will decide to set up your laptop to dual-boot to Linux as
-the course progresses, but will not force you to. If you don't own a laptop
-and are an OSU student, you can check out a laptop from the OSU Library for at
-least 24 hours at a time.
+As the course progresses, you will need a laptop. We hope and recommend that you
+will decide to set up your laptop to dual-boot to Linux as the course
+progresses, but but it's not required. If you don't own a laptop and are an OSU
+student, you can check out a laptop from the OSU Library for at least 24 hours
+at a time.
 
 Realistically, as long as it's new enough to boot from USB and connect to
 wireless networks, your laptop's specifications don't matter much.

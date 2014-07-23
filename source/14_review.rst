@@ -1,5 +1,5 @@
-Review
-======
+Lesson 14: Review
+=================
 
 Today's Goals
 -------------
@@ -10,14 +10,17 @@ Today's Goals
 * Understand what's happening
 
 How to set up a VM
-==================
+------------------
 
 Enable VirtualBox (VT extensions)
 ---------------------------------
 
-Install `VirtualBox <https://www.virtualbox.org/wiki/Downloads>`_
+Install `VirtualBox`_
 
-Install `Vagrant <http://www.vagrantup.com/>`_
+Install `Vagrant`_
+
+.. _VirtualBox: https://www.virtualbox.org/wiki/Downloads
+.. _Vagrant: http://www.vagrantup.com/
 
 Linux
 -----
@@ -35,44 +38,46 @@ Linux
     vagrant ssh
 
 IRC
-===
+---
 
-* Use the `LUG guide <http://lug.oregonstate.edu/blog/irc/>`_ 
+* Use the `LUG guide`_ 
 * #devopsbootcamp on irc.freenode.net
-* Also join the `Mailing List <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_
+* Also join the `Mailing List`_
+
+.. _LUG guide: http://lug.oregonstate.edu/blog/irc/
+.. _Mailing List: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp
 
 GitHub Account
-==============
+--------------
 
-SSH keys
---------
+:SSH keys:
 
-``ssh-keygen -t rsa``
+::
 
-Your public key is in ~/.ssh/id_rsa.pub by default. 
+  ssh-keygen -t rsa
+
+Your public key is in ``~/.ssh/id_rsa.pub`` by default. 
 
 GitHub -> Account Settings (icon in upper right) -> SSH keys -> Add SSH key
 
-Joining the organization
-------------------------
+Joining the Github Org
+----------------------
 
-* Ping edunham in the IRC channel to add you
-
+* Ping Ramereth in the IRC channel to add you
 
 Installing the Web App
-======================
+----------------------
 
 Prerequisite tools
 ------------------
 
-On host machine, in devopsbootcamp-vagrant directory: 
+On host machine, in ``devopsbootcamp-vagrant`` directory: 
 
-.. code-block:: bash
+::
 
     git pull
     vagrant up
     vagrant ssh
-
 
 The Magic Script
 ----------------
@@ -89,21 +94,37 @@ Now that you're in the guest machine:
 Branches
 --------
 
-* Start one with ``git checkout -b branchname``
-* Which are you on? ``git branch``
-* Switch with ``git checkout branchname``
+:Start one with:
+
+::
+
+  git checkout -b branchname
+
+:Which are you on:
+
+::
+
+  git branch
+
+
+:Switch with:
+
+::
+
+  git checkout branchname
+
 
 Connecting to the App
-=====================
+---------------------
 
-In the guest machine, with virtualenv activated, ``python systemview.py``
+In the guest machine, with ``virtualenv`` activated, ``python systemview.py``
 
-Point the browser of your host machine at 127.0.0.1:5050
+Point the browser of your host machine at http://127.0.0.1:5050
 
-If changes in the app don't show up in your browser, use f5 to hard refresh
+If changes in the app don't show up in your browser, use ``F5`` to hard refresh
 
 Where am I?
-===========
+-----------
 
 In virtual machine?
 -------------------

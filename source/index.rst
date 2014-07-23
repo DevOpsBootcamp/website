@@ -6,11 +6,7 @@
 DevOps Bootcamp
 ===============
 
-.. note:: As we wrap up the first year of this program, we'd appreciate
-    feedback from everyone who got involved to help us make it even better
-    next year! The one-page survey is available `here <https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform>`_. 
-
-.. note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
+.. : note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
     reserved but typically get moved during the week of career fairs, so check
     back here to confirm locations.
 
@@ -36,7 +32,7 @@ DevOps Bootcamp
 
 
 DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
-aimed at boosting our impact and outreach while shrinking the skills gap for
+that aims to boost our impact and outreach while shrinking the skills gap for
 OSU students interested in DevOps.
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
@@ -49,10 +45,9 @@ community by training interested students from all disciplines in the
 real-world skills necessary for success as software developers and systems
 engineers. To this end, we'll be offering an extracurricular training program
 with 2 to 3 sessions per month through the school year, in which current OSL
-students and software professionals will teach all of the topics with which one
-must be familiar in order to succeed. Although hands-on labs will be offered
-later in the program, no initial familiarity with software development or Linux
-will be assumed.
+students and software professionals will teach all topics that are essential for
+success. Although hands-on labs will be offered later in the program, no initial
+familiarity with software development or Linux will be assumed.
 
 This program is based on the `PSU Braindump <http://braindump.cat.pdx.edu>`_,
 where for 21 years they have been turning PSU students into sysadmins who have
@@ -74,6 +69,8 @@ Contents:
    guide
    resources
    faq
+   mission
+   vagrant
 
 .. toctree::
     :hidden:
@@ -81,6 +78,7 @@ Contents:
     00_introduction
     01_the_very_basics
     02_single_system_fundamentals
+    homework02
     03_editors_git
     04_scripting_troubleshooting
     05_services_app
@@ -93,13 +91,7 @@ Contents:
     12_configmgmt
     13_opensource
     14_review
-    15_http
     16_email
-    mission
-    homework02
-    scripting
-    vagrant
-    documentation
 
 Indices and tables
 ==================
