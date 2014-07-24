@@ -251,7 +251,10 @@ texinfo_documents = [
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
 
-slide_theme_options = {'custom_css': 'custom.css'}
+slide_theme_options = {
+    'custom_css': 'custom.css',
+    'custom_js': 'ga.js',
+}
 
 if not os.environ.get('READTHEDOCS', None):
     import sphinx_rtd_theme
