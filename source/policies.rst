@@ -9,12 +9,12 @@ You get:
 - Mentorship from students and professionals with advanced skills in software
   development and systems administration
 - Professional connections in the software industry
-- A welcoming environment to start learning in, if you've always wanted to
-  learn about software development and systems administration but never been
+- A welcoming environment to start learning in if you've always wanted to
+  learn about software development and systems administration but have never been
   sure where to start
-- An opportunity to fill in any gaps in your knowledge, if you're a
+- An opportunity to fill in any gaps in your knowledge if you're a
   self-taught coder or sysadmin
-- The skills to build and deploy open source software, or contribute to
+- The skills to build and deploy open source software, or to contribute to
   existing projects
 
 Why we're offering this:
