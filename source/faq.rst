@@ -25,16 +25,16 @@ I don't know about computers! Can I still join?
 
 YES! If you already knew all this stuff, you'd be teaching rather than studying
 it. If you think you don't know enough, try anyway -- in the worst case you'll
-discover that your self-assessment was correct, and in the best case, you'll
+discover that your self-assessment was correct, and in the best case you'll
 become a successful open source contributor.
 
 When will meetings be?
 ----------------------
 
 Weekday evenings, with a day of the week being chosen during the first meeting.
-We try to choose a day that works best for most students but its always
-difficult to find something that works for everyone. Last year we had meetings
-on Thursdays for example.
+We try to choose a day that works best for most students but it's always
+difficult to find something that works for everyone. For example, last year we had 
+meetings on Thursdays.
 
 Is this only for students?
 --------------------------
