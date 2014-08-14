@@ -28,13 +28,13 @@ Why we're offering this:
 Attendance
 ==========
 
-We will schedule Bootcamp meetings for a time that works for a majority of
+We will schedule BootCamp meetings for a time that works for a majority of
 attendees. Each meeting's curriculum will build on what you learned the
 previous session, so if you miss a meeting you're responsible for studying
 the basics of its content on your own. To facilitate this, we will provide
 resources for independent study about each topic that we cover.
 
-Bootcamp leaders will be available at times outside of the regular meetings to
+BootCamp leaders will be available at times outside of the regular meetings to
 help answer any questions about the training program's content. We will not
 spend class time reviewing material for those who skip a lecture. If you
 attend a lesson and don't understand something from it, you're welcome to ask
@@ -59,13 +59,13 @@ to be unable to run VMs but still has wireless connectivity, we'll teach you
 how to ssh to a remote server to perform more computationally intensive tasks.
 
 If you are not an OSU student and do not have access to a working laptop,
-contact the DevOps Bootcamp organizers and we'll see whether we can arrange to
+contact the DevOps BootCamp organizers and we'll see whether we can arrange to
 loan you something for meetings.
 
 Target Audience
 ===============
 
-Our goal is to make the DevOps Bootcamp program accessible to students and
+Our goal is to make the DevOps BootCamp program accessible to students and
 community members from all different backgrounds. You have to want to learn,
 be willing to ask questions whenever you don't understand something, and
 be open to making time to play with the cool tools/toys which we'll be
