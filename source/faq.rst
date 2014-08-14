@@ -44,7 +44,7 @@ will assume access to student resources, but we can work with non-students on
 an individual basis to get them access to equivalent tools. Community members
 can use the `Visitor` wifi network when on campus.
 
-What's the difference between Bootcamp and regular LUG meetings?
+What's the difference between BootCamp and regular LUG meetings?
 ----------------------------------------------------------------
 
 Regular LUG meetings are usually targeted toward an intermediate to expert
@@ -52,7 +52,7 @@ audience, and make no attempt to comprehensively teach a set of skills across
 multiple meetings. We might teach about version control one week, privacy
 tools the next, and a new open source project by a local company the next.
 
-DevOps Bootcamp will provide continuity and comprehensive open source
+DevOps BootCamp will provide continuity and comprehensive open source
 education that's outside the scope of regular LUG meetings. As you progress
 through Bootcamp, you'll understand more and more of the technical content of
 LUG talks.
