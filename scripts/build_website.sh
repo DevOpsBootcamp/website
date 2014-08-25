@@ -13,7 +13,7 @@ source venv/bin/activate
 # Update packages
 pip install -r requirements.txt
 
-# Build websute
+# Build website
 make html
 
 # Disable venv
