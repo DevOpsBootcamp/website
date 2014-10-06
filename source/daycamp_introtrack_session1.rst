@@ -92,22 +92,16 @@ What next?
     * What do you want to learn here
     * Any background in devops?
 
-Today's Agenda
---------------
+This Session's Agenda
+---------------------
 
-* Getting (to) Linux
-* The Terminal & Shell
-    * Scripts, file paths, special characters
-* Productivity tricks
-    * Getting help
+* Notation
+* Vocabulary
+* Virtual Machines
+* Install your VM!
 
 .. figure:: /static/Tux.png
     :align: right
-
-* IRC
-    * Vocabulary
-    * Get connected
-    * Etiquette
 
 A note about notation
 ---------------------
@@ -146,6 +140,20 @@ How to get (to) Linux
 * flip{1-3} are Engineering servers; less reliable
 
 .. _PuTTy: http://www.chiark.greenend.org.uk/~sgtatham/putty/
+
+Essential Vocabulary
+--------------------
+
+Operating System
+Virtual Machine
+host
+guest
+virtualbox
+vagrant
+disk image
+vagrant box
+GNU/linux
+terminal/command line/cli
 
 Trying Linux on a Virtual Machine
 ---------------------------------
