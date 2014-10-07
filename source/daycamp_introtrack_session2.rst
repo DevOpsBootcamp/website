@@ -22,6 +22,9 @@ Operating Systems
 -----------------
 
 .. figure:: /static/os.gif
+    :align: right
+
+
 
 * What is an OS
 * GNU/Linux, BSD, Windows, OS X, Plan 9
@@ -59,7 +62,7 @@ Basic Shell Commands
   :Pipes: redirection (pipe.txt, redirect.txt)
   :Special variables: $?, $$ (pid.sh), !!, !*, !$
 
-.. figure:: /static/pylogo.png
+.. figure:: /static/bash.png
     :align: right
     :scale: 75%
 
