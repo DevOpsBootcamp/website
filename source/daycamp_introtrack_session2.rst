@@ -763,22 +763,26 @@ IRC
 A Client
 --------
 
-.. note:: Switche to a terminal and show example
+.. note:: Switch to a terminal and show example
 
-Use irssi in screen
+Use irssi or weechat in screen
 
 .. code-block:: bash
 
     # This step is optional, but persistent IRC is cool
     $ ssh <username>@<preferred shell host>
 
-    # start screen with the name irc
+    # start screen with the name 'irc'
     $ screen -S irc
 
     # start your client in the 0th window of the screen session
     $ irssi
+    # or
+    $ weechat-curses
 
-    # after ending ssh session (CTRL+d, then exit), to get back:
+    # exit irc screen with CTRL+a, CTRL+d
+    # exit ssh session with CTRL+d or 'exit'
+    # to get back to irc:
     $ ssh <username>@<preferred shell host>
     $ screen -dr IRC
 
