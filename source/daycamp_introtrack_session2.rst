@@ -95,14 +95,17 @@ Invoking a script
 
     $ ls -l
     $ chmod +x $filename
+    $ ./$filename
 
-**Arguments** are extra information that you pass to a script or program when
-you call it. They tell it in more detail what you want to do.
+**Arguments** (or flags) are extra information that you pass to a script or 
+program when you call it. They tell it in more detail what you want to do.
 
 .. code-block:: bash
 
     $ ls -a -l
     $ ls -al
+    $ ls -si
+    $ ls --si
 
 Why pass arguments on the command line rather than having an interactive mode?
 
@@ -124,7 +127,8 @@ File Paths
     test@x230 ~ $ cd Documents/
     test@x230 ~/Documents $ ls
     Code  School  Work
-    test@x230 ~/Documents $
+    test@x230 ~/Documents $ pwd
+    /home/test/Documents
 
 
 .. note::
@@ -138,7 +142,7 @@ Special Characters
 * # means a comment
 * ; allows multiple commands per line
 * !, ?, \*, &&, &
-* Regular expressions (we'll learn more later)
+* Regular expressions - for matching patterns of text
 
 .. figure:: /static/xkcd_regex.png
     :align: center
@@ -203,6 +207,7 @@ More about Man Pages
     $ man man
 
 * use ``/phrase`` to search for ``phrase`` in the document; ``n`` for next match
+and ``N`` for previous match
 * else::
 
     $ <program> --help
@@ -270,8 +275,11 @@ Users have
 * Username
 * UID
 * Group
+* Shell
 * Usually (but not always) password
 * Usually (but not always) home directory
+
+
 
 Managing users
 --------------
@@ -379,7 +387,7 @@ Hands-On: Users and Groups
 
 * Create a user on your system for yourself, with your preferred username
 * Give your user sudo powers
-* Use use su to get into your user account
+* Use su to get into your user account
 * Change your password
 * Create a directory called bootcamp in your home directory
 * Create a group called devops
@@ -534,17 +542,16 @@ Package Management
 *Take care of installation and removal of software*
 
 **Core Functionality:**
-
 * Install, Upgrade & uninstall packages easily
 * Resolve package dependencies
 * Install packages from a central repository
 * Search for information on installed packages and files
 * Pre-built binaries (usually)
+* Find out which package provides a required library or file
 
 **Popular Linux Package Managers**
-
-* .deb / APT (used by Debian, Ubuntu)
-* .rpm / YUM (used by RedHat, CentOS, Fedora)
+* .deb / APT + dpkg (used by Debian, Ubuntu, Linux Mint)
+* .rpm / YUM + rpm (used by RedHat, CentOS, Fedora)
 
 RPM & yum (RedHat, CentOS, Fedora)
 ----------------------------------
@@ -569,8 +576,6 @@ RPM & yum (RedHat, CentOS, Fedora)
 
 Yum Commands (Redhat, CentOS, Fedora)
 -------------------------------------
-
-We'll use the ``tree`` package as an example below.
 
 .. code-block:: bash
 
@@ -635,7 +640,7 @@ DPKG & Apt (Debian, Ubuntu)
   DPKG package manager used to query a central repository and resolve Deb
   package dependencies. Considered mostly a front-end to dpkg.
 
-Apt Commands (Debian, Ubuntu)
+Apt (Debian, Ubuntu)
 -----------------------------
 
 .. note:: You can also use aptitude as a front-end to dpkg instead of apt-get.
@@ -705,6 +710,9 @@ They each fill a specific niche and have their own pros and cons.
 * Portage (Gentoo) -- Source based package installer
 * pacman (Arch Linux)
 * ZYpp / Zypper (SUSE) -- Yet another RPM package manager
+* Nix -- Fancy functional/ transactional
+* brew (OS X)
+* chocolatey (Windows)
 
 Installing from source
 ----------------------
@@ -719,7 +727,7 @@ Installing from source
   $ wget http://mirrors.kernel.org/gnu/grep/grep-2.15.tar.xz
   $ tar -Jxvf grep-2.15.tar.xz
   $ cd grep-2.15
-  $ ./configure
+  $ ./configure --prefix=$HOME/programs/
   $ make
   $ make install
 
@@ -750,6 +758,7 @@ IRC
 * Very old (RFC 1459 May 1993)
 * Works on everything (no GUI needed)
 * The people you want to listen to are there
+* Oregon State ran one of the first servers ever!
 
 A Client
 --------
@@ -763,13 +772,13 @@ Use irssi in screen
     # This step is optional, but persistent IRC is cool
     $ ssh <username>@<preferred shell host>
 
-    # start Screen
+    # start screen with the name irc
     $ screen -S irc
 
-    # start your client
+    # start your client in the 0th window of the screen session
     $ irssi
 
-    # after ending ssh session, to get back:
+    # after ending ssh session (CTRL+d, then exit), to get back:
     $ ssh <username>@<preferred shell host>
     $ screen -dr IRC
 
@@ -837,7 +846,7 @@ Useful tricks
 
 * Tab-complete works on nicknames. use it.
 * Highlight when people say your name
-* Symbols are *not* part of names; they mark status in channel
+* Symbols are *not* part of names; they mark status in channel (such as @)
 * Logging (expect it); \`/set autolog on\`
 * chanserv and nickserv are good bots to know
     * hamper is also a bot
