@@ -19,17 +19,6 @@ Today's Agenda
 * IRC
     * Setup and etiquette
     
-Operating Systems
------------------
-
-.. figure:: /static/os.gif
-    :align: right
-
-<<<<<<< HEAD
-* IRC
-    * Vocabulary
-    * Get connected
-    * Etiquette
     
 Operating Systems
 -----------------
