@@ -18,7 +18,7 @@ Systems Administration Tutorials
       <http://linux-training.be/files/books/LinuxTraining.pdf>`_.
 
 * `OpsSchool <http://www.opsschool.org/en/latest/>`_ is working on a tutorial
-  somewhat like DevOps Bootcamp, but it's currently incomplete. Consider
+  somewhat like DevOps BootCamp, but it's currently incomplete. Consider
   contributing to it!
 
 * `Linux Command Line Tips: Become a Master

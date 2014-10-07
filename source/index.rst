@@ -1,9 +1,9 @@
-.. OSU DevOps Bootcamp documentation master file, created by
+.. OSU DevOps BootCamp documentation master file, created by
    sphinx-quickstart on Tue Oct 15 12:20:17 2013.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-DevOps Bootcamp
+DevOps BootCamp
 ===============
 
 .. : note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
@@ -31,7 +31,7 @@ DevOps Bootcamp
       +--------+-----------+---------------------------------+--------------+
 
 
-DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
+DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
 that aims to boost our impact and outreach while shrinking the skills gap for
 OSU students interested in DevOps.
 
@@ -53,7 +53,7 @@ This program is based on the `PSU Braindump <http://braindump.cat.pdx.edu>`_,
 where for 21 years they have been turning PSU students into sysadmins who have
 rapidly been flowing into the growing number of startups in Portland.
 
-The DevOps Bootcamp program will be dynamically shaping itself based on the
+The DevOps BootCamp program will be dynamically shaping itself based on the
 feedback we get from  interested students.
 
 

@@ -1,17 +1,17 @@
-Purpose of DevOps Bootcamp
+Purpose of DevOps BootCamp
 ==========================
 
 From front page:
 ----------------
 
-DevOps Bootcamp is an OSU Open Source Lab and OSU Linux Users Group program
+DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
 aimed at boosting our impact and outreach while shrinking the skills gap for OSU
 students interested in DevOps.
 
 From FAQ: 
 ---------
 
-DevOps Bootcamp will provide continuity and comprehensive open source education
+DevOps BootCamp will provide continuity and comprehensive open source education
 that’s outside the scope of regular LUG meetings.
 
 "The Deal"
@@ -42,7 +42,7 @@ Why we’re offering this:
 Target Audience
 ---------------
 
-Our goal is to make the DevOps Bootcamp program accessible to students and
+Our goal is to make the DevOps BootCamp program accessible to students and
 community members from all different backgrounds. You have to want to learn, and
 be willing to ask questions whenever you don't understand something, and be open
 to making time to play with the cool tools/toys which we’ll be teaching you
