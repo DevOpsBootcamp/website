@@ -17,6 +17,15 @@ Today's Agenda
     * Vocabulary
     * Get connected
     * Etiquette
+    
+Operating Systems
+-----------------
+
+.. figure:: /static/os.gif
+
+* What is an OS
+* GNU/Linux, BSD, Windows, OS X, Plan 9
+* Different use cases - desktop, server, phone
 
 The Terminal
 ------------
