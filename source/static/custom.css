@@ -2,6 +2,6 @@
     font-size: 0.8em;
 }
 
-ul {
-    margin-top: 10px;
+ul,pre {
+    margin-top: 15px;
 }
