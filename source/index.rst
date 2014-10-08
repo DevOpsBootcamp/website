@@ -77,6 +77,7 @@ Contents:
    guide
    resources
    faq
+   whatisdevops
    mission
    vagrant
 
