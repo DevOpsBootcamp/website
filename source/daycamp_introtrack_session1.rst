@@ -12,6 +12,17 @@ What's DevOps?
 
 Software Development + Operations Engineering
 
+.. note::
+    development (write the software) + operations (run the servers)
+    old paradigm: dev + ops discrete... this worked because
+        * clearly defined interface between the two, relatively standardized
+        * slower workflow means more time to troubleshoot/debug
+    new paradigm:
+        * software released faster ("agile")
+        * larger scale = many identical servers
+        * devs need to know ops for testing, anticipating deployment issues
+        * ops need to know dev to minimize wasted resources, improve security
+
 What's BootCamp?
 ----------------
 
@@ -23,6 +34,12 @@ What's BootCamp?
 * NOT:
     * OSU class for credit
     * student job
+
+.. note::
+    meet every 1-2 weeks through the term
+    time decided by Doodle poll
+    you get out what you put in
+    skills etc. to do well in job interviews (especially ops)
 
 Why are we doing this?
 ----------------------
@@ -55,7 +72,7 @@ Can you do it?
     * Attend lectures
     * Play with what we teach you
     * You get out what you put in
-* If in doubt… try anyway!
+* If in doubt... try anyway!
 
 Career Paths:
 -------------
@@ -64,11 +81,8 @@ Career Paths:
     * Internships
     * Industry connections
     * Start career with mid-level/high-level experience
-* Justin
-    * community experience builds skills, professional relationships
-    * Linux skills helped in grad school
-        * skills learned there helped land first sysadmin job
-    * having your own ‘playground’ to experiment with
+    * Confidence and something unique to talk about in interviews
+        * having your own ‘playground’ to experiment with
 
 OSL Hiring:
 -----------
@@ -81,16 +95,12 @@ OSL Hiring:
 * Alumni
     * Google, Rackspace, Intel, Microsoft, Mozilla, Facebook
 
-What next?
-----------
+Getting involved with Bootcamp
+------------------------------
 
 * Find our site (http://devopsbootcamp.osuosl.org)
 * Fill out registration with times available
 * Join mailing list
-* Tell us about yourself
-    * Who are you
-    * What do you want to learn here
-    * Any background in devops?
 
 This Session's Agenda
 ---------------------
@@ -116,7 +126,7 @@ A note about notation
 * Shell prompt
     * ``$``
     * ```literal stuff in backticks```
-* foo, bar, baz, username, etc.
+* metasyntactic variables: foo, bar, baz, username, etc.
 
 How to get (to) Linux
 ---------------------
