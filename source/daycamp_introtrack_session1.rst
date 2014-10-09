@@ -13,11 +13,15 @@ What's DevOps?
 Software Development + Operations Engineering
 
 .. note::
+
     development (write the software) + operations (run the servers)
     old paradigm: dev + ops discrete... this worked because
+
         * clearly defined interface between the two, relatively standardized
         * slower workflow means more time to troubleshoot/debug
+
     new paradigm:
+
         * software released faster ("agile")
         * larger scale = many identical servers
         * devs need to know ops for testing, anticipating deployment issues
