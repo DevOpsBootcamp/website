@@ -12,7 +12,8 @@ What's DevOps?
 
 Software Development + Operations Engineering
 
-.. note::
+.. note:: -edunham-
+
     development (write the software) + operations (run the servers)
     old paradigm: dev + ops discrete... this worked because
         * clearly defined interface between the two, relatively standardized
@@ -35,7 +36,7 @@ What's BootCamp?
     * OSU class for credit
     * student job
 
-.. note::
+.. note:: -edunham-
     meet every 1-2 weeks through the term
     time decided by Doodle poll
     you get out what you put in
@@ -49,8 +50,12 @@ Why are we doing this?
 * Demand from companies for students
 * Build community
 
+.. note:: jme
+
 What you'll do:
 ---------------
+
+.. note:: jme
 
 * Learn:
     * Linux systems
@@ -66,6 +71,8 @@ What you'll do:
 Can you do it?
 --------------
 
+.. note:: edunham
+
 * Probably!
 * No background knowledge needed
 * Time commitment
@@ -77,6 +84,8 @@ Can you do it?
 Career Paths:
 -------------
 
+.. note:: jme
+
 * Hands-on learning & OSL reputation:
     * Internships
     * Industry connections
@@ -86,6 +95,8 @@ Career Paths:
 
 OSL Hiring:
 -----------
+
+.. note:: jme
 
 * Students need basic skills to join
     * Systems engineers
@@ -98,12 +109,16 @@ OSL Hiring:
 Getting involved with Bootcamp
 ------------------------------
 
+.. note:: edunham
+
 * Find our site (http://devopsbootcamp.osuosl.org)
 * Fill out registration with times available
 * Join mailing list
 
 This Session's Agenda
 ---------------------
+
+.. note:: edunham
 
 * Notation
 * Vocabulary
@@ -115,6 +130,8 @@ This Session's Agenda
 
 A note about notation
 ---------------------
+
+.. note:: edunham
 
 .. figure:: /static/stickynote.png
     :align: right
@@ -130,6 +147,8 @@ A note about notation
 
 How to get (to) Linux
 ---------------------
+
+.. note:: edunham
 
 .. figure:: /static/dualboot.png
     :align: right
@@ -154,6 +173,8 @@ How to get (to) Linux
 Essential Vocabulary
 --------------------
 
+.. note:: jme
+
 * Operating System (OS)
 * Virtual Machine (VM)
 * host
@@ -168,6 +189,8 @@ Essential Vocabulary
 Operating System
 ----------------
 
+.. note:: jme
+
 * Kernel + Userland utilities
 * Kernel manages things like:
 
@@ -180,12 +203,16 @@ Operating System
 Virtual Machine
 ---------------
 
+.. note:: edunham
+
 * The host creates some virtual hardware, and 'runs' the virtual hardware
 * virtual hardware runs an operating system, which interacts with the virtual hardware
 * Different virtual machines can be more or less virtualized than others
 
 Host
 ----
+
+.. note:: edunham
 
 The physical machine on which the virtual machine runs
 
@@ -197,6 +224,8 @@ Examples:
 Guest
 -----
 
+.. note:: edunham
+
 The virtual machine.
 
 Examples:
@@ -207,12 +236,16 @@ Examples:
 Virtualbox
 ----------
 
+.. note:: jme
+
 * Free and Open Source Software (FOSS) to manage and run virtual machines
 * Originally written by Sun, now owned by Oracle
 * Works well on Linux, OSX, and Windows (and even FreeBSD!)
 
 Vagrant
 -------
+
+.. note:: jme
 
 * A tool to manage virtual machines
 * Works with lots of types of virtualmachines
@@ -226,6 +259,8 @@ Vagrant
 Disk Image
 ----------
 
+.. note:: edunham
+
 * a file which lives on the host that represents a disk to a VM
 * delete it, and the hard drive on the VM disappears
 * different formats exist, not always convertible
@@ -233,12 +268,16 @@ Disk Image
 Vagrant Box
 -----------
 
+.. note:: edunham
+
 * A disk image + vagrant metadata
 * Allows you to copy a virtual machine and run it elsewhere
 * Tied to backend vagrant uses (virtualbox for us)
 
 GNU
 ---
+
+.. note:: jme
 
 .. figure:: /static/gnu.jpg
     :align: right
@@ -251,6 +290,8 @@ GNU
 Linux
 -----
 
+.. note:: jme
+
 .. figure:: /static/Tux.png
     :align: left
 
@@ -260,6 +301,8 @@ Linux
 
 Trying Linux on a Virtual Machine
 ---------------------------------
+
+.. note:: edunham
 
 Virtual machines act as a full system on a physical machine
 
@@ -282,6 +325,8 @@ Virtual machines act as a full system on a physical machine
 Installing Linux on Virtualbox
 ------------------------------
 
+.. note:: jme
+
 * Install virtualbox and vagrant from the USB drives
 * Copy centos-6.5.box to your laptop
 * Copy putty.exe to your laptop if you're on Windows.
@@ -289,6 +334,8 @@ Installing Linux on Virtualbox
 
 Vagrant & VirtualBox
 --------------------
+
+.. note:: jme
 
 .. note::
   We're using CentOS as our base image for now but will use Debian later. You
@@ -315,6 +362,8 @@ Vagrant & VirtualBox
 Vagrant cheat sheet
 -------------------
 
+.. note:: jme
+
 .. note::
   We'll get into more detail later in how you can access ports on your VMs and
   other use cases.
@@ -338,6 +387,8 @@ Also check out the `Vagrant Documentation
 
 The Terminal
 ------------
+
+.. note:: edunham
 
 .. figure:: /static/crashcart.jpg
     :align: right
