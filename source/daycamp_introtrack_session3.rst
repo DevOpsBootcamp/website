@@ -2,10 +2,12 @@
 Version Control
 ========================
 
+(and nano)
 
 What We'll Cover
 ================
 
+* Nano, a command line editor
 * What's Git
 * What's GitHub
 * Setting up an account
@@ -14,14 +16,24 @@ What We'll Cover
 * Help, everything's broken!
 * More resources
 
+Nano
+====
+
+* type like normal
+* Use arrow keys to move around
+* ^ means hold control while pressing the key
+
+.. figure:: /static/nano.png
+   :align: center
+
 Version Control is Hard
 =======================
 
-.. figure:: /static/xkcd_1053.png
+.. figure:: /static/xkcd_1296.png
    :scale: 150%
    :align: center
 
-Image from `XKCD <http://xkcd.com/1053/>`_
+Image from `XKCD <http://xkcd.com/1296>`_
 
 Why Bother?
 ===========
@@ -48,12 +60,24 @@ Git
 .. figure:: /static/Linus_Torvalds.jpeg
     :align: left
 
-git, noun. Brit.informal. 
+git, noun. Brit.informal.
 1. an unpleasant or contemptible person.
+
+Setting up Git
+==============
+
+* In VM:
+
+.. code-block:: bash
+
+    $ sudo yum install git
+    $ git config --global user.name "My Name"
+    $ git config --global user.email "myself@gmail.com"
+    $ git config --global core.editor "nano"
 
 Using Git Locally
 =================
-    
+
 ``$ git init``
 
 .. note:: This initializes a git repo. Use `man git-init` for more info.
@@ -83,16 +107,20 @@ What Not To Do
 ==============
 
 * Don't delete the .git files
+
 .. note:: If you kill them, git loses its memory :(
+
 * Avoid redundant copies of the same work in one revision
 * Don't make "oops, undoing that" commits.
-    * Use git commit --amend
+    * Use git commit --amend or git revert
+
 .. note:: Amending is fine as long as you haven't pushed yet. It's generally a
     bad idea to amend or rebase work that you've already shared with others,
     unless you really know what you're doing.
 
 * Don't wait too long between commits
     * You can squash them all together later
+
 .. note:: Commit every time you think you might want to return to the current 
     state. You can revert back to any previous commit, but there is no way to
     magically add a commit in where you forgot to make one.
