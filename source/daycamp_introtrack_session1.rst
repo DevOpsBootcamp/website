@@ -154,16 +154,109 @@ How to get (to) Linux
 Essential Vocabulary
 --------------------
 
+* Operating System (OS)
+* Virtual Machine (VM)
+* host
+* guest
+* virtualbox
+* vagrant
+* disk image
+* vagrant box
+* GNU/linux
+* terminal/command line/cli
+
 Operating System
+----------------
+
+* Kernel + Userland utilities
+* Kernel manages things like:
+
+  * hardware
+  * processes
+  * filesystems
+
+* Userland utilities provide basic tools to make the system useful
+
 Virtual Machine
-host
-guest
-virtualbox
-vagrant
-disk image
-vagrant box
-GNU/linux
-terminal/command line/cli
+---------------
+
+* The host creates some virtual hardware, and 'runs' the virtual hardware
+* virtual hardware runs an operating system, which interacts with the virtual hardware
+* Different virtual machines can be more or less virtualized than others
+
+Host
+----
+
+The physical machine on which the virtual machine runs
+
+Examples:
+
+  * Your laptop
+  * Physical servers that cloud providers (AWS, Rackspace, DigitalOcean) run
+
+Guest
+-----
+
+The virtual machine.
+
+Examples:
+
+  * The virtual machine you are about to start up
+  * A cloud instance
+
+Virtualbox
+----------
+
+* Free and Open Source Software (FOSS) to manage and run virtual machines
+* Originally written by Sun, now owned by Oracle
+* Works well on Linux, OSX, and Windows (and even FreeBSD!)
+
+Vagrant
+-------
+
+* A tool to manage virtual machines
+* Works with lots of types of virtualmachines
+* Uses a 'Vagrantfile' to manage machines
+* Workflow looks like::
+
+    $ vagrant init <box>
+    $ vagrant up
+    $ vagrant ssh
+
+Disk Image
+----------
+
+* a file which lives on the host that represents a disk to a VM
+* delete it, and the hard drive on the VM disappears
+* different formats exist, not always convertible
+
+Vagrant Box
+-----------
+
+* A disk image + vagrant metadata
+* Allows you to copy a virtual machine and run it elsewhere
+* Tied to backend vagrant uses (virtualbox for us)
+
+GNU
+---
+
+.. figure:: /static/gnu.jpg
+    :align: right
+
+* Set of user-space tools needed to complete a basic operating system
+* Started by Richard Stallman (rms)
+* Maintained by the FSF (which is run by rms)
+* Licensed under the GPL (which rms wrote)
+
+Linux
+-----
+
+.. figure:: /static/Tux.png
+    :align: left
+
+* A kernel (and ONLY a kernel)
+* Started by Linus Torvalds
+* Licensed under the GPL
 
 Trying Linux on a Virtual Machine
 ---------------------------------
@@ -171,32 +264,28 @@ Trying Linux on a Virtual Machine
 Virtual machines act as a full system on a physical machine
 
 .. figure:: /static/virtualbox.png
-    :align: right
-    :scale: 50%
+    :align: right :scale: 50%
 
 * Hypervisors:
-    * VirtualBox (free)
+
+    * VirtualBox (free) -- we will use this one
     * VMWare (mostly free)
     * KVM (Linux only hosts)
     * Parallels
+
 * Public Cloud Virtual Machines
+
     * Amazon EC2, Rackspace Cloud, Google Compute Engine, etc
+
 * Easy way to test without breaking your machine!
 
 Installing Linux on Virtualbox
 ------------------------------
 
-.. note:: 
-  Try other distributions if you like to see what's different. Debian is a great
-  next step to try out.
-
-#. Download and install: https://www.virtualbox.org/wiki/Downloads
-#. Grab the latest minimal ISO: http://centos.osuosl.org/6/isos/x86_64/
-#. Create VM
-    #. New -> Name "CentOS" -> Default Ram -> Default Disk settings
-    #. Settings -> Storage -> Empty -> CD/DVD Drive -> Select ISO
-    #. Start -> press enter -> Skip media check
-#. ``\o/``
+* Install virtualbox and vagrant from the USB drives
+* Copy centos-6.5.box to your laptop
+* Copy putty.exe to your laptop if you're on Windows.
+* Get instructions for individual operating systems from the helpers
 
 Vagrant & VirtualBox
 --------------------
@@ -205,22 +294,23 @@ Vagrant & VirtualBox
   We're using CentOS as our base image for now but will use Debian later. You
   can see the gui by uncommenting the line in the Vagrantfile.
 
-* Vagrant is a tool used with Virtualbox (and other) platforms
-* Make a reproducible pre-installed Linux environment
-* Download and install: http://www.vagrantup.com/
-* Clone our repo, start and access the vm:
+* Open a terminal and cd to the directory you copied the box file to.
+
+  * Don't know what this means? Ask! We'll help!
 
 .. code-block:: bash
 
-    # clone
-    git clone https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant.git
+    # add the box
+    vagrant box add centos centos-6.5.box
 
-    # start up
-    cd devopsbootcamp-vagrant
+    # initialize
+    vagrant init centos
+
+    # start vm
     vagrant up
 
-    # access vm
-    vagrant ssh
+    # log in
+    vagrant ssh # windows users will use putty here
 
 Vagrant cheat sheet
 -------------------
