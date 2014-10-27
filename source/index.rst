@@ -3,36 +3,28 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-DevOps Bootcamp will be meeting each week on **Mondays in KEC 1005 at 7pm**.  This first week (October 27), we will
+.. warning:: DevOps Bootcamp will be meeting each week on **Mondays in KEC 1005 at 7pm**.  This first week (October 27), we will
 be doing some bash exercises, and reviewing DevOps Daycamp content.  Hope to see everyone there!
 
 DevOps BootCamp
 ===============
 
-.. : note:: Recurring meetings will be Thursdays, 6-8pm. We have KEC1007
-    reserved but typically get moved during the week of career fairs, so check
-    back here to confirm locations.
+.. : note:: Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
 
       +--------+-----------+---------------------------------+--------------+
       | Date   | Location  | Topic                           | Week of term |
       +========+===========+=================================+==============+
-      | 4/3/14 | n/a       | No meeting; Linus talk at PLUG  | 1            |
+      | 10/27  | KEC1005   | Bash Basics and Exercises       | 5            |
       +--------+-----------+---------------------------------+--------------+
-      | 4/10   | KEC1007   | Networking part 1               | 2            |
+      | 11/3   | KEC1005   | Web Applications                | 6            |
       +--------+-----------+---------------------------------+--------------+
-      | 4/17   | n/a       | No Meeting                      | 3            |
+      | 11/10  | KEC1005   | Linux Filesystem Hierarchy      | 7            |
       +--------+-----------+---------------------------------+--------------+
-      | 4/24   | KEC1007   | Midterms... hack day instead    | 4            |
+      | 11/17  | KEC1005   | Databases                       | 8            |
       +--------+-----------+---------------------------------+--------------+
-      | 5/1    | KEC1007   | DNS and HTTP                    | 5            |
+      | 11/24  | KEC1005   | Review of past weeks            | 9            |
       +--------+-----------+---------------------------------+--------------+
-      | 5/8    | KEC1007   | Automation & DevOps             | 6            |
-      +--------+-----------+---------------------------------+--------------+
-      | 5/15   | KEC1005   | Puppet vs. Chef                 | 7            |
-      +--------+-----------+---------------------------------+--------------+
-      | 5/22   | KEC1007   | Open Source & Hands-On          | 8            |
-      +--------+-----------+---------------------------------+--------------+
-
+     
 
 DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
 that aims to boost our impact and outreach while shrinking the skills gap for
