@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. warning:: DevOps Bootcamp will be meeting each week on **Mondays in KEC 1005 at 7pm**.  This first week (October 27), we will
-be doing some bash exercises, and reviewing DevOps Daycamp content.  Hope to see everyone there!
+**DevOps Bootcamp will be meeting each week on Mondays in KEC 1005 at 7pm.  This first week (October 27), we will
+be doing some bash exercises, and reviewing DevOps Daycamp content.  Hope to see everyone there!**
 
 DevOps BootCamp
 ===============
