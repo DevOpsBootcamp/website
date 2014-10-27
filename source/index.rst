@@ -3,13 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The OSL is kicking off DevOps BootCamp this year with the brand new DevOps
-DayCamp! DevOps DayCamp is a dual-track day with one track to help inexperienced
-attendees get started with DevOps, as well as a second track comprised of a
-hands-on hackathon with educational sessions throughout the day for the more
-advanced DevOps crowd. Advanced sessions will be given by industry professionals
-and will include Ansible, Travis CI and Docker. For more information, checkout
-http://devopsbootcamp.osuosl.org/daycamp/.
+DevOps Bootcamp will be meeting each week on **Mondays in KEC 1005 at 7pm**.  This first week (October 27), we will
+be doing some bash exercises, and reviewing DevOps Daycamp content.  Hope to see everyone there!
 
 DevOps BootCamp
 ===============
