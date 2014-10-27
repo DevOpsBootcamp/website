@@ -9,7 +9,7 @@ be doing some bash exercises, and reviewing DevOps Daycamp content.  Hope to see
 DevOps BootCamp
 ===============
 
-.. : note:: Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
+Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
 
       +--------+-----------+---------------------------------+--------------+
       | Date   | Location  | Topic                           | Week of term |
