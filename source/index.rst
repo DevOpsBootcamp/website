@@ -3,8 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-**DevOps Bootcamp will be meeting each week on Mondays in KEC 1005 at 7pm.  This first week (October 27), we will
-be doing some bash exercises, and reviewing DevOps Daycamp content.  Hope to see everyone there!**
+**DevOps Bootcamp will be meeting each week on Mondays in KEC 1005 at 7pm.  Hope to see everyone there!**
 
 DevOps BootCamp
 ===============
@@ -16,13 +15,13 @@ Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announc
       +========+===========+=================================+==============+
       | 10/27  | KEC1005   | Bash Basics and Exercises       | 5            |
       +--------+-----------+---------------------------------+--------------+
-      | 11/3   | KEC1005   | Web Applications                | 6            |
+      | 11/3   | KEC1005   | Editors and Git                 | 6            |
       +--------+-----------+---------------------------------+--------------+
-      | 11/10  | KEC1005   | Linux Filesystem Hierarchy      | 7            |
+      | 11/10  | KEC1005   | Web Applications                | 7            |
       +--------+-----------+---------------------------------+--------------+
-      | 11/17  | KEC1005   | Databases                       | 8            |
+      | 11/17  | KEC1005   | Linux Filesystem Hierarchy      | 8            |
       +--------+-----------+---------------------------------+--------------+
-      | 11/24  | KEC1005   | Review of past weeks            | 9            |
+      | 11/24  | KEC1005   | Databases                       | 9            |
       +--------+-----------+---------------------------------+--------------+
      
 
