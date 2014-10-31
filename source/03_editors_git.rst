@@ -29,7 +29,9 @@ No. Never, Ever edit code in Word/LibreOffice
 
 * Autocorrect is your worst enemy
 * Syntax highlighting is nice
-* You are editing plain text, not 'documents', i.e. .doc, .rtf, etc
+* You are editing plain text, not 'documents', i.e. .doc, .rtf, etc. These
+  documents include a lot of extra *stuff* that you don't want in your 
+  precisely constructed perfectly written code.
 
 Then what should you use?
 -------------------------
@@ -50,6 +52,7 @@ Integrated Development Environments
 
 * Entire toolchain in one place
 * Usually graphical
+* Examples of IDEs include Eclipse, XCode, Netbeans, and Visual Studio
 
 Sysadmin tools
 --------------
@@ -250,14 +253,14 @@ Editor questions?
 
     $ vim testvim.txt            $ emacs testemacs.txt
     <i>                          Hello world!
-    Hello world!                 <esc>
-    <esc>                        <
-    :%s/[aeiou]//g               <alt + x>
-    :wq                          replace-regexp
-                                 [aeiou]
-                                 <enter>
+    Hello world!                 <alt + x>
+    <esc>                        replace-regexp
+    :%s/[aeiou]//g               [aeiou]
+    :wq                          <enter>
                                  <ctrl + x> <ctrl + s>
                                  <ctrl + x> <ctrl + c>
+                                 
+                                 
 
 Lesson 3: Intro to Git
 ======================
@@ -450,6 +453,8 @@ Let's Walk Through
     person's repos will display on the front page of their profile -- to see
     them, got to the 'repositories' tab instead of 'contributions'.
 
+
+
 * Creating SSH keys
     * ``ssh-keygen -t rsa``
 * Uploading your SSH key
@@ -458,16 +463,60 @@ Let's Walk Through
 * Edit files online
 * Submit a pull request
 
-Help, Everythings's Broken!
----------------------------
+SSH-Keys
+--------
 
-::
+.. code-block:: bash
+
+    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/vagrant/.ssh/id_rsa): id_rsa
+    Enter passphrase (empty for no passphrase): 
+    Enter same passphrase again: 
+    Your identification has been saved in id_rsa.
+    Your public key has been saved in id_rsa.pub.
+    The key fingerprint is:
+    32:db:b8:9a:89:8b:6f:88:2c:bd:6d:2e:99:b8:2e:d0 elijahcaine@gmail.com
+    The key's randomart image is:
+    +--[ RSA 4096]----+
+    |                 |
+    |                 |
+    |                 |
+    |                 |
+    | .    o S        |
+    | . E    *        |
+    | ++ o  o .       |
+    | o*o.o .         |
+    | *==*..          |
+    +-----------------+
+
+SSH-Keys Part 2
+---------------
+
+1. Go to your Github settings page (https://github.com/settings/ssh)
+#. Click `Add SSH Key`
+#. `cat ~/.ssh/id_rsa.pub`
+#. Select that output, paste it into the 'Key' field
+#. Give it a title and Click 'Add Key'
+
+Didn't catch that? https://help.github.com/articles/generating-ssh-keys/
+
+Do This:
+--------
+.. code-block:: bash
+
+    $ exec ssh-agent bash
+    $ ssh-add ~/.ssh/id-rsa
+
+If you don't you'll get this when you try to push:
+
+:: 
 
     Permission denied (publickey).
     fatal: The remote end hung up unexpectedly
 
-:Solution: ``ssh-add ~/.ssh/id-rsa`` or whatever key you have added on github
-
+Beware of this Problem
+----------------------
 ::
 
     To git@github.com:edunham/slides.git
@@ -478,28 +527,22 @@ Help, Everythings's Broken!
     hint: before pushing again.
     hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-:Solution: To avoid a messy merge commit, ``git pull --rebase``.
+To avoid a messy merge commit, 
+::
 
-Learn More
-----------
+    $ git pull --rebase.
 
-.. figure:: /static/octocat.jpg
-
-* http://git-scm.com/book
-* http://try.github.io/levels/1/challenges/1
-
-Hands-On
+Hands On
 --------
+Go to http://github.com/devopsbootcamp/Students/ and follow the instructions in
+``students > jordanevans.md``.
 
-* Fork the devopsbootcamp dotfiles repo
-* Clone a copy of the repo to your VM and make a branch
-* Make a commit with a helpful commit message and push to your fork
+:TLDR:
 
 .. code-block:: bash
 
-    $ ssh-keygen -t rsa # make an SSH key and add it to your account
     $ git clone <url from sidebar of your fork> # clone the repo
-    $ cd dotfiles # git commands only work in project directlry
+    $ cd Students # git commands only work in project directlry
     $ git checkout -b <yourname> # -b creates branch
     $ vim <filename>
         # 'i' to enter insert mode
@@ -508,3 +551,12 @@ Hands-On
     $ git add <filename>
     $ git commit -m "please use a helpful commit message, not like this one"
     $ git push
+
+
+Learn More
+----------
+
+.. figure:: /static/octocat.jpg
+
+* http://git-scm.com/book
+* http://try.github.io/levels/1/challenges/1
