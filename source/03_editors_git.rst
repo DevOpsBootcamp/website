@@ -256,22 +256,22 @@ Emacs Moving Around
 
 ::
 
-    C-f forward one char (right)
-    C-b backwards one char (left)
-    M-f forward one word
-    M-b backwards one word
-    C-n forward one line (down)
-    C-p backwards one line (up)
-    C-a beginning of line
-    C-e end of line
-    C-o insert-newline and stay on current line
-    C-j insert newline and indent
-    C-v page down
-    M-v page up
-    M-< beginning of file
-    M-> end of file
-    M-gg <number> goto line
-    C-s forward search (C-s to keep searching)
+    C-f            forward one char (right)
+    C-b            backwards one char (left)
+    M-f            forward one word
+    M-b            backwards one word
+    C-n            forward one line (down)
+    C-p            backwards one line (up)
+    C-a            beginning of line
+    C-e            end of line
+    C-o            insert-newline and stay on current line
+    C-j            insert newline and indent
+    C-v            page down
+    M-v            page up
+    M-<            beginning of file
+    M->            end of file
+    M-g g <number> goto line <number>
+    C-s            forward search (C-s to keep searching)
 
 Emacs Buffers
 -------------
