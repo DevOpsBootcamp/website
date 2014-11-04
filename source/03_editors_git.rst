@@ -8,6 +8,16 @@ Is anyone having problems with package management?
 
 Install the packages named git, vim, and emacs
 
+Don't remember how to install packages? Find out on the next slide
+
+Packages
+--------
+
+|
+
+::
+
+    $ sudo install emacs vim git
 
 What we'll discuss
 ------------------
