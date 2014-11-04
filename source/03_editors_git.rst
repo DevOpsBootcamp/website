@@ -239,7 +239,7 @@ You should know basic substitution:
 On IRC, Hamper does rudimentary regex in the form ``s/foo/bar/`` applying only
 to the most recent comment.
 
-This is not `shell globbing`_
+This is **not** `shell globbing`_
 
 :Resources for learning:
   * `RegExr`_ - an interactive Regular Expression editor and debugger
