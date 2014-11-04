@@ -293,6 +293,40 @@ Emacs Buffers
     C-x 3 split window vertically
     C-x o switch window
 
+Emacs Modes
+-----------
+
+|
+
+* **NOT** like Vim Modes
+* Each buffer has:
+
+  * 1 major mode
+  * 0 or more minor modes
+
+Major Modes
+-----------
+
+|
+
+* Major Modes determine functionality of buffer, e.g.:
+
+  * syntax highlighting, auto-compiling/linting
+  * shell mode
+  * Org mode
+  * Fundamental
+  * Lisp Interaction
+
+Minor Modes
+-----------
+
+|
+
+* Minor modes add functionality that multiple modes might use, e.g.:
+
+  * linum-mode (line numbers)
+  * whitespace-mode (highlights extraneous whitespace, long lines)
+
 Fun Emacs Magic
 ---------------
 
