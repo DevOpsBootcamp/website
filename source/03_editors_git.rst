@@ -385,10 +385,11 @@ Editor questions?
     <i>                          Hello world!
     Hello world!                 <alt + x>
     <esc>                        replace-regexp
-    :%s/[aeiou]//g               [aeiou]
-    <enter>                      <enter>
-    :wq                          <ctrl + x> <ctrl + s>
-    <enter>                      <ctrl + x> <ctrl + c>
+    :%s/[aeiou]//g               <enter>
+    <enter>                      [aeiou]
+    :wq                          <enter>
+    <enter>                      <ctrl + x> <ctrl + s>
+                                 <ctrl + x> <ctrl + c>
 
 Lesson 3: Intro to Git
 ======================
