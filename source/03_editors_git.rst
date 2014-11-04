@@ -280,6 +280,8 @@ Emacs Buffers
 * Each file gets a buffer
 * Special buffers begin and end with ``*``
 
+|
+
 ::
 
     C-x b switch buffers (type a new name to open a new buffer)
@@ -294,19 +296,26 @@ Emacs Buffers
 Fun Emacs Magic
 ---------------
 
+|
+
 ::
 
     M-x eshell <RET> ;; yes, this gives a shell
     M-x server-mode <RET> ;; and then use emacsclient
     M-x compile ;; just "works" for most languages
     M-x package-install ;; emacs has packages!
+
 Emacs Cheat Sheet
 -----------------
+
+|
 
 .. figure:: static/emacs.png
 
 Emacs Configuration
 -------------------
+
+|
 
 * ``.emacs``, ``.emacs.d/init.el``
 * ``M-x``
@@ -317,7 +326,9 @@ Emacs Configuration
 * Elisp (Emacs Lisp)
 
 Emacs Resources
-p---------------
+---------------
+
+|
 
 * Emacs manual (``C-h r`` in emacs or `https://www.gnu.org/software/emacs/manual/`)
 
@@ -328,6 +339,8 @@ p---------------
 
 Editor questions?
 -----------------
+
+|
 
 * Open an editor, find a cheat sheet, try to add some text
 * Modify the text: "``disemvowel``" it
