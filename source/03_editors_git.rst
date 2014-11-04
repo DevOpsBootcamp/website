@@ -16,6 +16,13 @@ What we'll discuss
 * Features of an editor
 * Version control: Git!
 
+Editors!
+--------
+
+|
+
+.. figure:: /static/types_of_editors.png
+
 How do you edit files?
 ----------------------
 |
@@ -232,7 +239,7 @@ You should know basic substitution:
 On IRC, Hamper does rudimentary regex in the form ``s/foo/bar/`` applying only
 to the most recent comment.
 
-This is not `shell globbing`_
+This is **not** `shell globbing`_
 
 :Resources for learning:
   * `RegExr`_ - an interactive Regular Expression editor and debugger
@@ -243,8 +250,131 @@ This is not `shell globbing`_
 .. _Regular-Expressions.info: http://www.regular-expressions.info/
 
 
+
+Emacs Moving Around
+-------------------
+
+::
+
+    C-f            forward one char (right)
+    C-b            backwards one char (left)
+    M-f            forward one word
+    M-b            backwards one word
+    C-n            forward one line (down)
+    C-p            backwards one line (up)
+    C-a            beginning of line
+    C-e            end of line
+    C-o            insert-newline and stay on current line
+    C-j            insert newline and indent
+    C-v            page down
+    M-v            page up
+    M-<            beginning of file
+    M->            end of file
+    M-g g <number> goto line <number>
+    C-s            forward search (C-s to keep searching)
+
+Emacs Buffers
+-------------
+
+* Like a tab on a browser
+* Each file gets a buffer
+* Special buffers begin and end with ``*``
+
+|
+
+::
+
+    C-x b switch buffers (type a new name to open a new buffer)
+    C-x C-b list all buffers
+    C-x C-f find file (opens a new buffer for the file)
+    C-x k kill buffer
+    C-x 1 close all windows but the main one
+    C-x 2 split window horizontally
+    C-x 3 split window vertically
+    C-x o switch window
+
+Emacs Modes
+-----------
+
+|
+
+* **NOT** like Vim Modes
+* Each buffer has:
+
+  * 1 major mode
+  * 0 or more minor modes
+
+Major Modes
+-----------
+
+|
+
+* Major Modes determine functionality of buffer, e.g.:
+
+  * syntax highlighting, auto-compiling/linting
+  * shell mode
+  * Org mode
+  * Fundamental
+  * Lisp Interaction
+
+Minor Modes
+-----------
+
+|
+
+* Minor modes add functionality that multiple modes might use, e.g.:
+
+  * linum-mode (line numbers)
+  * whitespace-mode (highlights extraneous whitespace, long lines)
+
+Fun Emacs Magic
+---------------
+
+|
+
+::
+
+    M-x eshell <RET> ;; yes, this gives a shell
+    M-x server-mode <RET> ;; and then use emacsclient
+    M-x compile ;; just "works" for most languages
+    M-x package-install ;; emacs has packages!
+
+Emacs Cheat Sheet
+-----------------
+
+|
+
+.. figure:: static/emacs.png
+
+Emacs Configuration
+-------------------
+
+|
+
+* ``.emacs``, ``.emacs.d/init.el``
+* ``M-x``
+
+  * e.g ``M-x linum-mode`` for line numbers
+  * ``M-x whitespace-mode`` for whitespace mode
+
+* Elisp (Emacs Lisp)
+
+Emacs Resources
+---------------
+
+|
+
+* Emacs manual (``C-h r`` in emacs or `https://www.gnu.org/software/emacs/manual/`)
+
+  * GNU sells printed manuals as well
+
+* Emacs Wiki (`https://www.emacswiki.org`)
+* Emacs Tutorial (``C-h t`` inside emacs)
+
 Editor questions?
 -----------------
+
+|
 
 * Open an editor, find a cheat sheet, try to add some text
 * Modify the text: "``disemvowel``" it
@@ -255,12 +385,11 @@ Editor questions?
     <i>                          Hello world!
     Hello world!                 <alt + x>
     <esc>                        replace-regexp
-    :%s/[aeiou]//g               [aeiou]
+    :%s/[aeiou]//g               <enter>
+    <enter>                      [aeiou]
     :wq                          <enter>
-                                 <ctrl + x> <ctrl + s>
+    <enter>                      <ctrl + x> <ctrl + s>
                                  <ctrl + x> <ctrl + c>
-                                 
-                                 
 
 Lesson 3: Intro to Git
 ======================
