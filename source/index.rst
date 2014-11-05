@@ -55,43 +55,17 @@ Contents:
 ---------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    get_involved
    policies
-   curriculum
-   guide
+   slides
+   exercises
+   daycamp
    resources
    faq
    whatisdevops
-   mission
    vagrant
+   admin_checklist
 
-.. toctree::
-    :hidden:
-
-    00_introduction
-    01_the_very_basics
-    02_single_system_fundamentals
-    homework02
-    03_editors_git
-    04_scripting_troubleshooting
-    05_services_app
-    06_boot_filesystem
-    07_database_integration
-    08_security_auth
-    09_networking
-    10_dns
-    11_devops
-    12_configmgmt
-    13_opensource
-    14_review
-    16_email
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
