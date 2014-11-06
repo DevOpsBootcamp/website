@@ -23,6 +23,8 @@ Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announc
       +--------+-----------+---------------------------------+--------------+
       | 11/24  | KEC1005   | Databases                       | 9            |
       +--------+-----------+---------------------------------+--------------+
+      | 12/1   | KEC1005   | Review                          | 10           |
+      +--------+-----------+---------------------------------+--------------+
      
 
 DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
