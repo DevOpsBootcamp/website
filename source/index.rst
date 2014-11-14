@@ -1,4 +1,4 @@
-.. OSU DevOps BootCamp documentation master file, created by
+    .. OSU DevOps BootCamp documentation master file, created by
    sphinx-quickstart on Tue Oct 15 12:20:17 2013.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -24,6 +24,7 @@ Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announc
       | 11/24  | KEC1005   | Databases                       | 9            |
       +--------+-----------+---------------------------------+--------------+
      
+
 
 DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
 that aims to boost our impact and outreach while shrinking the skills gap for
@@ -61,6 +62,7 @@ Contents:
    policies
    slides
    exercises
+   schedule
    daycamp
    resources
    faq
