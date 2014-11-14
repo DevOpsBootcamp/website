@@ -45,9 +45,6 @@ Winter Term:
     | 3/9    | KEC1005   | Review                          | 10           |
     +--------+-----------+---------------------------------+--------------+
 
-
-
-
 DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
 that aims to boost our impact and outreach while shrinking the skills gap for
 OSU students interested in DevOps.
