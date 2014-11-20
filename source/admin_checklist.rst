@@ -5,7 +5,7 @@ Weekly Checklist
 ----------------
 Before Bootcamp:
 
-* Make sure at least 3 people will be there to help out.
+* Make sure at least `3 people will be there to help out. <https://docs.google.com/a/osuosl.org/spreadsheets/d/1Oc5RkbUweUzrd7oxNXp1R2xDIwCUl7E276Q4MTicZKA/edit#gid=0>`_ (https://docs.google.com/a/osuosl.org/spreadsheets/d/1Oc5RkbUweUzrd7oxNXp1R2xDIwCUl7E276Q4MTicZKA/edit#gid=0)
 * Look over `slides <http://slides.osuosl.org/devopsbootcamp/>`_, make sure they are online
 * Make any `exercises <https://github.com/DevOpsBootcamp/Bootcamp-Exercises>`_ you need
 * Contact any presenters to make sure they know when and where to be (and know they are coming!)
