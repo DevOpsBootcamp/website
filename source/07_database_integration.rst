@@ -4,8 +4,6 @@ Lesson 7: Databases
 Filesystems Review Questions
 ----------------------------
 
-.. rst-class:: build
-
 - What might happen to a busy ext2 volume on power loss?
 - ext3?
 - ext4?
@@ -21,8 +19,6 @@ Filesystems Review Questions
 
 But what about our poor data?
 -----------------------------
-
-.. rst-class:: build
 
 - Possibly gone, like the wind
 - Or worse: Half completed writes!
@@ -69,28 +65,39 @@ Installing MySQL
 
 .. code-block:: bash
 
-    $ yum install mysql-server
-    $ /sbin/service mysqld start
-    $ /usr/bin/mysql_secure_installation
+    $ sudo yum install mysql-server
+    # Start the service
+    $ sudo service mysqld start
+    # Use this to set the root password
+    $ mysql_secure_installation
+    # There is no current password
+    # Hit 'yes' or 'y' for all options
+    # Add a sensible password which you will remember
+    # DO NOT MAKE IT YOUR USUAL PASSWORD.  
+    # 'root' and 'password' are good for this sort of thing
 
 Managing MySQL
 --------------
 
 .. code-block:: bash
 
-    $ /sbin/service mysqld status
-    $ mysqladmin -p ping
-    $ mysqladmin -p create nobel
+    # Make sure service is running
+    $ sudo service mysqld status
+    # Ping the database
+    $ mysqladmin -u root -p ping
+    $ mysqladmin -u root -p create nobel
 
 Configuration
 -------------
 
-.. rst-class:: build
-
-- ``/etc/my.conf``
-- The most important MySQL tuning rule: 
-
-   - almost always prefer **InnoDB**
+- ``/etc/my.cnf``
+- The most important MySQL tuning rule: almost always prefer **InnoDB**
+- InnoDB is a Database Engine, and is wonderful because:
+  - It has `crash recovery <https://dev.mysql.com/doc/refman/5.5/en/glossary.html#glos_crash_recovery>`_
+  - It caches
+  - Foreign keys are a thing (Apparently they aren't in MyISAM)
+  - Multiple clients can write to the same database at the same time (Also apprently not in MyISAM)
+  - `And more... <https://dev.mysql.com/doc/refman/5.5/en/innodb-default-se.html>`_
  
 .. note:: 
     we're going to add: 
@@ -103,6 +110,9 @@ Users & Permissions
 
     $ sudo mysql -p
 
+This plops you into the mysql shell -- now you're ready to start writing SQL queries!
+These will talk to our database, allowing us to put information into and get information out of it.
+Next, we'll create a user vagrant and give it all privileges on the database we just made
 .. code-block:: sql
 
     mysql> CREATE USER 'vagrant'@'localhost' 
@@ -117,13 +127,18 @@ Importing Data
 
 .. code-block:: bash
 
+    # Get the database from the osl server
     $ wget http://osl.io/nobel -O nobel.sql
-    $ mysql -p nobel < nobel.sql
-    $ mysql -p nobel
+    # put the database in a file called nobel.sql
+    $ sudo mysql -p nobel < nobel.sql
+    # Open up mysql shell to execute queries
+    $ sudo mysql -p nobel
 
 .. code-block:: sql
 
+    # List all the tables
     SHOW TABLES;
+    # Print the layout of the database to the screen
     DESCRIBE nobel;
 
 Basic Queries
@@ -138,6 +153,7 @@ Basic Queries
 
 SELECT
 ------
+Select is used to get specific data from the database.
 
 .. code-block:: sql
 
@@ -146,15 +162,23 @@ SELECT
     FROM 
        nobel
     WHERE 
-       yr = 1960;
+       yr = 1960 and subject='medicine';
 
 Practice
 --------
 
-* Who won the prize for Medicine in 1952?
+* Who won the prize for Medicine in 1952? 
 * How many people were awarded the 1903 Nobel in Physics?
 * How many prizes were awarded to Linus Pauling?
 * How many people have won more than once? (Difficult)
+
+Answers
+-------
+
+* ``SELECT winner FROM nobel WHERE yr=1952 AND subject='medicine';`` (Selman A. Wksman)
+* ``SELECT * FROM nobel WHERE yr=1903 AND subject='physics';`` (3)
+* ``SELECT * FROM nobel WHERE winner='Linus Pauling';`` (2)
+* ``SELECT COUNT(*) FROM nobel AS n0 INNER JOIN nobel AS n1 on n0.winner=n1.winner AND (n0.yr!=n1.1 or n0.subject!=n1.subject);`` (16)
 
 INSERT
 ------
