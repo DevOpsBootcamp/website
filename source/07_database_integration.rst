@@ -44,8 +44,8 @@ SQL databases are structured around **Relational Algebra**
 
 - Tables
 
-  - **Columns** are fields
-  - **Rows** define a relation between fields
+- **Columns** are fields
+- **Rows** define a relation between fields
 - A **Primary key** is a set of columns that uniquely identify rows in a table
 - A **Foreign key** is a column that matches the primary key of another table
 
@@ -65,6 +65,7 @@ Installing MySQL
 
 .. code-block:: bash
 
+    # Install mysql -- hit 'enter' to name your user root, and then enter again for password 
     $ sudo yum install mysql-server
     # Start the service
     $ sudo service mysqld start
@@ -87,18 +88,19 @@ Managing MySQL
     $ mysqladmin -u root -p ping
     $ mysqladmin -u root -p create nobel
 
+
 Configuration
 -------------
 
 - ``/etc/my.cnf``
 - The most important MySQL tuning rule: almost always prefer **InnoDB**
 - InnoDB is a Database Engine, and is wonderful because:
-  - It has `crash recovery <https://dev.mysql.com/doc/refman/5.5/en/glossary.html#glos_crash_recovery>`_
-  - It caches
-  - Foreign keys are a thing (Apparently they aren't in MyISAM)
-  - Multiple clients can write to the same database at the same time (Also apprently not in MyISAM)
-  - `And more... <https://dev.mysql.com/doc/refman/5.5/en/innodb-default-se.html>`_
- 
+    - It has `crash recovery <https://dev.mysql.com/doc/refman/5.5/en/glossary.html#glos_crash_recovery>`_
+    - It caches
+    - Foreign keys are a thing (Apparently they aren't in MyISAM)
+    - Multiple clients can write to the same database at the same time (Also apprently not in MyISAM)
+    - `And more... <https://dev.mysql.com/doc/refman/5.5/en/innodb-default-se.html>`_
+
 .. note:: 
     we're going to add: 
     ``default_storage_engine         = InnoDB``
@@ -113,6 +115,7 @@ Users & Permissions
 This plops you into the mysql shell -- now you're ready to start writing SQL queries!
 These will talk to our database, allowing us to put information into and get information out of it.
 Next, we'll create a user vagrant and give it all privileges on the database we just made
+
 .. code-block:: sql
 
     mysql> CREATE USER 'vagrant'@'localhost' 
@@ -175,10 +178,20 @@ Practice
 Answers
 -------
 
-* ``SELECT winner FROM nobel WHERE yr=1952 AND subject='medicine';`` (Selman A. Wksman)
-* ``SELECT * FROM nobel WHERE yr=1903 AND subject='physics';`` (3)
-* ``SELECT * FROM nobel WHERE winner='Linus Pauling';`` (2)
-* ``SELECT COUNT(*) FROM nobel AS n0 INNER JOIN nobel AS n1 on n0.winner=n1.winner AND (n0.yr!=n1.1 or n0.subject!=n1.subject);`` (16)
+.. code-block:: sql
+    
+    SELECT winner FROM nobel 
+    WHERE yr=1952 AND subject='medicine'; #(Selman A. Wksman)
+
+    SELECT * FROM nobel 
+    WHERE yr=1903 AND subject='physics'; #(3)
+
+    SELECT * FROM nobel 
+    WHERE winner='Linus Pauling'; #(2)
+
+    SELECT COUNT(*) FROM nobel 
+    AS n0 INNER JOIN nobel AS n1 on n0.winner=n1.winner 
+    AND (n0.yr!=n1.1 or n0.subject!=n1.subject); #(16)
 
 INSERT
 ------
@@ -199,6 +212,15 @@ In 2009:
  - Barack Obama won the Peace Prize
  - Elinor Ostrom and Oliver E. Williamson won the prize in Economics
  - http://en.wikipedia.org/wiki/List_of_Nobel_laureates
+
+Answers
+-------
+
+.. code-block:: sql
+
+    INSERT VALUES ('2009', 'Peace', 'Barack Obama'), 
+    ('2009', 'Economics', 'Elinor Ostrom and Oliver E. Williamson') 
+    INTO nobel; 
 
 UPDATE
 ------
@@ -241,7 +263,7 @@ Further Reading, Resources, etc.
 - Codd, E.F. (1970). "A Relational Model of Data for Large Shared Data Banks".
   Communications of the ACM 13 (6): 377–387.
 - sqlzoo.net
-- CS 440: Database Management Systems
+- CS 275: Databases (Justin Wolford taught my class)
 
 Hands-On: Make a Database
 -------------------------
@@ -263,6 +285,22 @@ Hands-On: Make a Database
   challenge them to do this based on the material in the last hour, maybe also
   demo the mysql console. Make sure everyone remembers the username and password
   for the next step.
+
+Describing Tables
+---------------
+
+* A table has rows.
+* Each row has a bunch of fields.
+* You can think of it just like a table in a spreadsheet.
+* Tables are defined using a schema.
+
+.. code-block:: sql
+
+    CREATE TABLE nobel (
+        id int(11) NOT NULL AUTO_INCREMENT,
+        yr int(11),
+        subject varchar(15),
+        winner varchar(50)) ENGINE = InnoDB;
 
 Databases in Applications
 -------------------------
@@ -294,7 +332,7 @@ Python:
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT subject, yr, winner FROM nobel WHERE yr = 1960)
+    cursor.execute("SELECT subject, yr, winner FROM nobel WHERE yr = 1960")
 
     data = cursor.fetchall()
 
@@ -351,7 +389,7 @@ Setting Up the Magic - SqlAlchemy
 ---------------------------------
 
 SqlAlchemy - a popular Python ORM, frequently used in Flask apps (like
-SystemView!).
+SystemView!)
 
 To use it, we'll need to:
 
@@ -375,86 +413,22 @@ To use it, we'll need to:
     instantiate live int he session, and are only saved to the database when you
     say so.
 
-Let's Databasify Systemview
----------------------------
+How SQLAlchemy is used in Systemview:
+-------------------------------------
 
-Project:
+* Open up `systemview.py` 
+* Notice on line 25 where we import flask.ext.sqlalchemy -- this is the flask module for working with SQLAchemy
+* Next, look at line 45 where we tell it which database to use.  Notice that it looks suspiciously like a URL...
+    * Note: You don't have to memorize this syntax -- just know that a database is being created!
+* Other notable lines include line 48, line 59, and lines 114 - 129
 
-- Store search terms, then provide them as links on the search page, so you can
-  just click the most common terms you search for.
+What's a model? What's an Object?
+---------------------------------
 
-What else? Ideas?
+* You might notice on line 53 that we pass 'db.Model' to our search function.
 
-.. note::
-  Solicit ideas for another column or two, maybe number of times the term is
-  used (easy incrementing example), or number of results from the least search.
+* Instead of describing the fields in a database's table using a schema, we can use a model.
 
-Hands On
---------
+* For those of you familiar with Object Oriented Programming, a model is a class which the ORM can
+turn into a database field.
 
-* Install the following packages:
-
-.. code-block:: bash
-
-      sudo yum install python-devel
-      sudo yum install mysql-devel
-
-* Check out systemview from GitHub (if you don't have it already)
-
-.. code-block:: bash
-
-      git clone git@github.com:DevOpsBootcamp/systemview
-
-Hands On (Cont...)
-------------------
-
-* Switch to 'save-search' branch
-
-.. code-block:: bash
-
-      git checkout -tb save-search origin/save-search
-
-* Activate your virtualenv
-
-.. code-block:: bash
-
-      source <path to virtualenv>/bin/activate
-
-* Install the requirements
-
-.. code-block:: bash
-
-      pip install -r requirements.txt
-
-.. note::
-
-  Talk about git branches again, explain tracking, git pull for people who
-  already have it cloned, etc. Talk about the virtualenv, have people create a
-  new one if they have lost the one they made last time. Talk about pip and what
-  requirements.txt is all about - point out how easy it is to set up an app this
-  way. Make sure requirements.txt contains sqlalchemy.
-
-  **DANGER!** - people will need mysql-dev package! name varies by distribution,
-  for centos it is libmysqlclient-dev
-
-Goals
------
-
-* Connect the app to your new database
-* Add a new column
-* Save data to that column whenever someone searches
-* Fetch the data from that column and display it on the search page
-* challenge: limit the returned result to only 5 terms
-
-http://docs.sqlalchemy.org/en/rel_0_9/orm/tutorial.html
-
-.. note::
-  The code in the repo should have a simple model with one column, 'term', you
-  can make a ``models.py``, or just put it all in one file. If you separate
-  them, talk about MVC. The code should start an sqlalchemy engine and session,
-  save the search term normalized (lowercased, stripped), the column should be
-  set to unique. Make sure the code handles the case of the term already
-  existing in the database (when you add a count, increment the count when the
-  term exists).  You should probably initialize the db directly in the code,
-  otherwise you'll have to open up a python console, import the app and run the
-  db update.
