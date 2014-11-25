@@ -1,13 +1,15 @@
-Session 2: Linux Basics
-=========================
+Linux Basics
+============
 
 Today's Agenda
 --------------
 
 * The Terminal & Shell
     * Scripts, file paths, special characters
+
 .. figure:: /static/Tux.png
     :align: right
+
 * Productivity tricks
     * Getting help
 * What are files?

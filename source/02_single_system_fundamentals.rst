@@ -5,7 +5,7 @@ Lesson 2: Single System Fundamentals
 Or, how to be a power user.
 
 Housekeeping
-============
+------------
 
 .. figure:: /static/virtualbox.png
     :align: center
@@ -13,16 +13,8 @@ Housekeeping
 
 10 minutes to make sure everyone's Virtualbox instances are up and running
 
-
-**Your opinions:**
-
-* Want to meet during dead week vs. have last meeting of term next week?
-
-* Start wk1 of winter term?
-
-
 Today's Topics
-==============
+--------------
 * What are files?
     * Permissions/users
 * What are user accounts?
@@ -35,7 +27,7 @@ Today's Topics
     * Other package managers
 
 What are users?
-===============
+---------------
 
 * You, right now
 
@@ -49,7 +41,7 @@ What are users?
 * Not just people: Apache, Mailman, ntp
 
 Users have
-==========
+----------
 
 * Username
 * UID
@@ -58,7 +50,7 @@ Users have
 * Usually (but not always) home directory
 
 Managing users
-==============
+--------------
 
 .. code-block:: bash
 
@@ -80,7 +72,7 @@ Managing users
     
 
 Passwords
-=========
+---------
 
 * ``/etc/shadow``, not ``/etc/passwd``
 
@@ -103,7 +95,7 @@ Passwords
     $ chage # change when a user's password expires
 
 Root/Superuser
-==============
+--------------
 
 * UID 0
 * ``sudo``
@@ -112,7 +104,7 @@ Root/Superuser
     :align: center
 
 Acting as another user
-======================
+----------------------
 
 .. code-block:: bash
 
@@ -130,7 +122,7 @@ If someone has permissions errors:
 
 
 What are groups?
-================
+----------------
 
 * Manage permissions for groups of users
 
@@ -149,14 +141,14 @@ What are groups?
     # group name:password or placeholder:GID:member,member,member
 
 Hands-On: Users and Groups
-==========================
+--------------------------
 
 .. note:: To give yourself sudo powers do the following:
 
   #. Add your user to the ``wheel`` group using ``gpasswd``.
   #. As the root user, use ``visudo`` and uncomment this line::
 
-      %wheel  ALL=(ALL)   ALL
+      %wheel  ALL-(ALL)   ALL
 
   #. Save the file and now you should have sudo!
 
@@ -171,7 +163,7 @@ Hands-On: Users and Groups
 
 
 What are files?
-===============
+---------------
 
 * Nearly everything
 * Files have:
@@ -191,7 +183,7 @@ What are files?
 
 
 File extensions
-===============
+---------------
 
 * ``.jpg``, ``.txt``, ``.doc``
 
@@ -209,7 +201,7 @@ File extensions
     squirrel.jpg: JPEG image data, JFIF standard 1.01
 
 ls -l
-======
+------
 
 * First bit: type
 * Next 3: user
@@ -231,9 +223,9 @@ chmod and octal permissions
 
 .. code-block:: bash
 
-    +=====+========+=======+
+    +-----+--------+-------+
     | rwx | Binary | Octal |
-    +=====+========+=======+
+    +-----+--------+-------+
     | --- | 000    | 0     |
     | --x | 001    | 1     |
     | -w- | 010    | 2     |
@@ -242,10 +234,10 @@ chmod and octal permissions
     | r-x | 101    | 5     |
     | rw- | 110    | 6     |
     | rwx | 111    | 7     |
-    +=====+========+=======+
+    +-----+--------+-------+
 
 * u, g, o for user, group, other
-* -, +, = for remove, add, set
+* -, +, - for remove, add, set
 * r, w, x for read, write, execute
 
 
@@ -269,7 +261,7 @@ user & group
     $ chgrp -R devops /home/$yourusername/bootcamp
 
 Types of files
-==============
+--------------
 
 .. code-block:: bash
 
@@ -292,7 +284,7 @@ Types of files
 ``b`` is a block device
 
 ACLs
-====
+----
 
 * Access control lists
 
@@ -303,7 +295,7 @@ ACLs
 * Support depends on OS and filesystem
 
 Hands-On: Files and Permissions
-===============================
+-------------------------------
 
 .. code-block:: bash
    
@@ -316,7 +308,7 @@ Hands-On: Files and Permissions
 * Make more files and practice changing their permissions
 
 Package Management
-==================
+------------------
 
 *Take care of installation and removal of software*
 
@@ -334,7 +326,7 @@ Package Management
 * .rpm / YUM (used by RedHat, CentOS, Fedora)
 
 RPM & yum (RedHat, CentOS, Fedora)
-==================================
+----------------------------------
 
 .. image:: /static/rpm.png
     :align: right
@@ -402,7 +394,7 @@ Low level package management. No dependency checking or central repository.
   $ rpm -ql tree
 
 DPKG & Apt (Debian, Ubuntu)
-===========================
+---------------------------
 
 **Deb**
 
@@ -472,7 +464,7 @@ Low level package management. No dependency checking or central repository.
   $ dpkg-query -L tree
 
 Language-specific Package Managers
-==================================
+----------------------------------
 
 * Languages sometimes have their own package management suite
 * Can be useful for using newer versions of packages
@@ -485,7 +477,7 @@ Language-specific Package Managers
     * *... and so on forever ...*
 
 Other Package Managers
-======================
+----------------------
 
 They each fill a specific niche and have their own pros and cons.
 
@@ -494,7 +486,7 @@ They each fill a specific niche and have their own pros and cons.
 * ZYpp / Zypper (SUSE) -- Yet another RPM package manager
 
 Installing from source
-======================
+----------------------
 
 * Download source tarball, run build scripts and install in a local directory.
 * RPM/DEB packages do this for you
@@ -512,17 +504,16 @@ Installing from source
 
 
 Hands-on: Package Management
-============================
+----------------------------
 
 * Install the ``git`` package
 * Query the RPM/APT database for installed packages
 * List the files in an installed package
 * Remove the ``git`` package
 
-Questions:
-==========
+Takeaways:
+----------
 
-* read example output of ls -al
-* read output of yum or aptitude search
-* install a package on their VM/partition (Vim, Git)
-        * explain what dependencies it also installed
+* Can you see  who can read, write, and execute in your home directory?
+* Can you search yum or aptitude for a specific package (try vim)?
+* Can you install a package on your VM/partition (Vim and Git), and explain what dependencies it also installed?

@@ -508,7 +508,7 @@ Review
 
 * What's Linux?
 * How do you open a terminal emulator?
-    * this varies between window managers
+    * This varies between window managers
 * I have the script ``test.py``. How do I run it??
 * How do you list all the files in the current directory?
 * Give 2 ways to change directory to your home directory.
