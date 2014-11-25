@@ -4,8 +4,6 @@ Lesson 7: Databases
 Filesystems Review Questions
 ----------------------------
 
-.. rst-class:: build
-
 - What might happen to a busy ext2 volume on power loss?
 - ext3?
 - ext4?
@@ -21,8 +19,6 @@ Filesystems Review Questions
 
 But what about our poor data?
 -----------------------------
-
-.. rst-class:: build
 
 - Possibly gone, like the wind
 - Or worse: Half completed writes!
@@ -50,7 +46,7 @@ SQL databases are structured around **Relational Algebra**
 
   - **Columns** are fields
   - **Rows** define a relation between fields
-- A **Primary key** is a set of columns that uniquely identify rows in a table
+- A **Primary key** is a set of columns that uniquely identify rows in a table.  You can think of it as an ID number for an object in a database.
 - A **Foreign key** is a column that matches the primary key of another table
 
 Relational Algebra Visualized
@@ -84,8 +80,6 @@ Managing MySQL
 
 Configuration
 -------------
-
-.. rst-class:: build
 
 - ``/etc/my.conf``
 - The most important MySQL tuning rule: 
