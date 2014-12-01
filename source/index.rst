@@ -1,4 +1,4 @@
-DevOps Daycamp
+DevOps Bootcamp
 ==============
 
 Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
