@@ -66,6 +66,7 @@ Contents:
     daycamp
     resources
     faq
+    getting_started
     whatisdevops
     vagrant
     admin_checklist
