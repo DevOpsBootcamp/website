@@ -3,6 +3,10 @@ DevOps Bootcamp
 
 Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
 
+DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
+that aims to boost our impact and outreach while shrinking the skills gap for
+OSU students interested in DevOps.
+
 Winter Term:
 ------------
 
@@ -27,10 +31,6 @@ Winter Term:
 +--------+-----------+---------------------------------+--------------+
 | 3/9    | KEC1005   | Review                          | 10           |
 +--------+-----------+---------------------------------+--------------+
-
-DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
-that aims to boost our impact and outreach while shrinking the skills gap for
-OSU students interested in DevOps.
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
 more than 160 open source projects. Along with delivering over 460 terabytes of
