@@ -551,7 +551,7 @@ Let's clone the systemview app into a reasonable location while we are at it
 .. code-block:: bash
 
     cd /var/www
-    git clone https://github.com/DevOpsBootcamp/systemview.git
+    git clone https://github.com/DevOpsBootCamp/systemview.git
     cd systemview
     git checkout wsgi
 

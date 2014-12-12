@@ -35,8 +35,8 @@ Vim, Emacs, and Git for version control
 - `Part 1, text editors video <https://www.youtube.com/watch?v=4ce3P_mvOvA>`_ 
 - `Part 2, version control video <https://www.youtube.com/watch?v=vBeAP7i_mPg>`_
 - `Lesson 3 Slides <http://slides.osuosl.org/devopsbootcamp/03_editors_git.html>`_
-- `Text Editors Exercises <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/editors>`_
-- `Git Exercises <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/git>`_
+- `Text Editors Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/editors>`_
+- `Git Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/git>`_
 
 Lesson 4: Scripting & Troubleshooting
 -------------------------------------
@@ -44,7 +44,7 @@ Python and Bash. Overview of troubleshooting/debugging skills.
 
 - `Scripting and Troubleshooting Video <https://www.youtube.com/watch?v=98XtvsbN56g>`_
 - `Lesson 4 Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
-- `Lesson 4 Exercises <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/bash>`_
+- `Lesson 4 Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/bash>`_
 
 Lesson 5: Services & Deploying a Web App 
 ----------------------------------------

@@ -28,7 +28,7 @@ Linux
 .. code-block:: bash
 
     # clone
-    git clone https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant.git
+    git clone https://github.com/DevOpsBootCamp/devopsbootcamp-vagrant.git
 
     # start up
     cd devopsbootcamp-vagrant
@@ -86,7 +86,7 @@ Now that you're in the guest machine:
 
 .. code-block:: bash
 
-    git@github.com:DevOpsBootcamp/catch-up.git
+    git@github.com:DevOpsBootCamp/catch-up.git
 
     cd catch-up
     ./catch-up.sh

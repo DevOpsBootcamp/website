@@ -104,7 +104,7 @@ Vagrant & VirtualBox
 .. code-block:: bash
 
     # clone
-    git clone https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant.git
+    git clone https://github.com/DevOpsBootCamp/devopsbootcamp-vagrant.git
 
     # start up
     cd devopsbootcamp-vagrant

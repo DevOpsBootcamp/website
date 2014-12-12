@@ -266,7 +266,7 @@ An Example Site Manifest
             path    => '/etc/issue',
             mode    => 644,
             ensure  => present,
-            content => "Welcome to the DevOps Bootcamp VM.\n",
+            content => "Welcome to the DevOps BootCamp VM.\n",
         }
 
         package{'httpd':
@@ -374,7 +374,7 @@ Module Structure
   place
 
 
-The Bootcamp Apache Module
+The BootCamp Apache Module
 --------------------------
 
 .. code-block:: bash
@@ -417,7 +417,7 @@ Site.pp Modularized
             path    => '/etc/issue',
             mode    => 644,
             ensure  => present,
-            content => "Welcome to the DevOps Bootcamp VM.\n",
+            content => "Welcome to the DevOps BootCamp VM.\n",
         }
 
         include bootcamp_apache
@@ -449,7 +449,7 @@ https://github.com/puppetlabs/puppetlabs-mysql
 
 We can include this module's class into our site manifest or our own modules.
 
-The Bootcamp Mysql Module
+The BootCamp Mysql Module
 -------------------------
 
 We want to create a database and users, so lets make a module and not clutter up

@@ -1,4 +1,4 @@
-DevOps Bootcamp
+DevOps BootCamp
 ===============
 
 Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
@@ -6,6 +6,11 @@ Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announc
 DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
 that aims to boost our impact and outreach while shrinking the skills gap for
 OSU students interested in DevOps.
+
+If you missed any lessons last term, you can `catch up 
+<https://www.youtube.com/playlist?list=PLqzbgtiNz4A7mrOdSWNICSbYuJOG4j4yW>`_ at 
+http://osl.io/devopsbc.
+
 
 Winter Term:
 ------------

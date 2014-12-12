@@ -107,13 +107,13 @@ Get the Code
 
 .. code-block:: bash
 
-	git clone git@github.com:DevOpsBootcamp/systemview.git
+	git clone git@github.com:DevOpsBootCamp/systemview.git
 
 
 .. note::
   - break here for github account setup, key location (where are they checking
     code out from? Where is their key located?), etc
-  - https://github.com/DevOpsBootcamp/systemview.git for anyone who can't get
+  - https://github.com/DevOpsBootCamp/systemview.git for anyone who can't get
     their account/key working
 
 Run the Code
@@ -184,7 +184,7 @@ Branch and Modify
 
 Create a Github issue for your changes
 
-https://github.com/DevOpsBootcamp/systemview/issues
+https://github.com/DevOpsBootCamp/systemview/issues
 
 Create a branch for your changes
 
@@ -212,8 +212,8 @@ Add a feature or fix a bug, push your changes up.
 
 Github URL:
 
-https://github.com/DevOpsBootcamp/systemview
+https://github.com/DevOpsBootCamp/systemview
 
 Github issue tracker:
 
-https://github.com/DevOpsBootcamp/systemview/issues
+https://github.com/DevOpsBootCamp/systemview/issues

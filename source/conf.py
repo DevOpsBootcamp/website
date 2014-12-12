@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# OSU DevOps Bootcamp documentation build configuration file, created by
+# OSU DevOps BootCamp documentation build configuration file, created by
 # sphinx-quickstart on Tue Oct 15 12:20:17 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'OSU DevOps Bootcamp'
+project = u'OSU DevOps BootCamp'
 copyright = u'2013, OSU OSL & OSU LUG'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -182,7 +182,7 @@ html_static_path = ['static', 'Slides/static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'OSUDevOpsBootcampdoc'
+htmlhelp_basename = 'OSUDevOpsBootCampdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -201,7 +201,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'OSUDevOpsBootcamp.tex', u'OSU DevOps Bootcamp Documentation',
+  ('index', 'OSUDevOpsBootCamp.tex', u'OSU DevOps BootCamp Documentation',
    u'OSU OSL & OSU LUG', 'manual'),
 ]
 
@@ -231,7 +231,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'osudevopsbootcamp', u'OSU DevOps Bootcamp Documentation',
+    ('index', 'osudevopsbootcamp', u'OSU DevOps BootCamp Documentation',
      [u'OSU OSL & OSU LUG'], 1)
 ]
 
@@ -245,8 +245,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'OSUDevOpsBootcamp', u'OSU DevOps Bootcamp Documentation',
-   u'OSU OSL & OSU LUG', 'OSUDevOpsBootcamp', 'One line description of project.',
+  ('index', 'OSUDevOpsBootCamp', u'OSU DevOps BootCamp Documentation',
+   u'OSU OSL & OSU LUG', 'OSUDevOpsBootCamp', 'One line description of project.',
    'Miscellaneous'),
 ]
 

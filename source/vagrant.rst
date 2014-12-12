@@ -64,14 +64,14 @@ If you don't have git installed, please go `download git`_ and install it.
 Once you have downloaded and installed git, go to a folder where you want to
 keep the repository and type the following::
 
-  git clone https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant.git
+  git clone https://github.com/DevOpsBootCamp/devopsbootcamp-vagrant.git
 
 If installing git is too difficult, you can also download a `zip file`_
 containing the repository. We will teach you more about git later in the year,
 so don't worry!
 
 .. _download git: http://git-scm.com/downloads
-.. _zip file: https://github.com/DevOpsBootcamp/devopsbootcamp-vagrant/archive/master.zip
+.. _zip file: https://github.com/DevOpsBootCamp/devopsbootcamp-vagrant/archive/master.zip
 
 Using Vagrant
 -------------

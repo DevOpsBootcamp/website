@@ -1,4 +1,4 @@
-DevOps Bootcamp Introduction
+DevOps BootCamp Introduction
 ============================
 
 OSU OSL & OSU LUG

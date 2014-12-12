@@ -54,7 +54,7 @@ tools the next, and a new open source project by a local company the next.
 
 DevOps BootCamp will provide continuity and comprehensive open source
 education that's outside the scope of regular LUG meetings. As you progress
-through Bootcamp, you'll understand more and more of the technical content of
+through BootCamp, you'll understand more and more of the technical content of
 LUG talks.
 
 I wasn't able to participate during Fall term. Can I still join?

@@ -106,7 +106,7 @@ OSL Hiring:
 * Alumni
     * Google, Rackspace, Intel, Microsoft, Mozilla, Facebook
 
-Getting involved with Bootcamp
+Getting involved with BootCamp
 ------------------------------
 
 .. note:: edunham

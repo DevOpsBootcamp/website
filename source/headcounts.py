@@ -4,7 +4,7 @@ from pygal.style import TurquoiseStyle
 def graph(data1, data2):
     graph = pygal.XY(stroke=True, style=TurquoiseStyle)
     graph.dots_size = 6
-    graph.title = 'DevOps Bootcamp Head Counts'
+    graph.title = 'DevOps BootCamp Head Counts'
     graph.title_font_size = 28
     graph.x_title = 'Week'
     graph.y_title = 'Student Attendees'

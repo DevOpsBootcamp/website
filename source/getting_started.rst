@@ -15,7 +15,7 @@ Clone our Vagrant Repo:
 
 .. code-block:: bash
 
-    $ git clone git@github.com:DevOpsBootcamp/devopsbootcamp-vagrant.git
+    $ git clone git@github.com:DevOpsBootCamp/devopsbootcamp-vagrant.git
     $ cd devopsbootcamp-vagrant
 
 
@@ -86,7 +86,7 @@ Joining Channels:
 
 .. code-block:: bash
 
-    # You can join two common channels in the OSU community -- OSU LUG and DevOps Bootcamp
+    # You can join two common channels in the OSU community -- OSU LUG and DevOps BootCamp
     /join #osu-lug
     /join #devopsbootcamp
 
