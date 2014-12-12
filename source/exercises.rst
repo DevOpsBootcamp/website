@@ -19,3 +19,15 @@ Git and Github
 Scripting
 ---------
 `Bash <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/bash>`_
+
+Web Application
+---------------
+`Web Application <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/webapp>`_
+
+Filesystems
+-----------
+`Navigating a Linux Filesystem <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/filesystems>`_
+
+Boot Process
+------------
+`Examining the boot process <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/booting>`_

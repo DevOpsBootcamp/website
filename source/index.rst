@@ -1,26 +1,11 @@
-DevOps Daycamp
-==============
+DevOps Bootcamp
+===============
 
 Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
 
-Fall Term:
-----------
-
-+--------+-----------+---------------------------------+--------------+
-| Date   | Location  | Topic                           | Week of term |
-+========+===========+=================================+==============+
-| 10/27  | KEC1005   | Bash Basics and Exercises       | 5            |
-+--------+-----------+---------------------------------+--------------+
-| 11/3   | KEC1005   | Editors and Git                 | 6            |
-+--------+-----------+---------------------------------+--------------+
-| 11/10  | KEC1005   | Web Applications                | 7            |
-+--------+-----------+---------------------------------+--------------+
-| 11/17  | KEC1005   | Linux Filesystem Hierarchy      | 8            |
-+--------+-----------+---------------------------------+--------------+
-| 11/24  | KEC1005   | Databases                       | 9            |
-+--------+-----------+---------------------------------+--------------+
-| 12/1   | KEC1005   | Review                          | 10           |
-+--------+-----------+---------------------------------+--------------+
+DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
+that aims to boost our impact and outreach while shrinking the skills gap for
+OSU students interested in DevOps.
 
 Winter Term:
 ------------
@@ -46,10 +31,6 @@ Winter Term:
 +--------+-----------+---------------------------------+--------------+
 | 3/9    | KEC1005   | Review                          | 10           |
 +--------+-----------+---------------------------------+--------------+
-
-DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
-that aims to boost our impact and outreach while shrinking the skills gap for
-OSU students interested in DevOps.
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
 more than 160 open source projects. Along with delivering over 460 terabytes of
@@ -85,6 +66,7 @@ Contents:
     daycamp
     resources
     faq
+    getting_started
     whatisdevops
     vagrant
     admin_checklist

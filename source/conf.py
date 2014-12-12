@@ -102,6 +102,14 @@ if not os.environ.get('READTHEDOCS', None):
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'default'
+html_context = {
+    'display_github': True,
+    'github_user': 'devopsbootcamp',
+    'github_repo': 'website',
+    'github_version': 'master',
+    'conf_py_path': '/source/',
+    'source_suffix': '.rst'
+    }
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

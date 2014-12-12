@@ -101,10 +101,11 @@ Better Tools enable Devops
 Explosion of new tools over the past few years:
 
   - Release tools (jenkins, travisci, etc)
-  - Config Management (puppet, chef, ansible, cfengine)
-  - Orchestration (zookeeper, noah, mesos)
-  - Monitoring & Metrics (statsd, graphite, etc)
-  - Virtualization & containerization (AWS, Openstack, vagrant, docker)
+  - Config Management (puppet, chef, ansible, cfengine, saltstack)
+  - Orchestration (saltstack, mcollective, mesos+marathon)
+  - Service Discovery (zookeeper, etcd, consul)
+  - Monitoring & Metrics (statsd, graphite, influxdb)
+  - Virtualization & containerization (AWS, Openstack, vagrant, docker, rocket)
 
 It's not NoOps
 --------------
