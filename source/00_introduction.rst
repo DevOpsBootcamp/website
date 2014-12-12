@@ -15,20 +15,17 @@ Software Development + Operations Engineering
 What's BootCamp?
 ----------------
 
-* New this year
-* New this year
 * Free education program
     * Mentorship
     * Apprenticeship
     * Hands-on training
 * NOT:
     * OSU class for credit
-    * student job
+    * Student job
 
 Why are we doing this?
 ----------------------
 
-* OSL's move to EECS
 * Bridge the “Skills Gap”
 * Demand from companies for students
 * Build community
@@ -40,17 +37,17 @@ What you'll do:
     * Linux systems
     * Networking
     * Software development
-    * ...and the other skills you’ll need
+    * Other skills you’ll need
 * Build:
     * Duplicate internet infrastructure
     * Graduate to helping with OSL tasks
-        * work with real open source projects
-        * solve real problems
+        * Work with real open source projects
+        * Solve real problems
 
 Can you do it?
 --------------
 
-* Probably!
+* Certainly!
 * No background knowledge needed
 * Time commitment
     * Attend lectures
@@ -65,11 +62,6 @@ Career Paths:
     * Internships
     * Industry connections
     * Start career with mid-level/high-level experience
-* Justin
-    * community experience builds skills, professional relationships
-    * Linux skills helped in grad school
-        * skills learned there helped land first sysadmin job
-    * having your own ‘playground’ to experiment with
 
 OSL Hiring:
 -----------
@@ -79,16 +71,20 @@ OSL Hiring:
     * Developers
     * Media
 * Typically 2-3 years employment
-* Alumni
-    * Google, Rackspace, Intel, Microsoft, Mozilla, Facebook
+* We have alumni at:
+    * Google
+    * Rackspace
+    * Intel
+    * Microsoft
+    * Mozilla
+    * Facebook
 
 What next?
 ----------
 
-* Find our site (http://devopsbootcamp.osuosl.org)
-* Fill out registration with times available
-* Join mailing list
-* Tell us about yourself
-    * Who are you
-    * What do you want to learn here
+* Find `our site <http://devopsbootcamp.osuosl.org>`_
+* Join `mailing list <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_
+* Tell us about yourself!
+    * Who are you?
+    * What do you want to learn here?
     * Any background in devops?
