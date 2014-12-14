@@ -28,17 +28,21 @@ Why we're offering this:
 Attendance
 ==========
 
-We will schedule BootCamp meetings for a time that works for a majority of
-attendees. Each meeting's curriculum will build on what you learned the
-previous session, so if you miss a meeting you're responsible for studying
-the basics of its content on your own. To facilitate this, we will provide
-resources for independent study about each topic that we cover.
+**For the 2014-2015 school year, we will meet at 7pm on Mondays in KEC1005**
+
+Beginning  September 2015, we are planning on meeting at 6pm on Thursdays.  
+We plan on keeping a persistent schedule from year to year, to maintain consistentcy
+and better plan our meetings. 
+
+Each meeting's curriculum will build on what you learned the
+previous session, but you can catch up on any session miss 
+`here <https://www.youtube.com/user/OSUOpenSourceLab>`_.
 
 BootCamp leaders will be available at times outside of the regular meetings to
 help answer any questions about the training program's content. We will not
 spend class time reviewing material for those who skip a lecture. If you
 attend a lesson and don't understand something from it, you're welcome to ask
-in class, because others very likely have the same concern. But if you want to
+at the meeting, because others very likely have the same concern. But if you want to
 make up a class you skipped, it's disrespectful to those who attended to spend
 their class time on questions which you could resolve on your own time.
 
