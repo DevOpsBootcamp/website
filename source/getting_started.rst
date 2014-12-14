@@ -25,9 +25,10 @@ Clone our Vagrant Repo:
 
 You can save `this file 
 <https://raw.githubusercontent.com/DevOpsBootcamp/Vagrant/master/Vagrantfile>`_
-to the same directory that you downloaded the above into.
+to your devops folder.
 
-If you have git installed already, you can also jsut clone the repo and grab the file.
+If you have git installed already, you can also just clone the repo and grab the file.
+
 .. code-block:: bash
 
     $ git clone git@github.com:DevOpsBootCamp/devopsbootcamp-vagrant.git
@@ -63,7 +64,9 @@ You'll want to use irssi or weechat to connect to IRC
     # SSH to set up persistent IRC
     # Onid username is the username that you log into MyOSU with, or that your OSU email has.
     # Usually it's your last name and first initial, or some variation of that.
-    $ ssh <onid username>@onid.oregonstate.edu #Ask someone what to do if you aren't an OSU student
+    $ ssh <onid username>@shell.onid.oregonstate.edu #Ask someone what to do if you aren't an OSU student
+    # For instance, my name is Lucy Wyman, so I run 
+    $ ssh wymanl@shell.onid.oregonstate.edu
 
     # Start a new screen session and name it 'irc'
     $ screen -S irc
