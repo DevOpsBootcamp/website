@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-First, we recommend you make a directory or folder to save all your Devops installations
+First, we recommend you make a directory or folder to save all your Devops-related files
 in.  You can title it anything you'd like, though "devops" isn't a bad choice.  When 
 you download the following, try to either download it into that folder/directory,
 or move it there once it's been downloaded.  
