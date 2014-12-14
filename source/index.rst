@@ -11,7 +11,6 @@ If you missed any lessons last term, you can `catch up
 <https://www.youtube.com/playlist?list=PLqzbgtiNz4A7mrOdSWNICSbYuJOG4j4yW>`_ at 
 http://osl.io/devopsbc.
 
-<a href="https://www.facebook.com/devopsbootcamp"><img
 
 Winter Term:
 ------------
@@ -65,6 +64,7 @@ Contents:
 .. toctree::
 
     get_involved
+    getting_started
     policies
     slides
     exercises
@@ -72,7 +72,6 @@ Contents:
     daycamp
     resources
     faq
-    getting_started
     whatisdevops
     vagrant
     admin_checklist
