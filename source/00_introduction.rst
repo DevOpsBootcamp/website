@@ -72,12 +72,11 @@ OSL Hiring:
     * Media
 * Typically 2-3 years employment
 * We have alumni at:
-    * Corbin Simpson -- Google
-    * Rudy Grigar -- Drupal
+    * Google
+    * Drupal
     * Intel
     * Microsoft
-    * Mike Cooper -- Mozilla
-    * Facebook
+    * Mozilla
 
 What next?
 ----------
