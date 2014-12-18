@@ -18,16 +18,8 @@ between development and operations.
 Purpose of DevOps BootCamp
 ==========================
 
-From front page:
-----------------
-
-DevOps BootCamp is an OSU Open Source Lab and OSU Linux Users Group program
-aimed at boosting our impact and outreach while shrinking the skills gap for OSU
-students interested in DevOps.
-
-From FAQ: 
----------
-
+DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core software 
+development and systems operation skills to interested OSU students and community members.
 DevOps BootCamp will provide continuity and comprehensive open source education
 that’s outside the scope of regular LUG meetings.
 
@@ -50,7 +42,7 @@ Students get:
 Why we’re offering this:
 
 * The OSL gets a larger pool of candidates to recommend to companies
-  interested in recruiting OSL students
+  interested in recruiting students
 * The OSL gets to work with a wider variety of students, which fits better
   with its new status as part of the school of EECS
 * The open source community gets more contributors to its projects
