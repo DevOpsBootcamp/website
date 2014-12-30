@@ -24,7 +24,7 @@ Annual Checklist
 
 * Review Curriculum
 * Plan for most of the year
-* Doodle poll to decide on weekly meeting time
+* Reserve room for Thursdays from 6pm to 8pm as early as possible.  
 * `Reserve room in Kelley <http://r25wv.ucsadm.oregonstate.edu/r25_wv/wv_servlet/wrd/run/wv_space.DayList?spdt=today,spfilter=94835,lbdviewmode=grid>`_ -- contact Colisse Franklin
     Room hierarchy: 1003, 1001, 1007, 1005
 * Plan Daycamp
