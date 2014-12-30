@@ -16,7 +16,6 @@ If you have windows, you need to install PuTTY to be able to use SSH:
 Regardless of your operating system, you'll need the following: 
 
 * `Virtualbox <https://www.virtualbox.org/wiki/Downloads>`_
-* `CentOS Box <https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box>`_
 * `Vagrant <https://www.vagrantup.com/downloads.html>`_
 
 
@@ -89,9 +88,21 @@ Setting up IRC:
     # Give yourself a nickname, and register with nickserv
     /nick <yournickname>
     /q nickserv register <password> <email>
-    # You should get a confirmation email -- follow the instructions!
-    # If your nickname is already registered to a different user, your nickname
-    # next to the input box won't change.  If that happens, simply choose another nickname
+
+You should get a confirmation email -- follow the instructions!
+If your nickname is already registered to a different user, your nickname
+next to the input box won't change, or NickServ will send you a message.  
+If that happens, simply choose another nickname.
+You can see if a nick is in use by running
+
+.. code-block:: bash
+
+    /q nickserv acc <nick>
+
+And NickServ will tell you if there are people using that nick (a nonzero number
+means someone is registered with the nick)
+
+.. code-block:: bash
     
     # To change nicks, run
     /nick <yournickname>
@@ -136,7 +147,7 @@ First thing's first: install git in your VM
     $ git config --global user.name "My Name"
     $ git config --global user.email "myemail@email.com"
     $ git config --global core.editor "nano"
-    $ git config --global push.default "upstream"
+    $ git config --global push.default simple
 
 You'll also want to make an account with the same email on `github <https://github.com>`_
 
