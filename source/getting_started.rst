@@ -40,7 +40,7 @@ Now, start your virtual machine!
 .. code-block:: bash
 
     # Initialize VM
-    $ vagrant box add centos centos-65-x86_64-20140116.box #Or whatever the name of the .box file you downloaded is!
+    $ vagrant box add centos centos-6.5.box #Or whatever the name of the .box file you downloaded is!
     
     # Start your VM -- you'll have to run this every time you want to access the VM
     $ vagrant up
