@@ -1,0 +1,16 @@
+<div role="navigation" aria-label="breadcrumbs navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="{{ pathto(master_doc) }}">Docs</a> &raquo;</li>
+{% for doc in parents %}
+<li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
+{% endfor %}
+<li>{{ title }}</li>
+<li class="wy-breadcrumbs-aside">
+    <a href="https://www.facebook.com/devopsbootcamp"><img class='icon' src="_static/facebook-icon.png"></a>
+    <a href="https://plus.google.com/+OsuoslOrg/about"><img class='icon' src="_static/google-plus-icon.png"></a>
+    <a href="http://lists.osuosl.org/mailman/listinfo/devops-bootcamp"><img class='icon' src="_static/email.png"></a>
+    <a href="https://www.youtube.com/playlist?list=PLqzbgtiNz4A7mrOdSWNICSbYuJOG4j4yW"><img class='icon' src="_static/youtube-icon.png"></a>
+</li>
+</ul>
+<hr/>
+</div>
