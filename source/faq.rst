@@ -7,7 +7,7 @@ Is this a for-credit class?
 ---------------------------
 
 No, although the curriculum is based on `CS312`_, Linux System Administration,
-which hasn't been offered for several years.
+which will be offered in Winter 2015. 
 
 .. _CS312: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=312
 

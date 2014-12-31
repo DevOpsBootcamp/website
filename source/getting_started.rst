@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-First, we recommend you make a directory or folder to save all your Devops installations
+First, we recommend you make a directory or folder to save all your Devops-related files
 in.  You can title it anything you'd like, though "devops" isn't a bad choice.  When 
 you download the following, try to either download it into that folder/directory,
 or move it there once it's been downloaded.  
@@ -16,7 +16,6 @@ If you have windows, you need to install PuTTY to be able to use SSH:
 Regardless of your operating system, you'll need the following: 
 
 * `Virtualbox <https://www.virtualbox.org/wiki/Downloads>`_
-* `CentOS Box <https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box>`_
 * `Vagrant <https://www.vagrantup.com/downloads.html>`_
 
 
@@ -25,9 +24,10 @@ Clone our Vagrant Repo:
 
 You can save `this file 
 <https://raw.githubusercontent.com/DevOpsBootcamp/Vagrant/master/Vagrantfile>`_
-to the same directory that you downloaded the above into.
+to your devops folder.
 
-If you have git installed already, you can also jsut clone the repo and grab the file.
+If you have git installed already, you can also just clone the repo and grab the file.
+
 .. code-block:: bash
 
     $ git clone git@github.com:DevOpsBootCamp/devopsbootcamp-vagrant.git
@@ -40,7 +40,7 @@ Now, start your virtual machine!
 .. code-block:: bash
 
     # Initialize VM
-    $ vagrant box add centos centos-65-x86_64-20140116.box #Or whatever the name of the .box file you downloaded is!
+    $ vagrant box add centos centos-6.5.box #Or whatever the name of the .box file you downloaded is!
     
     # Start your VM -- you'll have to run this every time you want to access the VM
     $ vagrant up
@@ -63,7 +63,9 @@ You'll want to use irssi or weechat to connect to IRC
     # SSH to set up persistent IRC
     # Onid username is the username that you log into MyOSU with, or that your OSU email has.
     # Usually it's your last name and first initial, or some variation of that.
-    $ ssh <onid username>@onid.oregonstate.edu #Ask someone what to do if you aren't an OSU student
+    $ ssh <onid username>@shell.onid.oregonstate.edu #Ask someone what to do if you aren't an OSU student
+    # For instance, my name is Lucy Wyman, so I run 
+    $ ssh wymanl@shell.onid.oregonstate.edu
 
     # Start a new screen session and name it 'irc'
     $ screen -S irc
@@ -86,9 +88,21 @@ Setting up IRC:
     # Give yourself a nickname, and register with nickserv
     /nick <yournickname>
     /q nickserv register <password> <email>
-    # You should get a confirmation email -- follow the instructions!
-    # If your nickname is already registered to a different user, your nickname
-    # next to the input box won't change.  If that happens, simply choose another nickname
+
+You should get a confirmation email -- follow the instructions!
+If your nickname is already registered to a different user, your nickname
+next to the input box won't change, or NickServ will send you a message.  
+If that happens, simply choose another nickname.
+You can see if a nick is in use by running
+
+.. code-block:: bash
+
+    /q nickserv acc <nick>
+
+And NickServ will tell you if there are people using that nick (a nonzero number
+means someone is registered with the nick)
+
+.. code-block:: bash
     
     # To change nicks, run
     /nick <yournickname>
@@ -133,7 +147,7 @@ First thing's first: install git in your VM
     $ git config --global user.name "My Name"
     $ git config --global user.email "myemail@email.com"
     $ git config --global core.editor "nano"
-    $ git config --global push.default "upstream"
+    $ git config --global push.default simple
 
 You'll also want to make an account with the same email on `github <https://github.com>`_
 
