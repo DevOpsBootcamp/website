@@ -28,8 +28,8 @@ Types of security
 .. figure:: static/xkcd_416.png
     :align: center
 
-Authentication vs. Authorization
---------------------------------
+Authentication, Authorization, Identity
+---------------------------------------
 
 .. figure:: static/xkcd_1121.png
     :align: center
@@ -38,43 +38,32 @@ Authentication vs. Authorization
 
 :Authorization: Are they allowed access here?
 
-* Authentication requires proof of identity
-* Authorization requires authentication, plus permission from an authority
+:Identity: How do you identify a person? What makes you *you*?
 
-Identity
---------
+..  Identity
+    --------
+    **Persistent vs. authoritative**
+    Imagine an identity thief who takes out lines of credit in their victim's name
+    then pays all the bills on time...
+    * Is their identity *persistent*?
+    * Is their identity *authoritative*?
+    How about a project maintainer who never uses their real name online, but uses
+    the same handle and email address across all sites?
+    Identity
+    --------
+    How about a project maintainer who loses the domain which was hosting their
+    email, and thus changes addresses abruptly?
+    If you're a sysadmin who works with multiple projects, you will run into these
+    concerns often.
+    |
+    .. figure:: static/xkcd_565.png
+        :align: center
 
-**Persistent vs. authoritative**
-
-Imagine an identity thief who takes out lines of credit in their victim's name
-then pays all the bills on time...
-
-* Is their identity *persistent*?
-* Is their identity *authoritative*?
-
-How about a project maintainer who never uses their real name online, but uses
-the same handle and email address across all sites?
-
-Identity
---------
-
-How about a project maintainer who loses the domain which was hosting their
-email, and thus changes addresses abruptly?
-
-If you're a sysadmin who works with multiple projects, you will run into these
-concerns often.
-
-|
-
-.. figure:: static/xkcd_565.png
-    :align: center
-
-Principle of Least Authority
-----------------------------
-
-* User & Group management
-* ACLs
-* File permissions
+..  Principle of Least Authority
+    ----------------------------
+    * User & Group management
+    * ACLs
+    * File permissions
 
 System Security
 ---------------
@@ -168,9 +157,7 @@ Passwords
 
 .. figure:: static/xkcd_936.png
     :align: center
-
-Good Passwording
-----------------
+    :scale: 70%
 
 * http://bash.org/?244321
 
@@ -183,50 +170,48 @@ Server Side
 
 * Rainbow Table
 * Hashing / salt
-* bcrypt/ scrypt
+* bcrypt / scrypt
 
-Password Managers
------------------
-
-* Password managers (LastPass, 1Password, KeepPass*)
-    * Works with phones and other things
-* ``pass`` http://www.zx2c4.com/projects/password-store/
-* ``vim -x passwords.txt``
-* http://world.std.com/~reinhold/diceware.html
-
-.. note:: 
-    http://makezineblog.files.wordpress.com/2013/01/fractal-rainbow-table-runner-1.jpg
-    We use passwords for everything we do online.  Some (hopefully) 
-    semi random grouping of letters, numbers, and symbols which when combined
-    with a username allow you to authenticate with a server or process.
-    There are a couple common attacks on passwords, the most common of which
-    is called a dictionary attack.  This uses the fact that words are easier
-    to remember than random characters, so it abuses human memory in order
-    to greatly reduce the search space for passwords.  
-    
-    pwgen + a password manager will help you have better passwords which you
-    don't even have to remember! **DEMO**
-    
-    Storing passwords on the server side is a whole other matter.  One of 
-    the primary issues of concern is what happens if your server gets
-    compromised.  Lets say for instance that you just have a giant text file
-    that has the form "username password" on each row.  This would be super
-    fast to to lookup users in, but if that file ends up in the wrong hands,
-    you lose.  A better option is to not store the passwords directly, but
-    to store some representation of the password.  This is where a hash
-    comes in.  Essentially a hash is a one way function that is fast to
-    calculate, deterministic in output, but _very_ hard to reverse.  If you 
-    store the hash of a password you can hash what they send you to verify
-    who they are.  Again we must consider what happens if our database was
-    compromised.  Since these hashes are deterministic and computing power
-    is so cheap, we can precalculate what passwords correspond to what
-    hashes, these precomputed files are called rainbow tables.  To avoid
-    the issue with rainbow tables we 'salt' our passwords.  This adds a 
-    small random string to each password so that the search space for 
-    precomputing possible passwords becomes tera/petabytes large.
-    
-    Enough about passwords, we now move into more interesting things called
-    keys!
+..  Password Managers
+    -----------------
+    * Password managers (LastPass, 1Password, KeepPass*)
+        * Works with phones and other things
+    * ``pass`` http://www.zx2c4.com/projects/password-store/
+    * ``vim -x passwords.txt``
+    * http://world.std.com/~reinhold/diceware.html
+    .. note:: 
+        http://makezineblog.files.wordpress.com/2013/01/fractal-rainbow-table-runner-1.jpg
+        We use passwords for everything we do online.  Some (hopefully) 
+        semi random grouping of letters, numbers, and symbols which when combined
+        with a username allow you to authenticate with a server or process.
+        There are a couple common attacks on passwords, the most common of which
+        is called a dictionary attack.  This uses the fact that words are easier
+        to remember than random characters, so it abuses human memory in order
+        to greatly reduce the search space for passwords.  
+        
+        pwgen + a password manager will help you have better passwords which you
+        don't even have to remember! **DEMO**
+        
+        Storing passwords on the server side is a whole other matter.  One of 
+        the primary issues of concern is what happens if your server gets
+        compromised.  Lets say for instance that you just have a giant text file
+        that has the form "username password" on each row.  This would be super
+        fast to to lookup users in, but if that file ends up in the wrong hands,
+        you lose.  A better option is to not store the passwords directly, but
+        to store some representation of the password.  This is where a hash
+        comes in.  Essentially a hash is a one way function that is fast to
+        calculate, deterministic in output, but _very_ hard to reverse.  If you 
+        store the hash of a password you can hash what they send you to verify
+        who they are.  Again we must consider what happens if our database was
+        compromised.  Since these hashes are deterministic and computing power
+        is so cheap, we can precalculate what passwords correspond to what
+        hashes, these precomputed files are called rainbow tables.  To avoid
+        the issue with rainbow tables we 'salt' our passwords.  This adds a 
+        small random string to each password so that the search space for 
+        precomputing possible passwords becomes tera/petabytes large.
+        
+        Enough about passwords, we now move into more interesting things called
+        keys!
 
 Keys
 ----
@@ -248,10 +233,9 @@ Key Exchange
 
 RSA
 ---
-* Math
-* Math
-* More Math
-* Don't be shy
+* RSA is a public-key cryptosystem
+* It uses some `magical math <http://en.wikipedia.org/wiki/RSA_(cryptosystem)#Operation>`_ to generate a public key, which is what you encrypt your data with, and a SUPER SECRET private key, which is used for decryption
+* This is an example of asymmetric encryption, where the encryption and decryption keys are different.
 
 .. figure:: static/rsa.jpg
     :align: center
@@ -324,15 +308,13 @@ GPG
 .. figure:: static/nobody-listens31.jpg
     :align: center
 
-Ways to use GPG
----------------
-* Enigamail
-* mutt
-* Command line
-
-.. code-block:: bash
-
-    $ gpg --encrypt manateessecrets.jpg.exe 
+..  Ways to use GPG
+    ---------------
+    * Enigamail
+    * mutt
+    * Command line
+    .. code-block:: bash
+        $ gpg --encrypt manateessecrets.jpg.exe 
 
 Certificates and HTTP
 ---------------------
@@ -367,18 +349,9 @@ WiFi
 * wep
 * wpa
 * wpa2
-* Wireshark
-    * Demo
-
-.. note:: 
-  - Attacks
-  - mschapv2
-    
-  **DEMO** Wireshark
 
 Crypto-wares
 ------------
-
 - Files
 
   - Tarsnap, SpiderOak, rsync over ssh
@@ -393,33 +366,29 @@ Crypto-wares
   - Metasploit, BEEF
   - AirCrack, sslstrip
 
-Math!
------
+..  Math!
+    -----
+    * Primes
+    * Number Theory
+    * Fields
+    * Elliptic Curves
+    .. figure:: static/addition-and-multiplication-tables.png
+        :align: center
+        :scale: 85%
+    .. note:: 
+        **DEMO** rot13
 
-* Primes
-* Number Theory
-* Fields
-* Elliptic Curves
-
-.. figure:: static/addition-and-multiplication-tables.png
-    :align: center
-    :scale: 85%
-
-.. note:: 
-    **DEMO** rot13
-
-One Last Thing
---------------
+Resources
+---------
 
 * https://priv.ly ( proudly hosted at the OSL)
 * "*I have nothing to hide*"
-
 * jeremykun.com
 * thoughtcrime.org
 * https://www.schneier.com/
 
 
-Lesson 8: Web application security
+Part 2: Web application security
 ==================================
 
 .. figure:: static/2013-vulnerability-summary_290x250.png
@@ -479,8 +448,8 @@ Code Injection
   * Sanitize your inputs!
 
 http://bobby-tables.com/
-https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
-http://guides.rubyonrails.org/security.html
+..  https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
+    http://guides.rubyonrails.org/security.html
 
 .. note:: 
 
@@ -627,4 +596,4 @@ Let's Check out Dean's (not so) Awesome Code
 
 .. code-block:: bash
 
-    $ git checkout <not so awesome code branch goes here>
+    $ git checkout security-bad

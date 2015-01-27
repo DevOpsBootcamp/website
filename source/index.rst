@@ -2,7 +2,6 @@ DevOps BootCamp
 ===============
 
 Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
-
 DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core software 
 development and systems operation skills to interested OSU students and community members.
 

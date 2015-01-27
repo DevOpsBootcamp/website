@@ -12,6 +12,7 @@ Before BootCamp:
 * Make sure website is up to date
 * Send email to `mailing list <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_ (2-3 days before BootCamp)
 
+
 During BootCamp:
 
 * Get Headcount
