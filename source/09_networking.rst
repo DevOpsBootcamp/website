@@ -1,12 +1,10 @@
 Lesson 9: Networking
 ====================
 
-Who is this talk for?
----------------------
-
-Someone with little or no networking knowledge.
-
-ECE/CS 372 at OSU covers this content, more or less
+..  Who is this talk for?
+    ---------------------
+    Someone with little or no networking knowledge.
+    ECE/CS 372 at OSU covers this content, more or less
 
 What is a network?
 ------------------
@@ -15,16 +13,16 @@ What is a network?
 
 To us, a network is:
 
-* Electronic devices
-* Sending signals over wire, fiber, or radio
-* Communicating data using a standardized protocol
+Electronic devices sending signals over wire, fiber, or radio, 
+communicating data using a standardized protocol
 
 What is a protocol?
 -------------------
 
 "*A set of agreed upon rules for communication*"
 
-* Defines sequence & format of packets being sent
+* Defines sequence & format of packets being sent, or rules by which data is exchanged.
+* Basically, it's the language computers use to talk to each other.
 
 The OSI Model
 -------------
@@ -59,19 +57,19 @@ RS-232
 
 Layer 2: Data Link
 ------------------
+A reliable link between two directly connected nodes. This also detects and potentially corrects
+errors that may occur in the hardware layer. 
 
-MAC: Media Access Control
-
-* MAC address should be globally unique
+* MAC: Media Access Control address should be globally unique
 * ARP: Address Resolution Protocol (between layer 2 & 3)
 * NDP (neighbor discovery protocol) used in IPv6
 * Flow control & error checking
 
 Layer 3: Network
 ----------------
-
-Packet forwarding and routing
-
+Reliable way of sending variable lengths of data (datagrams) from one node to another that
+are connected on the same network. This also includes 
+Packet forwarding and routing, and 
 Network and host addressing
 
 * IPv4
@@ -80,8 +78,10 @@ Network and host addressing
 Layer 4: Transport
 ------------------
 
-Interact directly with program same-order delivery, reliability, flow control,
-and congestion avoidance
+Reliable way of sending variable lengths of data (datagrams) from one node to another
+on a source to a destination through one or more networks. 
+
+This is the internet.
 
 :TCP: Transmission Control Protocol
 
@@ -92,6 +92,31 @@ and congestion avoidance
 * No error checking built in
 * No retransmission delays
 * VoIP, media, games
+
+Layer 5: Session
+----------------
+
+Controls connections between computers by establishing, managing, and terminating them.
+
+* Full duplex: Both parties communicate simultaneously
+* Half duplex: Clearly defined channels, only one party can talk at a time.
+* Simplex: Only one direction -- as you might guess, a duplex is just two opposing simplexes. 
+
+Layer 6: Presentation
+---------------------
+Formats data for the application layer (layer 7) to process or 
+display -- it basically translates whatever comes in into something
+that the application layer can understand, like XML or ASCII. 
+This is also the first layer where we aren't considering sending data
+any more, but rather organizing and formatting it -- it's where
+we start to consider Data structures and, well,  presentation.
+
+Layer 7: Application
+--------------------
+The final layer, the application layer interacts with the user.
+Your data has finally been formatted and arrived at it's destination,
+and the application layer directs it to whomever on your machine 
+requested it so that it can do useful things.
 
 Get your hands dirty
 --------------------
@@ -105,7 +130,6 @@ These will display information about your network interfaces.
 See also::
 
   ifconfig
-  iwconfig
 
 
 Example output:
@@ -227,6 +251,27 @@ What happens when your computer connects to a network?
 1. Duplex and speed negotiation
 2. Static or dynamic configuration is applied
 
+Cidr
+----
+aka `Classless Inter-domain Routing <http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_
+
+If you run ip -a again, you'll notice that your 
+ip addresses have a '/[number]' -- this is the cidr notation.
+It's a simplified way of allocating ip addresses, and 
+determining which block an ip belongs to.
+
+What does it do?
+----------------
+The that the block gets calculated is by taking 2 to the power of 
+32-[number].  So for 10.0.0.0/8, the address space would
+be 2^(32-8).  You can run
+
+.. code-block:: bash
+
+    $ ipcalc
+
+To see more info on this!
+
 Static Configuration
 --------------------
 
@@ -247,15 +292,15 @@ But how do you communicate over the network without a network configuration?
 Reserved IPv4 Addresses
 -----------------------
 
-* 127.0.0.1
+* 127.0.0.1/24
 
 .. figure:: static/noplacelike_home.jpg
     :align: right
 
-* 192.168.0.0
-* 172.16.0.0
-* 10.0.0.0
-* 169.254.0.0
+* 192.168.0.0/8
+* 172.16.0.0/23
+* 10.0.0.0/8
+* 169.254.0.0/28
 
 Public vs Private Address
 -------------------------
