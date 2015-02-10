@@ -116,7 +116,6 @@ These will display information about your network interfaces.
 See also::
 
   ifconfig
-  iwconfig
 
 
 Example output:
@@ -240,7 +239,7 @@ What happens when your computer connects to a network?
 
 Cidr
 ----
-aka Classless Inter-domain Routing
+aka `Classless Inter-domain Routing <http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_
 
 If you run ip -a again, you'll notice that your 
 ip addresses have a '/[number]' -- this is the cidr notation.
@@ -279,15 +278,15 @@ But how do you communicate over the network without a network configuration?
 Reserved IPv4 Addresses
 -----------------------
 
-* 127.0.0.1
+* 127.0.0.1/24
 
 .. figure:: static/noplacelike_home.jpg
     :align: right
 
-* 192.168.0.0
-* 172.16.0.0
-* 10.0.0.0
-* 169.254.0.0
+* 192.168.0.0/8
+* 172.16.0.0/23
+* 10.0.0.0/8
+* 169.254.0.0/28
 
 Public vs Private Address
 -------------------------
