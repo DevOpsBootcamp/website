@@ -98,11 +98,25 @@ Layer 5: Session
 
 Controls connections between computers by establishing, managing, and terminating them.
 
+* Full duplex: Both parties communicate simultaneously
+* Half duplex: Clearly defined channels, only one party can talk at a time.
+* Simplex: Only one direction -- as you might guess, a duplex is just two opposing simplexes. 
+
 Layer 6: Presentation
 ---------------------
+Formats data for the application layer (layer 7) to process or 
+display -- it basically translates whatever comes in into something
+that the application layer can understand, like XML or ASCII. 
+This is also the first layer where we aren't considering sending data
+any more, but rather organizing and formatting it -- it's where
+we start to consider Data structures and, well,  presentation.
 
 Layer 7: Application
 --------------------
+The final layer, the application layer interacts with the user.
+Your data has finally been formatted and arrived at it's destination,
+and the application layer directs it to whomever on your machine 
+requested it so that it can do useful things.
 
 Get your hands dirty
 --------------------
