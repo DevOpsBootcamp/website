@@ -30,3 +30,12 @@ Annual Checklist
     Room hierarchy: 1003, 1001, 1007, 1005
 * Plan Daycamp
 
+Google Hangouts:
+----------------
+
+1. The OSL has it's own gmail account -- log in through gmail, and make sure that
+on youtube your account is set to the OSL account.  
+2. In google+ go to hangouts (under the little 'home' tab in the upper left) and click 'hangouts on air'
+3. Choose 'Start a hangout on air' and fill in the information
+4. Go to youtube, and in video manager click the 'Live Events' button.  Fill in the same information
+5. When you're ready to go live, Hangouts will open, and you click the "Start hangout" button.
