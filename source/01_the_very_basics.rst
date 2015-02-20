@@ -89,6 +89,26 @@ Installing Linux on Virtualbox
     #. Start -> press enter -> Skip media check
 #. ``\o/``
 
+Installing Git
+--------------
+**Linux:**
+
+.. code-block:: bash
+
+    $ sudo apt-get install git # Ubuntu / Debian / Mint
+    $ sudo yum install git # RHEL / Fedora / Centos
+
+**Mac / Windows:** Go to http://git-scm.com and download the version of `git`
+for your operating system. You can also investigate installing a *package
+manager* to make installation of programs like git easier in the future.
+
+- Windows: https://chocolatey.org/
+- Mac: http://brew.sh/
+
+**Windows** users should use the `git-shell` for the following commands on
+the next slides to spin up and use their vagrant virtualmachines.
+
+
 Vagrant & VirtualBox
 --------------------
 
