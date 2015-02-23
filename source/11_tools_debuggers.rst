@@ -9,6 +9,19 @@ Development Tools and Debuggers
 
 How to find the missing parenthesis.
 
+Static Verses Dynamic Analysis
+------------------------------
+
+There are two categories of tools which analyze your program:
+
+* Static analysis tools look at source files
+	- Linters
+	- Type checkers
+* Dynamic analysis tools actually run the code
+	- Debuggers
+	- Memory profiling tools
+	- Coverage testers
+
 Debugging
 =========
 
@@ -28,6 +41,7 @@ So what is a debugger?
 ----------------------
 A debugger hooks into your program and runs it. Often it uses special symbols
 in the executable to say which line in your code your problem came from.
+
 Interpreted languages have debuggers too! There's PDB for python and ``node
 --debug`` for nodejs.
 
@@ -39,6 +53,7 @@ Why is a debugger handy?
 Sometimes you get this message:
 
 .. code-block:: bash
+
 	$ ./a.out
 	Segmentation fault: 11
 
@@ -55,12 +70,50 @@ Some Examples...
 ----------------
 
 
+Valgrind
+--------
+* A dynamic analysis tool which runs your code and checks for memory leaks and
+  other errors.
+
+* My favorite tool for fixing segfaults.
+
+* It's verbose, but it tells you what line the problem happened on, and how your
+  program got to that line.
+
+.. code-block:: bash
+
+	$ valgrind ./tests/bin/lexer_tests
+	...
+	==6703== Conditional jump or move depends on uninitialised value(s)
+	...
+	==6703==    by 0x4018C1: print_token (lexer.c:36)
+	==6703==    by 0x4011F7: test_get_tok (lexer_tests.c:54)
+	==6703==    by 0x4008CD: main (lexer_tests.c:8)
+	...
+	==6703== LEAK SUMMARY:
+	==6703==    definitely lost: 192 bytes in 8 blocks
+	==6703==    indirectly lost: 162 bytes in 10 blocks
+
+Code Coverage Tools
+-------------------
+There are tools which can tell you what percent of your code is tested.
+If you write Go, ``go cover`` records which lines get tested the most:
+
+.. figure:: static/go-coverage.png
+    :align: center
+    :scale: 30%
+
+
+
 Coding Standards
 ----------------
 Code is read much more often than it is written.
+
 A consistent style makes it easier for multiple developers to understand what
-is going on. Similar to how we have conventions for writing in
-english (indent a paragraph, capitalize the first letter of a sentence,
+is going on.
+
+Similar to how we have conventions for writing in
+English (indent a paragraph, capitalize the first letter of a sentence,
 etc.) there are conventions for writing code to make it easier to 
 understand.
 
@@ -68,8 +121,8 @@ Here is an example from the python guidelines:
 
 .. note::
 	
-    Absolute imports are recommended, as they are usually more readable and tend
-	to be better behaved [...]:
+	Absolute imports are recommended, as they are usually more readable and
+	tend to be better behaved [...]:
 
 
 .. code-block:: bash
@@ -90,6 +143,7 @@ The Linux kernel style guidelines are concerned with code clarity, but they are
 actually fun to read:
 
 .. note::
+
 	First off, I'd suggest printing out a copy of the GNU coding standards,
 	and NOT read it.  Burn them, it's a great symbolic gesture.
 
@@ -100,6 +154,7 @@ NASA's Jet Propulstion Labratory style guidelines are very short
 and are concerned with automated tooling to do code analysis:
 
 .. note::
+
 	All loops shall have a statically determinable upper-bound on the maximum
 	number of loop iterations. It shall be possible for a static compliance
 	checking tool to affirm the existence of the bound
@@ -113,17 +168,15 @@ Linters
 
 * Enforce code style.
 * Check for common mistakes.
-* Static analysis actually include type checking, which is an invaluable tool
-  your compiler already does!
 
 For Python code you can use flake8:
 
-.. code-block:: bash
+.. code-block:: text
     
 	./monte/parser.py:84:9: E265 block comment should start with '# '
 	./monte/parser.py:105:80: E501 line too long (86 > 79 characters)
-	./monte/parser.py:153:26: E128 continuation line under-indented for visual
-	indent
+	./monte/parser.py:153:26: E128 continuation line under-indented
+	for visual indent
 	./monte/parser.py:153:26: W503 line break before binary operator
 
 .. nextslide::
@@ -139,6 +192,35 @@ For C/C++ there is splint:
 	lexer.c:5:10: Argument to exit has implementation defined behavior: -1
 	  The argument to exit should be 0, EXIT_SUCCESS or EXIT_FAILURE (Use
 	  -exitarg to inhibit warning)
+
+Type Checking
+-------------
+* Static analysis actually includes type checking, which is an invaluable tool
+  your compiler already does!
+
+* Pay attention to those warnings - fixing warnings often fixes segfaults.
+
+* Pro tip: The Clang compiler usually gives better warnings than GCC.
+
+  ``better warnings == happier programmers``.
+
+.. code-block:: bash
+
+	parser.c:53:31: warning: incompatible pointer types passing
+	'struct token *' to parameter of type 'struct token_list *'
+	[-Wincompatible-pointer-types]
+            return parse_variable(cur);
+                                  ^~~
+Call Graphs
+-----------
+If you jump into a big project, and want to get an idea how things work
+call graphs can be really helpful!
+A call graph is a graph which shows which functions call each other.
+
+.. figure::  static/monte-callgraph.png
+    :align: center
+    :scale: 40%
+
 
 Web Console
 -----------
@@ -241,9 +323,12 @@ However, you can do all of these things from the command line.
 .. nextslide::
 
 My takeaway:
+
 IDEs are a must if you're writing  verbose, library heavy language like Java.
-No improvements over vim if you're writing python. It's a tool, sometimes it's
-useful, sometimes it's not.
+
+No improvements over vim if you're writing python.
+
+It's a tool, sometimes it's useful, sometimes it's not.
 
 
 Unit Tests and Testing Frameworks
@@ -254,6 +339,32 @@ Unified Modeling Language
 
 Regular Expressions
 -------------------
+Regular expressions are actually a mini programming language!
+
+You use them already:
+
+.. code-block:: bash
+
+	$ cp *.cpp ../assignment2/
+
+Great for parsing and replacing text.
+
+.. code-block:: bash
+
+	'(\d+)\((\d+)\)'
+
+This regular expression from a biology library matches the following:
+
+* 1(787)
+* 100(100)
+* 1378(453)
+
+.. nextslide::
+
+Regexes have their limitations - they are not aware of the context of the
+lines they are parsing.
+
+For example, you can't parse HTML with regexes.
 
 Development Servers
 -------------------
