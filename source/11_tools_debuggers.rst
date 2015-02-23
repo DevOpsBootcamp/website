@@ -109,25 +109,19 @@ Coding Standards
 ----------------
 Code is read much more often than it is written.
 
-A consistent style makes it easier for multiple developers to understand what
-is going on.
-
 Similar to how we have conventions for writing in
 English (indent a paragraph, capitalize the first letter of a sentence,
 etc.) there are conventions for writing code to make it easier to 
 understand.
 
-Here is an example from the python guidelines:
+Here is an example from the python PEP8 guidelines:
 
-.. note::
-	
 	Absolute imports are recommended, as they are usually more readable and
-	tend to be better behaved [...]:
-
+	tend to be better behaved.
 
 .. code-block:: bash
 	
-    # Do this:
+	# Do this:
 	from mypkg import sibling
 	# Not this:
 	import mypkg.sibling
@@ -136,28 +130,19 @@ Here is an example from the python guidelines:
 Example Standards
 -----------------
 
-Python uses PEP8:
-https://www.python.org/dev/peps/pep-0008
-
-The Linux kernel style guidelines are concerned with code clarity, but they are
-actually fun to read:
-
-.. note::
+The Linux kernel style guidelines are actually fun to read:
 
 	First off, I'd suggest printing out a copy of the GNU coding standards,
 	and NOT read it.  Burn them, it's a great symbolic gesture.
 
 https://www.kernel.org/doc/Documentation/CodingStyle
 
-
 NASA's Jet Propulstion Labratory style guidelines are very short 
 and are concerned with automated tooling to do code analysis:
 
-.. note::
-
 	All loops shall have a statically determinable upper-bound on the maximum
-	number of loop iterations. It shall be possible for a static compliance
-	checking tool to affirm the existence of the bound
+	number of loop iterations.
+
 http://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf
 
 There are many many more.
