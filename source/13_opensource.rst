@@ -166,6 +166,3 @@ Any questions about anything from this year?
 
 * Conferences: OSBridge, OSCON may have free expo hall passes
 * In Corvallis? Want to come to the OSL and see what we do, pair program, etc.?
-* No meeting next week -- `please leave feedback!`_
-
-.. _please leave feedback!: https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform
