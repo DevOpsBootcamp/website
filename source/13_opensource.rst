@@ -113,7 +113,10 @@ Finding a project
     :align: right 
     :scale: 60%
 
-* Openhatch
+* `Openhatch`__
+* `BugsAhoy`__
+* `Trending github projects`__
+* `Showcased github projects`__
 * Easy bugs
 * GSOC submitters who didn't get enough interns
 * Search by language
@@ -121,6 +124,14 @@ Finding a project
   bioinformatics? video games?)
 * Your immediate payment for contributions will be satisfaction, so pick
   something satisfying
+
+.. __: http://openhatch.org/
+.. __: http://www.joshmatthews.net/bugsahoy/
+.. __: https://github.com/trending
+.. __: https://github.com/showcases
+    * `Open Advice (Lydia Pintscher)`__
+
+.. __: http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/
 
 First steps
 -----------
