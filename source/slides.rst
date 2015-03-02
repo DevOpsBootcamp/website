@@ -41,6 +41,7 @@ Vim, Emacs, and Git for version control
 Lesson 4: Scripting & Troubleshooting
 -------------------------------------
 Python and Bash scripting, with an overview of troubleshooting skills.
+
 - `Video <https://www.youtube.com/watch?v=98XtvsbN56g>`_
 - `Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
 - `Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/bash>`_

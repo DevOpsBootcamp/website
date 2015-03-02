@@ -1,4 +1,4 @@
-Lesson 13: Contributing to Open Source
+Lesson 12: Contributing to Open Source
 ======================================
 
 Getting started in Open Source
@@ -119,6 +119,9 @@ Finding a project
 * `BugsAhoy <http://www.joshmatthews.net/bugsahoy/>`_
 * `Trending github projects <https://github.com/trending>`_
 * `Showcased github projects <https://github.com/showcases>`__
+
+.. nextslide::
+
 * Easy bugs
 * GSOC submitters who didn't get enough interns
 * Search by language
