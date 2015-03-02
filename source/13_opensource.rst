@@ -10,6 +10,15 @@ Getting started in Open Source
     * `Producing Open Source Software (Karl Fogel) <http://producingoss.com/>`_
     * `Open Advice (Lydia Pintscher) <http://open-advice.org/Open-Advice.pdf>`_
 
+Why get involved?
+-----------------
+
+* You can learn lots of new things, and grow as a developer
+* Meet amazing people
+* Give back to a community that has given you something
+* Personal fulfillment
+* You have more to contribute than you may realize!
+
 Joining vs Starting a Project
 -----------------------------
 
@@ -78,8 +87,8 @@ Assessing a new community
     :align: center
     :scale: 30%
 
-Getting involved
-----------------
+How to get involved
+-------------------
 
 .. figure:: static/keeptrying.png
     :align: right
@@ -91,8 +100,7 @@ Getting involved
     * IRC channels
     * Wikis
     * Issue trackers
-* Your nick is your reputation
-* It's okay to make mistakes... But learn from them.
+* It's okay to make mistakes -- just try to learn from them.
 
 Finding a project
 -----------------
@@ -132,10 +140,12 @@ First steps
   It will feel like you have only a vague idea what you're doing. This means
   you've found a project that's challenging and that you'll learn from.
 
-* Lurk awhile then ask
-* Write a test
-* Fix a typo
-* Deploy and update the installation docs
+* Find a project
+* Read Contributing docs
+* Do a thing!
+    * Write a test
+    * Fix a typo
+    * Deploy and update the installation docs
 
 DevOps Concerns
 ---------------
@@ -152,7 +162,7 @@ DevOps Concerns
 Your Homework
 -------------
 
-* Find a project that you'd like to get involved with this summer
+* Find a project that you'd like to get involved with
 * Join IRC, mailing lists, etc.
 * Pull the code and run its tests using what you've learned
 * Find something you can contribute to the project
@@ -161,7 +171,3 @@ Your Homework
 Questions?
 ----------
 
-Any questions about anything from this year? 
-
-* Conferences: OSBridge, OSCON may have free expo hall passes
-* In Corvallis? Want to come to the OSL and see what we do, pair program, etc.?
