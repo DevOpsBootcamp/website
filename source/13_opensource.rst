@@ -4,20 +4,14 @@ Lesson 13: Contributing to Open Source
 Getting started in Open Source
 ------------------------------
 
-* `Carlos's CS419 in a nutshell`__
+* `Carlos's CS419 in a nutshell <http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/>`_
 * Relevant books 
-    * `The cathedral and the bazaar (Eric Raymond)`__
-    * `Producing Open Source Software (Karl Fogel)`__
-    * `Open Advice (Lydia Pintscher)`__
-
-.. __: http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/
-.. __: http://www.catb.org/~esr/writings/homesteading/cathedral-bazaar/cathedral-bazaar.ps
-.. __: http://producingoss.com/
-.. __: http://open-advice.org/Open-Advice.pdf
+    * `The cathedral and the bazaar (Eric Raymond) <http://www.catb.org/~esr/writings/homesteading/cathedral-bazaar/cathedral-bazaar.ps>`_
+    * `Producing Open Source Software (Karl Fogel) <http://producingoss.com/>`_
+    * `Open Advice (Lydia Pintscher) <http://open-advice.org/Open-Advice.pdf>`_
 
 Joining vs Starting a Project
 -----------------------------
-|
 
 .. figure:: static/cowbrush.gif
     :align: right
@@ -113,7 +107,10 @@ Finding a project
     :align: right 
     :scale: 60%
 
-* Openhatch
+* `Openhatch <http://openhatch.org/>`_
+* `BugsAhoy <http://www.joshmatthews.net/bugsahoy/>`_
+* `Trending github projects <https://github.com/trending>`_
+* `Showcased github projects <https://github.com/showcases>`__
 * Easy bugs
 * GSOC submitters who didn't get enough interns
 * Search by language
@@ -121,6 +118,8 @@ Finding a project
   bioinformatics? video games?)
 * Your immediate payment for contributions will be satisfaction, so pick
   something satisfying
+    * `Open Advice (Lydia Pintscher) <http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/>`_
+
 
 First steps
 -----------
@@ -166,6 +165,3 @@ Any questions about anything from this year?
 
 * Conferences: OSBridge, OSCON may have free expo hall passes
 * In Corvallis? Want to come to the OSL and see what we do, pair program, etc.?
-* No meeting next week -- `please leave feedback!`_
-
-.. _please leave feedback!: https://docs.google.com/forms/d/14wO3fq80bIWCJDfnE1rYy2w_D7DP_Vu6i6Eul6sXIAk/viewform
