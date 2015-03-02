@@ -18,80 +18,88 @@ Lesson 1: The Very Basics
 -------------------------
 Shell, virtualbox+vagrant, IRC.
 
-- `Lesson 1 Video <http://youtu.be/UiiPiIoTxnw>`_
-- `Lesson 1 Slides <http://slides.osuosl.org/devopsbootcamp/01_the_very_basics.html>`_
+- `Video <http://youtu.be/UiiPiIoTxnw>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/01_the_very_basics.html>`_
 
 Lesson 2: Single System Fundamentals
 ------------------------------------
 File permissions, users, groups, and package management
 
-- `Lesson 2 Video <http://youtu.be/0mWSep_qmJM>`_
-- `Lesson 2 Slides <http://slides.osuosl.org/devopsbootcamp/02_single_system_fundamentals.html>`_
+- `Video <http://youtu.be/0mWSep_qmJM>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/02_single_system_fundamentals.html>`_
 
 Lesson 3: Editors & Git
 -----------------------
 Vim, Emacs, and Git for version control
 
-- `Part 1, text editors video <https://www.youtube.com/watch?v=4ce3P_mvOvA>`_ 
-- `Part 2, version control video <https://www.youtube.com/watch?v=vBeAP7i_mPg>`_
-- `Lesson 3 Slides <http://slides.osuosl.org/devopsbootcamp/03_editors_git.html>`_
+- `Text Editors Video <https://www.youtube.com/watch?v=4ce3P_mvOvA>`_ 
+- `Version Control Videoideo <https://www.youtube.com/watch?v=vBeAP7i_mPg>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/03_editors_git.html>`_
 - `Text Editors Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/editors>`_
 - `Git Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/git>`_
 
 Lesson 4: Scripting & Troubleshooting
 -------------------------------------
-Python and Bash. Overview of troubleshooting/debugging skills.
+Python and Bash scripting, with an overview of troubleshooting skills.
 
-- `Scripting and Troubleshooting Video <https://www.youtube.com/watch?v=98XtvsbN56g>`_
-- `Lesson 4 Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
-- `Lesson 4 Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/bash>`_
+- `Video <https://www.youtube.com/watch?v=98XtvsbN56g>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/04_scripting_troubleshooting.html>`_
+- `Exercises <https://github.com/DevOpsBootCamp/BootCamp-Exercises/tree/master/bash>`_
 
-Lesson 5: Services & Deploying a Web App 
-----------------------------------------
-- `Services & Web App video 1/2 <https://www.youtube.com/watch?v=acqOeOPcSHY>`_
-- `Services & Web App video 2/2 <https://www.youtube.com/watch?v=2RSWKkJVodM>`_
-- `Lesson 5 Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
+Lesson 5: Web Applications 
+--------------------------
+- `Video 1 <https://www.youtube.com/watch?v=acqOeOPcSHY>`_
+- `Video 2 <https://www.youtube.com/watch?v=2RSWKkJVodM>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/05_services_app.html>`_
+- `Exercise <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/webapp>`_
 
 Lesson 6: Boot Process & Filesystem Hierarchy
 ---------------------------------------------
-- `Boot & Filesystem Video <https://www.youtube.com/watch?v=CsQbAInzTzQ>`_
-- `Lesson 6 slides <http://slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>`_
+- `Video <https://www.youtube.com/watch?v=CsQbAInzTzQ>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/06_boot_filesystem.html>`_
+- `Exercies <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/filesystems>`_
 
 Lesson 7: Databases
 -------------------
-- `Lesson 7 slides <http://slides.osuosl.org/devopsbootcamp/07_database_integration.html#1>`_
-
-Review of VM and App Setup
---------------------------
-- `Review Slides <http://slides.osuosl.org/devopsbootcamp/13_review.html>`_
+- `Video <https://www.youtube.com/watch?v=M0gl0AhUQvY>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/07_database_integration.html#1>`_
 
 Lesson 8: Security & Authentication
 -----------------------------------
-- `Lesson 8 video <http://www.youtube.com/watch?v=1idty-a052M>`_
-- `Lesson 8 slides <http://slides.osuosl.org/devopsbootcamp/08_security_auth.html>`_
+- `Video <http://www.youtube.com/watch?v=1idty-a052M>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/08_security_auth.html>`_
 
 Lesson 9: Networking overview
 -----------------------------
-- `Lesson 9 video <https://www.youtube.com/watch?v=eUOF2HVx88M>`_
-- `Lesson 9 slides <http://slides.osuosl.org/devopsbootcamp/09_networking.html#1>`_
+- `Video <https://www.youtube.com/watch?v=WorNW-pGNQE>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/09_networking.html#1>`_
+- `Exercises <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/networking>`_
 
 Lesson 10: DNS 
 --------------
-- `Lesson 10 video <https://www.youtube.com/watch?v=v2nBXO10WlM>`_
-- `Lesson 10 slides <http://slides.osuosl.org/devopsbootcamp/10_dns.html#1>`_
+- `Video <https://www.youtube.com/watch?v=v2nBXO10WlM>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/10_dns.html#1>`_
 
-Lesson 11: Automation and DevOps
+Lesson 11: Development Tools & Debuggers
+----------------------------------------
+- `Video <https://www.youtube.com/watch?v=d9i1Khi1Cfg>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/11_tools_debuggers.html>`_
+- `Exercise <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/debuggers-and-dev-tools>`_
+
+Lesson 12: Contributing to Open Source
+--------------------------------------
+- `Video <https://www.youtube.com/watch?v=G-b_85pYmK4>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/12_opensource.html>`_
+- `Exercise <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/blob/master/challenges/contribution-challenge.rst>`_
+
+Lesson 13: Automation and DevOps
 --------------------------------
-- `Lesson 11 video <https://www.youtube.com/watch?feature=player_embedded&v=SrM9s6Kb46E>`_
-- `Lesson 11 slides <http://slides.osuosl.org/devopsbootcamp/11_devops.html>`_
+- `Video <https://www.youtube.com/watch?feature=player_embedded&v=SrM9s6Kb46E>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/11_devops.html>`_
 
 
-Lesson 12: Configuration Management 
+Lesson 14: Configuration Management 
 -----------------------------------
-- `Lesson 12 video <https://www.youtube.com/watch?feature=player_embedded&v=FWIzvLr4Oj8>`_
-- `Lesson 12 slides <http://slides.osuosl.org/devopsbootcamp/12_configmgmt.html>`_
+- `Video <https://www.youtube.com/watch?feature=player_embedded&v=FWIzvLr4Oj8>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/12_configmgmt.html>`_
 
-Lesson 13: Open Source & Hands-On
----------------------------------
-- `Lesson 13 Video <https://www.youtube.com/watch?v=G-b_85pYmK4>`_
-- `Lesson 13 slides <http://slides.osuosl.org/devopsbootcamp/13_opensource.html>`_
