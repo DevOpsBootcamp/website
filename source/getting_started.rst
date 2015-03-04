@@ -30,7 +30,7 @@ If you have git installed already, you can also just clone the repo and grab the
 
 .. code-block:: bash
 
-    $ git clone git@github.com:DevOpsBootCamp/devopsbootcamp-vagrant.git
+    $ git clone https://github.com/DevOpsBootcamp/Vagrant.git
     $ cd devopsbootcamp-vagrant
 
 
