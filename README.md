@@ -26,9 +26,9 @@ project:
 
     $ sudo pip install virtualenv
     $ git clone https://github.com/DevOpsBootcamp/website.git
-    $ virtualenv website
     $ cd website
-    $ source bin/activate # enter the virtual environment
+    $ virtualenv venv
+    $ source venv/bin/activate # enter the virtual environment
     $ pip install -r requirements.txt
 
     # output lives in build/ and the stuff you want to edit is in source/
@@ -38,5 +38,3 @@ project:
     $ make html # to preview roughly how it'll look on readthedocs
 
     $ deactivate # leave the virtual environment
-
-
