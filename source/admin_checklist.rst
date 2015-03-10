@@ -33,7 +33,7 @@ Annual Checklist
 Google Hangouts:
 ----------------
 
-1. The OSL has it's own gmail account -- log in through gmail, and make sure that on youtube your account is set to the OSL account.  
+1. The OSL has it's own official Manatee gmail account for this.  Log in through gmail, and make sure that on youtube your account is set to the OSL manatee gmail account.  
 2. Go to youtube, and in the little drop-down menu in the top left hand corner, find the Video Manager. Sometimes it's kind of hard to find.
 3. Click the 'Live events' button.
 4. Fill in the little form. Make sure to check the 'quick' box on the right hand side, so that it uses google hangouts.
