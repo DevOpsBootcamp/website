@@ -1,16 +1,21 @@
-Lesson 12: Configuration Management
-===================================
-
-.. note:: starting off with cs312 content
+Lesson 12: Configuration Management pt.1
+========================================
 
 Large site management
 ---------------------
 
-* Configuration Management
-* Automation
-* Centralized
-* Standardization
-* History
+Managing large systems is difficult. Can you imagine being google and 
+having a security update come out for one of the tools you use?
+Manually updating even a small portion of their servers would be a
+nightmare!  Luckily we have **drum roll** Configuration Management.
+
+Configuration Management Is...
+------------------------------
+
+* Automation of many of the mundane tasks that are necessary for maintaining a system (such as updating your software)
+* Centralized so that the team can work together
+* Standardization, using the same tools to do the same tasks across a large system or organization.
+* History via source control management (like Github)
 
 .. note:: 
 
@@ -19,46 +24,82 @@ Large site management
     * Centralized so that a team can work together
     * History via SCM (source control management)
 
-What config management does
----------------------------
+What Configuration Management Does
+----------------------------------
 
-* Verify permissions for security/mgmt purposes
+* Verify permissions for security or management purposes
 * Distribute config files and scripts
 * Control batch jobs
 * Ensure packages are up to date
 * Look for file changes
+* Ensures that critical configs always are set like you want. 
 
-.. note::
-
-  Ensures that critical configs always are set like you want. No mucking around
-  by a bad admin
-
-Configuration Management
-------------------------
+What Configuration Management Includes
+--------------------------------------
 
 * System-wide settings
-    * sshd, ntp, ldap, etc
+    * sshd, ntp, ldap, etc.
 * Group settings
     * Web, email, database
 * Standardize settings globally
 * Easy to troubleshoot
 
-CF Management Tools
--------------------
+Configuration Management Tools
+------------------------------
 
-* CFEngine
-    * Mature, widely used
-* Puppet
-    * Getting mature, different concept
 * Chef
-    * Very new
+* Puppet
+* CFEngine
+* Ansible
+* Saltstack
 
-.. note:: Different concepts
-    Feature set different between them
-    Each have their own issues
+`A brief comparison <http://en.wikipedia.org/wiki/Comparison_of_open-source_configuration_management_software>`_ can be found on wikipedia.
+
+Chef
+----
+
+Chef, written in Ruby and Erlang, uses configuration "recipes" to manage a servers state. 
+
+*Pros*:
+
+*Cons*:
 
 Puppet
 ------
+
+*Pros*: 
+
+* Offers the most tools, modules, and actions
+* 
+
+*Cons*:
+
+CFEngine
+--------
+
+*Pros*:
+
+*Cons*:
+
+
+Ansible
+-------
+
+*Pros*:
+
+*Cons*:
+
+
+Saltstack
+---------
+
+*Pros*:
+
+*Cons*:
+
+
+Using Puppet
+------------
 
 Let's install puppet
 
