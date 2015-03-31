@@ -33,9 +33,9 @@ Annual Checklist
 Google Hangouts:
 ----------------
 
-1. The OSL has it's own gmail account -- log in through gmail, and make sure that
-on youtube your account is set to the OSL account.  
-2. In google+ go to hangouts (under the little 'home' tab in the upper left) and click 'hangouts on air'
-3. Choose 'Start a hangout on air' and fill in the information
-4. Go to youtube, and in video manager click the 'Live Events' button.  Fill in the same information
-5. When you're ready to go live, Hangouts will open, and you click the "Start hangout" button.
+1. The OSL has it's own official Manatee gmail account for this.  Log in through gmail, and make sure that on youtube your account is set to the OSL manatee gmail account.  
+2. Go to youtube, and in the little drop-down menu in the top left hand corner, find the Video Manager. Sometimes it's kind of hard to find.
+3. Click the 'Live events' button.
+4. Fill in the little form. Make sure to check the 'quick' box on the right hand side, so that it uses google hangouts.
+5. Google hangouts should pop up. If you want to share your screen, go to the little green box in the left hand side bar, click it, and select the left option.
+6. Once you're ready to start, click 'Start broadcast'
