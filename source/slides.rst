@@ -92,14 +92,13 @@ Lesson 12: Contributing to Open Source
 - `Slides <http://slides.osuosl.org/devopsbootcamp/12_opensource.html>`_
 - `Exercise <https://github.com/DevOpsBootcamp/Bootcamp-Exercises/blob/master/challenges/contribution-challenge.rst>`_
 
-Lesson 13: Automation and DevOps
---------------------------------
-- `Video <https://www.youtube.com/watch?feature=player_embedded&v=SrM9s6Kb46E>`_
-- `Slides <http://slides.osuosl.org/devopsbootcamp/11_devops.html>`_
+Lesson 13: Configuration Management pt. 1
+-----------------------------------------
+- `Slides <http://slides.osuosl.org/devopsbootcamp/13_configuration_management.html>`_
 
 
 Lesson 14: Configuration Management 
 -----------------------------------
 - `Video <https://www.youtube.com/watch?feature=player_embedded&v=FWIzvLr4Oj8>`_
-- `Slides <http://slides.osuosl.org/devopsbootcamp/12_configmgmt.html>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/14_configuration_management.html>`_
 
