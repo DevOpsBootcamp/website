@@ -40,7 +40,7 @@ Buildbot
 Buildbot
 --------
 
-.. figure:: ../_static/buildbot.png
+.. figure:: ./static/buildbot.png
   :align: center
   :width: 100%
 
