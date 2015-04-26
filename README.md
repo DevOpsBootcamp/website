@@ -2,7 +2,7 @@ DevOps Bootcamp Website & Curriculum
 ====================================
 
 The site is hosted at
-[devopsbootcamp.osuosl.org](http://devopsbootcamp.osuosl.org/en/latest/). 
+[devopsbootcamp.osuosl.org](http://devopsbootcamp.osuosl.org/). 
 
 This repository has a post-commit hook set up to update the main site every
 time the master branch is changed. If the site doesn't update within a couple
