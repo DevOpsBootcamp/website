@@ -3,15 +3,20 @@ An Introduction to Web Frameworks
 
 Static vs. Dynamic Websites
 ---------------------------
-* We've covered the difference between static and dynamic things before. You
-  tell me what's the difference between a static site and a dynamic site.
+
+* We've covered the difference between static and dynamic things before. What's the difference between a static site and a dynamic site?
 
 What is a Web Application Framework?
 ------------------------------------
 
-What's it like not using a web framework
-----------------------------------------
-* A royal pain.
+* Framework: software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software
+* A web application framework provides many useful and universal functionalities so that you don't have to worry about them
+
+Why use a WAF?
+--------------
+
+* It saves you a lot of writing and hassle
+* You don't have to re-invent the wheel
 
 Popular web frameworks
 ----------------------
@@ -21,10 +26,14 @@ Python:
 1. Django: High-level web framework, lots of features.
 2. Flask: Lightweight and easy to set up.
 
+.. nextslide::
+
 Ruby:
 
 1. Rails:
 2. Sinatra: Sinatra is to Ruby as Flask is to Python.
+
+.. nextslide::
 
 Node.js:
 
@@ -33,6 +42,8 @@ Node.js:
 2. Koa: Clean, small, and uses bleeding edge javascript features. Widely viewed
    as the successor to Express
 3. Hapi: Web pages are configuration, not code.
+
+.. nextslide::
 
 Java:
 
@@ -70,6 +81,8 @@ Templating Engines
 * How does facebook put your username on the page? It renders a template,
   mad-libs style, with your name as a variable.
 * Different frameworks typically have different templating engines.
+
+.. nextslide::
 
 Popular templating languages include:
 * Flask's Jinja, very Django like, heavily uses filters for modifying
