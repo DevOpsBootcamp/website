@@ -6,11 +6,16 @@ Static vs. Dynamic Websites
 
 * We've covered the difference between static and dynamic things before. What's the difference between a static site and a dynamic site?
 
+.. figure:: static/dynamic-or-static-website.jpg
+    :align: center
+
 What is a Web Application Framework?
 ------------------------------------
 
 * Framework: software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software
 * A web application framework provides many useful and universal functionalities so that you don't have to worry about them
+
+.. figure:: 
 
 Why use a WAF?
 --------------
