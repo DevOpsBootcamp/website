@@ -30,6 +30,9 @@ Why use a Web App Framework?
 * Web application frameworks have safeguards built in to prevent you from
   making security mistakes.
 
+.. figure:: static/reinvent-wheel.jpg
+    :align: center
+
 Popular web frameworks
 ----------------------
 
