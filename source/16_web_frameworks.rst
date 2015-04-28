@@ -25,6 +25,9 @@ Why use a WAF?
 * It saves you a lot of writing and hassle
 * You don't have to re-invent the wheel
 
+.. figure:: static/reinvent-wheel.jpg
+    :align: center
+
 Popular web frameworks
 ----------------------
 
