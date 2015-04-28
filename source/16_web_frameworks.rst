@@ -12,18 +12,23 @@ Static vs. Dynamic Websites
 What is a Web Application Framework?
 ------------------------------------
 
-* Framework: software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software
-* A web application framework provides many useful and universal functionalities so that you don't have to worry about them
+* Framework: software providing generic functionality can be selectively
+  changed by additional user-written code, thus providing application-specific
+  software
+* A web application framework provides many useful and universal
+  functionalities so that you don't have to worry about them
 
 .. figure:: static/rabbit_banner.jpg
     :align: center
     :width: 60%
 
-Why use a WAF?
---------------
+Why use a Web App Framework?
+----------------------------
 
-* It saves you a lot of writing and hassle
-* You don't have to re-invent the wheel
+* It saves you a lot of writing and hassle.
+* You don't have to re-invent the wheel.
+* Web application frameworks have safeguards built in to prevent you from
+  making security mistakes.
 
 Popular web frameworks
 ----------------------
@@ -87,18 +92,58 @@ also easier for search engines to index.
     :align: center
     :height: 300px
 
+Quick Database Review
+---------------------
+* Databases store data as columns and rows.
+* They allow you to make fancy queries to select and filter the data.
+
+.. code-block:: sql
+	CREATE TABLE nobel (
+		id int(11) NOT NULL AUTO_INCREMENT,
+		yr int(11),
+		subject varchar(15),
+		winner varchar(50)
+	)
+
+Quick Objects & Classes Review
+------------------------------
+* I have some data which goes together logically and I use a lot.
+* This data has some methods I use to manipulate that data
+
+.. code-block:: python
+
+	class Student(object):
+
+	    def __init__(self, first_name, last_name, student_id, major, gpa=4.0,
+	                 classes_taken=[]):
+	        self.first_name = first_name
+	        self.last_name = last_name
+	        self.student_id = student_id
+	        self.gpa = gpa
+	        self.classes_taken = classes_taken
+	        self.major = major
+
+	    def register_final_grades(new_classes):
+	        self.classes_taken.extend(new_classes)
+	        self.gpa = sum(classes_taken)/len(classes_taken)
+
 Object Relational Mappers (ORMs)
 --------------------------------
-
-* Most web application frameworks make it easy to work with an ORM, and talk to a database. 
-* Some frameworks, like Django, have their own ORMs, while others such as Flask allow you to use discreet ORMs such as SQLAlchemy
+* How do you put an object in a database?
+* Remembering to update the database every time you change the object is kind
+  of a pain.
+* An Object Relational Mapper maps the properties of the object to relations
+  (fields) in the database.
+* Some frameworks, like Django, have their own ORMs, while others such as Flask
+  allow you to use discreet ORMs such as SQLAlchemy
 
 Models
 ------
 
-A model can be thought of as an object; it's a collection of 
-information that contains fields and behavior of the data you're 
-storing.  Because this is Python, it's basically a class.
+A model is a special object which the ORM knows about and can chuck into the
+database.
+You can't just chuck any object into the database since there needs to be a
+table for each type of object.
 
 Django example:
 
@@ -158,16 +203,32 @@ Other Common Engines
 * Embedded Ruby, a standard format for embedding arbitrary ruby into any file.
   It's similar to PHP, and can be used for other non-html files as well. Remember Chef
   templates?
+
+.. code-block:: html
+
+	<!DOCTYPE html>
+	<html>
+	  <body>
+		<p>Hello, <%= user.first_name %>.</p>
+	  </body>
+	</html>
+
+
 * Jade, no html in sight.
+
+.. code-block:: text
+
+	html(lang="en")
+	  body
+	    .p Hello #{ user.first_name }
+
 
 Enter Migrations
 ----------------
-* At some point you're probably going to wish you had a database backing your
-  webapp.
 * Sometimes you'll want to change the layout of the columns in the database.
   Maybe you have a new feature so you want to add a new column.
-* However, if the database is running in production you can't just drop it and
-  start over.
+* However, if the database is running in production you can't just drop all the
+  tables and start over.
 * Migrations move your data from the old database schema to the new one.
   Migrations can be 'rolled back', or undone like pressing Ctrl-Z.
 * Every time you change a model, change the migrations.
