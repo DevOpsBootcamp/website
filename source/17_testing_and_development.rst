@@ -13,6 +13,9 @@ Testing your software ensures that it:
 * can be installed and run in its intended environments, and
 * achieves the general result its stakeholders desire.
 
+.. figure:: static/qaengineer.png
+    :align: center
+
 Static vs. Dynamic Testing
 --------------------------
 
