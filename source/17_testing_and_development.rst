@@ -27,28 +27,62 @@ Static vs. Dynamic Testing
 Black-box vs. White-box
 -----------------------
 
+* White box testing tests the internal structures of software.  These are pieces of code that the user doesn't directly interact with, but which are required to support the entire system.  
+* Black box testing treats the software as a black box. It assumes that you, the end user, don't actually know how the internal code works.
+
+.. figure:: static/black-box.png
+    :align: center
+    :height: 400px
+
 Testing Levels
 --------------
 
 * Unit Testing
 * Integration Testing
-* Component Interface Testing
 * System Testing
+
+There are many more!
 
 Unit Testing
 ------------
 
+Verifies the functionality of a specific section of code.  This is probably the majority of test writing that you'll do, at least in school.
+
+.. figure:: static/unit-test.jpg
+    :align: center
+
 Integration Testing
 -------------------
 
-Component Interface Testing
----------------------------
+Integration testing ensures that the different components of a 
+software system work together properly.  
+
+.. figure:: static/integration-testing.jpg  
+    :align: center
+
+.. note:: For example, if you're designing an email client then sending mail and receiving mail are probably handled by different components of the system.  You would build and unit-test each component first, then use integration testing to make sure that they work together.
 
 System Testing
 --------------
 
+This is the last type of testing you'll do in building a system.  
+It tests how the entire sytem works from start to finish, and verifies
+that it meets all of the requirements.
+
+.. figure:: static/system-testing.png
+    :align: center
+
 Testing Frameworks
 ------------------
 
+Frameworks are libraries which make testing easier. Generally they 
+will have a template for writing a test, and then tests will be run 
+with just one command. Like all frameworks, they mostly just make your
+life easier.
+
 Automated Testing
 -----------------
+
+Automated testing generally takes form in Continuous Integration, 
+which automatically runs tests when someone submits changes to code to
+ensure that it works with the system. 
