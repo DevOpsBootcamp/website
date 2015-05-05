@@ -15,6 +15,7 @@ Testing your software ensures that it:
 
 .. figure:: static/qaengineer.png
     :align: center
+    :height: 100px
 
 Static vs. Dynamic Testing
 --------------------------
@@ -32,7 +33,7 @@ Black-box vs. White-box
 
 .. figure:: static/black-box.png
     :align: center
-    :height: 400px
+    :height: 300px
 
 Testing Levels
 --------------
