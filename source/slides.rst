@@ -103,10 +103,12 @@ Lesson 14: Configuration Management pt. 2
 
 Lesson 15: Continuous Integration
 ---------------------------------
-
+- `Slides <http://slides.osuosl.org/devopsbootcamp/15_continuous_integration.html#1>`_
 
 Lesson 16: Web Application Frameworks
 -------------------------------------
+
+- `Slides <http://slides.osuosl.org/devopsbootcamp/16_web_frameworks.html#1>`_
 
 Lesson 17: Testing and Development
 ----------------------------------
