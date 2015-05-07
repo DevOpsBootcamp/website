@@ -97,8 +97,19 @@ Lesson 13: Configuration Management pt. 1
 - `Slides <http://slides.osuosl.org/devopsbootcamp/13_configuration_management.html>`_
 
 
-Lesson 14: Configuration Management 
------------------------------------
-- `Video <https://www.youtube.com/watch?feature=player_embedded&v=FWIzvLr4Oj8>`_
+Lesson 14: Configuration Management pt. 2
+-----------------------------------------
 - `Slides <http://slides.osuosl.org/devopsbootcamp/14_configuration_management.html>`_
+
+Lesson 15: Continuous Integration
+---------------------------------
+
+
+Lesson 16: Web Application Frameworks
+-------------------------------------
+
+Lesson 17: Testing and Development
+----------------------------------
+- `Video <https://www.youtube.com/watch?v=07H6pfRUQOE>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/17_testing_and_development.html>`_
 
