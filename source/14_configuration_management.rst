@@ -1,4 +1,4 @@
-Lesson 12: Configuration Management pt.1
+Lesson 14: Configuration Management pt.2
 ========================================
 
 Large site management

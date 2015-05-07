@@ -1,7 +1,5 @@
-.. _10_cfg_mgt:
-
-Configuration Management History & Basics
-=========================================
+Configuration Management pt. 1
+==============================
 
 Configuration Management
 ------------------------
