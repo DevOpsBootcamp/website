@@ -139,6 +139,8 @@ Dockerfiles
 Docker images are built from Dockerfiles. Let's take a look at (part of) the
 MySQL Dockerfile.
 
+.. nextslide::
+
 .. code-block:: sh
 
 	# This indicates that Docker should use the Debian image as a base for
@@ -161,14 +163,14 @@ MySQL Dockerfile.
 	# Run this command when everything is done
 	CMD ["mysqld"]
 
-.. next-slide::
+.. nextslide::
 
-* *FROM*: Images inherit from parent images. This image is set up like a Debian
+* *FROM* Images inherit from parent images. This image is set up like a Debian
   Linux system.
-* *RUN*: This just runs a command.
-* *ENV*: This sets an environment variable.
-* *EXPOSE*: This exposes a port to the host system.
-* *CMD*: This is the command to run once the image starts. It is a list of
+* *RUN* This just runs a command.
+* *ENV* This sets an environment variable.
+* *EXPOSE* This exposes a port to the host system.
+* *CMD* This is the command to run once the image starts. It is a list of
   strings.
 
 
