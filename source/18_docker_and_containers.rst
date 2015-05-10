@@ -35,13 +35,14 @@ What are Containers?
 A Brief history of Containers
 -----------------------------
 
+* The ``chroot`` command is a way to change the location of the root directory
+  for a process. Using ``chroot`` you can effectively change the root directory
+  for your entire OS so processes running inside the ``chroot`` can't change
+  files outside the ``chroot``. ``chroot`` was introduced in Unix in 1979.
 * FreeBSD, an OS very similar to Linux, has had container like things since the
   2000s, but they never saw widespread use.
 * Linux got containers in 2008, but they are just now beginning to be used.
 * OS X and Windows have nothing like this.
-
-.. figure:: /static/hello_whale.gif
-	:align: center
 
 Docker
 ------
@@ -74,6 +75,10 @@ Docker Alternatives
   not yet ready for prime time.
 * Manipulate raw Linux containers with the init system systemd. Surprisingly
   easy but you lose all of the advanced features of Docker.
+
+.. figure:: /static/hello_whale.gif
+	:align: center
+
 
 Installing Docker
 -----------------
@@ -181,6 +186,7 @@ Write a ``Dockerfile`` for systemview. It should install dependencies and start
 the application.
 
 Resources:
+
 - https://docs.docker.com/reference/builder/
 - https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images
 
