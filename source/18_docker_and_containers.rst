@@ -1,5 +1,8 @@
 Docker and Containers
 =====================
+
+*New and Improved!*
+-------------------
 * Configuration management is approaching 15 years old.
 * Some of the command line utilities we use date back to times when people used
   electric typewriters instead of computer screens (we aren't kidding)
