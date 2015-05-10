@@ -177,7 +177,8 @@ MySQL Dockerfile.
 
 Activity
 --------
-Write a ``Dockerfile`` for systemview.
+Write a ``Dockerfile`` for systemview. It should install dependencies and start
+the application.
 
 Resources:
 - https://docs.docker.com/reference/builder/
