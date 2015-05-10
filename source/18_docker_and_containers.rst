@@ -26,12 +26,14 @@ What are Containers?
 * Not VMs.
 * Containers are a way to put a program in an imaginary box where it thinks
   it's the only program besides the OS running on the computer.
+* Containers are just the host OS lying to the program, so they don't need to
+  run a second OS.
 * Containers allow programs to be isolated from the host system without the
   overhead of VMs. Since VMs run a whole OS on top of an OS, they're slow.
-  Containers are just the host OS lying to the program, so they don't need to
-  run a second OS, or keep programs inside the VM from messing with files
-  outside of it.
 * As a side affect, it changes the way you configure and run your applications.
+
+.. figure:: /static/shipping_containers.jpg
+	:align: center
 
 A Brief history of Containers
 -----------------------------
@@ -39,6 +41,10 @@ A Brief history of Containers
 * FreeBSD, an OS very similar to Linux, has had container like things since the
   2000s, but they never saw widespread use.
 * Linux got containers in 2008, but they are just now beginning to be used.
+* OS X and Windows have nothing like this.
+
+.. figure:: /static/hello_whale.gif
+	:align: center
 
 Docker
 ------
@@ -51,19 +57,25 @@ Docker
     - The webapp
     - The caching layer (redis, rabbitmq)
 
+.. figure:: /static/docker_logo.png
+	:align: center
+
+
 Docker Terminology
 ------------------
-- *Layer*: A set of changes to the 
-- *Image*: 
+- *Image*: This is just like the VM image. It is the set of files and
+  directories which make up the container. Images can inherit from other images
+  kind of like classes.
 - *Container*: An instance of an image the same way an object is an instance
   of a class.
 - *Dockerfile*: A file which describes how to build a docker image.
 
 Docker Alternatives
 -------------------
-* Rocket is very similar to Docker, supposed to be more secure, but not yet 
-  ready for prime time.
-* Manipulate raw Linux containers with the init system systemd.
+* Rocket is very similar to Docker. It's supposed to be more secure, but It's
+  not yet ready for prime time.
+* Manipulate raw Linux containers with the init system systemd. Surprisingly
+  easy but you lose all of the advanced features of Docker.
 
 Installing Docker
 -----------------
@@ -74,7 +86,7 @@ First install the EPEL repository. This is allows you to install packages which
 the CentOS developers didn't include in their list of packages.
 After that, install the ``docker-io`` package.
 
-.. code-block:: shell
+.. code-block:: sh
 
 	$ sudo yum install epel-release
 	$ sudo yum install docker-io
@@ -86,7 +98,7 @@ docker tool to pull down their images and run them. This is really handy
 because you don't need to rewrite a lot of commonly used Docker containers like
 the MySQL database container.
 
-.. code-block:: shell
+.. code-block:: sh
 
 	$ docker pull mysql
 
@@ -95,7 +107,7 @@ Running a Docker Image
 
 Now that you have the docker image locally, you can run it.
 
-.. code-block:: shell
+.. code-block:: sh
 
 
 	$ docker run -d --name my_mysql_container \
@@ -115,7 +127,7 @@ Running a Program in That Docker Container
 You can enter the container and run arbitrary commands.
 The `-it` flags make the command run interactively.
 
-.. code-block:: shell
+.. code-block:: sh
 
 	$ docker exec -it my_mysql_container bash
 	root@3d8dd4e19779:/# exit
@@ -129,7 +141,8 @@ Dockerfiles
 Docker images are built from Dockerfiles. Let's take a look at (part of) the
 MySQL Dockerfile.
 
-.. code-block:: shell
+.. code-block:: sh
+
 	# This indicates that Docker should use the Debian image as a base for
 	# this one
 	FROM debian:wheezy
@@ -150,6 +163,15 @@ MySQL Dockerfile.
 	# Run this command when everything is done
 	CMD ["mysqld"]
 
+.. next-slide::
+
+* *FROM*: Images inherit from parent images. This image is set up like a Debian
+  Linux system.
+* *RUN*: This just runs a command.
+* *ENV*: This sets an environment variable.
+* *EXPOSE*: This exposes a port to the host system.
+* *CMD*: This is the command to run once the image starts. It is a list of
+  strings.
 
 
 
