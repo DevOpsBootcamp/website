@@ -32,9 +32,6 @@ What are Containers?
   overhead of VMs. Since VMs run a whole OS on top of an OS, they're slow.
 * As a side affect, it changes the way you configure and run your applications.
 
-.. figure:: /static/shipping_containers.jpg
-	:align: center
-
 A Brief history of Containers
 -----------------------------
 
@@ -57,10 +54,6 @@ Docker
     - The webapp
     - The caching layer (redis, rabbitmq)
 
-.. figure:: /static/docker_logo.png
-	:align: center
-
-
 Docker Terminology
 ------------------
 - *Image*: This is just like the VM image. It is the set of files and
@@ -69,6 +62,11 @@ Docker Terminology
 - *Container*: An instance of an image the same way an object is an instance
   of a class.
 - *Dockerfile*: A file which describes how to build a docker image.
+
+.. figure:: /static/docker_logo.png
+	:align: center
+	:scale: 25%
+
 
 Docker Alternatives
 -------------------
