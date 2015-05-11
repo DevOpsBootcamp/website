@@ -3,7 +3,7 @@ Docker and Containers
 
 *New and Improved!*
 -------------------
-* Configuration management is approaching 15 years old.
+* Configuration management is over 20 years old.
 * Some of the command line utilities we use date back to times when people used
   electric typewriters instead of computer screens (we aren't kidding)
 * Today we're going to explore a technology which is in its angsty teenage
@@ -38,13 +38,14 @@ What are Containers?
 A Brief history of Containers
 -----------------------------
 
-* The ``chroot`` command is a way to change the location of the root directory
-  for a process. Using ``chroot`` you can effectively change the root directory
-  for your entire OS so processes running inside the ``chroot`` can't change
+* The ``chroot`` command is a way to change where a process thinks the root
+  directory is. Using ``chroot`` you can effectively change the root directory
+  for your entire OS, so processes running inside the ``chroot`` can't change
   files outside the ``chroot``. ``chroot`` was introduced in Unix in 1979.
 * FreeBSD, an OS very similar to Linux, has had container like things since the
   2000s, but they never saw widespread use.
-* Linux got containers in 2008, but they are just now beginning to be used.
+* Linux got containers under the name LXC in 2008, but they are just now
+  beginning to be used.
 * OS X and Windows have nothing like this.
 
 Docker
@@ -74,10 +75,11 @@ Docker Terminology
 
 Docker Alternatives
 -------------------
-* Rocket is very similar to Docker. It's supposed to be more secure, but It's
+* Rocket is very similar to Docker. It's supposed to be more secure, but it's
   not yet ready for prime time.
-* Manipulate raw Linux containers with the init system systemd. Surprisingly
-  easy but you lose all of the advanced features of Docker.
+* Manipulate raw Linux containers with the init system systemd's
+* ``systemd-nspawn`` command. Using it isurprisingly easy but you lose all of
+  the advanced features of Docker.
 
 .. figure:: /static/hello_whale.gif
 	:align: center
