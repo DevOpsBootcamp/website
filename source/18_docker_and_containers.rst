@@ -78,8 +78,8 @@ Docker Alternatives
 * Rocket is very similar to Docker. It's supposed to be more secure, but it's
   not yet ready for prime time.
 * Manipulate raw Linux containers with the init system systemd's
-* ``systemd-nspawn`` command. Using it isurprisingly easy but you lose all of
-  the advanced features of Docker.
+  ``systemd-nspawn`` command. Using it is surprisingly easy, but you lose all
+  of the advanced features of Docker.
 
 .. figure:: /static/hello_whale.gif
 	:align: center
