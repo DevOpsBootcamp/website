@@ -92,12 +92,20 @@ help.
 
 First install the EPEL repository. This is allows you to install packages which
 the CentOS developers didn't include in their list of packages.
-After that, install the ``docker-io`` package.
+After that, update the system and install the ``docker-io`` package.
 
 .. code-block:: sh
 
 	$ sudo yum install epel-release
+	$ sudo yum update
 	$ sudo yum install docker-io
+
+Next we will need to start the docker daemon:
+
+.. code-block:: sh
+
+	$ sudo service start docker
+
 
 Pulling a Docker Image
 ----------------------
@@ -161,7 +169,7 @@ MySQL Dockerfile.
 	RUN groupadd -r mysql && useradd -r -g mysql mysql
 
 	# Install the perl programming language with mysql requires
-	RUN apt-get update && apt-get install -y perl mysql-server mysql
+	RUN apt-get update && apt-get install -y perl mysql-server
 
 	# Set some useful environment variables
 	ENV MYSQL_MAJOR 5.6
