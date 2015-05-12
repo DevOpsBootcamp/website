@@ -115,3 +115,7 @@ Lesson 17: Testing and Development
 - `Video <https://www.youtube.com/watch?v=07H6pfRUQOE>`_
 - `Slides <http://slides.osuosl.org/devopsbootcamp/17_testing_and_development.html>`_
 
+Lesson 18: Docker and Containers
+---------------------------------
+- `Slides <http://slides.osuosl.org/devopsbootcamp/18_docker_and_containers.html>`_
+
