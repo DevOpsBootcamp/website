@@ -25,6 +25,77 @@ What We Covered
 Configuration Management
 ------------------------
 
+* Automation of many of the mundane tasks that are necessary for maintaining a
+  system (such as updating your software).
+* Centralized so that the team can work together.
+* Standardization, using the same tools to do the same tasks across a large
+  system or organization.
+* History via source control management (like Github).
+
+CM Platforms
+------------
+
+Today there are four major players:
+
+* CFEngine
+* Puppet
+* Chef
+* Ansible
+
+.. nextslide::
+
+**CFengine**
+
+* Lightweight agent system. Manages configuration of a large number of computers
+  using the client–server paradigm or stand-alone.
+
+**Puppet**
+
+* Puppet consists of a custom declarative language to describe system
+  configuration, distributed using the client–server paradigm.
+
+.. nextslide::
+
+**Chef**
+
+- Chef is a configuration management tool written in Ruby, and uses a pure Ruby
+  DSL for writing configuration "recipes". Also a client-server model.
+
+**Ansible**
+
+- Combines multi-node deployment, ad-hoc task execution, and configuration
+  management in one package. Utilizes SSH with little to no remote agents.
+
+
+What Configuration Management Includes
+--------------------------------------
+
+* System-wide settings
+    * sshd, ntp, ldap, etc.
+* Group settings
+    * Web, email, database
+* Standardize settings globally
+* Easy to troubleshoot
+
+CM Platform Comparison
+----------------------
+
+* CFEngine scales like mad, not very agile
+* Puppet
+
+  - Uses a list of dependencies and figures out what order to run it in
+  - The Puppet DSL can become a blocker and a problem, puppet also has scaling
+    issues
+
+* Chef
+
+  - Executes commands and scripts as they are listed with minimal amount of
+    dependencies
+  - Using ruby offers both its advantages and disadvantages
+
+* Each platform offers its own level of complexity
+
+
 Docker
 ------
 
