@@ -85,15 +85,17 @@ Model View Controller Architecture
 URL Routing
 -----------
 
-Frameworks are able to interpret and translate URLs from human-readable
-strings into URLs based on how the pages are indexed.  For instance,
-"/page.cgi?cat=science&topic=physics" can become "/page/science/physics"
-which is easier for humans to read, write, and remember, and is 
-also easier for search engines to index. 
+* So you visit a webpage, ``github.com/devopsbootcamp``, now what happens?
+* URL routing involves looking at the URL, matching it to a pattern, and
+  calling the appropriate function to render the page.
+* In Flask each function gets a special piece of ornamentation called a
+  decorator.
 
-.. figure:: static/route662.jpg
-    :align: center
-    :height: 300px
+.. code-block:: python
+
+	@app.route('/<organization_name>')
+	def render_organization_page():
+		# do stuff
 
 Quick Database Review
 ---------------------
