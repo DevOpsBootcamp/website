@@ -9,10 +9,6 @@ If you missed any lessons last term, you can `catch up
 <https://www.youtube.com/playlist?list=PLqzbgtiNz4A7mrOdSWNICSbYuJOG4j4yW>`_ at 
 http://osl.io/devopsbc.
 
-.. figure:: static/crossword-answers.png
-    :align: center
-    :width: 60%
-
 Spring Term
 -----------
 
