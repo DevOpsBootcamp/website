@@ -94,7 +94,7 @@ Lesson 12: Contributing to Open Source
 
 Lesson 13: Configuration Management pt. 1
 -----------------------------------------
-- `Slides <http://slides.osuosl.org/devopsbootcamp/13_configuration_management.html>`_
+- `Slides <http://slides.osuosl.org/devopsbootcamp/13_configuration_management_2015.html>`_
 
 
 Lesson 14: Configuration Management pt. 2
@@ -119,3 +119,6 @@ Lesson 18: Docker and Containers
 ---------------------------------
 - `Slides <http://slides.osuosl.org/devopsbootcamp/18_docker_and_containers.html>`_
 
+Lesson 19: Final Review
+-----------------------
+- `Slides <http://slides.osuosl.org/devopsbootcamp/19_review.html>`_
