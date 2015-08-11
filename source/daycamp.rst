@@ -3,12 +3,12 @@ DevOps Daycamp
 
 DevOps Daycamp Introduction
 ---------------------------
-- `Lesson 1 slides <http://slides.osuosl.org/devopsbootcamp/99-daycamp_introtrack_session1.html#1>`_
+- :ref:`Lesson 1 slides <daycamp_01>`
 
 Linux Basics
 ------------
-- `Lesson 2 slides <http://slides.osuosl.org/devopsbootcamp/99-daycamp_introtrack_session2.html#1>`_
+- :ref:`Lesson 2 slides <daycamp_02>`
 
 Version Control
 ---------------
-- `Lesson 3 slides <http://slides.osuosl.org/devopsbootcamp/99-daycamp_introtrack_session3.html#1>`_
+- :ref:`Lesson 3 slides <daycamp_03>`

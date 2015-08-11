@@ -5,10 +5,10 @@ Getting started in Open Source
 ------------------------------
 
 * `Carlos's CS419 in a nutshell <http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/>`_
-* Relevant books 
+* Relevant books
     * `The cathedral and the bazaar (Eric Raymond) <http://www.catb.org/~esr/writings/homesteading/cathedral-bazaar/cathedral-bazaar.ps>`_
     * `Producing Open Source Software (Karl Fogel) <http://producingoss.com/>`_
-    * `Open Advice (Lydia Pintscher) <http://open-advice.org/Open-Advice.pdf>`_
+    * `Open Advice (Lydia Pintscher)`_
 
 Why get involved?
 -----------------
@@ -36,7 +36,7 @@ Know your licenses
 
 .. note::
 
-    I am not a lawyer. 
+    I am not a lawyer.
 
     http://opensource.org/licenses is pretty cool
 
@@ -61,7 +61,7 @@ Know your licenses
       or uses a single line of GPL'd code
 
     :LGPL: Fixes library linking issue with GPL
-    
+
     :CC: Non-code content
 
 .. figure:: static/licensing.jpg
@@ -112,7 +112,7 @@ Finding a project
   they've answered the question over and over... read docs/faq then improve them
 
 .. figure:: static/osslogos.jpg
-    :align: right 
+    :align: right
     :scale: 60%
 
 * `Openhatch <http://openhatch.org/>`_
@@ -129,15 +129,16 @@ Finding a project
   bioinformatics? video games?)
 * Your immediate payment for contributions will be satisfaction, so pick
   something satisfying
-    * `Open Advice (Lydia Pintscher) <http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/>`_
+* `Open Advice (Lydia Pintscher)`_
 
+.. _Open Advice (Lydia Pintscher): http://classes.engr.oregonstate.edu/eecs/spring2014/cs419-003/
 
 First steps
 -----------
 |
 
 .. figure:: static/babypenguin.gif
-    :align: center 
+    :align: center
 
 .. note::
   It will feel like you have only a vague idea what you're doing. This means

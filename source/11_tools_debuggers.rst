@@ -58,12 +58,12 @@ Sometimes you get this message:
 	Segmentation fault: 11
 
 What's wrong? Heck if I know. Staring at the code won't help. Sometimes
-printing your variables doesn't help either. Sometimes you can't even 
-print to the screen! A debugger is most helpful when your code is 
+printing your variables doesn't help either. Sometimes you can't even
+print to the screen! A debugger is most helpful when your code is
 really complicated, and you can't tell what's going on.
 
 .. figure:: static/seg-fault.png
-    :align: center        
+    :align: center
     :scale: 80%
 
 Some Examples...
@@ -111,7 +111,7 @@ Code is read much more often than it is written.
 
 Similar to how we have conventions for writing in
 English (indent a paragraph, capitalize the first letter of a sentence,
-etc.) there are conventions for writing code to make it easier to 
+etc.) there are conventions for writing code to make it easier to
 understand.
 
 Here is an example from the python PEP8 guidelines:
@@ -120,7 +120,7 @@ Here is an example from the python PEP8 guidelines:
 	tend to be better behaved.
 
 .. code-block:: bash
-	
+
 	# Do this:
 	from mypkg import sibling
 	# Not this:
@@ -137,7 +137,7 @@ The Linux kernel style guidelines are actually fun to read:
 
 https://www.kernel.org/doc/Documentation/CodingStyle
 
-NASA's Jet Propulstion Labratory style guidelines are very short 
+NASA's Jet Propulstion Labratory style guidelines are very short
 and are concerned with automated tooling to do code analysis:
 
 	All loops shall have a statically determinable upper-bound on the maximum
@@ -157,7 +157,7 @@ Linters
 For Python code you can use flake8:
 
 .. code-block:: text
-    
+
 	./monte/parser.py:84:9: E265 block comment should start with '# '
 	./monte/parser.py:105:80: E501 line too long (86 > 79 characters)
 	./monte/parser.py:153:26: E128 continuation line under-indented
@@ -192,10 +192,11 @@ Type Checking
 .. code-block:: bash
 
 	parser.c:53:31: warning: incompatible pointer types passing
-	'struct token *' to parameter of type 'struct token_list *'
+	'struct token *' to parameter of type 'struct token_list'*
 	[-Wincompatible-pointer-types]
             return parse_variable(cur);
                                   ^~~
+
 Call Graphs
 -----------
 If you jump into a big project, and want to get an idea how things work
@@ -262,7 +263,7 @@ Install a library
 Deactivate when you're done
 
 .. code-block:: bash
- 
+
 	(my-python-libraries)$ deactivate
 	$
 

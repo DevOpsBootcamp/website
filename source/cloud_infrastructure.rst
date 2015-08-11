@@ -1,19 +1,15 @@
 Cloud Infrastructure
 ====================
 
-What is a "cloud"?  
+What is a "cloud"?
 ------------------
 
 * The idea of a cloud is to provide shared resources to clients
   according to need, as well as to provide specialized services.
 * Basically, if you're a web designer you don't have to figure out
-  how to sys-admin in order to host your own website somewhere. 
+  how to sys-admin in order to host your own website somewhere.
 * If no one is requesting your service, it can be "spun down" and not
   use resources until requested
-
-.. figure:: static/cloud.jpg
-    :align: center
-    :height: 200px
 
 Why is it useful?
 -----------------

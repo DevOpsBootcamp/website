@@ -56,7 +56,7 @@ Relational Algebra Visualized
 .. figure:: static/inner-outer-join-venn.jpg
     :align: center
     :scale: 150%
-   
+
 .. note:: joins are the principle use of relations.
 
 Installing MySQL
@@ -64,7 +64,7 @@ Installing MySQL
 
 .. code-block:: bash
 
-    # Install mysql -- hit 'enter' to name your user root, and then enter again for password 
+    # Install mysql -- hit 'enter' to name your user root, and then enter again for password
     $ sudo yum install mysql-server
     # Start the service
     $ sudo service mysqld start
@@ -73,7 +73,7 @@ Installing MySQL
     # There is no current password
     # Hit 'yes' or 'y' for all options
     # Add a sensible password which you will remember
-    # DO NOT MAKE IT YOUR USUAL PASSWORD.  
+    # DO NOT MAKE IT YOUR USUAL PASSWORD.
     # 'root' and 'password' are good for this sort of thing
 
 Managing MySQL
@@ -100,8 +100,8 @@ Configuration
     - Multiple clients can write to the same database at the same time (Also apprently not in MyISAM)
     - `And more... <https://dev.mysql.com/doc/refman/5.5/en/innodb-default-se.html>`_
 
-.. note:: 
-    we're going to add: 
+.. note::
+    we're going to add:
     ``default_storage_engine         = InnoDB``
 
 Users & Permissions
@@ -117,11 +117,11 @@ Next, we'll create a user vagrant and give it all privileges on the database we 
 
 .. code-block:: sql
 
-    mysql> CREATE USER 'vagrant'@'localhost' 
+    mysql> CREATE USER 'vagrant'@'localhost'
            IDENTIFIED BY 'password';
 
-    mysql> GRANT ALL PRIVILEGES ON nobel.* 
-           TO 'vagrant'@'localhost' 
+    mysql> GRANT ALL PRIVILEGES ON nobel.*
+           TO 'vagrant'@'localhost'
            WITH GRANT OPTION;
 
 Importing Data
@@ -159,17 +159,17 @@ Select is used to get specific data from the database.
 
 .. code-block:: sql
 
-    SELECT 
+    SELECT
        yr, subject, winner
-    FROM 
+    FROM
        nobel
-    WHERE 
+    WHERE
        yr = 1960 and subject='medicine';
 
 Practice
 --------
 
-* Who won the prize for Medicine in 1952? 
+* Who won the prize for Medicine in 1952?
 * How many people were awarded the 1903 Nobel in Physics?
 * How many prizes were awarded to Linus Pauling?
 * How many people have won more than once? (Difficult)
@@ -178,18 +178,18 @@ Answers
 -------
 
 .. code-block:: sql
-    
-    SELECT winner FROM nobel 
+
+    SELECT winner FROM nobel
     WHERE yr=1952 AND subject='medicine'; #(Selman A. Wksman)
 
-    SELECT * FROM nobel 
+    SELECT * FROM nobel
     WHERE yr=1903 AND subject='physics'; #(3)
 
-    SELECT * FROM nobel 
+    SELECT * FROM nobel
     WHERE winner='Linus Pauling'; #(2)
 
-    SELECT COUNT(*) FROM nobel 
-    AS n0 INNER JOIN nobel AS n1 on n0.winner=n1.winner 
+    SELECT COUNT(*) FROM nobel
+    AS n0 INNER JOIN nobel AS n1 on n0.winner=n1.winner
     AND (n0.yr!=n1.1 or n0.subject!=n1.subject); #(16)
 
 INSERT
@@ -199,7 +199,7 @@ INSERT
 
     INSERT VALUES
        ('2013','Literature','Herta Müller')
-    INTO 
+    INTO
        nobel;
 
 .. note:: this data stops at 2008, so lets insert some 2009 awards
@@ -217,20 +217,20 @@ Answers
 
 .. code-block:: sql
 
-    INSERT VALUES ('2009', 'Peace', 'Barack Obama'), 
-    ('2009', 'Economics', 'Elinor Ostrom and Oliver E. Williamson') 
-    INTO nobel; 
+    INSERT VALUES ('2009', 'Peace', 'Barack Obama'),
+    ('2009', 'Economics', 'Elinor Ostrom and Oliver E. Williamson')
+    INTO nobel;
 
 UPDATE
 ------
 
 .. code-block:: sql
 
-    UPDATE 
+    UPDATE
        nobel
-    SET 
+    SET
        winner='Andrew Ryan'
-    WHERE 
+    WHERE
        subject='Peace' AND yr='1951';
 
 .. note::
@@ -247,9 +247,9 @@ DELETE
 
 .. code-block:: sql
 
-    DELETE FROM 
-       nobel 
-    WHERE 
+    DELETE FROM
+       nobel
+    WHERE
        yr = 1989, subject = peace;
 
 .. note::
@@ -273,8 +273,8 @@ Hands-On: Make a Database
 
     mysql> create database systemview
 
-    mysql> GRANT ALL PRIVILEGES ON systemview.* 
-           TO 'vagrant'@'localhost' 
+    mysql> GRANT ALL PRIVILEGES ON systemview.*
+           TO 'vagrant'@'localhost'
            WITH GRANT OPTION;
 
 
@@ -286,7 +286,7 @@ Hands-On: Make a Database
   for the next step.
 
 Describing Tables
----------------
+-----------------
 
 * A table has rows.
 * Each row has a bunch of fields.
@@ -415,7 +415,7 @@ To use it, we'll need to:
 How SQLAlchemy is used in Systemview:
 -------------------------------------
 
-* Open up `systemview.py` 
+* Open up `systemview.py`
 * Notice on line 25 where we import flask.ext.sqlalchemy -- this is the flask module for working with SQLAchemy
 * Next, look at line 45 where we tell it which database to use.  Notice that it looks suspiciously like a URL...
     * Note: You don't have to memorize this syntax -- just know that a database is being created!
@@ -429,5 +429,4 @@ What's a model? What's an Object?
 * Instead of describing the fields in a database's table using a schema, we can use a model.
 
 * For those of you familiar with Object Oriented Programming, a model is a class which the ORM can
-turn into a database field.
-
+  turn into a database field.

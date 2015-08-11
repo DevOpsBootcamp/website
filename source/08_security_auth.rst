@@ -179,20 +179,20 @@ Server Side
     * ``pass`` http://www.zx2c4.com/projects/password-store/
     * ``vim -x passwords.txt``
     * http://world.std.com/~reinhold/diceware.html
-    .. note:: 
+    .. note::
         http://makezineblog.files.wordpress.com/2013/01/fractal-rainbow-table-runner-1.jpg
-        We use passwords for everything we do online.  Some (hopefully) 
+        We use passwords for everything we do online.  Some (hopefully)
         semi random grouping of letters, numbers, and symbols which when combined
         with a username allow you to authenticate with a server or process.
         There are a couple common attacks on passwords, the most common of which
         is called a dictionary attack.  This uses the fact that words are easier
         to remember than random characters, so it abuses human memory in order
-        to greatly reduce the search space for passwords.  
-        
+        to greatly reduce the search space for passwords.
+
         pwgen + a password manager will help you have better passwords which you
         don't even have to remember! **DEMO**
-        
-        Storing passwords on the server side is a whole other matter.  One of 
+
+        Storing passwords on the server side is a whole other matter.  One of
         the primary issues of concern is what happens if your server gets
         compromised.  Lets say for instance that you just have a giant text file
         that has the form "username password" on each row.  This would be super
@@ -200,16 +200,16 @@ Server Side
         you lose.  A better option is to not store the passwords directly, but
         to store some representation of the password.  This is where a hash
         comes in.  Essentially a hash is a one way function that is fast to
-        calculate, deterministic in output, but _very_ hard to reverse.  If you 
+        calculate, deterministic in output, but _very_ hard to reverse.  If you
         store the hash of a password you can hash what they send you to verify
         who they are.  Again we must consider what happens if our database was
         compromised.  Since these hashes are deterministic and computing power
         is so cheap, we can precalculate what passwords correspond to what
         hashes, these precomputed files are called rainbow tables.  To avoid
-        the issue with rainbow tables we 'salt' our passwords.  This adds a 
-        small random string to each password so that the search space for 
+        the issue with rainbow tables we 'salt' our passwords.  This adds a
+        small random string to each password so that the search space for
         precomputing possible passwords becomes tera/petabytes large.
-        
+
         Enough about passwords, we now move into more interesting things called
         keys!
 
@@ -222,14 +222,14 @@ Keys
 
 .. figure:: static/Llave_bronce.jpg
     :scale: 20%
-    :align: right 
+    :align: right
 
 Key Exchange
 ------------
 
 .. figure:: static/Diffie-Hellman_Key_Exchange.svg
     :align: center
-    :scale: 50% 
+    :scale: 50%
 
 RSA
 ---
@@ -241,7 +241,7 @@ RSA
     :align: center
     :scale: 60%
 
-.. note:: 
+.. note::
     Keys are password files.  These can be used in place of a password for
     authentication and encryption.
 
@@ -274,14 +274,14 @@ SSH
     $ ssh -D 9999 manatee@freshblue.lake
     $ ssh -R 2222:localhost:22 freshblue.lake
 
-.. note:: 
+.. note::
     ssh is secure shell and provides a shell to a unix machine over the 'net by
     using RSA to encrypt communications between a client and server.
     Passwordless login, refuse connections without keys, tunneling.  Commands at
     the end are run unecrypted.
 
     Passphrases work by adding a password to a key file.  Add your friends
-    public keys to authorized_keys so they don't need a password to login.  
+    public keys to authorized_keys so they don't need a password to login.
 
     ``ssh-agent, .ssh/config, /etc/ssh/sshd_config``
 
@@ -314,7 +314,7 @@ GPG
     * mutt
     * Command line
     .. code-block:: bash
-        $ gpg --encrypt manateessecrets.jpg.exe 
+        $ gpg --encrypt manateessecrets.jpg.exe
 
 Certificates and HTTP
 ---------------------
@@ -335,7 +335,7 @@ Man in the Middle
     :align: center
     :scale: 85%
 
-.. note:: 
+.. note::
 
     - 650 CAs
     - Attacks on https/ssl
@@ -375,7 +375,7 @@ Crypto-wares
     .. figure:: static/addition-and-multiplication-tables.png
         :align: center
         :scale: 85%
-    .. note:: 
+    .. note::
         **DEMO** rot13
 
 Resources
@@ -447,11 +447,11 @@ Code Injection
 
   * Sanitize your inputs!
 
-http://bobby-tables.com/
+..  http://bobby-tables.com/
 ..  https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
-    http://guides.rubyonrails.org/security.html
+..  http://guides.rubyonrails.org/security.html
 
-.. note:: 
+.. note::
 
    These types of attacks consist of code that is introduced into the
    application causing unexpected behavior.  This code can be
@@ -461,7 +461,7 @@ http://bobby-tables.com/
    The comic demonstrates a classic SQL injection attack.  Bobby took
    advantage of the school's software not properly sanitizing their
    inputs by including a command to drop the students table, causing
-   the kind of chaos often seen in xkcd comics.  
+   the kind of chaos often seen in xkcd comics.
 
    Cross-site scripting works much the same way: someone posts a
    comment on a blog which includes Javascript which gets executed
@@ -471,7 +471,7 @@ http://bobby-tables.com/
    Cross-site request forgeries are similar but instead of Javascript
    you'll see image links that really point to another site like your
    bank, hoping that your cookies will let them transfer money from
-   your accounts to theirs.  
+   your accounts to theirs.
 
    Remote site execution is what it sounds like: just like the SQL
    injection attack, but instead running a shell command on the web
@@ -505,7 +505,7 @@ Web Server-Specific Attacks
 * Configuration-Based
 
 
-.. note:: 
+.. note::
 
    There is a constant battle between developers and the bad guys --
    one side discovers vulnerabilities, the other side fixes them.  One
@@ -529,7 +529,7 @@ Web Server-Specific Attacks
    expect even though you're not using those features.  Read the
    release notes when you update your software.  Pay attention to
    details.  They will.  You should too.
-   
+
 
 Problems with Design and Implementation
 ---------------------------------------
@@ -539,13 +539,13 @@ Problems with Design and Implementation
   * Information Leakage
   * Unauthorized Directory Access
 
-.. note:: 
+.. note::
 
    The remaining threats facing the typical web developer come down to
    design and implementation problems.  The fine points of
    authentication and authorization have been discussed already: make
    sure that all your actions are authorized by authenticated users
-   and you should be okay.  
+   and you should be okay.
 
    Also, don't let your cookies have infinite lifetimes.  Better to
    have your users occasionally log in again than let them be
@@ -574,7 +574,7 @@ Getting Up to Date
 .. code-block:: bash
 
     $ cd ~/projects/systemview
-    
+
 
 * Make sure your local copy is up to date
 

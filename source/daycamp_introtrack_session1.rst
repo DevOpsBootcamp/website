@@ -1,3 +1,5 @@
+.. _daycamp_01:
+
 DevOps DayCamp Introduction
 ===========================
 
@@ -16,13 +18,13 @@ Software Development + Operations Engineering
 
     development (write the software) + operations (run the servers)
     old paradigm: dev + ops discrete... this worked because
-        * clearly defined interface between the two, relatively standardized
-        * slower workflow means more time to troubleshoot/debug
+    * clearly defined interface between the two, relatively standardized
+    * slower workflow means more time to troubleshoot/debug
     new paradigm:
-        * software released faster ("agile")
-        * larger scale = many identical servers
-        * devs need to know ops for testing, anticipating deployment issues
-        * ops need to know dev to minimize wasted resources, improve security
+    * software released faster ("agile")
+    * larger scale = many identical servers
+    * devs need to know ops for testing, anticipating deployment issues
+    * ops need to know dev to minimize wasted resources, improve security
 
 What's BootCamp?
 ----------------
@@ -123,7 +125,8 @@ This Session's Agenda
 * Notation
 * Vocabulary
 * Virtual Machines
-* Install your VM!
+* Setup with OpenStack VM
+* HAVE FUN
 
 .. figure:: /static/Tux.png
     :align: right
@@ -168,6 +171,12 @@ How to get (to) Linux
 
 * flip{1-3} are Engineering servers; less reliable
 
+.. note:: this might need to change
+
+* Openstack login::
+
+    ssh <usernumber>@daycamp.osuosl.org
+
 .. _PuTTy: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 
 Essential Vocabulary
@@ -176,20 +185,17 @@ Essential Vocabulary
 .. note:: jme
 
 * Operating System (OS)
-* Virtual Machine (VM)
-* host
-* guest
-* virtualbox
-* vagrant
-* disk image
-* vagrant box
 * GNU/linux
+* Server
+* Host
+* Guest
+* Virtual Machine (VM)
 * terminal/command line/cli
 
 Operating System
 ----------------
 
-.. note:: jme
+.. note:: jme (these are words)
 
 * Kernel + Userland utilities
 * Kernel manages things like:
@@ -199,80 +205,6 @@ Operating System
   * filesystems
 
 * Userland utilities provide basic tools to make the system useful
-
-Virtual Machine
----------------
-
-.. note:: edunham
-
-* The host creates some virtual hardware, and 'runs' the virtual hardware
-* virtual hardware runs an operating system, which interacts with the virtual hardware
-* Different virtual machines can be more or less virtualized than others
-
-Host
-----
-
-.. note:: edunham
-
-The physical machine on which the virtual machine runs
-
-Examples:
-
-  * Your laptop
-  * Physical servers that cloud providers (AWS, Rackspace, DigitalOcean) run
-
-Guest
------
-
-.. note:: edunham
-
-The virtual machine.
-
-Examples:
-
-  * The virtual machine you are about to start up
-  * A cloud instance
-
-Virtualbox
-----------
-
-.. note:: jme
-
-* Free and Open Source Software (FOSS) to manage and run virtual machines
-* Originally written by Sun, now owned by Oracle
-* Works well on Linux, OSX, and Windows (and even FreeBSD!)
-
-Vagrant
--------
-
-.. note:: jme
-
-* A tool to manage virtual machines
-* Works with lots of types of virtualmachines
-* Uses a 'Vagrantfile' to manage machines
-* Workflow looks like::
-
-    $ vagrant init <box>
-    $ vagrant up
-    $ vagrant ssh
-
-Disk Image
-----------
-
-.. note:: edunham
-
-* a file which lives on the host that represents a disk to a VM
-* delete it, and the hard drive on the VM disappears
-* different formats exist, not always convertible
-
-Vagrant Box
------------
-
-.. note:: edunham
-
-* A disk image + vagrant metadata
-* Allows you to copy a virtual machine and run it elsewhere
-* Tied to backend vagrant uses (virtualbox for us)
 
 GNU
 ---
@@ -299,91 +231,63 @@ Linux
 * Started by Linus Torvalds
 * Licensed under the GPL
 
-Trying Linux on a Virtual Machine
----------------------------------
+Server
+------
+
+A local or remote instance of an operating system typically used for shared
+resoruces and/or shared applications.
+
+Examples:
+* Web Server (devopsbootcamp.osuosl.org)
+* Shell Server (shell.onid.oregonstate.edu)
+* File Server (dropbox)
+* Game Server (WoW)
+
+"The Cloud"
+
+Host
+----
 
 .. note:: edunham
 
-Virtual machines act as a full system on a physical machine
+The physical machine on which the virtual machine runs
 
-.. figure:: /static/virtualbox.png
-    :align: right :scale: 50%
+Examples:
 
-* Hypervisors:
+  * Your laptop
+  * Physical servers that cloud providers (AWS, Rackspace, DigitalOcean) run
 
-    * VirtualBox (free) -- we will use this one
-    * VMWare (mostly free)
-    * KVM (Linux only hosts)
-    * Parallels
+Guest
+-----
 
-* Public Cloud Virtual Machines
+.. note:: edunham
 
-    * Amazon EC2, Rackspace Cloud, Google Compute Engine, etc
+The virtual machine.
 
-* Easy way to test without breaking your machine!
+Examples:
 
-Installing Linux on Virtualbox
-------------------------------
+  * The virtual machine you are about to start up
+  * A cloud instance
 
-.. note:: jme
+Virtual Machine
+---------------
 
-* Install virtualbox and vagrant from the USB drives
-* Copy centos-6.5.box to your laptop
-* Copy putty.exe to your laptop if you're on Windows.
-* Get instructions for individual operating systems from the helpers
+.. note:: edunham
 
-Vagrant & VirtualBox
---------------------
+* The host creates some virtual hardware, and 'runs' the virtual hardware
+* virtual hardware runs an operating system, which interacts with the virtual
+  hardware
+* Different virtual machines can be more or less virtualized than others
 
-.. note:: jme
+Trying Linux in the Cloud
+-------------------------
 
-.. note::
-  We're using CentOS as our base image for now but will use Debian later. You
-  can see the gui by uncommenting the line in the Vagrantfile.
+Need:
+* SSH Client (PUTTY or OSX Terminal)
+* Server (daycamp.osuosl.org)
+* Login Credentials (usernumber + password)
 
-* Open a terminal and cd to the directory you copied the box file to.
-
-  * Don't know what this means? Ask! We'll help!
-
-.. code-block:: bash
-
-    # add the box
-    vagrant box add centos centos-6.5.box
-
-    # initialize
-    vagrant init centos
-
-    # start vm
-    vagrant up
-
-    # log in
-    vagrant ssh # windows users will use putty here
-
-Vagrant cheat sheet
--------------------
-
-.. note:: jme
-
-.. note::
-  We'll get into more detail later in how you can access ports on your VMs and
-  other use cases.
-
-.. code-block:: bash
-
-    # start
-    vagrant up
-
-    # stop
-    vagrant halt
-
-    # destroy (remove vm)
-    vagrant destroy
-
-    # ssh to the vm
-    vagrant ssh
-
-Also check out the `Vagrant Documentation
-<http://docs.vagrantup.com/v2/cli/index.html>`_ for more information.
+For future reference you can use Local Virtual Machines to do the same thing.
 
 The Terminal
 ------------
@@ -407,3 +311,8 @@ The Terminal
 .. figure:: /static/teletype_terminal.jpg
     :align: left
 
+Activities
+----------
+
+* Get setup with an OpenStack VM
+* ``man man``
