@@ -136,14 +136,23 @@ http://arstechnica.com/security/2013/01/psa-dont-upload-your-important-passwords
 Git Exercise
 ------------
 
+First create a git repository!
+
 .. code-block:: none
 
-    $ mkdir my_test_repo
-    $ cd my_tets_repo
+    $ mkdir my_python_app
+    $ cd my_python_app
     $ git init
-    $ wget http://some.url/script.py
-    $ git add script.py
-    $ git commit -m "My first git commit!"
+
+Git will do a one-time prompt for some basic information and then you have a
+Git Repository! All code in this code can be tracked by git as a single
+project.
+
+Adding Code
+-----------
+
+Now we are going to add code to our project. Create an open a new file
+``script.py`` with the following command:
 
 .. code-block:: none
 
@@ -152,7 +161,77 @@ Git Exercise
 .. code-block:: python
 
     def f(x):
-        return x**x
+        print(x**x)
+
+    if __name__ ==  "__main__":
+        f(5)
+
+Save this file and leave the text editor.
+
+You have now written code but git is not tracking it. You have to tell it to do
+that.
+
+.. code-block:: none
+
+    $ git status
+    $ git add script.py
+    $ git commit -m "My first git commit!"
+    $ git status
+    $ git log
+
+Cloning a Repository
+--------------------
+
+Git also allows you to ``clone`` a remote repository to work on another
+person's code. It's like downloading the entire project and it's git history.
+
+.. code-block:: none
+
+    $ cd ~
+    $ git clone <some git url>
+    $ cd <new repo directory>
+    $ ls
+
+You have successfully clone a remote repository and can start modifying the
+other person's code. Changes you make on your local version of this project
+will not affect the original version you modified (although you can push
+changes if you are allowed to do so by the original owner!)
+
+Cloned Repository Part 1
+------------------------
+
+Let's use our application we just cloned. The README should include
+installation instructions
+
+.. code-block:: none
+
+    $ less README.md
+    $ pip install --user -r requirements.txt
+    $ python myapp.py
+
+Now if you go to <your ip address>:5000 you can see a live version of the app!
+
+Branches
+--------
+
+Github allows you to 'branch' your codebase. This allows you to make changes
+on a separate track without modifying the original codebse in the same
+repository. Branches are preserved when you clone a remote repository.
+
+.. code-block:: none
+
+    $ git checkout broken
+    $ python myapp.py
+
+Now you can see your webapp doesn't work correctly when you try to access it in
+the browser!
+
+We can manually go in and fix it, or run a command to see what changed between
+this version and the version in the 'master' branch.
+
+.. code-block:: none
+
+    $ git diff master
 
 Daily workflow
 --------------
