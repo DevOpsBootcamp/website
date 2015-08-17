@@ -192,7 +192,7 @@ Type Checking
 .. code-block:: bash
 
 	parser.c:53:31: warning: incompatible pointer types passing
-	'struct token *' to parameter of type 'struct token_list'*
+	'struct token *' to parameter of type 'struct token_list *'
 	[-Wincompatible-pointer-types]
             return parse_variable(cur);
                                   ^~~

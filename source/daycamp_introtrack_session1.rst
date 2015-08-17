@@ -195,7 +195,7 @@ Essential Vocabulary
 Operating System
 ----------------
 
-.. note:: jme (these are words)
+.. note:: Mentioning the things on this page are enough, no need to overload
 
 * Kernel + Userland utilities
 * Kernel manages things like:

@@ -237,7 +237,6 @@ Package Management
 
 * .deb / APT + dpkg (used by Debian, Ubuntu, Linux Mint)
 * .rpm / YUM + rpm (used by RedHat, CentOS, Fedora)
-* Nix - User stored packages, you can use multiple versions of the same package
 
 Language-specific Package Managers
 ----------------------------------
@@ -296,4 +295,3 @@ Review
 * read output of yum or aptitude search
 * install a package on their VM/partition (Vim, Git)
     * explain what dependencies it also installed
-
