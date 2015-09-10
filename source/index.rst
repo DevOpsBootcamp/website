@@ -1,41 +1,21 @@
 DevOps BootCamp
 ===============
 
-Recurring meetings will be Mondays, 7pm-9pm in KEC1005.  Changes will be announced here!
 DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core software 
 development and systems operation skills to interested OSU students and community members.
 
-If you missed any lessons last term, you can `catch up 
-<https://www.youtube.com/playlist?list=PLqzbgtiNz4A7mrOdSWNICSbYuJOG4j4yW>`_ at 
-http://osl.io/devopsbc.
+For an idea of what lessons are like, check out our YouTube playlist of previous lessons
+at http://osl.io/devopsbc.
 
-Spring Term
------------
+Fall Term Schedule
+------------------
 
-+--------+-----------+---------------------------------+--------------+
-| Date   | Location  | Topic                           | Week of term |
-+========+===========+=================================+==============+
-| 3/30   | KEC1005   | Configuration Management        | 1            |
-+--------+-----------+---------------------------------+--------------+
-| 4/6    | KEC1005   | Configuration Management pt.2   | 2            |   
-+--------+-----------+---------------------------------+--------------+
-| 4/13   | KEC1005   | Spencer Krum on Puppet          | 3            |
-+--------+-----------+---------------------------------+--------------+
-| 4/20   | KEC1005   | Continuous Integration          | 4            |
-+--------+-----------+---------------------------------+--------------+
-| 4/27   | KEC1005   | Web Application Frameworks      | 5            |   
-+--------+-----------+---------------------------------+--------------+
-| 5/4    | KEC1005   | Testing and Development         | 6            |
-+--------+-----------+---------------------------------+--------------+
-| 5/11   | KEC1005   | Cloud Infrastructure            | 7            |
-+--------+-----------+---------------------------------+--------------+
-| 5/18   | KEC1005   | Cloud Infrastructure pt.2       | 8            |   
-+--------+-----------+---------------------------------+--------------+
-| 5/25   | N/A       | Memorial day -- No class        | 9            |
-+--------+-----------+---------------------------------+--------------+
-| 6/1    | KEC1005   | Complete Review and Celebration | 10           |
-+--------+-----------+---------------------------------+--------------+
+Meetings will be once per week, with occasional review days and breaks around 
+midterms and finals. The schedule for Fall term 2015 will be announced after
+`DevOps Daycamp <http://devopsbootcamp.osuosl.org/daycamp/>`_!
 
+Background
+----------
 
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
 more than 160 open source projects. Along with delivering over 460 terabytes of
