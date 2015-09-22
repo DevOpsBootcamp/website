@@ -103,6 +103,7 @@ Quick Database Review
 * They allow you to make fancy queries to select and filter the data.
 
 .. code-block:: sql
+
 	CREATE TABLE nobel (
 		id int(11) NOT NULL AUTO_INCREMENT,
 		yr int(11),

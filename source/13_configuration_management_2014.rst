@@ -8,9 +8,9 @@ What is it?
 
     *"Configuration management is the process of standardizing resource
     configurations and enforcing their state across IT infrastructure in an
-    automated yet agile manner."* [PuppetLabs]
+    automated yet agile manner."* `PuppetLabs`_
 
-.. [PuppetLabs] http://puppetlabs.com/solutions/configuration-management
+.. _PuppetLabs: http://puppetlabs.com/solutions/configuration-management
 
 History of CM
 -------------
@@ -155,8 +155,6 @@ DevOps workflow in an agency environment
 ----------------------------------------
 
 Greg Lund-Chaix
-
-.. image:: ../_static/squishy.png
 
 Director of Technology
 

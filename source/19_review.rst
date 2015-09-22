@@ -261,7 +261,7 @@ Static vs. Dynamic Testing
 --------------------------
 
 * Static testing is similar to linting. It doesn't actually run your code, but
-  walks through it to find inconsistencies and common errors. 
+  walks through it to find inconsistencies and common errors.
 * Static testing involves verification
 * Dynamic testing runs your code and tests various inputs and outputs.
 * Dynamic testing involves validation.
@@ -270,10 +270,11 @@ Black-box vs. White-box
 -----------------------
 
 * White box testing tests the internal structures of software.  These are
-pieces of code that the user doesn't directly interact with, but which are
-required to support the entire system.
+  pieces of code that the user doesn't directly interact with, but which are
+  required to support the entire system.
+
 * Black box testing treats the software as a black box. It assumes that you,
-the end user, don't actually know how the internal code works.
+  the end user, don't actually know how the internal code works.
 
 .. figure:: static/black-box.png
     :align: center
@@ -289,7 +290,7 @@ school.
 
 
 **Integration Testing:** Integration testing ensures that the different
-components of a software system work together properly.  
+components of a software system work together properly.
 
 **System Testing:** This is the last type of testing you'll do in building a
 system.  It tests how the entire sytem works from start to finish, and verifies
@@ -298,8 +299,8 @@ that it meets all of the requirements.
 Testing Frameworks
 ------------------
 
-Frameworks are libraries which make testing easier. Generally they 
-will have a template for writing a test, and then tests will be run 
+Frameworks are libraries which make testing easier. Generally they
+will have a template for writing a test, and then tests will be run
 with just one command. Like all frameworks, they mostly just make your
 life easier.
 
@@ -310,14 +311,14 @@ Example using ``unittest``
 
 Code being tested:
 
-.. code:: python
+.. code-block:: python
 
     def is_all_numbers(response):
         return all(map(unicode.isdigit, map(unicode, response))):
 
 Test case:
 
-.. code:: python
+.. code-block:: python
 
     from unittest import TestCase
 
@@ -348,7 +349,7 @@ An Example of Mocking
 This function gets the title of the first open issue on a repository.  What
 happens if someone opens a new issue?
 
-.. code:: python
+.. code-block:: python
 
     import requests
     import json
@@ -364,7 +365,7 @@ happens if someone opens a new issue?
 
 .. nextslide::
 
-.. code:: python
+.. code-block:: python
 
     import mock
     from unittest import TestCase

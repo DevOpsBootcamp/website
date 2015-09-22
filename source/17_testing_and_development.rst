@@ -20,7 +20,7 @@ Testing your software ensures that it:
 Static vs. Dynamic Testing
 --------------------------
 
-* Static testing is similar to linting.  It doesn't actually run your code, but walks through it to find inconsistencies and common errors. 
+* Static testing is similar to linting.  It doesn't actually run your code, but walks through it to find inconsistencies and common errors.
 * Static testing involves verification
 * Dynamic testing runs your code and tests various inputs and outputs.
 * Dynamic testing involves validation.
@@ -28,7 +28,7 @@ Static vs. Dynamic Testing
 Black-box vs. White-box
 -----------------------
 
-* White box testing tests the internal structures of software.  These are pieces of code that the user doesn't directly interact with, but which are required to support the entire system.  
+* White box testing tests the internal structures of software.  These are pieces of code that the user doesn't directly interact with, but which are required to support the entire system.
 * Black box testing treats the software as a black box. It assumes that you, the end user, don't actually know how the internal code works.
 
 .. figure:: static/black-box.png
@@ -55,10 +55,10 @@ Verifies the functionality of a specific section of code.  This is probably the 
 Integration Testing
 -------------------
 
-Integration testing ensures that the different components of a 
-software system work together properly.  
+Integration testing ensures that the different components of a
+software system work together properly.
 
-.. figure:: static/integration-testing.jpg  
+.. figure:: static/integration-testing.jpg
     :align: center
 
 .. note:: For example, if you're designing an email client then sending mail and receiving mail are probably handled by different components of the system.  You would build and unit-test each component first, then use integration testing to make sure that they work together.
@@ -66,7 +66,7 @@ software system work together properly.
 System Testing
 --------------
 
-This is the last type of testing you'll do in building a system.  
+This is the last type of testing you'll do in building a system.
 It tests how the entire sytem works from start to finish, and verifies
 that it meets all of the requirements.
 
@@ -77,8 +77,8 @@ that it meets all of the requirements.
 Testing Frameworks
 ------------------
 
-Frameworks are libraries which make testing easier. Generally they 
-will have a template for writing a test, and then tests will be run 
+Frameworks are libraries which make testing easier. Generally they
+will have a template for writing a test, and then tests will be run
 with just one command. Like all frameworks, they mostly just make your
 life easier.
 
@@ -89,13 +89,15 @@ Example using ``unittest``
 
 Code being tested:
 
-.. code:: python
+.. code-block:: python
+
     def is_all_numbers(response):
         return all(map(unicode.isdigit, map(unicode, response))):
 
 Test case:
 
-.. code:: python
+.. code-block:: python
+
     from unittest import TestCase
 
     class TestDigitDestroyer(TestCase):
@@ -125,7 +127,8 @@ An Example of Mocking
 This function gets the title of the first open issue on a repository.  What
 happens if someone opens a new issue?
 
-.. code:: python
+.. code-block:: python
+
 	import requests
 	import json
 
@@ -143,7 +146,7 @@ happens if someone opens a new issue?
 
 .. nextslide::
 
-.. code:: python
+.. code-block:: python
 
 	class TestOpenIssueGetter(TestCase):
 
@@ -181,6 +184,6 @@ tests.
 Automated Testing
 -----------------
 
-Automated testing generally takes form in Continuous Integration, 
+Automated testing generally takes form in Continuous Integration,
 which automatically runs tests when someone submits changes to code to
-ensure that it works with the system. 
+ensure that it works with the system.

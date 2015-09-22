@@ -1,7 +1,7 @@
 DevOps BootCamp
 ===============
 
-DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core software 
+DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core software
 development and systems operation skills to interested OSU students and community members.
 
 For an idea of what lessons are like, check out our YouTube playlist of previous lessons
@@ -10,7 +10,7 @@ at http://osl.io/devopsbc.
 Fall Term Schedule
 ------------------
 
-Meetings will be once per week, with occasional review days and breaks around 
+Meetings will be once per week, with occasional review days and breaks around
 midterms and finals. The schedule for Fall term 2015 will be announced after
 `DevOps Daycamp <http://devopsbootcamp.osuosl.org/daycamp/>`_!
 
@@ -20,7 +20,7 @@ Background
 The `OSU Open Source Lab <http://osuosl.org/>`_ provides quality hosting for
 more than 160 open source projects. Along with delivering over 460 terabytes of
 open source data a month, the OSL employs and mentors students to be expert
-systems administrators and software developers ready to enter the industry. The 
+systems administrators and software developers ready to enter the industry. The
 OSL encounters more demand for qualified students than the employees graduating
 each year can supply. We'd like to give back to OSU and the wider open source
 community by training interested students from all disciplines in the
@@ -42,19 +42,6 @@ feedback we get from  interested students.
 Contents:
 ---------
 .. toctree::
+    :glob:
 
-    get_involved
-    getting_started
-    policies
-    slides
-    exercises
-    schedule
-    daycamp
-    resources
-    faq
-    whatisdevops
-    vagrant
-    admin_checklist
-
-
-
+    *
