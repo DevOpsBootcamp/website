@@ -44,4 +44,14 @@ Contents:
 .. toctree::
     :glob:
 
-    *
+    getting_started
+    get_involved
+    faq
+    slides
+    schedule
+    daycamp
+    whatisdevops
+    policies
+    resources
+    vagrant
+    admin_checklist

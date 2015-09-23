@@ -122,3 +122,10 @@ Here's what we're hoping to mentor and teach students about:
 .. Lesson 19: Final Review
 .. -----------------------
 .. - `Slides <http://slides.osuosl.org/devopsbootcamp/19_review.html>`_
+
+.. toctree::
+    :glob:    
+
+    slides/*
+    exercises
+    archive

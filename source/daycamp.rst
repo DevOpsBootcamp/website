@@ -12,3 +12,8 @@ Linux Basics
 Version Control
 ---------------
 - :ref:`Lesson 3 slides <daycamp_03>`
+
+.. toctree::
+    :glob:
+
+    daycamp/*
