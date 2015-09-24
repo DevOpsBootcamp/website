@@ -48,6 +48,7 @@ Contents:
     get_involved
     faq
     slides
+    archive
     schedule
     daycamp
     whatisdevops
