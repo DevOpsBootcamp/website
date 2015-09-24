@@ -10,9 +10,10 @@ at http://osl.io/devopsbc.
 Fall Term Schedule
 ------------------
 
-Meetings will be once per week, with occasional review days and breaks around
-midterms and finals. The schedule for Fall term 2015 will be announced after
-`DevOps Daycamp <http://devopsbootcamp.osuosl.org/daycamp/>`_!
+Meetings will be once per week, with occasional review days and
+breaks around midterms and finals. 
+
+.. include:: fall.rst
 
 Background
 ----------
