@@ -7,6 +7,13 @@ development and systems operation skills to interested OSU students and communit
 For an idea of what lessons are like, check out our YouTube playlist of previous lessons
 at http://osl.io/devopsbc.
 
+WE'VE MOVED to LInC 268!
+========================
+
+DevOps BootCamp will be in the **Learning Innovation Center (LInC) 268** this October!
+BootCamp wil still be on **Thursdays at 6pm**, just in a new location.  We're
+excited to see you there!
+
 Fall Term Schedule
 ------------------
 
