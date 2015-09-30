@@ -9,7 +9,7 @@ cd $DIR
 
 # Enable venv
 if [ ! -d venv ]; then
-    virtualenv venv
+    virtualenv -p /usr/bin/python2 venv
 fi
 source venv/bin/activate
 

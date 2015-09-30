@@ -14,12 +14,6 @@ DevOps BootCamp will be in the **Learning Innovation Center (LInC) 268** this Oc
 BootCamp wil still be on **Thursdays at 6pm**, just in a new location.  We're
 excited to see you there!
 
-Fall Term Schedule
-------------------
-
-Meetings will be once per week, with occasional review days and
-breaks around midterms and finals. 
-
 .. include:: fall.rst
 
 Background
@@ -52,4 +46,15 @@ Contents:
 .. toctree::
     :glob:
 
-    *
+    getting_started
+    get_involved
+    faq
+    slides
+    archive
+    schedule
+    daycamp
+    whatisdevops
+    policies
+    resources
+    vagrant
+    admin_checklist
