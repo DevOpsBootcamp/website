@@ -146,7 +146,7 @@ Screen & Irssi Hints
 
 * Paste with ctrl+shift+v
     * PuTTY defaults to right-click to paste
-* to get back, ``screen -dr IRC``
+* To get back ``screen -dr IRC``
 * Can you use ``man screen`` to find out what the d and r flags mean?
 
 ::
@@ -165,9 +165,8 @@ Screen & Irssi Hints
 Etiquette
 ---------
 
-* Lurk more
 * Don't ask to ask
-    * Lure help out of hiding with tasty details of problem
+    * Ask detailed and specific questions about your problem
 * Show that you're worth helping
 * Read the topic
     * ``/topic``
@@ -179,7 +178,6 @@ Terminology
 -----------
 
 * ping/pong
-* flapping
 
 .. figure:: /static/jargon.jpg
     :align: right
@@ -208,8 +206,6 @@ It's okay to ask.
    mentioning what possibilities you've ruled out by searching.
 
 **Contributions = expertise + time**
-
-Don't waste experts' time, but do build your expertise.
 
 Review
 ------
