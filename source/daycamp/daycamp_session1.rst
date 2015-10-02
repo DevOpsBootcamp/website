@@ -238,6 +238,7 @@ A local or remote instance of an operating system typically used for shared
 resoruces and/or shared applications.
 
 Examples:
+
 * Web Server (devopsbootcamp.osuosl.org)
 * Shell Server (shell.onid.oregonstate.edu)
 * File Server (dropbox)
@@ -283,6 +284,7 @@ Trying Linux in the Cloud
 -------------------------
 
 Need:
+
 * SSH Client (PUTTY or OSX Terminal)
 * Server (daycamp.osuosl.org)
 * Login Credentials (usernumber + password)

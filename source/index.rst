@@ -58,3 +58,10 @@ Contents:
     resources
     vagrant
     admin_checklist
+
+.. toctree::
+    :hidden:
+
+    fall.rst
+    winter.rst
+    spring.rst

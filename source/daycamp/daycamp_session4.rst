@@ -22,6 +22,17 @@ Nano
 .. figure:: /static/nano.png
    :align: center
 
+.. Why Bother?
+   -----------
+
+.. .. figure:: /static/phd_final.gif
+    :scale: 75%
+    :align: right
+
+.. Image from
+   `PhD Comics <http://www.phdcomics.com/comics/archive.php?comicid=1531>`_
+
+
 Version Control is Hard
 -----------------------
 
@@ -30,16 +41,6 @@ Version Control is Hard
    :align: center
 
 Image from `XKCD <http://xkcd.com/1296>`_
-
-Why Bother?
------------
-
-.. figure:: /static/phd_final.gif
-    :scale: 75%
-    :align: right
-
-Image from
-`PhD Comics <http://www.phdcomics.com/comics/archive.php?comicid=1531>`_
 
 Better Options: Version Control
 -------------------------------
@@ -74,16 +75,22 @@ Setting up Git
 Using Git Locally
 -----------------
 
-``$ git init``
+.. code-block:: none
+
+    $ git init
 
 .. note:: This initializes a git repo. Use `man git-init` for more info.
 
-``$ git add <filename>``
+.. code-block:: none
+
+    $ git add <filename>
 
 .. note:: This puts <filename> into the staging area. It isn't committed yet.
     Use ``git diff`` to see what changes aren't yet in staging.
 
-``$ git commit -m "I did a thing!"``
+.. code-block:: none
+
+    $ git commit -m "I did a thing!"
 
 .. note:: This actually makes the commit. Use ``git status`` to see what's in
     staging but not yet committed. Use ``git show`` or ``git log`` to see
@@ -94,10 +101,16 @@ Using Git Locally
   well
 
 * Did I remember to commit that?
-  ``$ git status``
+
+.. code-block:: none
+
+  $ git status
 
 * What commits have I made lately?
-  ``$ git log``
+
+.. code-block:: none
+
+    $ git log
 
 What Not To Do
 --------------
@@ -151,8 +164,7 @@ project.
 Adding Code
 -----------
 
-Now we are going to add code to our project. Create an open a new file
-``script.py`` with the following command:
+Create and open a new file ``script.py`` with the following command:
 
 .. code-block:: none
 
@@ -162,14 +174,10 @@ Now we are going to add code to our project. Create an open a new file
 
     def f(x):
         print(x**x)
-
     if __name__ ==  "__main__":
         f(5)
 
-Save this file and leave the text editor.
-
-You have now written code but git is not tracking it. You have to tell it to do
-that.
+Save this file and leave the text editor and tell git to track this code.
 
 .. code-block:: none
 
@@ -197,19 +205,29 @@ other person's code. Changes you make on your local version of this project
 will not affect the original version you modified (although you can push
 changes if you are allowed to do so by the original owner!)
 
-Cloned Repository Part 1
+Cloned Repository Part 2
 ------------------------
+
+.. code-block:: none
+
+    $ git clone https://github.com/DevOpsBootcamp/tinsy-flask-app.git
+
+See http://git.io/vcVmB for more details.
 
 Let's use our application we just cloned. The README should include
 installation instructions
 
 .. code-block:: none
 
-    $ less README.md
-    $ pip install --user -r requirements.txt
-    $ python myapp.py
+    $ cd tiny-flask-app
+    $ virtualenv venv
+    $ pip install -r requirements.txt
+    $ python script.py
 
-Now if you go to <your ip address>:5000 you can see a live version of the app!
+Now if you go to <your ip address>:<http port> you can see a live version of
+the app!
+
+
 
 Branches
 --------
@@ -273,3 +291,5 @@ Other Resources
 ---------------
 
 `Git Visualizations <http://www.wei-wang.com/ExplainGitWithD3/#>`_
+
+`Further tiny-flask-app exercises <https://github.com/DevOpsBootcamp/tinsy-flask-app#now-what>`_
