@@ -14,7 +14,7 @@ What's DevOps?
 
 Software Development + Operations Engineering
 
-.. note:: -edunham-
+.. note::
 
     development (write the software) + operations (run the servers)
     old paradigm: dev + ops discrete... this worked because
@@ -38,7 +38,8 @@ What's BootCamp?
     * OSU class for credit
     * student job
 
-.. note:: -edunham-
+.. note::
+
     meet every 1-2 weeks through the term
     time decided by Doodle poll
     you get out what you put in
@@ -52,12 +53,8 @@ Why are we doing this?
 * Demand from companies for students
 * Build community
 
-.. note:: jme
-
 What you'll do:
 ---------------
-
-.. note:: jme
 
 * Learn:
     * Linux systems
@@ -73,8 +70,6 @@ What you'll do:
 Can you do it?
 --------------
 
-.. note:: edunham
-
 * Probably!
 * No background knowledge needed
 * Time commitment
@@ -86,8 +81,6 @@ Can you do it?
 Career Paths:
 -------------
 
-.. note:: jme
-
 * Hands-on learning & OSL reputation:
     * Internships
     * Industry connections
@@ -97,8 +90,6 @@ Career Paths:
 
 OSL Hiring:
 -----------
-
-.. note:: jme
 
 * Students need basic skills to join
     * Systems engineers
@@ -111,16 +102,12 @@ OSL Hiring:
 Getting involved with BootCamp
 ------------------------------
 
-.. note:: edunham
-
 * Find our site (http://devopsbootcamp.osuosl.org)
 * Fill out registration with times available
 * Join mailing list
 
 This Session's Agenda
 ---------------------
-
-.. note:: edunham
 
 * Notation
 * Vocabulary
@@ -133,8 +120,6 @@ This Session's Agenda
 
 A note about notation
 ---------------------
-
-.. note:: edunham
 
 .. figure:: /static/stickynote.png
     :align: right
@@ -150,8 +135,6 @@ A note about notation
 
 How to get (to) Linux
 ---------------------
-
-.. note:: edunham
 
 .. figure:: /static/dualboot.png
     :align: right
@@ -182,8 +165,6 @@ How to get (to) Linux
 Essential Vocabulary
 --------------------
 
-.. note:: jme
-
 * Operating System (OS)
 * GNU/linux
 * Server
@@ -209,8 +190,6 @@ Operating System
 GNU
 ---
 
-.. note:: jme
-
 .. figure:: /static/gnu.jpg
     :align: right
 
@@ -221,8 +200,6 @@ GNU
 
 Linux
 -----
-
-.. note:: jme
 
 .. figure:: /static/Tux.png
     :align: left
@@ -235,9 +212,10 @@ Server
 ------
 
 A local or remote instance of an operating system typically used for shared
-resoruces and/or shared applications.
+resources and/or shared applications.
 
 Examples:
+
 * Web Server (devopsbootcamp.osuosl.org)
 * Shell Server (shell.onid.oregonstate.edu)
 * File Server (dropbox)
@@ -247,8 +225,6 @@ Examples:
 
 Host
 ----
-
-.. note:: edunham
 
 The physical machine on which the virtual machine runs
 
@@ -260,8 +236,6 @@ Examples:
 Guest
 -----
 
-.. note:: edunham
-
 The virtual machine.
 
 Examples:
@@ -272,8 +246,6 @@ Examples:
 Virtual Machine
 ---------------
 
-.. note:: edunham
-
 * The host creates some virtual hardware, and 'runs' the virtual hardware
 * virtual hardware runs an operating system, which interacts with the virtual
   hardware
@@ -283,6 +255,7 @@ Trying Linux in the Cloud
 -------------------------
 
 Need:
+
 * SSH Client (PUTTY or OSX Terminal)
 * Server (daycamp.osuosl.org)
 * Login Credentials (usernumber + password)
@@ -291,8 +264,6 @@ For future reference you can use Local Virtual Machines to do the same thing.
 
 The Terminal
 ------------
-
-.. note:: edunham
 
 .. figure:: /static/crashcart.jpg
     :align: right

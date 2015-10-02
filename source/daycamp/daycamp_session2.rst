@@ -692,17 +692,9 @@ Installing from source
   $ make
   $ make install
 
-Hands-on: Package Management
-----------------------------
-
-* Install the ``git`` package
-* Query the RPM/APT database for installed packages
-* List the files in an installed package
-* Remove the ``git`` package
-
 Review
 ------
 
 * Read example output of ls -al
 * Read output of yum or aptitude search
-* Install a package on their VM/partition (Vim, Git)
+* Install a package on your VM (Vim, Git)

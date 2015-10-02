@@ -146,7 +146,7 @@ Screen & Irssi Hints
 
 * Paste with ctrl+shift+v
     * PuTTY defaults to right-click to paste
-* to get back, ``screen -dr IRC``
+* To get back ``screen -dr IRC``
 * Can you use ``man screen`` to find out what the d and r flags mean?
 
 ::
@@ -165,9 +165,8 @@ Screen & Irssi Hints
 Etiquette
 ---------
 
-* Lurk more
 * Don't ask to ask
-    * Lure help out of hiding with tasty details of problem
+    * Ask detailed and specific questions about your problem
 * Show that you're worth helping
 * Read the topic
     * ``/topic``
@@ -179,7 +178,6 @@ Terminology
 -----------
 
 * ping/pong
-* flapping
 
 .. figure:: /static/jargon.jpg
     :align: right
@@ -209,8 +207,6 @@ It's okay to ask.
 
 **Contributions = expertise + time**
 
-Don't waste experts' time, but do build your expertise.
-
 Review
 ------
 
@@ -218,80 +214,3 @@ Review
     * How often should you need to start your IRC client?
 * How do you reconnect to a screen session?
 * Give an example of something which you should not do in IRC
-
-Package Management
-------------------
-
-*Take care of installation and removal of software*
-
-**Core Functionality:**
-
-* Install, Upgrade & uninstall packages easily
-* Resolve package dependencies
-* Install packages from a central repository
-* Search for information on installed packages and files
-* Pre-built binaries (usually)
-* Find out which package provides a required library or file
-
-**Popular Linux Package Managers**
-
-* .deb / APT + dpkg (used by Debian, Ubuntu, Linux Mint)
-* .rpm / YUM + rpm (used by RedHat, CentOS, Fedora)
-
-Language-specific Package Managers
-----------------------------------
-
-* Languages sometimes have their own package management suite
-* Can be useful for using newer versions of packages
-* **Examples**
-    * pip (Python)
-    * rubygems (Ruby)
-    * CPAN (Perl)
-    * cabal (Haskell)
-    * npm (NodeJS)
-    * *... and so on forever ...*
-
-Other Package Managers
-----------------------
-
-They each fill a specific niche and have their own pros and cons.
-
-* Portage (Gentoo) -- Source based package installer
-* pacman (Arch Linux)
-* ZYpp / Zypper (SUSE) -- Yet another RPM package manager
-* Nix -- Fancy functional/ transactional
-* brew (OS X)
-* chocolatey (Windows)
-
-Installing from source
-----------------------
-
-* Download source tarball, run build scripts and install in a local directory.
-* RPM/DEB packages do this for you
-* Not for the faint of heart ... **Not recommended!**
-* Using ``grep`` as an example
-
-.. code-block:: bash
-
-  $ wget http://mirrors.kernel.org/gnu/grep/grep-2.15.tar.xz
-  $ tar -Jxvf grep-2.15.tar.xz
-  $ cd grep-2.15
-  $ ./configure --prefix=$HOME/programs/
-  $ make
-  $ make install
-
-Hands-on: Package Management
-----------------------------
-
-* Install the ``git`` package
-* Query the RPM/APT database for installed packages
-* List the files in an installed package
-* Remove the ``git`` package
-
-Review
-------
-
-* read example output of ls -al
-* read output of yum or aptitude search
-* install a package on their VM/partition (Vim, Git)
-    * explain what dependencies it also installed
