@@ -22,25 +22,25 @@ Nano
 .. figure:: /static/nano.png
    :align: center
 
-.. Why Bother?
-   -----------
+Why Bother?
+-----------
 
-.. .. figure:: /static/phd_final.gif
-    :scale: 75%
-    :align: right
+.. figure:: /static/phd_final.gif
+ :scale: 75%
+ :align: right
 
-.. Image from
-   `PhD Comics <http://www.phdcomics.com/comics/archive.php?comicid=1531>`_
+Image from
+`PhD Comics <http://www.phdcomics.com/comics/archive.php?comicid=1531>`_
 
 
-Version Control is Hard
------------------------
-
-.. figure:: /static/xkcd_1296.png
-   :scale: 150%
-   :align: center
-
-Image from `XKCD <http://xkcd.com/1296>`_
+..  Version Control is Hard
+    -----------------------
+  
+..  .. figure:: /static/xkcd_1296.png
+       :scale: 150%
+       :align: center
+  
+..  Image from `XKCD <http://xkcd.com/1296>`_
 
 Better Options: Version Control
 -------------------------------
