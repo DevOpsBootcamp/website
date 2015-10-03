@@ -19,11 +19,6 @@ rm -rf build/
 # Build slides 
 make slides
 
-# Delete non-slide content
-cd build/slides
-for i in $(ls daycamp*); do mv $i 99-$i; done
-rm -f [a-zA-Z]*
-
 # Disable venv
 deactivate
 
