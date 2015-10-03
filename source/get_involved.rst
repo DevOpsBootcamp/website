@@ -23,7 +23,7 @@ language to edit the site, if you don't already know it.
 Meetings
 --------
 
-We typically meet weekly in KEC 1007 or 1005 depending on the room schedules.
+We typically meet weekly in LInC 268 depending on the room schedules.
 Please check back later for when our first meeting in the Fall will be.
 Recurring meeting times following the first meeting will be decided based on the
 availability of those who show up for the first meeting. Last year we met on

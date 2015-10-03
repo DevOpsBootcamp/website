@@ -28,7 +28,7 @@ Why we're offering this:
 Attendance
 ==========
 
-**For the 2014-2015 school year, we will meet at 7pm on Mondays in KEC1005**
+**For the 2015-2016 school year, we will meet at 7pm on Mondays in LInC 268**
 
 Beginning  September 2015, we are planning on meeting at 6pm on Thursdays.  
 We plan on keeping a persistent schedule from year to year, to maintain consistentcy
