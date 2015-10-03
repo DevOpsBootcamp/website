@@ -52,7 +52,7 @@ Contents:
     slides
     archive
     schedule
-    daycamp
+    daycamp_content
     whatisdevops
     policies
     resources

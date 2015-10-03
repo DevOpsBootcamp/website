@@ -20,5 +20,6 @@ Version Control
 
 .. toctree::
     :glob:
+    :hidden:
 
-    daycamp/*
+    daycamp_content/*
