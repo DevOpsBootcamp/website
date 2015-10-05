@@ -28,14 +28,14 @@ Why we're offering this:
 Attendance
 ==========
 
-**For the 2015-2016 school year, we will meet at 7pm on Mondays in LInC 268**
+**For the 2015-2016 school year, we will meet at 6pm on Mondays in LInC 268**
 
-Beginning  September 2015, we are planning on meeting at 6pm on Thursdays.  
+Beginning  September 2015, we are planning on meeting at 6pm on Thursdays.
 We plan on keeping a persistent schedule from year to year, to maintain consistentcy
-and better plan our meetings. 
+and better plan our meetings.
 
 Each meeting's curriculum will build on what you learned the
-previous session, but you can catch up on any session miss 
+previous session, but you can catch up on any session miss
 `here <https://www.youtube.com/user/OSUOpenSourceLab>`_.
 
 BootCamp leaders will be available at times outside of the regular meetings to
