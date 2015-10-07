@@ -1,10 +1,12 @@
-.. _pythong_programming_basics:
+.. _python_programming_basics:
 
 Python and Programming Basics
 =============================
 
 Types
 -----
+
+    "...a classification identifying one of various types of data"
 
 * Static vs. Dynamic
 * Strong vs. Weak
@@ -22,24 +24,32 @@ Types
 Variables & Constants
 ---------------------
 
-* **Avoid Globals**
-* Using another name to refer to something in memory
+    "...a storage location paired with an associated symbolic name..."
+
+* **Global Variables are Bad**.
+* Using another name to refer to something in memory.
 * Know your scope!
 
 .. figure:: /static/bad-math.jpg
     :align: center
-    :height: 400px
+    :height: 350px
 
 Control Statements
 ------------------
 
-* Change order of execution of statements
-* If and other conditionals
-* For loop
-* While loop
+    "...the specification of the order in which the individual statements,
+    instructions or function calls of an imperative program are executed or
+    evaluated..."
+
+* The order of execution of statements
+* If / Else If / Else and other conditionals
+* For / While loop
 
 Input & Output (I/O)
 --------------------
+
+    "...the communication between an information processing system, such as a
+    computer, and the outside world..."
 
 * Program needs to be able to communicate with your machine.
 * Try debugging without print statements
@@ -58,9 +68,9 @@ Try it out:
 
 Write psuedo code to:
 
-* Count to 20 programmatically (can't say "print 1; print 2; print3;"!)
-* Get the users name and print it
-* Generate prime numbers (more advanced)
+#. Count to 20 *programmatically* (hint: ``for`` loop)
+#. Get the users name and print it
+#. Generate prime numbers
 
 Keep in mind:
 
@@ -68,7 +78,7 @@ Keep in mind:
 * Don't worry about details
 
 Python
-======
+------
 
 .. code::
 
@@ -79,7 +89,7 @@ Datatypes
 
 * Python is a duckly-typed language: you don't need to declare the type
   of your variables, and python will assume the type of your variable
-  and implicitly type it.  
+  and implicitly type it.
 * It's also dynamically typed, so you can change the type of a variable
   at any time
 
@@ -88,16 +98,20 @@ Datatypes
 
 .. nextslide::
 
-* boolean
-* integer
-* long
-* float
-* string
-* list
-* dict (map)
-* tuple
-* object
-* None 
+==========  =========
+Type        Example
+==========  =========
+boolean     ``True``
+integer     ``7``
+long        ``18,446,744,073,709,551,615``
+float       ``12.4``
+string      ``"Hello World!"``
+list        ``['first', 'second']``
+dict (map)  ``{'key1': 'value', 'key2', 'value2'}``
+tuple       ``('value','paired value')``
+object      ``anObjects.variable == <value>``
+None        |
+==========  =========
 
 Variables
 ---------
@@ -113,7 +127,7 @@ Variables
     dictionary = {"pi":3.14159, "sqrt 1":1}
     winter = ('December', 'January', 'February', 'March')
 
-    print(name + " is " + age+1 + " this " winter[3]) 
+    print(name + " is " + age+1 + " this " winter[3])
 
 Try it out
 ----------
@@ -140,17 +154,20 @@ Control flow
     else:
         print "My name isn't Lucy!"
 
-Words
------
+.. Words
+   -----
 
-If it highlights, **don't use it as a variable name**
+.. If it highlights, **don't use it as a variable name**
 
-Some words to know:
+.. Some words to know:
 
-* 
+.. *
 
 Libraries
 ---------
+
+    "... a collection of non-volatile resources used by computer programs,
+    often to develop software..."
 
 There are a few ways to use other code in your code:
 
@@ -172,7 +189,7 @@ There are a few ways to use other code in your code:
 
 .. nextslide::
 
-There are **hundreds** of python libraries.  If you're trying to 
+There are **hundreds** of python libraries.  If you're trying to
 do something an think "This has probably been solved...", google it!
 
 Some libraries to know:
@@ -183,6 +200,8 @@ Some libraries to know:
 * future
 * `And more`_
 
+.. _And more: https://wiki.python.org/moin/UsefulModules
+
 Environments
 ------------
 
@@ -191,7 +210,7 @@ Environments
 .. code-block:: none
 
     $ sudo apt-get install python-virtualenv
-    $ sudo yum install 
+    $ sudo yum install
 
     # In each project you work on, you'll want to run
     $ virtualenv venv
@@ -200,6 +219,4 @@ Environments
     (venv)$ deactivate
 
 Let's do stuff!
-===============
-
-.. _And more: https://wiki.python.org/moin/UsefulModules
+---------------
