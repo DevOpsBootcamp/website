@@ -8,6 +8,10 @@ Types
 
     "...a classification identifying one of various types of data"
 
+.. figure:: /static/duckly-typed.jpg
+    :align: right
+    :height: 200px
+
 * Static vs. Dynamic
 * Strong vs. Weak
 * Duckly-typed
@@ -16,10 +20,6 @@ Types
   * Int (the only truly necessary type!)
   * Double (or float)
   * Char
-
-.. figure:: /static/duckly-typed.jpg
-    :align: center
-    :height: 200px
 
 Variables & Constants
 ---------------------
@@ -32,7 +32,7 @@ Variables & Constants
 
 .. figure:: /static/bad-math.jpg
     :align: center
-    :height: 350px
+    :height: 300px
 
 Control Statements
 ------------------
@@ -154,14 +154,19 @@ Control flow
     else:
         print "My name isn't Lucy!"
 
-.. Words
-   -----
+Functions
+---------
 
-.. If it highlights, **don't use it as a variable name**
+Functions in python aren't particularly special,
+but we will be using them in the exercises so
+wanted to provide you with an example.
 
-.. Some words to know:
+.. code-block:: python
 
-.. *
+    def myfunction(arg1, arg2):
+        return arg1 + arg2
+
+    print myfunction(1, 5)
 
 Libraries
 ---------
