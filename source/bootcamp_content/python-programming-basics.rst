@@ -52,7 +52,10 @@ Input & Output (I/O)
     computer, and the outside world..."
 
 * Program needs to be able to communicate with your machine.
-* Try debugging without print statements
+* Try debugging without print statements -- it's hard!
+
+.. figure:: /static/blackbox-io.png
+    :align: center
 
 The Bare Minimum
 ----------------
@@ -83,6 +86,10 @@ Python
 .. code::
 
     sudo [apt|yum] install python
+
+.. figure:: /static/python.png
+    :align: center
+    :height: 350px
 
 Datatypes
 ---------
@@ -168,6 +175,10 @@ wanted to provide you with an example.
 
     print myfunction(1, 5)
 
+.. figure:: /static/function-machine.png
+    :align: center
+    :height: 300px
+
 Libraries
 ---------
 
@@ -223,5 +234,9 @@ Environments
     (venv)$ pip install <package>
     (venv)$ deactivate
 
+.. figure:: /static/environments.jpg
+    :align: center
+    :height: 200px
+
 Let's do stuff!
----------------
+===============
