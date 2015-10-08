@@ -45,23 +45,27 @@ Contents:
 ---------
 .. toctree::
     :glob:
+    :maxdepth: 1
 
     getting_started
+    schedule
+    bootcamp_content
+    daycamp_content
+    resources
+    slides
+    whatisdevops
     get_involved
     faq
-    slides
-    archive
-    schedule
-    daycamp_content
-    whatisdevops
     policies
-    resources
     vagrant
+    archive
     admin_checklist
+
 
 .. toctree::
     :hidden:
 
-    fall.rst
-    winter.rst
-    spring.rst
+    fall
+    winter
+    spring
+    videos
