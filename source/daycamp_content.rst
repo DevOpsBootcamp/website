@@ -11,7 +11,6 @@ Intro to Linux and the Command Line
 
 IRC
 ---
-
 - :ref:`Lesson 3 slides <daycamp_03>`
 
 Version Control

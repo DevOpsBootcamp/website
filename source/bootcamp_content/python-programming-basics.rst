@@ -144,8 +144,8 @@ Open a repl (read eval print loop):
 .. code-block:: python
 
     $ python
-    >>> name = # Your name
-    >>> age = # Your age
+    >>> name =      # <Your name>
+    >>> age =       # <Your age>
     >>> print name + " is " + str(age)
 
 * We need to convert age from int to string so it can print!
@@ -160,6 +160,8 @@ Control flow
             print name + " doesn't like " + month
     else:
         print "My name isn't Lucy!"
+
+* Note: Why :code:`==` and not just `=`?
 
 Functions
 ---------
