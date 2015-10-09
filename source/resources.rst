@@ -7,6 +7,7 @@ Scripting
 
 * `The Advanced Bash Scripting Guide <http://www.tldp.org/LDP/abs/html/>`_
 * `Learn Python The Hard Way <http://learnpythonthehardway.org/book/>`_
+* `The (Official) Python Tutorial <https://docs.python.org/2.7/tutorial/index.html>`_
 
 
 Systems Administration Tutorials
