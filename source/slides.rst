@@ -26,7 +26,6 @@ Devops Bootcamp Fall
 ~~~~~~~~~~~~~~~~~~~~
 * `Bootcamp Session 1`_
 
-
 Other
 ~~~~~
 
@@ -40,4 +39,4 @@ Other
 .. _Daycamp Session 2: http://slides.osuosl.org/devopsbootcamp/daycamp_content/daycamp_session2.html
 .. _Daycamp Session 3: http://slides.osuosl.org/devopsbootcamp/daycamp_content/daycamp_session3.html
 .. _Daycamp Session 4: http://slides.osuosl.org/devopsbootcamp/daycamp_content/daycamp_session4.html
-.. _Bootcamp Session 1: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/python_programming_basics.html
+.. _Bootcamp Session 1: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/python-programming-basics.html
