@@ -16,6 +16,11 @@ excited to see you there!
 
 .. include:: fall.rst
 
+Donate
+------
+
+We appreciate the help!  To donate, go to `http://osuosl.org/donate`_.
+
 Background
 ----------
 

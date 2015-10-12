@@ -242,3 +242,8 @@ Environments
 
 Let's do stuff!
 ===============
+
+Try some of our `exercises`_ to hone 
+your python skills!
+
+.. _exercises: https://github.com/DevOpsBootcamp/Bootcamp-Exercises/blob/master/programming-basics/exercise.rst
