@@ -13,3 +13,4 @@ Lessons in Chronological Order:
     :maxdepth: 1
 
     bootcamp_content/python-programming-basics
+    bootcamp_content/web-frameworks
