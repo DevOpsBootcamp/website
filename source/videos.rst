@@ -17,3 +17,10 @@ DevOps DayCamp Beginner Track:
 - Lesson 2: Intro to Linux and the Command Line
 - Lesson 3: IRC
 - Lesson 4: Version Control and Text Editors
+
+DevOps BootCamp:
+
+- Python and Programming Basics
+- `Web Application Frameworks`_
+
+.. _Web Application Frameworks: https://www.youtube.com/watch?v=MnjhBVBQ6yc

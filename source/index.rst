@@ -19,7 +19,7 @@ excited to see you there!
 Donate
 ------
 
-We appreciate the help!  To donate, go to `http://osuosl.org/donate`_.
+We appreciate the help!  To donate, go to http://osuosl.org/donate.
 
 Background
 ----------
