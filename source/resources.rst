@@ -13,10 +13,10 @@ Scripting
 Systems Administration Tutorials
 --------------------------------
 
-* `LinuxTraining <http://linux-training.be/downloads/>`_
+* `LinuxTraining <http://linux-training.be/>`_
     * This is the resource which the OSL uses to quickly train systems
       administrators. The whole book is `here
-      <http://linux-training.be/files/books/LinuxTraining.pdf>`_.
+      <http://linux-training.be/linuxsys.pdf>`_.
 
 * `OpsSchool <http://www.opsschool.org/en/latest/>`_ is working on a tutorial
   somewhat like DevOps BootCamp, but it's currently incomplete. Consider
