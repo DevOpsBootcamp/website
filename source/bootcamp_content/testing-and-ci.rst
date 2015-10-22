@@ -12,14 +12,16 @@ They can involve testing input to your software to make sure it handles both
 normal and edge cases properly, that it will work in its intended environment,
 etc.
 
-.. figure:: static/qaengineer.png
+.. figure:: /static/qaengineer.png
     :align: center
     :height: 200px
+
+.. rst-class:: title-image
 
 Why do you want to test?
 ------------------------
 
-.. figure:: static/mars.png
+.. figure:: /static/mars.png
     :align: center
 
 .. note:: "Mars Climate Orbiter - mishap diagram" by Xession - Own work. Licensed under CC BY 3.0 via Commons - https://commons.wikimedia.org/wiki/File\:\Mars_Climate_Orbiter_-_mishap_diagram.png
@@ -41,7 +43,7 @@ For an email client, imagine a function that will take a string and return
 whether or not it's a valid email address. This function will have
 **unit tests** for each case you want to test.
 
-.. figure:: static/unit-test.jpg
+.. figure:: /static/unit-test.jpg
     :align: center
     :height: 100px
 
@@ -54,7 +56,7 @@ software system work together properly.
 For instance, the email client might have integration tests that the Send button
 verifies the ``To:`` and ``From:`` and then calls the function to send email.
 
-.. figure:: static/integration-testing.jpg
+.. figure:: /static/integration-testing.jpg
     :align: center
 
 System Testing
@@ -67,8 +69,9 @@ that it meets all of the requirements.
 System testing pretends the system is a **black box**. It ignores how the code
 actually works, and focuses on how the platform as a whole works.
 
-.. figure:: static/black-box.png
+.. figure:: /static/black-box.png
     :align: center
+    :height: 300px
 
 
 Testing Frameworks
@@ -80,6 +83,8 @@ with just one command. Like all frameworks, they mostly just make your
 life easier.
 
 The python standard library has the ``unittest`` framework built in.
+
+.. rst-class:: build
 
 Example using ``unittest``
 --------------------------
@@ -108,8 +113,25 @@ Test case:
 Your Turn!
 ----------
 
+.. code-block:: python
 
+    #!/usr/bin/env python
+    def is_number_prime(number):
+        """Returns true if argument is a prime number"""
+        for element in reversed(range(number)):
+            if number % element == 0 and element != 1:
+                # exclude one since primes can be divisible by 1
+                return False
 
+        return True
+
+    import unittest
+    class PrimesTestCase(unittest.TestCase):
+        """Tests for `is_number_prime`."""
+
+        # your tests go here!
+
+    unittest.main()
 
 Mocking Out Functions
 ---------------------
@@ -150,5 +172,12 @@ Travis CI
 
 Integrates into Github, allowing your tests to be run each time you push code.
 
-.. figure:: static/travis.png
+.. figure:: /static/travis.png
     :align: center
+
+Activity
+--------
+
+Go to:
+
+https://github.com/DevOpsBootcamp/Bootcamp-Exercises/blob/master/testing
