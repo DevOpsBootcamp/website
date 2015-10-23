@@ -20,7 +20,13 @@ DevOps DayCamp Beginner Track:
 
 DevOps BootCamp:
 
+You can check out the `full playlist`_ of lessons so far 
+this year, or watch individual lessons:
+
 - Python and Programming Basics
 - `Web Application Frameworks`_
+- `Testing and Continuous Integration`_
 
+.. _full playlist: https://www.youtube.com/playlist?list=PLqzbgtiNz4A6uhXKv65xRRYa3IpjH8QN1
 .. _Web Application Frameworks: https://www.youtube.com/watch?v=MnjhBVBQ6yc
+.. _Testing and Continuous Integration: https://www.youtube.com/watch?v=chzQx1-7acg
