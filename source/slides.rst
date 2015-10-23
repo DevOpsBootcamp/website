@@ -43,4 +43,4 @@ Other
 .. _Daycamp Session 4: http://slides.osuosl.org/devopsbootcamp/daycamp_content/daycamp_session4.html
 .. _Bootcamp Session 1: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/python-programming-basics.html
 .. _Bootcamp Session 2: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/web-frameworks.html
-.. _Bootcamp Session 2: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/testing-and-ci.html
+.. _Bootcamp Session 3: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/testing-and-ci.html
