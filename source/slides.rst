@@ -27,6 +27,7 @@ Devops Bootcamp Fall
 * `Bootcamp Session 1`_
 * `Bootcamp Session 2`_
 * `Bootcamp Session 3`_
+* `Bootcamp Session 4`_
 
 Other
 ~~~~~
@@ -44,3 +45,4 @@ Other
 .. _Bootcamp Session 1: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/python-programming-basics.html
 .. _Bootcamp Session 2: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/web-frameworks.html
 .. _Bootcamp Session 3: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/testing-and-ci.html
+.. _Bootcamp Session 4: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/security.html

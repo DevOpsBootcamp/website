@@ -15,3 +15,4 @@ Lessons in Chronological Order:
     bootcamp_content/python-programming-basics
     bootcamp_content/web-frameworks
     bootcamp_content/testing-and-ci
+    bootcamp_content/security
