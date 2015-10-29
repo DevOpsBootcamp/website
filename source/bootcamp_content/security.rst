@@ -164,5 +164,6 @@ Ok, so should I worry?
 Let's do stuff
 --------------
 
-Head to https://github.com/devopsbootcamp/bootcamp-exercises/ to 
-check out this week's activity!
+Head to http://www.codebashing.com/sql_demo to try
+your hand at SQL injection and see how it 
+really happens!
