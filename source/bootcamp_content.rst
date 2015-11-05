@@ -16,3 +16,4 @@ Lessons in Chronological Order:
     bootcamp_content/web-frameworks
     bootcamp_content/testing-and-ci
     bootcamp_content/security
+    bootcamp_content/databases
