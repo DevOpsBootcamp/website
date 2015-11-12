@@ -35,7 +35,10 @@ Static                                  Dynamic
 Deugging
 --------
 
-     "...a computer program that is used to test and debug other programs..."
+.. figure:: /static/youtube-error.jpg
+    :align: right
+
+"...a computer program that is used to test and debug other programs..."
 
 Debuggers do what you do already:
 
@@ -44,10 +47,6 @@ Debuggers do what you do already:
 * Highlight (incorrect) syntax.
 
 Just very fast very well.
-
-.. figure:: /static/youtube-error.jpg
-    :align: center
-
 
 CLI Tools
 ---------
@@ -163,6 +162,8 @@ The Linux kernel style guidelines are actually fun to read:
     NOT read it. Burn them, it's a great symbolic gesture.
 
 https://www.kernel.org/doc/Documentation/CodingStyle
+
+.. nextslide::
 
 NASA's Jet Propulstion Labratory style guidelines are very short
 and are concerned with automated tooling to do code analysis:
@@ -293,4 +294,7 @@ A test server for development purposes only. Includes:
 Activity
 --------
 
-???
+Go to `the Bootcamp Exercises`_ repo to get some practice debugging
+our tinsy flask app.
+
+.. _the Bootcamp Exercises: https://github.com/DevOpsBootcamp/Bootcamp-Exercises/tree/master/2015-2016
