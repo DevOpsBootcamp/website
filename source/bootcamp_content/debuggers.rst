@@ -35,10 +35,10 @@ Static                                  Dynamic
 Deugging
 --------
 
+    "...a computer program that is used to test and debug other programs..."
+
 .. figure:: /static/youtube-error.jpg
     :align: right
-
-"...a computer program that is used to test and debug other programs..."
 
 Debuggers do what you do already:
 
