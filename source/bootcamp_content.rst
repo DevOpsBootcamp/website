@@ -17,3 +17,4 @@ Lessons in Chronological Order:
     bootcamp_content/testing-and-ci
     bootcamp_content/security
     bootcamp_content/databases
+    bootcamp_content/debuggers
