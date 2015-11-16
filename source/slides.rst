@@ -29,6 +29,8 @@ Devops Bootcamp Fall
 * `Bootcamp Session 3`_
 * `Bootcamp Session 4`_
 * `Bootcamp Session 5`_
+* `Bootcamp Session 6`_
+* `Bootcamp Session 7`_
 
 Other
 ~~~~~
@@ -48,3 +50,5 @@ Other
 .. _Bootcamp Session 3: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/testing-and-ci.html
 .. _Bootcamp Session 4: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/security.html
 .. _Bootcamp Session 5: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/databases.html
+.. _Bootcamp Session 6: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/debuggers.html
+.. _Bootcamp Session 7: http://slides.osuosl.org/devopsbootcamp/bootcamp_content/open-source.html
