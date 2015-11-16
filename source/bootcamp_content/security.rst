@@ -1,5 +1,5 @@
-Lesson 4: Security
-==================
+Security
+========
 
 What is security?
 -----------------
