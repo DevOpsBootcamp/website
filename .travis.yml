@@ -1,0 +1,1 @@
+script: bash -ex scripts/build_website.sh
