@@ -10,20 +10,6 @@ Why get involved?
 * Personal fulfillment
 * You have more to contribute than you may realize!
 
-Know your licenses
-------------------
-
-.. figure:: /static/licensing.jpg
-    :align: right
-    :scale: 25%
-
-* MIT/X11
-* Apache
-* BSD
-* AGPL/GPL/LGPL
-* Creative Commons
-* http://choosealicense.com/
-
 Assessing a new community
 -------------------------
 
@@ -94,6 +80,20 @@ First steps
     * Write a test
     * Fix a typo
     * Deploy and update the installation docs
+
+Know your licenses
+------------------
+
+.. figure:: /static/licensing.jpg
+    :align: right
+    :scale: 25%
+
+* MIT/X11
+* Apache
+* BSD
+* AGPL/GPL/LGPL
+* Creative Commons
+* http://choosealicense.com/
 
 TODO
 ----
