@@ -55,11 +55,12 @@ Contents:
     getting_started
     schedule
     bootcamp_content
+    slides
     daycamp_content
     resources
-    slides
     whatisdevops
     get_involved
+    contributions
     faq
     policies
     vagrant
