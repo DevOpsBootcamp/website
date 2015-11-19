@@ -37,7 +37,7 @@ Contributing
 * `BugsAhoy <http://www.joshmatthews.net/bugsahoy/>`_
 * `Showcased github projects <https://github.com/showcases>`__
 * `Trending github projects <https://github.com/trending>`_
-* Choose a company, search "$COMPANY open source"
+* Choose an organization, search "$ORGANIZATION open source"
 
 Reading
 ~~~~~~~
