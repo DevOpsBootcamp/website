@@ -1,6 +1,6 @@
-=====================
-Recommended Resources
-=====================
+=========
+Resources
+=========
 
 Scripting
 ---------
@@ -28,6 +28,19 @@ Systems Administration Tutorials
 
 Open Source
 -----------
+
+Contributing
+~~~~~~~~~~~~
+
+* `Openhatch <http://openhatch.org/search>`_
+* `24 pull requests <http://24pullrequests.com/>`_
+* `BugsAhoy <http://www.joshmatthews.net/bugsahoy/>`_
+* `Showcased github projects <https://github.com/showcases>`__
+* `Trending github projects <https://github.com/trending>`_
+* Choose a company, search "$COMPANY open source"
+
+Reading
+~~~~~~~
 
 The following resources are used as textbooks in Carlos Jensen's CS419 Open
 Source class:
