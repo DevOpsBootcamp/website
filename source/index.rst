@@ -1,20 +1,19 @@
 DevOps BootCamp
 ===============
 
-DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core software
-development and systems operation skills to interested OSU students and community members.
+DevOps BootCamp is an OSU Open Source Lab program dedicated to teaching core
+software development and systems operation skills to interested OSU students and
+community members.
 
-For an idea of what lessons are like, check out our YouTube playlist of previous lessons
-at http://osl.io/devopsbc.
+For an idea of what lessons are like, check out our YouTube playlist of previous
+lessons at http://osl.io/devopsbc.
 
-WE'VE MOVED to LInC 268!
-========================
+This Winter we'll be meeting **Thursdays at 6pm in LInC 268**. You can `sign up
+for our mailing list
+<http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_ to get a weekly
+agenda and reminder.
 
-DevOps BootCamp will be in the **Learning Innovation Center (LInC) 268** this October!
-BootCamp wil still be on **Thursdays at 6pm**, just in a new location.  We're
-excited to see you there!
-
-.. include:: fall.rst
+.. include:: winter.rst
 
 Donate
 ------
