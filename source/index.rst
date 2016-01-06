@@ -8,7 +8,7 @@ community members.
 For an idea of what lessons are like, check out our YouTube playlist of previous
 lessons at http://osl.io/devopsbc.
 
-This Winter we'll be meeting **Thursdays at 6pm in LInC 268**. You can `sign up
+This Winter we'll be meeting **Thursdays at 6pm in Kelley Engineering 1005**. You can `sign up
 for our mailing list
 <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_ to get a weekly
 agenda and reminder.
