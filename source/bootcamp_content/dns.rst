@@ -14,8 +14,8 @@ What is DNS?
 * Translates human readable words like ``devopsbootcamp.osuosl.org`` into
   computer addresses like ``140.211.15.183`` *
 * Stores ``records`` in a distributed tree (more on that later).
-* Wildcard handling like ``*.osuosl.org``..
 
+\*
 
 What does it solve?
 -------------------
@@ -53,10 +53,8 @@ How does it work
 
 #. Computer A checks it's local cache.
 
-#. If no cache was found it contacts the DNS root server.
-
-    * There are a few layers of cache checked on the way. Read up for more
-      info on that.
+#. If no cache was found it contacts the DNS root server. (There are a few
+    layers of cache checked on the way. Read up for more info on that.)
 
 #. The root node tells A to check the ``org`` node.
 
@@ -311,7 +309,6 @@ That was a lot of work, so we have dns caches to help us:
   * unbound
   * dnscache ({n,}djbdns)
 
-
 CNAME Records
 -------------
 
@@ -347,9 +344,7 @@ Further Reading / Activitys
 
 #. Try running ``dig`` on some of your favorite websites and see what you find.
 #. Read the manpage on ``dig`` and see what else you can find in the output.
-#. Try registering your own domain name and run a website using the `Github
-Student Pack`_ resources like Digital Ocean and DNSimple.
+#. Try registering your own domain name and run a website using the
+   `Github Student Pack`_ resources like Digital Ocean and DNSimple.
 
 .. _Github Student Pack: https://education.github.com/pack
-
-
