@@ -1,7 +1,7 @@
 Introduction to DNS
 ===================
 
-What it is an how it makes the internet *go*.
+What it is and how it makes the internet *go*.
 
 What is DNS?
 ------------
@@ -14,8 +14,8 @@ What is DNS?
 * Translates human readable words like ``devopsbootcamp.osuosl.org`` into
   computer addresses like ``140.211.15.183`` *
 * Stores ``records`` in a distributed tree (more on that later).
+* Wildcard handling like ``*.osuosl.org``..
 
-\* (Also does other things)
 
 What does it solve?
 -------------------
@@ -37,7 +37,7 @@ Back around ARPANET we used to have to remember things like 140.211.15.183 (1
 was MIT, 2 was Yale, 3 was Harvard, 4 was AT&T for example).
 
 Numbers are hard to remember so they created and shared a file called HOSTS.TXT
-which alised names with corresponding numbers.
+which aliased names with corresponding numbers.
 
 This worked but didn't scale well with the 'net, as you can imagine (think:
 Sharing a word document with 500 friends, all making changes).
@@ -48,7 +48,7 @@ Universities and Organizations developed DNS to solve this problem.
 How does it work
 ----------------
 
-#. Computer A talks wants to fetch data from devopsbootcamp.osuosl.org (notice
+#. Computer A wants to fetch data from devopsbootcamp.osuosl.org (notice
    the ``.`` at the end of devopsbootcamp.osuosl.org)
 
 #. Computer A checks it's local cache.
@@ -341,3 +341,15 @@ Some things to look up in addition to 'how do I run my own DNS server?':
 
 * ``tinydns``
 * ``bind``
+
+Further Reading / Activitys
+---------------------------
+
+#. Try running ``dig`` on some of your favorite websites and see what you find.
+#. Read the manpage on ``dig`` and see what else you can find in the output.
+#. Try registering your own domain name and run a website using the `Github
+Student Pack`_ resources like Digital Ocean and DNSimple.
+
+.. _Github Student Pack: https://education.github.com/pack
+
+
