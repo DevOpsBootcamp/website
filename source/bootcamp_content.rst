@@ -20,3 +20,4 @@ Lessons in Chronological Order:
     bootcamp_content/debuggers
     bootcamp_content/open-source
     bootcamp_content/dns
+    bootcamp_content/configuration_management
