@@ -19,7 +19,7 @@ What is it?
 History of Configuration Management
 ===================================
 
-The melting of special snoflakes
+The melting of special snowflakes
 
 Infrastructure as code
 ----------------------
@@ -90,7 +90,7 @@ CFengine
 Ansible
 -------
 
-- Combines multi-node deployment, ad-hoc task execution, and configuration
+- Combines multi-node deployment, ad hoc task execution, and configuration
   management in one package. Utilizes SSH with little to no remote agents.
 
 .. figure:: /static/config_mgmt/logo_ansible.png
