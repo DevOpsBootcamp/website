@@ -82,13 +82,18 @@ Cattle vs Pets: Disadvantages
 Virtual Machines vs Container
 -----------------------------
 
-Other Ways to Phrase the Argument:
+*Hypervisors* and *Shared Kernel* are two technologies which achieve
+application isolation.
 
-Hypervisor vs Shared kernel
-  The underlying technology behind each backend.
+=================== ===========================================================
+Security            Performance
+Complete Isolation  Major Isolation
+=================== ===========================================================
 
-Security vs Performance
-  Mostly a short-term problem, but something to consider.
+.. figure:: /static/hypervisor-vs-containers.png
+    :align: center
+    :width: 70%
+
 
 Anouncement: This is a three part series
 ----------------------------------------
