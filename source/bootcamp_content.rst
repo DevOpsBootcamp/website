@@ -22,3 +22,4 @@ Lessons in Chronological Order:
     bootcamp_content/dns
     bootcamp_content/configuration_management
     bootcamp_content/cloud-infrastructure
+    bootcamp_content/docker-docker-docker
