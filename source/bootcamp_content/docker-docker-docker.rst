@@ -65,12 +65,7 @@ Upsides / Downsides to Containers?
 What is Docker?
 ---------------
 
-.. figure:: /static/docker_logo.png
-    :align: center
-    :width: 50%
-    :target: https://www.docker.com
-
-A very popular tool for working with containers-like things.
+A very popular tool for working with container-like things.
 
 An API for interacting with Docker containers.
 
@@ -94,7 +89,7 @@ Docker is not Perfect
 ---------------------
 
 There's a lot of security issues related to signing containers and trust. i.e.:
-There is no way to verify a Docker Container is trustworty.
+There is no way to verify a Docker Container is trustworthy.
 
 Many of the problems with docker are addressed by `rkt`_; learning from the
 experience of others, etc.
