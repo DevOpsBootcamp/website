@@ -8,16 +8,16 @@ Archive
     :glob:
     :maxdepth: 1
 
-    archived_slides/2013-2014/*
+    archive/2013-2014/*
 
 2014-2015
 ---------
 
 .. toctree::
-   	:glob:
-   	:maxdepth: 1
+    :glob:
+    :maxdepth: 1
 
-	archived_slides/2014-2015/*
+    archive/2014-2015/*
 
 Videos
 ------
