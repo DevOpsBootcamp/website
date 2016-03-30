@@ -1,4 +1,6 @@
-Winter Term: System Administration
+.. _winter:
+
+Winter term: System Administration
 ----------------------------------
 
 ====== ========= ================================= =============

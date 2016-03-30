@@ -1,4 +1,6 @@
-Fall Term: Development Practices
+.. _fall:
+
+Fall term: Development Practices
 --------------------------------
 
 ====== ========= ================================ ============= 

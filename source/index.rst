@@ -48,29 +48,25 @@ feedback we get from  interested students.
 Contents:
 ---------
 .. toctree::
-    :glob:
-    :maxdepth: 1
+   :glob:
+   :maxdepth: 2
 
-    getting_started
-    schedule
-    bootcamp_content
-    slides
-    daycamp_content
-    resources
-    whatisdevops
-    get_involved
-    contributions
-    faq
-    policies
-    vagrant
-    archive
-    admin_checklist
+   about
+   getting_started
+   schedule
+   bootcamp_content
+   daycamp_content
+   resources
+   faq
+   archive
+   admin
 
 
 .. toctree::
-    :hidden:
+   :hidden:
 
-    fall
-    winter
-    spring
-    videos
+   fall
+   winter
+   spring
+   vagrant
+   videos

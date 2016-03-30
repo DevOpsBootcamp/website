@@ -1,5 +1,5 @@
-Admin Checklist
-===============
+Admin
+=====
 
 Weekly Checklist
 ----------------

@@ -1,3 +1,5 @@
+.. _vagrant:
+
 Vagrant
 =======
 
