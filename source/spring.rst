@@ -1,5 +1,3 @@
-.. _spring:
-
 Spring Term: Online Classes
 ---------------------------
 

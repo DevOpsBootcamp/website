@@ -1,5 +1,3 @@
-.. _fall:
-
 Fall term: Development Practices
 --------------------------------
 

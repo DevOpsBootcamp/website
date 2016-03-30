@@ -1,5 +1,3 @@
-.. _winter:
-
 Winter term: System Administration
 ----------------------------------
 
