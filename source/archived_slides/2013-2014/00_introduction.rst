@@ -1,5 +1,3 @@
-.. _introduction:
-
 DevOps BootCamp Introduction
 ============================
 
