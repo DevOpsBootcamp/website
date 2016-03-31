@@ -1,3 +1,5 @@
+.. _vagrant:
+
 Vagrant
 =======
 
@@ -5,7 +7,7 @@ Trying Linux as a virtual machine with Vagrant
 ----------------------------------------------
 
 In order to create a stable learning environment, we're going to have everyone
-use a Devop tool called `Vagrant`_. Vagrant is typically used to help assist
+use a Devop tool called `Vagrantup`_. Vagrant is typically used to help assist
 both developers and system engineers in ensuring that their application and
 system deployments work predictably. For our purposes we're going to use it as
 an easy way for new people to get to a Linux prompt quickly with no fear of
@@ -19,7 +21,7 @@ does all the virtual machine magic.
 We will go in more depth with how to install Linux manually, but for now we've
 done all the hard work and have create pre-made Linux images.
 
-.. _Vagrant: http://www.vagrantup.com/
+.. _Vagrantup: http://www.vagrantup.com/
 .. _VirtualBox: https://www.virtualbox.org/
 
 Installing Virtualbox

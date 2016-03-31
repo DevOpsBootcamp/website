@@ -13,8 +13,6 @@ for our mailing list
 <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_ to get a weekly
 agenda and reminder.
 
-.. include:: winter.rst
-
 Donate
 ------
 
@@ -48,29 +46,15 @@ feedback we get from  interested students.
 Contents:
 ---------
 .. toctree::
-    :glob:
-    :maxdepth: 1
+   :glob:
+   :maxdepth: 2
 
-    getting_started
-    schedule
-    bootcamp_content
-    slides
-    daycamp_content
-    resources
-    whatisdevops
-    get_involved
-    contributions
-    faq
-    policies
-    vagrant
-    archive
-    admin_checklist
-
-
-.. toctree::
-    :hidden:
-
-    fall
-    winter
-    spring
-    videos
+   about
+   getting_started
+   schedule
+   bootcamp_content
+   daycamp_content
+   resources
+   faq
+   archive
+   admin
