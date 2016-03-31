@@ -58,13 +58,3 @@ Contents:
    faq
    archive
    admin
-
-
-.. toctree::
-   :hidden:
-
-   fall
-   winter
-   spring
-   vagrant
-   videos
