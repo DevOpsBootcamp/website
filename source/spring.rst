@@ -1,3 +1,5 @@
+:orphan:
+
 Spring Term: Online Classes
 ---------------------------
 

@@ -1,3 +1,4 @@
+:orphan:
 Winter term: System Administration
 ----------------------------------
 

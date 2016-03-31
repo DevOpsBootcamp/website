@@ -1,3 +1,5 @@
+:orphan:
+
 .. _archived_videos:
 
 Archived Videos
