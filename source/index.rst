@@ -13,8 +13,6 @@ for our mailing list
 <http://lists.osuosl.org/mailman/listinfo/devops-bootcamp>`_ to get a weekly
 agenda and reminder.
 
-.. include:: winter.rst
-
 Donate
 ------
 
