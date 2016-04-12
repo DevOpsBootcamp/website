@@ -5,7 +5,7 @@ Resources
 Scripting
 ---------
 
-* `Free Linux Tutorials (Scriptping and Terminal practice) <http://www.guru99.com/unix-linux-tutorial.html>`_
+* `Free Linux Tutorials (Scripting and Terminal practice) <http://www.guru99.com/unix-linux-tutorial.html>`_
 * `The Advanced Bash Scripting Guide <http://www.tldp.org/LDP/abs/html/>`_
 * `Learn Python The Hard Way <http://learnpythonthehardway.org/book/>`_
 * `The (Official) Python Tutorial <https://docs.python.org/2.7/tutorial/index.html>`_
