@@ -1,0 +1,12 @@
+10.1.0.1 - - [03/Aug/2016 14:44:33] "GET /_static/styles.css HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:33] "GET /_static/facebook-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:33] "GET /_static/google-plus-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:34] "GET /_static/email.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:34] "GET /_static/youtube-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:34] "GET /_static/github-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:46] "GET /_static/styles.css HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:47] "GET /_static/facebook-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:47] "GET /_static/google-plus-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:47] "GET /_static/email.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:47] "GET /_static/youtube-icon.png HTTP/1.1" 404 -
+10.1.0.1 - - [03/Aug/2016 14:44:47] "GET /_static/github-icon.png HTTP/1.1" 404 -
