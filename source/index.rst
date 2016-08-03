@@ -16,3 +16,4 @@ We appreciate the help!  To donate, go to http://osuosl.org/donate.
     :hidden:
 
     about
+    lessons
