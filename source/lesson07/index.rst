@@ -1,7 +1,8 @@
 .. _testing_and_ci:
 
-Testing and Continuous Integration
-==================================
+
+Lesson 7: Testing and Continuous Integration
+============================================
 
 What are tests?
 ---------------

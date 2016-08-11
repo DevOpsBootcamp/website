@@ -1,7 +1,8 @@
 .. _daycamp_04:
 
-Version Control
-===============
+
+Lesson 4: Version Control
+=========================
 
 What We'll Cover
 ----------------
@@ -35,11 +36,11 @@ Image from
 
 ..  Version Control is Hard
     -----------------------
-  
+
 ..  .. figure:: /static/xkcd_1296.png
        :scale: 150%
        :align: center
-  
+
 ..  Image from `XKCD <http://xkcd.com/1296>`_
 
 Better Options: Version Control

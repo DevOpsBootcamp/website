@@ -1,7 +1,8 @@
 .. _python_programming_basics:
 
-Python and Programming Basics
-=============================
+
+Lesson 5: Python and Programming Basics
+=======================================
 
 Types
 -----
@@ -241,9 +242,9 @@ Environments
     :height: 200px
 
 Let's do stuff!
-===============
+---------------
 
-Try some of our `exercises`_ to hone 
+Try some of our `exercises`_ to hone
 your python skills!
 
 .. _exercises: https://github.com/DevOpsBootcamp/Bootcamp-Exercises/blob/master/programming-basics/exercise.rst

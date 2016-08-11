@@ -1,5 +1,8 @@
-Cloud Infrastructure
-====================
+.. _cloud_infra:
+
+
+Lesson 14: Cloud Infrastructure
+===============================
 
 *One* cloud, **two** cloud, *my* cloud, **your** cloud.
 

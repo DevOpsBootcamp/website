@@ -1,7 +1,8 @@
 .. _daycamp_02:
 
-Linux Basics
-============
+
+Lesson 2: Linux Basics
+======================
 
 What we'll cover
 ----------------
@@ -16,7 +17,7 @@ What we'll cover
 * Groups
 * Files
 * Installing packages
-    
+
 Operating Systems
 -----------------
 
@@ -250,10 +251,10 @@ Review
 * Give 2 ways to change directory to your home directory.
 
 Users
-=====
+-----
 
 What are users?
----------------
+~~~~~~~~~~~~~~~
 
 * You, right now
 
@@ -267,7 +268,7 @@ What are users?
 * Not just people: Apache, Mailman, ntp
 
 Users have
-----------
+~~~~~~~~~~
 
 * Username
 * UID
@@ -277,7 +278,7 @@ Users have
 * Usually (but not always) home directory
 
 Managing users
---------------
+~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -291,12 +292,12 @@ Managing users
     :align: center
 
 Passwords
----------
+~~~~~~~~~
 
 * Change your password with ``passwd``
 
 Root/Superuser
---------------
+~~~~~~~~~~~~~~
 
 * UID 0
 * ``sudo``, superuser do
@@ -305,7 +306,7 @@ Root/Superuser
     :align: center
 
 Acting as another user
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -325,7 +326,7 @@ If someone has permissions errors:
     * Check that they have the flag +x to execute
 
 What are groups?
-----------------
+~~~~~~~~~~~~~~~~
 
 * Manage permissions for groups of users
 
@@ -344,7 +345,7 @@ What are groups?
     # group name:password or placeholder:GID:member,member,member
 
 Hands-On: Users and Groups
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Create a user on your system for yourself, with your preferred username
 * Give your user sudo powers
@@ -354,10 +355,10 @@ Hands-On: Users and Groups
 * Create a group called devops
 
 Files
-=====
+------
 
 What are files?
----------------
+~~~~~~~~~~~~~~~
 
 * Nearly everything on your computer is a file
 * Files have:
@@ -376,7 +377,7 @@ What are files?
     2884382 drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
 
 File extensions
----------------
+~~~~~~~~~~~~~~~
 
 * ``.jpg``, ``.txt``, ``.doc``
 
@@ -394,7 +395,7 @@ File extensions
     squirrel.jpg: JPEG image data, JFIF standard 1.01
 
 ls -l
-------
+~~~~~~
 
 * First bit: type
 * Next 3: user
@@ -412,7 +413,7 @@ ls -l
 
 
 chmod and octal permissions
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -434,7 +435,7 @@ chmod and octal permissions
 * r, w, x for read, write, execute
 
 chown, chgrp
-------------
+~~~~~~~~~~~~
 
 user & group
 
@@ -453,7 +454,7 @@ user & group
     $ chgrp -R devops /home/$yourusername/bootcamp
 
 Types of files
---------------
+~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -478,10 +479,10 @@ Types of files
 ``l`` is a symlink
 
 Hands-On: Files and Permissions
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
-   
+
     $ touch foo # create empty file called foo
 
 * As root, create a file in /home/$yourusername/bootcamp
@@ -491,10 +492,10 @@ Hands-On: Files and Permissions
 * Make more files and practice changing their permissions
 
 Packages
-========
+--------
 
 Package Management
-------------------
+~~~~~~~~~~~~~~~~~~
 
 *Take care of installation and removal of software*
 
@@ -516,142 +517,142 @@ Package Management
 
 .. RPM & yum (RedHat, CentOS, Fedora)
 .. ----------------------------------
-.. 
+..
 .. .. image:: /static/rpm.png
 ..     :align: right
 ..     :width: 30%
-.. 
+..
 .. **RPM**
-.. 
+..
 ..   Binary file format which includes metadata about the package and the
 ..   application binaries as well.
-.. 
+..
 .. .. image:: /static/yum.png
 ..     :align: right
 ..     :width: 30%
-.. 
+..
 .. **Yum**
-.. 
+..
 ..   RPM package manager used to query a central repository and resolve RPM
 ..   package dependencies.
-.. 
+..
 .. Yum Commands (Redhat, CentOS, Fedora)
 .. -------------------------------------
-.. 
+..
 .. .. code-block:: bash
-.. 
+..
 ..   # Searching for a package
 ..   $ yum search tree
-.. 
+..
 ..   # Information about a package
 ..   $ yum info tree
-.. 
+..
 ..   # Installing a package
 ..   $ yum install tree
-.. 
+..
 ..   # Upgrade all packages to a newer version
 ..   $ yum upgrade
-.. 
+..
 ..   # Uninstalling a package
 ..   $ yum remove tree
-.. 
+..
 ..   # Cleaning the RPM database
 ..   $ yum clean all
-.. 
+..
 .. RPM Commands
 .. ------------
-.. 
+..
 .. Low level package management. No dependency checking or central repository.
-.. 
+..
 .. .. code-block:: bash
-.. 
+..
 ..   # Install an RPM file
 ..   $ rpm -i tree-1.5.3-2.el6.x86_64.rpm
-.. 
+..
 ..   # Upgrade an RPM file
 ..   $ rpm -Uvh tree-1.5.3-3.el6.x86_64.rpm
-.. 
+..
 ..   # Uninstall an RPM package
 ..   $ rpm -e tree
-.. 
+..
 ..   # Querying the RPM database
 ..   $ rpm -qa tree
-.. 
+..
 ..   # Listing all files in an RPM package
 ..   $ rpm -ql tree
-.. 
+..
 .. DPKG & Apt (Debian, Ubuntu)
 .. ---------------------------
-.. 
+..
 .. **Deb**
-.. 
+..
 ..   Binary file format which includes metadata about the package and the
 ..   application binaries as well.
-.. 
+..
 .. .. image:: /static/debian.png
 ..     :align: right
-.. 
+..
 .. **DPKG**
-.. 
+..
 ..   Low level package installer for the .deb file format. Does no package
 ..   dependency resolution.
-.. 
+..
 .. **Apt**
-.. 
+..
 ..   DPKG package manager used to query a central repository and resolve Deb
 ..   package dependencies. Considered mostly a front-end to dpkg.
-.. 
+..
 .. Apt (Debian, Ubuntu)
 .. -----------------------------
-.. 
+..
 .. .. note:: You can also use aptitude as a front-end to dpkg instead of apt-get.
-.. 
+..
 .. .. code-block:: bash
-.. 
+..
 ..   # Update package cache database
 ..   $ apt-get update
-.. 
+..
 ..   # Searching for a package
 ..   $ apt-cache search tree
-.. 
+..
 ..   # Information about a package
 ..   $ apt-cache show tree
-.. 
+..
 ..   # Installing a package
 ..   $ apt-get install tree
-.. 
+..
 ..   # Upgrade all packages to a newer version
 ..   $ apt-get upgrade
 ..   $ apt-get dist-upgrade
-.. 
+..
 ..   # Uninstalling a package
 ..   $ apt-get remove tree
 ..   $ apt-get purge tree
-.. 
+..
 .. Dpkg Commands
 .. -------------
-.. 
+..
 .. Low level package management. No dependency checking or central repository.
-.. 
+..
 .. .. code-block:: bash
-.. 
+..
 ..   # Install or upgrade a DEB file
 ..   $ dpkg -i tree_1.6.0-1_amd64.deb
-.. 
+..
 ..   # Removing a DEB package
 ..   $ dpkg -r tree
-.. 
+..
 ..   # Purging a DEB package
 ..   $ dpkg -P tree
-.. 
+..
 ..   # Querying the DPKG database
 ..   $ dpkg-query -l tree
-.. 
+..
 ..   # Listing all files in a DEB package
 ..   $ dpkg-query -L tree
 
 Language-specific Package Managers
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Languages sometimes have their own package management suite
 * Can be useful for using newer versions of packages
@@ -664,7 +665,7 @@ Language-specific Package Managers
     * *... and so on forever ...*
 
 Other Package Managers
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 They each fill a specific niche and have their own pros and cons.
 
@@ -676,7 +677,7 @@ They each fill a specific niche and have their own pros and cons.
 * chocolatey (Windows)
 
 Installing from source
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 * Download source tarball, run build scripts and install in a local directory.
 * RPM/DEB packages do this for you

@@ -1,11 +1,21 @@
 .. _daycamp_01:
 
-DevOps DayCamp Introduction
-===========================
 
-OSU OSL & OSU LUG
+Lesson 1: DevOps Daycamp!
+=========================
 
-http://devopsbootcamp.osuosl.org/daycamp
+homepage: http://devopsbootcamp.osuosl.org/daycamp
+slides: FILL IN THIS LINK
+video: FILL IN THIS LINK
+
+Roadmap
+-------
+
+#. What is **DevOps**? DevOps **BootCamp**?
+#. Why are we here?
+#. Essential vocabulary.
+#. Getting ready for activities.
+#. First Activity.
 
 What's DevOps?
 --------------
@@ -16,15 +26,23 @@ Software Development + Operations Engineering
 
 .. note::
 
-    development (write the software) + operations (run the servers)
-    old paradigm: dev + ops discrete... this worked because
-    * clearly defined interface between the two, relatively standardized
-    * slower workflow means more time to troubleshoot/debug
-    new paradigm:
-    * software released faster ("agile")
-    * larger scale = many identical servers
-    * devs need to know ops for testing, anticipating deployment issues
-    * ops need to know dev to minimize wasted resources, improve security
+    Development (writing software) + Operations (running servers)
+
+    Pre-DevOps World: The jobs of Devs and Ops were seperate.
+
+    * There was a clearly defined and relatively standardized interface between
+      the two.
+    * Workflows were slower, meaning ther was more time to troubleshoot/debug.
+
+    Post-DevOps World: A new hybrid job emerges.
+
+    * Software is released faster ("**Agile Development**")
+    * Larger scale services = many identical servers ("**Configuration
+      Management**").
+    * Devs need to know ops for testing purposes to anticipate deployment
+      issues.
+    * Ops need to know dev to minimize wasted resources and to improve
+      security.
 
 What's BootCamp?
 ----------------

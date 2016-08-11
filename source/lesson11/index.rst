@@ -1,5 +1,8 @@
-Contributing to Open Source
-===========================
+.. _open_source:
+
+
+Lesson 11: Contributing to Open Source
+======================================
 
 Why get involved?
 -----------------

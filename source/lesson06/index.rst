@@ -1,7 +1,8 @@
 .. _web_frameworks:
 
-Web Frameworks
-==============
+
+Lesson 6: Web Frameworks
+========================
 
 
 What is a Framework?

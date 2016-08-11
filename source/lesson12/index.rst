@@ -1,5 +1,8 @@
-Introduction to DNS
-===================
+.. _dns:
+
+
+Lesson 12: Introduction to DNS
+==============================
 
 What it is and how it makes the internet *go*.
 

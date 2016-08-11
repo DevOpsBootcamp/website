@@ -1,7 +1,8 @@
 .. _daycamp_03:
 
-Documentation, IRC, and Package Managers
-========================================
+
+Lesson 3: Documentation, IRC, and Package Managers
+==================================================
 
 More about Man Pages
 --------------------

@@ -1,5 +1,8 @@
-Configuration Management
-========================
+.. _configuration_management:
+
+
+Lesson 13: Configuration Management
+===================================
 
 .. code-block:: puppet
 
@@ -8,7 +11,7 @@ Configuration Management
     }
 
 What is it?
-===========
+-----------
 
     *"Configuration management is the process of standardizing resource
     configurations and enforcing their state across IT infrastructure in an
@@ -17,7 +20,7 @@ What is it?
     \- Puppet Labs
 
 History of Configuration Management
-===================================
+-----------------------------------
 
 The melting of special snowflakes
 
@@ -54,7 +57,8 @@ Push vs. Pull
   - Cons: Automation requires more work, Lack of scalability
 
 Tools of the trade
-==================
+------------------
+
 So many options!
 
 Puppet
@@ -98,7 +102,8 @@ Ansible
     :height: 300px
 
 Show me the magic!
-==================
+------------------
+
 *Real life code examples!*
 
 Declarative Configuration

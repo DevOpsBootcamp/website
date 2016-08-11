@@ -1,38 +1,8 @@
-Docker Docker Docker
-====================
-
-Docker docker docker. Docker docker. Docker.
-
-.. figure:: /static/why_cant_i_hold_all_these_containers.png
-    :align: center
-    :width: 40%
+.. _docker:
 
 
-Docker docker dock Docker?
---------------------------
-
-|
-
-.. figure:: /static/dockertopus.jpg
-    :align: center
-    :width: 60%
-
-
-Docker!
--------
-
-|
-
-.. figure:: /static/docker_set_sail.jpg
-    :align: center
-    :width: 80%
-
-
-A Practical Introduction to Containers
-======================================
-
-The actual talk.
-
+Lesson 15: Docker Docker Docker
+===============================
 
 What is a Container?
 --------------------

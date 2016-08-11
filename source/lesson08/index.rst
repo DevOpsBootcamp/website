@@ -1,5 +1,8 @@
-Security
-========
+.. _security:
+
+
+Lesson 8: Security
+==================
 
 What is security?
 -----------------
@@ -72,7 +75,7 @@ Certificates and HTTP
 Huh?
 ----
 
-You can see how your connection is being encrypted pretty easily, 
+You can see how your connection is being encrypted pretty easily,
 including which certificate authority and protocols are being used.
 
 Go to https://github.com and click on the little lock next to the
@@ -83,7 +86,7 @@ url.
 	:height: 200px
 
 Then click 'More information'. Under 'Verified by', you can see the
-certificate authority, and under 'Technical Details' you can see 
+certificate authority, and under 'Technical Details' you can see
 the encryption scheme used.
 
 What attacks are out there?
@@ -165,5 +168,5 @@ Let's do stuff
 --------------
 
 Head to http://www.codebashing.com/sql_demo to try
-your hand at SQL injection and see how it 
+your hand at SQL injection and see how it
 really happens!

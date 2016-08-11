@@ -1,5 +1,8 @@
-Databases
-=========
+.. _databases:
+
+
+Lesson 9: Databases
+===================
 
 Imagine a kitchen cupboard program that stores food currently in stock, where it
 is, recipes using it, expiry dates, etc.
