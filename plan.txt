@@ -319,9 +319,6 @@ Development Processes & Tools
     - Linux Kernel Standards
     - CS 362
 
-Networking
-  Further Reading: ???
-
 DNS
   What DNS is
   What DNS solves
@@ -342,6 +339,26 @@ DNS
   Activity: Run a DNS Server
   Further Reading: ???
 
+
+Application Isolation
+  Virtual Machines and Containers
+  What a Virtual Machine is
+    Emulation of an Operating System
+  What a container is
+    Not a Virtual Machine
+    CGroups + Systemd
+  Upsides of containers
+    Faster / Slimmer
+  Downsides of containers
+    Strictly less isolation
+    Using one kernel
+      Security concerns
+      Practical concerns
+  Tools
+    Docker
+    RKT
+  Further Reading: ???
+
 Configuration Management
   What Configuration management is
   What CM solves
@@ -359,22 +376,6 @@ Configuration Management
     Chef Example
     Ansible Example
   Activity: Use Ansible to provision `localhost`
-  Further Reading: ???
-
-Containers
-  What a container is
-    Not a Virtual Machine
-    CGroups + Systemd
-  Upsides of containers
-    Faster / Slimmer
-  Downsides of containers
-    Strictly less isolation
-    Using one kernel
-      Security concerns
-      Practical concerns
-  Tools
-    Docker
-    RKT
   Further Reading: ???
 
 Cloud Infrastructure

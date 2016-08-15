@@ -34,20 +34,25 @@ We appreciate the help!  To donate, go to http://osuosl.org/donate.
 .. toctree::
     :hidden:
 
-    lesson0/start-here
-    lesson1/first-steps
-    lesson2/linux-basics
-    lesson3/index
-    lesson4/index
-    lesson5/index
-    lesson6/index
-    lesson7/index
-    lesson8/index
-    lesson9/index
-    lesson10/index
-    lesson11/index
-    lesson12/index
-    lesson13/index
-    lesson14/index
-    lesson15/index
+    start-here
+    first-steps
+    operating-systems
+    shell-navigation-os
+    users-groups-permissions
+    files
+    packages-software-libraries
+    questions-answers-documentation
+    version-control
+    programming
+    frameworks
+    testing
+    continuous-integration
+    security
+    databases
+    development-processes-tools
+    dns
+    configuration-management
+    application-isolation
+    cloud-infrastructure
+    contributing-to-open-source
     about
