@@ -1,0 +1,266 @@
+--- Intro
+- What is DevOps?
+- What is DevOps BootCamp?
+- Why are we doing this?
+- What you'll do.
+- Can you do it?
+- Career Paths.
+- OSL Hiring.
+- Getting involved with BootCamp.
+- This Session's Agenda.
+- A note about notations.
+- How to get to Linux
+- Essential Vocabulary
+- Operating Systems
+- GNU
+- Linux
+Servers
+Hosts
+Guest
+- Virtual Machine
+- Trying Linux in the Cloud
+- The Terminal
+- Review *activity*
+--- Linux Basics
+- Operating Systems
+- The Terminal
+- Basics Shell Commands
+- Invoking a scripts
+- File Paths
+- Special Characters
+- Bash Syntax
+- Type less
+Help, get me out of here!
+- Knowledge Check
+- More about Man Pages
+- Documentation
+- Asking for Help
+- Review *activity*
+- Users
+- Users have
+- Managing users
+- Passwords
+- Actign as another user
+- What are groups?
+- Hands-on: Users and Groups *activity*
+- Files
+- What are files?
+- Files extensions
+- ls -l
+- chmod and octal permissions
+- chown, chgrp
+- types of files
+- hands-on: files and permissions *activity*
+- Packages
+- Package Management
+- Core Functionality
+- Popular Linux Package managers
+- Langauge Specific Package Managers
+- Other Package Managers
+- Installation from Source
+- Review *activity*
+---
+- More about Man Pages
+- Documentation
+- IRC
+- Client
+- Networks
+- Channels
+- Commands
+- Useful tricks
+- SCreen & Irssi Hints
+- Etiquette
+- Terminology
+- Asking for help
+- Review *activity*
+---
+- What We'll Cover
+- Nano
+- Why Bother?
+- Better OPtions: Version Control
+- Git
+- Setting up Git
+- Using Git Locally
+- What Not To Do
+- Git Exercise *activity*
+- Adding Code
+- Cloning a Respository
+- Cloned Respository Part 2
+- Branches
+- Daily Workflow
+- GitHub!
+- Other Resources
+---
+- Python and Programming Basics
+- Types
+- Variables and Constnts
+- Control Statements
+- Input and Output (I/O)
+- The Bare Minimum
+- Try it Out *activity*
+- Python
+- DataTypes
+- Variables
+- Try it Out *activity*
+- Control Flow
+- Functions
+- Libraries
+- Environments
+- Let's do stuff! *activity*
+---
+- What's a framework
+- Why use a framework?
+- Static vs Dynamic Sites
+- Popular web frameworks
+- Python
+- Ruby
+- Node.js
+- URL Routing
+- Who likes mad-libs?
+- Templating Engines
+- Other common engines
+- *Activity*
+---
+- Testing and CI
+- What are tests
+- Why do you want to test?
+- types of testing
+- Unit Testing
+- Integration Testing
+- Systems Testing
+- Testing Frameworks
+- Example using ``unittest``
+- Your Turn! *activity*
+? Mocking out Functions
+- Teardown and Setup
+- Automated Testing
+- Travis CI
+- Activity
+---
+- What is Security
+- Types of Security
+- Authentication, Authorization, Identity
+- Passwords
+? Server Side
+- Certificates and HTTP
+? huh?
+- What Attacks are out there?
+- Code Injection
+- Web Server-specific Attacks
+? Problems with Design and Implementation
+- Other Attacks
+- What to do if you discover a vulnerabilty
+- Ok, So should I worry?
+- Let's do stuff *activity*
+---
+- Databases
+? Releasing Data
+- How is this stored? HOw is it accessed?
+- Enter the Database
+? Structure
+- Relational Algebra Visualized
+- Installing MySQL
+- Configuration
+- Users and Permissions
+- Importing Data
+- Basic Queries
+- SELECT
+- Practice *activity*
+- Answers
+- INSERT
+- Practice *activity*
+- Answers
+- UPDATE
+- DELETE
+- Further Reading, Resoruces, etc
+- Describing Tables
+- Databases in Applications
+- Native SQL
+- Introduction to ORM
+- Live with a Python ORM
+---
+- Development Tools and Debuggers
+- Topics
+- Code Analysis
+- Debugging
+- CLI Tools
+- Example: Valgrind
+- Web Consoles
+- Linters
+- Style Guides
+- Coding Standards
+- Example: Linux Kernel Standards
+? Testing
+- Code Coverage
+- Virtual Environments
+- Using a Virtual Environmnet
+- How others deal with Dependencies
+- Integrated Development Environments
+- Development Servers
+- *Activity*
+---
+- Contributing to Open Source
+- Why get involved
+- accessing a new community
+- how to get involved
+- finding a project
+- first steps
+- know your licenses
+- TODO
+- more resources
+- Questions?
+---
+- Introduction to DNS
+- What is DNS?
+- WHat does it solve?
+- Obligatory History Lesson
+- How does it work?
+- the DNS Tree
+- A DNS Request
+- A Records
+- MX Records
+- NS Records
+- NXDOMAIN Records
+- The Root
+- The Thirteen
+- Authoritative (SOA)
+- Recursive Example
+- CNAME Example
+- You can run a DNS server
+- Further reading / Activity
+---
+- Configuration management
+- What is it?
+- History of Config Management
+- Infrastructure as code
+- Push vs Pull
+- Tools of the Trade
+- Puppet
+- Chef
+- CFEngine
+- Ansible
+- Show me the magic!
+- Delcaration configuration
+- Puppet Example
+- Chef Example
+- Ansible Example
+- You to can be a sparkly devops princess!
+---
+- Cloud Infra
+- What the cloud is
+- What the cloud looks like
+- Advantages over bare hardware
+- private cloud
+- public cloud
+- cloud + configuration management
+- cattle vs pets: advantages
+- cattle vs pets disadvantages
+- virtual machine vs containers
+---
+- Docker Docker Docker
+- What is a container
+- upsides / downsides to containers
+- what is docker?
+- docker is not perfect
+- further reading
+- activity

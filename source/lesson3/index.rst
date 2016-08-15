@@ -203,7 +203,7 @@ It's okay to ask.
 #. Google it
 #. Skim the manuals of each component
 #. Identify a friend, mentor, or IRC channel who could help
-#. When they're not busy, give them a quick synopsis of points 1 and 2,
+#. When they're not busy, give them a quick synopsis of points 1 and 2   mentioning what possibilities you've ruled out by searching.
    mentioning what possibilities you've ruled out by searching.
 
 **Contributions = expertise + time**

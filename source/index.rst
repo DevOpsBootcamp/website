@@ -1,9 +1,28 @@
+.. _index:
+
 DevOps BootCamp
 ===============
 
-DevOps BootCamp is an `OSU Open Source Lab`_ program dedicated to teaching core
-software development and systems operation skills to interested OSU students and
-community members.
+DevOps BootCamp (DOBC) is a free course hosted by the `OSU Open Source Lab`_
+dedicated to teaching core software development and systems operation skills to
+passionate OSU students and community members.
+
+DOBC is always 100% free for in-person and online students alike.
+
+|
+
+Ready to Learn DevOps? :ref:`start_here`
+----------------------------------------
+
+|
+
+Schedule
+--------
+
+All of the DevOps BootCamp content is avaliable for free but meet-space
+teaching events are offered throughout the year.
+
+.. include:: schedule.txt
 
 Donate
 ------
@@ -15,16 +34,16 @@ We appreciate the help!  To donate, go to http://osuosl.org/donate.
 .. toctree::
     :hidden:
 
-    lesson00/index
-    lesson01/index
-    lesson02/index
-    lesson03/index
-    lesson04/index
-    lesson05/index
-    lesson06/index
-    lesson07/index
-    lesson08/index
-    lesson09/index
+    lesson0/start-here
+    lesson1/first-steps
+    lesson2/linux-basics
+    lesson3/index
+    lesson4/index
+    lesson5/index
+    lesson6/index
+    lesson7/index
+    lesson8/index
+    lesson9/index
     lesson10/index
     lesson11/index
     lesson12/index

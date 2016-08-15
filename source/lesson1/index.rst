@@ -4,9 +4,12 @@
 Lesson 1: DevOps Daycamp!
 =========================
 
+========= =========================================================
 homepage: http://devopsbootcamp.osuosl.org/daycamp
-slides: FILL IN THIS LINK
-video: FILL IN THIS LINK
+content:  http://slides.osuosl.org/dobc/lesson1/first-steps.html
+slides:   FILL IN THIS LINK
+video:    FILL IN THIS LINK
+========= =========================================================
 
 Roadmap
 -------
@@ -16,6 +19,7 @@ Roadmap
 #. Essential vocabulary.
 #. Getting ready for activities.
 #. First Activity.
+
 
 What's DevOps?
 --------------
@@ -44,6 +48,7 @@ Software Development + Operations Engineering
     * Ops need to know dev to minimize wasted resources and to improve
       security.
 
+
 What's BootCamp?
 ----------------
 
@@ -58,10 +63,8 @@ What's BootCamp?
 
 .. note::
 
-    meet every 1-2 weeks through the term
-    time decided by Doodle poll
-    you get out what you put in
-    skills etc. to do well in job interviews (especially ops)
+    We will meet about Twice per month.
+
 
 Why are we doing this?
 ----------------------

@@ -1,0 +1,408 @@
+Introduction
+  About the Program
+    What DevOps is
+    What DevOps Bootcamp is
+      'Couch to DevOps' (couch to 5k)
+    What DOBC is *not*
+    Why DOBC Exists
+    Who teaches DOBC
+  The 'Agreement'
+    What you get for being a student
+      Knowledge of current industry topics, tools, and concepts
+    What you are responsible for as a student
+      Give and take relationship.
+      We teach you, you tell us what we can do better.
+      It is not easy.
+      Persistence is rewarded.
+      Survey?
+    What you'll actually *do*.
+  Getting Involved
+    Where and how to ask questions
+      IRC
+      Mailing Lists
+      In person
+  The OSU Open Source Lab is Hiring
+  Further Reading: ???
+
+First Steps
+  Vocabulary
+    Just some words that we will explore over the course of DOBC.
+    100,000ft view of the world.
+    - Linux, GNU, Operating Systems
+    - Virtual machine, Containers, Process & Application Isolation
+    - Security
+    - Version Control
+    - Continuious Integration
+    - 'The Cloud', Servers
+  Exercise: Mini-Quiz.
+  Notation
+    - Code-blocks
+    - Inine-code
+    - Literal vs <insert thing here>
+  Exercise: Mini-Quiz.
+  Getting Setup on Linux
+    - In class: VM on Open Stack
+    - Online: [Vagrant/VirtualBox/] Linux VM
+  Exercise: Crashcourse on the terminal
+    - login
+    - ls
+    - pwd
+    - echo "insert your text here"
+    - nano # Write stuff and save it to file1
+    - echo "my custom message" > file2
+    - cat file1
+    - cat file2
+    - cat file1 file2
+    - mkdir my-project
+    - cd my-project
+    - ls
+    - ls ..
+    - pwd
+    - cp ../file2 ./
+    - mv ../file1 ./
+    - etc
+    - exit
+  Further Reading: ???
+
+Operating Systems
+  What an OS is
+    Defintion
+    GNU/Linux
+      Flavors of Linux
+        - CentOS / RHEL / Fedora family
+        - Ubuntu / Debian / Mint family
+        - Arch Linux
+        - Gentoo
+        - Other
+      Reason for so many types of Linux
+  Exercise: Mini-Quiz.
+  Further Reading: ???
+
+The Shell, Navigating the OS
+  Defintion of the Shell
+  Basic Shell Commands
+    - ls
+    - cd
+    - pwd
+    - exit
+    - echo
+    - cat
+    - man
+    - file
+  Shell Scripts
+    - What a script is
+    - Writing a script, Bash Syntax
+    - Invoking scripts
+  File Paths
+  Special Characters
+  Type Less
+  Exercise: How would you do X?
+  Further Reading: ???
+
+Users, Groups, Permissions
+  The 'user'
+    What a user is
+    What a user can do
+    passwords
+    Acting as another user
+  The 'group'
+    What a group is
+  Exercise: Create/change some users and groups
+  Further Reading: ???
+
+Files
+  What files are
+    Everything (?!)
+    Definition
+    Hidden files
+    Extensions?
+  Metadata
+    Reviewing Metadata
+      ls -alh
+    Changing Metadata
+      chmod
+      chown
+  Types of files
+    Executables
+    Flatfile
+    Sockets
+    Binary file
+  Exercise: Create some files, change their metadata
+
+Packages, Software, and Libraries
+  Software is...
+    - A bunch of files (everything is a file)
+    - An executable somewhere
+  Libraries are...
+    - A set of *share* pieces of code
+    - Helps De-Duplicate Efforts
+  Package Management is...
+    - The process of automatically installing libraries and software
+  Core Functionality
+    - Install New Packages
+    - Search For Packages
+    - Un-install Packages
+    - Update Installed Packages
+    - Show Installed Packages
+  Popular Linux Package Managers
+    - Apt / DPKG (Debian & Ubuntu)
+    - Yum / RPM (RHEL / CentOS)
+    - Pacman (Arch Linux)
+  Programming Langauge Package Managers
+    - pip (python)
+    - gem (ruby)
+    - npm (node.js)
+  Other Package Managers
+    - Homebrew (OSX)
+    - App Store / Play Store (Phones)
+    - Steam (Games)
+  Installation From Source
+  Exercise: Install some packages on your VM, OS and Langauge
+  Exercise: Build a package from source
+  Further Reading: ???
+
+Questions, Answers, and Documentation
+  Man Pages
+    - Part of the Package Installation Process
+  Project Docs
+    - Usually online
+  Tutorials
+    - 3rd Party
+  Question & Answers
+    - Stack Overflow FTW
+  Talk to People
+    IRC
+      Link to IRC Tutuorial
+      Etiquette
+      Terminology
+    Meatspace
+  Exercise: Get on IRC, Join #devopsbootcamp
+  Further Reading: ???
+
+Version Control
+  Tool: Text Editor Nano
+  What VCS is
+  What VCS solves
+  Types of VCS
+    Distributed
+    Centralized
+  Tool: Git
+  Using Git
+    Repo, Code, Commit, Branch
+    Cloning, Forking, Pulling
+  Exercise:
+    Create a repository
+    Add 'code'
+    Commit Code
+    Make changes
+    Commit changes.
+    Check logs
+    etc
+  What not to do
+  Workflow(s)
+  Centralizing Git
+    GitHub, GitLab, BitBucket, Gitolite
+  Further Reading: ???
+
+Programming
+  Paradigms
+    Data Types
+    Variables & Constants
+    Flow-Control
+    Input & Output
+    Functions & Objects
+    Libraries & Frameworks
+    Note: Psuedocode
+    Exercise: Psuedocode Hello <pig-latin-name>
+  Python specifics
+    REPL
+  Exercise: Hello <pig-latin-name>
+  Further Reading: ???
+
+Frameworks
+  What a framework is
+    The job of a framework
+    Why and when to use a framework
+    Types of frameworks
+  Web Frameworks
+    Static vs Dynamic Sites
+    Popular Web Frameworks
+      Python
+      Ruby
+      Node.js
+    URL Routing
+    Templating Engines (mad-libs!)
+    Exercise: Dynamic Website
+  Further Reading: ???
+
+Testing
+  What We Mean by 'Testing'
+  Why Tests Matter
+  Types of Testing
+    Unit
+    Inteagraition
+    Systems
+  Concept: Mocking
+  Testing Frameworks
+    Frameworks vs 'The Hard Way'
+    Teardown, Setup
+  Exercise: Using Python ``unittest``
+  Further Reading: ???
+
+Continuous Integration
+  Automated Testing Concepts
+  Tool: Travis CI
+  Exercise: Setup Travis
+  Further Reading: ???
+
+Security
+  Types of Security
+  Threat Models
+  Authentication, Autorization, and Identity
+  Passwords
+  Certificates and HTTPS
+  Types of Attacks
+    Code Injection
+    Web Server Attacks
+  Discovering Vulnerabilities
+  When and How to Worry
+  Reporting Vulnerabilities
+  Exercise: ???
+  Further Reading: ???
+
+Databases
+  What is a database
+    Concept: relational Algebra
+  When to use a database
+    Lots of data
+    Concurrent Read/Writes
+  When *not* to use a database
+  Types of databases
+    SQL
+    NoSQL
+  Database Concepts
+    Schemas
+    Migrations
+  Raw SQL Syntax
+    SELECT
+    INSERT
+    UPDATE
+    DELETE
+  Setting up a *Real* Database
+    Installing MySQL
+    Configuration
+    Users
+  Exercise: Use Raw SQL (REPL?)
+  Ways to Use a Database
+    Raw queries
+    Object Relational Mappers
+  Exercise: Use ORM to do same thing
+  Further Reading: ???
+
+Development Processes & Tools
+  Code Analysis
+  Deugging Tools
+    CLI Tools
+    Web Consoles
+    Linters
+      Activity: Fix badly written code.
+  Integrated Development Environments
+  Style Guides
+    Linux Kernel Standards
+    Enforced by Linuters
+  Code Coverage
+  Dependency Isolation
+    Python: Virtual Environments
+    Other Examples of DI
+  Development Server
+  Further Reading:
+    - Linux Kernel Standards
+    - CS 362
+
+Networking
+  Further Reading: ???
+
+DNS
+  What DNS is
+  What DNS solves
+    Obligatory History Lesson
+  How DNS works
+  A DNS Request
+  The DNS Tree
+    The Root
+    The Thirteen
+  DNS Records
+    A Records
+    MX Records
+    NS Records
+    NXDOMAIN Records
+    SOA Records
+    CNAME Records
+  Example: Recursive
+  Activity: Run a DNS Server
+  Further Reading: ???
+
+Configuration Management
+  What Configuration management is
+  What CM solves
+    A short history of CM
+  Concept: Infrastructure as Code
+  Push VS Pull CM Models
+  Tools
+    Chef
+    Puppet
+    CFEngine
+    Ansible
+    SaltStack
+  Declaration Configuration
+    Puppet Example
+    Chef Example
+    Ansible Example
+  Activity: Use Ansible to provision `localhost`
+  Further Reading: ???
+
+Containers
+  What a container is
+    Not a Virtual Machine
+    CGroups + Systemd
+  Upsides of containers
+    Faster / Slimmer
+  Downsides of containers
+    Strictly less isolation
+    Using one kernel
+      Security concerns
+      Practical concerns
+  Tools
+    Docker
+    RKT
+  Further Reading: ???
+
+Cloud Infrastructure
+  What Cloud Infra is
+  What the Cloud Looks like
+  Advantages over bare hardware
+  Private clouds
+  PUblic clouds
+  Cloud + Configuration Management
+  Cattle vs Pets
+    Advatages
+    Disadvantages
+  Virtual Machines vs Containers
+  Further Reading: ???
+
+Contributing to OSS
+  What Open Source is
+  Why Get involved
+    How you benefit
+    How the community benefits
+  Accessing a new community
+  How to get involved
+    [Setup] Documentation
+    Testing
+    Ask questions
+    Also writing code
+  Finding a project
+  First steps
+  Know your licenses
+  Activity: Find a FOSS project to contribute to
+  Further Reading: ???

@@ -44,7 +44,7 @@ Control Statements
 
 * The order of execution of statements
 * If / Else If / Else and other conditionals
-* For / While loop
+ * For / While loop
 
 Input & Output (I/O)
 --------------------

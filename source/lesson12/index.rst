@@ -214,6 +214,7 @@ Authoritative (SOA)
 * The NS servers for each (g)TLD contain SOA records for each registered domain
 * and so on...
 
+
 Recursive Example
 -----------------
 
