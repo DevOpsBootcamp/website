@@ -4,12 +4,14 @@
 Lesson 15: Dev Processes & Tools
 ================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/development-processes-tools.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/development-processes-tools.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -55,7 +57,7 @@ Code Analsis
 Static
     These tools look at your code *files* and never actually run the program.
 
-    Includes Linting and Type Checking.  
+    Includes Linting and Type Checking.
 
 Dynamic
     Dynamic Code Analysis tools actually run your code and make verifications

@@ -4,12 +4,14 @@
 Lesson 2: Operating Systems
 ===========================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/operating-systems.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/operating-systems.html
+.. _Video:
 
 .. include:: unfinished.txt
 

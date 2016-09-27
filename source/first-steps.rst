@@ -4,12 +4,14 @@
 Lesson 1: First Steps
 =====================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/first-steps.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/first-steps.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -182,7 +184,7 @@ Windows:
     2. Install an SSH Client (`install Putty`_)
 
     3. Log into your remote Linux environment using the credentials given to
-       you. 
+       you.
 
         ii. Under ``Host Name (or IP address)`` enter ``<user>@<host>``, under
             ``Port`` enter ``<port>``.

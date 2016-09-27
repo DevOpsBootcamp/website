@@ -4,12 +4,14 @@
 Lesson 16: DNS
 ==============
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/dns.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/dns.html
+.. _Video:
 
 .. warning::
 
@@ -33,7 +35,7 @@ Video     FILL THIS IN
     - What DNS Solves.
     - History Lesson
     - DNS Records
-    
+
         - A
         - MX
         - NS
@@ -161,14 +163,14 @@ DNS Records
     There are a few core types of DNS records, each surving their own purpose.
 
 ======== =================================
-Acronym  Name                             
+Acronym  Name
 -------- ---------------------------------
-A, AAAA  IP Addresses                     
-MX       SMTP Mail Exchangers             
-NS       Name Servers                     
-SOA      DNS Zone Authority               
-PTR      Pointers for Reverse DNS Lookups 
-CNAME    Domain Name Aliases              
+A, AAAA  IP Addresses
+MX       SMTP Mail Exchangers
+NS       Name Servers
+SOA      DNS Zone Authority
+PTR      Pointers for Reverse DNS Lookups
+CNAME    Domain Name Aliases
 ======== =================================
 
 

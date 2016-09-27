@@ -4,12 +4,14 @@
 Lesson 19: Cloud Infrastructure
 ===============================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/cloud-infrastructure.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/cloud-infrastructure.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -29,7 +31,7 @@ Video     FILL THIS IN
     - Public Clouds
     - Cloud + Configuration Management
     - Cattle VS Pets
- 
+
 
 What the Cloud Looks Like
 -------------------------
@@ -81,7 +83,7 @@ Advantages over Bare Hardware
     either needs to scale fast, be cost effective, or will only exist for a
     short period of time.
 
-    **TLDR:** Here is why you'd want to use The Cloud: 
+    **TLDR:** Here is why you'd want to use The Cloud:
 
 - **Ephemeral:** Creating and Destroying operating systems is quick and
   painless.
@@ -90,7 +92,7 @@ Advantages over Bare Hardware
 
 - **Low startup cost:** Initial investment is cheap, <$100 as opposed to
   >$1,000+. (unless you are running a private cloud, more on that in a
-  second).  
+  second).
 
 
 Private Clouds

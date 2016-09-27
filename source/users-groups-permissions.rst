@@ -4,12 +4,14 @@
 Lesson 4: Users, Groups, Permissions
 ====================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/users-groups-permissions.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/users-groups-permissions.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -215,7 +217,7 @@ Root:
     [... installs correctly ...]
 
 .. nextslide::
-    
+
 .. image:: /static/xkcd_149.png
     :align: center
     :target: https://xkcd.com/149/

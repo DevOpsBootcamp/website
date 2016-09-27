@@ -4,12 +4,14 @@
 Lesson 3: Shell Navigation
 ==========================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/shell-navigation-os.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/shell-navigation-os.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -93,7 +95,7 @@ Navigation Concepts
     Invoking a Program
       Invoking a program is simple: **type the name of the program into
       the terminal and press** ``Enter``.
-      
+
       For instance, to start ``top`` enter ``top`` in your shell and press
       the ``Enter`` key.
 

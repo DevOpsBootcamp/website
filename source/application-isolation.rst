@@ -4,12 +4,14 @@
 Lesson 18: Application Isolation
 ================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/application-isolation.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/application-isolation.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -162,7 +164,7 @@ Containers
     processes), the container is told that it's processes (``sh`` and ``ps``
     in this case) are the only one in this environment.  In theory this
     prevents a malicious attack from inside the container from invading the
-    host OS. 
+    host OS.
 
 
 Not a Virtual Machine

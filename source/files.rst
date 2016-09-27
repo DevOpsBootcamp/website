@@ -4,12 +4,14 @@
 Lesson 5: Files
 ===============
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/files.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/files.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -163,7 +165,7 @@ Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
         The ``.`` and ``..`` at the beginning of that ``ls -a`` output are
         file representations of the current working directory (``.``) and the
         parent directory (``..``).
-    
+
 
 
 Finding Metadata with 'ls -l'

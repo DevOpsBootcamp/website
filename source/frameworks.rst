@@ -4,12 +4,14 @@
 Lesson 10: Frameworks
 =====================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/frameworks.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/frameworks.html
+.. _Video:
 
 .. include:: unfinished.txt
 

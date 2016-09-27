@@ -4,12 +4,14 @@
 Lesson 9: Programming
 =====================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/programming.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/programming.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -40,7 +42,7 @@ Programming is a big topic.
     programming.  Don't worry, you'll be coding soon.
 
 
-Note: Pseudo-code 
+Note: Pseudo-code
 ~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
@@ -152,7 +154,7 @@ Flow-Control
     The instructions which specify when code is executed.
 
 .. ifnotslides::
-    
+
     Think of your program's flow-control as water running in a stream.
     Sometimes the stream hits a rock and flows around, or a reaches a fork in
     the stream, causing it to diverge permanently.  Occasionally the stream
@@ -520,7 +522,7 @@ Python Control Flow
 
 .. ifnotslides::
 
-    Below is an example of flow-control in Python. 
+    Below is an example of flow-control in Python.
 
     **Note** You test equality (is x equivalent to y) with ``==`` not ``=``.
 

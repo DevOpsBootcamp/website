@@ -4,12 +4,14 @@
 Lesson 7: Questions, Answers, Docs
 ==================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/questions-answers-documentation.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/questions-answers-documentation.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -37,7 +39,7 @@ When in doubt
 
     When you're on the commandline you're not expected to remember every
     command, and especially not every flag.  Since we don't all have minds
-    like a steel-trap, programs are well documented, and getting help is 
+    like a steel-trap, programs are well documented, and getting help is
     as easy as typing ``--help``.
 
 ::
@@ -199,7 +201,7 @@ Questions and Answers
     :align: center
     :alt: XKCD 979, Wisdom of the Ancients
     :target: https://xkcd.com/979/
-    
+
 
 How to Talk to People
 ---------------------

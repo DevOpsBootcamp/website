@@ -4,12 +4,14 @@
 Lesson 8: Version Control
 =========================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/version-control.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/version-control.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -188,7 +190,7 @@ Types of VCS
     Distributed VCS
         *"I'm going to work over here for a while and tell you about what I
         did later."*
-        
+
         - Git
         - Mercurial
 
@@ -215,7 +217,7 @@ Types of VCS
         Distributed version control systems are those in which each person
         working on a project downloads a local copy of the project, makes
         their changes, and manually fetches changes from other copies.
-        
+
     Examples include:
         - Git
         - Mercurial
@@ -408,7 +410,7 @@ What not to do with Git
     Do not make redundant commits or revert commits.
         After making a commit, use ``git commit --amend`` if you want to make
         changes to avoid cluttering your history with *Oops, changing that*
-        messages.  
+        messages.
 
     Don't wait too long between commits.
         Commits are cheap and you can never make too many.  If you wait too
@@ -460,7 +462,7 @@ Gitlab
 Github
     Very popular. Not Open Source but free for Open Source projects.
 
-Bitbucket 
+Bitbucket
     Also popular, similar to Github, unlimited free private and public
     repositories.
 
