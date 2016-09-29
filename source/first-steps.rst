@@ -79,8 +79,8 @@ TODO: What Vocabulary Do *You* Know?
     cheeky name.  Try them out if you don't feel confident in a topic.
 
 
-Notations
----------
+Notation
+--------
 
 .. ifnotslides::
 
@@ -95,6 +95,22 @@ Notations
 
 - Literal (copy this exactly)
     - ``copy_me_exactly``
+
+- Comments (parts of the code just for humans)
+    - ``this_is(code)  # everything after the octothorp is a comment!``
+    - ``other_code(line)  // This can also be a comment.  It depends on the
+      langauge!``
+
+.. ifnotslides::
+
+    We try to write code-blocks so you can copy them verbatim into a file or
+    into your terminal and hit *Enter* to see it run (unless it's psuedo code!)
+
+    Every language has it's own comment symbol.  The common ones are ``#``,
+    ``//``, and ``/* ... */`` .  If you see that in a code-block it denotes a
+    comment block.
+
+.. nextslide::
 
 - Code-block:
 
@@ -257,9 +273,9 @@ set.
 Further Reading
 ---------------
 
-- `install Putty`_
-- `install Vagrant`_
-- `Virtual Machines`_
-- `install VirtualBox`_
+- More information on `Virtual Machines`_.
+- `install Putty`_ if you want to access a remote Linux box.
+- `install Vagrant`_ if you want to run a local Linux Virtual machine.
+- `install VirtualBox`_ in addition to Vagrant for local virtual machines.
 
 .. TODO: Add more Further Reading

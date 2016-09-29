@@ -186,10 +186,10 @@ Popular Linux System Package Managers
 
 Popular Linux Package Managers:
 
-``.deb`` / APT + ``dpkg``
+Apt (``.deb``, ``dpkg``)
     Used by default on the Debian, Ubuntu, Linux Mint operating systems.
 
-``.rpm`` / YUM + ``rpm``
+Yum (``.rpm``, ``rpm``)
     Used by default on the RedHat, CentOS, Fedora operating systems.
 
 .. ifnotslides::
@@ -210,10 +210,10 @@ Programming Langauge Package Managers
 
 Examples:
 
-- ``pip`` (Python)
-- ``gem``/``rubygems`` (Ruby)
-- ``cabal`` (Haskell)
-- ``npm`` (NodeJS)
+- Python: ``pip``
+- Ruby: ``gem``, ``rubygems``
+- Haskell: ``cabal``
+- NodeJS: ``npm``
 - ... and so on forever ...
 
 

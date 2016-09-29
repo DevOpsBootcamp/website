@@ -166,20 +166,17 @@ GNU/Linux
 
     *Welcome to the Family*
 
-.. image:: /static/Tux.png
-    :align: right
-    :alt: Linux Tux Logo
-
-.. image:: /static/gnu.jpg
-    :align: left
-    :alt: GNU Logo
+.. image:: /static/gnu-tux.png
+    :align: center
+    :alt: GNU+Linux Logo
 
 .. ifnotslides::
 
+    |
+
     **Linux** is the *kernel* the powers many *flavors* of **GNU/Linux**.  Each
-    flavor was created because of some *philosophical*, *technical*, or
-    *social* difference in opinions with the existing flavors of Linux *on
-    the market*.
+    flavor was created because of *philosophical*, *technical*, or *social*
+    difference in opinions with the existing flavors of Linux *on the market*.
 
     The reason some people call it **GNU**/Linux is because the OS you use is a
     Linux *kernel* with GNU *utilities* on top of it; things like basic
@@ -201,7 +198,7 @@ Flavors of Linux
     are grouped into *families* based on their operating system ancestry.
     `More Information`_.
 
-- Deian
+- Debian
     - Ubuntu
         - LinuxMint
 - RedHat
@@ -217,11 +214,28 @@ Flavors of Linux
 .. _More Information: https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg
 
 
-TODO
-----
+TODO: Pop Quiz
+--------------
 
-.. TODO: Add activity
-.. TODO: Add answer key
+#. What are some different types of Operating Systems?
+#. What constitutes a 'Distribution' of Linux?
+#. How is Linux different from Windows? OSX?
+#. How is Debian different from Gentoo?
+
+.. ifnotslides::
+
+    #. Single/Multi-user OS, Embedded OS, Real-time OS, Single/Multi-tasking
+       OS.
+    #. Distros are a version of Linux which is *distributed* to others.  Your
+       personal installation, with all of it's tricked out changes, is not a
+       distro, but if you were to package it into an ISO and have other people
+       download it, that would be a distro.
+    #. Linux is different from Windows in that it is a Unix-like OS, and Free &
+       Open Source.  It is different from OSX in that it is Free & Open Source.
+    #. Each distro (including Debian vs Gentoo) differ in ideology.  Gentoo
+       wants to be a Linux distro that does one thing well while Debian wants
+       to do something different well.  Very few distros have identical
+       philosophies.
 
 
 Further Reading
@@ -242,4 +256,15 @@ OSU Courses:
             - Building kernel modules
             - Memory management
 
-.. TODO: Add more Further Reading for independent students.
+Free Online Resources:
+    `OSDev.org`_  is a wiki dedicated to helping people develop their own
+    operating systems.  It's a big leap from this lesson, but great if you're
+    interested in learning the nitty-gritty.
+
+    `Operating Systems Design and Implementation`_ by Andrew S. Tenenbaum is a
+    classsic in the world of OS Development.  It's also a big leap, but can
+    teach you more about how Operating Systems work than you ever thought there
+    was to know.
+
+.. _Operating Systems Design and Implementation: https://amzn.com/0136386776
+.. _OSDev.org: http://wiki.osdev.org/Main_Page

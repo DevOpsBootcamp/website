@@ -351,3 +351,7 @@ Further Reading
 ---------------
 
 .. TOOD: Add furthe reading
+.. suggestions:
+.. - getting on irc docs
+.. - stack overflow sites
+.. - bolgpost on this kind of topic

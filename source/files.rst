@@ -80,7 +80,7 @@ Yes. Except the things that aren't..
     and ``close`` function calls to do everything from networking to printing.
 
     What does that mean exactly?  Well let's say you're programming an
-    iterface for a medical device that **streams** data from a sensor.  In
+    interface for a medical device that **streams** data from a sensor.  In
     Linux you can write the to look something like this:
 
 .. code:: cpp
@@ -259,6 +259,43 @@ Editing Metadata
     $ chmod o-rw    # Stops all non owners from reading and writing the file.
 
 
+Executing a File?
+-----------------
+
+.. ifslides::
+
+    When a file as the ``+x`` permission set, it can be run as a program.
+
+.. ifnotslides::
+
+    When a file has the ``+x`` bit set it means you can invoke this as if it
+    were a program.
+
+For instance:
+
+::
+
+    $ ls -alh my-script
+    -r-xr-xr-x 1 username username 1.9K Sep 27 09:44 my-script
+    $ cat my-script
+    #!/bin/bash
+    # The above line tells Linux how to invoke the script on my behalf.
+    echo 'This is a script being run without using bash!'
+    echo 'Heres a calendar:'
+    cal
+    $ ./my-script  # my-script is invoked just like a compiled binary!
+    This is a script being run without using bash!
+    Heres a calendar:
+        October 2016
+    Su Mo Tu We Th Fr Sa
+                       1
+     2  3  4  5  6  7  8
+     9 10 11 12 13 14 15
+    16 17 18 19 20 21 22
+    23 24 25 26 27 28 29
+    30 31
+
+
 Types of Files
 --------------
 
@@ -280,6 +317,28 @@ Types of Files
 - ``d`` is a directory
 - ``b`` is a block device
 - ``l`` is a symlink
+
+
+Directories
+-----------
+
+*Directories are also files!*
+
+- ``+r`` allows you to read the contents of the directory.
+- ``+w`` allows you to add files to the directory.
+- ``+x`` allows you to use the directory at all.
+
+::
+
+    $ ls -alh | grep foobarbaz
+    drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
+    $ ls -alh foobarbaz   # Below is the literal output, not psuedo-output
+    ls: cannot access foobarbaz/.: Permission denied
+    ls: cannot access foobarbaz/..: Permission denied
+    total 0
+    d????????? ? ? ? ?            ? .
+    d????????? ? ? ? ?            ? ..
+
 
 TODO: Messing with Files
 ------------------------

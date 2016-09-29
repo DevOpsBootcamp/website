@@ -82,11 +82,11 @@ Navigation Concepts
 .. ifslides::
 
     - **Invoking a Program:** Type the command, press enter.
-    - **Flags** / ``-v`` / ``--version``: Specify desired program behavior.
+    - **Flags** (``-v``, ``--version``): Specify desired program behavior.
     - **Environment Variables**: Variables in your shell.
-    - **Pipe** / ``|``: Makes the input to one command the output of another.
+    - **Pipe** (``|``): Makes the input to one command the output of another.
     - **Directory**: A folder.
-    - **Directory Root** / **Directory Tree**: The abstract directory
+    - **Directory Root**, **Directory Tree**: The abstract directory
       structure.
     - **The** ``$HOME`` **Directory** (``~``): Where you *'live'*.
 
@@ -250,23 +250,23 @@ Special Characters
     character, so you can't use them willy-nilly.  You should know what those
     are and what they mean.
 
-``*`` / Wildcard
+Wildcard (``*``)
     Used as a stand-in for any character(s).
 
     **Example:** ``cat *.log`` cats all files in the current working directory
     ending in ``.log``.
 
-``$`` / End of line
+End of line (``$``)
     Used to specify the end of a regex. We'll cover what regex is later.
 
-``{ }`` / Curl braces
+Curl braces (``{ }``)
     Used to specify a set.
 
     **Example:** ``ls {foo,bar,baz}ley-thing`` expands to ``ls fooley-thing
     barley-thing bazley-thing``
 
 Escape special characters (treat them as normal characters) with the escape
-character ``\``.
+character (``\``).
 
 
 Type Less, Tab More
@@ -295,8 +295,13 @@ TODO
 .. They've already changed their passwords, what else would be a good
 .. challenge?
 
+
 Further Reading
 ---------------
 
-.. TODO: Add further reading
-.. An introduction to bash programming?
+`BASH Programming - Introduction HOW-TO`_
+    A free online resoruce of learning bash programming.  Covers some concepts
+    we'll get to later in DOBC, but a good resoruce to have on hand.
+
+.. _BASH Programming - Introduction HOW-TO:
+      http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html

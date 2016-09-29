@@ -120,7 +120,7 @@ What Users Can Do
 
     $ su $USER          # become user, with THEIR password
     $ su                # become root, with root's password
-    $ sudo su -         # use user password instead of root's
+    $ sudo su -         # use your password instead of root's
     $ sudo su $USER     # become $USER with your password
 
 - Act as themselves.
