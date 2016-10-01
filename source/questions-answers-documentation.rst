@@ -272,6 +272,12 @@ TODO Getting on IRC
     $ ssh <username>@<preferred shell host>
     $ screen -dr IRC
 
+.. ifnotslides::
+
+    If you're not interested in using the commandline there also an assortment
+    of *graphical* IRC clients including XChat/Hexchat (newer), MIRC, and
+    KiwiIRC.  Look those up if you're interested in them.
+
 
 Connecting and Setup
 ~~~~~~~~~~~~~~~~~~~~
@@ -340,8 +346,8 @@ Asking for Help
 
 It's okay to ask for help.  Here are some things to keep in mind:
 
-#. As yourself what should be happening?
-#. As yourself what is actually happening?
+#. Ask yourself what should be happening?
+#. Ask yourself what is actually happening?
 #. Google the problem(s).
 #. Skim the manuals of each component.
 #. Identify a friend, mentor, or IRC channel who could help.
@@ -360,6 +366,7 @@ Further Reading
 .. - stack overflow sites
 .. - bolgpost on this kind of topic
 
-* `About ``Info```_
+* `About info`_: ``info`` is an alternative to man that some distros use
+  instead.
 
-.. _About ``Info``: http://www.computerhope.com/unix/info.htm
+.. _About info: http://www.computerhope.com/unix/info.htm

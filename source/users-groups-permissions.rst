@@ -55,6 +55,7 @@ You... ish.
 
 Sometimes robots are users too: Apache, Mailman, ntp.
 
+
 What a User has
 ~~~~~~~~~~~~~~~
 
@@ -136,6 +137,7 @@ What Users Can Do
     :alt: Sudoers Naught List
     :target: https://www.xkcd.com/838/
 
+
 Managing Groups and Users
 -------------------------
 
@@ -184,6 +186,20 @@ Managing Groups and Users
     :align: center
 
 
+Examples of Non-Human Users
+---------------------------
+
+.. ifnotslides::
+
+    As we mentioned above there's a few users that aren't real people, but
+    users all the same (according to Linux)!  Below are a few examples of
+    those.
+
+- mailman: For the mailing list program.
+- apache: For the HTTP Server.
+- postfix: For the other mail program.
+
+
 Root and Sudo
 -------------
 
@@ -226,7 +242,7 @@ Root:
 .. warning::
 
     Acting as root is dangerous!  You can accidentally delete your filesystem,
-    forcing you to completley reinstall your OS!  **Type carefully.**
+    forcing you to completley re-install your OS!  **Type carefully.**
 
 
 TODO
@@ -247,6 +263,6 @@ Further Reading
 
 .. TODO: Add Further Reading
 
-* `Understanding Linux File Permissions`_
+- `Understanding Linux File Permissions`_
 
 .. _Understanding Linux File Permissions: https://www.linux.com/learn/understanding-linux-file-permissions

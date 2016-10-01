@@ -52,8 +52,8 @@ About Files
 Files have:
 
 - Owners
-- Permissions
-- An inode
+- Permissions (what different people can do with it)
+- An inode (a low-level description of the file)
 - Size
 - Filename
 
@@ -373,5 +373,7 @@ Further Reading
 .. TODO: Add Further Reading
 
 * `Permission Mishaps`_
+* `Access the Linux kernel using the /proc filesytem`_
 
 .. _Permission Mishaps: http://serverfault.com/questions/93752/linux-permission-when-things-go-wrong-mishaps-gotchas-for-newbies/93759
+.. _Access the Linux kernel using the /proc filesytem: http://www.ibm.com/developerworks/library/l-proc/index.html

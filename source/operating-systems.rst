@@ -70,11 +70,12 @@ Anatomy of an OS
 
     The general diagram, from **you -> hardware**, looks like this:
 
-- **User Interface:** What you interact with.
+- **User Interface:** What you interact with.  Window Managers for instance.
 - **Application Layer:** What developers use to make software run.
 - **Kernel:** *The Core of the OS*.  Makes communication between hardware and
   applications sane.
-- **Hardware:** What does the actual computations.
+- **Hardware:** What does the actual computations.  The thing your keyboard is
+  plugged into.
 
 .. ifnotslides::
 
@@ -101,9 +102,17 @@ Types of Operating Systems
     own *types* of applications they run and as a result they have specialized
     OS's to make those applications operate optimally.
 
+    .. note::
+
+        We list these as seperate types of OS, but rarely will an OS have
+        mutually exclusive types.
+
+
     **Single/Multi-tasking**
         An OS may only need to run one task at a time while another OS needs to
         work on many tasks in parallel.
+
+        *Ex: DOS vs Linux and moderns Windows.*
 
     **Single/Multi-user**
         Some OS host many users interacting with one-another.  More specialized
@@ -114,7 +123,8 @@ Types of Operating Systems
         etc).
 
     **Real-time**
-        For precise timing applications (e.g., life or death situations).
+        For precise timing applications (e.g., life or death situations, or
+        music production!).
 
 .. ifslides::
 
@@ -177,9 +187,10 @@ GNU/Linux
 
     |
 
-    **Linux** is the *kernel* the powers many *flavors* of **GNU/Linux**.  Each
-    flavor was created because of *philosophical*, *technical*, or *social*
-    difference in opinions with the existing flavors of Linux *on the market*.
+    **Linux** is the *kernel* the powers many *flavors* (or
+    Distros/Distributions) of **GNU/Linux**.  Each flavor was created because
+    of *philosophical*, *technical*, or *social* difference in opinions with
+    the existing flavors of Linux *on the market*.
 
     The reason some people call it **GNU**/Linux is because the OS you use is a
     Linux *kernel* with GNU *utilities* on top of it; things like basic
@@ -210,7 +221,6 @@ Flavors of Linux
     - Centos
 - Gentoo
     - ChromeOS
-        - CoreOS
 - **Slackware**
 - **ArchLinux**
 

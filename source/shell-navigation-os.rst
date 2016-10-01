@@ -127,7 +127,7 @@ Navigation Concepts
         **Example:** run this exact command: ``$ ps aux | grep $USER | less``.
 
         **Hint** Build this chain incrementally. First run ``ps aux``, then
-        add `` | grep $USER``, etc.
+        add ``| grep $USER``, etc.
 
     Directory
         A **directory is like a folder**.  You will find yourself "in a
@@ -184,7 +184,7 @@ Shell Scripts
 
     #!/bin/sh
     if [ $(whoami) == "root" ]; then
-      echo "Your root!"
+      echo "You're root!"
     else
       echo "Your username is $(whoami)"
       echo "Your home-directory is $HOME"
@@ -303,5 +303,10 @@ Further Reading
     A free online resoruce of learning bash programming.  Covers some concepts
     we'll get to later in DOBC, but a good resoruce to have on hand.
 
+`Running rm -rf / on Linux`_
+    This video demonstrates what happens when you 'delete your hard-drive' on
+    Linux.  A fun watch!
+
 .. _BASH Programming - Introduction HOW-TO:
       http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+.. _Running rm -rf / on Linux: https://youtu.be/D4fzInlyYQo

@@ -324,12 +324,12 @@ Using ``grep`` as an example:
 TODO: Install ``sl``
 --------------------
 
-- Install the ``git``, ``gcc``, ``make``, ``ncurses``, ``ncurses-libs``,
-  ``ncurses-devel`` packages via package manager.
+- Install the ``git``, ``gcc``, ``make``, ``ncurses-bin``, ``ncurses-base``,
+  ``libncurses5-dev``, and ``libncurses5-dev`` packages via package manager.
 
 ::
 
-    $ yum install git gcc make ncurses ncurses-libs ncurses-devel
+    $ sudo apt install git gcc make ncurses-bin ncurses-base libncurses5-dev libncurses5-dev
     [...]
 
 - Install ``sl`` from source into the directory ~/bin/.
@@ -357,6 +357,6 @@ Further Reading
 
 .. TODO: Add further reading
 
-* `More about APT`_
+- `More about APT`_
 
 .. _More about APT: https://debian-handbook.info/browse/stable/sect.apt-get.html
