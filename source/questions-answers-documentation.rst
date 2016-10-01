@@ -50,6 +50,7 @@ When in doubt
 Most programs allow you to pass a ``help`` flag which will print out basic
 usage. This is useful as a quick reference for how to use the program.
 
+
 Man Pages
 ---------
 
@@ -157,6 +158,9 @@ Sections of Man
    ``groff(7)``
 8. System administration commands (usually only for root)
 9. Kernel routines [Non standard]
+
+.. note:: Some distros use ``info`` instead of ``man``. To learn more about the
+          ``info`` command, see Further Reading.
 
 
 Project Docs
@@ -355,3 +359,7 @@ Further Reading
 .. - getting on irc docs
 .. - stack overflow sites
 .. - bolgpost on this kind of topic
+
+* `About ``Info```_
+
+.. _About ``Info``: http://www.computerhope.com/unix/info.htm

@@ -78,12 +78,15 @@ Anatomy of an OS
 
 .. ifnotslides::
 
-    The OS is what we call the middle two parts (Kernel and Application Layer)
-    of that list.  The **Kernel** is the core of the OS that can vary in size.
-    Some kernels are small (microkernels) while others are far-reaching
-    (monolithic), each implements some amount of API between hardware and
-    application, but it depends how much a given kernel takes responsiblity for
-    based on what the developers want to be responsible for.
+    The two middle parts (The Kernel and the Application Layer) of the diagram
+    are often put together and called an Operating System. However, the scope
+    of each layer is one of Computer Science's oldest and most contentious
+    philosophical debates. *Microkernels* such as Mach and MINIX only
+    implement a bare minimum interface to bridge the gap between software
+    and hardware. In a Microkernel, software such as device drivers and file
+    systems are separate from the kernel, and instead run in the Application
+    Layer. On the other hand, *Monolithic Kernels* such as Linux include
+    drivers, file systems, and other software as a part of the kernel.
 
 
 Types of Operating Systems
@@ -92,11 +95,11 @@ Types of Operating Systems
 .. ifnotslides::
 
     Most of us only interact with one or two OS's in a day: our phone OS and
-    workstation OS.  There are many other types of OS's depending on a variety
-    of needs.  Scientific computing for instance has different requirements
-    than a pace-maker or a GameBoy.  Each of these areas has their own *types*
-    of applications they run and as a result they have specialized OS's to make
-    those applications operate optimally.
+    personal computer OS.  There are many other types of OS's depending on a
+    variety of needs.  Scientific computing for instance has different
+    requirements than a pace-maker or a GameBoy.  Each of these areas has their
+    own *types* of applications they run and as a result they have specialized
+    OS's to make those applications operate optimally.
 
     **Single/Multi-tasking**
         An OS may only need to run one task at a time while another OS needs to
@@ -138,7 +141,7 @@ Popular Operating Systems
 
   - Linux
 
-    - Andriod
+    - Android
     - Debian
     - RHEL
 
@@ -261,7 +264,7 @@ Free Online Resources:
     operating systems.  It's a big leap from this lesson, but great if you're
     interested in learning the nitty-gritty.
 
-    `Operating Systems Design and Implementation`_ by Andrew S. Tenenbaum is a
+    `Operating Systems Design and Implementation`_ by Andrew S. Tanenbaum is a
     classsic in the world of OS Development.  It's also a big leap, but can
     teach you more about how Operating Systems work than you ever thought there
     was to know.

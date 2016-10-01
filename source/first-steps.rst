@@ -274,8 +274,8 @@ Further Reading
 ---------------
 
 - More information on `Virtual Machines`_.
-- `install Putty`_ if you want to access a remote Linux box.
-- `install Vagrant`_ if you want to run a local Linux Virtual machine.
-- `install VirtualBox`_ in addition to Vagrant for local virtual machines.
+- `Install Putty`_ if you want to access a remote Linux box.
+- `Install Vagrant`_ if you want to run a local Linux Virtual machine.
+- `Install VirtualBox`_ in addition to Vagrant for local virtual machines.
 
 .. TODO: Add more Further Reading

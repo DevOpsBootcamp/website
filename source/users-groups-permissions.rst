@@ -225,8 +225,8 @@ Root:
 
 .. warning::
 
-    Acting as root is dangerous!  You can accidentally delete you filesystem,
-    forcing you to completley re-install your OS!  **Type carefully.**
+    Acting as root is dangerous!  You can accidentally delete your filesystem,
+    forcing you to completley reinstall your OS!  **Type carefully.**
 
 
 TODO
@@ -246,3 +246,7 @@ Further Reading
 ---------------
 
 .. TODO: Add Further Reading
+
+* `Understanding Linux File Permissions`_
+
+.. _Understanding Linux File Permissions: https://www.linux.com/learn/understanding-linux-file-permissions

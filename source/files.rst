@@ -371,3 +371,7 @@ Further Reading
 ---------------
 
 .. TODO: Add Further Reading
+
+* `Permission Mishaps`_
+
+.. _Permission Mishaps: http://serverfault.com/questions/93752/linux-permission-when-things-go-wrong-mishaps-gotchas-for-newbies/93759
