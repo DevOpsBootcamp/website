@@ -4,12 +4,14 @@
 Lesson 6: Packages, Software, Libraries
 =======================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/packages-software-libraries.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/packages-software-libraries.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -184,10 +186,10 @@ Popular Linux System Package Managers
 
 Popular Linux Package Managers:
 
-``.deb`` / APT + ``dpkg``
+Apt (``.deb``, ``dpkg``)
     Used by default on the Debian, Ubuntu, Linux Mint operating systems.
 
-``.rpm`` / YUM + ``rpm``
+Yum (``.rpm``, ``rpm``)
     Used by default on the RedHat, CentOS, Fedora operating systems.
 
 .. ifnotslides::
@@ -208,10 +210,10 @@ Programming Langauge Package Managers
 
 Examples:
 
-- ``pip`` (Python)
-- ``gem``/``rubygems`` (Ruby)
-- ``cabal`` (Haskell)
-- ``npm`` (NodeJS)
+- Python: ``pip``
+- Ruby: ``gem``, ``rubygems``
+- Haskell: ``cabal``
+- NodeJS: ``npm``
 - ... and so on forever ...
 
 
@@ -322,12 +324,12 @@ Using ``grep`` as an example:
 TODO: Install ``sl``
 --------------------
 
-- Install the ``git``, ``gcc``, ``make``, ``ncurses``, ``ncurses-libs``,
-  ``ncurses-devel`` packages via package manager.
+- Install the ``git``, ``gcc``, ``make``, ``ncurses-bin``, ``ncurses-base``,
+  ``libncurses5-dev``, and ``libncurses5-dev`` packages via package manager.
 
 ::
 
-    $ yum install git gcc make ncurses ncurses-libs ncurses-devel
+    $ sudo apt install git gcc make ncurses-bin ncurses-base libncurses5-dev libncurses5-dev
     [...]
 
 - Install ``sl`` from source into the directory ~/bin/.
@@ -354,3 +356,7 @@ Further Reading
 ---------------
 
 .. TODO: Add further reading
+
+- `More about APT`_
+
+.. _More about APT: https://debian-handbook.info/browse/stable/sect.apt-get.html

@@ -4,12 +4,14 @@
 Lesson 4: Users, Groups, Permissions
 ====================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/users-groups-permissions.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/users-groups-permissions.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -52,6 +54,7 @@ You... ish.
     $ id        # user ID, group ID, and groups you're in
 
 Sometimes robots are users too: Apache, Mailman, ntp.
+
 
 What a User has
 ~~~~~~~~~~~~~~~
@@ -118,7 +121,7 @@ What Users Can Do
 
     $ su $USER          # become user, with THEIR password
     $ su                # become root, with root's password
-    $ sudo su -         # use user password instead of root's
+    $ sudo su -         # use your password instead of root's
     $ sudo su $USER     # become $USER with your password
 
 - Act as themselves.
@@ -133,6 +136,7 @@ What Users Can Do
     :align: center
     :alt: Sudoers Naught List
     :target: https://www.xkcd.com/838/
+
 
 Managing Groups and Users
 -------------------------
@@ -182,6 +186,20 @@ Managing Groups and Users
     :align: center
 
 
+Examples of Non-Human Users
+---------------------------
+
+.. ifnotslides::
+
+    As we mentioned above there's a few users that aren't real people, but
+    users all the same (according to Linux)!  Below are a few examples of
+    those.
+
+- mailman: For the mailing list program.
+- apache: For the HTTP Server.
+- postfix: For the other mail program.
+
+
 Root and Sudo
 -------------
 
@@ -215,7 +233,7 @@ Root:
     [... installs correctly ...]
 
 .. nextslide::
-    
+
 .. image:: /static/xkcd_149.png
     :align: center
     :target: https://xkcd.com/149/
@@ -223,7 +241,7 @@ Root:
 
 .. warning::
 
-    Acting as root is dangerous!  You can accidentally delete you filesystem,
+    Acting as root is dangerous!  You can accidentally delete your filesystem,
     forcing you to completley re-install your OS!  **Type carefully.**
 
 
@@ -244,3 +262,7 @@ Further Reading
 ---------------
 
 .. TODO: Add Further Reading
+
+- `Understanding Linux File Permissions`_
+
+.. _Understanding Linux File Permissions: https://www.linux.com/learn/understanding-linux-file-permissions

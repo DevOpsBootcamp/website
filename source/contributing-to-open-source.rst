@@ -4,12 +4,14 @@
 Lesson 20: Contributing to Open Source
 ======================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/contributing-to-open-source.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/contributing-to-open-source.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -80,7 +82,7 @@ Personal Benefit
     a great programmer, but you can get experience by contributing to *real*
     projects that people use.  Not only do you get coding experience but you
     also get experience:
-    
+
 - 'Learning the Ropes' of a substantial code-base
 - Working with others
 - Getting code reviewed
@@ -140,7 +142,7 @@ The Four Freedoms:
     is available, it is free when the code is available for anyone to use,
     anybody can try to contribute improvements, anybody can distribute their
     own versions (under the same license), and anybody can study the program.
-    
+
     Making the source code avaliable is *nice* but a project which is FOSS
     requires community effort as well as a technical one.  Encouraging
     contributions, documenting your code, mentorship, etc.  It isn't easy but
@@ -234,7 +236,7 @@ How to Get Involved
 -------------------
 
 .. ifnotslides::
-    
+
     There are a veriety of ways to get involved with an Open Source project,
     and not all of them are contributing code!
 

@@ -4,12 +4,14 @@
 Lesson 17: Configuration Management
 ===================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/configuration-management.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/configuration-management.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -138,7 +140,7 @@ Pull Model
 
     - Requires a daemon to be installed on all machines *and* a central
       authority to be setup.
-    
+
     - Scales well, difficult to manage.
 
 Push Model

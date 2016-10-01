@@ -4,12 +4,14 @@
 Lesson 7: Questions, Answers, Docs
 ==================================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/questions-answers-documentation.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/questions-answers-documentation.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -37,7 +39,7 @@ When in doubt
 
     When you're on the commandline you're not expected to remember every
     command, and especially not every flag.  Since we don't all have minds
-    like a steel-trap, programs are well documented, and getting help is 
+    like a steel-trap, programs are well documented, and getting help is
     as easy as typing ``--help``.
 
 ::
@@ -47,6 +49,7 @@ When in doubt
 
 Most programs allow you to pass a ``help`` flag which will print out basic
 usage. This is useful as a quick reference for how to use the program.
+
 
 Man Pages
 ---------
@@ -156,6 +159,9 @@ Sections of Man
 8. System administration commands (usually only for root)
 9. Kernel routines [Non standard]
 
+.. note:: Some distros use ``info`` instead of ``man``. To learn more about the
+          ``info`` command, see Further Reading.
+
 
 Project Docs
 ------------
@@ -199,7 +205,7 @@ Questions and Answers
     :align: center
     :alt: XKCD 979, Wisdom of the Ancients
     :target: https://xkcd.com/979/
-    
+
 
 How to Talk to People
 ---------------------
@@ -265,6 +271,12 @@ TODO Getting on IRC
     # to get back to irc:
     $ ssh <username>@<preferred shell host>
     $ screen -dr IRC
+
+.. ifnotslides::
+
+    If you're not interested in using the commandline there also an assortment
+    of *graphical* IRC clients including XChat/Hexchat (newer), MIRC, and
+    KiwiIRC.  Look those up if you're interested in them.
 
 
 Connecting and Setup
@@ -334,8 +346,8 @@ Asking for Help
 
 It's okay to ask for help.  Here are some things to keep in mind:
 
-#. As yourself what should be happening?
-#. As yourself what is actually happening?
+#. Ask yourself what should be happening?
+#. Ask yourself what is actually happening?
 #. Google the problem(s).
 #. Skim the manuals of each component.
 #. Identify a friend, mentor, or IRC channel who could help.
@@ -349,3 +361,12 @@ Further Reading
 ---------------
 
 .. TOOD: Add furthe reading
+.. suggestions:
+.. - getting on irc docs
+.. - stack overflow sites
+.. - bolgpost on this kind of topic
+
+* `About info`_: ``info`` is an alternative to man that some distros use
+  instead.
+
+.. _About info: http://www.computerhope.com/unix/info.htm

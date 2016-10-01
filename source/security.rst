@@ -4,12 +4,14 @@
 Lesson 13: Security
 ===================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/security.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/security.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -278,7 +280,7 @@ Certificates and HTTPS
 .. ifnotslides::
 
     Certiciates are what allows your computer to create a secure connection
-    with a server and transfer sensitive data across *the wire*. 
+    with a server and transfer sensitive data across *the wire*.
 
     HTTPS
         Hyper Text Transfer Protocol *Secure*.

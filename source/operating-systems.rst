@@ -4,12 +4,14 @@
 Lesson 2: Operating Systems
 ===========================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/operating-systems.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/operating-systems.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -68,20 +70,24 @@ Anatomy of an OS
 
     The general diagram, from **you -> hardware**, looks like this:
 
-- **User Interface:** What you interact with.
+- **User Interface:** What you interact with.  Window Managers for instance.
 - **Application Layer:** What developers use to make software run.
 - **Kernel:** *The Core of the OS*.  Makes communication between hardware and
   applications sane.
-- **Hardware:** What does the actual computations.
+- **Hardware:** What does the actual computations.  The thing your keyboard is
+  plugged into.
 
 .. ifnotslides::
 
-    The OS is what we call the middle two parts (Kernel and Application Layer)
-    of that list.  The **Kernel** is the core of the OS that can vary in size.
-    Some kernels are small (microkernels) while others are far-reaching
-    (monolithic), each implements some amount of API between hardware and
-    application, but it depends how much a given kernel takes responsiblity for
-    based on what the developers want to be responsible for.
+    The two middle parts (The Kernel and the Application Layer) of the diagram
+    are often put together and called an Operating System. However, the scope
+    of each layer is one of Computer Science's oldest and most contentious
+    philosophical debates. *Microkernels* such as Mach and MINIX only
+    implement a bare minimum interface to bridge the gap between software
+    and hardware. In a Microkernel, software such as device drivers and file
+    systems are separate from the kernel, and instead run in the Application
+    Layer. On the other hand, *Monolithic Kernels* such as Linux include
+    drivers, file systems, and other software as a part of the kernel.
 
 
 Types of Operating Systems
@@ -90,15 +96,23 @@ Types of Operating Systems
 .. ifnotslides::
 
     Most of us only interact with one or two OS's in a day: our phone OS and
-    workstation OS.  There are many other types of OS's depending on a variety
-    of needs.  Scientific computing for instance has different requirements
-    than a pace-maker or a GameBoy.  Each of these areas has their own *types*
-    of applications they run and as a result they have specialized OS's to make
-    those applications operate optimally.
+    personal computer OS.  There are many other types of OS's depending on a
+    variety of needs.  Scientific computing for instance has different
+    requirements than a pace-maker or a GameBoy.  Each of these areas has their
+    own *types* of applications they run and as a result they have specialized
+    OS's to make those applications operate optimally.
+
+    .. note::
+
+        We list these as seperate types of OS, but rarely will an OS have
+        mutually exclusive types.
+
 
     **Single/Multi-tasking**
         An OS may only need to run one task at a time while another OS needs to
         work on many tasks in parallel.
+
+        *Ex: DOS vs Linux and moderns Windows.*
 
     **Single/Multi-user**
         Some OS host many users interacting with one-another.  More specialized
@@ -109,7 +123,8 @@ Types of Operating Systems
         etc).
 
     **Real-time**
-        For precise timing applications (e.g., life or death situations).
+        For precise timing applications (e.g., life or death situations, or
+        music production!).
 
 .. ifslides::
 
@@ -136,7 +151,7 @@ Popular Operating Systems
 
   - Linux
 
-    - Andriod
+    - Android
     - Debian
     - RHEL
 
@@ -164,20 +179,18 @@ GNU/Linux
 
     *Welcome to the Family*
 
-.. image:: /static/Tux.png
-    :align: right
-    :alt: Linux Tux Logo
-
-.. image:: /static/gnu.jpg
-    :align: left
-    :alt: GNU Logo
+.. image:: /static/gnu-tux.png
+    :align: center
+    :alt: GNU+Linux Logo
 
 .. ifnotslides::
 
-    **Linux** is the *kernel* the powers many *flavors* of **GNU/Linux**.  Each
-    flavor was created because of some *philosophical*, *technical*, or
-    *social* difference in opinions with the existing flavors of Linux *on
-    the market*.
+    |
+
+    **Linux** is the *kernel* the powers many *flavors* (or
+    Distros/Distributions) of **GNU/Linux**.  Each flavor was created because
+    of *philosophical*, *technical*, or *social* difference in opinions with
+    the existing flavors of Linux *on the market*.
 
     The reason some people call it **GNU**/Linux is because the OS you use is a
     Linux *kernel* with GNU *utilities* on top of it; things like basic
@@ -199,7 +212,7 @@ Flavors of Linux
     are grouped into *families* based on their operating system ancestry.
     `More Information`_.
 
-- Deian
+- Debian
     - Ubuntu
         - LinuxMint
 - RedHat
@@ -208,18 +221,34 @@ Flavors of Linux
     - Centos
 - Gentoo
     - ChromeOS
-        - CoreOS
 - **Slackware**
 - **ArchLinux**
 
 .. _More Information: https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg
 
 
-TODO
-----
+TODO: Pop Quiz
+--------------
 
-.. TODO: Add activity
-.. TODO: Add answer key
+#. What are some different types of Operating Systems?
+#. What constitutes a 'Distribution' of Linux?
+#. How is Linux different from Windows? OSX?
+#. How is Debian different from Gentoo?
+
+.. ifnotslides::
+
+    #. Single/Multi-user OS, Embedded OS, Real-time OS, Single/Multi-tasking
+       OS.
+    #. Distros are a version of Linux which is *distributed* to others.  Your
+       personal installation, with all of it's tricked out changes, is not a
+       distro, but if you were to package it into an ISO and have other people
+       download it, that would be a distro.
+    #. Linux is different from Windows in that it is a Unix-like OS, and Free &
+       Open Source.  It is different from OSX in that it is Free & Open Source.
+    #. Each distro (including Debian vs Gentoo) differ in ideology.  Gentoo
+       wants to be a Linux distro that does one thing well while Debian wants
+       to do something different well.  Very few distros have identical
+       philosophies.
 
 
 Further Reading
@@ -240,4 +269,15 @@ OSU Courses:
             - Building kernel modules
             - Memory management
 
-.. TODO: Add more Further Reading for independent students.
+Free Online Resources:
+    `OSDev.org`_  is a wiki dedicated to helping people develop their own
+    operating systems.  It's a big leap from this lesson, but great if you're
+    interested in learning the nitty-gritty.
+
+    `Operating Systems Design and Implementation`_ by Andrew S. Tanenbaum is a
+    classsic in the world of OS Development.  It's also a big leap, but can
+    teach you more about how Operating Systems work than you ever thought there
+    was to know.
+
+.. _Operating Systems Design and Implementation: https://amzn.com/0136386776
+.. _OSDev.org: http://wiki.osdev.org/Main_Page

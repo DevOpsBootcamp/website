@@ -4,12 +4,14 @@
 Lesson 14: Databases
 ====================
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/databases.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/databases.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -325,7 +327,7 @@ Example:
     FROM
         nobel
     WHERE
-        yr = 1960 AND subject='medicine'; 
+        yr = 1960 AND subject='medicine';
 
 
 INSERT
@@ -334,7 +336,7 @@ INSERT
 .. ifnotslides::
 
     Insert statements create an entry into a table and populate the fields
-    appropriately.  
+    appropriately.
 
 Example:
 
@@ -473,7 +475,7 @@ Configuration
     is to edit the ``default_storage_engine`` option.
 
     InnoDB offers a lot of great features the default Database Engine does not:
-    
+
     - crash recovery
     - caching
     - foreign keys
@@ -595,7 +597,7 @@ Object Relational Mappers
     testing you use an in-memory SQLite database (very fast) and in production
     you use a PostgreSQL database.  Testing with a Postgres database is a pain
     to setup, but you probably wouldn't want to run SQLite in production.
-    
+
 - Maps an Object in an application to a database table or relationship.
 - Talks SQL to the database, your favorite language to you.
 - Lets you point to different databases with the same syntax.

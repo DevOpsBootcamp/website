@@ -4,12 +4,14 @@
 Lesson 5: Files
 ===============
 
-========= =====================================================================
-Homepage  http://devopsbootcamp.osuosl.org
-Content   FILL THIS IN
-Slides    FILL THIS IN
-Video     FILL THIS IN
-========= =====================================================================
+============= ============= ============= ==========
+`Homepage`_   `Content`_    `Slides`_     `Video`_
+============= ============= ============= ==========
+
+.. _Homepage: http://devopsbootcamp.osuosl.org
+.. _Content: http://devopsbootcamp.osuosl.org/files.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/files.html
+.. _Video:
 
 .. include:: unfinished.txt
 
@@ -50,8 +52,8 @@ About Files
 Files have:
 
 - Owners
-- Permissions
-- An inode
+- Permissions (what different people can do with it)
+- An inode (a low-level description of the file)
 - Size
 - Filename
 
@@ -78,7 +80,7 @@ Yes. Except the things that aren't..
     and ``close`` function calls to do everything from networking to printing.
 
     What does that mean exactly?  Well let's say you're programming an
-    iterface for a medical device that **streams** data from a sensor.  In
+    interface for a medical device that **streams** data from a sensor.  In
     Linux you can write the to look something like this:
 
 .. code:: cpp
@@ -163,7 +165,7 @@ Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
         The ``.`` and ``..`` at the beginning of that ``ls -a`` output are
         file representations of the current working directory (``.``) and the
         parent directory (``..``).
-    
+
 
 
 Finding Metadata with 'ls -l'
@@ -257,6 +259,43 @@ Editing Metadata
     $ chmod o-rw    # Stops all non owners from reading and writing the file.
 
 
+Executing a File?
+-----------------
+
+.. ifslides::
+
+    When a file as the ``+x`` permission set, it can be run as a program.
+
+.. ifnotslides::
+
+    When a file has the ``+x`` bit set it means you can invoke this as if it
+    were a program.
+
+For instance:
+
+::
+
+    $ ls -alh my-script
+    -r-xr-xr-x 1 username username 1.9K Sep 27 09:44 my-script
+    $ cat my-script
+    #!/bin/bash
+    # The above line tells Linux how to invoke the script on my behalf.
+    echo 'This is a script being run without using bash!'
+    echo 'Heres a calendar:'
+    cal
+    $ ./my-script  # my-script is invoked just like a compiled binary!
+    This is a script being run without using bash!
+    Heres a calendar:
+        October 2016
+    Su Mo Tu We Th Fr Sa
+                       1
+     2  3  4  5  6  7  8
+     9 10 11 12 13 14 15
+    16 17 18 19 20 21 22
+    23 24 25 26 27 28 29
+    30 31
+
+
 Types of Files
 --------------
 
@@ -278,6 +317,28 @@ Types of Files
 - ``d`` is a directory
 - ``b`` is a block device
 - ``l`` is a symlink
+
+
+Directories
+-----------
+
+*Directories are also files!*
+
+- ``+r`` allows you to read the contents of the directory.
+- ``+w`` allows you to add files to the directory.
+- ``+x`` allows you to use the directory at all.
+
+::
+
+    $ ls -alh | grep foobarbaz
+    drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
+    $ ls -alh foobarbaz   # Below is the literal output, not psuedo-output
+    ls: cannot access foobarbaz/.: Permission denied
+    ls: cannot access foobarbaz/..: Permission denied
+    total 0
+    d????????? ? ? ? ?            ? .
+    d????????? ? ? ? ?            ? ..
+
 
 TODO: Messing with Files
 ------------------------
@@ -310,3 +371,9 @@ Further Reading
 ---------------
 
 .. TODO: Add Further Reading
+
+* `Permission Mishaps`_
+* `Access the Linux kernel using the /proc filesytem`_
+
+.. _Permission Mishaps: http://serverfault.com/questions/93752/linux-permission-when-things-go-wrong-mishaps-gotchas-for-newbies/93759
+.. _Access the Linux kernel using the /proc filesytem: http://www.ibm.com/developerworks/library/l-proc/index.html
