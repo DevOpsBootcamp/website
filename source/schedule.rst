@@ -18,9 +18,9 @@ Fall
 =============== ================= ================ =======================================
 Lesson          Date/Time         Location         Description
 --------------- ----------------- ---------------- ---------------------------------------
-DevOps Daycamp  Oct 1, 10am-3pm   `OSU KEC 1001`_  DevOps Bootcamp Day-long Kickoff Event
-Fall Meeting 1  Unscheduled       Unscheduled      Unscheduled
-Fall Meeting 2  Unscheduled       Unscheduled      Unscheduled
+DevOps Daycamp  Oct 1, 10am-3pm   `OSU KEC 1001`_  DevOps DayCamp (DOBC Kickoff)
+Fall Meeting 2  Nov 5, 11am-3pm   `OSU KEC 1001`_  Files, Verson Control, Programming
+Fall Meeting 3  Dec 3, 11am-3pm   `OSU KEC 1001`_  Frameworks, Testing and CI
 =============== ================= ================ =======================================
 
 .. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
@@ -32,9 +32,6 @@ Winter
 ================= ================= ================ =======================================
 Lesson            Date/Time         Location         Description
 ----------------- ----------------- ---------------- ---------------------------------------
-Winter Meeting 1  Unscheduled       Unscheduled      Unscheduled
-Winter Meeting 2  Unscheduled       Unscheduled      Unscheduled
-Winter Meeting 3  Unscheduled       Unscheduled      Unscheduled
 ================= ================= ================ =======================================
 
 
@@ -44,7 +41,4 @@ Spring
 ================= ================= ================ =======================================
 Lesson            Date/Time         Location         Description
 ----------------- ----------------- ---------------- ---------------------------------------
-Spring Meeting 1  Unscheduled       Unscheduled      Unscheduled
-Spring Meeting 2  Unscheduled       Unscheduled      Unscheduled
-Spring Meeting 3  Unscheduled       Unscheduled      Unscheduled
 ================= ================= ================ =======================================
