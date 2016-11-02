@@ -94,7 +94,7 @@ Variables & Constants
 Data Types
 ~~~~~~~~~~
 
-    Data Types are a classification identifying one of various types of data.
+    Data types dictate how a piece of data should be handled within a program.
 
 .. ifslides::
 
@@ -222,7 +222,7 @@ Loops: For / While / Do While
             if foo is greater than five
                 print(foo)
             else
-                print(foo+" is too large")
+                print(foo+" is too small")
 
     **While** loops execute indefinitely (while something continues to
     be true).
