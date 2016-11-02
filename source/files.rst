@@ -73,15 +73,20 @@ Yes. Except the things that aren't..
 
 .. ifnotslides::
 
-    Unix and Linux systems represent everything from data, processes, memory,
-    sockets, etc as a file.
+    The common understanding of a file is "Some bit of data stored on your
+    hard drive/solid state drive/floppy disk/etc."  However, the concept of
+    files can be extended to include more than data.  Unix and Linux systems
+    represent nearly everything - data, processes, memory, sockets, and more -
+    as files.
 
-    This abstraction allows programmers to use the ``open`` ``read`` ``write``
-    and ``close`` function calls to do everything from networking to printing.
+    By representing everything as a file, Linux provides a consistent interface
+    to access all kinds of things.  This abstraction allows programmers to use
+    the ``open``, ``read``, ``write``, and ``close`` function calls to do
+    everything from networking to printing.
 
     What does that mean exactly?  Well let's say you're programming an
     interface for a medical device that **streams** data from a sensor.  In
-    Linux you can write the to look something like this:
+    Linux that interface might look something like this:
 
 .. code:: cpp
 
@@ -99,7 +104,7 @@ Yes. Except the things that aren't..
 
 .. ifnotslides::
 
-    This is a *very* simplified version of how this program would look, but
+    This is a *very* simplified version of how the program would look, but
     not by much.  The principles are still the same: you can interface with a
     device just like you would interface with a file.  By taking a file pointer
     (location of the file on disk) one can ``open``, ``read``, ``write``, and
@@ -122,7 +127,9 @@ Not necessary, more of a recommendation.
 
     Most of the time a file has enough metadata that the OS is able to figure
     out what type of file it is.  Unlike some operating systems, Linux does not
-    require (and doesn't care about) a file's extension.
+    require (and doesn't care about) a file's extension.  Also unlike *some*
+    operating systems, most Linux desktop environments will open an
+    unrecognized file in a text editor as plaintext.
 
 ::
 
@@ -189,9 +196,9 @@ Finding Metadata with 'ls -l'
 ======================================= =======================================
 type: ``d``                             user permissions: ``rwx``
 group permissions: ``rwx``              world permissions: ``r-x``
-references permissions: ``5``           user: ``test``
-size: ``4096``                          date: ``Nov  6:46``
-filename: ``Documents``
+references: ``5``                       user: ``test``
+group: ``test``                         size: ``4096``
+last_modified: ``Nov  6:46``            filename: ``Documents``
 ======================================= =======================================
 
 
@@ -200,9 +207,10 @@ Editing Metadata
 
 .. ifnotslides::
 
-    You can edit the metadata of a file by running the ``chown``, ``chmod``,
-    or ``chgrp`` commands to edit the owner, the read/write/execute, and the
-    group permissions respectively.
+    You can edit the metadata of a file with various commands, but some of the
+    most useful commands are ``chown``, ``chmod``, and ``chgrp`` commands.
+    These commands allow you to edit the owner, the read/write/execute, and the
+    group permissions of a file respectively.
 
 ::
 
@@ -217,6 +225,16 @@ Editing Metadata
 
     $ chgrp -R devops /home/$yourusername/bootcamp
       # Make the group devops own the bootcamp dir
+
+.. ifnotslides::
+
+    .. warning::
+
+        Use recursive metadata editing commands with caution. You can really
+        mess things up with a ``sudo chmod -R 777 /``. See "Permission Mishaps"
+        at the bottom of the page to learn more about common mistakes made with
+        file permissions, but a good rule of thumb is to avoid editing file
+        metadata by hand as much as possible outside your home directory.
 
 
 ``chmod`` and Octal Permissions
@@ -286,14 +304,8 @@ For instance:
     $ ./my-script  # my-script is invoked just like a compiled binary!
     This is a script being run without using bash!
     Heres a calendar:
-        October 2016
-    Su Mo Tu We Th Fr Sa
-                       1
-     2  3  4  5  6  7  8
-     9 10 11 12 13 14 15
-    16 17 18 19 20 21 22
-    23 24 25 26 27 28 29
-    30 31
+
+    .......
 
 
 Types of Files
@@ -301,9 +313,9 @@ Types of Files
 
 ::
 
-    drwxrwxr-x      5 test    test      4096    Nov  6 11:46 Documents
-    -rw-rw-r--      1 test    test         0    Nov 13 14:09 file.txt
-    drwxrwxr-x      2 test    test      4096    Nov  6 13:22 Pictures
+    drwxrwxr-x   5   test     test      4096    Nov  6 11:46 Documents
+    -rw-rw-r--   1   test     test         0    Nov 13 14:09 file.txt
+    drwxrwxr-x   2   test     test      4096    Nov  6 13:22 Pictures
     ----------     -------  -------  -------- ------------ -------------
         |             |        |         |         |             |
         |             |        |         |         |         File Name
