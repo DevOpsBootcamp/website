@@ -49,8 +49,8 @@ Note: Pseudo-code
 
     We will be using pseudo-code (fake code) to express and demonstrate
     concepts.  This isn't necessarily code you can run on a computer; it is
-    closer to english to make teaching *concepts* without getting bogged down
-    by exact *syntax* necessary in a formal programming language.
+    close to human language to enable teaching *concepts* without getting
+    bogged down by exact *syntax* necessary in a formal programming language.
 
 ::
 
@@ -70,22 +70,25 @@ Variables & Constants
 
 .. ifnotslides::
 
-    Variables are a name used to refer to a piece of data.  They are assigned
-    with some version of the syntax ``<variable name> = <variable value>``.
-    Some languages have *mutable* variables, meaning a variable can change
-    value, while others have *immutable* variables, meaning once a variable is
-    assigned it's value does not change.  Most languages support both types.
+    Variables are a name used to refer to a piece of data.  In languages that
+    use a syntax derived from C, variable assignment will usually look
+    something along the lines of ``<variable name> = <variable value>``.
+    Some languages have *mutable* variables, meaning a variable can change its
+    value, and others have *immutable* variables, meaning once a variable is
+    assigned it's value does not change.  A large majority of languages support
+    both kinds.
 
-    Constants are variables that are static (known before the program is run).
+    Constants are variables that are *static* (known before the program is
+    run).
 
 ::
 
     >>> x = "value"
     >>> print(x)
-    >>> -> "value"
+    value
     >>> x = "different value"
     >>> print(x)
-    >>> -> "different value"
+    different value
 
 
 Data Types
@@ -115,21 +118,26 @@ Data Types
 
 .. ifnotslides::
 
-    Static VS Dynamic Variables
-        Staticly typed languages are known at compile time.  When you run a
-        program it knows what is a number, what is a string, etc.
+    Static Vs Dynamic Typing
+        In statically typed languages, types are either known or deduced at
+        compile time.  When you run a program, the computer knows which
+        variables are integers, which variables are strings, etc.  Examples
+        of statically typed languages include C, C++, and Java.
 
-        Dynamicly typed langauges allow you to keep that open, so a variable
-        *might* be a string or a number, but it all depends on what happens in the
-        program.
+        In dynamically typed languages, you don't know what the type of a
+        variable is until it has been assigned.  Examples of dynamically typed
+        languages include Python, Ruby, and PHP.
 
-    Strongly Typed vs Weakly Typed
-        Weakly typed languages allow one to use variables of similar *types* in
-        place of one another.  A float can be used in place of an int, a char can
-        be used in place of a string, etc.
+    Strong Vs Weak Typing
+        Strongly typed languages enforce type safety. What this means is that
+        you can't, for example, use an ``int`` in the place of a ``float``.
+        However, this can be useful for catching bugs that would otherwise hide
+        themselves in large codebases and cause problems.
 
-        Strongly typed languages which do not permit this flexibility. An int is
-        an int and a float is a float.
+        Weakly typed languages are permissive in allowing types to act like
+        different types.  In reality, though, no language is either strongly
+        or weakly typed.  However, some languages are more strongly typed than
+        others.
 
     Common types:
         ======= ==========================
@@ -140,18 +148,14 @@ Data Types
         Array   [1, 2, 3], ['a', 'b', 'c']
         ======= ==========================
 
-        Types are a big topic in computer science and for a few decades they
-        were a big area of research.  What you need to know is that you'll be
-        dealing with data when you're programming and there are a few basic
-        data structures you can use to deal with this data.  Later you'll
-        learn about ways to build more complicated *data structures* to deal
-        with more complex ideas.
+    You can even combine types to create *data structures*. Data structures
+    are another important computer science concept and a topic for another day,
+    but they are immensely useful tools.
 
-
-Flow-Control
+Flow Control
 ~~~~~~~~~~~~
 
-    The instructions which specify when code is executed.
+    Flow Control allows you to execute code only if certain conditions are met.
 
 .. ifnotslides::
 
@@ -161,7 +165,7 @@ Flow-Control
     will go into a pool and whirl around for a bit and then return to the main
     path.  All of this until it eventually exits into a Sea or Ocean.
 
-    This isn't a perfect metaphore, but visualizing this as your program
+    This isn't a perfect metaphor, but visualizing this as your program
     starting at some single point and having the possibility to branch and
     loop may help you understand what it means for a program to *flow* and for
     you to control that flow.
@@ -175,7 +179,7 @@ Flow-Control
 Conditionals: If / Else If / Else
     Conditionals are used to tell the program when to execute commands.
 
-    They are usually created with the following syntax
+    In pseudocode, they usually look something like
 
     ::
 
@@ -186,8 +190,14 @@ Conditionals: If / Else If / Else
         else
             do a final thing
 
-    ``else if`` and ``else`` are not required. An `if` block on it's own
-    works.
+    In this conditional block, the first conditional statement is evaluated
+    to either True or False. If it's True, the program continues on inside
+    the block with ``do something``. If the conditional evaluates to False,
+    then the conditional inside ``else if`` is evaluated and handled
+    accordingly. You can have any number of ``else if`` statements. At the end,
+    the code inside the ``else`` statement executes if none of the other
+    conditions were met. The ``else if`` and ``else`` aren't required, but they
+    can be useful when you have more sophisticated control flow.
 
 .. nextslide::
 
@@ -458,11 +468,11 @@ Python
 Python Datatypes
 ~~~~~~~~~~~~~~~~
 
-* Python is a duckly-typed language. You don't need to declare the type
-  of your variables, Python will assume the type of your variable
-  and type it for you.
-* It's also dynamically typed, so you can change the type of a variable
-  at any time
+* You don't need to declare the type of your variables, Python will assume
+  the type of your variable and type it for you.
+* Python is a duckly-typed language. If it walks like a duck and quacks like
+  a duck, then Python treats it like a duck. As long as an object implements
+  the proper *interfaces*, it can act like any type it wants.
 
 .. figure:: /static/duckly.gif
     :align: center
@@ -481,7 +491,7 @@ list        ``['first', 'second']``
 dict (map)  ``{'key1': 'value', 'key2', 'value2'}``
 tuple       ``('value','paired value')``
 object      ``anObjects.variable == <value>``
-None        |
+**None**    |
 ==========  ===================================================================
 
 
@@ -491,7 +501,7 @@ Python Variables
 .. code-block:: python
 
     # This is a comment
-    bool = True # boolean
+    boolean = True # boolean
     name = "Lucy" # string
     age = 20 # integer
     pi = 3.14159 # float
@@ -499,7 +509,7 @@ Python Variables
     dictionary = {"pi":3.14159, "sqrt 1":1}
     winter = ('December', 'January', 'February', 'March')
 
-    print(name + " is " + age+1 + " this " winter[3])
+    print(name + " is " + str(age+1) + " this " winter[3])
 
 
 REPL: Try it out
@@ -513,7 +523,7 @@ Open a REPL (Read Evaluate Print Loop):
     >>> print("I'm in a REPL!")
     >>> name =      # <Your name>
     >>> age =       # <Your age>
-    >>> print( name + " is " + str(age) )
+    >>> print(name + " is " + str(age))
     >>> # We need to convert age from int to string so it can print!
 
 
