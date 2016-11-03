@@ -58,7 +58,7 @@ Note: Pseudo-code
         # This line is a comment, not run by the computer.
         # Comments are only for human eyes.
         if x is less than than 5
-            print "X is less than 5"
+            print "x is less than 5"
         else if x is less than than 10
             print "x is greater than five and less than 10"
         else
@@ -75,7 +75,7 @@ Variables & Constants
     something along the lines of ``<variable name> = <variable value>``.
     Some languages have *mutable* variables, meaning a variable can change its
     value, and others have *immutable* variables, meaning once a variable is
-    assigned it's value does not change.  A large majority of languages support
+    assigned its value does not change.  A large majority of languages support
     both kinds.
 
     Constants are variables that are *static* (known before the program is
@@ -160,10 +160,10 @@ Flow Control
 .. ifnotslides::
 
     Think of your program's flow-control as water running in a stream.
-    Sometimes the stream hits a rock and flows around, or a reaches a fork in
-    the stream, causing it to diverge permanently.  Occasionally the stream
-    will go into a pool and whirl around for a bit and then return to the main
-    path.  All of this until it eventually exits into a Sea or Ocean.
+    Sometimes the stream hits a rock and flows around, or it encounters a fork,
+    causing it to diverge permanently.  Occasionally the stream will go into a
+    pool and whirl around for a bit and then return to the main
+    path. Eventually, the water will exit into a sea or ocean.
 
     This isn't a perfect metaphor, but visualizing this as your program
     starting at some single point and having the possibility to branch and
@@ -190,6 +190,8 @@ Conditionals: If / Else If / Else
         else
             do a final thing
 
+.. ifnotslides::
+
     In this conditional block, the first conditional statement is evaluated
     to either True or False. If it's True, the program continues on inside
     the block with ``do something``. If the conditional evaluates to False,
@@ -205,9 +207,9 @@ Conditionals: If / Else If / Else
 
     Now consider a different problem: You want to look through a list of names
     and print out every one that starts with the letter 'Q'.  This is where
-    the **Loop** comes in to play.  A loop is exactly what it sounds like, it is
-    any construct that allows you to carry out some operation multiple times,
-    without having to copy and paste code for each time the commands are
+    the **Loop** comes in to play.  A loop is exactly what it sounds like-- it
+    is any construct that allows you to carry out some operation multiple
+    times, without having to copy and paste code for each time the commands are
     executed.
 
 Loops: For / While / Do While
@@ -222,7 +224,7 @@ Loops: For / While / Do While
             if foo is greater than five
                 print(foo)
             else
-                print(foo+" is too small")
+                print(foo + " is too small")
 
     **While** loops execute indefinitely (while something continues to
     be true).
@@ -239,9 +241,9 @@ Input & Output
     Programs aren't very useful unless they can get data from the outside
     world and return the results they've found.  I/O is the concept of
 
-    #. Getting input from a user, file, or outside world.
+    #. Getting input from a user, a file, or the outside world.
     #. Doing something with that data.
-    #. Outputing a result.
+    #. Outputting a result.
 
 ::
 
@@ -254,7 +256,7 @@ Input & Output
 
 .. ifnotslides::
 
-    IO is useful for making a user-interface and for debugging a program.  You
+    IO is useful for making a user-interface and for debugging a program. You
     can print out variables that you think might be getting set wrong, loops
     which might not be working the way you want, etc.
 
@@ -270,7 +272,7 @@ Functions
     the behavior of the program every time that function is called.
 
     Functions take arguments (input) and return values (output). Some
-    functions reutrn nothing, this value is called "Null".
+    functions return nothing, i.e. a value called "Null".
 
 ::
 
@@ -285,7 +287,7 @@ Functions
 
 .. ifnotslides::
 
-    In this pseudo-code we've specified written out the steps for reading the
+    In this pseudo-code we've specified the steps for reading the
     contents of a file to a string (text).  The function returns the contents
     of the file if the file exists and returns ``Null`` if the file does not
     exist.  This type of return value is useful because when we use it we can
@@ -333,8 +335,8 @@ Structs
 
 .. ifnotslides::
 
-    In our declaration we specified each member and it's type for the strict.
-    Each language's implementation (or lack there-of) of struts differs
+    In our declaration we specified each member and its type for the struct.
+    Each language's implementation (or lack thereof) of structs differs
     slightly but all act about the same.
 
 
@@ -348,7 +350,7 @@ Objects
     **object**.  The *class*  can be thought of as the **blueprint for an
     object**.
 
-    Objects usually have an initialize function which takes arguments so you
+    Objects usually have an initialization function that takes arguments so you
     can create a unique object.
 
 ::
@@ -395,16 +397,16 @@ Libraries
 
     import math_lib
 
-    print(math_lib.pi, math_lib.pow(2, 5), math_lib.tangen(79.3))
-    # prints out "3.14 32 5.61"
+    print(math_lib.pi, math_lib.pow(2, 5), math_lib.tan(79.3))
+    # prints out "3.14 32 .951"
 
 
 TODO: Write Pseudo-Code
 -----------------------
 
-Write pseudo-code to do the following:
+Write pseudo-code to do the following tasks:
     - Count to 20 (hint: ``for`` loop).
-    - Get the user input and print it.
+    - Get user input and print it.
     - Generate prime numbers.
 
 Hints:
@@ -453,16 +455,16 @@ Python
 
     Python is a programming language designed for *learning*.  This means it
     is relatively simple to pick-up and run with, and it looks a lot like
-    psuedo-code you might right.  It is very popular, modestly fast, and
+    psuedo-code you might write.  It is very popular, modestly fast, and
     commonly used in the programming industry.
 
     Python is a *scripting language*. While other languages need to be
-    *compiled* and then you run a binary, you run the script directly with ``$
+    *compiled* and then have a binary run, you run the script directly with ``$
     python my_script.py``.
 
     One advantage to scripts is that you can write functions in a file and
-    python will run them, you don't need to write a ``main()`` function or
-    anything!
+    Python will just run them-- you don't need to write a ``main()`` function
+    or anything!
 
 
 Python Datatypes
@@ -550,7 +552,7 @@ Python Functions
 
 .. ifnotslides::
 
-    Below is the exact syntax for delcaring a function in Python.
+    Below is the exact syntax for declaring a function in Python.
 
 .. code-block:: python
 
@@ -588,7 +590,7 @@ There are a few ways to use other code in your code:
 .. nextslide::
 
 There are **hundreds** of Python libraries.  If you're trying to
-do something an think "This has probably been solved...", Google it!
+do something and think "This has probably been solved...", Google it!
 
 Some libraries to know:
 
@@ -601,12 +603,12 @@ Some libraries to know:
 .. _And more: https://wiki.python.org/moin/UsefulModules
 
 
-Python (Virtual)Environments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Python (Virtual) Environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
-    When developing a Python project you will want to use a *virutal
+    When developing a Python project you will want to use a *virtual
     environment*.  This isolates the dependencies of your project from the
     Python software installed on your computer.
 
@@ -645,10 +647,13 @@ Further Reading
     Codecademy is a great resource for learning many programming languages and
     offers a good (free) beginner's guide to Python.
 
-CS 160, 161, 162
+`CS 160`_, `161`_, `162`_
     These OSU courses focus on programming fundamentals covered in this lesson
     in greater detail.  Python is used in CS 160 and C/C++ is used in CS 161
     and CS 162.
 
 .. _Python on Codecademy: https://www.codecademy.com/learn/python
 .. _Python on Learnpython.org: http://www.learnpython.org/
+.. _CS 160: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=160
+.. _161: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=161
+.. _162: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=162
