@@ -73,22 +73,30 @@ Yes. Except the things that aren't..
 
 .. ifnotslides::
 
-    The common understanding of a file is "Some bit of data stored on your
+    The basic understanding of a file is "Some chunk of data stored on your
     hard drive/solid state drive/floppy disk/etc."  However, the concept of
-    files can be extended to include more than data.  Unix and Linux systems
-    represent nearly everything - data, processes, memory, sockets, and more -
-    as files.
+    files can be extended to include more than just data.  Unix and Linux
+    systems represent nearly everything -- data, processes, storage devices,
+    sockets, and more -- as files.
 
-    By representing everything as a file, Linux provides a consistent interface
-    to access all kinds of things.  This abstraction allows programmers to use
-    the ``open``, ``read``, ``write``, and ``close`` function calls to do
-    everything from networking to printing.
+    By representing everything as files, Linux provides a consistent interface
+    to easily access all kinds of things.  This abstraction allows users to
+    interact with data, software, and hardware alike by reading from and
+    writing to files.
 
-    What does that mean exactly?  Well let's say you're programming an
-    interface for a medical device that **streams** data from a sensor.  In
-    Linux that interface might look something like this:
+    For example, you might change your screen's brightness by running this
+    command:
 
-.. code:: cpp
+    ::
+
+        $ echo 5 >> /sys/class/backlight/acpi_video0/brightness
+
+    This functionality isn't just limited to the shell, either!  Let's say
+    you're programming an interface for a medical device that **streams** data
+    from a sensor.  Using the "Everything is a file" philosophy, we could read
+    data from that medical device like so:
+
+::
 
     int read_medical_device_data(int device_file_pointer) {
         // Open a connection to the device
@@ -111,9 +119,8 @@ Yes. Except the things that aren't..
     ``close`` the 'device' just like a text file.
 
     This is much nicer than having to interface with each type of device in
-    it's own special way.  The end user experience might be the same either
-    way, but the programmer's life is much easier when everything looks like a
-    file.
+    its own special way.  The end user experience might be the same, but the
+    programmer's life is much easier when everything looks like a file.
 
 
 File Extensions
