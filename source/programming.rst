@@ -49,8 +49,8 @@ Note: Pseudo-code
 
     We will be using pseudo-code (fake code) to express and demonstrate
     concepts.  This isn't necessarily code you can run on a computer; it is
-    closer to english to make teaching *concepts* without getting bogged down
-    by exact *syntax* necessary in a formal programming language.
+    close to human language to enable teaching *concepts* without getting
+    bogged down by exact *syntax* necessary in a formal programming language.
 
 ::
 
@@ -58,7 +58,7 @@ Note: Pseudo-code
         # This line is a comment, not run by the computer.
         # Comments are only for human eyes.
         if x is less than than 5
-            print "X is less than 5"
+            print "x is less than 5"
         else if x is less than than 10
             print "x is greater than five and less than 10"
         else
@@ -70,28 +70,31 @@ Variables & Constants
 
 .. ifnotslides::
 
-    Variables are a name used to refer to a piece of data.  They are assigned
-    with some version of the syntax ``<variable name> = <variable value>``.
-    Some languages have *mutable* variables, meaning a variable can change
-    value, while others have *immutable* variables, meaning once a variable is
-    assigned it's value does not change.  Most languages support both types.
+    Variables are a name used to refer to a piece of data.  In languages that
+    use a syntax derived from C, variable assignment will usually look
+    something along the lines of ``<variable name> = <variable value>``.
+    Some languages have *mutable* variables, meaning a variable can change its
+    value, and others have *immutable* variables, meaning once a variable is
+    assigned its value does not change.  A large majority of languages support
+    both kinds.
 
-    Constants are variables that are static (known before the program is run).
+    Constants are variables that are *static* (known before the program is
+    run).
 
 ::
 
     >>> x = "value"
     >>> print(x)
-    >>> -> "value"
+    value
     >>> x = "different value"
     >>> print(x)
-    >>> -> "different value"
+    different value
 
 
 Data Types
 ~~~~~~~~~~
 
-    Data Types are a classification identifying one of various types of data.
+    Data types dictate how a piece of data should be handled within a program.
 
 .. ifslides::
 
@@ -115,21 +118,26 @@ Data Types
 
 .. ifnotslides::
 
-    Static VS Dynamic Variables
-        Staticly typed languages are known at compile time.  When you run a
-        program it knows what is a number, what is a string, etc.
+    Static Vs Dynamic Typing
+        In statically typed languages, types are either known or deduced at
+        compile time.  When you run a program, the computer knows which
+        variables are integers, which variables are strings, etc.  Examples
+        of statically typed languages include C, C++, and Java.
 
-        Dynamicly typed langauges allow you to keep that open, so a variable
-        *might* be a string or a number, but it all depends on what happens in the
-        program.
+        In dynamically typed languages, you don't know what the type of a
+        variable is until it has been assigned.  Examples of dynamically typed
+        languages include Python, Ruby, and PHP.
 
-    Strongly Typed vs Weakly Typed
-        Weakly typed languages allow one to use variables of similar *types* in
-        place of one another.  A float can be used in place of an int, a char can
-        be used in place of a string, etc.
+    Strong Vs Weak Typing
+        Strongly typed languages enforce type safety. What this means is that
+        you can't, for example, use an ``int`` in the place of a ``float``.
+        However, this can be useful for catching bugs that would otherwise hide
+        themselves in large codebases and cause problems.
 
-        Strongly typed languages which do not permit this flexibility. An int is
-        an int and a float is a float.
+        Weakly typed languages are permissive in allowing types to act like
+        different types.  In reality, though, no language is either strongly
+        or weakly typed.  However, some languages are more strongly typed than
+        others.
 
     Common types:
         ======= ==========================
@@ -140,28 +148,24 @@ Data Types
         Array   [1, 2, 3], ['a', 'b', 'c']
         ======= ==========================
 
-        Types are a big topic in computer science and for a few decades they
-        were a big area of research.  What you need to know is that you'll be
-        dealing with data when you're programming and there are a few basic
-        data structures you can use to deal with this data.  Later you'll
-        learn about ways to build more complicated *data structures* to deal
-        with more complex ideas.
+    You can even combine types to create *data structures*. Data structures
+    are another important computer science concept and a topic for another day,
+    but they are immensely useful tools.
 
-
-Flow-Control
+Flow Control
 ~~~~~~~~~~~~
 
-    The instructions which specify when code is executed.
+    Flow Control allows you to execute code only if certain conditions are met.
 
 .. ifnotslides::
 
     Think of your program's flow-control as water running in a stream.
-    Sometimes the stream hits a rock and flows around, or a reaches a fork in
-    the stream, causing it to diverge permanently.  Occasionally the stream
-    will go into a pool and whirl around for a bit and then return to the main
-    path.  All of this until it eventually exits into a Sea or Ocean.
+    Sometimes the stream hits a rock and flows around, or it encounters a fork,
+    causing it to diverge permanently.  Occasionally the stream will go into a
+    pool and whirl around for a bit and then return to the main
+    path. Eventually, the water will exit into a sea or ocean.
 
-    This isn't a perfect metaphore, but visualizing this as your program
+    This isn't a perfect metaphor, but visualizing this as your program
     starting at some single point and having the possibility to branch and
     loop may help you understand what it means for a program to *flow* and for
     you to control that flow.
@@ -175,7 +179,7 @@ Flow-Control
 Conditionals: If / Else If / Else
     Conditionals are used to tell the program when to execute commands.
 
-    They are usually created with the following syntax
+    In pseudocode, they usually look something like
 
     ::
 
@@ -186,8 +190,16 @@ Conditionals: If / Else If / Else
         else
             do a final thing
 
-    ``else if`` and ``else`` are not required. An `if` block on it's own
-    works.
+.. ifnotslides::
+
+    In this conditional block, the first conditional statement is evaluated
+    to either True or False. If it's True, the program continues on inside
+    the block with ``do something``. If the conditional evaluates to False,
+    then the conditional inside ``else if`` is evaluated and handled
+    accordingly. You can have any number of ``else if`` statements. At the end,
+    the code inside the ``else`` statement executes if none of the other
+    conditions were met. The ``else if`` and ``else`` aren't required, but they
+    can be useful when you have more sophisticated control flow.
 
 .. nextslide::
 
@@ -195,9 +207,9 @@ Conditionals: If / Else If / Else
 
     Now consider a different problem: You want to look through a list of names
     and print out every one that starts with the letter 'Q'.  This is where
-    the **Loop** comes in to play.  A loop is exactly what it sounds like, it is
-    any construct that allows you to carry out some operation multiple times,
-    without having to copy and paste code for each time the commands are
+    the **Loop** comes in to play.  A loop is exactly what it sounds like-- it
+    is any construct that allows you to carry out some operation multiple
+    times, without having to copy and paste code for each time the commands are
     executed.
 
 Loops: For / While / Do While
@@ -212,7 +224,7 @@ Loops: For / While / Do While
             if foo is greater than five
                 print(foo)
             else
-                print(foo+" is too large")
+                print(foo + " is too small")
 
     **While** loops execute indefinitely (while something continues to
     be true).
@@ -229,9 +241,9 @@ Input & Output
     Programs aren't very useful unless they can get data from the outside
     world and return the results they've found.  I/O is the concept of
 
-    #. Getting input from a user, file, or outside world.
+    #. Getting input from a user, a file, or the outside world.
     #. Doing something with that data.
-    #. Outputing a result.
+    #. Outputting a result.
 
 ::
 
@@ -244,7 +256,7 @@ Input & Output
 
 .. ifnotslides::
 
-    IO is useful for making a user-interface and for debugging a program.  You
+    IO is useful for making a user-interface and for debugging a program. You
     can print out variables that you think might be getting set wrong, loops
     which might not be working the way you want, etc.
 
@@ -260,7 +272,7 @@ Functions
     the behavior of the program every time that function is called.
 
     Functions take arguments (input) and return values (output). Some
-    functions reutrn nothing, this value is called "Null".
+    functions return nothing, i.e. a value called "Null".
 
 ::
 
@@ -275,7 +287,7 @@ Functions
 
 .. ifnotslides::
 
-    In this pseudo-code we've specified written out the steps for reading the
+    In this pseudo-code we've specified the steps for reading the
     contents of a file to a string (text).  The function returns the contents
     of the file if the file exists and returns ``Null`` if the file does not
     exist.  This type of return value is useful because when we use it we can
@@ -323,8 +335,8 @@ Structs
 
 .. ifnotslides::
 
-    In our declaration we specified each member and it's type for the strict.
-    Each language's implementation (or lack there-of) of struts differs
+    In our declaration we specified each member and its type for the struct.
+    Each language's implementation (or lack thereof) of structs differs
     slightly but all act about the same.
 
 
@@ -338,7 +350,7 @@ Objects
     **object**.  The *class*  can be thought of as the **blueprint for an
     object**.
 
-    Objects usually have an initialize function which takes arguments so you
+    Objects usually have an initialization function that takes arguments so you
     can create a unique object.
 
 ::
@@ -385,16 +397,16 @@ Libraries
 
     import math_lib
 
-    print(math_lib.pi, math_lib.pow(2, 5), math_lib.tangen(79.3))
-    # prints out "3.14 32 5.61"
+    print(math_lib.pi, math_lib.pow(2, 5), math_lib.tan(79.3))
+    # prints out "3.14 32 .951"
 
 
 TODO: Write Pseudo-Code
 -----------------------
 
-Write pseudo-code to do the following:
+Write pseudo-code to do the following tasks:
     - Count to 20 (hint: ``for`` loop).
-    - Get the user input and print it.
+    - Get user input and print it.
     - Generate prime numbers.
 
 Hints:
@@ -443,26 +455,26 @@ Python
 
     Python is a programming language designed for *learning*.  This means it
     is relatively simple to pick-up and run with, and it looks a lot like
-    psuedo-code you might right.  It is very popular, modestly fast, and
+    psuedo-code you might write.  It is very popular, modestly fast, and
     commonly used in the programming industry.
 
     Python is a *scripting language*. While other languages need to be
-    *compiled* and then you run a binary, you run the script directly with ``$
+    *compiled* and then have a binary run, you run the script directly with ``$
     python my_script.py``.
 
     One advantage to scripts is that you can write functions in a file and
-    python will run them, you don't need to write a ``main()`` function or
-    anything!
+    Python will just run them-- you don't need to write a ``main()`` function
+    or anything!
 
 
 Python Datatypes
 ~~~~~~~~~~~~~~~~
 
-* Python is a duckly-typed language. You don't need to declare the type
-  of your variables, Python will assume the type of your variable
-  and type it for you.
-* It's also dynamically typed, so you can change the type of a variable
-  at any time
+* You don't need to declare the type of your variables, Python will assume
+  the type of your variable and type it for you.
+* Python is a duckly-typed language. If it walks like a duck and quacks like
+  a duck, then Python treats it like a duck. As long as an object implements
+  the proper *interfaces*, it can act like any type it wants.
 
 .. figure:: /static/duckly.gif
     :align: center
@@ -481,7 +493,7 @@ list        ``['first', 'second']``
 dict (map)  ``{'key1': 'value', 'key2', 'value2'}``
 tuple       ``('value','paired value')``
 object      ``anObjects.variable == <value>``
-None        |
+**None**    |
 ==========  ===================================================================
 
 
@@ -491,7 +503,7 @@ Python Variables
 .. code-block:: python
 
     # This is a comment
-    bool = True # boolean
+    boolean = True # boolean
     name = "Lucy" # string
     age = 20 # integer
     pi = 3.14159 # float
@@ -499,7 +511,7 @@ Python Variables
     dictionary = {"pi":3.14159, "sqrt 1":1}
     winter = ('December', 'January', 'February', 'March')
 
-    print(name + " is " + age+1 + " this " winter[3])
+    print(name + " is " + str(age+1) + " this " winter[3])
 
 
 REPL: Try it out
@@ -513,7 +525,7 @@ Open a REPL (Read Evaluate Print Loop):
     >>> print("I'm in a REPL!")
     >>> name =      # <Your name>
     >>> age =       # <Your age>
-    >>> print( name + " is " + str(age) )
+    >>> print(name + " is " + str(age))
     >>> # We need to convert age from int to string so it can print!
 
 
@@ -540,7 +552,7 @@ Python Functions
 
 .. ifnotslides::
 
-    Below is the exact syntax for delcaring a function in Python.
+    Below is the exact syntax for declaring a function in Python.
 
 .. code-block:: python
 
@@ -578,7 +590,7 @@ There are a few ways to use other code in your code:
 .. nextslide::
 
 There are **hundreds** of Python libraries.  If you're trying to
-do something an think "This has probably been solved...", Google it!
+do something and think "This has probably been solved...", Google it!
 
 Some libraries to know:
 
@@ -591,12 +603,12 @@ Some libraries to know:
 .. _And more: https://wiki.python.org/moin/UsefulModules
 
 
-Python (Virtual)Environments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Python (Virtual) Environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
-    When developing a Python project you will want to use a *virutal
+    When developing a Python project you will want to use a *virtual
     environment*.  This isolates the dependencies of your project from the
     Python software installed on your computer.
 
@@ -635,10 +647,13 @@ Further Reading
     Codecademy is a great resource for learning many programming languages and
     offers a good (free) beginner's guide to Python.
 
-CS 160, 161, 162
+`CS 160`_, `161`_, `162`_
     These OSU courses focus on programming fundamentals covered in this lesson
     in greater detail.  Python is used in CS 160 and C/C++ is used in CS 161
     and CS 162.
 
 .. _Python on Codecademy: https://www.codecademy.com/learn/python
 .. _Python on Learnpython.org: http://www.learnpython.org/
+.. _CS 160: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=160
+.. _161: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=161
+.. _162: http://catalog.oregonstate.edu/CourseDetail.aspx?subjectcode=CS&coursenumber=162
