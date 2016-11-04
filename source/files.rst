@@ -73,17 +73,30 @@ Yes. Except the things that aren't..
 
 .. ifnotslides::
 
-    Unix and Linux systems represent everything from data, processes, memory,
-    sockets, etc as a file.
+    The basic understanding of a file is "Some chunk of data stored on your
+    hard drive/solid state drive/floppy disk/etc."  However, the concept of
+    files can be extended to include more than just data.  Unix and Linux
+    systems represent nearly everything -- data, processes, storage devices,
+    sockets, and more -- as files.
 
-    This abstraction allows programmers to use the ``open`` ``read`` ``write``
-    and ``close`` function calls to do everything from networking to printing.
+    By representing everything as files, Linux provides a consistent interface
+    to easily access all kinds of things.  This abstraction allows users to
+    interact with data, software, and hardware alike by reading from and
+    writing to files.
 
-    What does that mean exactly?  Well let's say you're programming an
-    interface for a medical device that **streams** data from a sensor.  In
-    Linux you can write the to look something like this:
+    For example, you might change your screen's brightness by running this
+    command:
 
-.. code:: cpp
+    ::
+
+        $ echo 5 >> /sys/class/backlight/acpi_video0/brightness
+
+    This functionality isn't just limited to the shell, either!  Let's say
+    you're programming an interface for a medical device that **streams** data
+    from a sensor.  Using the "Everything is a file" philosophy, we could read
+    data from that medical device like so:
+
+::
 
     int read_medical_device_data(int device_file_pointer) {
         // Open a connection to the device
@@ -99,16 +112,15 @@ Yes. Except the things that aren't..
 
 .. ifnotslides::
 
-    This is a *very* simplified version of how this program would look, but
+    This is a *very* simplified version of how the program would look, but
     not by much.  The principles are still the same: you can interface with a
     device just like you would interface with a file.  By taking a file pointer
     (location of the file on disk) one can ``open``, ``read``, ``write``, and
     ``close`` the 'device' just like a text file.
 
     This is much nicer than having to interface with each type of device in
-    it's own special way.  The end user experience might be the same either
-    way, but the programmer's life is much easier when everything looks like a
-    file.
+    its own special way.  The end user experience might be the same, but the
+    programmer's life is much easier when everything looks like a file.
 
 
 File Extensions
@@ -120,19 +132,22 @@ Not necessary, more of a recommendation.
 
 .. ifnotslides::
 
-    Most of the time a file has enough metadata that the OS is able to figure
-    out what type of file it is.  Unlike some operating systems, Linux does not
-    require (and doesn't care about) a file's extension.
+    Most of the time a file contains enough metadata (information about its
+    contents) that the OS is able to figure out what type of file it is.
+    Unlike some operating systems, Linux does not require (and doesn't care
+    about) a file's extension.  Also unlike *some* operating systems, most
+    Linux desktop environments will open an unrecognized file in a text editor
+    as plaintext.
 
 ::
 
-    $ file $FILENAME # tells you about the filetype
+    $ file $FILENAME # tells you about the file's contents
 
     $ file some_text_file
-    file.txt: ASCII text
+    some_text_file: ASCII text
 
     $ file squirrel
-    squirrel.jpg: JPEG image data, JFIF standard 1.01
+    squirrel: JPEG image data, JFIF standard 1.01
 
 
 Hidden Files
@@ -149,6 +164,9 @@ default.
     time so I am reminded of it's existence, but a ``.cache`` folder or a
     ``.embarassing_diary_entry.txt`` should go unseen most of the time.
 
+    Many programs use files that begin with ``.`` to store configuration
+    options. These configuration files are aptly called "dotfiles".
+
 Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
 
 ::
@@ -156,7 +174,7 @@ Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
     $ ls
     Documents  file.txt  Pictures
     $ ls -a
-    .  ..  .hidden_file  Documents  file.txt  Pictures
+    .  ..  Documents  file.txt  .hidden_file  Pictures  .vimrc
 
 .. ifnotslides::
 
@@ -174,10 +192,10 @@ Finding Metadata with 'ls -l'
 
 .. ifnotslides::
 
-    Metadata is the information **about** a file.  The easiest way to get
-    important information about files is by running ``ls -l``. This shows you
-    the size, ownership bits, owner user, owner group, and date of
-    modification of a file.
+    Metadata is the information **about** a file.  The easiest way to get the
+    most important information about files is by running ``ls -l``. This shows
+    you metadata such as the file permissions, file owner, file size, and the
+    date and time the file was last modified.
 
 ::
 
@@ -186,13 +204,15 @@ Finding Metadata with 'ls -l'
     -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
     drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
 
-======================================= =======================================
-type: ``d``                             user permissions: ``rwx``
-group permissions: ``rwx``              world permissions: ``r-x``
-references permissions: ``5``           user: ``test``
-size: ``4096``                          date: ``Nov  6:46``
-filename: ``Documents``
-======================================= =======================================
+.. ifnotslides::
+
+    ======================================= =======================================
+    type: ``d``                             user permissions: ``rwx``
+    group permissions: ``rwx``              world permissions: ``r-x``
+    references: ``5``                       user: ``test``
+    group: ``test``                         size: ``4096``
+    last_modified: ``Nov  6:46``            filename: ``Documents``
+    ======================================= =======================================
 
 
 Editing Metadata
@@ -200,9 +220,10 @@ Editing Metadata
 
 .. ifnotslides::
 
-    You can edit the metadata of a file by running the ``chown``, ``chmod``,
-    or ``chgrp`` commands to edit the owner, the read/write/execute, and the
-    group permissions respectively.
+    You can edit the metadata of a file with various commands, but some of the
+    most useful commands are ``chown``, ``chmod``, and ``chgrp`` commands.
+    These commands allow you to edit the owner, the read/write/execute, and the
+    group permissions of a file respectively.
 
 ::
 
@@ -218,6 +239,15 @@ Editing Metadata
     $ chgrp -R devops /home/$yourusername/bootcamp
       # Make the group devops own the bootcamp dir
 
+.. ifnotslides::
+
+    .. warning::
+
+        Use these commands with caution. You can really mess things up with a
+        ``sudo chmod -R 777 /``. See "Permission Mishaps" at the bottom of the
+        page to learn more about common mistakes such as these and avoid making
+        them yourself, but a good rule of thumb is to avoid large recursive
+        edits unless you're *really* confident that you know what you're doing.
 
 ``chmod`` and Octal Permissions
 -------------------------------
@@ -239,9 +269,9 @@ Editing Metadata
 
 .. nextslide::
 
+-  u, g, o for user, group, other
 -  -, +, = for remove, add, set
 -  r, w, x for read, write, execute
--  u, g, o for user, group, other
 
 .. ifnotslides::
 
@@ -249,14 +279,19 @@ Editing Metadata
 
     ::
 
-        $ chmod ug+x my_script.sh    # sets a script as executable for the user
-                                     # and group.
-        $ chmod o-w myfile.txt       # Removes the write permissions from a
-                                     # file for the world.
+        $ chmod ug+x my_script.sh    # Adds the permission to execute the file
+                                     # to its owner user and owner group.
 
-::
+        $ chmod o-w myfile.txt       # Removes the permission to write to the
+                                     # file from users other than its owners.
 
-    $ chmod o-rw    # Stops all non owners from reading and writing the file.
+.. ifslides::
+
+    ::
+
+        $ chmod ug+x my_script.sh
+
+        $ chmod o-w
 
 
 Executing a File?
@@ -286,14 +321,8 @@ For instance:
     $ ./my-script  # my-script is invoked just like a compiled binary!
     This is a script being run without using bash!
     Heres a calendar:
-        October 2016
-    Su Mo Tu We Th Fr Sa
-                       1
-     2  3  4  5  6  7  8
-     9 10 11 12 13 14 15
-    16 17 18 19 20 21 22
-    23 24 25 26 27 28 29
-    30 31
+
+    .......
 
 
 Types of Files
@@ -301,9 +330,9 @@ Types of Files
 
 ::
 
-    drwxrwxr-x      5 test    test      4096    Nov  6 11:46 Documents
-    -rw-rw-r--      1 test    test         0    Nov 13 14:09 file.txt
-    drwxrwxr-x      2 test    test      4096    Nov  6 13:22 Pictures
+    drwxrwxr-x   5   test     test      4096    Nov  6 11:46 Documents
+    -rw-rw-r--   1   test     test         0    Nov 13 14:09 file.txt
+    drwxrwxr-x   2   test     test      4096    Nov  6 13:22 Pictures
     ----------     -------  -------  -------- ------------ -------------
         |             |        |         |         |             |
         |             |        |         |         |         File Name
