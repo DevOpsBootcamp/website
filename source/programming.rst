@@ -573,11 +573,6 @@ There are a few ways to use other code in your code:
 
 .. code-block:: python
 
-    import math.pi
-    x = math.pi
-
-.. code-block:: python
-
     from math import pi
     x = pi
 
