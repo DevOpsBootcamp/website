@@ -139,9 +139,13 @@ Not necessary, more of a recommendation.
     Linux desktop environments will open an unrecognized file in a text editor
     as plaintext.
 
+    The ``file`` command takes a filename and uses its metadata and its
+    contents to try and guess at what kind of file it is.
+
 ::
 
-    $ file $FILENAME # tells you about the file's contents
+    $ ls
+    some_text_file  squirrel
 
     $ file some_text_file
     some_text_file: ASCII text
@@ -173,6 +177,7 @@ Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
 
     $ ls
     Documents  file.txt  Pictures
+
     $ ls -a
     .  ..  Documents  file.txt  .hidden_file  Pictures  .vimrc
 
@@ -200,19 +205,17 @@ Finding Metadata with 'ls -l'
 ::
 
     $ ls -l
-    drwxrwxr-x 5 test test 4096 Nov  6 11:46 Documents
-    -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
-    drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
-
-.. ifnotslides::
-
-    ======================================= =======================================
-    type: ``d``                             user permissions: ``rwx``
-    group permissions: ``rwx``              world permissions: ``r-x``
-    references: ``5``                       user: ``test``
-    group: ``test``                         size: ``4096``
-    last_modified: ``Nov  6:46``            filename: ``Documents``
-    ======================================= =======================================
+    drwxrwxr-x   5   test     test     4096   Nov  6 11:46 Documents
+    -rw-rw-r--   1   test     test        0   Nov 13 14:09 file.txt
+    drwxrwxr-x   2   test     test     4096   Nov  6 13:22 Pictures
+    ----------     -------  -------  -------- ------------ -------------
+        |             |        |         |         |             |
+        |             |        |         |         |        File Name
+        |             |        |         |         +--- Modification Time
+        |             |        |         +-------------  Size (in bytes)
+        |             |        +-----------------------       Group
+        |             +--------------------------------       Owner
+        +----------------------------------------------  File Permissions
 
 
 Editing Metadata
@@ -299,7 +302,7 @@ Executing a File?
 
 .. ifslides::
 
-    When a file as the ``+x`` permission set, it can be run as a program.
+    When a file has the ``+x`` permission set, it can be run as a program.
 
 .. ifnotslides::
 
@@ -312,41 +315,28 @@ For instance:
 
     $ ls -alh my-script
     -r-xr-xr-x 1 username username 1.9K Sep 27 09:44 my-script
+
     $ cat my-script
     #!/bin/bash
     # The above line tells Linux how to invoke the script on my behalf.
     echo 'This is a script being run without using bash!'
-    echo 'Heres a calendar:'
-    cal
+
     $ ./my-script  # my-script is invoked just like a compiled binary!
     This is a script being run without using bash!
-    Heres a calendar:
-
-    .......
 
 
 Types of Files
 --------------
-
-::
-
-    drwxrwxr-x   5   test     test      4096    Nov  6 11:46 Documents
-    -rw-rw-r--   1   test     test         0    Nov 13 14:09 file.txt
-    drwxrwxr-x   2   test     test      4096    Nov  6 13:22 Pictures
-    ----------     -------  -------  -------- ------------ -------------
-        |             |        |         |         |             |
-        |             |        |         |         |         File Name
-        |             |        |         |         +---  Modification Time
-        |             |        |         +-------------   Size (in bytes)
-        |             |        +-----------------------        Group
-        |             +--------------------------------        Owner
-        +----------------------------------------------   File Permissions
 
 - ``-`` is a normal file
 - ``d`` is a directory
 - ``b`` is a block device
 - ``l`` is a symlink
 
+.. ifnotslides::
+
+    Linux has all kinds of special file types, but these are the most common
+    ones that you'll encounter.
 
 Directories
 -----------
@@ -361,6 +351,7 @@ Directories
 
     $ ls -alh | grep foobarbaz
     drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
+
     $ ls -alh foobarbaz   # Below is the literal output, not psuedo-output
     ls: cannot access foobarbaz/.: Permission denied
     ls: cannot access foobarbaz/..: Permission denied
