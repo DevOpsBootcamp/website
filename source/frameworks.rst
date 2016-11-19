@@ -21,14 +21,14 @@ Lesson 10: Frameworks
     Overview
     --------
 
-    - What a framework is.
-    - Types of frameworks.
-    - Examples of frameworks.
-    - Anatomy of a web-framework
+    - What is a framework?
+    - Types of frameworks
+    - Examples of frameworks
+    - Anatomy of a web framework
 
-      - Model View Controller
+      - Model-View-Controller Pattern
       - URL Routing
-      - Templating Engine
+      - Templating Engines
 
 .. ifnotslides::
 
@@ -41,10 +41,11 @@ Frameworks
 .. ifnotslides::
 
     Frameworks are collections of classes, functions, and constants designed
-    to make completing a tast easier. Examples include:
+    to make completing a task easier. Examples include:
 
-- Web-development frameworks.
-- Game-development frameworks.
+- Web frameworks
+- Game frameworks
+- GUI frameworks
 
 .. ifnotslides::
 
@@ -61,12 +62,11 @@ The job of a framework
 .. ifnotslides::
 
     Frameworks are meant to make the life of a developer easier by supplying
-    programmers with tools and design patters to accomplish a task in an
+    programmers with tools and design patterns to accomplish a task in an
     expressive and relatively simple way.
 
-    Frameworks simplify a program by doing implementing tedious parts of a
-    program to let the programmer focus on the "Big Picture" and "Application
-    Specific Needs".
+    Frameworks simplify a program by implementing tedious parts of a to let
+    the programmer focus on the "Big Picture" and "Application Specific Needs".
 
     Frameworks tend to exist for commonly developed types of applications to
     reduce the amount of time spent on repeated development steps like
@@ -98,19 +98,19 @@ Types of Frameworks
 
 .. ifnotslides::
 
-    Things to keep in mind when looking for a framwork:
+    Things to keep in mind when looking for a framework:
 
     - There are many frameworks in the world, some are better than others so
       do your research.
-    - Just because a framework does what you want make sure there isn't a
+    - Just because a framework does what you want doesn't mean there isn't a
       *better tool for the job*.
     - Most popular languages have at least two or three frameworks for common
-      applicatiosn (listed above), so figure out which those are and which one
-      looks best:
+      applications (listed above), so figure out which those are and which one
+      looks best. Good frameworks usually have:
 
-        - Has a good community.
-        - Is well documented.
-        - gives you the freedom/lack of freedom you're looking for.
+        - Good documentation
+        - Active developers
+        - A helpful community
 
 
 Web Frameworks
@@ -119,7 +119,7 @@ Web Frameworks
 .. ifnotslides::
 
     We're going to focus on web frameworks because they are easy to
-    demonstrate and usually very polished.
+    demonstrate and used everywhere.
 
 
 Static vs Dynamic Sites
@@ -129,17 +129,28 @@ There are two types of websites: Static and Dynamic.
 
 .. ifnotslides::
 
-    A static site delivers the same content to anybody visiting.
+    A static site delivers the same content to anybody visiting. Static sites
+    can either be written in pure HTML/CSS/Javascript, or a static site
+    generator can be used to write content in another markup language to be
+    compiled to HTML
 
-    A dynamic site customizes the page based on who is visiting. A socal
-    network or search engine is a good example of this.  Web Frameworks are
-    primarily used in dynamic sites and rarely in static sites.
+    A dynamic site changes as the user or users interact with it. Social
+    networks and search engines are good examples of dynamic sites.  Web
+    Frameworks are primarily used in dynamic sites and rarely in static sites.
 
 Static Site
     Rarely changes, looks the same for all visitors (Blog, News, Document)
 
 Dynamic Site
     Changes based on who you are and what you do. (Search Engine, Login)
+
+.. ifnotslides::
+
+    Security will be discussed further in `Lesson 13`_, but static websites
+    should be used in place of dynamic ones whenever possible. Dynamic websites
+    are vulnerable to a much wider variety of attacks than static websites are.
+
+.. _Lesson 13: security.html
 
 
 Popular Web Frameworks
@@ -166,7 +177,7 @@ Python
 
 Ruby
     `Rails`_
-        Arguably the most popular web-framework out there.  Similar to Django
+        Arguably the most popular web-framework out there. Similar to Django
         in it's features out of the box.
 
     `Sinatra`_
@@ -184,8 +195,8 @@ Node.js
 .. _ExpressJS: http://expressjs.com/
 
 
-Note: Model, View, Controller
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Model-View-Controller Pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /static/mvc.png
     :target: https://commons.wikimedia.org/wiki/File:MVC-Process.svg
@@ -197,21 +208,18 @@ Note: Model, View, Controller
     Most webapps consist of three components:
 
     Model
-        The data represented in someway, usually a database.
+        The data represented in some way, usually a database.
 
     View
-        What the user sees, the webpage you look at.
+        What the user sees i.e. the webpage you look at.
 
     Controller
         The code that manipulates the data in the database.
 
-    Each of these components is a seperate component.  Some apps make each of
-    these very seperate while others blur the line between what code is
-    controlling the view, the model, and the controller.
-
-    For now understanding the MVC architecture isn't that important, but it is
-    something to be aware of.  Most web frameworks are built around the MVC
-    model, so it is easier to develop MVC apps over others.
+    Understanding the MVC architecture isn't that important at the moment, but
+    it is something to be aware of.  Many popular web frameworks are built
+    around the MVC pattern, so knowing how to use it to its advantages can be
+    userful.
 
 
 URL Routing
@@ -219,33 +227,28 @@ URL Routing
 
 .. ifnotslides::
 
-    A core component in every web-framework is URL routing.
-
-    This is where you tell a framework what to do when a user goes to a web
-    address.
-
-::
-
-    app.route('/delete', delete_account)
+    A core component in every web framework is URL routing. This is where you
+    tell a framework what to do when a user performs an action on a specific
+    URL.
 
 .. ifnotslides::
 
-    In the above pseudocode the ``'/delete'`` endpoint causes the application
-    to call the ``delete_account`` method.  In a seperate section of the code,
-    the routes functions are defined:
+    In the below pseudocode, using DELETE on the ``'/accounts/<account_name>'``
+    endpoint causes the application to call the ``delete_account`` method. For
+    the purposes of this lesson, you don't need to worry too much about things
+    like what the '@' syntax at the beginning of the function does or what
+    DELETE is. If you want to learn more about the Flask framework or HTTP,
+    check out our `Further Reading`_ section.
 
-::
+.. code-block:: python
 
-    def delete_account():
-        if username was passed in the query parameters
-            and password was passed in the query parameters
-            and the user is in the database
-            and passed password is correct
-
-            database.remove_user(username)
-            return success
+    @app.route('/accounts/<account_name>', methods=['DELETE'])
+    def delete_account(account_name):
+        if authenticated() and authorized():
+            database.remove_account(account_name)
+            return 'Success', 200
         else
-            return failure
+            return 'Failure', 401
 
 
 Templating Engines (mad-libs!)
@@ -261,8 +264,8 @@ Templating Engines (mad-libs!)
 
 ::
 
-    data = {"animal": "Cat", "number": 5}
-    template.render("You have {{ number }} {{ animal}}s! That's crazy.", data)
+    data = {"animal": "cat", "number": 5}
+    template.render("You have {{ number }} {{ animal }}s! That's crazy.", data)
 
 .. ifnotslides::
 
