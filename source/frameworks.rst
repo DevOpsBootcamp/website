@@ -27,7 +27,7 @@ Lesson 10: Frameworks
     - Anatomy of a web framework
 
       - Model-View-Controller Pattern
-      - URL Routing
+      - HTTP and URL Routing
       - Templating Engines
 
 .. ifnotslides::
@@ -198,6 +198,8 @@ Node.js
 The Model-View-Controller Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. TODO: Fix image scaling on slides
+
 .. image:: /static/mvc.png
     :target: https://commons.wikimedia.org/wiki/File:MVC-Process.svg
     :alt: model view controller diagram
@@ -250,6 +252,7 @@ URL Routing
         else
             return 'Failure', 401
 
+.. TODO: Brief treatment of HTTP
 
 Templating Engines (mad-libs!)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -261,6 +264,8 @@ Templating Engines (mad-libs!)
     values in.
 
     For instance:
+
+.. TODO: Use template file example
 
 ::
 
@@ -278,6 +283,8 @@ Templating Engines (mad-libs!)
 
 TODO: Dynamic Website
 ~~~~~~~~~~~~~~~~~~~~~
+
+.. TODO: TODO
 
 Read the documentation on `Flask`_, a simple Python Web-Framework and build a
 simple "Display the Time in each Timezone" Application.
@@ -316,8 +323,6 @@ the world.( http://flask.pocoo.org )
         if __name__ == "__main__":
             app.run()
 
-.. TODO: Complete this activity to include url routing and templating engine.
-
 Further Reading
 ---------------
 
@@ -328,9 +333,10 @@ Further Reading
     documentation.
 
 `Intro to HTTP and REST`_
-    ...
+    HTTP is the protocol that web clients and web servers use to communicate
+    with each other, and REST is a set of web design guidelines that is takes
+    advantage of HTTP's features and allows different applications to easily
+    communicate with each other.
 
 .. _The Flask Microframework: http://flask.pocoo.org/docs/0.11/
 .. _Intro to HTTP and REST: http://blog.luisrei.com/articles/rest.html
-
-.. TODO: Add further reading
