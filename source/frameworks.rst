@@ -282,46 +282,65 @@ Templating Engines (mad-libs!)
 
 
 TODO: Dynamic Website
-~~~~~~~~~~~~~~~~~~~~~
-
-.. TODO: TODO
-
-Read the documentation on `Flask`_, a simple Python Web-Framework and build a
-simple "Display the Time in each Timezone" Application.
-
-When a user goes to our website they will see the server's time and when they
-go to ``app-url/<timezone code>`` they will see the timezone in that area of
-the world.( http://flask.pocoo.org )
-
-.. _Flask: http://flask.pocoo.org/
+---------------------
 
 .. ifnotslides::
 
-    First we are going to create a Python virtual environment and install the
-    flask framework.
+    Over the course of this exercise, you're going to build upon the skeleton
+    of a simple web app written using the `Flask`_ microframework. When it's
+    finished, our app will be a guestbook that stores data inside a SQLite
+    database (More on databases in our `Databases`_ lesson) and allows people
+    to both add themselves and view the guests that have already been added.
+
+    To get started, clone the `Bootcamp-Exercises`_ repository in the DevOps
+    Bootcamp Github organization, and ``cd`` into the ``2016-2017/frameworks``
+    directory. Follow the directions in ``README.md`` to set up and run the app.
+    If you don't have ``virtualenv`` installed already, you can install it from
+    your distro's package manager (It's usually ``python-virtualenv``). If
+    everything goes smoothly, you should get output that looks something like
+    this after ``python run.py``:
 
     ::
 
-        $ mkdir webapp
+        (venv)$ python run.py
+         * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+         * Restarting with stat
+         * Debugger is active!
+         * Debugger pin code: 861-918-611
+
+    You can now access the website in a web browser at
+    ``http://localhost:8080``.
+
+.. _Databases: databases.html
+.. _Bootcamp-Exercises: https://github.com/DevOpsBootcamp/Bootcamp-Exercises/
+
+.. ifslides::
+
+    ::
+
+        $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises
+        $ cd Bootcamp-Exercises/2016-2017/frameworks
         $ virtualenv venv
         $ source venv/bin/activate
-        (venv)$ pip install flask
+        (venv)$ pip install --upgrade pip
+        (venv)$ pip install -r requirements.txt
+        (venv)$ python run.py
+         * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+        ...
 
-    Then we are going to edit a file called ``main.py`` which contains the
-    following code:
+    Go to
 
-    ::
+    ``http://cloud.devopsbootcamp.osuosl.org:<your_port_number>``
 
-        #!/bin/env python
-        from flask import Flask
-        app = Flask(__name__)
+Part One: Writing The Views
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        @app.route("/")
-        def hello():
-            return "The app works!"
+.. ifnotslides::
 
-        if __name__ == "__main__":
-            app.run()
+    If you poke around the website as it is, you'll quickly notice that things
+    are broken. That's because we haven't added functionality to the website
+    yet!
+
 
 Further Reading
 ---------------
