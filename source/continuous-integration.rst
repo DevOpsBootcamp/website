@@ -25,10 +25,11 @@ Lesson 12: Continuous Integration
     Overview
     --------
 
-    - About CI.
-    - Automated testing.
-    - Travis CI
-    - Jenkins
+    - What Is CI?
+    - Automated Testing
+    - Tools:
+      - Travis CI
+      - Jenkins
 
 
 Continuous Integration
@@ -41,17 +42,17 @@ Continuous Integration
 
 .. ifnotslides::
 
-    Continuous Integration is using an automated system, integrated as
-    seamlessly into your toolchain as possible,  to do the following:
+    Continuous Integration is a name for any kind of automated tool that
+    performs the following tasks:
 
-    #. Detect changes to your project.
-    #. Run your automated test suite on the changed code.
-    #. Alerts the people that care if something good/bad happened.
+    #. Detects changes to your project
+    #. Runs a suite of tests on the changed code
+    #. Alerts the people that care if something good/bad happened
 
     CI tools are also known to do a slew of other things:
 
-    - Build and release new versions of a package when they're needed.
-    - Build documentation and other parts of a project automatically.
+    - Builds and releases new versions of a package when they're needed
+    - Builds documentation and other parts of a project with each new release
 
 
 Automated Testing
@@ -64,13 +65,11 @@ Automated Testing
 .. ifnotslides::
 
     Automated testing is the most common, and easiest to setup, CI tool.
-
-    It detects through Git, or whatever SVC tool you use, a change to your
-    codebase (new Pull Request, new branch, new commit on master/develop,
-    etc), and runs your tests automatically.  If it finds a problem it sends
-    an email and places a red ``x`` somewhere prominent so people know the it
-    isn't passing the tests yet.  If it's good there will be a little green
-    ``✔``.
+    It integrates with Github (Or whatever service you're using to host your
+    code), and can be set up to detect changes to a codebase (new Pull Request,
+    new branch, new commit on master/develop, etc). When it's triggered, it
+    runs your tests automatically.  If it finds a problem, it will notify the
+    correct people, usually via email.
 
 
 Tool: Travis CI
@@ -107,8 +106,8 @@ Tool: Jenkins
 .. ifnotslides::
 
     Jenkins is a more powerful version of Travis, but as a result is more
-    complicated to use and setup.  While you can pay to use a public instance
-    of Jenkins, it is common to run your own instance of Jenkins.
+    complicated to use and set up.  While you can pay to use a public instance
+    of Jenkins, it is more common to run your own instance of Jenkins.
 
 - Does pretty much anything you can tell a computer to do, automatically.
 - Builds and uploads binaries (releases).
