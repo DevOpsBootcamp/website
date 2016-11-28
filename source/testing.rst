@@ -175,8 +175,8 @@ Testing Frameworks
 
     Testing frameworks range in the functionality they provide from simply
     detecting and running test functions, to helping programmers articulate
-    tests closer to English, to forcing a very logical type of organization on your
-    tests.
+    tests closer to English, to forcing a very logical type of organization on
+    your tests.
 
 ::
 
@@ -264,8 +264,26 @@ Useful for:
 TODO: Using Python's ``unittest``
 ---------------------------------
 
-.. TODO: Add activity
+Write a test for the code you wrote in the previous Frameworks lesson's TODO-- 
+that is, verify that your view returns the expected output based on input
+supplied in your view's URL.
 
+`Unittesting in Flask`_
+    Check out the official Flask docs for help with syntax.
+
+.. _Unittesting in Flask: http://flask.pocoo.org/docs/0.11/testing/
+
+.. ifnotslides::
+
+    Answers:
+        ::
+ 
+            def test_hello(self):
+                rv = self.app.get('/hello/bob')
+                assert 'Hello bob' in rv.data
+
+
+        ::
 
 
 Further Reading
