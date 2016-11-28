@@ -41,7 +41,7 @@ Testing
     Automated testing, commonly referred to as just 'testing', is writing code
     that tests your code.
 
-    This can be as simple as calling a function and expecting an specific
+    This can be as simple as calling a function and expecting a specific
     output or as complicated as simulating button clicks on a webpage.  The
     field of testing is broad and key to modern development.
 
@@ -77,7 +77,7 @@ Why Testing Matters
 Structure of a Test
 -------------------
 
-Most test are consist of the same general structure:
+Most tests consist of the same general structure:
 
 .. ifslides::
 
@@ -90,26 +90,27 @@ Most test are consist of the same general structure:
 .. ifnotslides::
 
     Set-up
-        Any pre-testing steps occur here.  For instance your application may
-        use a database, this is where you would populate that database with
+        Any pre-testing steps occur here.  For instance, your application may
+        use a database; this is where you would populate that database with
         test data.
 
     Expected output
-        The *expected* result some function(s) call(s) is outlined.
+        The *expected* results of your function calls are outlined.
 
     Actual output
-        The functionality being tested is used and recorded.
+        The functionality being tested is implemented and its results are
+        recorded.
 
     Comparison
         Now the two values (expected and actual) are compared, usually using
         some form of the syntax ``expect(expected == actual)``. If the
-        contents of the ``expect`` call is false then the test-runner (more on
+        contents of the ``expect`` call is false, then the test-runner (more on
         that later) raises an error, continues running the test, and produces
         a traceback at the end of all tests.
 
     Tear-down
-        The setup and test is un-done.  If data was populated during the test
-        that data is removed, if files were written they are deleted.  This is
+        The setup and the tests are undone.  If data was populated during the test
+        that data is removed; if files were written they are deleted.  This is
         to ensure that each test is completed in the same environment and each
         one is self-contained.
 
@@ -119,9 +120,9 @@ Types of Testing
 
 .. ifslides::
 
-    - **Unit Testing:** How well each piece works.
-    - **Integration Testing:** How well the pieces work together.
-    - **Systems Testing:** How it all works in production.
+    - **Unit Testing:** Evaluates how well each piece works.
+    - **Integration Testing:** Evaluates how well the pieces work together.
+    - **Systems Testing:** Evaluates how it all works in production.
 
 .. ifnotslides::
 
@@ -148,7 +149,7 @@ Types of Testing
 
     Systems Testing
         Testing the program as a whole in an environment (computer, operating
-        system) similar to it's target platform(s).
+        system) similar to its target platform(s).
 
 
 Concept: Mocking
@@ -163,7 +164,7 @@ Concept: Mocking
 .. ifnotslides::
 
     **For example:** If you are writing a library that wraps a web API you
-    would mock that API so you can ensure the tests run even when website it
+    would mock that API so you can ensure the tests run even when the website it
     wraps is down.
 
 
@@ -173,9 +174,9 @@ Testing Frameworks
 .. ifnotslides::
 
     Testing frameworks range in the functionality they provide from simply
-    running detecting tests functions, to helping programmers articulate tests
-    closer to English, to forcing a very logical type of organization on your
-    tests.
+    detecting and running test functions, to helping programmers articulate
+    tests closer to English, to forcing a very logical type of organization on
+    your tests.
 
 ::
 
@@ -232,9 +233,9 @@ Teardown and Setup
     instructions, before and after each test.
 
 Useful for:
-    - populate a test database
-    - write and delete files
-    - or anything you want!
+    - populating a test database
+    - writing and deleting files
+    - or anything else you want!
 
 .. ifnotslides::
 
@@ -254,17 +255,35 @@ Useful for:
         disconnect from database
 
     def some_test()
-        setup is called automaically
+        setup is called automatically
         use data in database
-        asset something is true
+        assert something is true
         teardown is run automatically
 
 
 TODO: Using Python's ``unittest``
 ---------------------------------
 
-.. TODO: Add activity
+Write a test for the code you wrote in the previous Frameworks lesson's TODO-- 
+that is, verify that your view returns the expected output based on input
+supplied in your view's URL.
 
+`Unittesting in Flask`_
+    Check out the official Flask docs for help with syntax.
+
+.. _Unittesting in Flask: http://flask.pocoo.org/docs/0.11/testing/
+
+.. ifnotslides::
+
+    Answers:
+        ::
+ 
+            def test_hello(self):
+                rv = self.app.get('/hello/bob')
+                assert 'Hello bob' in rv.data
+
+
+        ::
 
 
 Further Reading
