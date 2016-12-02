@@ -118,12 +118,69 @@ Tool: Jenkins
 TODO: Setup Travis on a GH Repo
 -------------------------------
 
-.. TODO: Add an activity.
+.. ifnotslides::
 
-.. Something like: Fork a devopsbootcamp repo, setup traivs on it, check your
-.. status, etc.
-.. I suggest building off of whatever project that was done in the 'testing'
-.. lesson.
+    We've spent the past two lessons building and testing a web app. Now, let's
+    upload it to Github and set up CI on it. First, if you haven't already,
+    create a `Github`_ account.
+
+    Once you've done that, go to "Create New" in the upper right corner of the
+    page and click on "New Repository". Fill the fields out using these values:
+
+    .. image:: /static/gh-repository.png
+        :align: center
+        :alt: Creating a new Github repository
+        :width: 80%
+
+    - **Repository name**: You can put anything you want here!
+    - **Description**: You can also put anything you want here!
+    - **Public**: Check this field
+    - **Initialize this repository**: Check this field as well
+    - **Add .gitignore**: Python
+    - **Add a license**: Apache License 2.0
+
+    Click "Create repository" and you will be taken to your newly created
+    repository. Next, click "Clone or download" and copy the URL inside the
+    textbox. Inside your command line, run ``git clone <url_you_copied>`` to
+    make a clone of your repository.
+
+    Copy the contents of the "Frameworks" exercise directory into the cloned
+    repository, then add them to Git with ``git add -A`` and commit them with
+    ``git commit``. To push your code to Github, use
+    ``git push origin master``. Refresh the repository in your web browser to
+    check that your code was successfully pushed.
+
+    Next, go to the `Travis CI`_ website and click on "Sign in with GitHub".
+    This will automatically sync all of your Github repositories to Travis.
+    Go to your profile and locate your repository, then click on the button to
+    enable Travis.
+
+    To finish setting up Travis on our respository, we have to add a
+    ``.travis.yml`` file. Travis will look for this file in your repository
+    whenever it runs and use it to set configuration options. There are
+    detailed guides and examples for a variety of languages in the Travis
+    documentation, but for our project we're going to put this in the
+    ``.travis.yml`` file:
+
+    .. code-block:: yml
+
+        language: python
+
+        python:
+            - "2.7"
+
+        install:
+            - pip install -r requirements.txt
+
+        script:
+            - python run_tests.py
+
+    Add and commit the file, then push it to Github once more. If everything
+    was set up correctly, you should see Travis trigger automatically and start
+    testing your app.
+
+.. _Github: https://github.com
+.. _Travis CI: https://travis-ci.org
 
 
 Further Reading
