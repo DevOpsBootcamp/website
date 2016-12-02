@@ -162,7 +162,7 @@ TODO: Setup Travis on a GH Repo
     documentation, but for our project we're going to put this in the
     ``.travis.yml`` file:
 
-    .. code-block:: yml
+    .. code-block:: yaml
 
         language: python
 

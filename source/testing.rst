@@ -276,14 +276,12 @@ supplied in your view's URL.
 .. ifnotslides::
 
     Answers:
-        ::
- 
-            def test_hello(self):
-                rv = self.app.get('/hello/bob')
-                assert 'Hello bob' in rv.data
 
+    ::
 
-        ::
+        def test_hello(self):
+            rv = self.app.get('/hello/bob')
+            assert 'Hello bob' in rv.data
 
 
 Further Reading
