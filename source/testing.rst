@@ -264,9 +264,14 @@ Useful for:
 TODO: Using Python's ``unittest``
 ---------------------------------
 
-Write a test for the code you wrote in the previous Frameworks lesson's TODO-- 
-that is, verify that your view returns the expected output based on input
-supplied in your view's URL.
+Let's suppose that we want to add a new view to the Flask app we created in the
+Frameworks lesson's TODO. When the user enters the url /hello/<name>, where
+"name" is any string of the user's choice, the view should return "Hello
+<name>!!"
+    - BEFORE you actually write this view, write a test that will test the
+    desired functionality first-- i.e., test that your hello.py returns "Hello
+    bob!!" when "bob" is provided as the name variable.
+    - AFTERWARDS, implement the actual view to make your test(s) pass.
 
 `Unittesting in Flask`_
     Check out the official Flask docs for help with syntax.
@@ -275,7 +280,7 @@ supplied in your view's URL.
 
 .. ifnotslides::
 
-    Answers:
+    Answer excerpt:
 
     ::
 
