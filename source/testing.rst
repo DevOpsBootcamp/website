@@ -268,7 +268,9 @@ Let's suppose that we want to add a new view to the Flask app we created in the
 Frameworks lesson's TODO. When the user enters the url /hello/<name>, where
 "name" is any string of the user's choice, the view should return "Hello
 <name>!!"
-    - BEFORE you actually write this view, write a test that will test the desired functionality first-- i.e., test that your hello.py returns "Hello bob!!" when "bob" is provided as the name variable.
+    - BEFORE you actually write this view, write a test that will test the
+      desired functionality first-- i.e., test that your hello.py returns
+      "Hello bob!!" when "bob" is provided as the name variable.
     - AFTERWARDS, implement the actual view to make your test(s) pass.
 
 `Unittesting in Flask`_
