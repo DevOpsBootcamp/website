@@ -24,6 +24,7 @@ Fall Meeting 3  Dec 3, 11am-3pm   `OSU KEC 1001`_  Frameworks, Testing and CI
 =============== ================= ================ =======================================
 
 .. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
+.. _OSU KEC 1007: https://goo.gl/maps/KZiKaCoeuru
 
 
 Winter
@@ -32,6 +33,8 @@ Winter
 ================= ================= ================ =======================================
 Lesson            Date/Time         Location         Description
 ----------------- ----------------- ---------------- ---------------------------------------
+Winter Meeting 1  Feb 11, 11am-3pm  `OSU KEC 1001`_  Security and Databases
+Winter Meeting 2  Feb 25, 11am-3pm  `OSU KEC 1007`_  Dev Tools, DNS, and CM
 ================= ================= ================ =======================================
 
 
