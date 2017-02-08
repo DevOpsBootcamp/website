@@ -326,6 +326,10 @@ Code Injection
     :alt: Billy Droptables XKCD Comic
     :target: https://xkcd.com/327/
 
+.. ifslides::
+    A type of exploit that allows users to insert their own code into a running
+    process.
+
 
 Code Injection Attacks
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -343,6 +347,10 @@ Code Injection Attacks
         +-----------+----------------------------------------+
 
     - Cross-Site Scripting (XSS)
+
+    ::
+
+        <img onerror=alert("Tracking your IP with a GUI interface!");>
 
     - Cross-Site Request Forgery (CSRF)
 
@@ -366,6 +374,10 @@ Code Injection Attacks
         Cros-Site Scripting is when a malicious script is sent to, and run on,
         a person's computer.  This tends to take advantage of the fact that
         your browser blindly runs any JavaScript you tell it to.
+
+    ::
+
+        <img onerror=alert("Tracking your IP with a GUI interface!");>
 
     Cross-Site Request Forgery (CSRF)
         CSRF is when one website on your browser tries to carry out an action
