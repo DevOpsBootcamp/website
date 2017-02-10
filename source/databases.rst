@@ -54,8 +54,7 @@ Databases
 
 .. ifslides::
 
-    An organized collection of data that can efficiently store and retrieve
-    large amounts of data.
+    A program that can efficiently store and retrieve large amounts of data.
 
 .. _types of glue are best for a job: http://www.thistothat.com/
 
@@ -493,11 +492,14 @@ TODO: Crafting Queries!
 Craft a query to get the following data out of our Nobel table:
 
 - Who won the prize for Medicine in 1952?
-- How many people were awarded the 1903 Nobel in Physics?
-- How many prizes were awarded to Linus Pauling?
+- Who won the 1903 Nobel in Physics?
+- Which prize(s) were awarded to Linus Pauling?
 - How many people have won more than once? (Difficult)
 
 Don't worry about getting it exactly right!  Craft pseudo-SQL!
+
+.. Included so the answers aren't peeking from the right side of the screen
+.. nextslide::
 
 Answers
 ~~~~~~~
