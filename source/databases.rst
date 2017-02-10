@@ -230,6 +230,14 @@ Concurrent Read/Writes
     their data, logging hours, etc.  Everybody can use the same pool of data
     and *rarely* (if ever) have data collide or get lost.
 
+    In order to quantify how well a database engine handles the demands of a
+    concurrent world, it is assessed by the properties of **ACID**:
+
+- Atomicity: Either the entire transaction succeeds or it fails completely
+- Consistency: Transactions always leave the database in a valid state
+- Isolation: Concurrent operations look like they took place sequentially
+- Durability: Transactions are permanent after they're committed
+
 
 When *not* to use a Database
 ----------------------------
@@ -241,10 +249,11 @@ When *not* to use a Database
     vectors into your application if you don't configure and manage them
     correctly.
 
-    There are ways to store data without databases:
-    - Store data in files.
-    - Store data in memory.
-    - Store data with a remote service.
+Databases might not be particularly useful for:
+    - Storing content for a website that rarely updates
+        - **Alternative**: Use a static site generator such as Pelican or Jekyll
+    - Hosting large individual files
+        - **Alternative**: Store the files on disk
 
 
 Types of Databases
@@ -306,6 +315,11 @@ Database Concepts
     We've touched on a few concepts already, but now we're going to dive
     directly into some (SQL) Database concepts.
 
+.. ifslides::
+
+    - Schemas
+    - Migrations
+
 
 Schemas
 ~~~~~~~
@@ -342,6 +356,23 @@ Migrations
     to another inline, so you don't need to turn your database off, or restart
     from scratch, to change your schema.
 
+    Migrations are either done with specialized tools or with a series of
+    scripts that are sequentially applied to the database to migrate data
+    one step at a time. Many popular web frameworks have built-in tools to
+    create and apply database migrations.
+
+.. code-block:: python
+
+    from django.db import migrations, models
+
+    class Migration(migrations.Migration):
+        dependencies = [
+            ('app', '0001_initial')
+        ]
+
+        operations = [
+            migrations.AddField("Nobel", "topic", models.CharField(80))
+        ]
 
 Raw SQL Syntax
 --------------
@@ -352,6 +383,13 @@ Raw SQL Syntax
     but it's always good to know the syntax.  One day you may need to write
     raw SQL queries, and at the very least you'll need to *read* SQL for
     debugging purposes.
+
+.. ifslides::
+
+    - SELECT
+    - INSERT
+    - UPDATE
+    - DELETE
 
 
 SELECT
@@ -477,7 +515,7 @@ Answers
 
     SELECT COUNT(*) FROM nobel
     AS n0 INNER JOIN nobel AS n1 on n0.winner=n1.winner
-    AND (n0.yr!=n1.1 or n0.subject!=n1.subject); #(16)
+    AND (n0.yr!=n1.yr or n0.subject!=n1.subject); #(16)
 
 
 TODO: Using a *Real* Database
@@ -488,7 +526,14 @@ TODO: Using a *Real* Database
     Now that we have belabored the *theory* of databases and SQL, lets actually
     start *doing* work with databases.
 
-    Throughout this exercise we will
+    Throughout this exercise we will install MySQL, configure it, and load it
+    up with some data.
+
+.. ifslides::
+
+    - Installation
+    - Adding Users
+    - Importing Data
 
 
 Installing MySQL
@@ -504,46 +549,24 @@ Installing MySQL
 
     # Install mysql -- hit 'enter' to name your user root, and then enter
     # again for password
+    # On Debian-based systems:
+    $ sudo apt update && sudo apt install mysql-server
+    # On Red Hat/Fedora based systems:
     $ sudo yum install mysql-server
 
-    $ sudo service mysqld start # Start the service
+    $ sudo /etc/init.d/mysql start  # Start the mysql service
 
     $ mysql_secure_installation # Use this to set the root password
 
-    # There is no current password
     # Hit 'yes' or 'y' for all options
     # Add a sensible password which you will remember
     # DO NOT MAKE IT YOUR USUAL PASSWORD.
 
-    $ sudo service mysqld status # Make sure service is running
+    $ sudo /etc/init.d/mysql status
 
     $ mysqladmin -u root -p ping # Ping the database
 
     $ mysqladmin -u root -p create nobel # Create a table for Nobel prizes
-
-
-Configuration
-~~~~~~~~~~~~~
-
-.. ifnotslides::
-
-    Configuration files are something we haven't touched on in this course all
-    that much.  They are files read by a specific program to tell it how to
-    behave.  You will get more experience with these as you use Linux more.
-
-#. Open and edit ``/etc/my.cnf``.
-#. Add ``default_storage_engine = InnoDB`` to your file.
-
-.. ifnotslides::
-
-    The only change we really want to make on to our MySQL configuration file
-    is to edit the ``default_storage_engine`` option.
-
-    InnoDB offers a lot of great features the default Database Engine does not:
-
-    - crash recovery
-    - caching
-    - foreign keys
 
 
 Users
@@ -560,7 +583,7 @@ Login to the mysql shell with your ``root`` user credentials:
 
     $ sudo mysql -p
 
-::
+.. code-block:: sql
 
     mysql> CREATE USER 'me'@'localhost'
            IDENTIFIED BY 'password';
@@ -578,6 +601,7 @@ Importing Data
 ::
 
     # Get the database from the osl server
+    $ sudo apt install wget
     $ wget http://osl.io/nobel -O nobel.sql
     # put the database in a file called nobel.sql
     $ sudo mysql -p nobel < nobel.sql
@@ -601,6 +625,12 @@ Ways to Use a Database
     Now that you have a working database you have a few options for how you
     want to use it.
 
+.. ifslides::
+
+    - Raw SQL Queries
+    - Native Queries
+    - ORMs
+
 
 Raw Queries
 ~~~~~~~~~~~
@@ -612,6 +642,21 @@ Raw Queries
     queries you want.  This is rarely the way to go and isn't very useful for
     most applications.  The SQL language is only good for doing database
     *stuff*.
+
+.. code-block:: sql
+
+    mysql> SELECT subject, yr, winner FROM nobel
+           WHERE yr=1960;
+
+::
+
+    +------+------------+-----------------------------+
+    | yr   | subject    | winner                      |
+    +------+------------+-----------------------------+
+    | 1960 | Chemistry  | Willard F. Libby            |
+    | 1960 | Literature | Saint-John Perse            |
+    | ...  | ...        | ...                         |
+    +------+------------+-----------------------------+
 
 
 Native Queries
@@ -648,7 +693,7 @@ Object Relational Mappers
 
 .. ifnotslides::
 
-    Object Relational Mappers (ORMs) is a library which allows you to write in
+    An Object Relational Mapper (ORM) is a library which allows you to write in
     a native programming language to interface with a database.  So instead of
     crafting SQL queries you express in your native langauge what you want the
     database to do.  This means you don't write *any* SQL, the programming
@@ -674,8 +719,8 @@ Object Relational Mappers
     for subject, yr, winner in session.query(Nobel).filter_by(yr=1960):
         print "%s winner in %s: %s " % (subject, yr, winner)
 
-TODO: Use an ORM
-----------------
+.. TODO: Use an ORM
+.. ----------------
 
 .. TODO: Add activity
 .. Something using SQLAlchemy
