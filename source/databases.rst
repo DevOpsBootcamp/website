@@ -52,6 +52,11 @@ Databases
     and banking information, to movies and which `types of glue are best for a
     job`_.
 
+.. ifslides::
+
+    An organized collection of data that can efficiently store and retrieve
+    large amounts of data.
+
 .. _types of glue are best for a job: http://www.thistothat.com/
 
 
@@ -129,6 +134,31 @@ Structure
 Concept: Relational Algebra
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+::
+
+    <Table 1>
+    +------------------+------------------+
+    | <Name>           | <Major>          |
+    +------------------+------------------+
+    | Linus Torvalds   | Computer Science |
+    | Richard Stallman | Computer Science |
+    +------------------+------------------+
+    <Table 2>
+    +------------------+--------------+----------------+
+    | <Major>          | <School>     | <Advisor Name> |
+    +------------------+--------------+----------------+
+    | Computer Science | Engineering  | Dennis Ritchie |
+    +------------------+--------------+----------------+
+    <Table 1> JOIN <Table 2>
+    +------------------+------------------+-------------+----------------+
+    | <Name>           | <Major>          | <School>    | <Advisor Name> |
+    +------------------+------------------+-------------+----------------+
+    | Linus Torvalds   | Computer Science | Engineering | Dennis Ritchie |
+    | Richard Stallman | Computer Science | Engineering | Dennis Ritchie |
+    +------------------+------------------+-------------+----------------+
+
+.. nextslide::
+
 .. image:: /static/inner-outer-join-venn.jpg
     :align: center
     :alt: Relational Algebra Example
@@ -162,7 +192,18 @@ Databases are useful for two situations:
 Lots of Data
 ~~~~~~~~~~~~
 
+.. image:: /static/monthly-internet-traffic.png
+    :align: center
+    :scale: 50%
+    :alt: Global Internet traffic by year
+
+*Note: 1 PB = 1,000,000 GB*
+
 .. ifnotslides::
+
+    A significant portion of this data probably never touches a database (For
+    example, static file uploads/downloads), but the Internet handles a *lot*
+    of data.
 
     Databases are very good at efficiently storing large amounts of data.
     Whether you are storing a simple kitchen app or a whole social network,
@@ -195,12 +236,15 @@ When *not* to use a Database
 
 .. ifnotslides::
 
-    Databases are appealing, but if you're application may not need them.
+    Databases have many appealing features, but your application may not need
+    them. In some situations databases can be overkill or introduce attack
+    vectors into your application if you don't configure and manage them
+    correctly.
 
-    If you rarely read and write data to disk there are other options:
-        - Storing data in files.
-        - Storing data in memory.
-        - Storing data with a remote service.
+    There are ways to store data without databases:
+    - Store data in files.
+    - Store data in memory.
+    - Store data with a remote service.
 
 
 Types of Databases
@@ -318,8 +362,6 @@ SELECT
     Select statements **get** data from the database which matches the
     requirements you have.
 
-Example:
-
 .. code-block:: sql
 
     SELECT
@@ -328,6 +370,15 @@ Example:
         nobel
     WHERE
         yr = 1960 AND subject='medicine';
+
+::
+
+    +------+------------+-------------------------------+
+    | yr   | subject    | winner                        |
+    +------+------------+-------------------------------+
+    | 1960 | "medicine" | "Sir Frank Macfarlane Burnet" |
+    | 1960 | "medicine" | "Sir Peter Brian Medawar"     |
+    +------+------------+-------------------------------+
 
 
 INSERT
@@ -338,14 +389,22 @@ INSERT
     Insert statements create an entry into a table and populate the fields
     appropriately.
 
-Example:
-
 .. code-block:: sql
 
     INSERT INTO
         nobel
     VALUES
         ('2013','Literature','Herta Müller');
+
+::
+
+    +-----+------+--------------+----------------+
+    | id  | yr   | subject      | winner         |
+    +-----+------+--------------+----------------+
+    | ... | ...  | ...          | ...            |
+    | 873 | 2013 | "Literature" | "Herta Müller" |
+    | ... | ...  | ...          | ...            |
+    +-----+------+--------------+----------------+
 
 
 UPDATE
@@ -354,8 +413,6 @@ UPDATE
 .. ifnotslides::
 
     Update statements modify an existing entry in a table.
-
-Example:
 
 .. code-block:: sql
 
@@ -366,6 +423,16 @@ Example:
     WHERE
         subject='Peace' AND yr='1951';
 
+::
+
+    +-----+------+---------+----------------+
+    | id  | yr   | subject | winner         |
+    +-----+------+---------+----------------+
+    | ... | ...  | ...     | ...            |
+    | 120 | 1951 | "Peace" | "Andrew Ryan"  |
+    | ... | ...  | ...     | ...            |
+    +-----+------+---------+----------------+
+
 
 DELETE
 ~~~~~~
@@ -373,8 +440,6 @@ DELETE
 .. ifnotslides::
 
     Delete statements... you can guess what a delete statement does I bet.
-
-Example:
 
 .. code-block:: sql
 
