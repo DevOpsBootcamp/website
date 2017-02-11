@@ -63,32 +63,31 @@ There are three main types of security in computing:
 
 .. ifslides::
 
-    - **Physical Security:** How safe something is from physical interaction.
-    - **Software Security:** Exploitation through software.
-    - **Network Security:** Exploitations through network servies.
-
-        - **Active:** Breaking into a networked service.
-        - **Passive:** 'Sniffing' networked traffic over the wire.
+    - **Physical Security**
+    - **Software Security**
+    - **Network Security**
+        - **Active**
+        - **Passive**
 
 .. ifnotslides::
 
     Physical Security
-        How secure a physical piece of hardware is (put it in a safe).
+        Use physical barriers to prevent unauthorized access to data
 
     Software Security
-        Anything which can obtain secret data from a piece of software.
+        Fix flaws in your application that could grant attackers unwanted
+        levels of access to your systems
 
     Network Security
         Security pertaining to networked services (websites, databases, etc).
 
         - Active: in which an intruder initiates commands to disrupt the
-          network's normal operation (Denial-of-Service, Buffer Overflow, SQL
-          Injection)
+          network's normal operation (Denial-of-Service, Ping of Death)
         - Passive: a network intruder intercepts data traveling through the
           network. (Man-in-the-Middle, Wiretapping, Idle Scan)
 
     Each of these encompases a field of computer security unto itself.  We
-    will at least mention each of thee in more detail, but we will focus on
+    will at least mention each of them in more detail, but we will focus on
     network securty in this course.
 
 Threat Models
@@ -112,8 +111,8 @@ Threat Models
     it.
 
 
-Authentication, Authorization, Identity
----------------------------------------
+Access Control
+--------------
 
 .. image:: /static/xkcd_1121.png
     :align: center
@@ -122,41 +121,43 @@ Authentication, Authorization, Identity
 
 .. ifslides::
 
-    - **Authentication:** Are they who they say they are?
+    - **Identification:** Who is this person?
 
-    - **Authorization:** Are they allowed access here?
+    - **Authentication:** Is this person who they say they are?
 
-    - **Identity:** How do you identify a person? What makes you you?
+    - **Authorization:** Is this person allowed to perform this action?
 
 .. ifnotslides::
 
-    These three concepts are useful vocabulary for discussing security.  If
-    there is a problem with an application's Authentication that's very
-    different form it's Authorization, which is also differnt form it's ability
-    to Identify users.
+    Access Control is a framework for controlling who has access to what
+    resources on a system. There are many ways to implement Access Control,
+    but the three basic principles of Access Control are *Identification*,
+    *Authentication*, and *Authorization*.
+
+    Identification
+        Who is this person?
+
+        Identification is the first step in granting access. During this step,
+        the user identifies themselves to the system they wish to access. One
+        example of an identifying piece of information is a username. In most
+        cases, however, identification isn't enough. It's easy enough to claim
+        to be someone that you aren't, which is why you have to perform
+        **Authentication** alongside identification.
 
     Authentication:
-        Are they who they say they are?
+        Is this person who they say they are?
 
-        An example of Authentication would be a **Username** and
-        **Passphrase**.  When you are logging into a website or computer you
+        An example of Authentication would be asking for a **password** or
+        **passphrase**.  When you are logging into a website or computer you
         are authenticating.
 
     Authorization:
-        Are they allowed access here?
+        Is this person allowed to perform this action?
 
         An example of Authorization is when you try to open a file on a shared
         computer and you are denied access.  Your user (that you
-        *authenticated* as) is not allowd to access that file.
+        *authenticated* as) is not allowed to access that file.
 
-    Identity
-        How do you identify a person? What makes you you?
-
-        Identity is tricky.  An example with this would be supplying an
-        official government website with your Social Security Number,
-        Passport Number, or answering a question only **you** would know the
-        answer to.  Anything that uniquely identifies (and proves online) that
-        **you are you** is a form of identification.
 
 Passwords / Passphrases
 -----------------------
@@ -220,7 +221,7 @@ Solutions for Passwords
         secondary password which is generated every thirty seconds that you
         enter *after* your actual password.  The second password changes so
         often, and is only visible on your devices, so it makes sneaking into
-        your account almost impossible.
+        your account much more difficult.
 
 .. _LastPass: https://lastpass.com/
 
@@ -285,8 +286,10 @@ Certificates and HTTPS
     HTTPS
         Hyper Text Transfer Protocol *Secure*.
 
-        This is an alternative to the HTTP protocol used for secure web
-        communication.
+        This is an extension of the HTTP protocol designed for secure web
+        communication, but it's a good idea to ensure that you're using it
+        everywhere by replacing ``http://`` with ``https://`` or by using
+        a browser extension like `HTTPS Everywhere`_.
 
     Certificate Authorities
         An entity that issues digital certificates for HTTPS connections.  These
@@ -306,6 +309,8 @@ Certificates and HTTPS
     information about the certificate including which authority it comes from,
     and more information about it.
 
+.. _HTTPS Everywhere: https://www.eff.org/https-everywhere
+
 
 Types of Attacks
 ----------------
@@ -321,8 +326,7 @@ Code Injection
 .. ifnotslides::
 
     Code Injection is the act of inserting code into a running process
-    (website, webapp, etc) with malicious intention.  These are a few common
-    attacks and a way to start fighting against code injection.
+    (website, webapp, word processor, etc.) with malicious intention.
 
 .. image:: /static/xkcd_327.png
     :align: center
@@ -339,13 +343,17 @@ Code Injection Attacks
 
     ::
 
-        +-----------+---------------------------------------+
-        | username: | admin                                 |
-        +-----------+---------------------------------------+
-        | password: | pass' || true); DROP TABLES STUDENTS; |
-        +-----------+---------------------------------------+
+        +-----------+----------------------------------------+
+        | username  | admin                                  |
+        +-----------+----------------------------------------+
+        | password: | pass' || true); DROP TABLE STUDENTS;-- |
+        +-----------+----------------------------------------+
 
     - Cross-Site Scripting (XSS)
+
+    ::
+
+        <img onerror=alert("Tracking your IP with a GUI interface!");>
 
     - Cross-Site Request Forgery (CSRF)
 
@@ -359,16 +367,20 @@ Code Injection Attacks
 
     ::
 
-        +-----------+---------------------------------------+
-        | username: | admin                                 |
-        +-----------+---------------------------------------+
-        | password: | pass' || true); DROP TABLES STUDENTS; |
-        +-----------+---------------------------------------+
+        +-----------+----------------------------------------+
+        | username: | admin                                  |
+        +-----------+----------------------------------------+
+        | password: | pass' || true); DROP TABLE STUDENTS;-- |
+        +-----------+----------------------------------------+
 
     Cross-Site Scripting (XSS)
         Cros-Site Scripting is when a malicious script is sent to, and run on,
         a person's computer.  This tends to take advantage of the fact that
         your browser blindly runs any JavaScript you tell it to.
+
+    ::
+
+        <img onerror=alert("Tracking your IP with a GUI interface!");>
 
     Cross-Site Request Forgery (CSRF)
         CSRF is when one website on your browser tries to carry out an action
@@ -381,7 +393,7 @@ Code Injection Attacks
 
 ::
 
-    <img src="http://example.com/?action="Delete All Accounts"
+    <img src="http://example.com/?action="Delete All Accounts">
 
 
 Code Injection Defenses
@@ -389,8 +401,8 @@ Code Injection Defenses
 
 .. ifslides::
 
-    - Sanitize Inputs
-    - CSRF Tokens
+    - Sanitize User Inputs
+    - Use CSRF Tokens
 
 .. ifnotslides::
 
@@ -402,7 +414,7 @@ Code Injection Defenses
         Input sanitation is when your code sniffs a piece of input to see if
         it looks like a SQL or code of any kind.  If it does look like code
         it's probably malicious so your program errors out and tells the user
-        to enter a *real* password.
+        to enter a *real* input.
 
     CSRF Tokens
         A CSRF token is a unique string that has to be tied to each request
@@ -464,8 +476,8 @@ Discovering Vulnerabilites
     projects have *bug bounties* which give a $$$ reward for bugs.
 
 
-TODO
-----
+.. TODO
+.. ----
 
 .. TODO: Add activities
 
@@ -474,8 +486,12 @@ Further Reading
 
 `codebashing.com/sql_demo`_
     Try your hand at *actual* SQL Injection attacks
+`OverTheWire Wargames`_
+    Learn the basics of offensive security by solving challenges and using
+    exploits to gain access to the password for the next level.
 
 .. TODO: Add more further reading
 .. TODO: Suggestion: Bugbounties.
 
 .. _codebashing.com/sql_demo: http://www.codebashing.com/sql_demo
+.. _OverTheWire Wargames: http://overthewire.org/wargames/
