@@ -63,11 +63,11 @@ There are three main types of security in computing:
 
 .. ifslides::
 
-    - **Physical Security:**
-    - **Software Security:**
-    - **Network Security:**
-        - **Active:**
-        - **Passive:**
+    - **Physical Security**
+    - **Software Security**
+    - **Network Security**
+        - **Active**
+        - **Passive**
 
 .. ifnotslides::
 
@@ -111,15 +111,13 @@ Threat Models
     it.
 
 
-Identification, Authentication, and Authorization
--------------------------------------------------
+Access Control
+--------------
 
 .. image:: /static/xkcd_1121.png
     :align: center
     :target: https://xkcd.com/1121/
     :alt: XKCD Identity Comic
-
-These are the three basic principles of **Access Control**:
 
 .. ifslides::
 
@@ -130,6 +128,11 @@ These are the three basic principles of **Access Control**:
     - **Authorization:** Is this person allowed to perform this action?
 
 .. ifnotslides::
+
+    Access Control is a framework for controlling who has access to what
+    resources on a system. There are many ways to implement Access Control,
+    but the three basic principles of Access Control are *Identification*,
+    *Authentication*, and *Authorization*.
 
     Identification
         Who is this person?
@@ -144,8 +147,8 @@ These are the three basic principles of **Access Control**:
     Authentication:
         Is this person who they say they are?
 
-        An example of Authentication would be a **Username** and
-        **Passphrase**.  When you are logging into a website or computer you
+        An example of Authentication would be asking for a **password** or
+        **passphrase**.  When you are logging into a website or computer you
         are authenticating.
 
     Authorization:
@@ -283,8 +286,10 @@ Certificates and HTTPS
     HTTPS
         Hyper Text Transfer Protocol *Secure*.
 
-        This is an alternative to the HTTP protocol used for secure web
-        communication.
+        This is an extension of the HTTP protocol designed for secure web
+        communication, but it's a good idea to ensure that you're using it
+        everywhere by replacing ``http://`` with ``https://`` or by using
+        a browser extension like `HTTPS Everywhere`_.
 
     Certificate Authorities
         An entity that issues digital certificates for HTTPS connections.  These
@@ -303,6 +308,8 @@ Certificates and HTTPS
     the little Lock icon in the URL bar.  You should be able to find more
     information about the certificate including which authority it comes from,
     and more information about it.
+
+.. _HTTPS Everywhere: https://www.eff.org/https-everywhere
 
 
 Types of Attacks
@@ -326,10 +333,6 @@ Code Injection
     :alt: Billy Droptables XKCD Comic
     :target: https://xkcd.com/327/
 
-.. ifslides::
-    A type of exploit that allows users to insert their own code into a running
-    process.
-
 
 Code Injection Attacks
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -341,7 +344,7 @@ Code Injection Attacks
     ::
 
         +-----------+----------------------------------------+
-        | username: | admin                                  |
+        | username  | admin                                  |
         +-----------+----------------------------------------+
         | password: | pass' || true); DROP TABLE STUDENTS;-- |
         +-----------+----------------------------------------+
@@ -390,7 +393,7 @@ Code Injection Attacks
 
 ::
 
-    <img src="http://example.com/?action="Delete All Accounts"
+    <img src="http://example.com/?action="Delete All Accounts">
 
 
 Code Injection Defenses
@@ -398,8 +401,8 @@ Code Injection Defenses
 
 .. ifslides::
 
-    - Sanitize Inputs
-    - CSRF Tokens
+    - Sanitize User Inputs
+    - Use CSRF Tokens
 
 .. ifnotslides::
 
@@ -411,7 +414,7 @@ Code Injection Defenses
         Input sanitation is when your code sniffs a piece of input to see if
         it looks like a SQL or code of any kind.  If it does look like code
         it's probably malicious so your program errors out and tells the user
-        to enter a *real* password.
+        to enter a *real* input.
 
     CSRF Tokens
         A CSRF token is a unique string that has to be tied to each request
@@ -473,8 +476,8 @@ Discovering Vulnerabilites
     projects have *bug bounties* which give a $$$ reward for bugs.
 
 
-TODO
-----
+.. TODO
+.. ----
 
 .. TODO: Add activities
 
@@ -483,8 +486,12 @@ Further Reading
 
 `codebashing.com/sql_demo`_
     Try your hand at *actual* SQL Injection attacks
+`OverTheWire Wargames`_
+    Learn the basics of offensive security by solving challenges and using
+    exploits to gain access to the password for the next level.
 
 .. TODO: Add more further reading
 .. TODO: Suggestion: Bugbounties.
 
 .. _codebashing.com/sql_demo: http://www.codebashing.com/sql_demo
+.. _OverTheWire Wargames: http://overthewire.org/wargames/
