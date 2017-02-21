@@ -53,11 +53,18 @@ Problems DNS Solves
     :alt: XKCD Google DNS Comic
     :align: center
 
-The Domain Name System (DNS) translates human-readable URLs
-(devopsbootcamp.osuosl.org) into computer IP addresses (140.211.15.183).
+.. ifnotslides::
+    The Domain Name System (DNS) translates human-readable URLs
+    (devopsbootcamp.osuosl.org) into computer IP addresses (140.211.15.183).
 
-It works by storing records in a distributed tree-like hierarchy.  It was
-designed like this because it scales well.
+    It works by storing records in a distributed tree-like hierarchy.  It was
+    designed like this because it scales well.
+
+.. ifslides::
+
+    ::
+
+        devopsbootcamp.osuosl.org ===(DNS)===> 140.211.15.183
 
 
 Obligatory History Lesson
@@ -143,11 +150,11 @@ A DNS Request
     To further elaborate, because DNS really does need a lot of examples to
     make sense, here is a DNS request from a different angle.
 
-#. A computer makes a request for ``http://osuosl.org.``.
-#. This request gets sent to the ``root`` (``.``) of the DNS tree.
-#. The root sends it off to the ``org`` (top level domain) branch.
-#. The ``org`` node sends it off to the ``osuosl`` (domain) branch.
-#. The ``osuosl`` node sends it to the ``devopsbootcamp`` (subdomain) branch.
+    #. A computer makes a request for ``http://osuosl.org.``.
+    #. This request gets sent to the ``root`` (``.``) of the DNS tree.
+    #. The root sends it off to the ``org`` (top level domain) branch.
+    #. The ``org`` node sends it off to the ``osuosl`` (domain) branch.
+    #. The ``osuosl`` node sends it to the ``devopsbootcamp`` (subdomain) branch.
 
 .. image:: /static/dns-example.png
     :align: center
@@ -244,7 +251,7 @@ SOA (Authority) Records
 .. ifnotslides::
 
     ``SOA`` is the record for proving authority over a site or zone.  The head
-    of the ``org`` heiarchy has a ``SOA`` record proving it's authority over
+    of the ``org`` heirarchy has a ``SOA`` record proving it's authority over
     ``org`` websites.
 
 - A DNS server is authoritative if it has a Start of Authority (SOA) record for
@@ -261,6 +268,8 @@ CNAME Records
 
     The ``CNAME`` is an alias.  "When you ask for ``old.example.com`` you want
     to go to ``new.example.com``".
+
+.. TODO: Add cname record examples
 
 
 NXDOMAIN Records
@@ -333,6 +342,29 @@ The Thirteen
     - WIDE - Japan
 
 
+Tool: dig
+---------
+
+``dig`` is a command-line tool for performing DNS lookups.
+
+Syntax:
+
+::
+
+    dig @server name type
+
+Examples:
+
+::
+
+    dig @ns1.osuosl.org osuosl.org A
+
+.. ifnotslides::
+
+    This queries the nameserver ``ns1.osuosl.org`` for DNS records relating to
+    ``osuosl.org`` of type ``A`` (IPv4 Address)
+
+
 Example: Recursive Request
 --------------------------
 
@@ -358,14 +390,8 @@ First we query a NS record for ``.``:
     .           518400  IN  NS  l.root-servers.net.
     .           518400  IN  NS  f.root-servers.net.
     .           518400  IN  NS  b.root-servers.net.
-    .           518400  IN  NS  d.root-servers.net.
-    .           518400  IN  NS  k.root-servers.net.
-    .           518400  IN  NS  g.root-servers.net.
-    .           518400  IN  NS  h.root-servers.net.
-    .           518400  IN  NS  m.root-servers.net.
-    .           518400  IN  NS  e.root-servers.net.
-    .           518400  IN  NS  c.root-servers.net.
-    .           518400  IN  NS  j.root-servers.net.
+
+    etc...
 
 .. nextslide::
 
@@ -380,17 +406,13 @@ Next we query ``NS`` for ``org.``:
     ;; AUTHORITY SECTION:
     org.            172800  IN  NS  a0.org.afilias-nst.info.
     org.            172800  IN  NS  a2.org.afilias-nst.info.
-    org.            172800  IN  NS  b0.org.afilias-nst.org.
-    org.            172800  IN  NS  b2.org.afilias-nst.org.
-    org.            172800  IN  NS  c0.org.afilias-nst.info.
-    org.            172800  IN  NS  d0.org.afilias-nst.org.
+
+    etc...
 
     ;; ADDITIONAL SECTION:
     a0.org.afilias-nst.info. 172800 IN  A   199.19.56.1
-    a2.org.afilias-nst.info. 172800 IN  A   199.249.112.1
-    b0.org.afilias-nst.org. 172800  IN  A   199.19.54.1
-    b2.org.afilias-nst.org. 172800  IN  A   199.249.120.1
-    <truncated>
+
+    etc...
 
 .. nextslide::
 
@@ -445,7 +467,11 @@ Next we query ``A`` for ``osuosl.org.``:
 TODO: Traverse the DNS Tree with ``dig``
 ----------------------------------------
 
-.. TODO: Add activity
+Can you traverse the DNS tree to get to these websites? Give it a try!
+
+    - github.com
+    - web.archive.org
+    - en.wikipedia.org
 
 
 TODO: Run a DNS Server
