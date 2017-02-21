@@ -37,34 +37,37 @@ Lesson 15: Dev Processes & Tools
 
 
 
-Code Analsis
-------------
-
-::
-
-    (How to( find( the missing parenthesis)).
+Code Analysis
+-------------
 
 .. ifnotslides::
 
-    Code Analysis is one of the main tools in a programmer's arsenel to
-    produce code that is bug-free.  It is the act of using a computer to look
-    at your code to check it for correctness.  This can range from making sure
-    it adheres to style guides to making sure your functions actually return
-    what you expect them to.
+    Code analysis tools are some of the most important tools in a developer's
+    arsenal when it comes to finding and fixing bugs. Code analysis tools come
+    in two flavors:
 
-    Code Analysis tools come in two flavors:
+- **Static Analysis**
 
-Static
-    These tools look at your code *files* and never actually run the program.
+    .. ifnotslides::
 
-    Includes Linting and Type Checking.
+        A tool performs static analysis if it works without running your code.
+        Static analysis tools such as linters and type checkers are usually the
+        first line of defense against bad code because they can be automatically
+        run by Continuous Integration every time code is pushed to a remote
+        repository.
 
-Dynamic
-    Dynamic Code Analysis tools actually run your code and make verifications
-    by watching how your program acts, where it fails, what it does in memory,
-    and if your tests are adequate enough.
+        Static analysis can be an incredibly valuable tool in situations where
+        it's very important that the code works perfectly every single time,
+        such as in missile defense systems or stock trading.
 
-    Includes Debuggers, Memory Profiling Tools, and Code Coverage.
+- **Dynamic Analysis**
+
+    .. ifnotslides::
+
+        Dynamic Code Analysis tools actually run your code and verify it by
+        watching how the program acts, where it fails, how it uses resources
+        such as processor time and memory, how long it takes to finish running,
+        and if your tests are adequate enough.
 
 
 Debugging Tools
@@ -72,8 +75,8 @@ Debugging Tools
 
 .. ifnotslides::
 
-    Debugging tools are programs that run your code and report important
-    information either automatically or that you explicitly request:
+    Debuggers are interactive dynamic analysis tools that are used to inspect
+    your code as it runs.
 
 - Print (broken) variables.
 - Read and reports error messages.
@@ -81,77 +84,75 @@ Debugging Tools
 
 .. ifnotslides::
 
-    Most of what a debugger does is what you do already.  You print variables
-    and correct wrong syntax, a debugger makes it easy and fast so you can
-    iterate and fix your problems more quickly.
+    Even if you've never used a debugger before, chances are that at some point
+    you've debugged your code by using print statements to check the contents of
+    your variables at different points throughout your program (Also called
+    "printf debugging"). If you find yourself doing this often, however, it's
+    usually more efficient to learn how to use a proper debugger.
 
 
-CLI Tools
-~~~~~~~~~
+CLI Debugging Tools
+~~~~~~~~~~~~~~~~~~~
 
-.. ifnotslides::
+**C/C++ Tools**
 
-    Command-line tools are utilities you can use to debug your code from the
-    terminal.
+- GDB
 
-C/C++
-    - ``GDB``: Used to inspect and debug everything in a C program from
-      variables to why it encountered a fatal failure. Generally called the
-      swiss-army-knife of debugging, a great tool to use in programming,
-      allows you to set *'break points'* where the program stops mid-run and
-      you can see what it's doing.
+    .. ifnotslides::
 
-    - ``Valgrind``: Used specifically to inspect and debug memory issues.
+        Used to inspect and debug everything in a C program from
+        variables to why it encountered a fatal failure. Generally called the
+        swiss-army-knife of debugging, a great tool to use in programming,
+        allows you to set *'break points'* where the program stops mid-run and
+        you can see what it's doing.
 
-.. ifnotslides::
+- Valgrind
 
-    For example, here is some ``valigrind`` output.
+    .. ifnotslides::
 
-::
+        Valgrind is a program that keeps track of a program's memory usage and
+        reports on any definite or potential memory leaks. For example:
 
-    $ valgrind ./tests/bin/lexer_tests
-    ...
-    ==6703== Conditional jump or move depends on uninitialised value(s)
-    ...
-    ==6703==    by 0x4018C1: print_token (lexer.c:36)
-    ==6703==    by 0x4011F7: test_get_tok (lexer_tests.c:54)
-    ==6703==    by 0x4008CD: main (lexer_tests.c:8)
-    ...
-    ==6703== LEAK SUMMARY:
-    ==6703==    definitely lost: 192 bytes in 8 blocks
-    ==6703==    indirectly lost: 162 bytes in 10 blocks
+        ::
 
-.. ifnotslides::
+            $ valgrind ./tests/bin/lexer_tests
+            ...
+            ==6703== Conditional jump or move depends on uninitialised value(s)
+            ...
+            ==6703==    by 0x4018C1: print_token (lexer.c:36)
+            ==6703==    by 0x4011F7: test_get_tok (lexer_tests.c:54)
+            ==6703==    by 0x4008CD: main (lexer_tests.c:8)
+            ...
+            ==6703== LEAK SUMMARY:
+            ==6703==    definitely lost: 192 bytes in 8 blocks
+            ==6703==    indirectly lost: 162 bytes in 10 blocks
 
-    It is verbose, but it runs your code and gives you a necessarily thorough
-    summary so you know exactly where your program is taking up a lot of memory
-    (leaking) and how to possibly fix it.
+**Python Tools**
 
-Python
-    - ``PDB``: The GDB tool for python.
+- PDB
 
-    - ``Stack Traces``: A feature built into Python. Explains what function
-      calls triggered a fatal failure.  Not interactive but very useful for
-      debugging in development.
+    .. ifnotslides::
 
-.. ifnotslides::
+        PDB is a Python debugger that comes default in the Python Standard
+        Library. It's similar to GDB and other debuggers, but with the added
+        features of being able to easily extend its functionality and run
+        Python code directly inside the debugger interface.
 
-    For example, here is a Python Stack Trace.
+**NodeJS Tools**
 
-    **Hint** The last line is the most important.
+- node debug
 
-::
+    .. ifnotslides::
 
-    $ python some_script.py
-    Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-        File "<stdin>", line 2, in f
-    TypeError: unsupported operand type(s) for * : 'int' and 'NoneType'
+        Barebones debugger that comes with NodeJS. Possible to use for simple
+        debugging tasks like setting breakpoints and stepping through code, but
+        not much past that.
 
-NodeJS
-    - ``node debug``: Built into NodeJS used to debug programs in the language.
+- Node Inspector
 
-    - ``Node Inspector``: External tool for debugging NodeJS programs.
+    .. ifnotslides::
+
+        A more fully-featured NodeJS debugger.
 
 
 Web Consoles
@@ -184,7 +185,7 @@ Linters
 
 Examples:
     - ``flake8`` (Python)
-    - ``slint`` (C)
+    - ``splint`` (C)
     - ``jshint`` (NodeJS)
 
 ::
@@ -192,13 +193,6 @@ Examples:
     src/times.js: line 407, col 20, Expected '{' and instead saw 'return'.
     src/times.js: line 415, col 49, Missing semicolon.
     src/times.js: line 407, col 58, 'error' is not defined.
-
-
-
-TODO: Lint the Code!
-~~~~~~~~~~~~~~~~~~~~
-
-.. TODO: Add activity
 
 
 Code Coverage
@@ -218,6 +212,15 @@ Code Coverage
     carrying around a bunch of dead code.  In general a good target-coverage
     is 80% of your code should be tested in your test suite.  100% coverage is
     all but impossible.
+
+::
+
+    Name                      Stmts   Miss  Cover   Missing
+    -------------------------------------------------------
+    my_program.py                20      4    80%   33-35, 39
+    my_other_module.py           56      6    89%   17-23
+    -------------------------------------------------------
+    TOTAL                        76     10    87%
 
 
 Integrated Development Environments (IDE)
@@ -246,10 +249,10 @@ Integrated Development Environments (IDE)
 .. nextslide::
 
 Examples:
-    - Netbeans: Java
-    - Visual Studio: .NET
-    - PyCharm: Python
-    - Eclipse: Misc
+    - **Netbeans**  (Java)
+    - **Visual Studio**  (.NET)
+    - **PyCharm**  (Python)
+    - **Eclipse**  (Many)
 
 
 Style Guides
@@ -278,34 +281,27 @@ Style Guides
     things the code is consistent and easier to manage.
 
 
-Example: Linux Kernel Standards
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example: Real-World Style Guides
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Linux kernel style guidelines are actually fun to read:
 
-    First off, I’d suggest printing out a copy of the GNU coding standards, and
-    NOT read it. Burn them, it’s a great symbolic gesture.
+    "First off, I’d suggest printing out a copy of the GNU coding standards, and
+    NOT read it. Burn them, it’s a great symbolic gesture."
 
-    [ https://www.kernel.org/doc/Documentation/CodingStyle ]
+    -- `Linux Kernel Coding Style`_
 
 NASA’s Jet Propulsion Laboratory style guidelines are very short and are
 concerned with automated tooling to do code analysis:
 
-    All loops shall have a statically determinable upper-bound on the maximum
-    number of loop iterations.
+    "All loops shall have a statically determinable upper-bound on the maximum
+    number of loop iterations."
 
-    [ http://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf ]
+    -- `JPL Coding Standard`_
 
 
-Style Guides Enforced by Linters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. ifnotslides::
-
-    Style guides may be enforced by linters.  This allows you to integrate
-    style-guide enforcement into your Continuous Integration toolchain.  This
-    usually requires formalizing your style guide in your linter's
-    configuration file.
+.. _Linux Kernel Coding Style: https://tinylab.gitbooks.io/linux-doc/content/en/CodingStyle.html
+.. _JPL Coding Standard: http://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf 
 
 
 Dependency Isolation
@@ -328,13 +324,13 @@ Dependency Isolation
     figure something else out instead.
 
 
-Python: Virtualenv
-~~~~~~~~~~~~~~~~~~
+TODO: Python Virtualenvs
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
-    The way python handles the issue is with Virtual Environments (venvs),
-    which should not be confused with Virtual Machines which are *completely
+    The way Python handles the issue is with Virtual Environments (venvs).
+    Venvs should not be confused with Virtual Machines which are *completely
     different*.
 
     You have to activate a venv to be *inside the venv*.  Once you have done
@@ -353,7 +349,7 @@ Setup and *enter* the virtual environment.
     New python executable in /path/to/<venv name>/bin/python
     Installing setuptools, pip, wheel...
     done.
-    $ soruce <venv name>/bin/activate
+    $ source <venv name>/bin/activate
 
 Install a package.  This installs it in the current working directory and so
 does not ask for root permissions.
@@ -391,7 +387,8 @@ Other Examples
 .. ifnotslides::
 
     Many other languages attack the dependencies issue in smarter and less smart
-    ways.
+    ways. Whether each solution is more or less intelligent than the others is
+    a popular topic for both friendly and unfriendly debate over the internet.
 
 Node.js:
     Creates a ``node_modules`` directory and tracks dependencies in
@@ -418,19 +415,13 @@ Development Servers
     server is as close to the real thing as you can get.
 
 
-TODO
-----
-
-.. TODO: Add activity
-
-
 Further Reading
 ---------------
 
 - The `Community Ruby Style Guide`_ is a good resource for anybody learning
   Ruby.  It's the style guide that `Rubocop`_ enforces.
 
-- The `Official Python Style Guide`_ is a well respected style guide for
+- The `Official Python Style Guide`_ (PEP8) is a well respected style guide for
   Python and is commonly accepted as *the* python style guide.
 
 .. TODO: Add futher reading.
