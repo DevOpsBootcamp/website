@@ -25,7 +25,7 @@ Lesson 17: Configuration Management
     Overview
     --------
 
-    - What CM is.
+    - What is CM?
     - Infrastructure as Code
     - Push vs Pull
     - Tools
@@ -134,9 +134,8 @@ Pull vs Push Models
     packages and writing files.
 
 Pull Model
-    - When the server being provisioned (node) runs an agent (daemon) that
-      asks a central authority (master) if/when it has any updates that it
-      should run.
+    - The server being provisioned (node) runs an agent (daemon) that asks a
+      central authority (master) if/when it has any updates that it should run.
 
     - Requires a daemon to be installed on all machines *and* a central
       authority to be setup.
@@ -155,6 +154,14 @@ Push Model
 
 Tools
 -----
+
+.. ifslides::
+
+- Puppet
+- Chef
+- CFEngine
+- Ansible
+- Saltstack
 
 
 Puppet
@@ -175,12 +182,11 @@ Puppet
 - Very stable.
 - Difficult to get setup.
 
-[ `Puppet Site`_ ]
+.. ifnotslides::
+    [ `Puppet Site`_ ]
 
 .. _Puppet Site: https://puppet.com/
 
-
-.. nextslide::
 
 Chef
 ~~~~
@@ -200,19 +206,20 @@ Chef
 - Widely Adopted.
 - Difficult to setup.
 
-[ `Chef Site`_ ]
+.. ifnotslides::
+    [ `Chef Site`_ ]
 
 .. _Chef Site: https://www.chef.io/
 
+.. ifnotslides::
 
-.. nextslide::
+    .. image:: /static/logo_cfengine.jpg
+        :alt: CFEngine logo
+        :align: center
+
 
 CFEngine
 ~~~~~~~~
-
-.. image:: /static/logo_cfengine.jpg
-    :alt: Ansible logo
-    :align: center
 
 .. ifnotslides::
 
@@ -224,12 +231,17 @@ CFEngine
 - Very old.
 - Stable.
 
-[ `CFEngine Site`_ ]
+.. ifslides::
+
+    .. image:: /static/logo_cfengine.jpg
+        :alt: CFEngine logo
+        :align: center
+
+.. ifnotslides::
+    [ `CFEngine Site`_ ]
 
 .. _CFEngine Site: https://cfengine.com/
 
-
-.. nextslide::
 
 Ansible
 ~~~~~~~
@@ -248,12 +260,14 @@ Ansible
 - Easy to setup.
 - Does not scale well.
 
-[ `Ansible Site`_ ]
+.. ifnotslides::
+    [ `Ansible Site`_ ]
 
 .. _Ansible Site: https://www.ansible.com/
 
 
 .. nextslide::
+
 
 SaltStack
 ~~~~~~~~~
@@ -261,7 +275,8 @@ SaltStack
 - Easy to use.
 - Hard to get started.
 
-[ `SaltStack Site`_ ]
+.. ifnotslides::
+    [ `SaltStack Site`_ ]
 
 .. _SaltStack Site: https://saltstack.com/
 
@@ -346,9 +361,9 @@ Puppet Example
 
 .. note::
 
-    Since Puppet designed it's own language for Configuration managent you are
-    more limited in what you can express with Puppet, but this isn't always a
-    bad thing.  It's feature rich and can do pretty much anything Chef can.
+    Since Puppet designed its own language you are more limited in what you can
+    express, but this isn't always a bad thing.  It's feature rich and can do
+    pretty much anything that Chef can.
 
 
 Ansible Example
