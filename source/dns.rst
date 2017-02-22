@@ -209,14 +209,13 @@ A Records
 MX Records
 ~~~~~~~~~~
 
+    The ``MX`` record is for tracking mail servers.
+
 .. ifnotslides::
 
-    The ``MX`` record is for tracking mail servers.  When you send an email to
-    *someuser@example.org* the mail program does a lookup for the MX record of
-    example.org.
-
-    Multiple MX records can have seperate priority (in this example they are
-    all the same).
+    When you send an email to *someuser@example.org* the mail program does a
+    lookup for the MX record of example.org. Multiple MX records can have
+    separate priority (in this example they are all the same).
 
 ::
 
@@ -229,12 +228,13 @@ MX Records
 NS Records
 ~~~~~~~~~~
 
+    Servers with a ``NS`` record are allowed to speak with authority on a
+    domain and DNS requests.
+
 .. ifnotslides::
 
-    Servers with a ``NS`` record are allowed to speak with authority on a
-    domain and DNS requests.  Basically ``NS`` records are the type of record
-    identifying nodes in the DNS hierarchy instead of just the websites DNS
-    maps.
+    ``NS`` records are the type of record identifying nodes in the DNS
+    hierarchy instead of just the websites DNS maps.
 
     NS records point to other domains (which have ``A`` records).
 
@@ -248,28 +248,32 @@ NS Records
 SOA (Authority) Records
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+    ``SOA`` is the record for proving authority over a site or zone.
+
 .. ifnotslides::
 
-    ``SOA`` is the record for proving authority over a site or zone.  The head
-    of the ``org`` heirarchy has a ``SOA`` record proving it's authority over
-    ``org`` websites.
+    For example, the head of the ``org`` heirarchy has a ``SOA`` record proving
+    its authority over ``org`` websites.
 
-- A DNS server is authoritative if it has a Start of Authority (SOA) record for
-  a domain
-- The root-servers contain SOA records for the TLDs and gTLDs
-- The NS servers for each (g)TLD contain SOA records for each registered domain
-- ... and so on...
+    - A DNS server is authoritative if it has a Start of Authority (SOA) record for
+      a domain
+    - The root-servers contain SOA records for the TLDs and gTLDs
+    - The NS servers for each (g)TLD contain SOA records for each registered domain
+    - ... and so on...
+
+::
+
+    osuosl.org.     86400   IN  SOA ns1.auth.osuosl.org. ...
 
 
 CNAME Records
 ~~~~~~~~~~~~~
 
-.. ifnotslides::
+    ``CNAME`` is an record for aliasing old names to redirect to new names.
 
-    The ``CNAME`` is an alias.  "When you ask for ``old.example.com`` you want
-    to go to ``new.example.com``".
+::
 
-.. TODO: Add cname record examples
+    bar.example.com.  86400  IN  CNAME  foo.example.com
 
 
 NXDOMAIN Records
