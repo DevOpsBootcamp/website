@@ -65,19 +65,19 @@ Configuration Management
 Short History of CM
 ~~~~~~~~~~~~~~~~~~~
 
+In the beginning there were no computers.
+
+Then many years passed and eventually we built the first computer.
+
+Then a few years after that we had more computers than we really had time
+to manage.  Things got out of hand pretty quick.
+
 .. ifnotslides::
-
-    In the beginning there were no computers.
-
-    Then many years passed and eventually we built the first computer.
-
-    Then a few years after that we had more computers than we really had time
-    to manage.  Things got out of hand pretty quick.
 
     Eventually system administrators were manually managing dozens, or even
     hundreds, of computers.  When a computer is manually managed it's called a
     *Special Snowflake*.  Specal Snowflakes are setup manually and are very
-    fragile.  Unfortunatly companies like Facebook and Google can't scale
+    fragile.  Unfortunately companies like Facebook and Google can't scale
     *Special Snowflakes* quickly and easliy, so they had to figure out a
     better solution.
 
@@ -91,18 +91,15 @@ Short History of CM
 Concept: Infrastructure as Code
 -------------------------------
 
-    Infrastructure as code is the act of describing what you want your servers
-    to look like *once*, and using that to *provision* many machines to look
-    the same.
-
-    It turns *pets* into *cattle*. (more on this difference later)
-
 .. ifnotslides::
 
-    That is how the paradigm is usually put.  Pets (or *Special Snowflakes*)
-    are servers you manage by hand and care very much about.  If a Pet dies it
-    takes a while to get over, while you can get a new Pet it won't be the
-    same and will take a while to potty-train.
+    Infrastructure as code is the act of describing what you want your servers
+    to look like *once*, and using that to *provision* many machines to look
+    the same. It turns *pets* into *cattle*.
+
+    Pets (or *Special Snowflakes*) are servers you manage by hand and care very
+    much about.  If a Pet dies it takes a while to get over, while you can get
+    a new Pet it won't be the same and will take a while to potty-train.
 
     A Cattle is not important on it's own, all you care about is the herd.  If
     one cattle dies you've got dozens more -- you've still got a herd.
@@ -115,7 +112,6 @@ Concept: Infrastructure as Code
     prone.
 
 
-- CM enables System Operation to define their infrastructure in code.
 - Install packages, configure software, start/stop services.
 - Ensure/guarantee a specific state of a machine.
 - Provide history of changes for a system.
@@ -134,22 +130,26 @@ Pull vs Push Models
     packages and writing files.
 
 Pull Model
+    Scales well but difficult to manage.
+
+.. ifnotslides::
+
     - The server being provisioned (node) runs an agent (daemon) that asks a
       central authority (master) if/when it has any updates that it should run.
 
     - Requires a daemon to be installed on all machines *and* a central
       authority to be setup.
 
-    - Scales well, difficult to manage.
-
 Push Model
+    Simple to manage and setup but not scalable.
+
+.. ifnotslides::
+
     - A central server contacts the nodes and sends updates as they are needed.
 
     - When a change is made to the infrastructure (code) each node is alerted
       of this and they run the changes.
 
-    - Simple to manage and setup (usually uses prevalent SSH protocol), not
-      scalable.
 
 
 Tools
@@ -397,25 +397,10 @@ Ansible Example
     just get there in different ways.
 
 
-TODO: Use Ansible to Provision ``localhost``
---------------------------------------------
-
-.. ifnotslides::
-
-    If you want to learn the *principles* of configuration management then
-    Ansible is a good tool to start with.  There are very few moving parts so
-    you can learn how to use it in a few hours.
-
-    To start we're going to install Ansible with ``pip``.
-
-::
-
-    $ pip install ansible
-
-.. TODO: Finish an activity.
-
-
 Further Reading
 ---------------
 
-.. TODO: Add Further reading.
+- `Ansible's Documentation`_ is comprehensive and contains an easy-to-follow
+  "Getting Started" guide.
+
+.. _Ansible's Documentation: http://docs.ansible.com/ansible/
