@@ -407,5 +407,10 @@ Further Reading
 
 - `Ansible's Documentation`_ is comprehensive and contains an easy-to-follow
   "Getting Started" guide.
+- `Kitchen-CI`_ is a Chef oriented testing system
+- `Puppet Learning VM`_ is a prebuilt VM for learning Puppet's fundamental
+   concepts
 
 .. _Ansible's Documentation: http://docs.ansible.com/ansible/
+.. _Kitchen-CI: http://kitchen.ci/
+.. _Puppet Learning VM: https://puppet.com/download-learning-vm
