@@ -272,6 +272,11 @@ Ansible
 SaltStack
 ~~~~~~~~~
 
+.. image:: /static/logo_saltstack.jpg
+    :alt: Saltstack logo
+    :align: right
+    :scale: 70%
+
 - Easy to use.
 - Hard to get started.
 
