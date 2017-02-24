@@ -85,23 +85,29 @@ Obligatory History Lesson
     ``HOSTS.TXT`` which was a mapping between computer addresses and common
     aliases.
 
+**HOSTS.TXT circa 1977:**
+
 ::
 
     MIT         1
     Yale        2
     Harvard     3
     ATT         4
+    ...
 
 .. ifnotslides::
 
     This worked but did not scale well with the ‘net, as you can imagine
     **(think: Sharing a word document with 500 friends, all making changes)**.
 
+**HOSTS.TXT a few years later:**
+
 ::
 
     ...
     joeBillson  14895
     susan-gill  15832
+    ...
 
 .. ifnotslides::
 
