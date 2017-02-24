@@ -478,12 +478,6 @@ Can you traverse the DNS tree to get to these websites? Give it a try!
     - en.wikipedia.org
 
 
-TODO: Run a DNS Server
-----------------------
-
-.. TODO: Add activity
-
-
 Further Reading
 ---------------
 
