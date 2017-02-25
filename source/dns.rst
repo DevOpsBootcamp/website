@@ -53,11 +53,18 @@ Problems DNS Solves
     :alt: XKCD Google DNS Comic
     :align: center
 
-The Domain Name System (DNS) translates human-readable URLs
-(devopsbootcamp.osuosl.org) into computer IP addresses (140.211.15.183).
+.. ifnotslides::
+    The Domain Name System (DNS) translates human-readable URLs
+    (devopsbootcamp.osuosl.org) into computer IP addresses (140.211.15.183).
 
-It works by storing records in a distributed tree-like hierarchy.  It was
-designed like this because it scales well.
+    It works by storing records in a distributed tree-like hierarchy.  It was
+    designed like this because it scales well.
+
+.. ifslides::
+
+    ::
+
+        devopsbootcamp.osuosl.org ===(DNS)===> 140.211.15.183
 
 
 Obligatory History Lesson
@@ -78,23 +85,29 @@ Obligatory History Lesson
     ``HOSTS.TXT`` which was a mapping between computer addresses and common
     aliases.
 
+**HOSTS.TXT circa 1977:**
+
 ::
 
     MIT         1
     Yale        2
     Harvard     3
     ATT         4
+    ...
 
 .. ifnotslides::
 
     This worked but did not scale well with the ‘net, as you can imagine
     **(think: Sharing a word document with 500 friends, all making changes)**.
 
+**HOSTS.TXT a few years later:**
+
 ::
 
     ...
     joeBillson  14895
     susan-gill  15832
+    ...
 
 .. ifnotslides::
 
@@ -143,11 +156,11 @@ A DNS Request
     To further elaborate, because DNS really does need a lot of examples to
     make sense, here is a DNS request from a different angle.
 
-#. A computer makes a request for ``http://osuosl.org.``.
-#. This request gets sent to the ``root`` (``.``) of the DNS tree.
-#. The root sends it off to the ``org`` (top level domain) branch.
-#. The ``org`` node sends it off to the ``osuosl`` (domain) branch.
-#. The ``osuosl`` node sends it to the ``devopsbootcamp`` (subdomain) branch.
+    #. A computer makes a request for ``http://osuosl.org.``.
+    #. This request gets sent to the ``root`` (``.``) of the DNS tree.
+    #. The root sends it off to the ``org`` (top level domain) branch.
+    #. The ``org`` node sends it off to the ``osuosl`` (domain) branch.
+    #. The ``osuosl`` node sends it to the ``devopsbootcamp`` (subdomain) branch.
 
 .. image:: /static/dns-example.png
     :align: center
@@ -202,14 +215,13 @@ A Records
 MX Records
 ~~~~~~~~~~
 
+    The ``MX`` record is for tracking mail servers.
+
 .. ifnotslides::
 
-    The ``MX`` record is for tracking mail servers.  When you send an email to
-    *someuser@example.org* the mail program does a lookup for the MX record of
-    example.org.
-
-    Multiple MX records can have seperate priority (in this example they are
-    all the same).
+    When you send an email to *someuser@example.org* the mail program does a
+    lookup for the MX record of example.org. Multiple MX records can have
+    separate priority (in this example they are all the same).
 
 ::
 
@@ -222,12 +234,13 @@ MX Records
 NS Records
 ~~~~~~~~~~
 
+    Servers with a ``NS`` record are allowed to speak with authority on a
+    domain and DNS requests.
+
 .. ifnotslides::
 
-    Servers with a ``NS`` record are allowed to speak with authority on a
-    domain and DNS requests.  Basically ``NS`` records are the type of record
-    identifying nodes in the DNS hierarchy instead of just the websites DNS
-    maps.
+    ``NS`` records are the type of record identifying nodes in the DNS
+    hierarchy instead of just the websites DNS maps.
 
     NS records point to other domains (which have ``A`` records).
 
@@ -241,26 +254,32 @@ NS Records
 SOA (Authority) Records
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+    ``SOA`` is the record for proving authority over a site or zone.
+
 .. ifnotslides::
 
-    ``SOA`` is the record for proving authority over a site or zone.  The head
-    of the ``org`` heiarchy has a ``SOA`` record proving it's authority over
-    ``org`` websites.
+    For example, the head of the ``org`` heirarchy has a ``SOA`` record proving
+    its authority over ``org`` websites.
 
-- A DNS server is authoritative if it has a Start of Authority (SOA) record for
-  a domain
-- The root-servers contain SOA records for the TLDs and gTLDs
-- The NS servers for each (g)TLD contain SOA records for each registered domain
-- ... and so on...
+    - A DNS server is authoritative if it has a Start of Authority (SOA) record for
+      a domain
+    - The root-servers contain SOA records for the TLDs and gTLDs
+    - The NS servers for each (g)TLD contain SOA records for each registered domain
+    - ... and so on...
+
+::
+
+    osuosl.org.     86400   IN  SOA ns1.auth.osuosl.org. ...
 
 
 CNAME Records
 ~~~~~~~~~~~~~
 
-.. ifnotslides::
+    ``CNAME`` is an record for aliasing old names to redirect to new names.
 
-    The ``CNAME`` is an alias.  "When you ask for ``old.example.com`` you want
-    to go to ``new.example.com``".
+::
+
+    bar.example.com.  86400  IN  CNAME  foo.example.com
 
 
 NXDOMAIN Records
@@ -333,6 +352,29 @@ The Thirteen
     - WIDE - Japan
 
 
+Tool: dig
+---------
+
+``dig`` is a command-line tool for performing DNS lookups.
+
+Syntax:
+
+::
+
+    dig @server name type
+
+Examples:
+
+::
+
+    dig @ns1.osuosl.org osuosl.org A
+
+.. ifnotslides::
+
+    This queries the nameserver ``ns1.osuosl.org`` for DNS records relating to
+    ``osuosl.org`` of type ``A`` (IPv4 Address)
+
+
 Example: Recursive Request
 --------------------------
 
@@ -358,14 +400,8 @@ First we query a NS record for ``.``:
     .           518400  IN  NS  l.root-servers.net.
     .           518400  IN  NS  f.root-servers.net.
     .           518400  IN  NS  b.root-servers.net.
-    .           518400  IN  NS  d.root-servers.net.
-    .           518400  IN  NS  k.root-servers.net.
-    .           518400  IN  NS  g.root-servers.net.
-    .           518400  IN  NS  h.root-servers.net.
-    .           518400  IN  NS  m.root-servers.net.
-    .           518400  IN  NS  e.root-servers.net.
-    .           518400  IN  NS  c.root-servers.net.
-    .           518400  IN  NS  j.root-servers.net.
+
+    etc...
 
 .. nextslide::
 
@@ -380,17 +416,13 @@ Next we query ``NS`` for ``org.``:
     ;; AUTHORITY SECTION:
     org.            172800  IN  NS  a0.org.afilias-nst.info.
     org.            172800  IN  NS  a2.org.afilias-nst.info.
-    org.            172800  IN  NS  b0.org.afilias-nst.org.
-    org.            172800  IN  NS  b2.org.afilias-nst.org.
-    org.            172800  IN  NS  c0.org.afilias-nst.info.
-    org.            172800  IN  NS  d0.org.afilias-nst.org.
+
+    etc...
 
     ;; ADDITIONAL SECTION:
     a0.org.afilias-nst.info. 172800 IN  A   199.19.56.1
-    a2.org.afilias-nst.info. 172800 IN  A   199.249.112.1
-    b0.org.afilias-nst.org. 172800  IN  A   199.19.54.1
-    b2.org.afilias-nst.org. 172800  IN  A   199.249.120.1
-    <truncated>
+
+    etc...
 
 .. nextslide::
 
@@ -445,13 +477,11 @@ Next we query ``A`` for ``osuosl.org.``:
 TODO: Traverse the DNS Tree with ``dig``
 ----------------------------------------
 
-.. TODO: Add activity
+Can you traverse the DNS tree to get to these websites? Give it a try!
 
-
-TODO: Run a DNS Server
-----------------------
-
-.. TODO: Add activity
+    - github.com
+    - web.archive.org
+    - en.wikipedia.org
 
 
 Further Reading
