@@ -38,10 +38,7 @@ Application Isolation
 
 .. ifslides::
 
-    **The seperation of one program or application stack from others.**
-
-    **The oldest way to do this is to run your application on a
-    separate computer, but that gets very expensive very quickly.**
+    **The separation of one application stack from the rest of the computer**
 
 .. ifnotslides::
 
@@ -153,10 +150,10 @@ Containers
 
 ::
 
-    $ ps aux  # Lists all processes running on an OS
+    [container] $ ps aux
     PID   USER     TIME   COMMAND
-    1 root       0:00 sh
-    6 root       0:00 ps aux
+    1     root     0:00   sh
+    6     root     0:00   ps aux
 
 .. ifnotslides::
 
@@ -167,29 +164,17 @@ Containers
     host OS.
 
 
-Not a Virtual Machine
-~~~~~~~~~~~~~~~~~~~~~
+Container Technologies
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. TODO: Check this section for accuracy and possibly add more things
 
 .. ifnotslides::
 
-    One key thing to remember is that **a container is not a virtual
-    machine**.  It may act like a VM, and isolate like a VM, but they're
-    different and for now they are not 100% interchangeable.
+    Containers are made possible by many underlying technologies that coexist
+    both inside and outside of the Linux kernel.
 
-.. image:: /static/hypervisor-vs-containers.png
-    :align: center
-    :alt: Diagram of Containers vs Virtual Machines
-
-
-CGroups + Systemd
-~~~~~~~~~~~~~~~~~
-
-.. ifnotslides::
-
-    CGroups and Systemd are the two technologies that allow Containers to
-    exist.
-
-    CGruops
+    CGroups
         A linux kernel-level technology that name-spaces processes.  It
         basically allows a host OS to convince a process running on it that it
         is running in it's own environment.  This is what isolates a process
@@ -198,13 +183,28 @@ CGroups + Systemd
 
     Systemd
         The service manager for most Linux distributions.  Systemd starts
-        services like Apache, but can also limit an application's resoruces.
+        services like Apache, but can also limit an application's resources.
         This allows you to limit a container from using all of your computer's
         resources, a common paradigm in VM management.
 
 
+Containers vs VMs
+-----------------
+
+.. ifnotslides::
+
+    One key thing to remember is that **a container is not a virtual
+    machine**.  It may be hard to distinguish the two because containers solve
+    many of the same problems that VMs solve, but they're two different types of
+    objects that have their own strengths and limitations.
+
+.. image:: /static/hypervisor-vs-containers.png
+    :align: center
+    :alt: Diagram of Containers vs Virtual Machines
+
+
 Pros
-----
+~~~~
 
 .. TODO: Flesh this section out a bit
 
@@ -217,7 +217,7 @@ Complete process isolation              Fast startup
 
 
 Cons
-----
+~~~~
 
 ======================================= =======================================
 **Virtual Machines**                    **Containers**
@@ -235,12 +235,11 @@ Cross-OS emulation.
     is already developing solutions for the existing security problems with
     containers.
 
-    One thing that we haven't touched on is the **No cross-kernel emulation**
-    for containers.  One advantage to Virtual Machines is that a Windows OS
-    can emulate Linux, and vice-verse.  Unfortunately it's not the same with
-    containers: A Linux OS can only (natively) run a Linux container, and
-    Windows can only containerize Windows.  The industry solution to this
-    problem is to run a container in a small VM.
+    One of the major downsides to containers is that by definition they're
+    restricted to using the host machine's kernel. This means that a Linux host
+    cannot run a Windows container and vice-versa. The industry solution to this
+    problem is to run a container in a small VM, since virtual machines can run
+    any type of kernel on any host system.
 
 
 Tools
@@ -289,7 +288,7 @@ Containers
 
 .. ifnotslides::
 
-    Containers have only recently gained popularity, but there are also many
+    Containers have only recently gained popularity, but there are already many
     tools avaliable for container management.
 
 Docker
@@ -303,7 +302,7 @@ RKT
 
 ``chroot``
     The *oldschool* way to use containers.  Not a container in the modern
-    sense, but achieves similar isolation.
+    sense, but achieves similar process isolation.
 
 Jails
     The BSD Unix form of containerization.  Offers a level of secure isolation
@@ -318,6 +317,13 @@ TODO
 
 Further Reading
 ---------------
+
+`Docker`_
+
+`RKT`_
+
+.. _Docker: https://docs.docker.com/
+.. _RKT: https://coreos.com/rkt/docs/latest/
 
 .. TODO: Add further reading.
 .. Suggested:
