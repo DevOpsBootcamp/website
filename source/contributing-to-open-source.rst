@@ -47,6 +47,15 @@ Open Source
 - Meet amazing people.
 - Personal fulfillment.
 
+.. ifnotslides::
+
+    As a side note and a bit of history before we delve further into the topic,
+    Open Source and FOSS are historically separate, but similar ideas. However,
+    for the purposes of this lesson, we will use the terms to refer to the same
+    thing.
+
+.. TODO: Maybe add more detailed history about the Free Software Movement?
+
 
 Community Benefit
 ~~~~~~~~~~~~~~~~~
@@ -61,8 +70,8 @@ Community Benefit
     changes *you've* made.
 
     Say IBM contributes 4% of the code in the last Linux Kernel update (yes,
-    companies can do Open Soruce too!).  It might be tempting for them to keep
-    those fixes to themselves, since they payed developers to make those
+    companies can do Open Source too!).  It might be tempting for them to keep
+    those fixes to themselves, since they paid developers to make those
     contributions and they "own" the changes they made.  Put another way
     though, they *got* 96% of the last update for *free*.  Open Source
     development works when everybody plays a *small* part in building a large
@@ -113,12 +122,14 @@ Free?
 
     One of the major selling-points of FOSS is that the software is usually
     *monetarily* free, but this isn't really what is meant by the 'Free' in
-    'FOSS'.  In this case *'Free'* is closer to *free speech* than it is to
-    *free pizza*.  *GNU* has a page outlining this more explicitly:
+    'FOSS'.  In this case *'Free'* is closer to *free speech* or *freedom* than
+    it is to *free pizza*.  *GNU* has a page outlining this more explicitly:
 
 Free Software:
     *[Free Software] means that* **the users have the freedom to run, copy,
     distribute, study, change and improve the software**.
+
+.. nextslide::
 
 The Four Freedoms:
     0. The freedom to run the program as you wish, for any purpose.
@@ -150,8 +161,8 @@ The Four Freedoms:
 
 .. _gnu.org/philosophy/free-sw: https://www.gnu.org/philosophy/free-sw.en.html
 
-Acessing a New Community
-------------------------
+Assessing a New Community
+-------------------------
 
 .. ifslides::
 
@@ -159,10 +170,10 @@ Acessing a New Community
 
 .. ifnotslides::
 
-    There are a few things to look for when considering contribution to Open
+    There are a few things to look for when considering contributing to Open
     Source.  Each project has it's own culture and community that you will
     become a part of if you contribute.  Make sure you want to be a part of
-    that community keeping the following in mind.
+    that community keeping the following in mind:
 
 
 Elitism vs Nice-ism
@@ -373,7 +384,8 @@ Know your Licenses
 .. ifnotslides::
 
     You should never publish code without a license.  Code without a license
-    makes it hard for others to use and contribute to your software.  Instead
+    makes it hard for others to use and contribute to your software because most
+    countries will implicitly assign copyright without a license.  Instead
     you should choose one of the many existing licenses that fits you needs
     best.
 
@@ -381,19 +393,55 @@ Know your Licenses
     can and cannot do with my software."  It's as simple as having a file in
     your project titled LICENSE with the contents of your license of choice.
 
-    **Never write your own license**.  Lawers get paid a lot of money to write
-    Open Soruce licenses, if you are not a lawer then don't write your own.
+    **Never write your own license**.  Lawyers get paid a lot of money to write
+    Open Source licenses, if you are not a lawyer then don't write your own.
 
-- **MIT:** A very lax license permitting any (free and non-free) use of the
-  software.
+.. nextslide::
 
-- **Apache:** A little more precise, gives more rights to the developers.
+**Licenses to use:**
 
-- **AGPL/GPL/LGPL:** For when you love Open Source and want to spread the love.
+- **MIT**
 
-- **Creative Commons:** For when you're not writing code.
+.. ifnotslides::
 
-- http://choosealicense.com/
+    A very lax license permitting any (free and non-free) use of the software.
+    Also sometimes called the **X11 License**.
+
+- **Apache**
+
+.. ifnotslides::
+
+    The Apache 2.0 license is often called a "corporate-friendly" license
+    because of its built-in copyright provisions.
+
+- **AGPL/GPL/LGPL**
+
+.. ifnotslides::
+
+    A family of licenses from the Free Software Foundation in
+    descending order of copyleft strictness. There are the canonical Free Software
+    licenses, but make sure that you've read them and understand their provisions
+    before using them in your own projects.
+
+**Licenses to *not* use:**
+
+- **Creative Commons**
+
+.. ifnotslides::
+
+    For anything that isn't code. Seriously. They're not designed to be used to
+    license code so don't use them to do that.
+
+- **Public Domain Dedication**
+
+.. ifnotslides::
+
+    The public domain is a tricky concept because it doesn't exist in all
+    countries (though workarounds such as the CC0 license exist). This is
+    usually not a recommended way to release your code although some projects
+    (Such as SQLite) have been dedicated to the public domain.
+
+http://choosealicense.com/
 
 TODO: Find a FOSS Project
 -------------------------
