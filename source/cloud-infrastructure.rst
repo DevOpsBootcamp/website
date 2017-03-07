@@ -30,7 +30,7 @@ Lesson 19: Cloud Infrastructure
     - Private Clouds
     - Public Clouds
     - Cloud + Configuration Management
-    - Cattle VS Pets
+    - Advantages and Disadvantages
 
 
 What the Cloud Looks Like
@@ -68,31 +68,20 @@ Advantages over Bare Hardware
     an IP address, and then you had a website.  This worked for some people,
     and small projects, but it doesn't scale well.
 
-    Let's propose a hypothetical: You are Netflix.  You have times when lots
-    of people are watching your shows, and other times when very few people
-    are watching shows.  You somehow need to be able to have enough servers
-    for lots of people to watch, but you don't want to waste resources when
-    *nobody* is watching.  The solution? Use the cloud!
+    Let's propose a hypothetical scenario: You are Netflix.  You have times
+    when lots of people are watching your shows, and other times when very few
+    people are watching shows.  You somehow need to be able to have enough
+    servers for lots of people to watch, but you don't want to waste resources
+    when *nobody* is watching.  The solution? Use the cloud!
 
     Netflix uses AWS, a cloud provider, to add and remove servers from its
     clusters as they're needed.  This means they pay a lot of money on
-    Saturday night when people are inside watching Stranger Things, and they
-    pay very little Wednesday morning when people are at work.
+    Saturday night when people are inside watching movies, and they pay very
+    little Wednesday morning when people are at work.
 
     The reasons you would use the cloud is because you need something that
     either needs to scale fast, be cost effective, or will only exist for a
     short period of time.
-
-    **TLDR:** Here is why you'd want to use The Cloud:
-
-- **Ephemeral:** Creating and Destroying operating systems is quick and
-  painless.
-
-- **Cost effective:** Pay for what you use.
-
-- **Low startup cost:** Initial investment is cheap, <$100 as opposed to
-  >$1,000+. (unless you are running a private cloud, more on that in a
-  second).
 
 
 Private Clouds
@@ -106,7 +95,11 @@ Private Clouds
 
     This requires a higher startup cost, requiring the purchase of machines
     and time to install the cloud software, but then you don't have to
-    worry about your cloud usage being restricted during peak hours.
+    worry about your cloud usage being restricted during peak hours. It's also
+    more cost-effective in the long run. Once all the equipment is bought
+    and set up you just have to pay the cost of running and maintaining it
+    instead of having to pay money to another company so they can both maintain
+    it and make a profit.
 
 
 Public Clouds
@@ -115,8 +108,8 @@ Public Clouds
 .. ifnotslides::
 
     Public clouds are services you subscribe to which allow you to run and rent
-    server-space on somebody else's cloud.  This is cheap and easy to work
-    with, but may be restricted during times of heavy use.
+    server-space on somebody else's cloud.  This is cheap to start and easy to
+    work with, but may be restricted during times of heavy use.
 
 
 Cloud + Configuration Management
@@ -124,35 +117,64 @@ Cloud + Configuration Management
 
 .. ifnotslides::
 
-    Configuration Management is a very useful tool in using the Cloud as a
-    developer.  Being able to spin up hundreds of machines isn't useful if you
-    have to manually set each one up to run your application.  Many companies
-    use some form of configuration management to provision their cloud-based
-    boxes automatically.
-
-
-Cattle VS Pets
---------------
-
-.. ifnotslides::
-
-    This is where the metaphors of Cattle vs Pets (from
-    :ref:`configuration_management`) makes more sense.  As we mentioned,
-    servers ought to be treated like Cattle.  With a cloud resource provdier a
-    limitless number cattle can be spun up and destroyed.  Without *The Cloud*
-    you can probably get away with treating your severs like pets.
+    Configuration Management is a very useful tool for managing lots of machines
+    at once in the cloud.  Being able to spin up hundreds of machines isn't
+    practical if you have to manually configure each one. Many companies use
+    configuration management tools to provision their cloud machines
+    automatically.
 
 
 Advantages
 ~~~~~~~~~~
 
-.. TODO: Fill this section out.
+Running your software on a cloud is:
+
+- **Ephemeral**
+
+.. ifnotslides::
+
+    Creating and destroying operating systems is quick and painless. If you
+    need to quickly spin up 100 new Linux boxes to run a test, you can do that
+    and then delete them afterwards with a few commands.
+
+- **Cost effective**
+
+.. ifnotslides::
+
+    Since you only pay for the resources that you're currently using on a cloud,
+    they can be very cost effective. Instead of worrying about upgrading your
+    servers in order to handle increased load at peak hours, you can just spin
+    up new machines as needed and only pay for the exact amount of extra
+    capacity that you need.
+
+- **Low startup cost**
+
+.. ifnotslides::
+
+    Initial investment is cheap, <$100 as opposed to >$1,000+ (unless you are
+    running a private cloud). This can be especially beneficial to startups,
+    since they don't have to worry about taking the time to set up costly
+    infrastructure.
 
 
 Disadvantages
 ~~~~~~~~~~~~~
 
-.. TODO: Fill this section out.
+Clouds can be great tools, but they have some disadvantages:
+
+- **Central Point of Failure**
+
+.. ifnotslides::
+
+    Have you ever had trouble one day trying to visit your favorite websites
+    but you were unable to reach them? Afterwards, you might have heard that it
+    was because "AWS was down". AWS (Amazon Web Services) is one of the major
+    backbones of the internet that hosts many popular websites and services.
+    However, it has caused the internet to become increasingly centralized.
+    If someone at Amazon makes a mistake and brings an important part of AWS
+    down, half of the internet goes with it.
+
+.. TODO: Add more here
 
 
 TODO
@@ -163,6 +185,11 @@ TODO
 
 Further Reading
 ---------------
+
+AWS provides a *lot* of services, not all of which are named very well.
+`This article`_ explains what each service does in plain English.
+
+.. _This article: https://www.expeditedssl.com/aws-in-plain-english
 
 .. TODO: Add further reading.
 .. Suggestion:
