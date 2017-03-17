@@ -53,10 +53,8 @@ What the Cloud Looks Like
     complicated ecosystem of machines, web APIs, operating systems, and
     hosting providers.
 
-    The software which powers *The Cloud* is vast, but a few of the big names
-    are **Amazon AWS, Windows Azure, CoreOS Tectonic, and Openstack**.  Some
-    of these are cheap, fast, new, old, but each offer it's own set of
-    advantages.
+    Some of the biggest cloud providers currently are
+    **Amazon AWS, Windows Azure, and Google Cloud Platform**.
 
 
 Advantages over Bare Hardware
@@ -69,7 +67,7 @@ Advantages over Bare Hardware
     and small projects, but it doesn't scale well.
 
     Let's propose a hypothetical scenario: You are Netflix.  You have times
-    when lots of people are watching your shows, and other times when very few
+    when lots of people are watching shows, and other times when very few
     people are watching shows.  You somehow need to be able to have enough
     servers for lots of people to watch, but you don't want to waste resources
     when *nobody* is watching.  The solution? Use the cloud!
@@ -95,11 +93,11 @@ Private Clouds
 
     This requires a higher startup cost, requiring the purchase of machines
     and time to install the cloud software, but then you don't have to
-    worry about your cloud usage being restricted during peak hours. It's also
-    more cost-effective in the long run. Once all the equipment is bought
-    and set up you just have to pay the cost of running and maintaining it
-    instead of having to pay money to another company so they can both maintain
-    it and make a profit.
+    worry about your cloud usage being restricted during peak hours. In
+    addition, it's more cost-effective in the long run. Once all the equipment
+    is bought and set up you just have to pay the cost of running and
+    maintaining it instead of having to pay money to another company so they can
+    both maintain it and make a profit.
 
 
 Public Clouds
@@ -107,9 +105,10 @@ Public Clouds
 
 .. ifnotslides::
 
-    Public clouds are services you subscribe to which allow you to run and rent
-    server-space on somebody else's cloud.  This is cheap to start and easy to
-    work with, but may be restricted during times of heavy use.
+    Public clouds are services which allow you to run and rent server-space on
+    somebody else's cloud.  This is cheap to start and easy to work with, but
+    may be more expensive in the long run and restricted during times of heavy
+    use.
 
 
 Cloud + Configuration Management
@@ -125,7 +124,7 @@ Cloud + Configuration Management
 
 
 Advantages
-~~~~~~~~~~
+----------
 
 Running your software on a cloud is:
 
@@ -133,19 +132,19 @@ Running your software on a cloud is:
 
 .. ifnotslides::
 
-    Creating and destroying operating systems is quick and painless. If you
-    need to quickly spin up 100 new Linux boxes to run a test, you can do that
-    and then delete them afterwards with a few commands.
+    Creating and destroying machines is quick and painless. If you need to
+    quickly spin up 100 new Linux boxes to run a test, you can do that and then
+    delete them afterwards with a few commands.
 
 - **Cost effective**
 
 .. ifnotslides::
 
-    Since you only pay for the resources that you're currently using on a cloud,
-    they can be very cost effective. Instead of worrying about upgrading your
-    servers in order to handle increased load at peak hours, you can just spin
-    up new machines as needed and only pay for the exact amount of extra
-    capacity that you need.
+    Since you only pay for the resources that you're currently using, clouds
+    can be very cost effective. Instead of worrying about upgrading your servers
+    in order to handle increased load at peak hours, you can just spin up new
+    machines as needed and only pay for the exact amount of extra capacity that
+    you need.
 
 - **Low startup cost**
 
@@ -153,12 +152,12 @@ Running your software on a cloud is:
 
     Initial investment is cheap, <$100 as opposed to >$1,000+ (unless you are
     running a private cloud). This can be especially beneficial to startups,
-    since they don't have to worry about taking the time to set up costly
-    infrastructure.
+    since they don't have to worry about spending the money and taking the time
+    to set up costly infrastructure.
 
 
 Disadvantages
-~~~~~~~~~~~~~
+-------------
 
 Clouds can be great tools, but they have some disadvantages:
 

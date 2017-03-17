@@ -43,8 +43,9 @@ Application Isolation
 .. ifnotslides::
 
     Application isolation is the separation of one program or application stack
-    from others.  The oldest way to do this is to run your application on a
-    separate computer, but that gets very expensive very quickly.
+    from the rest of the running processes.  The oldest way to do this is to
+    simply run your application on a separate computer, but that gets very
+    expensive very quickly.
 
     There are two main ways to tackle Application Isolation on one computer:
     Virtual Machines and Containers.  They both achieve similar end results
@@ -65,14 +66,10 @@ Virtual Machines
 
 .. ifnotslides::
 
-    Virtual Machines are programs running on your operating system which
-    emulate the entire computer and operating system.  This is good because it
-    completely isolates the programs running on the VM from the host
-    operating system, but that advantage is also a problem.
-
-    The core disadvantage of a VM is that it is resoruce intensive.  There is a
-    lot of overhead in emulating an Operating System.  While it offers
-    complete and thorough isolation, that comes at a cost.
+    Virtual Machines are programs that act like (or emulate) another computer
+    (Also called a "guest") that's running on your physical computer (The
+    "host").  This is useful because a VM completely isolates programs running
+    from the host computer.
 
     Here is a demonstration showing the processes inside of a VM versus a host
     OS
@@ -127,18 +124,11 @@ Containers
 .. ifnotslides::
 
     Containers approach application isolation from a different angle.  Instead
-    of emulating an entire operating system they use the same host kernel
-    (operating system) to run the guest operating system.  This entirely
-    by-passes the emulation problem.  Containers isolate applicatiosn using
-    two technologies on Linux: CGroups and Systemd.  Together these isolate
-    the guest OS' processes from the host, and limit the guest's resources
-    respectively.
-
-    Instead of emulating the guest OS containers use the host kernel and
+    of emulating the guest OS, containers use the same kernel as the host but
     *lie* to the guest process and tell it that it's the only application
-    running on that OS.  Containers avoid the emulation problem by not using a
-    hypervisor and instead using a combination of technologies to get the same
-    job done.
+    running on that OS.  Containers bypass the emulation problem by avoiding
+    emulation altogether. They run on the same hardware as the host OS but with
+    a thin layer of separation.
 
     Containers have very become popular recently, but their underlying
     technologies aren't new.  Many application developers and system
@@ -167,36 +157,34 @@ Containers
 Container Technologies
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO: Check this section for accuracy and possibly add more things
-
 .. ifnotslides::
 
     Containers are made possible by many underlying technologies that coexist
     both inside and outside of the Linux kernel.
 
+    ``chroot``
+        A program that allows you to only make part of a filesystem visible to
+        another process by changing the root directory. Literally
+        " ``ch`` ange ``root`` ".
+
     CGroups
-        A linux kernel-level technology that name-spaces processes.  It
-        basically allows a host OS to convince a process running on it that it
-        is running in it's own environment.  This is what isolates a process
-        from other processes, if they think they're the only thing running they
-        can't tamper with the host OS.
+        A linux kernel-level technology that name-spaces processes.  It performs
+        many functions, but it's used by container engines to convince a process
+        that it's running in its own environment.  This is what isolates a
+        process from other processes, if they think they're the only thing
+        running they can't tamper with the host OS.
 
     Systemd
-        The service manager for most Linux distributions.  Systemd starts
-        services like Apache, but can also limit an application's resources.
-        This allows you to limit a container from using all of your computer's
-        resources, a common paradigm in VM management.
+        The service manager for most Linux distributions.  Systemd can be used
+        to run and manage services such as web servers, but it can also limit an
+        application's resource usage. This allows you to limit a container from
+        using all of your computer's resources. In addition, many popular
+        container management systems such as Docker run as services managed by
+        Systemd.
 
 
 Containers vs VMs
 -----------------
-
-.. ifnotslides::
-
-    One key thing to remember is that **a container is not a virtual
-    machine**.  It may be hard to distinguish the two because containers solve
-    many of the same problems that VMs solve, but they're two different types of
-    objects that have their own strengths and limitations.
 
 .. image:: /static/hypervisor-vs-containers.png
     :align: center
@@ -205,8 +193,6 @@ Containers vs VMs
 
 Pros
 ~~~~
-
-.. TODO: Flesh this section out a bit
 
 ======================================= =======================================
 **Virtual Machines**                    **Containers**
@@ -224,7 +210,7 @@ Cons
 --------------------------------------- ---------------------------------------
 Slightly more overhead.                 Security concerns.
 Slow startup.                           No cross-kernel emulation.
-Cross-OS emulation.
+Cross-kernel emulation.
 ======================================= =======================================
 
 .. ifnotslides::
