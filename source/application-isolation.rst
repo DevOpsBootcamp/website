@@ -38,16 +38,14 @@ Application Isolation
 
 .. ifslides::
 
-    **The seperation of one program or application stack from others.**
-
-    **The oldest way to do this is to run your application on a
-    separate computer, but that gets very expensive very quickly.**
+    **The separation of one application stack from the rest of the computer**
 
 .. ifnotslides::
 
     Application isolation is the separation of one program or application stack
-    from others.  The oldest way to do this is to run your application on a
-    separate computer, but that gets very expensive very quickly.
+    from the rest of the running processes.  The oldest way to do this is to
+    simply run your application on a separate computer, but that gets very
+    expensive very quickly.
 
     There are two main ways to tackle Application Isolation on one computer:
     Virtual Machines and Containers.  They both achieve similar end results
@@ -68,14 +66,10 @@ Virtual Machines
 
 .. ifnotslides::
 
-    Virtual Machines are programs running on your operating system which
-    emulate the entire computer and operating system.  This is good because it
-    completely isolates the programs running on the VM from the host
-    operating system, but that advantage is also a problem.
-
-    The core disadvantage of a VM is that it is resoruce intensive.  There is a
-    lot of overhead in emulating an Operating System.  While it offers
-    complete and thorough isolation, that comes at a cost.
+    Virtual Machines are programs that act like (or emulate) another computer
+    (Also called a "guest") that's running on your physical computer (The
+    "host").  This is useful because a VM completely isolates programs running
+    from the host computer.
 
     Here is a demonstration showing the processes inside of a VM versus a host
     OS
@@ -130,18 +124,11 @@ Containers
 .. ifnotslides::
 
     Containers approach application isolation from a different angle.  Instead
-    of emulating an entire operating system they use the same host kernel
-    (operating system) to run the guest operating system.  This entirely
-    by-passes the emulation problem.  Containers isolate applicatiosn using
-    two technologies on Linux: CGroups and Systemd.  Together these isolate
-    the guest OS' processes from the host, and limit the guest's resources
-    respectively.
-
-    Instead of emulating the guest OS containers use the host kernel and
+    of emulating the guest OS, containers use the same kernel as the host but
     *lie* to the guest process and tell it that it's the only application
-    running on that OS.  Containers avoid the emulation problem by not using a
-    hypervisor and instead using a combination of technologies to get the same
-    job done.
+    running on that OS.  Containers bypass the emulation problem by avoiding
+    emulation altogether. They run on the same hardware as the host OS but with
+    a thin layer of separation.
 
     Containers have very become popular recently, but their underlying
     technologies aren't new.  Many application developers and system
@@ -153,10 +140,10 @@ Containers
 
 ::
 
-    $ ps aux  # Lists all processes running on an OS
+    [container] $ ps aux
     PID   USER     TIME   COMMAND
-    1 root       0:00 sh
-    6 root       0:00 ps aux
+    1     root     0:00   sh
+    6     root     0:00   ps aux
 
 .. ifnotslides::
 
@@ -167,46 +154,45 @@ Containers
     host OS.
 
 
-Not a Virtual Machine
-~~~~~~~~~~~~~~~~~~~~~
+Container Technologies
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
-    One key thing to remember is that **a container is not a virtual
-    machine**.  It may act like a VM, and isolate like a VM, but they're
-    different and for now they are not 100% interchangeable.
+    Containers are made possible by many underlying technologies that coexist
+    both inside and outside of the Linux kernel.
+
+    ``chroot``
+        A program that allows you to only make part of a filesystem visible to
+        another process by changing the root directory. Literally
+        " ``ch`` ange ``root`` ".
+
+    CGroups
+        A linux kernel-level technology that name-spaces processes.  It performs
+        many functions, but it's used by container engines to convince a process
+        that it's running in its own environment.  This is what isolates a
+        process from other processes, if they think they're the only thing
+        running they can't tamper with the host OS.
+
+    Systemd
+        The service manager for most Linux distributions.  Systemd can be used
+        to run and manage services such as web servers, but it can also limit an
+        application's resource usage. This allows you to limit a container from
+        using all of your computer's resources. In addition, many popular
+        container management systems such as Docker run as services managed by
+        Systemd.
+
+
+Containers vs VMs
+-----------------
 
 .. image:: /static/hypervisor-vs-containers.png
     :align: center
     :alt: Diagram of Containers vs Virtual Machines
 
 
-CGroups + Systemd
-~~~~~~~~~~~~~~~~~
-
-.. ifnotslides::
-
-    CGroups and Systemd are the two technologies that allow Containers to
-    exist.
-
-    CGruops
-        A linux kernel-level technology that name-spaces processes.  It
-        basically allows a host OS to convince a process running on it that it
-        is running in it's own environment.  This is what isolates a process
-        from other processes, if they think they're the only thing running they
-        can't tamper with the host OS.
-
-    Systemd
-        The service manager for most Linux distributions.  Systemd starts
-        services like Apache, but can also limit an application's resoruces.
-        This allows you to limit a container from using all of your computer's
-        resources, a common paradigm in VM management.
-
-
 Pros
-----
-
-.. TODO: Flesh this section out a bit
+~~~~
 
 ======================================= =======================================
 **Virtual Machines**                    **Containers**
@@ -217,14 +203,14 @@ Complete process isolation              Fast startup
 
 
 Cons
-----
+~~~~
 
 ======================================= =======================================
 **Virtual Machines**                    **Containers**
 --------------------------------------- ---------------------------------------
 Slightly more overhead.                 Security concerns.
 Slow startup.                           No cross-kernel emulation.
-Cross-OS emulation.
+Cross-kernel emulation.
 ======================================= =======================================
 
 .. ifnotslides::
@@ -235,12 +221,11 @@ Cross-OS emulation.
     is already developing solutions for the existing security problems with
     containers.
 
-    One thing that we haven't touched on is the **No cross-kernel emulation**
-    for containers.  One advantage to Virtual Machines is that a Windows OS
-    can emulate Linux, and vice-verse.  Unfortunately it's not the same with
-    containers: A Linux OS can only (natively) run a Linux container, and
-    Windows can only containerize Windows.  The industry solution to this
-    problem is to run a container in a small VM.
+    One of the major downsides to containers is that by definition they're
+    restricted to using the host machine's kernel. This means that a Linux host
+    cannot run a Windows container and vice-versa. The industry solution to this
+    problem is to run a container in a small VM, since virtual machines can run
+    any type of kernel on any host system.
 
 
 Tools
@@ -289,7 +274,7 @@ Containers
 
 .. ifnotslides::
 
-    Containers have only recently gained popularity, but there are also many
+    Containers have only recently gained popularity, but there are already many
     tools avaliable for container management.
 
 Docker
@@ -303,7 +288,7 @@ RKT
 
 ``chroot``
     The *oldschool* way to use containers.  Not a container in the modern
-    sense, but achieves similar isolation.
+    sense, but achieves similar process isolation.
 
 Jails
     The BSD Unix form of containerization.  Offers a level of secure isolation
@@ -318,6 +303,13 @@ TODO
 
 Further Reading
 ---------------
+
+`Docker`_
+
+`RKT`_
+
+.. _Docker: https://docs.docker.com/
+.. _RKT: https://coreos.com/rkt/docs/latest/
 
 .. TODO: Add further reading.
 .. Suggested:
