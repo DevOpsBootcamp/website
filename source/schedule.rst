@@ -15,17 +15,14 @@ covering the entire course during the OSU academic school year.
 Fall
 ~~~~
 
-=============== ================= ================ =======================================
-Lesson          Date/Time         Location         Description
---------------- ----------------- ---------------- ---------------------------------------
-DevOps Daycamp  Oct 1, 10am-3pm   `OSU KEC 1001`_  DevOps DayCamp (DOBC Kickoff)
-Fall Meeting 2  Nov 5, 11am-3pm   `OSU KEC 1001`_  Files, Verson Control, Programming
-Fall Meeting 3  Dec 3, 11am-3pm   `OSU KEC 1001`_  Frameworks, Testing and CI
-=============== ================= ================ =======================================
+=============== ========================= ================ =================================
+Lesson          Date/Time                 Location         Description
+--------------- ------------------------- ---------------- ---------------------------------
+`Fall Kickoff`_ Oct 7, 2017 9:30am-3:30pm `OSU KEAR 112`_  DevOps BootCamp Fall Kickoff
+=============== ========================= ================ =================================
 
-.. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
-.. _OSU KEC 1007: https://goo.gl/maps/KZiKaCoeuru
-
+.. _Fall Kickoff: http://devopsbootcamp.osuosl.org/daycamp/
+.. _OSU KEAR 112: https://goo.gl/maps/EEXubm95Tjn
 
 Winter
 ~~~~~~
@@ -33,8 +30,7 @@ Winter
 ================= ================= ================ =======================================
 Lesson            Date/Time         Location         Description
 ----------------- ----------------- ---------------- ---------------------------------------
-Winter Meeting 1  Feb 11, 11am-3pm  `OSU KEC 1001`_  Security and Databases
-Winter Meeting 2  Feb 25, 11am-3pm  `OSU KEC 1007`_  Dev Tools, DNS, and CM
+TBA
 ================= ================= ================ =======================================
 
 
@@ -44,4 +40,5 @@ Spring
 ================= ================= ================ =======================================
 Lesson            Date/Time         Location         Description
 ----------------- ----------------- ---------------- ---------------------------------------
+TBA
 ================= ================= ================ =======================================
