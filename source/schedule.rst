@@ -18,11 +18,11 @@ Fall
 =============== ========================= ================ =================================
 Lesson          Date/Time                 Location         Description
 --------------- ------------------------- ---------------- ---------------------------------
-`Fall Kickoff`_ Oct 7, 2017 9:30am-3:30pm `OSU KEAR 112`_  DevOps BootCamp Fall Kickoff
+`Fall Kickoff`_ Nov 4, 2017 9:30am-3:30pm `OSU KEC 1001`_  DevOps BootCamp Fall Kickoff
 =============== ========================= ================ =================================
 
 .. _Fall Kickoff: http://devopsbootcamp.osuosl.org/daycamp/
-.. _OSU KEAR 112: https://goo.gl/maps/EEXubm95Tjn
+.. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
 
 Winter
 ~~~~~~
