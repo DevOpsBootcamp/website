@@ -74,20 +74,20 @@ Man Pages
 
     $ man man
 
-    MAN(1)                        Manual pager utils                       MAN(1)
+    MAN(1)             Manual pager utils                       MAN(1)
 
     NAME
            man - an interface to the on-line reference manuals
 
     SYNOPSIS
-           man  [-C  file]  [-d]  [-D]  [--warnings[=warnings]] [-R encoding] [-L
-           locale] [-m system[,...]] [-M path] [-S list] [-e  extension]  [-i|-I]
-           [...]
+           man  [-C  file]  [-d]  [-D]  [--warnings[=warnings]] [-R
+           encoding] [-L locale] [-m system[,...]] [-M path] [-S list]
+           [-e  extension]  [-i|-I] [...]
 
     DESCRIPTION
-           man is the system's manual pager.  Each page argument given to man  is
-           normally  the name of a program, utility or function.  The manual page
-           [...]
+           man is the system's manual pager.  Each page argument given
+           to man  is normally  the name of a program, utility or
+           function.  The manual page [...]
 
 .. ifnotslides::
 

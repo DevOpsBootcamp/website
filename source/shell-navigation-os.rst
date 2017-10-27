@@ -160,9 +160,11 @@ Basic Shell Commands
     $ ls     # Prints the contents of the current working directory
     $ cd <path/to/other/directory>   # Navigates to a new directory.
     $ echo "some thing $AND_VARS"    # Prints a string to the screen.
-    $ cat  foo.txt bax.txt # Prints the contents of a file(s) to the screen.
+    $ cat  foo.txt bax.txt # Prints the contents of a file(s) to the
+                           # screen.
     $ grep foo file.txt    # Searches `file.txt` for the string `foo`
-    $ less  file.txt       # Prints a file to the screen so you can arrow up/down.
+    $ less  file.txt       # Prints a file to the screen so you can arrow
+                           # up/down.
     $ env    # Prints environment variables to the screen.
     $ whoami # Prints out current user
     $ help   # When in doubt, always type help.
@@ -196,7 +198,7 @@ Invoke with:
 
 ::
 
-    $ chmod +x about_me.sh  # Tell Linux that this can be run as a program.
+    $ chmod +x about_me.sh  # Tell Linux that this can be run as a program
     $ ./about_me.sh         # Invoke the script.
 
 File Paths

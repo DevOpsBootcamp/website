@@ -199,7 +199,7 @@ Yum (``.rpm``, ``rpm``)
     and tons of other minutia necessary in writing a package manager.
 
 
-Programming Langauge Package Managers
+Programming Language Package Managers
 -------------------------------------
 
 .. ifnotslides::
@@ -240,7 +240,7 @@ Chocolatey
     A package manager for Windows.
 
 
-Installation from Soruce
+Installation from Source
 ------------------------
 
 .. ifnotslides::
@@ -307,29 +307,25 @@ Installation from Soruce
     These are the steps that a **from-source** package manager follows, you
     just have to do the by hand.
 
-.. nextslide::
+    Using ``grep`` as an example:
 
-Using ``grep`` as an example:
+    ::
 
-::
-
-    $ wget http://mirrors.kernel.org/gnu/grep/grep-2.25.tar.xz
-    $ tar -Jxvf grep-2.25.tar.xz
-    $ cd grep-2.25
-    $ ./configure --prefix=$HOME/bin/
-    $ make
-    $ make install
-
+        $ wget http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
+        $ tar -Jxvf grep-3.1.tar.xz
+        $ cd grep-3.1
+        $ ./configure --prefix=$HOME/bin/
+        $ make
+        $ make install
 
 TODO: Install ``sl``
 --------------------
 
-- Install the ``git``, ``gcc``, ``make``, ``ncurses-bin``, ``ncurses-base``,
-  ``libncurses5-dev``, and ``libncurses5-dev`` packages via package manager.
+- Install the ``git``, ``gcc``, ``make`` and ``ncurses-devel`` packages via package manager.
 
 ::
 
-    $ sudo apt install git gcc make ncurses-bin ncurses-base libncurses5-dev libncurses5-dev
+    $ sudo yum install git gcc make ncurses-devel
     [...]
 
 - Install ``sl`` from source into the directory ~/bin/.
@@ -343,13 +339,40 @@ TODO: Install ``sl``
     $ cd sl
     $ make
     gcc -O -o sl sl.c -lncurses
-    $ mkdir ~/bin
-    $ ln sl ~/bin/
-    $ echo "export PATH=$PATH:$HOME/bin" >> ~/.bashrc
+    $ mkdir -p ~/local/bin
+    $ ln sl ~/local/bin/
+    $ echo "export PATH=$HOME/local/bin:$PATH" >> ~/.bashrc
     $ source ~/.bashrc
     $ whereis sl
-    sl: /home/username/bin/sl
+    sl: /home/dobc/local/bin/sl
     $ sl
+
+.. ifslides::
+
+TODO: Install ``grep``
+----------------------
+
+Using ``grep`` as an example:
+
+::
+
+    $ grep --version
+    grep (GNU grep) 2.20
+    $ which grep
+    alias grep='grep --color=auto'
+            /usr/bin/grep
+    $ wget http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
+    $ tar -Jxvf grep-3.1.tar.xz
+    $ cd grep-3.1
+    $ ./configure --prefix=$HOME/local/
+    $ make
+    $ make install
+    $ hash -r
+    $ grep --version
+    grep (GNU grep) 3.1
+    $ which grep
+    alias grep='grep --color=auto'
+            ~/local/bin/grep
 
 
 Further Reading

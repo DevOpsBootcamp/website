@@ -112,7 +112,7 @@ Notation
 
 .. nextslide::
 
-- Code-block:
+Code-block:
 
 .. code:: python
 
@@ -129,9 +129,10 @@ Notation
 
     Shell commands are annotated with a ``$``. For instance:
 
-.. code:: text
+.. code:: bash
 
-    $ echo Hello World    # Copy the text after `$` into your termianal and press enter.
+    # Copy the text after `$` into your terminal & press enter.
+    $ echo Hello World
 
 
 TODO: Reading Examples
@@ -152,7 +153,7 @@ Answer: Reading Examples
 
 Replace the ``$BREED_N`` with actual dog breeds.
 
-.. code-block:: none
+.. code-block:: python
 
     #!/bin/python
     dogs = ['corgie', 'pug', 'french bulldog']
