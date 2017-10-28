@@ -213,8 +213,8 @@ Windows:
 .. _setup_at_home:
 
 
-Home Setup
-~~~~~~~~~~
+Virtual Machine Setup
+~~~~~~~~~~~~~~~~~~~~~
 
 We suggest you `install Vagrant`_, a tool which makes it easy to run and
 acquire `Virtual Machines`_.
@@ -236,6 +236,26 @@ function.
 .. _install Vagrant: https://www.vagrantup.com/docs/installation/
 .. _Virtual Machines: https://en.wikipedia.org/wiki/Virtual_machine
 .. _install VirtualBox: https://www.virtualbox.org/
+
+
+Windows Subsystem for Linux Setup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `Windows Subsystem for Linux`_ (Bash on Windows) allows you to run
+userspace Linux software on Windows, while using less resources than a virtual
+machine.
+
+If you installed the Fall Creators Update for Windows 10, you can install one
+or more Linux distributions through the Windows Store.
+
+.. image:: /static/ubuntustore.png
+    :target: https://msdn.microsoft.com/en-us/commandline/wsl/install-win10
+    :align: center
+    :height: 375px
+    :width: 700px
+    :alt: Windows Store
+
+.. _Windows Subsystem for Linux: https://msdn.microsoft.com/en-us/commandline/wsl/about
 
 TODO: Change Your Password!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -278,5 +298,6 @@ Further Reading
 - `Install Putty`_ if you want to access a remote Linux box.
 - `Install Vagrant`_ if you want to run a local Linux Virtual machine.
 - `Install VirtualBox`_ in addition to Vagrant for local virtual machines.
+- `Windows Subsystem for Linux`_ if you want to use Linux without VM overhead.
 
 .. TODO: Add more Further Reading
