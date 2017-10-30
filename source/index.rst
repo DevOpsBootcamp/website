@@ -57,5 +57,7 @@ We appreciate the help!  To donate, go to http://osuosl.org/donate.
     cloud-infrastructure
     contributing-to-open-source
     about
+    setup-ssh
+    setup-docker
     schedule
     administration
