@@ -121,13 +121,21 @@ Join the `mailing list`_ for updates.
 
 .. _mailing list: http://lists.osuosl.org/mailman/listinfo/devops-bootcamp
 
+Slack
+~~~~~
+
+Feel free to also join us on `Slack`_. If you `sign up`_ using your OSU email address, you'll automatically get added
+without any invitation. If you don't have an email address from from the allowed domains, please let us know and we'll
+get you invited!
+
+.. _Slack: https://devopsbootcamp.slack.com
+.. _sign up: https://join.slack.com/t/devopsbootcamp/signup
 
 IRC
 ~~~
 
 Join us on ``irc.freenode.net`` in ``#devopsbootcamp`` (students will be
 setting up an IRC network for the program early in the program).
-
 
 Website & Curriculum
 ~~~~~~~~~~~~~~~~~~~~
