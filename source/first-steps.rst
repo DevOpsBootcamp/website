@@ -208,7 +208,7 @@ Windows:
         iii. You will be prompted for your password in new window, it will hide
              the password as you type it.
 
-.. _install Putty: http://www.putty.org/
+.. _install Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 .. _setup_at_home:
 
