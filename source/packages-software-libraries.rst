@@ -323,7 +323,7 @@ TODO: Install ``sl``
 
 - Install the ``git``, ``gcc``, ``make`` and ``ncurses-devel`` packages via package manager.
 
-::
+.. code-block:: console
 
     $ sudo yum install git gcc make ncurses-devel
     [...]
@@ -332,7 +332,7 @@ TODO: Install ``sl``
 
 .. nextslide::
 
-::
+.. code-block:: console
 
     $ git clone https://github.com/mtoyoda/sl.git
     [...]
@@ -354,7 +354,7 @@ TODO: Install ``grep``
 
 Using ``grep`` as an example:
 
-::
+.. code-block:: console
 
     $ grep --version
     grep (GNU grep) 2.20

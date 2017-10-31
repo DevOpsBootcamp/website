@@ -51,6 +51,7 @@ General Topics:
     - **Computer Security:** Like physical security but harder to solve with a
       baseball bat.
     - **Virtual Machine:** A computer emulated in software.
+    - **Containers:** Not virtual machines, but basically virtual machines.
 
 .. nextslide::
 
@@ -63,15 +64,16 @@ Buzzwords:
     - **FOSS:** Free (and Libre) Open Source Software.  Free as in Speech, not
       Free as in Pizza (but that too usually).
     - **'The Cloud':** Computers somewhere else.
-    - **Containers:** Not virtual machines, but basically virtual machines.
+    - **Docker:** Software that manages Linux containers
 
 
 TODO: What Vocabulary Do *You* Know?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    *What other vocabulary can you think of related to DevOps?*
+.. rst-class:: build
 
-    *What about Silicon Valley, Programming, System Administration, etc?*
+- *What other vocabulary can you think of related to DevOps?*
+- *What about Silicon Valley, Programming, System Administration, etc?*
 
 .. note::
 
@@ -90,16 +92,24 @@ Notation
     The following is a short list of key notation used in DOBC.
 
 - Variable (use whatever word you like here e.g., foo, bar, baz)
-    - ``$ONE_VARIABLE_NOTATION``
-    - ``<another notation for variables>``
 
-- Literal (copy this exactly)
-    - ``copy_me_exactly``
+.. code-block:: bash
+
+    $ONE_VARIABLE_NOTATION
+    <another notation for variables>
+
+- Literal (copy this exactly): ``copy_me_exactly``
 
 - Comments (parts of the code just for humans)
-    - ``this_is(code)  # everything after the octothorp is a comment!``
-    - ``other_code(line)  // This can also be a comment.  It depends on the
-      langauge!``
+
+.. code-block:: bash
+
+  this_is(code)  # everything after the octothorp is a comment!
+
+.. code-block:: java
+
+  other_code(line)  // This can also be a comment. It depends on the
+                    // language!
 
 .. ifnotslides::
 
@@ -119,7 +129,8 @@ Code-block:
     #! /usr/bin/env python
     # This is a code block.
     # Most of the time you can copy this code and run it exactly as is.
-    # It should be clear Where it 'goes' and how to run it based on context.
+    # It should be clear Where it 'goes' and how to run it based on
+    # context.
     print('Hello world!')
 
 .. ifnotslides::
@@ -129,7 +140,7 @@ Code-block:
 
     Shell commands are annotated with a ``$``. For instance:
 
-.. code:: bash
+.. code-block:: bash
 
     # Copy the text after `$` into your terminal & press enter.
     $ echo Hello World
@@ -147,6 +158,15 @@ TODO: Reading Examples
     for breed in dogs:
         print(breed)
 
+.. rst-class:: build
+
+  Actually prints...
+
+  .. code-block:: console
+
+      $BREED_ONE
+      $BREED_TWO
+      $BREED_THREE
 
 Answer: Reading Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,67 +180,150 @@ Replace the ``$BREED_N`` with actual dog breeds.
     for breed in dogs:
         print(breed)
 
+.. rst-class:: build
+
+  Actually prints...
+
+  .. code-block:: console
+
+      corgie
+      pug
+      french bulldog
 
 Getting Setup on Linux
 ----------------------
 
 .. ifnotslides::
 
-    If you are taking the course exclusively online you will need to run a
-    Virtual Machine on your own computer. For more information jump down to the
-    :ref:`setup_at_home` section of this lesson.
+    If you are taking the course exclusively online you will need setup Docker on your own computer. For more
+    information jump down to the :ref:`setup_at_home` section of this lesson.
 
-    If you are taking DOBC in person we are able to offer you credentials to
-    the OSU OSL Student Cloud. More information in the :ref:`setup_at_lecture`
-    section.
+    If you are taking DOBC in person we are able to offer you credentials to the OSU OSL Student Cloud. More
+    information in the :ref:`setup_at_lecture` section.
 
 .. image:: /static/Tux.png
     :align: center
     :alt: Tux Linux Logo
 
-.. _setup_at_lecture:
+There are a variety of ways to run Linux!
 
+- Dual-boot Windows+Linux
+- Virtual Machine (VMWare, Virtualbox, cloud server, etc)
+- Container (Docker)
+- Windows Linux Subsystem
 
-Lecture Setup
-~~~~~~~~~~~~~
+.. ifslides::
 
-1. Get login credentials from your lecturer.
-    - You will be provided a ``username``, ``password``, ``host``, and
-      ``port``.
+  Linux setup we're using today
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Linux/Mac:
-    2. Open a terminal and verify you have ``ssh`` installed by
-       entering the command ``ssh --version``.
+  - "Server" running on a VM hosted at the OSL
+  - Actually a container running CentOS
+  - All "Servers" will be removed after today
+  - If you want to continue using them at home, see :ref:`setup_at_home` or :ref:`setup_vm_at_home`
 
-    3. Run ``ssh -p <port> <username>@<host>`` and enter the password when
-       prompted (it will hide your password in the terminal).
+  .. _setup_at_lecture:
 
-.. nextslide::
+  Lecture Setup
+  ~~~~~~~~~~~~~
 
-Windows:
-    2. Install an SSH Client (`install Putty`_)
+  1. Get login credentials from your lecturer. You will be provided a ``port`` and ``password``.
 
-    3. Log into your remote Linux environment using the credentials given to
-       you.
+  Linux/Mac:
 
-        ii. Under ``Host Name (or IP address)`` enter ``<user>@<host>``, under
-            ``Port`` enter ``<port>``.
-        iii. You will be prompted for your password in new window, it will hide
-             the password as you type it.
+  2. Open a terminal and verify you have ``ssh`` installed by entering the command ``ssh --version``.
 
-.. _install Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+  3. Run the following command and enter the password when prompted (it will hide your password in the terminal):
+
+    .. code-block:: console
+
+      $ ssh -p <port> dobc@dobc-shell.osuosl.org
+
+  .. nextslide::
+
+  Windows:
+      2. Install an SSH Client (`install Putty`_)
+
+      3. Log into your remote Linux environment using the credentials given to
+         you.
+
+          ii. Under '``Host Name (or IP address)``' enter '``dobc@dobc-shell.osuosl.org``', under '``Port``' enter
+              '``<port>``'.
+          iii. You will be prompted for your password in new window, it will hide the password as you type it.
+
+  .. _install Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 .. _setup_at_home:
 
+Docker Setup
+~~~~~~~~~~~~
+
+We suggest you `install Docker`_, a tool which makes it easy to run small `Linux Containers`_ on your system in a safe
+sandbox without requiring to install Linux on your own machine. This is the same setup we used in the lecture.
+
+Make sure you read the install documentation for Docker to ensure your system supports running it and have the required
+BIOS settings enabled.
+
+.. nextslide::
+
+After you have it installed, run this to start a container:
+
+.. code-block:: console
+
+  $ docker run -p 2222:22 -h dobc --rm --name=dobc1 -d \
+      osuosl/dobc-centos passw04d
+
+Using your SSH client, connect to hostname ``localhost`` and port ``2222``. Login using the username ``dobc`` and the
+password ``passw0rd`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
+CentOS based container.
+
+.. _install Docker: https://www.docker.com/community-edition
+.. _Linux Containers: https://en.wikipedia.org/wiki/LXC
+
+.. nextslide::
+
+Feel free to try other Docker images, some that we recommend include:
+
+- ``ubuntu``
+- ``centos``
+- ``debian``
+
+To run those, do the following:
+
+.. code-block:: console
+
+  $ docker run -it --rm <docker image name>
+
+You can find have more images at the `Docker Hub`_.
+
+.. _Docker Hub: https://hub.docker.com/explore/
+
+.. _setup_vm_at_home:
 
 Virtual Machine Setup
 ~~~~~~~~~~~~~~~~~~~~~
 
-We suggest you `install Vagrant`_, a tool which makes it easy to run and
-acquire `Virtual Machines`_.
+Instead of using Docker, you can also run a Linux `Virtual Machines`_ on your computer. This will give you a full Linux
+environment as if it were on a real machine.
 
-You may also need to `install VirtualBox`_, a tool necessary for Vagrant to
+We suggest you `install Vagrant`_, a tool which makes it easy to run and acquire `Virtual Machines`_.
+
+You may also need to `install VirtualBox`_ or `install VMWare`_ (Requires TEACH access) a tool necessary for Vagrant to
 function.
+
+.. nextslide::
+
+After you get Vagrant and either VirtualBox or VMWare installed, clone our vagrant repo (make sure you `install Git`_
+first!) and then start the VM:
+
+.. _install Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+.. code-block:: console
+
+  $ git clone https://github.com/DevOpsBootcamp/vagrant.git
+  $ cd vagrant
+  $ vagrant up
+  $ vagrant ssh
 
 .. ifnotslides::
 
@@ -236,6 +339,7 @@ function.
 .. _install Vagrant: https://www.vagrantup.com/docs/installation/
 .. _Virtual Machines: https://en.wikipedia.org/wiki/Virtual_machine
 .. _install VirtualBox: https://www.virtualbox.org/
+.. _install VMWare: https://teach.engr.oregonstate.edu/teach.php?type=vmap
 
 
 Windows Subsystem for Linux Setup
@@ -245,15 +349,14 @@ The `Windows Subsystem for Linux`_ (Bash on Windows) allows you to run
 userspace Linux software on Windows, while using less resources than a virtual
 machine.
 
-If you installed the Fall Creators Update for Windows 10, you can install one
-or more Linux distributions through the Windows Store.
-
 .. image:: /static/ubuntustore.png
     :target: https://msdn.microsoft.com/en-us/commandline/wsl/install-win10
-    :align: center
-    :height: 375px
-    :width: 700px
+    :align: right
+    :width: 50%
     :alt: Windows Store
+
+If you installed the Fall Creators Update for Windows 10, you can install one
+or more Linux distributions through the Windows Store.
 
 .. _Windows Subsystem for Linux: https://msdn.microsoft.com/en-us/commandline/wsl/about
 
@@ -272,7 +375,7 @@ TODO: Change Your Password!
     Start by logging in (outlined in the previous slides).  Then run the
     following command:
 
-.. code::
+.. code-block:: console
 
     $ passwd
     Changing password for user <user>.
@@ -294,10 +397,10 @@ set.
 Further Reading
 ---------------
 
-- More information on `Virtual Machines`_.
+- More information on `Linux Containers`_ and `Virtual Machines`_.
 - `Install Putty`_ if you want to access a remote Linux box.
+- `Install Docker`_ if you want to run a local Linux container
 - `Install Vagrant`_ if you want to run a local Linux Virtual machine.
 - `Install VirtualBox`_ in addition to Vagrant for local virtual machines.
+- `Install VMWare`_ in addition to Vagrant for local virtual machines.
 - `Windows Subsystem for Linux`_ if you want to use Linux without VM overhead.
-
-.. TODO: Add more Further Reading

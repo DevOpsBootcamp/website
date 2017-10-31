@@ -30,6 +30,7 @@ Lesson 7: Questions, Answers, Docs
     - ``man`` (manual) Pages.
     - Project documentation.
     - Forums
+    - Slack
     - IRC
 
 When in doubt
@@ -42,7 +43,7 @@ When in doubt
     like a steel-trap, programs are well documented, and getting help is
     as easy as typing ``--help``.
 
-::
+.. code-block:: console
 
     $ <program> --help
     $ <program> -h
@@ -60,7 +61,7 @@ Man Pages
     how to use it, who the authors are, and what each flag/sub-command does in
     greater detail.
 
-::
+.. code-block:: console
 
     $ man <program>
 
@@ -253,7 +254,7 @@ TODO Getting on IRC
 
 *To get on IRC, Use irssi or weechat in screen:*
 
-::
+.. code-block:: console
 
     # This step is optional, but persistent IRC is cool
     $ ssh <username>@<a remote linux server>

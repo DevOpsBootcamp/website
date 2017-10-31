@@ -46,7 +46,7 @@ You... ish.
     Users can be people or non-people, but as far as the OS is concerned both
     are almost identical.
 
-::
+.. code-block:: console
 
     $ whoami    # your username
     $ who       # who is logged in?
@@ -112,12 +112,10 @@ What a User has
 What Users Can Do
 ~~~~~~~~~~~~~~~~~
 
-
 - Change Passwords with the ``passwd`` command.
-
 - Act as Another user with `su`.
 
-::
+.. code-block:: console
 
     $ su $USER          # become user, with THEIR password
     $ su                # become root, with root's password
@@ -131,6 +129,8 @@ What Users Can Do
     - Check the file's read, write, and execute bits.
 
 .. nextslide::
+
+|
 
 .. image:: /static/xkcd_838.png
     :align: center
@@ -148,7 +148,7 @@ Managing Groups and Users
 
     To view all user information on a system check the file ``/etc/passwd``:
 
-::
+.. code-block:: console
 
     $ cat /etc/passwd
     # username:x:UID:GID:GECOS:homedir:shell
@@ -158,7 +158,7 @@ Managing Groups and Users
     To add, delete, and change the password of a user respectively run the
     following commands:
 
-::
+.. code-block:: console
 
     $ useradd <user_name>  # vs adduser, the friendly Ubuntu version
     $ userdel <user_name>
@@ -170,7 +170,7 @@ Managing Groups and Users
     ``usermod``, and ``groupmod`` respectively.  Similarly to ``/etc/passwd``,
     ``/etc/group`` carries group information.
 
-::
+.. code-block:: console
 
     $ groupadd
     $ usermod
@@ -179,6 +179,8 @@ Managing Groups and Users
         root:x:0:
 
 .. nextslide::
+
+|
 
 .. image:: /static/xkcd215.png
     :alt: xkcd letting go
@@ -220,19 +222,21 @@ Root:
         - ``sudo <command>`` runs a single command as root. Prompts you for
           *your* password, but requries you to be on the ``sudoers`` list.
 
-::
+.. code-block:: console
 
-    [foo@compe ~]$ yum install httpd    # Runs command as `foo` user
+    [dobc@dobc ~]$ yum install httpd    # Runs command as `dobc` user
     Loaded plugins: fastestmirror, ovl
     ovl: Error while doing RPMdb copy-up:
     [Errno 13] Permission denied: '/var/lib/rpm/__db.002'
     You need to be root to perform this command.
-    [foo@compe ~]$ sudo yum install httpd    # Runs command as `root` user.
+    [dobc@dobc ~]$ sudo yum install httpd    # Runs command as `root` user.
     password:
     Loaded plugins: fastestmirror, ovl
     [... installs correctly ...]
 
 .. nextslide::
+
+|
 
 .. image:: /static/xkcd_149.png
     :align: center
