@@ -57,8 +57,8 @@ Definition: *System Administration*
   - This enables a small team to administer hundreds or thousands of
     servers
 
-* involved in infrastructure architecture and decisions
-* can be involved in QA/Development work as well
+* Involved in infrastructure architecture and decisions
+* Can be involved in QA/Development work as well
 
 Definition: *System Engineers*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

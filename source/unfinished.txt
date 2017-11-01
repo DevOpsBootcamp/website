@@ -3,4 +3,4 @@
     This lesson is under construction.  Learn from it at your own risk. If
     you have any feedback, please fill out our `General Feedback Survey`_.
 
-.. _General Feedback Survey: https://goo.gl/forms/RyVZkJnownLKu8VI3
+.. _General Feedback Survey: https://goo.gl/forms/M5aI0MDnQtW6RoHM2
