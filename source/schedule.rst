@@ -15,11 +15,10 @@ covering the entire course during the OSU academic school year.
 Fall
 ~~~~
 
-=============== ========================= ================ =================================
-Lesson          Date/Time                 Location         Description
---------------- ------------------------- ---------------- ---------------------------------
-`Fall Kickoff`_ Nov 4, 2017 9:30am-3:30pm `OSU KEC 1001`_  DevOps BootCamp Fall Kickoff
-=============== ========================= ================ =================================
+.. csv-table::
+  :header: Lessons Covered,"Date/Time",Location,Description
+
+  "0 - 7","Nov 4, 2017 9:30am-3:30pm",`OSU KEC 1001`_, "DevOps BootCamp `Fall Kickoff`_"
 
 .. _Fall Kickoff: http://devopsbootcamp.osuosl.org/daycamp/
 .. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
@@ -27,18 +26,15 @@ Lesson          Date/Time                 Location         Description
 Winter
 ~~~~~~
 
-================= ================= ================ =======================================
-Lesson            Date/Time         Location         Description
------------------ ----------------- ---------------- ---------------------------------------
-TBA
-================= ================= ================ =======================================
+.. csv-table::
+  :header: Lessons Covered,"Date/Time",Location,Description
 
+  8 - 15,"Feb 10, 2018 9:30am-3:30pm",TBA,"DevOps BootCamp Winter Session"
 
 Spring
 ~~~~~~
 
-================= ================= ================ =======================================
-Lesson            Date/Time         Location         Description
------------------ ----------------- ---------------- ---------------------------------------
-TBA
-================= ================= ================ =======================================
+.. csv-table::
+  :header: Lessons Covered,"Date/Time",Location,Description
+
+  16 - 20,"May 12, 2018 9:30am-3:30pm",TBA,"DevOps BootCamp Spring Session"
