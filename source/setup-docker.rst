@@ -46,6 +46,15 @@ This should do the following:
 
 .. _Docker Hub: https://hub.docker.com/r/osuosl/dobc-centos/
 
+Alternatively, you can also run the docker container in an interactive mode instead of connecting to it via ssh. If you
+do it using this method, you can skip the next section (connecting via ssh):
+
+.. code-block:: console
+
+  $ docker run -h dobc --rm --name=dobc1 -it osuosl/dobc-centos bash
+
+You can log out by typing ``exit`` and then enter which will stop the container.
+
 Connecting to the container via SSH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
