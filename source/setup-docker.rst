@@ -27,9 +27,12 @@ Running the DOBC image
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have Docker installed and running, you can spin up a Docker image we've created for DOBC by running the
-following::
+following:
 
-  docker run -p 2222:22 -h dobc --rm --name=dobc1 -d osuosl/dobc-centos passw04d
+.. code-block:: console
+
+  $ docker run -p 2222:22 -h dobc --rm --name=dobc1 -e DOBC_PASSWORD=passw04d \
+      -d osuosl/dobc-centos
 
 This should do the following:
 
@@ -37,9 +40,9 @@ This should do the following:
 #. Set the hostname to ``dobc``
 #. Remove the container and its image on exit
 #. Name the container ``dobc1``
+#. Set the password to ``passw0rd`` for ssh via setting an environment variable ``DOBC_PASSWORD``
 #. ``-d`` runs the container in the background
 #. Download the latest ``osuosl/dobc-centos`` image from `Docker Hub`_ and use it for the container
-#. Set the password to ``passw0rd`` for ssh
 
 .. _Docker Hub: https://hub.docker.com/r/osuosl/dobc-centos/
 
@@ -50,6 +53,18 @@ Using your SSH client, connect to hostname ``localhost`` and port ``2222``. Logi
 password ``passw0rd`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
 CentOS based container.
 
+Using a CLI ssh client, you can do that with the following:
+
+.. code-block:: console
+
+	$ ssh -p 2222 dobc@localhost
+	The authenticity of host '[localhost]:2222 ([::1]:2222)' can't be established.
+	ECDSA key fingerprint is SHA256:guModObCSS8GEpXQVUh9Fy674bCAacIZI1j5lh9LL+U.
+	Are you sure you want to continue connecting (yes/no)? yes
+	Warning: Permanently added '[localhost]:2222' (ECDSA) to the list of known hosts.
+	dobc@localhost's password:
+	[dobc@dobc ~]$
+
 Becoming the root user
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -59,9 +74,11 @@ simply run ``sudo su -``. Now you have full access to the container running Linu
 Stopping the container
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To stop the container, run the following from another terminal window::
+To stop the container, run the following from another terminal window:
 
-  docker stop dobc1
+.. code-block:: console
+
+  $ docker stop dobc1
 
 If you run ``docker ps``, you shouldn't see any running instances any more. Keep in mind that when you stop the
 container, any changes you've made on the container go away!
