@@ -275,3 +275,5 @@ How To Ask Questions
     - Always be respectful to those helping you.
     - Stay calm and articulate.
     - Explain you are trying to achieve and be thorough.
+
+Next: :ref:`first_steps`

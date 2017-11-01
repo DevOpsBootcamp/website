@@ -269,4 +269,6 @@ Further Reading
 
 - `Understanding Linux File Permissions`_
 
+Next: :ref:`files`
+
 .. _Understanding Linux File Permissions: https://www.linux.com/learn/understanding-linux-file-permissions

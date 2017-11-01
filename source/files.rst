@@ -395,5 +395,7 @@ Further Reading
 * `Permission Mishaps`_
 * `Access the Linux kernel using the /proc filesytem`_
 
+Next: :ref:`packages_software_libraries`
+
 .. _Permission Mishaps: http://serverfault.com/questions/93752/linux-permission-when-things-go-wrong-mishaps-gotchas-for-newbies/93759
 .. _Access the Linux kernel using the /proc filesytem: http://www.ibm.com/developerworks/library/l-proc/index.html

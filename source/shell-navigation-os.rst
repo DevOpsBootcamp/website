@@ -398,6 +398,8 @@ Further Reading
 		This video demonstrates what happens when you 'delete your hard-drive' on
 		Linux.	A fun watch!
 
+Next: :ref:`users_groups_permissions`
+
 .. _BASH Programming - Introduction HOW-TO:
 			http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 .. _Running rm -rf / on Linux: https://youtu.be/D4fzInlyYQo

@@ -404,3 +404,5 @@ Further Reading
 - `Install VirtualBox`_ in addition to Vagrant for local virtual machines.
 - `Install VMWare`_ in addition to Vagrant for local virtual machines.
 - `Windows Subsystem for Linux`_ if you want to use Linux without VM overhead.
+
+Next: :ref:`operating_systems`

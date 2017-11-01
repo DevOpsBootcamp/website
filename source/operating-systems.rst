@@ -255,6 +255,14 @@ Further Reading
 ---------------
 
 OSU Courses:
+    CS 312: Linux System Administration
+        - DOBC in class form
+        - Not currently offered, however course content is online
+        - http://cs312.osuosl.org
+
+.. nextslide::
+
+OSU Courses:
     CS 344: Operating Systems I
         - Required course for all CS Students at OSU.
         - Covers fundamentals of low-level programming concepts.
@@ -262,12 +270,18 @@ OSU Courses:
             - Read / Write operations
             - Socket programming
 
+
+.. nextslide::
+
+OSU Courses:
     CS 444: Operating Systems II
         - Required course for all CS Students at OSU.
         - Covers kernel hacking and low-level OS design.
             - IO / Process scheduling
             - Building kernel modules
             - Memory management
+
+.. nextslide::
 
 Free Online Resources:
     `OSDev.org`_  is a wiki dedicated to helping people develop their own
@@ -278,6 +292,8 @@ Free Online Resources:
     classsic in the world of OS Development.  It's also a big leap, but can
     teach you more about how Operating Systems work than you ever thought there
     was to know.
+
+Next: :ref:`shell_navigation`
 
 .. _Operating Systems Design and Implementation: https://amzn.com/0136386776
 .. _OSDev.org: http://wiki.osdev.org/Main_Page
