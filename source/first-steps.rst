@@ -190,6 +190,25 @@ Replace the ``$BREED_N`` with actual dog breeds.
       pug
       french bulldog
 
+SSH: Secure Shell
+-----------------
+
+.. rst-class:: build
+
+- Secure Shell (SSH) provides a secure channel to access a Linux machine remotely via command line.
+- It's a primary tool for almost every DevOps engineer
+- Designed as a replacement to Telnet which provides unsecured remote shell access
+- Allows for password logins and private/public key-based logins which are more secure
+- Some tricks you can do with SSH
+
+  - Run a single command remotely
+  - Secure file transfer (via ``scp`` or `WinSCP`_)
+  - Port forwarding, SOCKS proxy or tunnel
+  - `SSHFS`_ -- userspace filesystem which uses SSH
+
+.. _WinSCP: https://winscp.net/eng/download.php
+.. _SSHFS: https://github.com/libfuse/sshfs
+
 Getting Setup on Linux
 ----------------------
 
@@ -219,8 +238,9 @@ There are a variety of ways to run Linux!
 
   - "Server" running on a VM hosted at the OSL
   - Actually a container running CentOS
-  - All "Servers" will be removed after today
-  - If you want to continue using them at home, see :ref:`setup_at_home` or :ref:`setup_vm_at_home`
+  - We'll be using SSH to access the containers remotely
+  - All "Servers" will be removed within a week
+  - If you want to continue using them at home after today, see :ref:`setup_at_home` or :ref:`setup_vm_at_home`
 
   .. _setup_at_lecture:
 
@@ -282,21 +302,34 @@ CentOS based container.
 
 .. nextslide::
 
+Alternatively, you can also run the docker container in an interactive mode instead of connecting to it via ssh:
+
+.. code-block:: console
+
+  $ docker run -h dobc --rm --name=dobc1 -it osuosl/dobc-centos bash
+
+You can log out by typing ``exit`` and then enter which will stop the container.
+
+.. nextslide::
+
 Feel free to try other Docker images, some that we recommend include:
 
 - ``ubuntu``
-- ``centos``
 - ``debian``
+- ``centos``
+- ``fedora``
 
 To run those, do the following:
 
 .. code-block:: console
 
-  $ docker run -it --rm <docker image name>
+  $ docker run -it --rm <docker image name> bash
 
-You can find have more images at the `Docker Hub`_.
+You can find have more images at the `Docker Hub`_. We also recommend you read `Getting started with Docker`_ to have a
+better understanding of how it works.
 
 .. _Docker Hub: https://hub.docker.com/explore/
+.. _Getting started with Docker: https://docs.docker.com/get-started/
 
 .. _setup_vm_at_home:
 

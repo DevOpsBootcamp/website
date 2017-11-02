@@ -38,6 +38,8 @@ Lesson 2: Operating Systems
 What an Operating System is
 ---------------------------
 
+|
+
 .. image:: /static/operating-system-infographic.png
     :align: center
     :alt: The OS in relation to Hardware, Applications, and Users.
@@ -229,6 +231,8 @@ Flavors of Linux
 
 TODO: Pop Quiz
 --------------
+
+.. rst-class:: build
 
 #. What are some different types of Operating Systems?
 #. What constitutes a 'Distribution' of Linux?

@@ -24,7 +24,6 @@ Lesson 8: Version Control
     Overview
     --------
 
-    - Introduction to Nano
     - Overview of VCS
       - What it is
       - What it solves
@@ -33,42 +32,6 @@ Lesson 8: Version Control
       - How to use Git
       - What not to do with Git
       - Workflows
-
-
-Text Editor: Nano
------------------
-
-.. ifnotslides::
-
-    We are going to with a a quick tangent by learning to use the
-    terminal-based text editor **Nano**.
-
-.. image:: /static/nano.png
-    :align: center
-    :alt: nano in action
-
-- User types like normal.
-- Arrow keys used to to navigate the cursor.
-- ``^ + <key>`` Commands (``control + key``)
-
-.. ifnotslides::
-
-    Nano is a great terminal text editor to start with.  Later in your career
-    you may start using ``emacs`` or ``vi/vim`` but to start with ``nano`` is
-    familiar, easy to use, and gets the job done.
-
-    To use ``nano`` simply execute it like any other command in the terminal.
-
-    ::
-
-        $ nano  # Open with empty file
-        $ nano <file_name>  # Edit a specific file
-
-    This editor is almost exactly like any word processor or plain-text editor
-    except that you don't have a mouse -- only keyboard shortcuts. The
-    instruction bar at the bottom of the screen is explains all of the
-    key-bindings from saving, to exiting, to cut and pasting.
-
 
 Version Control Systems
 -----------------------

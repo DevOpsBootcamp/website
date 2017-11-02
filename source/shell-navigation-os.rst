@@ -30,6 +30,7 @@ Lesson 3: Shell Navigation
 		- How to navigate an OS via a shell.
 		- Shell Scripts
 		- Tips, Tricks, and Tabs.
+		- Text editors
 
 
 The Shell
@@ -378,28 +379,259 @@ completions (if there are any).
   $ ls bar  # <tab>
   $ ls bar_thing
 
-TODO
-----
+Text Editor: Nano
+-----------------
 
-.. TODO: Add activity
-.. TODO: Add Answer Key
-.. They've already changed their passwords, what else would be a good
-.. challenge?
+.. ifnotslides::
 
+    We are going to with a quick tangent by learning to use the terminal-based text editor **Nano**.
+
+.. image:: /static/nano.png
+    :align: center
+    :alt: nano in action
+
+- User types like normal.
+- Arrow keys used to to navigate the cursor.
+- ``^ + <key>`` Commands (``control + key``)
+
+.. nextslide::
+
+Nano is a great terminal text editor to start with.  Later in your career you may start using ``emacs`` or ``vi/vim``
+but to start with ``nano`` is familiar, easy to use, and gets the job done.
+
+To use ``nano`` simply execute it like any other command in the terminal.
+
+.. code-block:: console
+
+    $ nano              # Open with empty file
+    $ nano <file_name>  # Edit a specific file
+
+This editor is almost exactly like any word processor or plain-text editor except that you don't have a mouse -- only
+keyboard shortcuts. The instruction bar at the bottom of the screen is explains all of the key-bindings from saving, to
+exiting, to cut and pasting.
+
+Demo Activities
+---------------
+
+- Hello World script
+- Passing arguments to the bash script
+- Reading User Input
+- Simple Bash if/else statement
+
+.. ifslides::
+
+	*We likely won't have enough time to cover these all, but feel free to try later!*
+
+Bash Hello World
+~~~~~~~~~~~~~~~~
+
+Using ``nano`` create a file called ``hello_world.sh`` and put the following in it:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  # declare STRING variable
+  STRING="Hello World"
+  # print variable on a screen
+  echo $STRING
+
+Now make the script executable using ``chmod`` and run the script. What does it do?
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ chmod +x hello_world.sh
+  $ ./hello_world.sh
+  Hello World
+
+Simple Backup script
+~~~~~~~~~~~~~~~~~~~~
+
+Using the ``tar`` command, write a script named ``backup.sh`` which backs up the ``dobc`` user home directory into a
+file ``/tmp/dobc-backup.tar.gz`` . *Hint: use the man page for tar or type 'tar -h'.*
+
+.. rst-class:: build
+
+.. code-block:: bash
+
+  #!/bin/bash
+  tar -vczf /tmp/dobc-backup.tar.gz /home/dobc
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ ./backup.sh
+  tar: Removing leading `/' from member names
+  /home/dobc/
+  /home/dobc/backup.sh
+  /home/dobc/hello_world.sh
+  /home/dobc/.bash_profile
+  /home/dobc/.bashrc
+  /home/dobc/.bash_logout
+
+.. rst-class:: build
+
+**Bonus: How could you list the contents of the file?**
+
+Passing arguments to the bash script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you pass arguments to a bash script, you can reference them inside of the script using ``$1``, ``$2``, etc. This
+means if you do something like '``foo.sh bar``', ``$1`` will return ``bar``. You can also use ``$@`` to reference all
+arguments.
+
+For example:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  echo $1   # prints argument #1 given to script
+  echo $@   # prints all arguments given to script
+
+.. nextslide::
+
+Given that, create a script called ``args.sh`` that takes three arguments and prints all of the args and then prints
+them in reverse using ``echo``.
+
+.. rst-class:: build
+
+.. code-block:: bash
+
+  #!/bin/bash
+  echo $@
+  echo $3 $2 $1
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ chmod +x args.sh
+  $ ./args.sh DOBC is awesome
+  DOBC is awesome
+  awesome is DOBC
+
+.. rst-class:: build
+
+**Bonus #1: What happens if you give the script nothing?**
+**Bonus #2: What happens if you give it the string "DOBC is awesome" with quotes?**
+
+Reading User Input
+~~~~~~~~~~~~~~~~~~
+
+You can also take input using the ``read`` command which then stores it in a variable. If you pass ``read`` '``-a``',
+it puts the input into a bash array.
+
+For example:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  echo -e "Tell me a word: \c"
+  read word
+  echo "Your word is $word"
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ ./read.sh
+  Tell me a word: foo
+  Your word is foo
+
+.. nextslide::
+
+Create a script named ``input.sh`` which takes input for three args and then prints them in a sentence (of your
+choosing).
+
+.. rst-class:: build
+
+.. code-block:: bash
+
+  #!/bin/bash
+  echo -e "Tell me a noun: \c"
+  read noun
+  echo -e "Tell me a verb: \c"
+  read verb
+  echo -e "Tell me an adjective: \c"
+  read adj
+  echo "I plan to $verb a $adj $noun"
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ ./input.sh
+  Tell me a noun: apple
+  Tell me a verb: eat
+  Tell me an adjective: large
+  I plan to eat a large apple
+
+Simple Bash if/else statement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bash conditionals use ``if``, ``else``, ``then`` and ``fi`` operators. You can compare strings, files and even command
+output. An example:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  if [ "$1" == "foo" ] ; then
+    echo "You said $1"
+  else
+    echo "You did not say foo"
+  fi
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ ./sayfoo.sh foo
+  You said foo
+  $ ./sayfoo.sh bar
+  You did not say foo
+
+.. nextslide::
+
+Create a script named ``ifelse.sh`` which takes two arguments. If both arguments match, print ``"Yay, they match!"``,
+if they don't, then print ``"Boo, they don't match :("``.
+
+.. rst-class:: build
+
+.. code-block:: bash
+
+  #!/bin/bash
+  if [ "$1" == "$2" ] ; then
+    echo "Yay, they match!"
+  else
+    echo "Boo, they don't match :("
+  fi
+
+.. rst-class:: build
+
+.. code-block:: console
+
+	$ ./ifelse.sh foo foo
+	Yay, they match!
+	$ ./ifelse.sh foo bar
+	Boo, they don't match :(
 
 Further Reading
 ---------------
 
 `BASH Programming - Introduction HOW-TO`_
-		A free online resoruce of learning bash programming.	Covers some concepts
-		we'll get to later in DOBC, but a good resoruce to have on hand.
+	A free online resource of learning bash programming.	Covers some concepts
+	we'll get to later in DOBC, but a good resource to have on hand.
+
+`Advanced Bash-Scripting Guide`_
+	An in-depth exploration of the art of shell scripting. Covers more advanced concepts with Bash.
 
 `Running rm -rf / on Linux`_
-		This video demonstrates what happens when you 'delete your hard-drive' on
-		Linux.	A fun watch!
+	This video demonstrates what happens when you 'delete your hard-drive' on Linux. A fun watch!
 
 Next: :ref:`users_groups_permissions`
 
-.. _BASH Programming - Introduction HOW-TO:
-			http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+.. _BASH Programming - Introduction HOW-TO: http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+.. _Advanced Bash-Scripting Guide: http://tldp.org/LDP/abs/html/
 .. _Running rm -rf / on Linux: https://youtu.be/D4fzInlyYQo
