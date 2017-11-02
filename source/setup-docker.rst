@@ -40,7 +40,7 @@ This should do the following:
 #. Set the hostname to ``dobc``
 #. Remove the container and its image on exit
 #. Name the container ``dobc1``
-#. Set the password to ``passw0rd`` for ssh via setting an environment variable ``DOBC_PASSWORD``
+#. Set the password to ``passw04d`` for ssh via setting an environment variable ``DOBC_PASSWORD``
 #. ``-d`` runs the container in the background
 #. Download the latest ``osuosl/dobc-centos`` image from `Docker Hub`_ and use it for the container
 
