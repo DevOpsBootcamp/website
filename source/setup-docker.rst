@@ -32,7 +32,7 @@ following:
 .. code-block:: console
 
   $ docker run -p 2222:22 -h dobc --rm --name=dobc1 -e DOBC_PASSWORD=passw04d \
-      -d osuosl/dobc-centos
+      osuosl/dobc-centos
 
 This should do the following:
 
@@ -41,7 +41,6 @@ This should do the following:
 #. Remove the container and its image on exit
 #. Name the container ``dobc1``
 #. Set the password to ``passw04d`` for ssh via setting an environment variable ``DOBC_PASSWORD``
-#. ``-d`` runs the container in the background
 #. Download the latest ``osuosl/dobc-centos`` image from `Docker Hub`_ and use it for the container
 
 .. _Docker Hub: https://hub.docker.com/r/osuosl/dobc-centos/
