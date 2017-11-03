@@ -67,19 +67,13 @@ Buzzwords:
     - **Docker:** Software that manages Linux containers
 
 
-TODO: What Vocabulary Do *You* Know?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise: What Vocabulary Do *You* Know?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. rst-class:: build
 
 - *What other vocabulary can you think of related to DevOps?*
 - *What about Silicon Valley, Programming, System Administration, etc?*
-
-.. note::
-
-    This is a **TODO**.  It's basically an exercise or activity but with a
-    cheeky name.  Try them out if you don't feel confident in a topic.
-
 
 Notation
 --------
@@ -146,8 +140,8 @@ Code-block:
     $ echo Hello World
 
 
-TODO: Reading Examples
-~~~~~~~~~~~~~~~~~~~~~~
+Exercise: Reading Examples
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     *Trick question: how would you read this*
 
@@ -294,7 +288,7 @@ After you have it installed, run this to start a container:
       osuosl/dobc-centos passw04d
 
 Using your SSH client, connect to hostname ``localhost`` and port ``2222``. Login using the username ``dobc`` and the
-password ``passw0rd`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
+password ``passw04d`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
 CentOS based container.
 
 .. _install Docker: https://www.docker.com/community-edition
@@ -393,8 +387,8 @@ or more Linux distributions through the Windows Store.
 
 .. _Windows Subsystem for Linux: https://msdn.microsoft.com/en-us/commandline/wsl/about
 
-TODO: Change Your Password!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise: Change Your Password!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Challenge** *Change your password on your Linux machine.*
 

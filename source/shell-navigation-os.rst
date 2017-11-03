@@ -410,18 +410,6 @@ This editor is almost exactly like any word processor or plain-text editor excep
 keyboard shortcuts. The instruction bar at the bottom of the screen is explains all of the key-bindings from saving, to
 exiting, to cut and pasting.
 
-Demo Activities
----------------
-
-- Hello World script
-- Passing arguments to the bash script
-- Reading User Input
-- Simple Bash if/else statement
-
-.. ifslides::
-
-	*We likely won't have enough time to cover these all, but feel free to try later!*
-
 Bash Hello World
 ~~~~~~~~~~~~~~~~
 
@@ -445,11 +433,89 @@ Now make the script executable using ``chmod`` and run the script. What does it 
   $ ./hello_world.sh
   Hello World
 
+Passing arguments to the bash script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you pass arguments to a bash script, you can reference them inside of the script using ``$1``, ``$2``, etc. This
+means if you do something like '``foo.sh bar``', ``$1`` will return ``bar``. You can also use ``$@`` to reference all
+arguments.
+
+For example:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  echo $1   # prints argument #1 given to script
+  echo $@   # prints all arguments given to script
+
+Reading User Input
+~~~~~~~~~~~~~~~~~~
+
+You can also take input using the ``read`` command which then stores it in a variable. If you pass ``read`` '``-a``',
+it puts the input into a bash array.
+
+For example:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  echo -e "Tell me a word: \c"
+  read word
+  echo "Your word is $word"
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ ./read.sh
+  Tell me a word: foo
+  Your word is foo
+
+Simple Bash if/else statement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bash conditionals use ``if``, ``else``, ``then`` and ``fi`` operators. You can compare strings, files and even command
+output. An example:
+
+.. code-block:: bash
+
+  #!/bin/bash
+  if [ "$1" == "foo" ] ; then
+    echo "You said $1"
+  else
+    echo "You did not say foo"
+  fi
+
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ ./sayfoo.sh foo
+  You said foo
+  $ ./sayfoo.sh bar
+  You did not say foo
+
+Exercises: Bash
+---------------
+
+- Using the ``tar`` command, write a script named ``backup.sh`` which backs up the ``dobc`` user home directory into a
+  file ``/tmp/dobc-backup.tar.gz`` . *Hint: use the man page for tar or type 'tar -h'.*
+- Create a script called ``args.sh`` that takes three arguments and prints all of the args and then prints them in
+  reverse using ``echo``.
+- Create a script named ``input.sh`` which takes input for three args and then prints them in a sentence (of your
+  choosing).
+- Create a script named ``ifelse.sh`` which takes two arguments. If both arguments match, print ``"Yay, they match!"``,
+  if they don't, then print ``"Boo, they don't match :("``.
+
+.. ifslides::
+
+	*We likely won't have enough time to cover these all, but feel free to try later!*
+
+Exercise Answer Key
+-------------------
+
 Simple Backup script
 ~~~~~~~~~~~~~~~~~~~~
-
-Using the ``tar`` command, write a script named ``backup.sh`` which backs up the ``dobc`` user home directory into a
-file ``/tmp/dobc-backup.tar.gz`` . *Hint: use the man page for tar or type 'tar -h'.*
 
 .. rst-class:: build
 
@@ -478,23 +544,6 @@ file ``/tmp/dobc-backup.tar.gz`` . *Hint: use the man page for tar or type 'tar 
 Passing arguments to the bash script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you pass arguments to a bash script, you can reference them inside of the script using ``$1``, ``$2``, etc. This
-means if you do something like '``foo.sh bar``', ``$1`` will return ``bar``. You can also use ``$@`` to reference all
-arguments.
-
-For example:
-
-.. code-block:: bash
-
-  #!/bin/bash
-  echo $1   # prints argument #1 given to script
-  echo $@   # prints all arguments given to script
-
-.. nextslide::
-
-Given that, create a script called ``args.sh`` that takes three arguments and prints all of the args and then prints
-them in reverse using ``echo``.
-
 .. rst-class:: build
 
 .. code-block:: bash
@@ -519,31 +568,6 @@ them in reverse using ``echo``.
 
 Reading User Input
 ~~~~~~~~~~~~~~~~~~
-
-You can also take input using the ``read`` command which then stores it in a variable. If you pass ``read`` '``-a``',
-it puts the input into a bash array.
-
-For example:
-
-.. code-block:: bash
-
-  #!/bin/bash
-  echo -e "Tell me a word: \c"
-  read word
-  echo "Your word is $word"
-
-.. rst-class:: build
-
-.. code-block:: console
-
-  $ ./read.sh
-  Tell me a word: foo
-  Your word is foo
-
-.. nextslide::
-
-Create a script named ``input.sh`` which takes input for three args and then prints them in a sentence (of your
-choosing).
 
 .. rst-class:: build
 
@@ -571,32 +595,6 @@ choosing).
 Simple Bash if/else statement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bash conditionals use ``if``, ``else``, ``then`` and ``fi`` operators. You can compare strings, files and even command
-output. An example:
-
-.. code-block:: bash
-
-  #!/bin/bash
-  if [ "$1" == "foo" ] ; then
-    echo "You said $1"
-  else
-    echo "You did not say foo"
-  fi
-
-.. rst-class:: build
-
-.. code-block:: console
-
-  $ ./sayfoo.sh foo
-  You said foo
-  $ ./sayfoo.sh bar
-  You did not say foo
-
-.. nextslide::
-
-Create a script named ``ifelse.sh`` which takes two arguments. If both arguments match, print ``"Yay, they match!"``,
-if they don't, then print ``"Boo, they don't match :("``.
-
 .. rst-class:: build
 
 .. code-block:: bash
@@ -612,10 +610,10 @@ if they don't, then print ``"Boo, they don't match :("``.
 
 .. code-block:: console
 
-	$ ./ifelse.sh foo foo
-	Yay, they match!
-	$ ./ifelse.sh foo bar
-	Boo, they don't match :(
+  $ ./ifelse.sh foo foo
+  Yay, they match!
+  $ ./ifelse.sh foo bar
+  Boo, they don't match :(
 
 Further Reading
 ---------------
@@ -635,3 +633,4 @@ Next: :ref:`users_groups_permissions`
 .. _BASH Programming - Introduction HOW-TO: http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 .. _Advanced Bash-Scripting Guide: http://tldp.org/LDP/abs/html/
 .. _Running rm -rf / on Linux: https://youtu.be/D4fzInlyYQo
+

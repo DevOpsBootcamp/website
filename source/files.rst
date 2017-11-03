@@ -128,6 +128,8 @@ that medical device like so:
 More file metadata
 ------------------
 
+.. rst-class:: codeblock-sm
+
 .. code-block:: console
 
   $ ll
@@ -360,48 +362,56 @@ Directories
 
 .. code-block:: console
 
-    $ ls -alh | grep foobarbaz
-    drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
+  $ ls -alh | grep foobarbaz
+  drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
 
-    $ ls -alh foobarbaz   # Below is the literal output, not psuedo-output
-    ls: cannot access foobarbaz/.: Permission denied
-    ls: cannot access foobarbaz/..: Permission denied
-    total 0
-    d????????? ? ? ? ?            ? .
-    d????????? ? ? ? ?            ? ..
+  # Below is the literal output, not psuedo-output
+  $ ls -alh foobarbaz
+  ls: cannot access foobarbaz/.: Permission denied
+  ls: cannot access foobarbaz/..: Permission denied
+  total 0
+  d????????? ? ? ? ?            ? .
+  d????????? ? ? ? ?            ? ..
 
+Exercise: Messing with Files
+----------------------------
 
-TODO: Messing with Files
-------------------------
+.. code-block:: console
 
-::
+  # create empty file called foo
+  $ touch foo
 
-    $ touch foo # create empty file called foo
-
-- Create an empty file in ``/home/$yourusername/bootcamp``.
+- Create an empty file in ``/home/dobc/bootcamp``.
 - Who can do what to the file?
 - Change the group to ``devops``.
 - Make a file called ``allperms`` and give user, group, and world ``+rwx``.
 - Make more files and practice changing their permissions.
 
-.. ifnotslides::
+Exercise Answer Key
+-------------------
 
-    Answer Key
+.. rst-class:: build
 
-    ::
+.. code-block:: console
 
-        $ touch ~/bootcamp
-        $ ls -alh bootcamp
-        $ chown $USER:devops  # You may need to create the devops group.
-        $ touch ~/allperms
-        $ chmod ugo+rwx allperms
-        ...
+  $ touch bootcamp/emptyfile
+  $ ls -alh bootcamp/emptyfile
+  -rw-rw-r-- 1 dobc dobc 0 Nov  3 22:38 bootcamp/emptyfile
+  # You may need to create the devops group.
+  $ sudo chown dobc:devops bootcamp/emptyfile
+  # Alternatively, you can also do the following
+  $ sudo chgrp devops bootcamp/emptyfile
+  $ touch allperms
+  $ chmod ugo+rwx allperms
+  $ ls -l allperms
+  -rwxrwxrwx 1 dobc dobc 0 Nov  3 22:39 allperms
 
+.. rst-class:: build
+
+**Bonus: What's another way of giving a file all permissions?**
 
 Further Reading
 ---------------
-
-.. TODO: Add Further Reading
 
 * `Permission Mishaps`_
 * `Access the Linux kernel using the /proc filesytem`_

@@ -38,8 +38,6 @@ Lesson 2: Operating Systems
 What an Operating System is
 ---------------------------
 
-|
-
 .. image:: /static/operating-system-infographic.png
     :align: center
     :alt: The OS in relation to Hardware, Applications, and Users.
@@ -60,7 +58,7 @@ Anatomy of an OS
 ----------------
 
 .. image:: /static/anatomy-of-an-os.png
-    :align: center
+    :align: right
     :target: https://commons.wikimedia.org/wiki/File:Kernel_Layout.svg
     :alt: How the kernel fits into the OS stack.
 
@@ -186,8 +184,6 @@ GNU/Linux
     :alt: GNU+Linux Logo
 
 .. ifnotslides::
-
-    |
 
     **Linux** is the *kernel* the powers many *flavors* (or
     Distros/Distributions) of **GNU/Linux**.  Each flavor was created because

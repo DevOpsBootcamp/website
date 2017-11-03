@@ -275,18 +275,44 @@ you to do commands based on your permissions. For example:
   Loaded plugins: fastestmirror, ovl
   [... installs correctly ...]
 
-Demo
-----
+Exercises
+---------
 
-- Create a user on your system for yourself, with your preferred username.
-- Give your user ``sudo`` powers.
-- Use ``su`` to get into your user account.
-- Change your password.
-- Create a directory called ``bootcamp`` in your home directory.
-- Create a group called ``devops``.
+#. Create a user on your system for yourself, with your preferred username.
+#. Give your user ``sudo`` powers.
+#. Change your password.
+#. Use ``su`` to get into your user account.
+#. Create a directory called ``bootcamp`` in your home directory.
+#. Create a group called ``devops``.
 
-.. TOOD: Add answer key
+Exercise Answer Key
+-------------------
 
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ sudo su -
+  $ useradd lance
+  # better to use visudo instead
+  $ echo "lance ALL = (ALL) ALL" >> /etc/sudoers
+  $ passwd lance
+  Changing password for user lance.
+  New password:
+  Retype new password:
+  passwd: all authentication tokens updated successfully.
+  $ su - lance
+  $ mkdir bootcamp
+  $ sudo groupadd devops
+
+  We trust you have received the usual lecture from the local System
+  Administrator. It usually boils down to these three things:
+
+      #1) Respect the privacy of others.
+      #2) Think before you type.
+      #3) With great power comes great responsibility.
+
+  [sudo] password for lance:
 
 Further Reading
 ---------------
