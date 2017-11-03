@@ -32,8 +32,8 @@ Lesson 5: Files
     - File permissions
 
 
-About Files
------------
+What are files?
+----------------
 
 *Everything in Linux is a file... except the things that aren't.*
 
@@ -51,13 +51,18 @@ About Files
 
 Files have:
 
-- Owners
-- Permissions (what different people can do with it)
-- An inode (a low-level description of the file)
-- Size
-- Filename
+============= ==========================
 
-::
+Owner         atime, ctime, mtime
+Group         POSIX ACLs
+Permissions   Spinlock
+Inode         i_ino
+Size          read, write and link count
+Filename
+
+============= ==========================
+
+.. code-block:: console
 
     $ ls -il
     total 8
@@ -65,9 +70,8 @@ Files have:
     2629156 -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
     2884382 drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
 
-
-Everything is a file!?
-----------------------
+Everything can be a file?
+-------------------------
 
 Yes. Except the things that aren't..
 
@@ -87,16 +91,15 @@ Yes. Except the things that aren't..
     For example, you might change your screen's brightness by running this
     command:
 
-    ::
+    .. code-block:: console
 
-        $ echo 5 >> /sys/class/backlight/acpi_video0/brightness
+      $ echo 5 >> /sys/class/backlight/acpi_video0/brightness
 
-    This functionality isn't just limited to the shell, either!  Let's say
-    you're programming an interface for a medical device that **streams** data
-    from a sensor.  Using the "Everything is a file" philosophy, we could read
-    data from that medical device like so:
+This functionality isn't just limited to the shell, either!  Let's say you're programming an interface for a medical
+device that **streams** data from a sensor.  Using the *"Everything is a file"* philosophy, we could read data from
+that medical device like so:
 
-::
+.. code-block:: c
 
     int read_medical_device_data(int device_file_pointer) {
         // Open a connection to the device
@@ -122,13 +125,36 @@ Yes. Except the things that aren't..
     its own special way.  The end user experience might be the same, but the
     programmer's life is much easier when everything looks like a file.
 
+More file metadata
+------------------
+
+.. code-block:: console
+
+  $ ll
+  crw-rw-rw- 1 root  tty   5, 0 Jan  6 13:45 /dev/tty
+  brw-rw---- 1 root  disk  8, 0 Dec 21 14:12 /dev/sda
+  srw-rw-rw- 1 root  root  0    Dec 21 14:13 /var/run/acpid.socket
+  prw------- 1 lance lance 0    Jan  5 17:44 /var/run/screen/S-lance/12138.ramereth
+  lrwxrwxrwx 1 root  root  4    Nov 25 09:26 /var/run -> /run
+
+  $ stat /etc/services
+    File: `/etc/services'
+    Size: 19303       Blocks: 40         IO Block: 4096   regular file
+  Device: fc00h/64512d  Inode: 525111      Links: 1
+  Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+  Access: 2015-01-07 08:22:43.768316048 -0800
+  Modify: 2012-05-03 09:01:30.934310452 -0700
+  Change: 2012-05-03 09:01:30.982310456 -0700
+   Birth: -
 
 File Extensions
 ---------------
 
-    ``.jpg``, ``.txt``, ``.py``
+``.jpg``, ``.txt``, ``.py``
 
 Not necessary, more of a recommendation.
+
+File contains information about its encoding
 
 .. ifnotslides::
 
@@ -142,7 +168,7 @@ Not necessary, more of a recommendation.
     The ``file`` command takes a filename and uses its metadata and its
     contents to try and guess at what kind of file it is.
 
-::
+.. code-block:: console
 
     $ ls
     some_text_file  squirrel
@@ -173,7 +199,7 @@ default.
 
 Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
 
-::
+.. code-block:: console
 
     $ ls
     Documents  file.txt  Pictures
@@ -188,7 +214,6 @@ Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
         The ``.`` and ``..`` at the beginning of that ``ls -a`` output are
         file representations of the current working directory (``.``) and the
         parent directory (``..``).
-
 
 
 Finding Metadata with 'ls -l'
@@ -221,26 +246,23 @@ Finding Metadata with 'ls -l'
 Editing Metadata
 ----------------
 
-.. ifnotslides::
+You can edit the metadata of a file with various commands, but some of the most useful commands are ``chown``,
+``chmod``, and ``chgrp`` commands.  These commands allow you to edit the owner, the read/write/execute, and the group
+permissions of a file respectively.
 
-    You can edit the metadata of a file with various commands, but some of the
-    most useful commands are ``chown``, ``chmod``, and ``chgrp`` commands.
-    These commands allow you to edit the owner, the read/write/execute, and the
-    group permissions of a file respectively.
+.. code-block:: console
 
-::
+  # Change the owner of myfile to "root".
+  $ chown root myfile
 
-    $ chown root myfile
-      # Change the owner of myfile to "root".
+  # Change the owner of myfile to "root" and group to "staff".
+  $ chown root:staff myfile
 
-    $ chown root:staff myfile
-      # Change the owner of myfile to "root" and group to "staff".
+  # Change the owner of /mydir and subfiles to "root".
+  $ chown -hR root /mydir
 
-    $ chown -hR root /mydir
-      # Change the owner of /mydir and subfiles to "root".
-
-    $ chgrp -R devops /home/$yourusername/bootcamp
-      # Make the group devops own the bootcamp dir
+  # Make the group devops own the bootcamp dir
+  $ chgrp -R devops /home/$yourusername/bootcamp
 
 .. ifnotslides::
 
@@ -252,8 +274,8 @@ Editing Metadata
         them yourself, but a good rule of thumb is to avoid large recursive
         edits unless you're *really* confident that you know what you're doing.
 
-``chmod`` and Octal Permissions
--------------------------------
+chmod and Octal Permissions
+---------------------------
 
 ::
 
@@ -270,32 +292,21 @@ Editing Metadata
     | rwx | 111    | 7     |
     +-----+--------+-------+
 
-.. nextslide::
-
 -  u, g, o for user, group, other
 -  -, +, = for remove, add, set
 -  r, w, x for read, write, execute
 
-.. ifnotslides::
+.. nextslide::
 
-    Example:
+Example:
 
-    ::
+.. code-block:: console
 
-        $ chmod ug+x my_script.sh    # Adds the permission to execute the file
-                                     # to its owner user and owner group.
+  $ chmod ug+x my_script.sh    # Adds the permission to execute the file
+                               # to its owner user and owner group.
 
-        $ chmod o-w myfile.txt       # Removes the permission to write to the
-                                     # file from users other than its owners.
-
-.. ifslides::
-
-    ::
-
-        $ chmod ug+x my_script.sh
-
-        $ chmod o-w
-
+  $ chmod o-w myfile.txt       # Removes the permission to write to the
+                               # file from users other than its owners.
 
 Executing a File?
 -----------------
@@ -311,7 +322,7 @@ Executing a File?
 
 For instance:
 
-::
+.. code-block:: console
 
     $ ls -alh my-script
     -r-xr-xr-x 1 username username 1.9K Sep 27 09:44 my-script
@@ -347,7 +358,7 @@ Directories
 - ``+w`` allows you to add files to the directory.
 - ``+x`` allows you to use the directory at all.
 
-::
+.. code-block:: console
 
     $ ls -alh | grep foobarbaz
     drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
