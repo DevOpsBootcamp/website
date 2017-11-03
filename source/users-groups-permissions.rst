@@ -32,10 +32,10 @@ Lesson 4: Users, Groups, Permissions
     - The ``root`` user.
 
 
-The User
---------
+What are users?
+---------------
 
-You... ish.
+You, right now.
 
 .. ifnotslides::
 
@@ -53,20 +53,17 @@ You... ish.
     $ w         # who is here and what are they doing?
     $ id        # user ID, group ID, and groups you're in
 
-Sometimes robots are users too: Apache, Mailman, ntp.
+Not just people: Apache, Mailman, ntp aka "system users"
 
+Users have
+----------
 
-What a User has
-~~~~~~~~~~~~~~~
-
-.. ifslides::
-
-    - Username
-    - UID
-    - Group
-    - Shell (not always interactive)
-    - Password (Usually but not always)
-    - Home Directory (Usually but not always)
+* Username
+* UID
+* Group
+* Shell
+* Usually (but not always) password
+* Usually (but not always) home directory
 
 .. ifnotslides::
 
@@ -108,55 +105,22 @@ What a User has
     root:x:0:0:root:/root:/bin/bash
     username:password:uid:gid:uid info:home directory:shell
 
-
-What Users Can Do
-~~~~~~~~~~~~~~~~~
-
-- Change Passwords with the ``passwd`` command.
-- Act as Another user with `su`.
-
-.. code-block:: console
-
-    $ su $USER          # become user, with THEIR password
-    $ su                # become root, with root's password
-    $ sudo su -         # use your password instead of root's
-    $ sudo su $USER     # become $USER with your password
-
-- Act as themselves.
-
-    - ``ls -l`` to see file permissions.
-    - Check the file's group and user.
-    - Check the file's read, write, and execute bits.
-
-.. nextslide::
-
-|
-
-.. image:: /static/xkcd_838.png
-    :align: center
-    :alt: Sudoers Naught List
-    :target: https://www.xkcd.com/838/
-
-
 Managing Groups and Users
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. ifnotslides::
+As someone interacting with servers, even as a developer, it's necessary to understand how to manage users and groups
+on a Linux machine.
 
-    As someone interacting with servers, even as a developer, it's necessary
-    to understand how to manage users and groups on a Linux machine.
-
-    To view all user information on a system check the file ``/etc/passwd``:
+To view all user information on a system check the file ``/etc/passwd``:
 
 .. code-block:: console
 
     $ cat /etc/passwd
     # username:x:UID:GID:GECOS:homedir:shell
 
-.. ifnotslides::
+.. nextslide::
 
-    To add, delete, and change the password of a user respectively run the
-    following commands:
+To add, delete, and change the password of a user respectively run the following commands:
 
 .. code-block:: console
 
@@ -164,11 +128,17 @@ Managing Groups and Users
     $ userdel <user_name>
     $ passwd
 
-.. ifnotslides::
+.. image:: /static/xkcd215.png
+    :alt: xkcd letting go
+    :target: https://www.xkcd.com/215/
+    :align: center
+    :width: 85%
 
-    To add a group, or the permissions of a user/group run ``groupmod``,
-    ``usermod``, and ``groupmod`` respectively.  Similarly to ``/etc/passwd``,
-    ``/etc/group`` carries group information.
+What are groups?
+----------------
+
+To add a group, or the permissions of a user/group run ``groupmod``, ``usermod``, and ``groupmod`` respectively.
+Similarly to ``/etc/passwd``, ``/etc/group`` carries group information.
 
 .. code-block:: console
 
@@ -177,36 +147,103 @@ Managing Groups and Users
     $ groupmod
     $ cat /etc/group
         root:x:0:
+        daemon:x:1:
+        bin:x:2:
+        sys:x:3:
+        adm:x:4:
+        tty:x:5:
+    # group name:password or placeholder:GID:member,member,member
 
-.. nextslide::
+Users won't be active in new group until they "log back in"
 
-|
+Passwords
+~~~~~~~~~
 
-.. image:: /static/xkcd215.png
-    :alt: xkcd letting go
-    :target: https://www.xkcd.com/215/
+``/etc/shadow``, not ``/etc/passwd``
+
+.. code-block:: console
+
+    user@localhost ~ $ ls -l /etc/ | grep shadow
+    -rw-r-----  1 root shadow   1503 Nov 12 17:37 shadow
+
+    $ sudo su -
+    $ cat /etc/shadow
+    daemon:*:15630:0:99999:7:::
+    bin:*:15630:0:99999:7:::
+    sys:*:15630:0:99999:7:::
+    mail:*:15630:0:99999:7:::
+
+    # name:hash:time last changed: min days between changes: max days
+    #    between changes:days to wait before expiry or disabling:day of
+    #    account expiry
+
+    $ chage # change when a user's password expires
+
+Root/Superuser
+~~~~~~~~~~~~~~
+
+* UID 0
+* ``sudo``
+
+.. image:: /static/xkcd_149.png
+    :align: right
+    :target: https://xkcd.com/149/
+    :alt: Sudo get me a sandwich.
+
+.. warning::
+
+  Acting as root is dangerous!  You can accidentally delete your filesystem, forcing you to completely re-install your
+  OS!  **Type carefully.**
+
+Sudo
+~~~~
+
+Consult ``man 5 sudoers`` for more information:
+
+::
+
+  # User alias specification
+  User_Alias  DOBC_ADMIN = lance, teacher
+  User_Alias  DOBC_STUDENT = john, jane
+
+  # Runas alias specification
+  Runas_Alias ADMIN = root, sysadmin
+  Runas_Alias STUDENT = httpd
+
+  # Host alias specification
+  Host_Alias OSU_NET = 128.193.0.0/16
+  Host_Alias SERVERS = www, db
+
+  # Cmnd alias specification
+  Cmnd_Alias KILL = /bin/kill
+  Cmnd_Alias SU = /bin/su
+
+  #  User privilege specification
+  root          ALL = (ALL) ALL
+  DOBC_ADMIN    ALL = NOPASSWD: ALL
+  DOBC_STUDENT OSU_NET = (STUDENT) KILL, SU
+
+Acting as another user
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+    $ su joe            # become user joe, with THEIR password
+    $ su                # become root, with root's password
+    $ sudo su -         # become root, with your password
+    $ sudo su joe       # become user joe with your password
+
+.. image:: /static/xkcd_838.png
     :align: center
+    :width: 75%
+    :alt: Sudoers Naught List
+    :target: https://www.xkcd.com/838/
 
+A dash after ``su`` provides an environment similar to what the user would expect. Typically a good practice to always
+use ``su -``
 
-Examples of Non-Human Users
----------------------------
-
-.. ifnotslides::
-
-    As we mentioned above there's a few users that aren't real people, but
-    users all the same (according to Linux)!  Below are a few examples of
-    those.
-
-- mailman: For the mailing list program.
-- apache: For the HTTP Server.
-- postfix: For the other mail program.
-
-
-Root and Sudo
--------------
-
-Root:
-    Basically god on Linux.
+Super users
+-----------
 
 .. ifnotslides::
 
@@ -222,34 +259,23 @@ Root:
         - ``sudo <command>`` runs a single command as root. Prompts you for
           *your* password, but requries you to be on the ``sudoers`` list.
 
+Trying to run commands which require root permissions as a regular user can be a problem. However, ``sudo`` authorizes
+you to do commands based on your permissions. For example:
+
 .. code-block:: console
 
-    [dobc@dobc ~]$ yum install httpd    # Runs command as `dobc` user
-    Loaded plugins: fastestmirror, ovl
-    ovl: Error while doing RPMdb copy-up:
-    [Errno 13] Permission denied: '/var/lib/rpm/__db.002'
-    You need to be root to perform this command.
-    [dobc@dobc ~]$ sudo yum install httpd    # Runs command as `root` user.
-    password:
-    Loaded plugins: fastestmirror, ovl
-    [... installs correctly ...]
+  [dobc@dobc ~]$ yum install httpd      # Runs command as `dobc` user
+  Loaded plugins: fastestmirror, ovl
+  ovl: Error while doing RPMdb copy-up:
+  [Errno 13] Permission denied: '/var/lib/rpm/__db.002'
+  You need to be root to perform this command.
 
-.. nextslide::
+  [dobc@dobc ~]$ sudo yum install httpd # Runs command as `root` user.
+  password:
+  Loaded plugins: fastestmirror, ovl
+  [... installs correctly ...]
 
-|
-
-.. image:: /static/xkcd_149.png
-    :align: center
-    :target: https://xkcd.com/149/
-    :alt: Sudo get me a sandwich.
-
-.. warning::
-
-    Acting as root is dangerous!  You can accidentally delete your filesystem,
-    forcing you to completley re-install your OS!  **Type carefully.**
-
-
-TODO
+Demo
 ----
 
 - Create a user on your system for yourself, with your preferred username.
