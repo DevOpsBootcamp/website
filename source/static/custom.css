@@ -1,0 +1,51 @@
+div.figure p.caption {
+    position: relative;
+}
+
+article.center-title > h2 {
+    position: relative;
+    align: center;
+    text-align: center;
+}
+
+table.citation {
+    font-size: 0.6em;
+    margin-top: 30px;
+}
+
+q {
+    font-size: 1em;
+    line-height: 40px;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+q::before, q::after {
+    font-size: 2em;
+}
+
+img {
+    margin-top: 10px;
+}
+
+.codeblock-sm {
+    font-size: 0.8em;
+}
+
+.codeblock-very-small {
+    font-size: 22px;
+}
+
+pre {
+    overflow: auto;
+    max-height: 500px;
+    overflow-x: hidden;
+}
+
+.math {
+    font-size: .8em;
+}
+.MathJax_Display {
+    text-align: left !important;
+}
