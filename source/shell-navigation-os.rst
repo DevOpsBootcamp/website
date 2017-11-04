@@ -1,7 +1,7 @@
 .. _shell_navigation:
 
 
-Lesson 3: Shell Navigation
+Lesson 4: Shell Navigation
 ==========================
 
 ============= ============= ============= ==========

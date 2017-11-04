@@ -1,7 +1,6 @@
 .. _packages_software_libraries:
 
-
-Lesson 6: Packages, Software, Libraries
+Lesson 7: Packages, Software, Libraries
 =======================================
 
 ============= ============= ============= ==========
@@ -428,7 +427,5 @@ Further Reading
 ---------------
 
 - `More about APT`_
-
-Next: :ref:`questions_answers_documentation`
 
 .. _More about APT: https://debian-handbook.info/browse/stable/sect.apt-get.html

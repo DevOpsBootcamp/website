@@ -293,7 +293,7 @@ Free Online Resources:
     teach you more about how Operating Systems work than you ever thought there
     was to know.
 
-Next: :ref:`shell_navigation`
+Next: :ref:`documentation_communication`
 
 .. _Operating Systems Design and Implementation: https://amzn.com/0136386776
 .. _OSDev.org: http://wiki.osdev.org/Main_Page

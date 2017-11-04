@@ -38,11 +38,11 @@ We appreciate the help!  To donate, go to http://osuosl.org/donate.
     start-here
     first-steps
     operating-systems
+    documentation-communication
     shell-navigation-os
     users-groups-permissions
     files
     packages-software-libraries
-    questions-answers-documentation
     version-control
     programming
     frameworks

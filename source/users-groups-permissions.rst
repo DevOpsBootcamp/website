@@ -1,7 +1,7 @@
 .. _users_groups_permissions:
 
 
-Lesson 4: Users, Groups, Permissions
+Lesson 5: Users, Groups, Permissions
 ====================================
 
 ============= ============= ============= ==========

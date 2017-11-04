@@ -1,16 +1,16 @@
-.. _questions_answers_documentation:
+.. _documentation_communication:
 
 
-Lesson 7: Questions, Answers, Docs
-==================================
+Lesson 3: Docs & Communication
+==============================
 
 ============= ============= ============= ==========
 `Homepage`_   `Content`_    `Slides`_     `Video`_
 ============= ============= ============= ==========
 
 .. _Homepage: http://devopsbootcamp.osuosl.org
-.. _Content: http://devopsbootcamp.osuosl.org/questions-answers-documentation.html
-.. _Slides: http://slides.osuosl.org/devopsbootcamp/questions-answers-documentation.html
+.. _Content: http://devopsbootcamp.osuosl.org/documentation-communication.html
+.. _Slides: http://slides.osuosl.org/devopsbootcamp/documentation-communication.html
 .. _Video:
 
 .. include:: unfinished.txt
@@ -369,5 +369,7 @@ Further Reading
 
 * `About info`_: ``info`` is an alternative to man that some distros use
   instead.
+
+Next: :ref:`shell_navigation`
 
 .. _About info: http://www.computerhope.com/unix/info.htm
