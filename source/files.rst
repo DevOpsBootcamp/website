@@ -69,8 +69,8 @@ Filename
     2629156 -rw-rw-r-- 1 test test    0 Nov 13 14:09 file.txt
     2884382 drwxrwxr-x 2 test test 4096 Nov  6 13:22 Pictures
 
-Everything can be a file?
--------------------------
+Everything is a file?
+---------------------
 
 Yes. Except the things that aren't..
 
@@ -131,7 +131,7 @@ More file metadata
 
 .. code-block:: console
 
-  $ ll
+  $ ls -l
   crw-rw-rw- 1 root  tty   5, 0 Jan  6 13:45 /dev/tty
   brw-rw---- 1 root  disk  8, 0 Dec 21 14:12 /dev/sda
   srw-rw-rw- 1 root  root  0    Dec 21 14:13 /var/run/acpid.socket

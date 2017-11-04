@@ -194,17 +194,17 @@ Popular Linux System Package Managers
     default OS package managers, a package manager itself is really just a
     package itself, so one can install *any* package manager they want.
 
-**.deb**
-
-* apt - Debian package manager with repo support
-* dpkg - low level package manager tool used by apt
-* Used by Debian, Ubuntu, Linux Mint and others
-
 **.rpm**
 
 * yum - RPM Package manager with repo support
 * rpm - low level package manager tool used by yum
 * Used by RedHat, CentOS, Fedora and others
+
+**.deb**
+
+* apt - Debian package manager with repo support
+* dpkg - low level package manager tool used by apt
+* Used by Debian, Ubuntu, Linux Mint and others
 
 Yum vs. Apt
 -----------

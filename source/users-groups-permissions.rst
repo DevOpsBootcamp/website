@@ -53,7 +53,7 @@ You, right now.
     $ w         # who is here and what are they doing?
     $ id        # user ID, group ID, and groups you're in
 
-Not just people: Apache, Mailman, ntp aka "system users"
+Not just people: Apache, Mailman, ntp. "system users"
 
 Users have
 ----------

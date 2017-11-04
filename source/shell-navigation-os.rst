@@ -522,7 +522,13 @@ Simple Backup script
 .. code-block:: bash
 
   #!/bin/bash
+  # The flags for tar do the following:
+  # v - verbose
+  # c - compress
+  # z - use gzip
+  # f - output to file
   tar -vczf /tmp/dobc-backup.tar.gz /home/dobc
+
 
 .. rst-class:: build
 

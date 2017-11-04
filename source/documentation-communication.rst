@@ -352,7 +352,7 @@ Slack
 - Join our Slack team! http://devopsbootcamp.slack.com
 
 Asking for Help
-~~~~~~~~~~~~~~~
+---------------
 
 .. ifnotslides::
 
