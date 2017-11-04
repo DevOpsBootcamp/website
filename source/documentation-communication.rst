@@ -25,13 +25,11 @@ Lesson 3: Docs & Communication
   Overview
   --------
 
-  - Where to get help
+  Where to get help
 
-    - ``man`` (manual) Pages.
-    - Project documentation.
-    - Forums
-    - Slack
-    - IRC
+  - ``man`` (manual) Pages.
+  - Project documentation.
+  - Communication platforms
 
 When in doubt
 -------------
@@ -133,21 +131,20 @@ If you're lucky they will also include:
 Sections of Man
 ~~~~~~~~~~~~~~~
 
-.. ifnotslides::
+``man`` pages are also organized by *section*. To read man page for a program/library in a specific section type ``man
+#  <program or library>`` where ``#`` is the section number.
 
-    ``man`` pages are also organized by *section*. To read man page for a
-    program/library in a specific section type ``man  #  <program or
-    library>`` where ``#`` is the section number.
+For instance:
 
-    For instance
+.. code-block:: console
 
-    ::
+    $ man 2 open # Displays the kernel documentation for open (section 2)
+    $ man open   # Displays the documentation for openvt (section 1)
 
-        $ man 2 open # Displays the kernel documentation for open (section 2)
-        $ man open   # Displays the documentation for openvt (section 1)
+If there is a collision in man-page naming (like ``open`` and ``open()``) ``man`` will pick the page which appears in
+the lowest-value section.
 
-    If there is a collision in man-page naming (like ``open`` and ``open()``)
-    ``man`` will pick the page which appears in the lowest-value section.
+.. nextslide::
 
 1. Executable programs or shell commands
 2. System calls (function provided by the kernel)
@@ -163,65 +160,39 @@ Sections of Man
 .. note:: Some distros use ``info`` instead of ``man``. To learn more about the
           ``info`` command, see Further Reading.
 
-
 Project Docs
 ------------
 
-.. ifnotslides::
+Projects also document themselves *beyond* the manpage. These can include tutorials, a README, and Q&A.  If you need
+more information about a tool or a specific answer these docs will probably be your best bet.
 
-    Projects also document themselves *beyond* the manpage. These can include
-    tutorials, a README, and Q&A.  If you need more information about a tool
-    or a specific answer these docs will probably be your best bet.
-
-    These docs may also answer any technical or contributing questions.  These
-    docs can be updated more frequently than local ``man`` pages so should
-    also be referred to for bleeding-edge information.
+These docs may also answer any technical or contributing questions.  These docs can be updated more frequently than
+local ``man`` pages so should also be referred to for bleeding-edge information.
 
 Where to look:
     - **http://docs.some-random-project.io/**
     - **http://some-random-project.io/docs/**
     - **http://organization.com/some-random-project/**
 
+Communication
+-------------
 
-Questions and Answers
----------------------
+Communication is very important for DevOps engineers. Whether they are talking to their own team or working either
+external projects they use.
 
-.. ifnotslides::
-
-    It's important to be able to ask questions and get answers.  Thankfully
-    this is is something everybdy needs to do so it's almost an entirely
-    solved problem.
-
-    Below are some forms of Q&A which are easy to partipate in and usually
-    archived, so you can look at what other people asked and get their answers
-    (odds are, your question has already asked *somewhere* on the internet
-    before you).
-
-- Stack Overflow
-- Forums
-- Mailing Lists
-- Blogs
+It's important to be familiar with the chat platforms that these projects use which include:
 
 .. image:: /static/xkcd-979.png
-    :align: center
+    :align: right
+    :width: 50%
     :alt: XKCD 979, Wisdom of the Ancients
     :target: https://xkcd.com/979/
 
-
-How to Talk to People
----------------------
-
-.. ifnotslides::
-
-    It's also important to talk to people directly sometimes.  Either you're
-    under a time crunch, not sure what direction to go in, or just need a
-    second opinion.  If you're online or able to talk in person here are a few
-    of the ways to get in touch with like-minded people.
-
-- Chatrooms
-- Meetups
-- Face to Face (!?)
-
+- Internet Chat Relay (IRC)
+- Slack
+- Mailing lists
+- Discourse
+- Forums
 
 IRC
 ---
@@ -232,7 +203,7 @@ IRC
     IRC it is easy to create a new channel (chat-room) and talk with people in
     public or privately.
 
-    It has become the long-standing defacto mode of online communication right
+    It has become the long-standing de facto mode of online communication right
     next to mailing lists in the technology community.
 
 Quick Facts:
@@ -242,8 +213,13 @@ Quick Facts:
     - The people you want to listen to are there
     - Oregon State ran one of the first servers ever!
 
-TODO Getting on IRC
-~~~~~~~~~~~~~~~~~~~
+.. image:: /static/irc.png
+  :align: center
+  :width: 60%
+  :alt: irssi IRC chat window
+
+Exercise: Getting on IRC
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
@@ -256,57 +232,81 @@ TODO Getting on IRC
 
 .. code-block:: console
 
-    # This step is optional, but persistent IRC is cool
-    $ ssh <username>@<a remote linux server>
+  # This step is optional, but persistent IRC is cool
+  $ ssh <username>@<a remote linux server>
 
-    # start screen with the name 'irc'
-    $ screen -S irc
+  # start screen with the name 'irc'
+  $ screen -S irc
 
-    # start your client in the 0th window of the screen session
-    $ irssi
-    # or
-    $ weechat-curses
+  # start your client in the 0th window of the screen session
+  $ irssi
+  # or
+  $ weechat-curses
 
-    # exit irc screen with CTRL+a, CTRL+d
-    # exit ssh session with CTRL+d or 'exit'
-    # to get back to irc:
-    $ ssh <username>@<preferred shell host>
-    $ screen -dr IRC
+  # exit irc screen with CTRL+a, CTRL+d
+  # exit ssh session with CTRL+d or 'exit'
+  # to get back to irc:
+  $ ssh <username>@<preferred shell host>
+  $ screen -dr IRC
 
-.. ifnotslides::
+Other IRC Clients
+~~~~~~~~~~~~~~~~~
 
-    If you're not interested in using the commandline there also an assortment
-    of *graphical* IRC clients including XChat/Hexchat (newer), MIRC, and
-    KiwiIRC.  Look those up if you're interested in them.
+If you're not interested in using the command line there also an assortment of *graphical* IRC clients including
+`Hexchat`_, `MIRC`_, and `KiwiIRC`_.  Look those up if you're interested in them.
+
+.. image:: /static/hexchat.png
+  :align: right
+  :width: 50%
+  :alt: HexChat screenshot
+  :target: https://hexchat.github.io/screenshots.html
+
+There are also a variety of mobile clients for each platform that work well enough. You can also use a mobile SSH
+client and connect to your server in a pitch.
+
+Unfortunately IRC isn't very mobile friendly.
+
+.. _Hexchat: https://hexchat.github.io/
+.. _MIRC: https://www.mirc.com/
+.. _KiwiIRC: https://kiwiirc.com/
 
 
 Connecting and Setup
 ~~~~~~~~~~~~~~~~~~~~
 
-In the IRC client run these commands
+In the IRC client run these commands (irssi)::
 
-::
+  /connect irc.freenode.net
+  /nick <myawesomenickname>
+  /msg nickserv register <password> <email>
+  /nick <myawesomenickname>
+  /msg nickserv identify <password>
+  /join #devopsbootcamp
 
-    /connect irc.freenode.net
-
-    /nick <myawesomenickname>
-    /msg nickserv register <password> <email>
-
-    /nick <myawesomenickname>
-    /msg nickserv identify <password>
-
-    /join #devopsbootcamp
+For weechat, do the following::
+  
+  /server add freenode irc.freenode.net
+  /connect freenode
+  /nick <myawesomenickname>
+  /msg nickserv register <password> <email>
+  /nick <myawesomenickname>
+  /msg nickserv identify <password>
+  /join #devopsbootcamp
 
 Commands and Tips
 ~~~~~~~~~~~~~~~~~
 
-- ``/list``: Reports all the channels on a server.
-- ``/topic``: Reports current channel topic.
-- ``/names``: Reports nicks of users in channel.
-- ``/join <channel>``: Join a new channel.
-- ``/whois <nick>``: Learn about a person.
-- ``/msg``: Directly message an individual.
-- ``/help <command>``
+.. csv-table::
+  :header: Command, Description
+  :widths: 7, 10
+
+  ``/list``, Reports all the channels on a server.
+  ``/topic``, Reports current channel topic.
+  ``/names``, Reports nicks of users in channel.
+  ``/join <channel>``, Join a new channel.
+  ``/whois <nick>``, Learn about a person.
+  ``/msg``, Directly message an individual.
+  ``/help <command>``, Provides help for commands
 
 .. nextslide::
 
@@ -322,19 +322,34 @@ Commands and Tips
 IRC Jargon
 ~~~~~~~~~~
 
-.. image:: /static/jargon.jpg
-    :alt: Jargon definition
-    :align: center
+.. csv-table::
+  :header: Term, Description
+  :widths: 5, 10
+
+  **channel**, "Chat rooms with with '#' prefixed in front of their names"
+  **ping/pong**, "'I would like to tell you something.' / 'I'm here, tell it to me.'"
+  **tail**, "~"
+  **hat**, "'@' Denotes admin status in a channel."
+  **nick**, Your name.
+  **netsplit**, When the IRC servers lose connection with each other.
+  **kick/ban/k-line**, "Force someone off the channel or server, typically for abuse"
+
+Slack
+-----
+
+*Modern messaging platform which featureful desktop and mobile clients*
+
+.. image:: /static/slack.png
+  :align: center
+  :alt: Slack screenshot
 
 .. nextslide::
 
-- **ping/pong**: "I would like to tell you something"/"I'm here, tell it to me."
-- **tail**: "~"
-- **hat**: "@" Denotes admin status in a channel.
-- **nick**: Your name.
-- **netsplit**: When the IRC servers lose connection with eachother.
-- **kick/ban/k-line**: GTFO
-
+- Launched in 2013 and stands for *"Searchable Log of All Conversation and Knowledge"*
+- Has many IRC like features, with additions such as rich text and emojis
+- Propriety platform, however there are several open source "clones" that can be self hosted
+- "New kid on the block" -- Many new projects prefer Slack over IRC
+- Join our Slack team! http://devopsbootcamp.slack.com
 
 Asking for Help
 ~~~~~~~~~~~~~~~
@@ -351,21 +366,14 @@ It's okay to ask for help.  Here are some things to keep in mind:
 #. Ask yourself what is actually happening?
 #. Google the problem(s).
 #. Skim the manuals of each component.
-#. Identify a friend, mentor, or IRC channel who could help.
+#. Identify a friend, mentor, or IRC/Slack channel who could help.
 #. When they're not busy, give them a quick synopsis of points 1 and 2,
    mentioning what possibilities you've ruled out by doing steps 3 and 4.
 
 Contributions = expertise + time
 
-
 Further Reading
 ---------------
-
-.. TOOD: Add furthe reading
-.. suggestions:
-.. - getting on irc docs
-.. - stack overflow sites
-.. - bolgpost on this kind of topic
 
 * `About info`_: ``info`` is an alternative to man that some distros use
   instead.
