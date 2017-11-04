@@ -67,8 +67,8 @@ Shell Examples
   ``sh``, Required by all POSIX Operating Systems.
   ``bash``, Default on most GNU/Linux-based Operating Systems.
   ``csh``, Default shell on most BSD (Unix) based Operating Systems
-  ``fish``, Useful but not ``sh`` compliant shell.
   ``zsh``, The *hip new shell on the block*.
+  ``fish``, Yet another *hip new shell on the block*.
 
 Navigation Concepts
 -------------------

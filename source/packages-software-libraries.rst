@@ -426,6 +426,3 @@ Answer: Install ``grep``
 Further Reading
 ---------------
 
-- `More about APT`_
-
-.. _More about APT: https://debian-handbook.info/browse/stable/sect.apt-get.html

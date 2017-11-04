@@ -285,7 +285,7 @@ After you have it installed, run this to start a container:
 .. code-block:: console
 
   $ docker run -p 2222:22 -h dobc --rm --name=dobc1 -d \
-      osuosl/dobc-centos passw04d
+      -e DOBC_PASSWORD=passw04d osuosl/dobc-centos
 
 Using your SSH client, connect to hostname ``localhost`` and port ``2222``. Login using the username ``dobc`` and the
 password ``passw04d`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
