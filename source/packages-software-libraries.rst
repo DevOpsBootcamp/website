@@ -1,7 +1,6 @@
 .. _packages_software_libraries:
 
-
-Lesson 6: Packages, Software, Libraries
+Lesson 7: Packages, Software, Libraries
 =======================================
 
 ============= ============= ============= ==========
@@ -33,7 +32,7 @@ Lesson 6: Packages, Software, Libraries
     - Package manager functionality.
     - System package manager examples.
     - Language package manager examples.
-    - TODO: Install ``sl``
+    - Exercise: Install ``sl`` and group from source
 
 
 Software
@@ -53,7 +52,7 @@ Everything that isn't hardware.
 - Code that is run on a Computer.
 - Binaries.
 - Scripts.
-
+- Packages
 
 Libraries
 ---------
@@ -70,7 +69,17 @@ Libraries
 - Often used to make development easier.
 - Rarely run on it's own.
 - Shared code.
+- Binaries are linked dynamically to libraries (kind of like DLL's in Windows)
 
+.. code-block:: console
+
+  $ ldd /usr/bin/nano
+    linux-vdso.so.1 =>  (0x00007ffc1fdcd000)
+    libncursesw.so.5 => /lib64/libncursesw.so.5 (0x00007ff2cfaee000)
+    libtinfo.so.5 => /lib64/libtinfo.so.5 (0x00007ff2cf8c4000)
+    libc.so.6 => /lib64/libc.so.6 (0x00007ff2cf500000)
+    libdl.so.2 => /lib64/libdl.so.2 (0x00007ff2cf2fc000)
+    /lib64/ld-linux-x86-64.so.2 (0x000055e46c4b4000)
 
 Package Management
 ------------------
@@ -87,21 +96,22 @@ Package Management
   - Android Play Store
   - Apple App store
   - Steam
+  - apt (Debian/Ubuntu)
+  - yum (CentOS/Fedora/RHEL)
 
+Package Management
+------------------
 
-Core Package Management Functionality
--------------------------------------
-
-    *TLDR: To take care of installation, removal, and updates of software.*
+  *Take care of installation and removal of software*
 
 .. ifslides::
 
-    - Install, upgrade, and uninstall packages easily.
-    - Resolve package dependencies.
-    - Install packages from a central repository.
-    - Search for information on installed packages and files.
-    - Download and install pre-built binaries (usually).
-    - Find out which package provides a required library or file.
+  * Install, Upgrade & uninstall packages easily
+  * Resolve package dependencies
+  * Install packages from a central repository
+  * Search for information on installed packages and files
+  * Pre-built binaries (usually)
+  * Find out which package provides a required library or file
 
 .. ifnotslides::
 
@@ -180,17 +190,41 @@ Popular Linux System Package Managers
 .. ifnotslides::
 
     These are package managers used to install system packages like
-    Web-browsers, terminals, netowrk managers, etc.  Although they are
+    Web-browsers, terminals, network managers, etc.  Although they are
     default OS package managers, a package manager itself is really just a
     package itself, so one can install *any* package manager they want.
 
-Popular Linux Package Managers:
+**.rpm**
 
-Apt (``.deb``, ``dpkg``)
-    Used by default on the Debian, Ubuntu, Linux Mint operating systems.
+* yum - RPM Package manager with repo support
+* rpm - low level package manager tool used by yum
+* Used by RedHat, CentOS, Fedora and others
 
-Yum (``.rpm``, ``rpm``)
-    Used by default on the RedHat, CentOS, Fedora operating systems.
+**.deb**
+
+* apt - Debian package manager with repo support
+* dpkg - low level package manager tool used by apt
+* Used by Debian, Ubuntu, Linux Mint and others
+
+Yum vs. Apt
+-----------
+
+**Yum**
+
+* XML repository format
+* Automatic metadata syncing
+* Supports a plugin module system to make it extensible
+* Checks all dependencies before downloading
+
+**Apt**
+
+* Upgrade and Dist-Upgrade
+
+  * Dist-Upgrade applies intelligent upgrading decisions during a major system
+    upgrade
+
+* Can completely remove all files including config files
+
 
 .. ifnotslides::
 
@@ -199,7 +233,7 @@ Yum (``.rpm``, ``rpm``)
     and tons of other minutia necessary in writing a package manager.
 
 
-Programming Langauge Package Managers
+Programming Language Package Managers
 -------------------------------------
 
 .. ifnotslides::
@@ -234,13 +268,13 @@ Nix
     A 'Fully Functional/Transactional' package manager.
 
 Brew
-    An *Open Soruce* package manager for OSX.
+    An *Open Source* package manager for OSX.
 
 Chocolatey
     A package manager for Windows.
 
 
-Installation from Soruce
+Installation from Source
 ------------------------
 
 .. ifnotslides::
@@ -307,56 +341,88 @@ Installation from Soruce
     These are the steps that a **from-source** package manager follows, you
     just have to do the by hand.
 
-.. nextslide::
+    Using ``grep`` as an example:
 
-Using ``grep`` as an example:
+    ::
 
-::
+        $ wget http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
+        $ tar -Jxvf grep-3.1.tar.xz
+        $ cd grep-3.1
+        $ ./configure --prefix=$HOME/bin/
+        $ make
+        $ make install
 
-    $ wget http://mirrors.kernel.org/gnu/grep/grep-2.25.tar.xz
-    $ tar -Jxvf grep-2.25.tar.xz
-    $ cd grep-2.25
-    $ ./configure --prefix=$HOME/bin/
-    $ make
-    $ make install
+Exercise: Install ``sl``
+------------------------
 
+#. Install the ``git``, ``gcc``, ``make`` and ``ncurses-devel`` packages via package manager.
+#. Clone https://github.com/mtoyoda/sl.git using ``git``
+#. Build the software using ``make``
+#. Copy the compiled ``sl`` binary into the directory ~/bin/.
+#. Update your ``$PATH`` to include ``$HOME/local/bin``
+#. Run '``whereis sl``' to ensure it's in your path
+#. Run ``sl`` and see what happens!
 
-TODO: Install ``sl``
---------------------
+Answer: Install ``sl``
+----------------------
 
-- Install the ``git``, ``gcc``, ``make``, ``ncurses-bin``, ``ncurses-base``,
-  ``libncurses5-dev``, and ``libncurses5-dev`` packages via package manager.
+.. rst-class:: build
 
-::
+.. code-block:: console
 
-    $ sudo apt install git gcc make ncurses-bin ncurses-base libncurses5-dev libncurses5-dev
-    [...]
+  $ sudo yum install git gcc make ncurses-devel
+  $ git clone https://github.com/mtoyoda/sl.git
+  $ cd sl
+  $ make
+  gcc -O -o sl sl.c -lncurses
+  $ mkdir -p ~/local/bin
+  $ cp sl ~/local/bin/
+  $ echo "export PATH=$HOME/local/bin:$PATH" >> ~/.bashrc
+  $ source ~/.bashrc
+  $ whereis sl
+  sl: /home/dobc/local/bin/sl
+  $ sl
 
-- Install ``sl`` from source into the directory ~/bin/.
+.. ifslides::
 
-.. nextslide::
+Exercise: Install ``grep``
+--------------------------
 
-::
+#. Check the current version of grep
+#. Double check it's location using ``which``
+#. Download the latest tarball: http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
+#. Unpack using ``tar``
+#. ``cd`` into the unpacked folder
+#. Run '``./configure --prefix=$HOME/local/``', '``make``' and then '``make install``'
+#. Run '``hash -r``' to ensure your environment knows about the new binary
+#. Check the current version of grep (it should be 3.1 now!)
+#. Double check it's location using ``which``
 
-    $ git clone https://github.com/mtoyoda/sl.git
-    [...]
-    $ cd sl
-    $ make
-    gcc -O -o sl sl.c -lncurses
-    $ mkdir ~/bin
-    $ ln sl ~/bin/
-    $ echo "export PATH=$PATH:$HOME/bin" >> ~/.bashrc
-    $ source ~/.bashrc
-    $ whereis sl
-    sl: /home/username/bin/sl
-    $ sl
+Answer: Install ``grep``
+------------------------
 
+.. rst-class:: build
+
+.. code-block:: console
+
+  $ grep --version
+  grep (GNU grep) 2.20
+  $ which grep
+  alias grep='grep --color=auto'
+          /usr/bin/grep
+  $ wget http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
+  $ tar -Jxvf grep-3.1.tar.xz
+  $ cd grep-3.1
+  $ ./configure --prefix=$HOME/local/
+  $ make
+  $ make install
+  $ hash -r
+  $ grep --version
+  grep (GNU grep) 3.1
+  $ which grep
+  alias grep='grep --color=auto'
+          ~/local/bin/grep
 
 Further Reading
 ---------------
 
-.. TODO: Add further reading
-
-- `More about APT`_
-
-.. _More about APT: https://debian-handbook.info/browse/stable/sect.apt-get.html

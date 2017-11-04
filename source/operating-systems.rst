@@ -58,7 +58,7 @@ Anatomy of an OS
 ----------------
 
 .. image:: /static/anatomy-of-an-os.png
-    :align: center
+    :align: right
     :target: https://commons.wikimedia.org/wiki/File:Kernel_Layout.svg
     :alt: How the kernel fits into the OS stack.
 
@@ -185,8 +185,6 @@ GNU/Linux
 
 .. ifnotslides::
 
-    |
-
     **Linux** is the *kernel* the powers many *flavors* (or
     Distros/Distributions) of **GNU/Linux**.  Each flavor was created because
     of *philosophical*, *technical*, or *social* difference in opinions with
@@ -227,8 +225,10 @@ Flavors of Linux
 .. _More Information: https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg
 
 
-TODO: Pop Quiz
---------------
+Exercise: Pop Quiz
+------------------
+
+.. rst-class:: build
 
 #. What are some different types of Operating Systems?
 #. What constitutes a 'Distribution' of Linux?
@@ -255,6 +255,14 @@ Further Reading
 ---------------
 
 OSU Courses:
+    CS 312: Linux System Administration
+        - DOBC in class form
+        - Not currently offered, however course content is online
+        - http://cs312.osuosl.org
+
+.. nextslide::
+
+OSU Courses:
     CS 344: Operating Systems I
         - Required course for all CS Students at OSU.
         - Covers fundamentals of low-level programming concepts.
@@ -262,12 +270,18 @@ OSU Courses:
             - Read / Write operations
             - Socket programming
 
+
+.. nextslide::
+
+OSU Courses:
     CS 444: Operating Systems II
         - Required course for all CS Students at OSU.
         - Covers kernel hacking and low-level OS design.
             - IO / Process scheduling
             - Building kernel modules
             - Memory management
+
+.. nextslide::
 
 Free Online Resources:
     `OSDev.org`_  is a wiki dedicated to helping people develop their own
@@ -278,6 +292,8 @@ Free Online Resources:
     classsic in the world of OS Development.  It's also a big leap, but can
     teach you more about how Operating Systems work than you ever thought there
     was to know.
+
+Next: :ref:`documentation_communication`
 
 .. _Operating Systems Design and Implementation: https://amzn.com/0136386776
 .. _OSDev.org: http://wiki.osdev.org/Main_Page

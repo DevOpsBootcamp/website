@@ -26,13 +26,13 @@ Lesson 0: Start Here
     --------
 
     - Definitions:
+        - System Administration / Engineers
         - DevOps
         - DevOps BootCamp
     - Who teaches DOBC
     - Why you should go to DOBC
     - The 'Agreement'
     - Getting involved
-
 
 About the Program
 -----------------
@@ -41,6 +41,54 @@ About the Program
     :alt: OSU OSL Promotional Photo
     :align: center
 
+Definition: *System Administration*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. rst-class:: build
+
+* Responsible for systems (typically servers) running code, applications,
+  and services
+
+  - Keeping applications running (they crash, sometimes a lot)
+  - Updates, Security
+  - Monitoring, Logging
+* Automates significant amounts of work with infrastructure
+
+  - This enables a small team to administer hundreds or thousands of
+    servers
+
+* Involved in infrastructure architecture and decisions
+* Can be involved in QA/Development work as well
+
+Definition: *System Engineers*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. rst-class:: build
+
+* Responsible for creating the platforms code is run on
+
+  - Work at a lower-level
+  - Generally make infrastructure decisions for others
+  - Often have expertise with some particular sub-system (networking, filesystems, etc)
+  - Not necessarily on-call, but can be
+
+* Sometimes intermixed with Systems Administrators who want Engineer in their title
+
+Definition: *DevOps Engineers*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. rst-class:: build
+
+* Newer position
+* Mix of Systems (Operations) and Development work
+* Involved where the application and its platform meet
+* Responsibilities include a mix of both Ops and Dev, usually:
+
+  - General infrastructure/automation
+  - Continuous Integration and Testing
+  - Developer Environments/Workflow
+  - Logging
+  - Often on-call
 
 *DevOps*
 ~~~~~~~~
@@ -61,10 +109,10 @@ About the Program
 
 .. ifnotslides::
 
-    In a pre-DevOps world the jobs of Devs and Ops were seperate:
+    In a pre-DevOps world the jobs of Devs and Ops were separate:
         - There was a clearly defined and relatively standardized interface
           between the two.
-        - Workflows were slower, meaning ther was more time to troubleshoot and
+        - Workflows were slower, meaning there was more time to troubleshoot and
           debug.
 
     In a Post-DevOps world we have a new hybrid job:
@@ -217,6 +265,7 @@ Getting Involved
 ----------------
 
 Where To Ask Questions
+    - Slack
     - Internet Relay Chat
     - Mailing lists
     - During Lecture and Hand-on Lessons
@@ -227,14 +276,4 @@ How To Ask Questions
     - Stay calm and articulate.
     - Explain you are trying to achieve and be thorough.
 
-
-The OSU Open Source Lab is Hiring
----------------------------------
-
-*For more information check the* `OSL Hiring Page`_ *regularly*.
-
-.. image:: /static/osl.png
-    :alt: OSU OSL Logo
-    :align: center
-
-.. _OSL Hiring Page: http://osuosl.org/about/employment
+Next: :ref:`first_steps`
