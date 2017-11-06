@@ -358,7 +358,7 @@ Exercise: Install ``sl``
 #. Install the ``git``, ``gcc``, ``make`` and ``ncurses-devel`` packages via package manager.
 #. Clone https://github.com/mtoyoda/sl.git using ``git``
 #. Build the software using ``make``
-#. Copy the compiled ``sl`` binary into the directory ~/bin/.
+#. Copy the compiled ``sl`` binary into the directory ``~/local/bin/``.
 #. Update your ``$PATH`` to include ``$HOME/local/bin``
 #. Run '``whereis sl``' to ensure it's in your path
 #. Run ``sl`` and see what happens!
