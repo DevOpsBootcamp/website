@@ -7,6 +7,6 @@ argparse==1.2.1
 docutils==0.11
 hieroglyph==0.6.5
 six==1.6.1
-sphinxcontrib-fulltoc==1.0
+sphinxcontrib-fulltoc==1.2.0
 wsgiref==0.1.2
 sphinx-rtd-theme==0.1.6

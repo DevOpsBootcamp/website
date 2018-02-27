@@ -23,18 +23,10 @@ Fall
 .. _Fall Kickoff: http://devopsbootcamp.osuosl.org/daycamp/
 .. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
 
-Winter
-~~~~~~
-
-.. csv-table::
-  :header: Lessons Covered,"Date/Time",Location,Description
-
-  8 - 15,"Feb 10, 2018 9:30am-3:30pm",TBA,"DevOps BootCamp Winter Session"
-
 Spring
 ~~~~~~
 
 .. csv-table::
   :header: Lessons Covered,"Date/Time",Location,Description
 
-  16 - 20,"May 12, 2018 9:30am-3:30pm",TBA,"DevOps BootCamp Spring Session"
+  8 - 20,"May 12, 2018 9:30am-3:30pm",TBA,"DevOps BootCamp Spring Session"
