@@ -19,6 +19,23 @@ Get started now!
 
 ----
 
+DevOps DayCamp: Spring 2018
+---------------------------
+
+`DevOps DayCamp`_ is a follow-up event to DevOps BootCamp Fall Kickoff. The
+hands-on workshop is designed to teach participants DevOps, a program
+development process that includes building, testing, and releasing software.
+
+If you didn't attend BootCamp in the Fall, it will be helpful if you become
+familiar with the content that was covered there.
+
+Please `register`_ if you're planning on attending day camp this spring.
+
+.. _DevOps DayCamp: http://devopsbootcamp.osuosl.org/daycamp/
+.. _register: https://www.eventbrite.com/e/osl-devops-daycamp-may-2018-tickets-42373796165
+
+----
+
 .. _schedule:
 
 .. include:: schedule.rst
