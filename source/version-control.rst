@@ -227,8 +227,8 @@ Setting up Git
     $ git config --global core.editor "nano"
 
 
-TODO: Use Git Locally
-~~~~~~~~~~~~~~~~~~~~~
+Use Git Locally
+~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
@@ -274,47 +274,39 @@ To create and checkout a branch:
 
 ::
 
-    $ git branch    # Shows your branches and current branch
-    * master
-    $ git checkout -b <new-branch>  # Switches to new branch `<branch name>`
+    #Note the `*` which indicates the current branch
+    $ git checkout -b "new-branch"
     $ git branch
     master
     * new-branch
-    $ git checkout master   # Switches to existing branch `<branch name>`
 
+Working With a Git Repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO: Working With a Git Repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Checkout a new feature branch on your repository.
-
-.. ifnotslides::
+Checkout a new feature branch on your repository.
 
     ::
 
-        $ git checkout -b <new_feature_name>
+        $ git checkout -b "add-awesome-feature"
 
-- Create/Edit files on the new branch.
-
-.. ifnotslides::
+Create/Edit files on the new branch.
 
     ::
 
         $ echo "Some awesome text" > awesomefile.txt
         $ git status
-        On branch <new_feature_name>
-        Untracked files:
-          (use "git add <file>..." to include in what will be committed)
+        # On branch add-awesome-feature
+        # Untracked files:
+        ...
+        #         awesomefile.txt
+        ...
 
-                awesomefile.txt
-
-        nothing added to commit but untracked files present (use "git add" to track)
         $ git add awesomefile.txt
-        $ git commit -m "short awesome feature commit message"
+        $ git commit -m "Short awesome commit message"
 
-- Create a diff between the two.
+.. nextslide::
 
-.. ifnotslides::
+View the diff between the two.
 
     ::
 
@@ -327,13 +319,14 @@ TODO: Working With a Git Repository
         @@ -0,0 +1 @@
         +Some awesome text
 
-- Locally merge the changes from your new branch into Master.
+.. nextslide::
 
-.. ifnotslides::
+Locally merge the changes from your new branch into Master.
 
     ::
 
-        $ git merge my-awesome-feature
+        $ git checkout master
+        $ git merge add-awesome-feature
         Updating 459de26..5c4ca48
         Fast-forward
         awesomefile.txt | 1 +
@@ -430,8 +423,8 @@ Bitbucket
     repositories.
 
 Gitolite
-    *Bare-bones*.  Fewer feature than the previous three.  Open Source, useful
-    for learning the nitty-gritty Git *really* works.
+    *Bare-bones*.  Fewer features than the previous three. Open Source, useful
+    for learning the nitty-gritty on how Git *really* works.
 
 .. ifnotslides::
 
@@ -442,10 +435,7 @@ Gitolite
 Cloning a Repository
 ~~~~~~~~~~~~~~~~~~~~
 
-.. ifnotslides::
-
-    To contribute to someone else's repository you first need to *clone* the
-    repo.
+To contribute to someone else's repository you first need to *clone* the repo.
 
 ::
 
@@ -454,19 +444,13 @@ Cloning a Repository
     $ cd <new repo directory>
     $ ls
 
-.. ifnotslides::
-
-    Once you clone a repository you can make as many local changes as you want
-    without affecting the original (central) copy.  You can experiment and
-    work without the original owner even knowing what you're doing.
-
-    If you've made changes you think the original owner should have each of
-    the previously mentioned centralizing services has a way for you to
-    request that your changes be merged in with theirs.
+Once you clone a repository you can make as many local changes as you want
+without affecting the original (central) copy. You can experiment and work
+without the original owner even knowing what you're doing!
 
 
-TODO: Cloning Exercise
-~~~~~~~~~~~~~~~~~~~~~~
+Cloning Exercise
+~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
@@ -478,6 +462,7 @@ TODO: Cloning Exercise
 
 ::
 
+    $ cd ~
     $ git clone https://github.com/DevOpsBootcamp/tinsy-flask-app.git
 
 See http://git.io/vcVmB for more details about the ``tinsy-flask-app``
@@ -493,12 +478,28 @@ repository.
     on how to setup and run the code included in the repo.  Those instructions
     tell us to run the following commads.
 
+    If you are using our docker image, you won't be able to access the webserver
+    without adding a port forwarding rule for TCP port 8080 on the container,
+    similar to how SSH is forwarded on the container.  See 'Setting up Docker'
+    on the left for info on how to add port mappings to a docker container.
+
+.. nextslide::
+
 ::
 
     $ cd tiny-flask-app
+
+    # Setup python virtual environment
+    $ sudo yum install -y python-virtualenv
     $ virtualenv venv
+    $ source venv/bin/activate
     $ pip install -r requirements.txt
+
+    # Run server (can't access w/ docker normally)
     $ python script.py
+
+    # When finished, deactivate virtual environment
+    $ deactivate
 
 .. ifnotslides::
 
