@@ -227,8 +227,8 @@ Setting up Git
     $ git config --global core.editor "nano"
 
 
-Use Git Locally
-~~~~~~~~~~~~~~~
+TODO: Use Git Locally
+~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
@@ -280,8 +280,8 @@ To create and checkout a branch:
     master
     * new-branch
 
-Working With a Git Repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TODO: Working With a Git Repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checkout a new feature branch on your repository.
 
@@ -449,8 +449,8 @@ without affecting the original (central) copy. You can experiment and work
 without the original owner even knowing what you're doing!
 
 
-Cloning Exercise
-~~~~~~~~~~~~~~~~
+TODO: Cloning Exercise
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. ifnotslides::
 
