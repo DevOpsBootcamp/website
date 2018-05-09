@@ -40,10 +40,10 @@ Lesson 10: Frameworks
 Frameworks
 ----------
 
-.. ifnotslides::
+    Frameworks are collections of classes, functions, and constants designed to
+    make completing a task easier.
 
-    Frameworks are collections of classes, functions, and constants designed
-    to make completing a task easier. Examples include:
+Types of frameworks include:
 
 - Web frameworks
 - Game frameworks
@@ -91,28 +91,21 @@ Use a framework if you are making a *cookie cutter* application.
 If a framework exists for what you're doing, consider using it.
 
 
-Types of Frameworks
-~~~~~~~~~~~~~~~~~~~
+Looking for Frameworks
+~~~~~~~~~~~~~~~~~~~~~~
 
-- Testing Frameworks
-- Web-app Frameworks
-- Game Frameworks
+Things to keep in mind when looking for a framework:
 
-.. ifnotslides::
+- While there are many frameworks to choose from, some are better than others.
+- Just because a framework does what you want doesn't mean it's the *best
+  tool for the job*.
+- Most popular languages have at least two or three frameworks for common
+  applications, so research which one works best for your use case. Good
+  frameworks usually have:
 
-    Things to keep in mind when looking for a framework:
-
-    - There are many frameworks in the world, some are better than others so
-      do your research.
-    - Just because a framework does what you want doesn't mean there isn't a
-      *better tool for the job*.
-    - Most popular languages have at least two or three frameworks for common
-      applications (listed above), so figure out which those are and which one
-      looks best. Good frameworks usually have:
-
-        - Good documentation
-        - Active developers
-        - A helpful community
+    - Good documentation
+    - Active developers
+    - A helpful community
 
 
 Web Frameworks
@@ -369,8 +362,8 @@ HTTP
     Even though web frameworks provide a very high level of abstraction, it's
     vital to have at least a minimal understanding of HTTP, since HTTP
     (Hypertext Transfer Protocol) is the language of the World Wide Web. When
-    you're working inside a web framework, these are the most important
-    concepts to understand:
+    you're working inside a web framework, these are the most important concepts
+    to understand:
 
     .. list-table:: HTTP Concepts
 
@@ -572,7 +565,7 @@ Part One: Writing The Views
 
         guests = Guest.query.all()
 
-.. _Flask documentation: http://flask.pocoo.org/docs/0.11/
+.. _Flask documentation: http://flask.pocoo.org/docs/0.12/
 
 
 Part Two: Writing The Templates
