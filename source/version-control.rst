@@ -487,17 +487,15 @@ repository.
 ::
 
     $ cd tiny-flask-app
-
-    # Setup python virtual environment
+    #Setup python virtual environment
     $ virtualenv venv
     $ source venv/bin/activate
-    $ pip install -r requirements.txt
-
-    # Run server (can't access w/ docker normally)
-    $ python script.py
-
-    # When finished, deactivate virtual environment
-    $ deactivate
+    (venv) $ pip install -r requirements.txt
+    #Run server (can't access w/ docker normally)
+    (venv) $ python script.py
+    #When finished, deactivate virtual environment
+    (venv) $ deactivate
+    $
 
 .. ifnotslides::
 
@@ -508,6 +506,11 @@ repository.
 
 Now if you go to ``<your ip address>:<http port>`` in your web-browser to see
 a live version of the app!
+
+.. ifslides::
+
+    Your ``<http port>`` is the same as your SSH port, but the first 2 numbers
+    are changed from ``33`` to ``34``. For example, 33005 -> 34005
 
 
 Further Reading
