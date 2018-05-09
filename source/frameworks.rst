@@ -96,12 +96,21 @@ Looking for Frameworks
 
 Things to keep in mind when looking for a framework:
 
-- While there are many frameworks to choose from, some are better than others.
-- Just because a framework does what you want doesn't mean it's the *best
-  tool for the job*.
-- Most popular languages have at least two or three frameworks for common
-  applications, so research which one works best for your use case. Good
-  frameworks usually have:
+.. ifslides::
+
+    - Some frameworks are better than others
+    - Research the best tool for the job
+    - Popular languages usually have multiple good frameworks
+
+.. ifnotslides::
+
+    - While there are many frameworks to choose from, some are better than others.
+    - Just because a framework does what you want doesn't mean it's the *best
+      tool for the job*.
+    - Most popular languages have at least two or three frameworks for common
+      applications, so research which one works best for your use case.
+
+- Good frameworks usually have:
 
     - Good documentation
     - Active developers
@@ -112,7 +121,7 @@ Web Frameworks
 --------------
 
 .. image:: /static/flask.png
-    :target: https://flask.pocoo.org/
+    :target: http://flask.pocoo.org/
     :alt: The Flask logo
     :align: center
 
@@ -527,7 +536,7 @@ TODO: Dynamic Website
 
     Go to
 
-    ``http://cloud.devopsbootcamp.osuosl.org:<your_port_number>``
+    ``http://dobc-shell.osuosl.org:<http-port>``
 
 Part One: Writing The Views
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -610,7 +619,7 @@ Part Two: Writing The Templates
             {# do thing with item #}
         {% endfor %}
 
-.. _Jinja2 documentation: http://jinja.pocoo.org/docs/dev/
+.. _Jinja2 documentation: http://jinja.pocoo.org/docs/
 .. _Flask-WTForms documentation: https://flask-wtf.readthedocs.io/en/stable/
 
 
@@ -629,5 +638,5 @@ Further Reading
     advantage of HTTP's features and allows different applications to easily
     communicate with each other.
 
-.. _The Flask Microframework: http://flask.pocoo.org/docs/0.11/
+.. _The Flask Microframework: http://flask.pocoo.org/docs/0.12/
 .. _Intro to HTTP and REST: http://blog.luisrei.com/articles/rest.html

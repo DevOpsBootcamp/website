@@ -504,10 +504,13 @@ repository.
         You may need to install the ``python``, ``virtualenv``, and ``pip``
         packages.  How would you do that?
 
-Now if you go to ``<your ip address>:<http port>`` in your web-browser to see
-a live version of the app!
+    Now if you go to ``<your ip address>:<http port>`` in your web-browser to see
+    a live version of the app!
 
 .. ifslides::
+
+    Now if you go to ``dobc-shell.osuosl.org:<http port>`` in your web-browser to see
+    a live version of the app!
 
     Your ``<http port>`` is the same as your SSH port, but the first 2 numbers
     are changed from ``33`` to ``34``. For example, 33005 -> 34005
