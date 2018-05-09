@@ -221,7 +221,6 @@ Setting up Git
 
 ::
 
-    $ sudo yum install git
     $ git config --global user.name "My Name"
     $ git config --global user.email "myself@gmail.com"
     $ git config --global core.editor "nano"
@@ -490,7 +489,6 @@ repository.
     $ cd tiny-flask-app
 
     # Setup python virtual environment
-    $ sudo yum install -y python-virtualenv
     $ virtualenv venv
     $ source venv/bin/activate
     $ pip install -r requirements.txt
