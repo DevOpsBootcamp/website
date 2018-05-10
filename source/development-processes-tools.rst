@@ -40,43 +40,47 @@ Lesson 15: Dev Processes & Tools
 Code Analysis
 -------------
 
+Code analysis tools are some of the most important tools in a developer's
+arsenal when it comes to finding and fixing bugs. Code analysis tools come in
+two flavors:
+
+.. ifslides::
+
+  Static Analysis:
+    A tool performs static analysis if it works without running your code.
+    Examples include linters and type checks.
+
+  Dynamic Analysis:
+    Dynamic Code Analysis tools actually run your code and verify it by watching
+    how the program acts. Examples include rspec for Ruby.
+
 .. ifnotslides::
 
-    Code analysis tools are some of the most important tools in a developer's
-    arsenal when it comes to finding and fixing bugs. Code analysis tools come
-    in two flavors:
+  - **Static Analysis**
 
-- **Static Analysis**
+    A tool performs static analysis if it works without running your code.
+    Static analysis tools such as linters and type checkers are usually the
+    first line of defense against bad code because they can be automatically
+    run by Continuous Integration every time code is pushed to a remote
+    repository.
 
-    .. ifnotslides::
+    Static analysis can be an incredibly valuable tool in situations where
+    it's very important that the code works perfectly every single time,
+    such as in missile defense systems or stock trading.
 
-        A tool performs static analysis if it works without running your code.
-        Static analysis tools such as linters and type checkers are usually the
-        first line of defense against bad code because they can be automatically
-        run by Continuous Integration every time code is pushed to a remote
-        repository.
+  - **Dynamic Analysis**
 
-        Static analysis can be an incredibly valuable tool in situations where
-        it's very important that the code works perfectly every single time,
-        such as in missile defense systems or stock trading.
-
-- **Dynamic Analysis**
-
-    .. ifnotslides::
-
-        Dynamic Code Analysis tools actually run your code and verify it by
-        watching how the program acts, where it fails, how it uses resources
-        such as processor time and memory, how long it takes to finish running,
-        and if your tests are adequate enough.
+    Dynamic Code Analysis tools actually run your code and verify it by
+    watching how the program acts, where it fails, how it uses resources
+    such as processor time and memory, how long it takes to finish running,
+    and if your tests are adequate enough.
 
 
 Debugging Tools
 ---------------
 
-.. ifnotslides::
-
-    Debuggers are interactive dynamic analysis tools that are used to inspect
-    your code as it runs.
+Debuggers are interactive dynamic analysis tools that are used to inspect your
+code as it runs.
 
 - Print (broken) variables.
 - Read and reports error messages.
@@ -160,7 +164,7 @@ Web Consoles
 
 .. ifnotslides::
 
-    Web Consoles are useful tools built directly into your browswer for
+    Web Consoles are useful tools built directly into your browser for
     debugging and modifying website HTML, CSS, and Javascript *on the fly*.
 
     You can access the web console (which is the javascript-specific part)
@@ -177,14 +181,13 @@ Web Consoles
 Linters
 ~~~~~~~
 
-.. ifnotslides::
-
-    Linters inspect your code and flags suspicious usage.  This can be to
-    enforce a style guide or to flag code which will probably not compile or
-    break the program when it is running.
+Linters inspect your code and flags suspicious usage.  This can be to enforce a
+style guide or to flag code which will probably not compile or break the program
+when it is running.
 
 Examples:
     - ``flake8`` (Python)
+    - ``rubocop`` (Ruby)
     - ``splint`` (C)
     - ``jshint`` (NodeJS)
 
@@ -197,6 +200,15 @@ Examples:
 
 Code Coverage
 -------------
+
+.. ifslides::
+
+  Code Coverage is the process of running your tests and keeping track of which
+  lines, logic branches, and files are used in the test suite.
+
+  This is useful because it demonstrates how much your tests are actually doing
+  (proving your program does what it should) and proves if you're carrying
+  around a bunch of dead code.
 
 .. ifnotslides::
 
@@ -228,13 +240,15 @@ Integrated Development Environments (IDE)
 
 .. image:: /static/minecraft_debug.gif
     :align: center
+    :width: 80%
     :alt: Debugging in Minecraft
     :target: https://www.reddit.com/r/Minecraft/comments/3pnwgn/the_new_debug_screen/
 
-.. ifnotslides::
 
-    IDEs are programs used to help developers get their job done by integrating
-    many essential tools into one ecosystem.
+IDEs are programs used to help developers get their job done by integrating many
+essential tools into one ecosystem.
+
+.. ifnotslides::
 
     Most IDEs act as a debugger, text editor, linter, syntax hi-lighter, and
     even a version control GUI.  These are useful features to combine into one;
@@ -253,6 +267,7 @@ Examples:
     - **Visual Studio**  (.NET)
     - **PyCharm**  (Python)
     - **Eclipse**  (Many)
+    - **Atom** (Many)
 
 
 Style Guides
@@ -262,6 +277,14 @@ Style Guides
     :alt: XKCD Code Quality comic
     :target: https://xkcd.com/1513/
     :align: center
+
+.. ifslides::
+
+  Style Guides are rules for formatting your code in a consistent way.  This is
+  to avoid differences in aesthetic as well as functional style of a program.
+
+  Style Guides, when enforced correctly, make the code-base of a project more
+  readable and understandable.
 
 .. ifnotslides::
 
@@ -301,7 +324,7 @@ concerned with automated tooling to do code analysis:
 
 
 .. _Linux Kernel Coding Style: https://tinylab.gitbooks.io/linux-doc/content/en/CodingStyle.html
-.. _JPL Coding Standard: http://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf 
+.. _JPL Coding Standard: https://lars-lab.jpl.nasa.gov/JPL_Coding_Standard_C.pdf
 
 
 Dependency Isolation
