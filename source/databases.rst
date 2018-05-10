@@ -516,88 +516,25 @@ TODO: Using a *Real* Database
 Now that we have belabored the *theory* of databases and SQL, lets actually
 start *doing* work with databases.
 
-Throughout this exercise we will install MySQL, configure it, and load it up
-with some data.
-
-.. ifslides::
-
-    - Installation
-    - Adding Users
-    - Importing Data
-
-
-Installing MySQL
-~~~~~~~~~~~~~~~~
-
-.. ifnotslides::
-
-    To start we're going to install and setup MySQL.  We're not going to get
-    too fancy with our setup, just install and run it locally on our Linux
-    boxes.
-
-::
-
-    # Install mysql -- hit 'enter' to name your user root, and then enter
-    # again for password
-    # On Debian-based systems:
-    $ sudo apt update && sudo apt install mysql-server
-    # On Red Hat/Fedora based systems:
-    $ sudo yum install mysql-server
-
-    $ sudo /etc/init.d/mysql start  # Start the mysql service
-
-    $ mysql_secure_installation # Use this to set the root password
-
-    # Hit 'yes' or 'y' for all options
-    # Add a sensible password which you will remember
-    # DO NOT MAKE IT YOUR USUAL PASSWORD.
-
-    $ sudo /etc/init.d/mysql status
-
-    $ mysqladmin -u root -p ping # Ping the database
-
-    $ mysqladmin -u root -p create nobel # Create a table for Nobel prizes
-
-
-Users
-~~~~~
-
-.. ifnotslides::
-
-    Just like on a linux system, there are users for a database.  Each of
-    user has various levels of access.
-
-Login to the mysql shell with your ``root`` user credentials:
-
-::
-
-    $ sudo mysql -p
-
-.. code-block:: sql
-
-    mysql> CREATE USER 'me'@'localhost'
-           IDENTIFIED BY 'password';
-
-    mysql> GRANT ALL PRIVILEGES ON nobel.*
-           TO 'me'@'localhost'
-           WITH GRANT OPTION;
-
-    mysql> exit
-
+Throughout this exercise we will load it up with some data and learn to interact
+with it via the command line interface.
 
 Importing Data
 ~~~~~~~~~~~~~~
 
-::
+.. code-block:: bash
 
+    # Create a table for Nobel prizes
+    $ mysqladmin -u root create nobel
     # Get the database from the osl server
-    $ sudo apt install wget
-    $ wget http://osl.io/nobel -O nobel.sql
-    # put the database in a file called nobel.sql
-    $ sudo mysql -p nobel < nobel.sql
+    $ wget http://osl.io/nobel -O nobel.sql.gz
+    # Gunzip the file and import it into the nobel db
+    $ gunzip nobel.sql.gz
+    $ mysql nobel < nobel.sql
+    # OR do it in one step!
+    $ zcat nobel.sql.gz | mysql nobel
     # Open up mysql shell to execute queries
-    $ sudo mysql -p nobel
-
+    $ mysql nobel
 
 .. code-block:: sql
 
@@ -606,32 +543,24 @@ Importing Data
     # Print the layout of the database to the screen
     DESCRIBE nobel;
 
-
 Ways to Use a Database
 ----------------------
 
-.. ifnotslides::
+Now that you have a working database you have a few options for how you want to
+use it.
 
-    Now that you have a working database you have a few options for how you
-    want to use it.
-
-.. ifslides::
-
-    - Raw SQL Queries
-    - Native Queries
-    - ORMs
+- Raw SQL Queries
+- Native Queries
+- ORMs
 
 
 Raw Queries
 ~~~~~~~~~~~
 
-.. ifnotslides::
-
-    We've already done this in the previous exercise.  You use your choice of
-    program to interact with the database exclusively via SQL and run the
-    queries you want.  This is rarely the way to go and isn't very useful for
-    most applications.  The SQL language is only good for doing database
-    *stuff*.
+We've already done this in the previous exercise.  You use your choice of
+program to interact with the database exclusively via SQL and run the queries
+you want.  This is rarely the way to go and isn't very useful for most
+applications.  The SQL language is only good for doing database *stuff*.
 
 .. code-block:: sql
 
@@ -659,23 +588,9 @@ Native Queries
     query on your behalf through a language-native database connection, and
     parses the response as a language-native data-type.
 
-.. code-block:: python
+See :download:`nobel.py <static/nobel.py>`
 
-    #!/usr/bin/python
-    import MySQLdb
-
-    db = ("localhost","testuser","test123","nobel" )
-
-    cursor = db.cursor()
-
-    cursor.execute("SELECT subject, yr, winner FROM nobel WHERE yr = 1960")
-
-    data = cursor.fetchall()
-
-    for winner in data:
-        print "%s winner in %s: %s " % (winner[0], winner[1], winner[2])
-
-    db.close()
+.. literalinclude:: static/nobel.py
 
 
 Object Relational Mappers
