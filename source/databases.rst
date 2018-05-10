@@ -30,7 +30,7 @@ Lesson 14: Databases
         - When *not* to use Databases.
         - Database Concepts.
         - SQL Syntax.
-        - Ways to use a Datbase.
+        - Ways to use a Database.
 
 
 Databases
