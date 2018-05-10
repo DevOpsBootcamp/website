@@ -513,7 +513,7 @@ repository.
     a live version of the app!
 
     Your ``<http port>`` is the same as your SSH port, but the first 2 numbers
-    are changed from ``33`` to ``34``. For example, 33005 -> 34005
+    are changed from ``33`` to ``34``. For example, ``33005`` -> ``34005``
 
 
 Further Reading
