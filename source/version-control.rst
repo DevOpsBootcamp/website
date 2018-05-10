@@ -89,13 +89,13 @@ Principles of VCS
     **Branch:**     Modifications made in parallel with the main project.
     **Merge:**      Introducing changes from one branch into another.
     **Clone:**      Downloading a local copy of a project.
-    **Fork:**       A modified vesion of an existing project.
+    **Fork:**       A modified version of an existing project.
     =============== ==========================================================
 
 .. ifnotslides::
 
     Below is a list of concepts / vocabulary you'll encounter when working
-    with VCS.  Some systems use slightly different verbage to describe these
+    with VCS.  Some systems use slightly different verbiage to describe these
     ideas but you can get by with these words.
 
     Repository:
@@ -107,7 +107,7 @@ Principles of VCS
     Diff:
         The delta (additions and deletions) between two states of a project.
 
-        *"The diff between draft one and two was very long thank's to the help of
+        *"The diff between draft one and two was very long thanks to the help of
         the skilled editor."*
 
     Commit:
@@ -159,7 +159,7 @@ Types of VCS
 
 .. ifnotslides::
 
-    There are two main types of VCS: distrubted and centralized.  They each
+    There are two main types of VCS: distributed and centralized.  They each
     have their pros and cons.
 
     Centralized VCS
@@ -200,7 +200,7 @@ Git
 
 .. ifnotslides::
 
-     Git has become the defacto VCS tools used by new Open Source projects.
+     Git has become the de facto VCS tools used by new Open Source projects.
      It is supported on platforms including Github, Bitbucket, and Gitlab and
      is used by projects like the Linux Kernel, the Go langauge, and of course
      Git itself.
@@ -396,7 +396,7 @@ everybody involved.
 
 .. ifnotslides::
 
-    Unfortunately we can't really perscribe a *best* Git workflow.  There are
+    Unfortunately we can't really prescribe a *best* Git workflow.  There are
     definitely better workflows out there, but you should do what works for
     you, and when you join a project explicitly ask what their workflow is so
     you can stay on the same page as your peers.
@@ -476,7 +476,7 @@ repository.
 
     Most repositories include a file called README which includes instructions
     on how to setup and run the code included in the repo.  Those instructions
-    tell us to run the following commads.
+    tell us to run the following commands.
 
     If you are using our docker image, you won't be able to access the webserver
     without adding a port forwarding rule for TCP port 8080 on the container,

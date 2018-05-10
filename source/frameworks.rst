@@ -72,7 +72,7 @@ The job of a framework
 
     Frameworks tend to exist for commonly developed types of applications to
     reduce the amount of time spent on repeated development steps like
-    recieving HTTP requests or drawing sprites to a screen.
+    receiving HTTP requests or drawing sprites to a screen.
 
 
 Why and When to use a Framework
@@ -171,7 +171,7 @@ Popular Web Frameworks
 
 .. ifnotslides::
 
-    Each language has a slew of web framewoks to choose from.  We will cover
+    Each language has a slew of web frameworks to choose from.  We will cover
     common frameworks for popular programming languages including Python,
     Ruby, and NodeJS.
 
@@ -233,7 +233,7 @@ The Model-View-Controller Pattern
     Understanding the MVC architecture isn't that important at the moment, but
     it is something to be aware of.  Many popular web frameworks are built
     around the MVC pattern, so knowing how to use it to its advantages can be
-    userful.
+    useful.
 
 
 URL Routing
@@ -461,7 +461,7 @@ REST
     is". If a server is stateless, then the way that it handles requests
     doesn't change based on previous requests that have been made.
 
-    It can be a bit of a subtle distinction, since storing data and retreiving
+    It can be a bit of a subtle distinction, since storing data and retrieving
     stored data is a common function that web apps perform. However, in that
     case, the web server isn't the component that's storing the data from the
     previous request. The web server stores and retrieves data by talking to a
@@ -472,7 +472,7 @@ REST
 .. ifnotslides::
 
     A self-contained resource is a resource that can be fully parsed and
-    updated by the client without requiring any external informtaion. For
+    updated by the client without requiring any external information. For
     example, a resource might contain some metadata to inform the client that
     it's encoded in JSON, or it might contain other URLs that the client can
     use to interact with the resource further.
@@ -481,7 +481,7 @@ REST
 
 .. ifnotslides::
 
-    This one is fairly self-explanitory. GET requests don't change anything on
+    This one is fairly self-explanatory. GET requests don't change anything on
     the server's side, DELETE requests delete the requested resource, etc.
     The GET method is called *nullipotent* (no side effects), and the PUT and
     DELETE methods are called *idempotent* (no side effects if the request is

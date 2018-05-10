@@ -76,9 +76,9 @@ to manage.  Things got out of hand pretty quick.
 
     Eventually system administrators were manually managing dozens, or even
     hundreds, of computers.  When a computer is manually managed it's called a
-    *Special Snowflake*.  Specal Snowflakes are setup manually and are very
+    *Special Snowflake*.  Special Snowflakes are setup manually and are very
     fragile.  Unfortunately companies like Facebook and Google can't scale
-    *Special Snowflakes* quickly and easliy, so they had to figure out a
+    *Special Snowflakes* quickly and easily, so they had to figure out a
     better solution.
 
     The answer was Configuration Management.  The earliest incarnations were
@@ -106,7 +106,7 @@ Concept: Infrastructure as Code
     Infrastructure as code allows you to treat servers like cattle instead of
     pets.
 
-    Provsioning is running your CM code that tells the server what to install
+    Provisioning is running your CM code that tells the server what to install
     and which files to write, automatically doing what you would usually do
     manually.  This is much faster than a person doing it and is less error
     prone.
@@ -294,7 +294,7 @@ Delcaration Configuration
     Declaration Configuration is the concept of declaring the state a machine
     *ought* to be in and letting the configuration management reach that state
     however it feels is appropriate.  This is advantageous because it can
-    short-circut a process by checking if it is already in that state before
+    short-circuit a process by checking if it is already in that state before
     attempting to install/copy/configure a part of the system.
 
     Here is some Declaration Configuration pseudo-code:
@@ -396,7 +396,7 @@ Ansible Example
 
 .. note::
 
-    Ansible's *langauge* is Yaml, which is basically JSON but easier to read
+    Ansible's *language* is Yaml, which is basically JSON but easier to read
     and write.  This is similar to Puppet in it limits the possible
     functionality, but again: these tools all achieve the same result, they
     just get there in different ways.

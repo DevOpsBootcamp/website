@@ -88,7 +88,7 @@ Private Clouds
 .. ifnotslides::
 
     Private clouds are software which you run on your own servers.  They give
-    you the advantages of cloud flexiblity while giving you the control over
+    you the advantages of cloud flexibility while giving you the control over
     the machines you run.
 
     This requires a higher startup cost, requiring the purchase of machines

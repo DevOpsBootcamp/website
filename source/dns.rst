@@ -142,7 +142,7 @@ How DNS Works
 
 .. ifnotslides::
 
-    This tries to demonstate the fact that DNS starts by checking it's cache,
+    This tries to demonstrate the fact that DNS starts by checking it's cache,
     then starts at the top of the DNS *tree* and works it's way down.  Each
     server has authority over a certain domain and directs traffic to the next
     step down.
@@ -173,7 +173,7 @@ DNS Records
 
 .. ifnotslides::
 
-    There are a few core types of DNS records, each surving their own purpose.
+    There are a few core types of DNS records, each serving their own purpose.
 
 ======== =================================
 Acronym  Name
@@ -258,7 +258,7 @@ SOA (Authority) Records
 
 .. ifnotslides::
 
-    For example, the head of the ``org`` heirarchy has a ``SOA`` record proving
+    For example, the head of the ``org`` hierarchy has a ``SOA`` record proving
     its authority over ``org`` websites.
 
     - A DNS server is authoritative if it has a Start of Authority (SOA) record for
