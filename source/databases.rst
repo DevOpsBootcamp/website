@@ -48,7 +48,7 @@ Databases
 
     Databases are another big topic we won't be able to to justice.  For as
     long as computers have been able to store notable amounts of data,
-    databases have been used to catalog everyhing from our personal
+    databases have been used to catalog everything from our personal
     and banking information, to movies and which `types of glue are best for a
     job`_.
 
@@ -95,7 +95,7 @@ Databases and Structure
 .. ifnotslides::
 
     A database system’s fundamental goal is to provide consistent views of
-    structured data, just like the relationships we’ve laid out between all of
+    structured data, just like the relationships we've laid out between all of
     this food.
 
 Structure
@@ -212,7 +212,7 @@ Lots of Data
     The catch is that your data must be *well structured* by a schema.  You
     can't just dump data into a database, the data must first be defined in a
     *schema* and inserted to fit in that schema.  That is almost always a
-    worth-while tradeoff when dealing with *big data*.
+    worth-while trade-off when dealing with *big data*.
 
 
 Concurrent Read/Writes
@@ -221,7 +221,7 @@ Concurrent Read/Writes
 .. ifnotslides::
 
     Because databases have to deal with *lots* of data and work with it very
-    fast they are usually able to optimize their operations, concurretly read
+    fast they are usually able to optimize their operations, concurrently read
     and write to disk, and buffer their operations so they waste as few CPU
     cycles as possible.
 
@@ -232,11 +232,14 @@ Concurrent Read/Writes
     In order to quantify how well a database engine handles the demands of a
     concurrent world, it is assessed by the properties of **ACID**:
 
-- Atomicity: Either the entire transaction succeeds or it fails completely
-- Consistency: Transactions always leave the database in a valid state
-- Isolation: Concurrent operations look like they took place sequentially
-- Durability: Transactions are permanent after they're committed
-
+Atomicity:
+  Either the entire transaction succeeds or it fails completely
+Consistency:
+  Transactions always leave the database in a valid state
+Isolation:
+  Concurrent operations look like they took place sequentially
+Durability:
+  Transactions are permanent after they're committed
 
 When *not* to use a Database
 ----------------------------
@@ -288,14 +291,14 @@ NoSQL
 
 .. ifnotslides::
 
-    SQL databases are very prevelant, but at the end of the day a company or
+    SQL databases are very prevalent, but at the end of the day a company or
     developer needs to weigh their tools against their needs and sometimes an
     SQL database doesn't do it, or is just overkill.
 
     In cases like these a NoSQL database can be used to store you database in
     different / more flexible ways.
 
-    NoSQL databases can also offer more flexibilty in storage options,
+    NoSQL databases can also offer more flexibility in storage options,
     allowing one to spread data across many machines more easily than SQL
     databases tend to do.
 
@@ -323,11 +326,9 @@ Database Concepts
 Schemas
 ~~~~~~~
 
-.. ifnotslides::
-
-    Schemas are how you define what a table looks like, what data will
-    populate it, and what each field will be called.  The schema also defines
-    relationships between tables; more or less the blueprint of your database.
+Schemas are how you define what a table looks like, what data will populate it,
+and what each field will be called.  The schema also defines relationships
+between tables; more or less the blueprint of your database.
 
 .. code-block:: sql
 
@@ -345,11 +346,11 @@ Schemas
 Migrations
 ~~~~~~~~~~
 
-.. ifnotslides::
+Migrations are the process of updating tables and fields in your database.
+Since databases *might* need to change in the future (you never know!) you can
+create and run a migrations to modify your schema as needed.
 
-    Migrations are the process of updating tables and fields in your database.
-    Since databases *might* need to change in the future (you never know!) you
-    can create and run a migrations to modify your schema as needed.
+.. ifnotslides::
 
     This process will move (migrate) your data from one schema in the database
     to another inline, so you don't need to turn your database off, or restart
@@ -376,12 +377,9 @@ Migrations
 Raw SQL Syntax
 --------------
 
-.. ifnotslides::
-
-    There are many tools out there that allow you to *avoid* writing raw SQL,
-    but it's always good to know the syntax.  One day you may need to write
-    raw SQL queries, and at the very least you'll need to *read* SQL for
-    debugging purposes.
+There are many tools out there that allow you to *avoid* writing raw SQL, but
+it's always good to know the syntax.  One day you may need to write raw SQL
+queries, and at the very least you'll need to *read* SQL for debugging purposes.
 
 .. ifslides::
 
@@ -394,10 +392,8 @@ Raw SQL Syntax
 SELECT
 ~~~~~~
 
-.. ifnotslides::
-
-    Select statements **get** data from the database which matches the
-    requirements you have.
+Select statements **get** data from the database which matches the requirements
+you have.
 
 .. code-block:: sql
 
@@ -421,10 +417,8 @@ SELECT
 INSERT
 ~~~~~~
 
-.. ifnotslides::
-
-    Insert statements create an entry into a table and populate the fields
-    appropriately.
+Insert statements create an entry into a table and populate the fields
+appropriately.
 
 .. code-block:: sql
 
@@ -447,9 +441,7 @@ INSERT
 UPDATE
 ~~~~~~
 
-.. ifnotslides::
-
-    Update statements modify an existing entry in a table.
+Update statements modify an existing entry in a table.
 
 .. code-block:: sql
 
@@ -474,9 +466,7 @@ UPDATE
 DELETE
 ~~~~~~
 
-.. ifnotslides::
-
-    Delete statements... you can guess what a delete statement does I bet.
+Delete statements... You can guess what a delete statement does I bet.
 
 .. code-block:: sql
 
@@ -523,13 +513,11 @@ Answers
 TODO: Using a *Real* Database
 -----------------------------
 
-.. ifnotslides::
+Now that we have belabored the *theory* of databases and SQL, lets actually
+start *doing* work with databases.
 
-    Now that we have belabored the *theory* of databases and SQL, lets actually
-    start *doing* work with databases.
-
-    Throughout this exercise we will install MySQL, configure it, and load it
-    up with some data.
+Throughout this exercise we will install MySQL, configure it, and load it up
+with some data.
 
 .. ifslides::
 
