@@ -463,6 +463,7 @@ TODO: Cloning Exercise
 
     $ cd ~
     $ git clone https://github.com/DevOpsBootcamp/tinsy-flask-app.git
+    $ cd tinsy-flask-app
 
 See http://git.io/vcVmB for more details about the ``tinsy-flask-app``
 repository.
@@ -486,7 +487,6 @@ repository.
 
 ::
 
-    $ cd tiny-flask-app
     #Setup python virtual environment
     $ virtualenv venv
     $ source venv/bin/activate
