@@ -330,21 +330,23 @@ concerned with automated tooling to do code analysis:
 Dependency Isolation
 --------------------
 
-.. ifslides::
+Dependency isolation is the process of -- wait for it -- isolating the
+dependencies of a project.  This is a surprisingly hard problem and many
+consider it largely unsolved.
 
-    *The process of -- wait for it -- isolating project dependencies.*
+.. ifslides::
+    - Two applications: ``FooFOSS`` and ``BarEnterprise``
+    - They both depend on the library ``bazUseful``
+    - One depends on version 1.1.7 and the other depends on the more stable
+      1.0.1a.
 
 .. ifnotslides::
 
-    Dependency isolation is the process of -- wait for it -- isolating the
-    dependencies of a project.  This is a suprisingly hard problem and many
-    consider it largely un-solved.
-
-    The root of the issue is that you might be developing two programs: FooFOSS
-    and BarEnterprise.  They both depend on the library bazUseful but on
-    depends on version 1.1.7 and the other depends on the more stable 1.0.1a.
-    You can't just install the most recent one and call it good, you've got to
-    figure something else out instead.
+    The root of the issue is that you might be developing two programs:
+    ``FooFOSS`` and ``BarEnterprise``.  They both depend on the library
+    ``bazUseful`` but one depends on version 1.1.7 and the other depends on the
+    more stable 1.0.1a.  You can't just install the most recent one and call it
+    good, you've got to figure something else out instead.
 
 
 TODO: Python Virtualenvs
@@ -424,18 +426,15 @@ Rust:
     Dependencies and versions are specified in ``Cargo.toml``.  All compiled
     code (and dependencies) are stored in a ``target`` directory.
 
-
 Development Servers
 -------------------
 
-    *A Carbon Copy of the Production Environment(s)*
+*A Carbon Copy of the Production Environment(s)*
 
-.. ifnotslides::
-
-    Development servers are used to test that your code works in a real
-    environment, with a real server, and real data.  You shouldn't throw your
-    code up on a *production* website to see if it works, so a development
-    server is as close to the real thing as you can get.
+Development servers are used to test that your code works in a real environment,
+with a real server, and real data.  You shouldn't throw your code up on a
+*production* website to see if it works, so a development server is as close to
+the real thing as you can get.
 
 
 Further Reading
