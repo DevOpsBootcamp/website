@@ -25,6 +25,10 @@ Lesson 9: Programming
     Overview
     --------
 
+    - Programming Paradigms.
+    - Psuedo-Code exercise.
+    - Python Overview.
+    - Python practice exercise.
 
 Paradigms
 ---------
