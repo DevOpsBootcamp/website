@@ -31,12 +31,20 @@ following:
 
 .. code-block:: console
 
-  $ docker run -p 2222:22 -h dobc --rm --name=dobc1 -e DOBC_PASSWORD=passw04d \
-      -d osuosl/dobc-centos
+  $ docker run \
+      -p 2222:22 \
+      -p 8080:8080 \
+      -h dobc \
+      --rm \
+      --name=dobc1 \
+      -e DOBC_PASSWORD=passw04d \
+      -d \
+      osuosl/dobc-centos
 
 This should do the following:
 
 #. Map port ``2222`` on your machine to port ``22`` on the container
+#. Map port ``8080`` on your machine to port ``8080`` on the container
 #. Set the hostname to ``dobc``
 #. Remove the container and its image on exit
 #. Name the container ``dobc1``
@@ -51,7 +59,7 @@ do it using this method, you can skip the next section (connecting via ssh):
 
 .. code-block:: console
 
-  $ docker run -h dobc --rm --name=dobc1 -it osuosl/dobc-centos bash
+  $ docker run -p 8080:8080 -h dobc --rm --name=dobc1 -it osuosl/dobc-centos bash
 
 You can log out by typing ``exit`` and then enter which will stop the container.
 
