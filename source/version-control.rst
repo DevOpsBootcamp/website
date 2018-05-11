@@ -491,7 +491,7 @@ repository.
     $ virtualenv venv
     $ source venv/bin/activate
     (venv) $ pip install -r requirements.txt
-    #Run server (can't access w/ docker normally)
+    #Run server
     (venv) $ python script.py
     #When finished, deactivate virtual environment
     (venv) $ deactivate
