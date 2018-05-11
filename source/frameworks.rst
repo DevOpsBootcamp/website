@@ -40,10 +40,10 @@ Lesson 10: Frameworks
 Frameworks
 ----------
 
-.. ifnotslides::
+    Frameworks are collections of classes, functions, and constants designed to
+    make completing a task easier.
 
-    Frameworks are collections of classes, functions, and constants designed
-    to make completing a task easier. Examples include:
+Types of frameworks include:
 
 - Web frameworks
 - Game frameworks
@@ -72,7 +72,7 @@ The job of a framework
 
     Frameworks tend to exist for commonly developed types of applications to
     reduce the amount of time spent on repeated development steps like
-    recieving HTTP requests or drawing sprites to a screen.
+    receiving HTTP requests or drawing sprites to a screen.
 
 
 Why and When to use a Framework
@@ -91,35 +91,37 @@ Use a framework if you are making a *cookie cutter* application.
 If a framework exists for what you're doing, consider using it.
 
 
-Types of Frameworks
-~~~~~~~~~~~~~~~~~~~
+Looking for Frameworks
+~~~~~~~~~~~~~~~~~~~~~~
 
-- Testing Frameworks
-- Web-app Frameworks
-- Game Frameworks
+Things to keep in mind when looking for a framework:
+
+.. ifslides::
+
+    - Some frameworks are better than others
+    - Research the best tool for the job
+    - Popular languages usually have multiple good frameworks
 
 .. ifnotslides::
 
-    Things to keep in mind when looking for a framework:
-
-    - There are many frameworks in the world, some are better than others so
-      do your research.
-    - Just because a framework does what you want doesn't mean there isn't a
-      *better tool for the job*.
+    - While there are many frameworks to choose from, some are better than others.
+    - Just because a framework does what you want doesn't mean it's the *best
+      tool for the job*.
     - Most popular languages have at least two or three frameworks for common
-      applications (listed above), so figure out which those are and which one
-      looks best. Good frameworks usually have:
+      applications, so research which one works best for your use case.
 
-        - Good documentation
-        - Active developers
-        - A helpful community
+- Good frameworks usually have:
+
+    - Good documentation
+    - Active developers
+    - A helpful community
 
 
 Web Frameworks
 --------------
 
 .. image:: /static/flask.png
-    :target: https://flask.pocoo.org/
+    :target: http://flask.pocoo.org/
     :alt: The Flask logo
     :align: center
 
@@ -169,7 +171,7 @@ Popular Web Frameworks
 
 .. ifnotslides::
 
-    Each language has a slew of web framewoks to choose from.  We will cover
+    Each language has a slew of web frameworks to choose from.  We will cover
     common frameworks for popular programming languages including Python,
     Ruby, and NodeJS.
 
@@ -231,7 +233,7 @@ The Model-View-Controller Pattern
     Understanding the MVC architecture isn't that important at the moment, but
     it is something to be aware of.  Many popular web frameworks are built
     around the MVC pattern, so knowing how to use it to its advantages can be
-    userful.
+    useful.
 
 
 URL Routing
@@ -369,8 +371,8 @@ HTTP
     Even though web frameworks provide a very high level of abstraction, it's
     vital to have at least a minimal understanding of HTTP, since HTTP
     (Hypertext Transfer Protocol) is the language of the World Wide Web. When
-    you're working inside a web framework, these are the most important
-    concepts to understand:
+    you're working inside a web framework, these are the most important concepts
+    to understand:
 
     .. list-table:: HTTP Concepts
 
@@ -459,7 +461,7 @@ REST
     is". If a server is stateless, then the way that it handles requests
     doesn't change based on previous requests that have been made.
 
-    It can be a bit of a subtle distinction, since storing data and retreiving
+    It can be a bit of a subtle distinction, since storing data and retrieving
     stored data is a common function that web apps perform. However, in that
     case, the web server isn't the component that's storing the data from the
     previous request. The web server stores and retrieves data by talking to a
@@ -470,7 +472,7 @@ REST
 .. ifnotslides::
 
     A self-contained resource is a resource that can be fully parsed and
-    updated by the client without requiring any external informtaion. For
+    updated by the client without requiring any external information. For
     example, a resource might contain some metadata to inform the client that
     it's encoded in JSON, or it might contain other URLs that the client can
     use to interact with the resource further.
@@ -479,7 +481,7 @@ REST
 
 .. ifnotslides::
 
-    This one is fairly self-explanitory. GET requests don't change anything on
+    This one is fairly self-explanatory. GET requests don't change anything on
     the server's side, DELETE requests delete the requested resource, etc.
     The GET method is called *nullipotent* (no side effects), and the PUT and
     DELETE methods are called *idempotent* (no side effects if the request is
@@ -534,7 +536,7 @@ TODO: Dynamic Website
 
     Go to
 
-    ``http://cloud.devopsbootcamp.osuosl.org:<your_port_number>``
+    ``http://dobc-shell.osuosl.org:<http-port>``
 
 Part One: Writing The Views
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -572,7 +574,7 @@ Part One: Writing The Views
 
         guests = Guest.query.all()
 
-.. _Flask documentation: http://flask.pocoo.org/docs/0.11/
+.. _Flask documentation: http://flask.pocoo.org/docs/0.12/
 
 
 Part Two: Writing The Templates
@@ -617,7 +619,7 @@ Part Two: Writing The Templates
             {# do thing with item #}
         {% endfor %}
 
-.. _Jinja2 documentation: http://jinja.pocoo.org/docs/dev/
+.. _Jinja2 documentation: http://jinja.pocoo.org/docs/
 .. _Flask-WTForms documentation: https://flask-wtf.readthedocs.io/en/stable/
 
 
@@ -636,5 +638,5 @@ Further Reading
     advantage of HTTP's features and allows different applications to easily
     communicate with each other.
 
-.. _The Flask Microframework: http://flask.pocoo.org/docs/0.11/
+.. _The Flask Microframework: http://flask.pocoo.org/docs/0.12/
 .. _Intro to HTTP and REST: http://blog.luisrei.com/articles/rest.html

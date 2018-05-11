@@ -86,9 +86,9 @@ There are three main types of security in computing:
         - Passive: a network intruder intercepts data traveling through the
           network. (Man-in-the-Middle, Wiretapping, Idle Scan)
 
-    Each of these encompases a field of computer security unto itself.  We
+    Each of these encompasses a field of computer security unto itself.  We
     will at least mention each of them in more detail, but we will focus on
-    network securty in this course.
+    network security in this course.
 
 Threat Models
 -------------
@@ -170,7 +170,7 @@ Passwords / Passphrases
 
 .. ifnotslides::
 
-    Passwords are the defacto form of Authentication for computers, but they
+    Passwords are the de facto form of Authentication for computers, but they
     aren't a perfect solution (to an admittedly difficult problem).
 
     Passwords are hard to remember and surprisingly easy for computers to guess
@@ -211,7 +211,7 @@ Solutions for Passwords
         - ``pass`` on Linux and OSX, uses FOSS tools to store passwords.
 
     Change your passwords regularly.
-        **Warning** this is considered a 'Securty Best Practice', but only if
+        **Warning** this is considered a 'Security Best Practice', but only if
         you create a unique password each time you change it.  Don't replace
         your password by adding a ``1`` to the end of it.
 
@@ -280,7 +280,7 @@ Certificates and HTTPS
 
 .. ifnotslides::
 
-    Certiciates are what allows your computer to create a secure connection
+    Certificates are what allows your computer to create a secure connection
     with a server and transfer sensitive data across *the wire*.
 
     HTTPS
@@ -323,73 +323,52 @@ Types of Attacks
 Code Injection
 ~~~~~~~~~~~~~~
 
-.. ifnotslides::
-
-    Code Injection is the act of inserting code into a running process
-    (website, webapp, word processor, etc.) with malicious intention.
-
 .. image:: /static/xkcd_327.png
     :align: center
     :alt: Billy Droptables XKCD Comic
     :target: https://xkcd.com/327/
 
+Code Injection is the act of inserting code into a running process (website, webapp, word processor, etc.) with
+malicious intention.
 
 Code Injection Attacks
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. ifslides::
+SQL Injection:
+    SQL Injection is when you take advantage of the fact that a form input
+    is inserted directly into a SQL query.  You write some password and
+    then write a new SQL query which drops all tables, or returns all
+    data, exploiting an easy security hole.
 
-    - SQL Injection
+::
 
-    ::
+    +-----------+----------------------------------------+
+    | username: | admin                                  |
+    +-----------+----------------------------------------+
+    | password: | pass' || true); DROP TABLE STUDENTS;-- |
+    +-----------+----------------------------------------+
 
-        +-----------+----------------------------------------+
-        | username  | admin                                  |
-        +-----------+----------------------------------------+
-        | password: | pass' || true); DROP TABLE STUDENTS;-- |
-        +-----------+----------------------------------------+
+.. nextslide::
 
-    - Cross-Site Scripting (XSS)
+Cross-Site Scripting (XSS):
+    Cross-Site Scripting is when a malicious script is sent to, and run on,
+    a person's computer.  This tends to take advantage of the fact that
+    your browser blindly runs any JavaScript you tell it to.
 
-    ::
+::
 
-        <img onerror=alert("Tracking your IP with a GUI interface!");>
+    <img onerror=alert("Tracking your IP with a GUI interface!");>
 
-    - Cross-Site Request Forgery (CSRF)
+.. nextslide::
 
-.. ifnotslides::
-
-    SQL Injection
-        SQL Injection is when you take advantage of the fact that a form input
-        is inserted directly into a SQL query.  You write some password and
-        then write a new SQL query which drops all tables, or returns all
-        data, exploiting an easy security hole.
-
-    ::
-
-        +-----------+----------------------------------------+
-        | username: | admin                                  |
-        +-----------+----------------------------------------+
-        | password: | pass' || true); DROP TABLE STUDENTS;-- |
-        +-----------+----------------------------------------+
-
-    Cross-Site Scripting (XSS)
-        Cros-Site Scripting is when a malicious script is sent to, and run on,
-        a person's computer.  This tends to take advantage of the fact that
-        your browser blindly runs any JavaScript you tell it to.
-
-    ::
-
-        <img onerror=alert("Tracking your IP with a GUI interface!");>
-
-    Cross-Site Request Forgery (CSRF)
-        CSRF is when one website on your browser tries to carry out an action
-        *as you* on a different website.  For instance you're an admin of some
-        big social media website, you get an email, embedded in the email is a
-        CSRF script which tries to *delete all user accounts* on your website.
-        Since you've got your credentials cached your browser doesn't know
-        better and can run that command becuase it looks like any other
-        command.
+Cross-Site Request Forgery (CSRF):
+    CSRF is when one website on your browser tries to carry out an action
+    *as you* on a different website.  For instance you're an admin of some
+    big social media website, you get an email, embedded in the email is a
+    CSRF script which tries to *delete all user accounts* on your website.
+    Since you've got your credentials cached your browser doesn't know
+    better and can run that command because it looks like any other
+    command.
 
 ::
 
@@ -399,31 +378,31 @@ Code Injection Attacks
 Code Injection Defenses
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. ifslides::
+- Sanitize User Inputs
+- Use CSRF Tokens
 
-    - Sanitize User Inputs
-    - Use CSRF Tokens
+Some of these attacks are very hard to fight against, but they all have
+industry-tested solutions that are easy enough to implement in an
+application of your own.
 
-.. ifnotslides::
 
-    Some of these attacks are very hard to fight against, but they all have
-    industry-tested solutions that are easy enough to implement in an
-    application of your own.
+.. nextslide::
 
-    Sanitize Inputs
-        Input sanitation is when your code sniffs a piece of input to see if
-        it looks like a SQL or code of any kind.  If it does look like code
-        it's probably malicious so your program errors out and tells the user
-        to enter a *real* input.
+Sanitize Inputs
+    Input sanitation is when your code sniffs a piece of input to see if
+    it looks like a SQL or code of any kind.  If it does look like code
+    it's probably malicious so your program errors out and tells the user
+    to enter a *real* input.
 
-    CSRF Tokens
-        A CSRF token is a unique string that has to be tied to each request
-        you send to a server.  You don't need to log back in each time you get
-        a new one but the application won't complete your action unless the
-        token is included in your query.  This means only the website you're
-        logged into can send a real query because only that website knows the
-        CSRF token.
+.. nextslide::
 
+CSRF Tokens
+    A CSRF token is a unique string that has to be tied to each request
+    you send to a server.  You don't need to log back in each time you get
+    a new one but the application won't complete your action unless the
+    token is included in your query.  This means only the website you're
+    logged into can send a real query because only that website knows the
+    CSRF token.
 
 Web Server Attacks
 ~~~~~~~~~~~~~~~~~~
@@ -440,17 +419,17 @@ Web Server Attacks
 
     For instance a webserver's default configuration might allow you to turn it
     off by sending a special request.  The config file tells you to change that
-    special request but most people dont.
+    special request but most people don't.
 
     As far as versions go, software has bugs.  Developers do their best to fix
     those bugs but when you're running a big website and your infrastructure is
     fragile you don't usually want to update *anything* including the webserver
-    software you're running.  So dispite the bug being fixed, not everybody is
+    software you're running.  So despite the bug being fixed, not everybody is
     on the same page.
 
 
-Discovering Vulnerabilites
---------------------------
+Discovering Vulnerabilities
+---------------------------
 
 .. ifnotslides::
 
@@ -460,15 +439,15 @@ Discovering Vulnerabilites
     to follow if that happens:
 
 #. Test and document the bug to verify it exists.
-    If you think you encountered a bug, make sure you can replicate it.  If
-    you can't how can you expect the developers to recreate it?
+     If you think you encountered a bug, make sure you can replicate it.  If
+     you can't how can you expect the developers to recreate it?
 
 #. Disclose it **privately** to those responsible for fixing it.
-    Provide examples – it’s basically a bug report, but through private
-    channels (not public tracker yet!)
+     Provide examples – it’s basically a bug report, but through private
+     channels (not public tracker yet!)
 
 #. Give them time to release a patch before announcing it.
-    Google waits 90 days to announce a bug after informing the developers.
+     Google waits 90 days to announce a bug after informing the developers.
 
 .. ifnotslides::
 

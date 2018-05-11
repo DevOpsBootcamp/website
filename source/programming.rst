@@ -25,6 +25,10 @@ Lesson 9: Programming
     Overview
     --------
 
+    - Programming Paradigms.
+    - Psuedo-Code exercise.
+    - Python Overview.
+    - Python practice exercise.
 
 Paradigms
 ---------
@@ -455,7 +459,7 @@ Python
 
     Python is a programming language designed for *learning*.  This means it
     is relatively simple to pick-up and run with, and it looks a lot like
-    psuedo-code you might write.  It is very popular, modestly fast, and
+    pseudo-code you might write.  It is very popular, modestly fast, and
     commonly used in the programming industry.
 
     Python is a *scripting language*. While other languages need to be

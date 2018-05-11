@@ -89,13 +89,13 @@ Principles of VCS
     **Branch:**     Modifications made in parallel with the main project.
     **Merge:**      Introducing changes from one branch into another.
     **Clone:**      Downloading a local copy of a project.
-    **Fork:**       A modified vesion of an existing project.
+    **Fork:**       A modified version of an existing project.
     =============== ==========================================================
 
 .. ifnotslides::
 
     Below is a list of concepts / vocabulary you'll encounter when working
-    with VCS.  Some systems use slightly different verbage to describe these
+    with VCS.  Some systems use slightly different verbiage to describe these
     ideas but you can get by with these words.
 
     Repository:
@@ -107,7 +107,7 @@ Principles of VCS
     Diff:
         The delta (additions and deletions) between two states of a project.
 
-        *"The diff between draft one and two was very long thank's to the help of
+        *"The diff between draft one and two was very long thanks to the help of
         the skilled editor."*
 
     Commit:
@@ -159,7 +159,7 @@ Types of VCS
 
 .. ifnotslides::
 
-    There are two main types of VCS: distrubted and centralized.  They each
+    There are two main types of VCS: distributed and centralized.  They each
     have their pros and cons.
 
     Centralized VCS
@@ -200,7 +200,7 @@ Git
 
 .. ifnotslides::
 
-     Git has become the defacto VCS tools used by new Open Source projects.
+     Git has become the de facto VCS tools used by new Open Source projects.
      It is supported on platforms including Github, Bitbucket, and Gitlab and
      is used by projects like the Linux Kernel, the Go langauge, and of course
      Git itself.
@@ -221,7 +221,6 @@ Setting up Git
 
 ::
 
-    $ sudo yum install git
     $ git config --global user.name "My Name"
     $ git config --global user.email "myself@gmail.com"
     $ git config --global core.editor "nano"
@@ -274,47 +273,39 @@ To create and checkout a branch:
 
 ::
 
-    $ git branch    # Shows your branches and current branch
-    * master
-    $ git checkout -b <new-branch>  # Switches to new branch `<branch name>`
+    #Note the `*` which indicates the current branch
+    $ git checkout -b "new-branch"
     $ git branch
     master
     * new-branch
-    $ git checkout master   # Switches to existing branch `<branch name>`
-
 
 TODO: Working With a Git Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Checkout a new feature branch on your repository.
-
-.. ifnotslides::
+Checkout a new feature branch on your repository.
 
     ::
 
-        $ git checkout -b <new_feature_name>
+        $ git checkout -b "add-awesome-feature"
 
-- Create/Edit files on the new branch.
-
-.. ifnotslides::
+Create/Edit files on the new branch.
 
     ::
 
         $ echo "Some awesome text" > awesomefile.txt
         $ git status
-        On branch <new_feature_name>
-        Untracked files:
-          (use "git add <file>..." to include in what will be committed)
+        # On branch add-awesome-feature
+        # Untracked files:
+        ...
+        #         awesomefile.txt
+        ...
 
-                awesomefile.txt
-
-        nothing added to commit but untracked files present (use "git add" to track)
         $ git add awesomefile.txt
-        $ git commit -m "short awesome feature commit message"
+        $ git commit -m "Short awesome commit message"
 
-- Create a diff between the two.
+.. nextslide::
 
-.. ifnotslides::
+View the diff between the two.
 
     ::
 
@@ -327,13 +318,14 @@ TODO: Working With a Git Repository
         @@ -0,0 +1 @@
         +Some awesome text
 
-- Locally merge the changes from your new branch into Master.
+.. nextslide::
 
-.. ifnotslides::
+Locally merge the changes from your new branch into Master.
 
     ::
 
-        $ git merge my-awesome-feature
+        $ git checkout master
+        $ git merge add-awesome-feature
         Updating 459de26..5c4ca48
         Fast-forward
         awesomefile.txt | 1 +
@@ -404,7 +396,7 @@ everybody involved.
 
 .. ifnotslides::
 
-    Unfortunately we can't really perscribe a *best* Git workflow.  There are
+    Unfortunately we can't really prescribe a *best* Git workflow.  There are
     definitely better workflows out there, but you should do what works for
     you, and when you join a project explicitly ask what their workflow is so
     you can stay on the same page as your peers.
@@ -430,8 +422,8 @@ Bitbucket
     repositories.
 
 Gitolite
-    *Bare-bones*.  Fewer feature than the previous three.  Open Source, useful
-    for learning the nitty-gritty Git *really* works.
+    *Bare-bones*.  Fewer features than the previous three. Open Source, useful
+    for learning the nitty-gritty on how Git *really* works.
 
 .. ifnotslides::
 
@@ -442,10 +434,7 @@ Gitolite
 Cloning a Repository
 ~~~~~~~~~~~~~~~~~~~~
 
-.. ifnotslides::
-
-    To contribute to someone else's repository you first need to *clone* the
-    repo.
+To contribute to someone else's repository you first need to *clone* the repo.
 
 ::
 
@@ -454,15 +443,9 @@ Cloning a Repository
     $ cd <new repo directory>
     $ ls
 
-.. ifnotslides::
-
-    Once you clone a repository you can make as many local changes as you want
-    without affecting the original (central) copy.  You can experiment and
-    work without the original owner even knowing what you're doing.
-
-    If you've made changes you think the original owner should have each of
-    the previously mentioned centralizing services has a way for you to
-    request that your changes be merged in with theirs.
+Once you clone a repository you can make as many local changes as you want
+without affecting the original (central) copy. You can experiment and work
+without the original owner even knowing what you're doing!
 
 
 TODO: Cloning Exercise
@@ -478,7 +461,9 @@ TODO: Cloning Exercise
 
 ::
 
+    $ cd ~
     $ git clone https://github.com/DevOpsBootcamp/tinsy-flask-app.git
+    $ cd tinsy-flask-app
 
 See http://git.io/vcVmB for more details about the ``tinsy-flask-app``
 repository.
@@ -491,14 +476,26 @@ repository.
 
     Most repositories include a file called README which includes instructions
     on how to setup and run the code included in the repo.  Those instructions
-    tell us to run the following commads.
+    tell us to run the following commands.
+
+    If you are using our docker image, you won't be able to access the webserver
+    without adding a port forwarding rule for TCP port 8080 on the container,
+    similar to how SSH is forwarded on the container.  See 'Setting up Docker'
+    on the left for info on how to add port mappings to a docker container.
+
+.. nextslide::
 
 ::
 
-    $ cd tiny-flask-app
+    #Setup python virtual environment
     $ virtualenv venv
-    $ pip install -r requirements.txt
-    $ python script.py
+    $ source venv/bin/activate
+    (venv) $ pip install -r requirements.txt
+    #Run server
+    (venv) $ python script.py
+    #When finished, deactivate virtual environment
+    (venv) $ deactivate
+    $
 
 .. ifnotslides::
 
@@ -507,8 +504,16 @@ repository.
         You may need to install the ``python``, ``virtualenv``, and ``pip``
         packages.  How would you do that?
 
-Now if you go to ``<your ip address>:<http port>`` in your web-browser to see
-a live version of the app!
+    Now if you go to ``<your ip address>:<http port>`` in your web-browser to see
+    a live version of the app!
+
+.. ifslides::
+
+    Now if you go to ``dobc-shell.osuosl.org:<http port>`` in your web-browser to see
+    a live version of the app!
+
+    Your ``<http port>`` is the same as your SSH port, but the first 2 numbers
+    are changed from ``33`` to ``34``. For example, ``33005`` -> ``34005``
 
 
 Further Reading

@@ -148,7 +148,7 @@ The Four Freedoms:
     anybody can try to contribute improvements, anybody can distribute their
     own versions (under the same license), and anybody can study the program.
 
-    Making the source code avaliable is *nice* but an Open Source project
+    Making the source code available is *nice* but an Open Source project
     requires community effort.  Encouraging contributions, documenting code,
     mentoring new contributors, etc.  In the end, this open process not only
     leads to higher-quality software but also fosters great communities.
@@ -243,10 +243,10 @@ How to Get Involved
 
 .. ifnotslides::
 
-    There are a veriety of ways to get involved with an Open Source project,
+    There are a variety of ways to get involved with an Open Source project,
     and not all of them are contributing code!
 
-    [Setup] Documenation
+    [Setup] Documentation
         Try *using* their software.  They should have a setup guide, follow
         that and if it doesn't work keep trying until it does and make a Pull
         Request to fix their documentation.
@@ -263,7 +263,7 @@ How to Get Involved
 
     Asking Questions
         Even reporting an issue can be helpful.  You might not have the time or
-        skillset to fix something yourself, but you can always ask a question
+        skill set to fix something yourself, but you can always ask a question
         like "This is behaving weird, is it supposed to do that?"
 
     Writing Code
@@ -277,7 +277,7 @@ How to Get Involved
 
 .. ifslides::
 
-    - [Setup] Documenation
+    - [Setup] Documentation
     - Testing
     - Asking Questions
     - Writing Code
@@ -327,7 +327,7 @@ I Can't Find a Project I Like!
     hard to find a project you feel strongly enough about to contribute to.
     It may sound corny but **the right project will find you**.
 
-    Many times we contribute to a project out of *necessity*, not becuase we
+    Many times we contribute to a project out of *necessity*, not because we
     want to contribute but because we *need* something and the best way to get
     the job done is by contributing to an Open Source project.
 

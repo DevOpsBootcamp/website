@@ -141,7 +141,7 @@ TODO: Setup Travis on a GH Repo
 
     Click "Create repository" and you will be taken to your newly created
     repository. Next, click "Clone or download" and copy the URL inside the
-    textbox. Inside your command line, run ``git clone <url_you_copied>`` to
+    text box. Inside your command line, run ``git clone <url_you_copied>`` to
     make a clone of your repository.
 
     Copy the contents of the "Frameworks" exercise directory into the cloned
@@ -155,7 +155,7 @@ TODO: Setup Travis on a GH Repo
     Go to your profile and locate your repository, then click on the button to
     enable Travis.
 
-    To finish setting up Travis on our respository, we have to add a
+    To finish setting up Travis on our repository, we have to add a
     ``.travis.yml`` file. Travis will look for this file in your repository
     whenever it runs and use it to set configuration options. There are
     detailed guides and examples for a variety of languages in the Travis

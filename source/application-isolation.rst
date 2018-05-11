@@ -49,7 +49,7 @@ Application Isolation
 
     There are two main ways to tackle Application Isolation on one computer:
     Virtual Machines and Containers.  They both achieve similar end results
-    but achieve that end in differnt ways and offer different advantages /
+    but achieve that end in different ways and offer different advantages /
     disadvantages.
 
 
@@ -233,7 +233,7 @@ Tools
 
 .. ifnotslides::
 
-    There are a mutlitude of tools for using and managing VMs and Containers.
+    There are a multitude of tools for using and managing VMs and Containers.
 
 ======================================= =======================================
 **Virtual Machines**                    **Containers**
@@ -275,10 +275,10 @@ Containers
 .. ifnotslides::
 
     Containers have only recently gained popularity, but there are already many
-    tools avaliable for container management.
+    tools available for container management.
 
 Docker
-    The defacto CLI tool for creating and using containers.
+    The de facto CLI tool for creating and using containers.
 
     Very popular and well integrated into other tools.
 
