@@ -272,7 +272,7 @@ Frameworks lesson's TODO. When the user enters the url /hello/<name>, where
 `Unittesting in Flask`_
     Check out the official Flask docs for help with syntax.
 
-.. _Unittesting in Flask: http://flask.pocoo.org/docs/0.11/testing/
+.. _Unittesting in Flask: http://flask.pocoo.org/docs/0.12/testing/
 
 .. ifnotslides::
 
