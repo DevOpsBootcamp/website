@@ -69,38 +69,40 @@ There are three main types of security in computing:
         - **Active**
         - **Passive**
 
-.. ifnotslides::
+.. nextslide::
 
-    Physical Security
-        Use physical barriers to prevent unauthorized access to data
+Physical Security
+    Use physical barriers to prevent unauthorized access to data
 
-    Software Security
-        Fix flaws in your application that could grant attackers unwanted
-        levels of access to your systems
+Software Security
+    Fix flaws in your application that could grant attackers unwanted levels of
+    access to your systems
 
-    Network Security
-        Security pertaining to networked services (websites, databases, etc).
+.. nextslide::
 
-        - Active: in which an intruder initiates commands to disrupt the
-          network's normal operation (Denial-of-Service, Ping of Death)
-        - Passive: a network intruder intercepts data traveling through the
-          network. (Man-in-the-Middle, Wiretapping, Idle Scan)
+Network Security
+    Security pertaining to networked services (websites, databases, etc).
 
-    Each of these encompasses a field of computer security unto itself.  We
-    will at least mention each of them in more detail, but we will focus on
-    network security in this course.
+    - Active: in which an intruder initiates commands to disrupt the network's
+      normal operation (Denial-of-Service, Ping of Death)
+    - Passive: a network intruder intercepts data traveling through the network.
+      (Man-in-the-Middle, Wiretapping, Idle Scan)
+
+Each of these encompasses a field of computer security unto itself.  We will at
+least mention each of them in more detail, but we will focus on network security
+in this course.
 
 Threat Models
 -------------
 
-    Threat models allow you to focus and limit your security resources on what
-    is *necessary* instead of what is *possible*.
+Threat models allow you to focus and limit your security resources on what is
+*necessary* instead of what is *possible*.
+
+Threat models are the assessment of which attacker you are protecting against.
+This is so you don't spend too much time in a panic attack trying to protect
+your tiny webapp from the NSA.
 
 .. ifnotslides::
-
-    Threat models are the assessment of which attacker you are protecting
-    against.  This is so you don't spend too much time in a panic attack
-    trying to protect your tiny webapp from the NSA.
 
     For example, your threat model might be protecting against a DDOS attacker.
     You're not worrying about the multitude of *other* types of attacks there
@@ -115,24 +117,23 @@ Access Control
 --------------
 
 .. image:: /static/xkcd_1121.png
-    :align: center
+    :align: right
+    :width: 50%
     :target: https://xkcd.com/1121/
     :alt: XKCD Identity Comic
 
-.. ifslides::
+- **Identification:** Who is this person?
 
-    - **Identification:** Who is this person?
+- **Authentication:** Is this person who they say they are?
 
-    - **Authentication:** Is this person who they say they are?
+- **Authorization:** Is this person allowed to perform this action?
 
-    - **Authorization:** Is this person allowed to perform this action?
+Access Control is a framework for controlling who has access to what
+resources on a system. There are many ways to implement Access Control,
+but the three basic principles of Access Control are *Identification*,
+*Authentication*, and *Authorization*.
 
 .. ifnotslides::
-
-    Access Control is a framework for controlling who has access to what
-    resources on a system. There are many ways to implement Access Control,
-    but the three basic principles of Access Control are *Identification*,
-    *Authentication*, and *Authorization*.
 
     Identification
         Who is this person?
@@ -182,10 +183,8 @@ Passwords / Passphrases
 Problems with Passwords
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. ifnotslides::
-
-    Passwords are a necessary part of security.  They aren't great though for a
-    few reasons.
+Passwords are a necessary part of security.  They aren't great though for a few
+reasons.
 
 - People repeat passwords.
 - Many passwords are easy to guess.
@@ -328,8 +327,8 @@ Code Injection
     :alt: Billy Droptables XKCD Comic
     :target: https://xkcd.com/327/
 
-Code Injection is the act of inserting code into a running process (website, webapp, word processor, etc.) with
-malicious intention.
+Code Injection is the act of inserting code into a running process (website,
+webapp, word processor, etc.) with malicious intention.
 
 Code Injection Attacks
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -412,10 +411,10 @@ Web Server Attacks
     :alt: Apache Version Vulnerability
     :target: http://news.netcraft.com/wp-content/uploads/2014/02/apache-vulns1.png
 
-.. ifnotslides::
+Web Server attacks take advantage in vulnerabilities of specific versions or
+default configurations of webservers.
 
-    Web Server attacks take advantage in vulnerabilities of specific versions
-    or default configurations of webservers.
+.. ifnotslides::
 
     For instance a webserver's default configuration might allow you to turn it
     off by sending a special request.  The config file tells you to change that

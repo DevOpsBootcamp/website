@@ -35,19 +35,20 @@ Lesson 12: Continuous Integration
 Continuous Integration
 ----------------------
 
+Continuous Integration is a name for any kind of automated tool that performs
+the following tasks:
+
 .. image:: /static/continuous-integration.png
-    :align: center
+    :align: right
+    :width: 50%
     :target: http://www.agilenutshell.com/continuous_integration
     :alt: Rough diagram of CI workflow
 
+#. Detects changes to your project
+#. Runs a suite of tests on the changed code
+#. Alerts the people that care if something good/bad happened
+
 .. ifnotslides::
-
-    Continuous Integration is a name for any kind of automated tool that
-    performs the following tasks:
-
-    #. Detects changes to your project
-    #. Runs a suite of tests on the changed code
-    #. Alerts the people that care if something good/bad happened
 
     CI tools are also known to do a slew of other things:
 
@@ -62,6 +63,13 @@ Automated Testing
     :alt: Automated Testing integrated into Github
     :align: center
 
+.. ifslides::
+
+  - Automated testing is the most common
+  - Integrates with Github (or similar service such as GitLab)
+  - Detects changes to the code base and runs tests automatically
+  - If it finds a problem, notify people who need to know
+
 .. ifnotslides::
 
     Automated testing is the most common, and easiest to setup, CI tool.
@@ -75,18 +83,15 @@ Automated Testing
 Tool: Travis CI
 ---------------
 
+Travis CI is very popular among Github users because it is easy to setup with
+Github projects and integrates well with Github workflows.  It's also free for
+Open Source projects, although the service itself is not Open Source.
+
 .. image:: /static/travis.png
     :align: right
     :alt: Travis CI logo
     :target: https://travis-ci.org
     :width: 50%
-
-.. ifnotslides::
-
-    Travis CI is very popular among Github users because it is easy to setup
-    with Github projects and integrates well with Github workflows.  It's
-    also free for Open Source projects, although the service itself is not
-    Open Source.
 
 Runs test suites for:
 
@@ -103,11 +108,9 @@ Runs test suites for:
 Tool: Jenkins
 -------------
 
-.. ifnotslides::
-
-    Jenkins is a more powerful version of Travis, but as a result is more
-    complicated to use and set up.  While you can pay to use a public instance
-    of Jenkins, it is more common to run your own instance of Jenkins.
+Jenkins is a more powerful version of Travis, but as a result is more
+complicated to use and set up.  While you can pay to use a public instance of
+Jenkins, it is more common to run your own instance of Jenkins.
 
 - Does pretty much anything you can tell a computer to do, automatically.
 - Builds and uploads binaries (releases).
@@ -115,8 +118,19 @@ Tool: Jenkins
 - Reports build successes/failures.
 - Also has plugins!
 
+.. ci_todo:
+
 TODO: Setup Travis on a GH Repo
 -------------------------------
+
+.. ifslides::
+
+    We've spent the past two lessons building and testing a web app. Now, let's
+    upload it to Github and set up CI on it.
+
+    Please follow the `guide`_ on the website.
+
+.. _guide: http://devopsbootcamp.osuosl.org/continuous-integration.html#todo-setup-travis-on-a-gh-repo
 
 .. ifnotslides::
 
