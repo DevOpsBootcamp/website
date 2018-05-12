@@ -516,8 +516,9 @@ TODO: Using a *Real* Database
 Now that we have belabored the *theory* of databases and SQL, lets actually
 start *doing* work with databases.
 
-Throughout this exercise we will load it up with some data and learn to interact
-with it via the command line interface.
+Throughout this exercise we will load it up with some data
+(:download:`nobel.sql.gz <static/nobel.sql.gz>`) and learn to interact with it
+via the command line interface.
 
 Importing Data
 ~~~~~~~~~~~~~~
