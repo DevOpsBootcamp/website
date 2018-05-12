@@ -255,7 +255,7 @@ Input & Output
     >>> -> Where would you like to go today? Nebraska
     >>> print(user_input)
     >>> -> nebraska
-    >>> print(reverse(nebraska))
+    >>> print(reverse(user_input))
     >>> -> aksarben
 
 .. ifnotslides::
