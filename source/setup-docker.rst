@@ -52,6 +52,7 @@ directory:
 
 .. code-block:: console
 
+  $ cd Bootcamp-Exercises
   $ docker-compose up -d
   $ docker-compose run dobc bash
 

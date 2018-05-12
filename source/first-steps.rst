@@ -272,8 +272,9 @@ There are a variety of ways to run Linux!
 Docker Setup
 ~~~~~~~~~~~~
 
-We suggest you `install Docker`_, a tool which makes it easy to run small `Linux Containers`_ on your system in a safe
-sandbox without requiring to install Linux on your own machine. This is the same setup we used in the lecture.
+We suggest you `install Docker`_ and `Docker Compose`_, a tool which makes it easy to run small `Linux Containers`_ on
+your system in a safe sandbox without requiring to install Linux on your own machine. This is the same setup we used in
+the lecture.
 
 Make sure you read the install documentation for Docker to ensure your system supports running it and have the required
 BIOS settings enabled.
@@ -284,25 +285,23 @@ After you have it installed, run this to start a container:
 
 .. code-block:: console
 
-  $ docker run -p 2222:22 -h dobc --rm --name=dobc1 -d \
-      -e DOBC_PASSWORD=passw04d osuosl/dobc-centos
-
-Using your SSH client, connect to hostname ``localhost`` and port ``2222``. Login using the username ``dobc`` and the
-password ``passw04d`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
-CentOS based container.
+  $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises.git
+  $ cd Bootcamp-Exercises
+  $ docker-compose up -d
+  $ docker-compose run dobc bash
 
 .. _install Docker: https://www.docker.com/community-edition
+.. _Docker Compose: https://docs.docker.com/compose/install/#install-compose
 .. _Linux Containers: https://en.wikipedia.org/wiki/LXC
 
-.. nextslide::
+You can log out by typing ``exit`` and then enter which will stop the container.
 
-Alternatively, you can also run the docker container in an interactive mode instead of connecting to it via ssh:
+To stop the container, run the following:
 
 .. code-block:: console
 
-  $ docker run -h dobc --rm --name=dobc1 -it osuosl/dobc-centos bash
-
-You can log out by typing ``exit`` and then enter which will stop the container.
+  $ docker-compose kill
+  $ docker-compose rm --all
 
 .. nextslide::
 
