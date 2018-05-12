@@ -508,6 +508,12 @@ TODO: Dynamic Website
 
     ::
 
+        $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises
+        $ cd Bootcamp-Exercises/2016-2017/frameworks
+        $ virtualenv venv
+        $ source venv/bin/activate
+        (venv)$ pip install --upgrade pip
+        (venv)$ pip install -r requirements.txt
         (venv)$ python run.py
          * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
          * Restarting with stat
