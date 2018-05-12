@@ -288,7 +288,7 @@ After you have it installed, run this to start a container:
   $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises.git
   $ cd Bootcamp-Exercises
   $ docker-compose up -d
-  $ docker-compose run dobc bash
+  $ docker-compose run -p 8080:8080 dobc bash
 
 .. _install Docker: https://www.docker.com/community-edition
 .. _Docker Compose: https://docs.docker.com/compose/install/#install-compose

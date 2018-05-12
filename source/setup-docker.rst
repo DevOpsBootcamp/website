@@ -54,7 +54,7 @@ directory:
 
   $ cd Bootcamp-Exercises
   $ docker-compose up -d
-  $ docker-compose run dobc bash
+  $ docker-compose run -p 8080:8080 dobc bash
 
 You can log out by typing ``exit`` and then enter which will stop the container.
 
