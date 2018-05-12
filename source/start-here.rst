@@ -141,7 +141,7 @@ DOBC is a free education program offering:
 .. ifnotslides::
 
     **DOBC will meet about twice monthly** for in-person lectures and hands-on
-    activities.  **All course materials are avaliable from the start** for
+    activities.  **All course materials are available from the start** for
     those who are self-guided and want to work ahead.
 
     Check the schedule for more information.

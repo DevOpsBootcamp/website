@@ -202,7 +202,7 @@ Git
 
      Git has become the de facto VCS tools used by new Open Source projects.
      It is supported on platforms including Github, Bitbucket, and Gitlab and
-     is used by projects like the Linux Kernel, the Go langauge, and of course
+     is used by projects like the Linux Kernel, the Go language, and of course
      Git itself.
 
      It is not the *only* VCS out there.  Your future job may require you to
