@@ -391,12 +391,12 @@ To list all packages in the venv:
 ::
 
     (<venv name>) $ pip freeze
-    click==6.6
-    Flask==0.11.1
+    click==6.7
+    Flask==1.0.2
     itsdangerous==0.24
-    Jinja2==2.8
-    MarkupSafe==0.23
-    Werkzeug==0.11.11
+    Jinja2==2.10
+    MarkupSafe==1.0
+    Werkzeug==0.14.1
 
 Deactivate (leave) the venv.
 
