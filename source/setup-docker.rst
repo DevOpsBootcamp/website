@@ -3,10 +3,14 @@
 Setting up Docker
 =================
 
-Docker is a software technology which provides the use of containers which is kind of a light form of virtual machines.
-It's used quite a bit in DevOps to setup development environments along with a variety of other uses. For DevOps
-Bootcamp, we're going to be using Docker in a variety of ways from acting as a simple Linux machine, to hosting
-applications.
+`Docker`_ is a software technology which provides the use of containers which is kind of a light form of virtual
+machines.  It's used quite a bit in DevOps to setup development environments along with a variety of other uses. In
+addition to Docker, we're going to be using `Docker Compose`_ which is used for running multi-container environment.
+For DevOps Bootcamp, we're going to be using Docker in a variety of ways from acting as a simple Linux machine, to
+hosting applications.
+
+.. _Docker: http://docker.com/
+.. _Docker Compose: https://docs.docker.com/compose/
 
 Installing Docker
 ~~~~~~~~~~~~~~~~~
@@ -23,79 +27,42 @@ in our Slack channel.
 .. _CentOS: https://docs.docker.com/engine/installation/linux/docker-ce/centos/
 .. _Fedora: https://docs.docker.com/engine/installation/linux/docker-ce/fedora/
 
+Installing Docker Compose
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Docker Compose can be `installed`_ on Windows, Mac and a variety of Linux operating systems. Please read the
+installation instructions for your platform *carefully*.
+
+.. _installed: https://docs.docker.com/compose/install/#install-compose
+
 Running the DOBC image
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have Docker installed and running, you can spin up a Docker image we've created for DOBC by running the
-following:
+First you need you need to clone the `Bootcamp-Exercises`_ repository:
+
+.. _Bootcamp-Exercises: https://github.com/DevOpsBootcamp/Bootcamp-Exercises
 
 .. code-block:: console
 
-  $ docker run \
-      -p 2222:22 \
-      -p 8080:8080 \
-      -h dobc \
-      --rm \
-      --name=dobc1 \
-      -e DOBC_PASSWORD=passw04d \
-      -d \
-      osuosl/dobc-centos
+  $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises.git
 
-This should do the following:
-
-#. Map port ``2222`` on your machine to port ``22`` on the container
-#. Map port ``8080`` on your machine to port ``8080`` on the container
-#. Set the hostname to ``dobc``
-#. Remove the container and its image on exit
-#. Name the container ``dobc1``
-#. Set the password to ``passw04d`` for ssh via setting an environment variable ``DOBC_PASSWORD``
-#. ``-d`` runs the container in the background
-#. Download the latest ``osuosl/dobc-centos`` image from `Docker Hub`_ and use it for the container
-
-.. _Docker Hub: https://hub.docker.com/r/osuosl/dobc-centos/
-
-Alternatively, you can also run the docker container in an interactive mode instead of connecting to it via ssh. If you
-do it using this method, you can skip the next section (connecting via ssh):
+Once you have Docker and Docker Compose installed and running and also have the `Bootcamp-Exercises`_ repository
+cloned, you can spin up a Docker image we've created for DOBC by running the following from the root of the repository
+directory:
 
 .. code-block:: console
 
-  $ docker run -p 8080:8080 -h dobc --rm --name=dobc1 -it osuosl/dobc-centos bash
+  $ docker-compose up -d
+  $ docker-compose run dobc bash
 
 You can log out by typing ``exit`` and then enter which will stop the container.
-
-Connecting to the container via SSH
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Using your SSH client, connect to hostname ``localhost`` and port ``2222``. Login using the username ``dobc`` and the
-password ``passw0rd`` (as set above). Go ahead and accept the host key and login. Once in, you'll be logged into a
-CentOS based container.
-
-Using a CLI ssh client, you can do that with the following:
-
-.. code-block:: console
-
-	$ ssh -p 2222 dobc@localhost
-	The authenticity of host '[localhost]:2222 ([::1]:2222)' can't be established.
-	ECDSA key fingerprint is SHA256:guModObCSS8GEpXQVUh9Fy674bCAacIZI1j5lh9LL+U.
-	Are you sure you want to continue connecting (yes/no)? yes
-	Warning: Permanently added '[localhost]:2222' (ECDSA) to the list of known hosts.
-	dobc@localhost's password:
-	[dobc@dobc ~]$
-
-Becoming the root user
-~~~~~~~~~~~~~~~~~~~~~~
-
-The container image, has ``sudo`` installed which allows you to become the superuser known as ``root``. To become run,
-simply run ``sudo su -``. Now you have full access to the container running Linux!
 
 Stopping the container
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To stop the container, run the following from another terminal window:
+To stop the container, run the following:
 
 .. code-block:: console
 
-  $ docker stop dobc1
-
-If you run ``docker ps``, you shouldn't see any running instances any more. Keep in mind that when you stop the
-container, any changes you've made on the container go away!
+  $ docker-compose kill
+  $ docker-compose rm --all
