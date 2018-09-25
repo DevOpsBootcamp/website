@@ -18,9 +18,9 @@ Fall
 .. csv-table::
   :header: Lessons Covered,"Date/Time",Location,Description
 
-  "0 - 7","Oct 27, 2018 9:30am-3:30pm",`OSU KEC 1005`_, "DevOps BootCamp Fall Kickoff"
+  "0 - 7","Oct 27, 2018 9:30am-3:30pm",`OSU KEC 1001`_, "DevOps BootCamp Fall Kickoff"
 
-.. _OSU KEC 1005: https://goo.gl/maps/KZiKaCoeuru
+.. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
 
 Spring
 ~~~~~~
