@@ -21,13 +21,3 @@ Fall
   "0 - 7","Oct 27, 2018 9:30am-3:30pm",`OSU KEC 1001`_, "DevOps BootCamp Fall Kickoff"
 
 .. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
-
-Spring
-~~~~~~
-
-.. csv-table::
-  :header: Lessons Covered,"Date/Time",Location,Description
-
-  8 - 20,"TBD","TBD","DevOps BootCamp `Spring Session`_"
-
-.. _Spring Session: http://devopsbootcamp.osuosl.org/daycamp/
