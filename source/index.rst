@@ -32,7 +32,7 @@ familiar with the content that was covered there.
 Please `register`_ if you're planning on attending day camp this spring.
 
 .. _DevOps DayCamp: http://devopsbootcamp.osuosl.org/daycamp/
-.. _register: https://www.eventbrite.com/e/osl-devops-daycamp-may-2018-tickets-42373796165
+.. _register: https://devopsbootcamp2018.eventbrite.com
 
 ----
 
