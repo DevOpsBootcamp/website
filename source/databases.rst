@@ -601,7 +601,7 @@ Object Relational Mappers
 
     An Object Relational Mapper (ORM) is a library which allows you to write in
     a native programming language to interface with a database.  So instead of
-    crafting SQL queries you express in your native langauge what you want the
+    crafting SQL queries you express in your native language what you want the
     database to do.  This means you don't write *any* SQL, the programming
     langauge handles those specifics for you.
 

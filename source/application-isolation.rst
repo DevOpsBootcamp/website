@@ -168,7 +168,7 @@ Container Technologies
         " ``ch`` ange ``root`` ".
 
     CGroups
-        A linux kernel-level technology that name-spaces processes.  It performs
+        A Linux kernel-level technology that name-spaces processes.  It performs
         many functions, but it's used by container engines to convince a process
         that it's running in its own environment.  This is what isolates a
         process from other processes, if they think they're the only thing

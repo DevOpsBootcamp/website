@@ -94,9 +94,9 @@ Users have
 
     Home Directory (Usually but not always)
         Below is a line from the file ``/etc/passwd`` which stores user
-        information (dispite the name, it shouldn't contain passwords).
+        information (despite the name, it shouldn't contain passwords).
 
-    All of this informaion is stored in a file called ``/etc/passwd``.
+    All of this information is stored in a file called ``/etc/passwd``.
 
 ``/etc/passwd:``
 
@@ -249,7 +249,7 @@ Super users
 
     All users have a specific set of permissions, i.e., things they *can* and
     *cannot* do.  The Linux super-user ``root`` is not burdened by this and so
-    it can do pretty much whever it wants.  As a *person* this is important
+    it can do pretty much whatever it wants.  As a *person* this is important
     because you can *become* root and get things done that *your* user is
     unable to do.
 
@@ -257,7 +257,7 @@ Super users
         - ``su root`` Is like logging in as ``root``.  Prompts you for the
           root user's password.
         - ``sudo <command>`` runs a single command as root. Prompts you for
-          *your* password, but requries you to be on the ``sudoers`` list.
+          *your* password, but requires you to be on the ``sudoers`` list.
 
 Trying to run commands which require root permissions as a regular user can be a problem. However, ``sudo`` authorizes
 you to do commands based on your permissions. For example:

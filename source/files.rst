@@ -364,7 +364,7 @@ Directories
   $ ls -alh | grep foobarbaz
   drw-rw-rw-  2 voigte   voigte   4.0K Sep 29 10:47 foobarbaz
 
-  # Below is the literal output, not psuedo-output
+  # Below is the literal output, not pseudo-output
   $ ls -alh foobarbaz
   ls: cannot access foobarbaz/.: Permission denied
   ls: cannot access foobarbaz/..: Permission denied

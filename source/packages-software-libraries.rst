@@ -42,11 +42,11 @@ Everything that isn't hardware.
 
 .. ifnotslides::
 
-    Sofware is what makes modern computers useful.  When you install a piece of
+    Software is what makes modern computers useful.  When you install a piece of
     software you can then invoke that program using your computer to do a
     useful task.
 
-    Software is everything running on a compuer, from web-browsers to the
+    Software is everything running on a computer, from web-browsers to the
     operating system itself.
 
 - Code that is run on a Computer.
@@ -115,7 +115,7 @@ Package Management
 
 .. ifnotslides::
 
-    While *all* package managers don't have *every* feaure listed below, most
+    While *all* package managers don't have *every* feature listed below, most
     of them end up accomplishing most of these tasks out of necessity.
 
     Install, upgrade, and uninstall packages easily.
@@ -170,7 +170,7 @@ Package Management
             Search Results:
             - python2   : The python programming language (version 2)
             - pyhton3   : The python programming langauge (version 3)
-            - virualenv : A program for managing python virtual environments.
+            - virtualenv : A program for managing python virtual environments.
 
     Download and install pre-built binaries (usually).
         Package managers used to download the source code for a program and
@@ -306,7 +306,7 @@ Installation from Source
         box so it can be transferred as a single file.
 
     #. Unpack the downloaded code.
-        Once you have the soruce code you need to unpack it.  This is either
+        Once you have the source code you need to unpack it.  This is either
         using the ``tar`` program or ``unzip`` program depending on the type
         of archive.
 
@@ -322,13 +322,13 @@ Installation from Source
         langauge> from source".
 
     #. Build the program.
-        Just like in programing class, when you run ``gcc myfile.c -o a.out``
-        you will be building a binary from all of the soruce files you
+        Just like in programming class, when you run ``gcc myfile.c -o a.out``
+        you will be building a binary from all of the source files you
         downloaded.  Unlike class you will be running a wrapper like ``make``
         or ``build`` which will run *many* commands for you automagically.
 
     #. Resolve any unmet dependencies and repeat last two steps until it works.
-        This is by far the most painful part of the manuall installation
+        This is by far the most painful part of the manual installation
         process.  If the install fails it will hopefully tell you why and hint
         at any libraries or external packages you need to install.  Thankfully
         **you can still use your package manager to install dependencies**.

@@ -393,7 +393,7 @@ Exercise: Change Your Password!
 
 .. ifnotslides::
 
-    To get aquainted with your new Virtual Machine we are going to change your
+    To get acquainted with your new Virtual Machine we are going to change your
     users password.  This is just like changing your password on your personal
     laptop (you've done that before right?) but *entirely via the terminal*, no
     windows or click-buttons at all.

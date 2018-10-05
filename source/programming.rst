@@ -393,7 +393,7 @@ Libraries
 
     Libraries are collections of functions and constants external to the file
     you're working on.  They may be written by somebody else or written by you
-    in a seperate file.
+    in a separate file.
 
     The usual syntax for **using** a library looks like this:
 

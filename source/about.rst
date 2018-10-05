@@ -77,7 +77,7 @@ Attendance
 ~~~~~~~~~~
 
 
-Attendance is not mandatory but highly suggested to get the most out of DBOC;
+Attendance is not mandatory but highly suggested to get the most out of DOBC;
 We will not spend class time reviewing material for those who skip a lecture
 and each classes curriculum will build on what you learned the previous
 session. All curriculum will be available online before and after class
