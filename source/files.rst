@@ -217,8 +217,8 @@ Adding the ``-a`` flag to ``ls`` command includes hidden files in your output.
         parent directory (``..``).
 
 
-Finding Metadata with 'ls -l'
------------------------------
+Finding Metadata with ``ls -l``
+-------------------------------
 
 
 .. ifnotslides::
