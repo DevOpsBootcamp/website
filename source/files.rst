@@ -72,7 +72,7 @@ Filename
 Everything is a file?
 ---------------------
 
-Yes. Except the things that aren't..
+Yes. Except the things that aren't...
 
 .. ifnotslides::
 
@@ -94,13 +94,14 @@ Yes. Except the things that aren't..
 
       $ echo 5 > /sys/class/backlight/acpi_video0/brightness
 
-This functionality isn't just limited to the shell, either!  Let's say you're programming an interface for a medical
-device that **streams** data from a sensor.  Using the *"Everything is a file"* philosophy, we could read data from
-that medical device like so:
+This functionality isn't just limited to the shell!  Let's say you're
+programming an interface for a device that **streams** data from a sensor.
+Using the *"Everything is a file"* philosophy, we could read data from the
+device like so:
 
 .. code-block:: c
 
-    int read_medical_device_data(int device_file_pointer) {
+    int read_device_data(int device_file_pointer) {
         // Open a connection to the device
         int * stream = open(device_file_pointer);
         // Write the stream of data to the screen
