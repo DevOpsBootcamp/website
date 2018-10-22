@@ -92,7 +92,7 @@ Yes. Except the things that aren't..
 
     .. code-block:: console
 
-      $ echo 5 >> /sys/class/backlight/acpi_video0/brightness
+      $ echo 5 > /sys/class/backlight/acpi_video0/brightness
 
 This functionality isn't just limited to the shell, either!  Let's say you're programming an interface for a medical
 device that **streams** data from a sensor.  Using the *"Everything is a file"* philosophy, we could read data from
