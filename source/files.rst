@@ -225,8 +225,9 @@ Finding Metadata with ``ls -l``
 
     Metadata is the information **about** a file.  The easiest way to get the
     most important information about files is by running ``ls -l``. This shows
-    you metadata such as the file permissions, file owner, file size, and the
-    date and time the file was last modified.
+    you metadata such as the file type, file permissions, references count (Number of
+    files that point to the same data; hardlinks), file owner, file size, and
+    the date and time the file was last modified.
 
 ::
 
@@ -234,14 +235,16 @@ Finding Metadata with ``ls -l``
     drwxrwxr-x   5   test     test     4096   Nov  6 11:46 Documents
     -rw-rw-r--   1   test     test        0   Nov 13 14:09 file.txt
     drwxrwxr-x   2   test     test     4096   Nov  6 13:22 Pictures
-    ----------     -------  -------  -------- ------------ -------------
-        |             |        |         |         |             |
-        |             |        |         |         |        File Name
-        |             |        |         |         +--- Modification Time
-        |             |        |         +-------------  Size (in bytes)
-        |             |        +-----------------------       Group
-        |             +--------------------------------       Owner
+    ----------   -   ----     ----     ----   ------------ --------------
+        |        |    |        |         |         |             |
+        |        |    |        |         |         |        File Name
+        |        |    |        |         |         +--- Modification Time
+        |        |    |        |         +-------------  Size (in bytes)
+        |        |    |        +-----------------------       Group
+        |        |    +--------------------------------       Owner
+        |        +-------------------------------------  References Count
         +----------------------------------------------  File Permissions
+                                                             & Type
 
 
 Editing Metadata
