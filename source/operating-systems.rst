@@ -295,5 +295,5 @@ Free Online Resources:
 
 Next: :ref:`documentation_communication`
 
-.. _Operating Systems Design and Implementation: https://amzn.com/0136386776
+.. _Operating Systems Design and Implementation: https://amzn.com/0131429388
 .. _OSDev.org: http://wiki.osdev.org/Main_Page
