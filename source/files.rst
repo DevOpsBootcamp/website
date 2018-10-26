@@ -307,11 +307,13 @@ Example:
 
 .. code-block:: console
 
-  $ chmod ug+x my_script.sh    # Adds the permission to execute the file
-                               # to its owner user and owner group.
+  $ chmod ug+x my_script.sh
+  # Adds the permission to execute the file to its
+  # owner user and owner group.
 
-  $ chmod o-w myfile.txt       # Removes the permission to write to the
-                               # file from users other than its owners.
+  $ chmod o-w myfile.txt
+  # Removes the permission to write to the file
+  # from users other than its owners.
 
 Executing a File?
 -----------------
@@ -329,7 +331,7 @@ For instance:
 
 .. code-block:: console
 
-    $ ls -alh my-script
+    $ ls -lh my-script
     -r-xr-xr-x 1 username username 1.9K Sep 27 09:44 my-script
 
     $ cat my-script
