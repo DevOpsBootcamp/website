@@ -264,7 +264,7 @@ you to do commands based on your permissions. For example:
 
 .. code-block:: console
 
-  [dobc@dobc ~]$ yum install httpd      # Runs command as `dobc` user
+  [dobc@dobc ~]$ yum install httpd      # Runs command as `dobc` user.
   Loaded plugins: fastestmirror, ovl
   ovl: Error while doing RPMdb copy-up:
   [Errno 13] Permission denied: '/var/lib/rpm/__db.002'
