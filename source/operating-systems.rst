@@ -104,7 +104,7 @@ Types of Operating Systems
 
     .. note::
 
-        We list these as seperate types of OS, but rarely will an OS have
+        We list these as separate types of OS, but rarely will an OS have
         mutually exclusive types.
 
 
@@ -163,7 +163,7 @@ Popular Operating Systems
 .. ifnotslides::
 
     The **UNIX family** of operating systems all implement the **POSIX
-    standard** OS interafces, which has been around since ~1980.  POSIX is a
+    standard** OS interfaces, which has been around since ~1980.  POSIX is a
     very common standard of OS design which makes it easier to write one
     program that works on different (POSIX) operating systems.  This might not
     seem like such a big deal today but it was revolutionary in the 70's and
@@ -289,11 +289,11 @@ Free Online Resources:
     interested in learning the nitty-gritty.
 
     `Operating Systems Design and Implementation`_ by Andrew S. Tanenbaum is a
-    classsic in the world of OS Development.  It's also a big leap, but can
+    classic in the world of OS Development.  It's also a big leap, but can
     teach you more about how Operating Systems work than you ever thought there
     was to know.
 
 Next: :ref:`documentation_communication`
 
-.. _Operating Systems Design and Implementation: https://amzn.com/0136386776
+.. _Operating Systems Design and Implementation: https://amzn.com/0131429388
 .. _OSDev.org: http://wiki.osdev.org/Main_Page

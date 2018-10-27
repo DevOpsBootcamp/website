@@ -252,7 +252,7 @@ Ansible
 
 .. ifnotslides::
 
-    Ansible is notorously easy to setup and use.  It does not use a
+    Ansible is notoriously easy to setup and use.  It does not use a
     programming language to describe the state of software but declares the
     state of a machine with the ``yaml`` markup language.
 
@@ -286,7 +286,7 @@ SaltStack
 .. _SaltStack Site: https://saltstack.com/
 
 
-Delcaration Configuration
+Declaration Configuration
 -------------------------
 
 .. ifnotslides::

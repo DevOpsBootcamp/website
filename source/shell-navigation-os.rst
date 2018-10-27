@@ -58,7 +58,7 @@ Shell Examples
 
 		As with all things in Open Source, there are many options to choose from
 		when deciding on a shell.  Below is a short list of popular choices.	Each
-		shell has it's positives and negatives. If you don't have an optionion you
+		shell has it's positives and negatives. If you don't have an opinion you
 		should probably use what comes by default when you open your terminal.
 
 .. csv-table::
