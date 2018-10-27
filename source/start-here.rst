@@ -90,6 +90,16 @@ Definition: *DevOps Engineers*
   - Logging
   - Often on-call
 
+Definition: *Site Reliability Engineers (SRE)*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. rst-class:: build
+
+* SRE and DevOps Engineers share the same foundational principles
+* SRE is viewed as a "specific implementation of DevOps with some idiosyncratic extensions"
+* SRE was originally created at Google as a process to improve managing their services
+* Most large tech companies now follow SRE processes
+
 *DevOps*
 ~~~~~~~~
 
@@ -106,6 +116,16 @@ Definition: *DevOps Engineers*
     effectively.
 
     TLDR: Development + Operations == Better Services
+
+.. rst-class:: build
+
+  DevOps defines 5 key pillars of success:
+
+  1. Reduce organizational silos
+  2. Accept failure as normal
+  3. Implement gradual changes
+  4. Leverage tooling and automation
+  5. Measure everything
 
 .. ifnotslides::
 
@@ -242,6 +262,39 @@ The teachers of DOBC include:
     class. At the very least ask questions; you’re not the only one who's
     confused.
 
+Bi-Weekly Open Office Labs
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. ifnotslides::
+
+  Following the Fall Kickoff, we will be hosting bi-weekly open office labs in Milne 224 in two hour blocks. These labs
+  initially will be structured around the content on the website but will aim to be mostly hands on. OSL students and
+  staff will be on-site to help you work through the content. Content discussed at each lab will depend on the
+  attendees interest.  We will also be opening up our Milne server room for students to learn and interact with actual
+  hardware.
+
+  Some interesting topics we may end up discussing include (expanded on the lessons we already have on the website):
+
+Discuss more advanced topics and also have hands-on with server and network equipment in our lab.
+
+.. ifslides::
+
+  Some interesting topics we may end up discussing include:
+
+- Automated Linux installs
+- Network switch configuration
+- Out of Band (IPMI) configuration and usage
+- Installing servers in racks and configuring them
+- Setting up servers to run various services (email, web, DNS, etc)
+- Open Source software contributions
+- Software Development
+
+.. ifnotslides::
+
+  Our Milne server room includes three `OpenCompute`_ Racks donated from Facebook (includes a total of 90 compute
+  nodes), managed network switches, and other various rack mounted server hardware.
+
+.. _OpenCompute: https://www.opencompute.org/
 
 The ‘Agreement’
 ~~~~~~~~~~~~~~~
@@ -266,8 +319,6 @@ Getting Involved
 
 Where To Ask Questions
     - Slack
-    - Internet Relay Chat
-    - Mailing lists
     - During Lecture and Hand-on Lessons
     - *More on the* :ref:`about` *page*...
 

@@ -35,6 +35,30 @@ Please `register`_ if you're planning on attending BootCamp this fall.
 
 ----
 
+DevOps Open Office Labs
+-----------------------
+
+Following the Fall Kickoff, we will be hosting bi-weekly open office labs in Milne 224 in two hour blocks. These labs
+initially will be structured around the content on the website but will aim to be mostly hands on. OSL students and
+staff will be on-site to help you work through the content. Content discussed at each lab will depend on the attendees
+interest. We will also be opening up our Milne server room for students to learn and interact with actual hardware.
+
+Some interesting topics we may end up discussing include (expanded on the lessons we already have on the website):
+
+- Automated Linux installs
+- Network switch configuration
+- Out of Band (IPMI) configuration and usage
+- Installing servers in racks and configuring them
+- Setting up servers to run various services (email, web, DNS, etc)
+- Open Source software contributions
+
+Our Milne server room includes three `OpenCompute`_ Racks donated from Facebook (includes a total of 90 compute nodes),
+managed network switches, and other various rack mounted server hardware.
+
+.. _OpenCompute: https://www.opencompute.org/
+
+----
+
 .. _schedule:
 
 .. include:: schedule.rst
