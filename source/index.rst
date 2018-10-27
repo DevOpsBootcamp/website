@@ -35,13 +35,13 @@ Please `register`_ if you're planning on attending BootCamp this fall.
 
 ----
 
-Bi-Weekly Labs
---------------
+DevOps Open Office Labs
+-----------------------
 
-Following the Fall Kickoff, we will be hosting bi-weekly labs in Milne 224 in two hour blocks. These labs initially
-will be structured around the content on the website but will aim to be mostly hands on. OSL students and staff will be
-on-site to help you work through the content. Content discussed at each lab will depend on the attendees interest. We
-will also be opening up our Milne server room for students to learn and interact with actual hardware.
+Following the Fall Kickoff, we will be hosting bi-weekly open office labs in Milne 224 in two hour blocks. These labs
+initially will be structured around the content on the website but will aim to be mostly hands on. OSL students and
+staff will be on-site to help you work through the content. Content discussed at each lab will depend on the attendees
+interest. We will also be opening up our Milne server room for students to learn and interact with actual hardware.
 
 Some interesting topics we may end up discussing include (expanded on the lessons we already have on the website):
 

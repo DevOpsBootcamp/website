@@ -22,8 +22,8 @@ Fall
 
 .. _OSU KEC 1001: https://goo.gl/maps/KZiKaCoeuru
 
-Bi-Weekly Labs
-~~~~~~~~~~~~~~
+Open Office Labs
+~~~~~~~~~~~~~~~~
 
 Each lab has two time slots (please choose one) to help assist with students being able to attend. All labs will in
 `Milne 224`_.
