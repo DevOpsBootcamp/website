@@ -259,10 +259,10 @@ Other Package Managers
     Below are a few more notable/interesting package managers.
 
 Portage
-    The Source-based package manager for  Gentoo.
+    The Source-based package manager for Gentoo.
 
-Yaourt
-    An Arch User Repository wrapper for Pacman, the Arch Linux Package manager.
+Pacman
+    The Simple Arch Linux Package manager.
 
 Nix
     A 'Fully Functional/Transactional' package manager.
