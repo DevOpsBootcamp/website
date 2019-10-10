@@ -6,7 +6,7 @@ git pull -q --ff-only
 
 # Enable venv
 if [ ! -d venv ]; then
-    virtualenv venv
+    virtualenv venv -p python3
 fi
 source venv/bin/activate
 
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 # Nuke the old build dir
 rm -rf build/
 
-# Build slides 
+# Build slides
 make slides
 
 # Disable venv
