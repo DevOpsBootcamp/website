@@ -19,11 +19,11 @@ Get started now!
 
 ----
 
-DevOps BootCamp: Fall 2018
+DevOps BootCamp: Fall 2019
 ---------------------------
 
 `DevOps BootCamp`_ is a single-day event with one track to help
-attendees kick off the year with fundamentals of system administration and 
+attendees kick off the year with fundamentals of system administration and
 software development. The hands-on workshop is designed to teach participants
 DevOps, a program development process that includes building, testing, and
 releasing software.
@@ -31,7 +31,7 @@ releasing software.
 Please `register`_ if you're planning on attending BootCamp this fall.
 
 .. _DevOps BootCamp: http://devopsbootcamp.osuosl.org/daycamp/
-.. _register: https://devopsbootcamp2018.eventbrite.com
+.. _register: https://devopsbootcamp2019.eventbrite.com
 
 ----
 
