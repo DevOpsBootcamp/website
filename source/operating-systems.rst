@@ -233,7 +233,7 @@ Exercise: Pop Quiz
 #. What are some different types of Operating Systems?
 #. What constitutes a 'Distribution' of Linux?
 #. How is Linux different from Windows? OSX?
-#. How is Debian different from Gentoo?
+#. How is Debian different from Redhat?
 
 .. ifnotslides::
 
@@ -257,7 +257,7 @@ Further Reading
 OSU Courses:
     CS 312: Linux System Administration
         - DOBC in class form
-        - Not currently offered, however course content is online
+        - Not currently offered by the OSL, however course content is online
         - http://cs312.osuosl.org
 
 .. nextslide::

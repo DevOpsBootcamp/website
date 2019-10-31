@@ -66,15 +66,6 @@ Buzzwords:
     - **'The Cloud':** Computers somewhere else.
     - **Docker:** Software that manages Linux containers
 
-
-Exercise: What Vocabulary Do *You* Know?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. rst-class:: build
-
-- *What other vocabulary can you think of related to DevOps?*
-- *What about Silicon Valley, Programming, System Administration, etc?*
-
 Notation
 --------
 

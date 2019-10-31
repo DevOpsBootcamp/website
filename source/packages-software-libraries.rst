@@ -390,12 +390,12 @@ Exercise: Install ``grep``
 
 #. Check the current version of grep
 #. Double check it's location using ``which``
-#. Download the latest tarball: http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
+#. Download the latest tarball: http://mirrors.kernel.org/gnu/grep/grep-3.3.tar.xz
 #. Unpack using ``tar``
 #. ``cd`` into the unpacked folder
 #. Run '``./configure --prefix=$HOME/local/``', '``make``' and then '``make install``'
 #. Run '``hash -r``' to ensure your environment knows about the new binary
-#. Check the current version of grep (it should be 3.1 now!)
+#. Check the current version of grep (it should be 3.3 now!)
 #. Double check it's location using ``which``
 
 Answer: Install ``grep``
@@ -410,15 +410,15 @@ Answer: Install ``grep``
   $ which grep
   alias grep='grep --color=auto'
           /usr/bin/grep
-  $ wget http://mirrors.kernel.org/gnu/grep/grep-3.1.tar.xz
-  $ tar -Jxvf grep-3.1.tar.xz
-  $ cd grep-3.1
+  $ wget http://mirrors.kernel.org/gnu/grep/grep-3.3.tar.xz
+  $ tar -Jxvf grep-3.3.tar.xz
+  $ cd grep-3.3
   $ ./configure --prefix=$HOME/local/
   $ make
   $ make install
   $ hash -r
   $ grep --version
-  grep (GNU grep) 3.1
+  grep (GNU grep) 3.3
   $ which grep
   alias grep='grep --color=auto'
           ~/local/bin/grep
