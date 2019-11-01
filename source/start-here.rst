@@ -278,6 +278,25 @@ The ‘Agreement’
     - There will be a survey you, should take it.
     - Honesty is the best policy.
 
+What we're covering today
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  - Linux Basics and Environment Setup
+  - Operating Systems
+  - Documentation, and Getting on Slack & IRC
+  - Shell Navigation
+  - (Lunch)
+  - Users, Groups and Permissions
+  - Files
+  - Packages, Software, Libraries
+
+DOBC Lessons after today
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+- During the winter term, we'll be covering additional lessons each month (likely in 2 hour blocks)
+- Lessons will likely happen during the week in the late afternoons (day, time and location TBD)
+- Registrations for each monthly workshop will be required for attendance
+- Depending on the level of interest, we'll continue doing each lesson through the Spring term
 
 Getting Involved
 ----------------
