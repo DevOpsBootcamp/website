@@ -232,7 +232,7 @@ Exercise: Pop Quiz
 
 #. What are some different types of Operating Systems?
 #. What constitutes a 'Distribution' of Linux?
-#. How is Linux different from Windows? OSX?
+#. How is Linux different from Windows? macOS?
 #. How is Debian different from Redhat?
 
 .. ifnotslides::
