@@ -79,7 +79,6 @@ Definition: *DevOps Engineers*
 
 .. rst-class:: build
 
-* Newer position
 * Mix of Systems (Operations) and Development work
 * Involved where the application and its platform meet
 * Responsibilities include a mix of both Ops and Dev, usually:
@@ -262,40 +261,6 @@ The teachers of DOBC include:
     class. At the very least ask questions; you’re not the only one who's
     confused.
 
-Bi-Weekly Open Office Labs
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. ifnotslides::
-
-  Following the Fall Kickoff, we will be hosting bi-weekly open office labs in Milne 224 in two hour blocks. These labs
-  initially will be structured around the content on the website but will aim to be mostly hands on. OSL students and
-  staff will be on-site to help you work through the content. Content discussed at each lab will depend on the
-  attendees interest.  We will also be opening up our Milne server room for students to learn and interact with actual
-  hardware.
-
-  Some interesting topics we may end up discussing include (expanded on the lessons we already have on the website):
-
-Discuss more advanced topics and also have hands-on with server and network equipment in our lab.
-
-.. ifslides::
-
-  Some interesting topics we may end up discussing include:
-
-- Automated Linux installs
-- Network switch configuration
-- Out of Band (IPMI) configuration and usage
-- Installing servers in racks and configuring them
-- Setting up servers to run various services (email, web, DNS, etc)
-- Open Source software contributions
-- Software Development
-
-.. ifnotslides::
-
-  Our Milne server room includes three `OpenCompute`_ Racks donated from Facebook (includes a total of 90 compute
-  nodes), managed network switches, and other various rack mounted server hardware.
-
-.. _OpenCompute: https://www.opencompute.org/
-
 The ‘Agreement’
 ~~~~~~~~~~~~~~~
 
@@ -313,6 +278,25 @@ The ‘Agreement’
     - There will be a survey you, should take it.
     - Honesty is the best policy.
 
+What we're covering today
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  - Linux Basics and Environment Setup
+  - Operating Systems
+  - Documentation, and Getting on Slack & IRC
+  - Shell Navigation
+  - (Lunch)
+  - Users, Groups and Permissions
+  - Files
+  - Packages, Software, Libraries
+
+DOBC Lessons after today
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+- During the winter term, we'll be covering additional lessons each month (likely in 2 hour blocks)
+- Lessons will likely happen during the week in the late afternoons (day, time and location TBD)
+- Registrations for each monthly workshop will be required for attendance
+- Depending on the level of interest, we'll continue doing each lesson through the Spring term
 
 Getting Involved
 ----------------

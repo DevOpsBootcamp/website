@@ -499,7 +499,7 @@ TODO: Dynamic Website
     to both add themselves and view the guests that have already been added.
 
     To get started, clone the `Bootcamp-Exercises`_ repository in the DevOps
-    Bootcamp Github organization, and ``cd`` into the ``2016-2017/frameworks``
+    Bootcamp Github organization, and ``cd`` into the ``frameworks``
     directory. Follow the directions in ``README.md`` to set up and run the app.
     If you don't have ``virtualenv`` installed already, you can install it from
     your distro's package manager (It's usually ``python-virtualenv``). If
@@ -509,7 +509,7 @@ TODO: Dynamic Website
     ::
 
         $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises
-        $ cd Bootcamp-Exercises/2016-2017/frameworks
+        $ cd Bootcamp-Exercises/frameworks
         $ virtualenv venv
         $ source venv/bin/activate
         (venv)$ pip install --upgrade pip
@@ -531,7 +531,7 @@ TODO: Dynamic Website
     ::
 
         $ git clone https://github.com/DevOpsBootcamp/Bootcamp-Exercises
-        $ cd Bootcamp-Exercises/2016-2017/frameworks
+        $ cd Bootcamp-Exercises/frameworks
         $ virtualenv venv
         $ source venv/bin/activate
         (venv)$ pip install --upgrade pip
