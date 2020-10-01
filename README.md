@@ -1,4 +1,4 @@
-# DevOps Bootcamp Website & Curriculum
+# DevOps Bootcamp Website & Curriculum - an amazing project
 
 The site is hosted at [devopsbootcamp.osuosl.org][DOBC.O.O]. 
 
