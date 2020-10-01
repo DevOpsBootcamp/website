@@ -6,7 +6,7 @@ This repository has a post-commit hook set up to update the main site every
 time the master branch is changed. If the site doesn't update within a couple
 of minutes, the build may have failed. Check that `make html` doesn't throw
 any errors in your copy of the repo, and ask someone with admin access on
-readthedocs to investigate what it reports is broken.
+read the docs to investigate what it reports is broken.
 
 ## Viewing Slides: 
 
