@@ -7,6 +7,10 @@ time the master branch is changed. If the site doesn't update within a couple
 of minutes, the build may have failed. Check that `make html` doesn't throw
 any errors in your copy of the repo, and ask someone with admin access on
 readthedocs to investigate what it reports is broken.
+Basic Training — often called boot camp — prepares recruits for all elements of
+service: physical, mental and emotional. It gives service members the basic tools 
+necessary to perform the roles that will be assigned to them for the duration
+of their tour.
 
 ## Viewing Slides: 
 
