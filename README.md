@@ -8,7 +8,7 @@ of minutes, the build may have failed. Check that `make html` doesn't throw
 any errors in your copy of the repo, and ask someone with admin access on
 readthedocs to investigate what it reports is broken.
 
-## Viewing Slides: 
+## Viewing Important Slides: 
 
 Slides are available on [slides.osuosl.org][SLIDES.O.O/DOBC], and rebuild
 automatically whenever new content is pushed to the master branch of this
