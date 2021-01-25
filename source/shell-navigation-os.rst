@@ -48,7 +48,7 @@ The Shell
 		Shells are the programs which allows you use a computer via text-based
 		commands.  Not to be confused with a *terminal*, which is the environment
 		a shell runs in (GNOME terminal, tty1, etc).	A shell is run in a
-		terminal, a terminal is the widow you use the shell in.
+		terminal, a terminal is the window you use the shell in.
 
 
 Shell Examples
