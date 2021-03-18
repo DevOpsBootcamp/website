@@ -2,7 +2,7 @@ docutils==0.15.2
 hieroglyph==0.6.5
 Jinja2==2.10.3
 MarkupSafe==1.1.1
-Pillow==6.2.0
+Pillow==8.1.1
 Pygments==2.4.2
 six==1.12.0
 Sphinx==1.2.2
