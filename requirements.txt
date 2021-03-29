@@ -3,7 +3,7 @@ hieroglyph==0.6.5
 Jinja2==2.10.3
 MarkupSafe==1.1.1
 Pillow==6.2.0
-Pygments==2.4.2
+Pygments==2.7.4
 six==1.12.0
 Sphinx==1.2.2
 sphinx-rtd-theme==0.4.3
